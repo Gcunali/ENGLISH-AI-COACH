@@ -535,6 +535,8 @@ pub struct GuidedPlaybackSource {
 pub struct StartInteractiveLessonRequest {
     pub lesson_id: String,
     #[serde(default)]
+    pub content_version: Option<u32>,
+    #[serde(default)]
     pub start_over: bool,
 }
 

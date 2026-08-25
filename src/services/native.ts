@@ -3,6 +3,7 @@ import { listen, type UnlistenFn } from "@tauri-apps/api/event";
 import type {
   Achievement,
   CorrectionCandidate,
+  CurriculumCatalog,
   DashboardSummary,
   Diagnostics,
   GamificationOverview,
@@ -804,12 +805,27 @@ export async function getActiveGuidedLessonSession(): Promise<GuidedLessonSessio
 export async function startGuidedLesson(
   lessonId: string,
   startOver = false,
+  contentVersion?: number,
 ): Promise<GuidedLessonSession> {
   if (!isTauri())
     throw new Error("Guided Lessons require the desktop runtime.");
   return invoke<GuidedLessonSession>("start_guided_lesson", {
-    request: { lessonId, startOver },
+    request: { lessonId, contentVersion: contentVersion ?? null, startOver },
   });
+}
+
+export async function getCourseCatalog(): Promise<CurriculumCatalog> {
+  if (!isTauri())
+    return {
+      registryVersion: 1,
+      progressVersion: 1,
+      recommendationVersion: 1,
+      taxonomyVersion: 1,
+      publishedCurriculumCount: 0,
+      activeSession: null,
+      curricula: [],
+    };
+  return invoke<CurriculumCatalog>("get_course_catalog");
 }
 export async function resumeGuidedLesson(
   sessionId: string,

@@ -20,6 +20,7 @@ import { NotFoundPage } from './pages/NotFoundPage'
 import { GuidedLessonsPage } from './pages/GuidedLessonsPage'
 import { GuidedLessonDetailPage } from './pages/GuidedLessonDetailPage'
 import { GuidedLessonSessionPage } from './pages/GuidedLessonSessionPage'
+import { CoursePage } from './pages/CoursePage'
 
 function App() {
   return <Routes>
@@ -32,6 +33,10 @@ function App() {
       <Route path="guided-lessons" element={<GuidedLessonsPage />} />
       <Route path="guided-lessons/session/:sessionId" element={<GuidedLessonSessionPage />} />
       <Route path="guided-lessons/:lessonId" element={<GuidedLessonDetailPage />} />
+      <Route path="course" element={<CoursePage />} />
+      <Route path="course/:curriculumId" element={<CoursePage />} />
+      <Route path="course/:curriculumId/:levelId" element={<CoursePage />} />
+      <Route path="course/:curriculumId/:levelId/:unitId" element={<CoursePage />} />
       <Route path="progress" element={<ProgressPage />} />
       <Route path="achievements" element={<AchievementsPage />} />
       <Route path="review" element={<ReviewPage />} />

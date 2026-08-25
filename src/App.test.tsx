@@ -22,6 +22,7 @@ vi.mock('./pages/DiagnosticsPage', () => ({ DiagnosticsPage: () => <div>Diagnost
 vi.mock('./pages/GuidedLessonsPage', () => ({ GuidedLessonsPage: () => <div>Guided lessons route content</div> }))
 vi.mock('./pages/GuidedLessonDetailPage', () => ({ GuidedLessonDetailPage: () => <div>Guided lesson detail route content</div> }))
 vi.mock('./pages/GuidedLessonSessionPage', () => ({ GuidedLessonSessionPage: () => <div>Guided lesson session route content</div> }))
+vi.mock('./pages/CoursePage', () => ({ CoursePage: () => <div>Course route content</div> }))
 
 import App from './App'
 
@@ -46,6 +47,10 @@ describe('application routing', () => {
     ['/guided-lessons', 'Guided lessons route content'],
     ['/guided-lessons/greetings-a1', 'Guided lesson detail route content'],
     ['/guided-lessons/session/session-1', 'Guided lesson session route content'],
+    ['/course', 'Course route content'],
+    ['/course/english-core', 'Course route content'],
+    ['/course/english-core/a1', 'Course route content'],
+    ['/course/english-core/a1/a1-introductions', 'Course route content'],
   ])('renders %s', (path, expected) => {
     render(<MemoryRouter initialEntries={[path]}><App /></MemoryRouter>)
     expect(screen.getByText(expected)).toBeInTheDocument()

@@ -1,3 +1,4 @@
+mod curriculum;
 mod database;
 mod diagnostics;
 mod gamification;
@@ -45,6 +46,7 @@ mod voice_engine;
 mod voice_performance_repository;
 
 use base64::{engine::general_purpose::STANDARD, Engine};
+use curriculum::{CurriculumCatalogDto, CurriculumRegistry, CurriculumService};
 use gamification_repository::{
     AchievementDto, GamificationOverviewDto, GamificationProfileDto, GamificationRepository,
     GamificationSyncResult,
@@ -153,6 +155,12 @@ struct AppState {
     guided_audio: GuidedLessonAudioRuntime,
     guided_conversations: GuidedConversationRepository,
     guided_analysis: InteractiveLessonAnalysisService,
+    curriculum: CurriculumService,
+}
+
+#[tauri::command]
+fn get_course_catalog(state: State<'_, AppState>) -> Result<CurriculumCatalogDto, String> {
+    state.curriculum.catalog()
 }
 
 #[tauri::command]
@@ -1453,8 +1461,19 @@ pub fn run() {
             } else {
                 app.path().resource_dir().map_err(|error| std::io::Error::other(format!("Resource directory unavailable: {error}")))?.join("interactive-lessons")
             };
+            let guided_registry = InteractiveLessonContentRegistry::load(guided_content_root);
+            let curriculum_content_root = if cfg!(debug_assertions) {
+                std::path::PathBuf::from(env!("CARGO_MANIFEST_DIR")).join("resources/curriculum")
+            } else {
+                app.path().resource_dir().map_err(|error| std::io::Error::other(format!("Resource directory unavailable: {error}")))?.join("curriculum")
+            };
+            let curriculum = CurriculumService::new(
+                CurriculumRegistry::load(curriculum_content_root, &guided_registry),
+                paths.db_file(),
+                profiles.clone(),
+            );
             let guided_lessons = InteractiveLessonEngine::new(
-                InteractiveLessonContentRegistry::load(guided_content_root),
+                guided_registry,
                 InteractiveLessonRepository::new(paths.db_file()),
                 profiles.clone(),
                 paths.interactive_lesson_assets.clone(),
@@ -1505,6 +1524,7 @@ pub fn run() {
                 guided_audio: GuidedLessonAudioRuntime::default(),
                 guided_conversations,
                 guided_analysis,
+                curriculum,
             });
             if let Some(result) = restore_result { let _ = app.emit("english-ai-coach:data-restored", result); }
             Ok(())
@@ -1528,6 +1548,7 @@ pub fn run() {
             get_welcome_state,
             set_welcome_seen,
             get_guided_lesson_overview,
+            get_course_catalog,
             list_guided_lessons,
             get_guided_lesson,
             get_active_guided_lesson_session,

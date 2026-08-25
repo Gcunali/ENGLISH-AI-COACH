@@ -1426,6 +1426,90 @@ export interface GuidedLessonOverview {
   activeSession: GuidedLessonSession | null;
   capabilities: GuidedStageCapability[];
 }
+
+export type CurriculumSkillFocus =
+  | "grammar"
+  | "vocabulary"
+  | "listening"
+  | "pronunciation"
+  | "speaking"
+  | "interaction";
+export type CurriculumLessonStatus =
+  | "not_started"
+  | "in_progress"
+  | "completed";
+export interface CurriculumProgress {
+  totalLessons: number;
+  completedLessons: number;
+  inProgressLessons: number;
+  percent: number;
+}
+export interface CourseLesson {
+  lessonId: string;
+  contentVersion: number;
+  title: string;
+  description: string;
+  cefrBand: CefrBand;
+  estimatedMinutes: number;
+  objectives: string[];
+  startable: boolean;
+  unavailableReasons: string[];
+  status: CurriculumLessonStatus;
+  completionCount: number;
+  hasUpdatedContentAvailable: boolean;
+  activeSessionId: string | null;
+  activeSessionContentVersion: number | null;
+}
+export interface CourseUnit {
+  unitId: string;
+  title: string;
+  description: string;
+  objectives: string[];
+  skillFocus: CurriculumSkillFocus[];
+  grammarTopics: string[];
+  vocabularyTopics: string[];
+  communicativeFunctions: string[];
+  progress: CurriculumProgress;
+  lessons: CourseLesson[];
+}
+export interface CourseLevel {
+  levelId: string;
+  cefrLevel: CefrBand;
+  title: string;
+  description: string;
+  objectives: string[];
+  recommended: boolean;
+  target: boolean;
+  progress: CurriculumProgress;
+  units: CourseUnit[];
+}
+export interface Course {
+  curriculumId: string;
+  curriculumVersion: number;
+  curriculumHash: string;
+  title: string;
+  description: string;
+  targetLanguage: "en";
+  referenceLocale: "en-US";
+  suggestedLevel: CefrBand | null;
+  placementConfidence: "low" | "medium" | "high" | null;
+  targetLevel: CefrBand | null;
+  progress: CurriculumProgress;
+  levels: CourseLevel[];
+}
+export interface CurriculumCatalog {
+  registryVersion: 1;
+  progressVersion: 1;
+  recommendationVersion: 1;
+  taxonomyVersion: 1;
+  publishedCurriculumCount: number;
+  activeSession: {
+    sessionId: string;
+    lessonId: string;
+    contentVersion: number;
+  } | null;
+  curricula: Course[];
+}
 export interface GuidedAudio {
   playbackId: string;
   audioBase64: string;

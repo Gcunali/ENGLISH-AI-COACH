@@ -1,0 +1,49 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://english-ai-coach.local/schemas/curriculum-v1.json",
+  "title": "English AI Coach Curriculum Manifest V1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["curriculumSchemaVersion","curriculumId","curriculumVersion","publicationState","title","description","targetLanguage","referenceLocale","levels"],
+  "properties": {
+    "curriculumSchemaVersion": {"const": 1},
+    "curriculumId": {"$ref": "#/$defs/slug"},
+    "curriculumVersion": {"type":"integer","minimum":1},
+    "publicationState": {"enum":["draft","published"]},
+    "title": {"type":"string","minLength":1,"maxLength":100},
+    "description": {"type":"string","minLength":1,"maxLength":600},
+    "targetLanguage": {"const":"en"},
+    "referenceLocale": {"const":"en-US"},
+    "levels": {"type":"array","minItems":1,"maxItems":6,"items":{"$ref":"#/$defs/level"}}
+  },
+  "$defs": {
+    "slug": {"type":"string","pattern":"^[a-z0-9]+(?:-[a-z0-9]+)*$","maxLength":100},
+    "text120": {"type":"string","minLength":1,"maxLength":120},
+    "objective": {"type":"string","minLength":1,"maxLength":200},
+    "lessonRef": {"type":"object","additionalProperties":false,"required":["lessonId","contentVersion"],"properties":{"lessonId":{"$ref":"#/$defs/slug"},"contentVersion":{"type":"integer","minimum":1}}},
+    "unit": {
+      "type":"object","additionalProperties":false,
+      "required":["unitId","title","description","objectives","skillFocus","grammarTopics","vocabularyTopics","communicativeFunctions","lessons"],
+      "properties": {
+        "unitId":{"$ref":"#/$defs/slug"},"title":{"type":"string","minLength":1,"maxLength":100},"description":{"type":"string","minLength":1,"maxLength":600},
+        "objectives":{"type":"array","maxItems":10,"items":{"$ref":"#/$defs/objective"}},
+        "skillFocus":{"type":"array","maxItems":6,"uniqueItems":true,"items":{"enum":["grammar","vocabulary","listening","pronunciation","speaking","interaction"]}},
+        "grammarTopics":{"type":"array","maxItems":12,"items":{"$ref":"#/$defs/text120"}},
+        "vocabularyTopics":{"type":"array","maxItems":12,"items":{"$ref":"#/$defs/text120"}},
+        "communicativeFunctions":{"type":"array","maxItems":12,"items":{"$ref":"#/$defs/text120"}},
+        "lessons":{"type":"array","minItems":1,"maxItems":30,"items":{"$ref":"#/$defs/lessonRef"}}
+      }
+    },
+    "level": {
+      "type":"object","additionalProperties":false,
+      "required":["levelId","cefrLevel","title","description","objectives","units"],
+      "properties": {
+        "levelId":{"enum":["a1","a2","b1","b2","c1","c2"]},"cefrLevel":{"enum":["A1","A2","B1","B2","C1","C2"]},
+        "title":{"type":"string","minLength":1,"maxLength":100},"description":{"type":"string","minLength":1,"maxLength":600},
+        "objectives":{"type":"array","maxItems":12,"items":{"$ref":"#/$defs/objective"}},
+        "units":{"type":"array","minItems":1,"maxItems":30,"items":{"$ref":"#/$defs/unit"}}
+      }
+    }
+  },
+  "$comment": "The Rust validator additionally enforces levelId/CEFR pairing, canonical subset order, curriculum-wide duplicate Unit/Lesson detection, total size and exact published Guided Lesson cross-references."
+}

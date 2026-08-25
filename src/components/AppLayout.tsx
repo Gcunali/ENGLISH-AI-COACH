@@ -1,7 +1,7 @@
 import { Activity, Award, BookOpen, CircleGauge, ClipboardCheck, GraduationCap, History, Home, Mic2, RefreshCw, Settings, ShieldCheck, Sparkles, UserRound } from 'lucide-react'
 import { NavLink, Outlet, useLocation } from 'react-router-dom'
 import { useEffect, useState } from 'react'
-import { getGuidedLessonOverview, subscribeGamificationChanges, subscribeReviewChanges } from '../services/native'
+import { getCourseCatalog, getGuidedLessonOverview, subscribeGamificationChanges, subscribeReviewChanges } from '../services/native'
 import type { Achievement } from '../types'
 import { notifyGamificationDataChanged } from '../utils/gamificationData'
 import { notifyReviewDataChanged } from '../utils/reviewData'
@@ -15,6 +15,7 @@ const NAVIGATION = [
     { to: '/pronunciation', label: 'Pronunciation', icon: Mic2 },
   ] },
   { label: 'Learning', items: [
+    { to: '/course', label: 'Course', icon: BookOpen, course: true },
     { to: '/guided-lessons', label: 'Guided Lessons', icon: GraduationCap, guided: true },
     { to: '/vocabulary', label: 'Vocabulary', icon: BookOpen },
     { to: '/progress', label: 'Progress', icon: CircleGauge },
@@ -34,6 +35,7 @@ const NAVIGATION = [
 const ROUTE_TITLES: Array<[RegExp, string]> = [
   [/^\/$/, 'Home'], [/^\/lesson\/new$/, 'New Lesson'], [/^\/history\//, 'Lesson Details'], [/^\/history$/, 'History'],
   [/^\/guided-lessons\/session\//, 'Guided Lesson'], [/^\/guided-lessons\//, 'Guided Lesson Details'], [/^\/guided-lessons$/, 'Guided Lessons'],
+  [/^\/course/, 'English Course'],
   [/^\/progress$/, 'Progress'], [/^\/review\/session\//, 'Review Session'], [/^\/review$/, 'Review'],
   [/^\/placement\/results\//, 'Placement Result'], [/^\/placement$/, 'Placement Test'], [/^\/profile$/, 'Student Profile'],
   [/^\/achievements$/, 'Achievements'], [/^\/vocabulary\//, 'Vocabulary Details'], [/^\/vocabulary$/, 'Vocabulary'],
@@ -44,6 +46,7 @@ export function AppLayout() {
   const { pathname } = useLocation()
   const [unlocked, setUnlocked] = useState<Achievement | null>(null)
   const [showGuidedLessons, setShowGuidedLessons] = useState(false)
+  const [showCourse, setShowCourse] = useState(false)
   useEffect(() => {
     document.documentElement.scrollTop = 0
     document.body.scrollTop = 0
@@ -59,13 +62,13 @@ export function AppLayout() {
     return () => stop()
   }, [])
   useEffect(()=>{let stop:()=>void=()=>undefined;void subscribeReviewChanges(notifyReviewDataChanged).then(value=>{stop=value});return()=>stop()},[])
-  useEffect(()=>{let active=true;void getGuidedLessonOverview().then(value=>{if(active)setShowGuidedLessons(value.publishedLessonCount>0||Boolean(value.activeSession))}).catch(()=>{if(active)setShowGuidedLessons(false)});return()=>{active=false}},[pathname])
+  useEffect(()=>{let active=true;void Promise.all([getGuidedLessonOverview(),getCourseCatalog()]).then(([guided,course])=>{if(active){setShowGuidedLessons(guided.publishedLessonCount>0||Boolean(guided.activeSession));setShowCourse(course.publishedCurriculumCount>0)}}).catch(()=>{if(active){setShowGuidedLessons(false);setShowCourse(false)}});return()=>{active=false}},[pathname])
   useEffect(() => { if (!unlocked) return undefined; const timer = window.setTimeout(() => setUnlocked(null), 5000); return () => window.clearTimeout(timer) }, [unlocked])
   return <div className="app-shell flex min-h-screen">
     <a className="skip-link" href="#main-content">Skip to main content</a>
     <aside className="desktop-nav h-screen w-64 shrink-0 overflow-y-auto border-r border-white/[.07] p-5 flex flex-col">
       <Brand />
-      <Navigation showGuidedLessons={showGuidedLessons} />
+      <Navigation showGuidedLessons={showGuidedLessons} showCourse={showCourse} />
       <div className="mt-auto glass rounded-2xl p-4">
         <div className="flex items-center gap-2 text-sm font-medium"><ShieldCheck size={16} className="text-[var(--accent)]" /> Private by default</div>
         <p className="muted text-xs leading-5 mb-0">Audio, transcripts and learning data stay on this computer.</p>
@@ -74,7 +77,7 @@ export function AppLayout() {
     <div className="min-w-0 flex-1">
       <div className="mobile-nav border-b border-white/[.07] p-3">
         <Brand />
-        <Navigation compact showGuidedLessons={showGuidedLessons} />
+        <Navigation compact showGuidedLessons={showGuidedLessons} showCourse={showCourse} />
       </div>
       <main id="main-content" tabIndex={-1} className="mx-auto w-full min-w-0 max-w-[1500px] overflow-x-hidden p-5 md:p-8"><RouteErrorBoundary key={pathname}><Outlet /></RouteErrorBoundary></main>
     </div>
@@ -89,9 +92,9 @@ function Brand() {
   </div>
 }
 
-function Navigation({ compact = false, showGuidedLessons = false }: { compact?: boolean; showGuidedLessons?: boolean }) {
+function Navigation({ compact = false, showGuidedLessons = false, showCourse = false }: { compact?: boolean; showGuidedLessons?: boolean; showCourse?: boolean }) {
   return <nav className={compact ? 'scrollbar-none mt-3 flex gap-2 overflow-x-auto pb-1' : 'mt-5 text-sm'} aria-label="Main navigation">
-    {NAVIGATION.map((group) => <div key={group.label} className={compact ? 'contents' : undefined}>{!compact && <div className="nav-group-label">{group.label}</div>}{group.items.filter(item=>!('guided' in item)||showGuidedLessons).map(({ to, label, icon: Icon, ...options }) => <NavLink
+    {NAVIGATION.map((group) => <div key={group.label} className={compact ? 'contents' : undefined}>{!compact && <div className="nav-group-label">{group.label}</div>}{group.items.filter(item=>(!('guided' in item)||showGuidedLessons)&&(!('course' in item)||showCourse)).map(({ to, label, icon: Icon, ...options }) => <NavLink
       key={to}
       to={to}
       end={'end' in options ? options.end : false}

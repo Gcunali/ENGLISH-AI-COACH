@@ -70,9 +70,16 @@ impl InteractiveLessonEngine {
         &self,
         request: StartInteractiveLessonRequest,
     ) -> Result<InteractiveLessonSessionDto, String> {
-        let lesson = self
-            .content
-            .get(&request.lesson_id)
+        let lesson = request
+            .content_version
+            .and_then(|version| self.content.get_exact(&request.lesson_id, version))
+            .or_else(|| {
+                request
+                    .content_version
+                    .is_none()
+                    .then(|| self.content.get(&request.lesson_id))
+                    .flatten()
+            })
             .ok_or("Guided lesson not found.")?;
         let descriptor = summary(&lesson);
         if !descriptor.startable {
@@ -317,6 +324,7 @@ mod tests {
         let (root, content, engine) = harness();
         let request = || StartInteractiveLessonRequest {
             lesson_id: "everyday-greetings-a1".into(),
+            content_version: None,
             start_over: false,
         };
         let started = engine.start(request()).unwrap();
@@ -387,12 +395,14 @@ mod tests {
         let first = engine
             .start(StartInteractiveLessonRequest {
                 lesson_id: "everyday-greetings-a1".into(),
+                content_version: None,
                 start_over: false,
             })
             .unwrap();
         let second = engine
             .start(StartInteractiveLessonRequest {
                 lesson_id: "everyday-greetings-a1".into(),
+                content_version: None,
                 start_over: true,
             })
             .unwrap();
@@ -429,6 +439,7 @@ mod tests {
         let mut session = engine
             .start(StartInteractiveLessonRequest {
                 lesson_id: "audio-foundation-a1".into(),
+                content_version: None,
                 start_over: false,
             })
             .unwrap();
@@ -628,6 +639,7 @@ mod tests {
         let session = engine
             .start(StartInteractiveLessonRequest {
                 lesson_id: "audio-foundation-a1".into(),
+                content_version: None,
                 start_over: false,
             })
             .unwrap();
@@ -646,6 +658,7 @@ mod tests {
         let mut session = engine
             .start(StartInteractiveLessonRequest {
                 lesson_id: "deterministic-exercises-a1".into(),
+                content_version: None,
                 start_over: false,
             })
             .unwrap();

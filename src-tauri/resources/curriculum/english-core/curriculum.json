@@ -1,0 +1,3293 @@
+{
+  "curriculumSchemaVersion": 1,
+  "curriculumId": "english-core",
+  "curriculumVersion": 3,
+  "publicationState": "published",
+  "title": "English Course",
+  "description": "An original structured en-US English course from A1 through C2.",
+  "targetLanguage": "en",
+  "referenceLocale": "en-US",
+  "levels": [
+    {
+      "levelId": "a1",
+      "cefrLevel": "A1",
+      "title": "Beginner",
+      "description": "Build essential English for concrete everyday communication.",
+      "objectives": [
+        "Communicate in familiar everyday situations with controlled language."
+      ],
+      "units": [
+        {
+          "unitId": "a1-u01-meeting-people",
+          "title": "Meeting People",
+          "description": "Greet people, exchange basic information, and complete a first introduction.",
+          "objectives": [
+            "Introduce yourself and another person.",
+            "Ask and answer basic personal questions."
+          ],
+          "skillFocus": [
+            "grammar",
+            "vocabulary",
+            "listening",
+            "pronunciation",
+            "speaking",
+            "interaction"
+          ],
+          "grammarTopics": [
+            "subject pronouns",
+            "verb be",
+            "basic WH questions",
+            "yes/no questions with be",
+            "basic possessive adjectives"
+          ],
+          "vocabularyTopics": [
+            "greetings",
+            "names",
+            "countries",
+            "nationalities",
+            "languages",
+            "personal information"
+          ],
+          "communicativeFunctions": [
+            "greeting",
+            "introducing yourself",
+            "asking for basic information",
+            "closing a conversation"
+          ],
+          "lessons": [
+            {
+              "lessonId": "a1-u01-l01-hello-goodbye",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "a1-u01-l02-whats-your-name",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "a1-u01-l03-countries-nationalities",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "a1-u01-l04-personal-information",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "a1-u01-l05-i-am-you-are-he-is",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "a1-u01-l06-introductions-mission",
+              "contentVersion": 1
+            }
+          ]
+        },
+        {
+          "unitId": "a1-u02-numbers-time-dates",
+          "title": "Numbers, Time & Dates",
+          "description": "Use numbers, spelling, dates, and clock time to exchange practical details and arrange a meeting.",
+          "objectives": [
+            "Say, understand, and use numbers from zero to one hundred in everyday exchanges.",
+            "Spell names and exchange a practice phone number and email address clearly."
+          ],
+          "skillFocus": [
+            "grammar",
+            "vocabulary",
+            "listening",
+            "pronunciation",
+            "speaking",
+            "interaction"
+          ],
+          "grammarTopics": [
+            "cardinal numbers 0–100",
+            "alphabet spelling and digit-by-digit numbers",
+            "What day/date and ordinal date forms",
+            "What time, o'clock, half past, and time prepositions",
+            "present simple with time expressions",
+            "integrated numbers, dates, time, and availability"
+          ],
+          "vocabularyTopics": [
+            "number",
+            "zero",
+            "hundred",
+            "spell",
+            "phone number",
+            "email address"
+          ],
+          "communicativeFunctions": [
+            "Say, understand, and use numbers from zero to one hundred in everyday exchanges.",
+            "Spell names and exchange a practice phone number and email address clearly.",
+            "Ask for and state weekdays, months, and simple calendar dates.",
+            "Ask for and tell common clock times."
+          ],
+          "lessons": [
+            {
+              "lessonId": "a1-u02-l01-numbers-0-100",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "a1-u02-l02-spelling-phones-emails",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "a1-u02-l03-days-months-dates",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "a1-u02-l04-what-time-is-it",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "a1-u02-l05-my-schedule",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "a1-u02-l06-making-simple-appointment",
+              "contentVersion": 1
+            }
+          ]
+        },
+        {
+          "unitId": "a1-u03-family-people",
+          "title": "Family & People",
+          "description": "Identify family members, describe people, and express basic possession.",
+          "objectives": [
+            "Name close family members and say how they are related.",
+            "Ask and answer who a person is in a photo or group."
+          ],
+          "skillFocus": [
+            "grammar",
+            "vocabulary",
+            "listening",
+            "pronunciation",
+            "speaking",
+            "interaction"
+          ],
+          "grammarTopics": [
+            "family nouns and possessive adjectives",
+            "Who is and demonstrative this",
+            "have with I/you/we/they and has with he/she/it",
+            "be and have for descriptions",
+            "possessive adjectives and apostrophe-s",
+            "integrated family description review"
+          ],
+          "vocabularyTopics": [
+            "parent",
+            "mother",
+            "father",
+            "sister",
+            "brother",
+            "child"
+          ],
+          "communicativeFunctions": [
+            "Name close family members and say how they are related.",
+            "Ask and answer who a person is in a photo or group.",
+            "Say what people have and ask about family or personal features.",
+            "Give a short respectful description of a person's appearance and character."
+          ],
+          "lessons": [
+            {
+              "lessonId": "a1-u03-l01-my-family",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "a1-u03-l02-who-is-this",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "a1-u03-l03-have-has",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "a1-u03-l04-describing-people",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "a1-u03-l05-possession",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "a1-u03-l06-meet-my-family",
+              "contentVersion": 1
+            }
+          ]
+        },
+        {
+          "unitId": "a1-u04-daily-life",
+          "title": "Daily Life",
+          "description": "Talk about routines, frequency, and simple present questions and negatives.",
+          "objectives": [
+            "Describe the main actions in a typical day in sequence.",
+            "Use the present simple for regular actions and facts."
+          ],
+          "skillFocus": [
+            "grammar",
+            "vocabulary",
+            "listening",
+            "pronunciation",
+            "speaking",
+            "interaction"
+          ],
+          "grammarTopics": [
+            "present simple first-person routine verbs",
+            "present simple affirmative and third-person -s",
+            "do not and does not plus base verb",
+            "do/does questions and short answers",
+            "frequency adverbs before main verbs and after be",
+            "integrated present simple and frequency review"
+          ],
+          "vocabularyTopics": [
+            "wake up",
+            "get dressed",
+            "breakfast",
+            "commute",
+            "work",
+            "study"
+          ],
+          "communicativeFunctions": [
+            "Describe the main actions in a typical day in sequence.",
+            "Use the present simple for regular actions and facts.",
+            "Make clear present simple negative statements about routines.",
+            "Ask and answer present simple questions about regular activities."
+          ],
+          "lessons": [
+            {
+              "lessonId": "a1-u04-l01-my-daily-routine",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "a1-u04-l02-present-simple",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "a1-u04-l03-dont-doesnt",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "a1-u04-l04-do-you-does-she",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "a1-u04-l05-frequency-adverbs",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "a1-u04-l06-day-in-my-life",
+              "contentVersion": 1
+            }
+          ]
+        },
+        {
+          "unitId": "a1-u05-home-around-town",
+          "title": "Home & Around Town",
+          "description": "Describe a home and neighborhood, locate places, and give short directions.",
+          "objectives": [
+            "Name rooms and give a simple description of a home.",
+            "Say what exists in a room or neighborhood."
+          ],
+          "skillFocus": [
+            "grammar",
+            "vocabulary",
+            "listening",
+            "pronunciation",
+            "speaking",
+            "interaction"
+          ],
+          "grammarTopics": [
+            "be, have, and room nouns",
+            "there is for singular and there are for plural",
+            "where questions and place prepositions",
+            "place nouns and there is/are review",
+            "imperatives, turn, go straight, and location phrases",
+            "integrated town and direction review"
+          ],
+          "vocabularyTopics": [
+            "living room",
+            "kitchen",
+            "bedroom",
+            "bathroom",
+            "furniture",
+            "there is"
+          ],
+          "communicativeFunctions": [
+            "Name rooms and give a simple description of a home.",
+            "Say what exists in a room or neighborhood.",
+            "Ask for and state an object's location using basic prepositions.",
+            "Identify useful places and say where they are in town."
+          ],
+          "lessons": [
+            {
+              "lessonId": "a1-u05-l01-my-home",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "a1-u05-l02-there-is-there-are",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "a1-u05-l03-where-is-it",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "a1-u05-l04-places-in-town",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "a1-u05-l05-giving-directions",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "a1-u05-l06-finding-a-place",
+              "contentVersion": 1
+            }
+          ]
+        },
+        {
+          "unitId": "a1-u06-food-cafe-english",
+          "title": "Food & Café English",
+          "description": "Talk about food preferences and quantities and place a polite café order.",
+          "objectives": [
+            "Name common foods and drinks and say what you eat or drink.",
+            "Distinguish items that can be counted from food substances and liquids."
+          ],
+          "skillFocus": [
+            "grammar",
+            "vocabulary",
+            "listening",
+            "pronunciation",
+            "speaking",
+            "interaction"
+          ],
+          "grammarTopics": [
+            "food nouns and present simple",
+            "a/an, plural nouns, and uncountable nouns",
+            "some in affirmatives and any in questions/negatives",
+            "like, don't like, and preference questions",
+            "would like as a fixed polite request",
+            "integrated café-order review"
+          ],
+          "vocabularyTopics": [
+            "water",
+            "coffee",
+            "tea",
+            "bread",
+            "rice",
+            "fruit"
+          ],
+          "communicativeFunctions": [
+            "Name common foods and drinks and say what you eat or drink.",
+            "Distinguish items that can be counted from food substances and liquids.",
+            "Ask about and describe available food with some and any.",
+            "Ask about and state food preferences."
+          ],
+          "lessons": [
+            {
+              "lessonId": "a1-u06-l01-food-drinks",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "a1-u06-l02-countable-uncountable",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "a1-u06-l03-some-any",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "a1-u06-l04-what-do-you-like",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "a1-u06-l05-id-like",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "a1-u06-l06-at-the-cafe",
+              "contentVersion": 1
+            }
+          ]
+        },
+        {
+          "unitId": "a1-u07-free-time-abilities",
+          "title": "Free Time & Abilities",
+          "description": "Talk about hobbies, abilities, current activities, invitations, and simple plans.",
+          "objectives": [
+            "Name hobbies and describe regular free-time activities.",
+            "Ask about and state basic abilities with can."
+          ],
+          "skillFocus": [
+            "grammar",
+            "vocabulary",
+            "listening",
+            "pronunciation",
+            "speaking",
+            "interaction"
+          ],
+          "grammarTopics": [
+            "like plus noun or to-infinitive",
+            "can/can't and ability questions",
+            "like/love/don't like plus activities",
+            "present continuous for actions now",
+            "let's and invitation responses",
+            "integrated free-time review"
+          ],
+          "vocabularyTopics": [
+            "hobby",
+            "read",
+            "cook",
+            "dance",
+            "swim",
+            "play"
+          ],
+          "communicativeFunctions": [
+            "Name hobbies and describe regular free-time activities.",
+            "Ask about and state basic abilities with can.",
+            "Compare simple likes and dislikes and ask about preferences.",
+            "Ask and say what is happening at the present moment."
+          ],
+          "lessons": [
+            {
+              "lessonId": "a1-u07-l01-hobbies-free-time",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "a1-u07-l02-can-you",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "a1-u07-l03-likes-dislikes",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "a1-u07-l04-what-are-you-doing",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "a1-u07-l05-lets-do-something",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "a1-u07-l06-weekend-plans",
+              "contentVersion": 1
+            }
+          ]
+        },
+        {
+          "unitId": "a1-u08-shopping-everyday-english",
+          "title": "Shopping & Everyday English",
+          "description": "Discuss clothes, colors, sizes, prices, choices, help requests, and common problems.",
+          "objectives": [
+            "Name basic clothing and describe its color.",
+            "Ask for a clothing size and understand a simple price."
+          ],
+          "skillFocus": [
+            "grammar",
+            "vocabulary",
+            "listening",
+            "pronunciation",
+            "speaking",
+            "interaction"
+          ],
+          "grammarTopics": [
+            "be plus color and clothing nouns",
+            "what size/how much and number review",
+            "this/that and one as a substitute noun",
+            "can/could requests in a store",
+            "be negative, doesn't work, and help requests",
+            "integrated A1 shopping and help review"
+          ],
+          "vocabularyTopics": [
+            "shirt",
+            "pants",
+            "dress",
+            "shoes",
+            "color",
+            "size"
+          ],
+          "communicativeFunctions": [
+            "Name basic clothing and describe its color.",
+            "Ask for a clothing size and understand a simple price.",
+            "Compare and choose between nearby and more distant items.",
+            "Ask a store worker for an item, size, or fitting room politely."
+          ],
+          "lessons": [
+            {
+              "lessonId": "a1-u08-l01-clothes-colors",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "a1-u08-l02-sizes-prices",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "a1-u08-l03-this-one-that-one",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "a1-u08-l04-can-you-help-me",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "a1-u08-l05-everyday-problems",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "a1-u08-l06-a1-real-life-mission",
+              "contentVersion": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "levelId": "a2",
+      "cefrLevel": "A2",
+      "title": "Elementary",
+      "description": "Extend basic English to connected everyday communication and problem solving.",
+      "objectives": [
+        "Connect ideas and handle common everyday situations with increasing independence."
+      ],
+      "units": [
+        {
+          "unitId": "a2-u01-talking-about-past",
+          "title": "Talking About the Past",
+          "description": "Describe past states and completed actions and ask what happened.",
+          "objectives": [
+            "Describe where people were and how situations felt in the past.",
+            "Describe completed past actions with regular verbs and time markers."
+          ],
+          "skillFocus": [
+            "grammar",
+            "vocabulary",
+            "listening",
+            "pronunciation",
+            "speaking",
+            "interaction"
+          ],
+          "grammarTopics": [
+            "was/were in statements, negatives, and questions",
+            "regular past -ed and pronunciation patterns",
+            "went, had, saw, made, took, came, and bought",
+            "did/didn't plus base verb",
+            "past simple sequence with time expressions",
+            "integrated past simple review"
+          ],
+          "vocabularyTopics": [
+            "yesterday",
+            "last night",
+            "weekend",
+            "ago",
+            "visit",
+            "arrive"
+          ],
+          "communicativeFunctions": [
+            "Describe where people were and how situations felt in the past.",
+            "Describe completed past actions with regular verbs and time markers.",
+            "Use frequent irregular past forms in a short account.",
+            "Ask and answer about completed past actions."
+          ],
+          "lessons": [
+            {
+              "lessonId": "a2-u01-l01-was-were",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "a2-u01-l02-past-simple-regular",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "a2-u01-l03-common-irregular-verbs",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "a2-u01-l04-did-you",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "a2-u01-l05-yesterday-last-weekend",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "a2-u01-l06-tell-what-happened",
+              "contentVersion": 1
+            }
+          ]
+        },
+        {
+          "unitId": "a2-u02-stories-experiences",
+          "title": "Stories & Experiences",
+          "description": "Set a scene, connect events, and discuss basic life experiences.",
+          "objectives": [
+            "Describe an action that was in progress at a past moment.",
+            "Connect a continuing background action with a shorter past event."
+          ],
+          "skillFocus": [
+            "grammar",
+            "vocabulary",
+            "listening",
+            "pronunciation",
+            "speaking",
+            "interaction"
+          ],
+          "grammarTopics": [
+            "past continuous was/were plus -ing",
+            "past continuous with while and past simple with when",
+            "past tenses with first, then, suddenly, and finally",
+            "present perfect with ever and never",
+            "present perfect experience plus past simple detail",
+            "integrated past and present perfect review"
+          ],
+          "vocabularyTopics": [
+            "story",
+            "event",
+            "scene",
+            "suddenly",
+            "while",
+            "when"
+          ],
+          "communicativeFunctions": [
+            "Describe an action that was in progress at a past moment.",
+            "Connect a continuing background action with a shorter past event.",
+            "Organize a short story with a beginning, sequence, and ending.",
+            "Ask and answer about life experience without a finished time."
+          ],
+          "lessons": [
+            {
+              "lessonId": "a2-u02-l01-what-were-you-doing",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "a2-u02-l02-when-while",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "a2-u02-l03-telling-a-story",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "a2-u02-l04-have-you-ever",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "a2-u02-l05-life-experiences",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "a2-u02-l06-memorable-experience",
+              "contentVersion": 1
+            }
+          ]
+        },
+        {
+          "unitId": "a2-u03-plans-future",
+          "title": "Plans & the Future",
+          "description": "Express intentions, arrangements, decisions, predictions, and possibilities.",
+          "objectives": [
+            "State planned intentions based on a decision already made.",
+            "Discuss fixed personal arrangements with time and place details."
+          ],
+          "skillFocus": [
+            "grammar",
+            "vocabulary",
+            "listening",
+            "pronunciation",
+            "speaking",
+            "interaction"
+          ],
+          "grammarTopics": [
+            "be going to plus base verb",
+            "present continuous for arranged future events",
+            "will plus base verb and contractions",
+            "will and going to for predictions",
+            "might/may plus base verb and maybe",
+            "integrated future forms review"
+          ],
+          "vocabularyTopics": [
+            "plan",
+            "arrangement",
+            "intention",
+            "prediction",
+            "possibility",
+            "book"
+          ],
+          "communicativeFunctions": [
+            "State planned intentions based on a decision already made.",
+            "Discuss fixed personal arrangements with time and place details.",
+            "Make an immediate decision, offer help, or state a neutral future fact.",
+            "Make and explain simple predictions about the future."
+          ],
+          "lessons": [
+            {
+              "lessonId": "a2-u03-l01-going-to",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "a2-u03-l02-future-arrangements",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "a2-u03-l03-will",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "a2-u03-l04-predictions",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "a2-u03-l05-maybe-might",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "a2-u03-l06-planning-a-trip",
+              "contentVersion": 1
+            }
+          ]
+        },
+        {
+          "unitId": "a2-u04-comparing-choosing",
+          "title": "Comparing & Choosing",
+          "description": "Compare people and options, describe extremes, and make a reasoned choice.",
+          "objectives": [
+            "Compare two people, places, or products using common comparative forms.",
+            "Identify an extreme or top option in a group."
+          ],
+          "skillFocus": [
+            "grammar",
+            "vocabulary",
+            "listening",
+            "pronunciation",
+            "speaking",
+            "interaction"
+          ],
+          "grammarTopics": [
+            "comparatives with -er, more, and irregular better",
+            "superlatives with the -est, the most, and the best",
+            "as adjective as and not as adjective as",
+            "too much/many and not enough",
+            "comparative linkers and because",
+            "integrated comparison review"
+          ],
+          "vocabularyTopics": [
+            "compare",
+            "choice",
+            "option",
+            "quality",
+            "feature",
+            "price"
+          ],
+          "communicativeFunctions": [
+            "Compare two people, places, or products using common comparative forms.",
+            "Identify an extreme or top option in a group.",
+            "Describe equal and unequal qualities in two options.",
+            "Explain why an amount or quality does not fit a need."
+          ],
+          "lessons": [
+            {
+              "lessonId": "a2-u04-l01-bigger-better-faster",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "a2-u04-l02-the-best-choice",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "a2-u04-l03-as-as",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "a2-u04-l04-too-much-not-enough",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "a2-u04-l05-comparing-options",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "a2-u04-l06-choosing-best-option",
+              "contentVersion": 1
+            }
+          ]
+        },
+        {
+          "unitId": "a2-u05-travel-accommodation",
+          "title": "Travel & Accommodation",
+          "description": "Navigate travel services, request information, and solve common airport and hotel problems.",
+          "objectives": [
+            "Find a gate, understand basic departure information, and answer check-in questions.",
+            "Check in at a hotel and confirm a reservation and room details."
+          ],
+          "skillFocus": [
+            "grammar",
+            "vocabulary",
+            "listening",
+            "pronunciation",
+            "speaking",
+            "interaction"
+          ],
+          "grammarTopics": [
+            "travel questions and airport instructions",
+            "polite requests and reservation details",
+            "indirect polite questions with could and can",
+            "present/past facts with problem and request language",
+            "present perfect with just, already, and yet",
+            "integrated travel and present perfect review"
+          ],
+          "vocabularyTopics": [
+            "boarding pass",
+            "gate",
+            "departure",
+            "arrival",
+            "luggage",
+            "reservation"
+          ],
+          "communicativeFunctions": [
+            "Find a gate, understand basic departure information, and answer check-in questions.",
+            "Check in at a hotel and confirm a reservation and room details.",
+            "Request and clarify times, platforms, locations, and prices.",
+            "Report a delay, missing item, or reservation problem and request action."
+          ],
+          "lessons": [
+            {
+              "lessonId": "a2-u05-l01-at-the-airport",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "a2-u05-l02-checking-in",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "a2-u05-l03-asking-travel-information",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "a2-u05-l04-travel-problems",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "a2-u05-l05-just-already-yet",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "a2-u05-l06-solving-travel-problem",
+              "contentVersion": 1
+            }
+          ]
+        },
+        {
+          "unitId": "a2-u06-work-study-responsibilities",
+          "title": "Work, Study & Responsibilities",
+          "description": "Discuss work and study duties, rules, advice, and personal goals.",
+          "objectives": [
+            "Describe current work or study and the main tasks involved.",
+            "Explain external duties and things that are not necessary."
+          ],
+          "skillFocus": [
+            "grammar",
+            "vocabulary",
+            "listening",
+            "pronunciation",
+            "speaking",
+            "interaction"
+          ],
+          "grammarTopics": [
+            "present simple and work/study vocabulary",
+            "have to/don't have to for obligation",
+            "must and mustn't for rules",
+            "should/shouldn't plus base verb",
+            "to-infinitive for purpose and want to",
+            "integrated obligation, advice, and purpose review"
+          ],
+          "vocabularyTopics": [
+            "job",
+            "course",
+            "assignment",
+            "deadline",
+            "meeting",
+            "responsibility"
+          ],
+          "communicativeFunctions": [
+            "Describe current work or study and the main tasks involved.",
+            "Explain external duties and things that are not necessary.",
+            "State strong rules and prohibitions clearly.",
+            "Ask for and give practical work or study advice."
+          ],
+          "lessons": [
+            {
+              "lessonId": "a2-u06-l01-jobs-studies",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "a2-u06-l02-have-to",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "a2-u06-l03-must-mustnt",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "a2-u06-l04-giving-advice",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "a2-u06-l05-goals-purpose",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "a2-u06-l06-work-study-conversation",
+              "contentVersion": 1
+            }
+          ]
+        },
+        {
+          "unitId": "a2-u07-health-everyday-problems",
+          "title": "Health & Everyday Problems",
+          "description": "Describe common symptoms, request pharmacy help, give advice, and discuss likely results.",
+          "objectives": [
+            "Name major body parts and locate simple pain or discomfort.",
+            "Describe common symptoms and answer basic follow-up questions."
+          ],
+          "skillFocus": [
+            "grammar",
+            "vocabulary",
+            "listening",
+            "pronunciation",
+            "speaking",
+            "interaction"
+          ],
+          "grammarTopics": [
+            "body nouns and possessive forms",
+            "have plus symptom and feel plus adjective",
+            "polite requests and quantity/frequency language",
+            "should/shouldn't for advice",
+            "first conditional if plus present, will plus base",
+            "integrated symptom, advice, and conditional review"
+          ],
+          "vocabularyTopics": [
+            "head",
+            "throat",
+            "stomach",
+            "back",
+            "fever",
+            "cough"
+          ],
+          "communicativeFunctions": [
+            "Name major body parts and locate simple pain or discomfort.",
+            "Describe common symptoms and answer basic follow-up questions.",
+            "Ask a pharmacist for a suitable non-emergency product and understand basic directions.",
+            "Give and respond to sensible everyday health advice."
+          ],
+          "lessons": [
+            {
+              "lessonId": "a2-u07-l01-parts-body",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "a2-u07-l02-whats-wrong-health",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "a2-u07-l03-at-the-pharmacy",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "a2-u07-l04-you-should",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "a2-u07-l05-if-you-feel-sick",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "a2-u07-l06-getting-help",
+              "contentVersion": 1
+            }
+          ]
+        },
+        {
+          "unitId": "a2-u08-opinions-technology-social-life",
+          "title": "Opinions, Technology & Social Life",
+          "description": "Express opinions, respond respectfully, describe things with relative clauses, and arrange social plans.",
+          "objectives": [
+            "State a clear opinion and support it with a simple reason.",
+            "Respond to an opinion with respectful agreement or disagreement."
+          ],
+          "skillFocus": [
+            "grammar",
+            "vocabulary",
+            "listening",
+            "pronunciation",
+            "speaking",
+            "interaction"
+          ],
+          "grammarTopics": [
+            "I think, in my opinion, and because",
+            "agreement phrases and polite contrast",
+            "basic relative clauses with who, that, and where",
+            "relative clauses and present tense integration",
+            "future arrangements and invitation language",
+            "integrated A2 tense and function review"
+          ],
+          "vocabularyTopics": [
+            "opinion",
+            "agree",
+            "disagree",
+            "reason",
+            "device",
+            "app"
+          ],
+          "communicativeFunctions": [
+            "State a clear opinion and support it with a simple reason.",
+            "Respond to an opinion with respectful agreement or disagreement.",
+            "Add identifying information about a person, thing, or place.",
+            "Describe how a device or app helps or creates an everyday problem."
+          ],
+          "lessons": [
+            {
+              "lessonId": "a2-u08-l01-giving-opinion",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "a2-u08-l02-agreeing-disagreeing",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "a2-u08-l03-people-things-places",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "a2-u08-l04-technology-daily-life",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "a2-u08-l05-social-plans",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "a2-u08-l06-a2-real-life-mission",
+              "contentVersion": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "levelId": "b1",
+      "cefrLevel": "B1",
+      "title": "Intermediate",
+      "description": "Communicate independently in familiar situations, explain experiences, and solve practical problems.",
+      "objectives": [
+        "Communicate independently in familiar situations, explain experiences, and solve practical problems."
+      ],
+      "units": [
+        {
+          "unitId": "b1-u01-experiences-and-storytelling",
+          "title": "Experiences & Storytelling",
+          "description": "Develop B1 communication through experiences & storytelling.",
+          "objectives": [
+            "Use present perfect for experience to explain and handle ideas related to experiences & events with appropriate B1 complexity.",
+            "Use present perfect versus finished past to explain and handle ideas related to present perfect or past simple? with appropriate B1 complexity."
+          ],
+          "skillFocus": [
+            "grammar",
+            "vocabulary",
+            "listening",
+            "pronunciation",
+            "speaking",
+            "interaction"
+          ],
+          "grammarTopics": [
+            "present perfect for experience",
+            "present perfect versus finished past",
+            "for and since with continuing situations",
+            "narrative sequence and linkers",
+            "past continuous interrupted by past simple",
+            "integrated experience and narrative review"
+          ],
+          "vocabularyTopics": [
+            "memorable experience",
+            "take part in",
+            "turning point",
+            "so far",
+            "recently",
+            "for several years",
+            "since I was a child",
+            "at first"
+          ],
+          "communicativeFunctions": [
+            "Communicate effectively through experiences & events.",
+            "Communicate effectively through present perfect or past simple?.",
+            "Communicate effectively through for & since.",
+            "Communicate effectively through building a story.",
+            "Communicate effectively through something unexpected happened."
+          ],
+          "lessons": [
+            {
+              "lessonId": "b1-u01-l01-experiences-and-events",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "b1-u01-l02-present-perfect-or-past-simple",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "b1-u01-l03-for-and-since",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "b1-u01-l04-building-a-story",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "b1-u01-l05-something-unexpected-happened",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "b1-u01-l06-tell-your-story",
+              "contentVersion": 1
+            }
+          ]
+        },
+        {
+          "unitId": "b1-u02-plans-possibilities-and-decisions",
+          "title": "Plans, Possibilities & Decisions",
+          "description": "Develop B1 communication through plans, possibilities & decisions.",
+          "objectives": [
+            "Use going to and present continuous for plans to explain and handle ideas related to plans & intentions with appropriate B1 complexity.",
+            "Use will, going to, and present continuous choices to explain and handle ideas related to future choices with appropriate B1 complexity."
+          ],
+          "skillFocus": [
+            "grammar",
+            "vocabulary",
+            "listening",
+            "pronunciation",
+            "speaking",
+            "interaction"
+          ],
+          "grammarTopics": [
+            "going to and present continuous for plans",
+            "will, going to, and present continuous choices",
+            "first conditional",
+            "basic second conditional",
+            "may, might, could, and decision language",
+            "integrated future and conditional review"
+          ],
+          "vocabularyTopics": [
+            "intend to",
+            "arrange to",
+            "weigh the options",
+            "make up my mind",
+            "likely outcome",
+            "possible consequence",
+            "backup plan",
+            "on the one hand"
+          ],
+          "communicativeFunctions": [
+            "Communicate effectively through plans & intentions.",
+            "Communicate effectively through future choices.",
+            "Communicate effectively through if this happens....",
+            "Communicate effectively through what would you do?.",
+            "Communicate effectively through possibilities & decisions."
+          ],
+          "lessons": [
+            {
+              "lessonId": "b1-u02-l01-plans-and-intentions",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "b1-u02-l02-future-choices",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "b1-u02-l03-if-this-happens",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "b1-u02-l04-what-would-you-do",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "b1-u02-l05-possibilities-and-decisions",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "b1-u02-l06-making-a-difficult-decision",
+              "contentVersion": 1
+            }
+          ]
+        },
+        {
+          "unitId": "b1-u03-work-and-study",
+          "title": "Work & Study",
+          "description": "Develop B1 communication through work & study.",
+          "objectives": [
+            "Use present forms for roles and routines to explain and handle ideas related to work & career with appropriate B1 complexity.",
+            "Use can, be responsible for, and have to to explain and handle ideas related to skills & responsibilities with appropriate B1 complexity."
+          ],
+          "skillFocus": [
+            "grammar",
+            "vocabulary",
+            "listening",
+            "pronunciation",
+            "speaking",
+            "interaction"
+          ],
+          "grammarTopics": [
+            "present forms for roles and routines",
+            "can, be responsible for, and have to",
+            "common gerund and infinitive patterns",
+            "defining relative clauses",
+            "project language and goal structures",
+            "integrated work and study review"
+          ],
+          "vocabularyTopics": [
+            "career path",
+            "job role",
+            "be responsible for",
+            "meet a deadline",
+            "workload",
+            "practical skill",
+            "look forward to",
+            "decide to"
+          ],
+          "communicativeFunctions": [
+            "Communicate effectively through work & career.",
+            "Communicate effectively through skills & responsibilities.",
+            "Communicate effectively through gerund or infinitive?.",
+            "Communicate effectively through people who work with me.",
+            "Communicate effectively through goals, projects & challenges."
+          ],
+          "lessons": [
+            {
+              "lessonId": "b1-u03-l01-work-and-career",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "b1-u03-l02-skills-and-responsibilities",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "b1-u03-l03-gerund-or-infinitive",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "b1-u03-l04-people-who-work-with-me",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "b1-u03-l05-goals-projects-and-challenges",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "b1-u03-l06-career-conversation",
+              "contentVersion": 1
+            }
+          ]
+        },
+        {
+          "unitId": "b1-u04-communication-and-relationships",
+          "title": "Communication & Relationships",
+          "description": "Develop B1 communication through communication & relationships.",
+          "objectives": [
+            "Use relative clauses for people to explain and handle ideas related to talking about people with appropriate B1 complexity.",
+            "Use introductory reported speech to explain and handle ideas related to what did they say? with appropriate B1 complexity."
+          ],
+          "skillFocus": [
+            "grammar",
+            "vocabulary",
+            "listening",
+            "pronunciation",
+            "speaking",
+            "interaction"
+          ],
+          "grammarTopics": [
+            "relative clauses for people",
+            "introductory reported speech",
+            "say versus tell patterns",
+            "indirect question word order",
+            "clarifying and explaining misunderstandings",
+            "integrated relationship repair review"
+          ],
+          "vocabularyTopics": [
+            "get along with",
+            "have in common",
+            "reliable",
+            "considerate",
+            "They said that",
+            "She told me to",
+            "Could you tell me whether",
+            "Do you know what"
+          ],
+          "communicativeFunctions": [
+            "Communicate effectively through talking about people.",
+            "Communicate effectively through what did they say?.",
+            "Communicate effectively through say or tell?.",
+            "Communicate effectively through asking indirect questions.",
+            "Communicate effectively through problems & misunderstandings."
+          ],
+          "lessons": [
+            {
+              "lessonId": "b1-u04-l01-talking-about-people",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "b1-u04-l02-what-did-they-say",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "b1-u04-l03-say-or-tell",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "b1-u04-l04-asking-indirect-questions",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "b1-u04-l05-problems-and-misunderstandings",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "b1-u04-l06-resolving-a-misunderstanding",
+              "contentVersion": 1
+            }
+          ]
+        },
+        {
+          "unitId": "b1-u05-travel-and-problem-solving",
+          "title": "Travel & Problem Solving",
+          "description": "Develop B1 communication through travel & problem solving.",
+          "objectives": [
+            "Use present perfect and past travel detail to explain and handle ideas related to travel experiences with appropriate B1 complexity.",
+            "Use passive updates and changed arrangements to explain and handle ideas related to delays & changes with appropriate B1 complexity."
+          ],
+          "skillFocus": [
+            "grammar",
+            "vocabulary",
+            "listening",
+            "pronunciation",
+            "speaking",
+            "interaction"
+          ],
+          "grammarTopics": [
+            "present perfect and past travel detail",
+            "passive updates and changed arrangements",
+            "polite modal requests",
+            "problem, cause, and effect language",
+            "suggestions and solution language",
+            "integrated travel problem review"
+          ],
+          "vocabularyTopics": [
+            "travel abroad",
+            "local customs",
+            "delayed connection",
+            "rebook a flight",
+            "change of plan",
+            "Would you mind helping me?",
+            "Could you let me know",
+            "The issue is that"
+          ],
+          "communicativeFunctions": [
+            "Communicate effectively through travel experiences.",
+            "Communicate effectively through delays & changes.",
+            "Communicate effectively through asking for help politely.",
+            "Communicate effectively through explaining a problem.",
+            "Communicate effectively through finding a solution."
+          ],
+          "lessons": [
+            {
+              "lessonId": "b1-u05-l01-travel-experiences",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "b1-u05-l02-delays-and-changes",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "b1-u05-l03-asking-for-help-politely",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "b1-u05-l04-explaining-a-problem",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "b1-u05-l05-finding-a-solution",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "b1-u05-l06-travel-problem-mission",
+              "contentVersion": 1
+            }
+          ]
+        },
+        {
+          "unitId": "b1-u06-health-habits-and-lifestyle",
+          "title": "Health, Habits & Lifestyle",
+          "description": "Develop B1 communication through health, habits & lifestyle.",
+          "objectives": [
+            "Use present simple and habit collocations to explain and handle ideas related to healthy habits with appropriate B1 complexity.",
+            "Use comparative change language to explain and handle ideas related to changes over time with appropriate B1 complexity."
+          ],
+          "skillFocus": [
+            "grammar",
+            "vocabulary",
+            "listening",
+            "pronunciation",
+            "speaking",
+            "interaction"
+          ],
+          "grammarTopics": [
+            "present simple and habit collocations",
+            "comparative change language",
+            "used to versus present habits",
+            "should, ought to, and had better",
+            "choice, reason, and consequence",
+            "integrated habit-change review"
+          ],
+          "vocabularyTopics": [
+            "balanced diet",
+            "sleep routine",
+            "stay active",
+            "cut down on",
+            "gradual change",
+            "over time",
+            "used to",
+            "get used to"
+          ],
+          "communicativeFunctions": [
+            "Communicate effectively through healthy habits.",
+            "Communicate effectively through changes over time.",
+            "Communicate effectively through i used to....",
+            "Communicate effectively through giving better advice.",
+            "Communicate effectively through lifestyle choices."
+          ],
+          "lessons": [
+            {
+              "lessonId": "b1-u06-l01-healthy-habits",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "b1-u06-l02-changes-over-time",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "b1-u06-l03-i-used-to",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "b1-u06-l04-giving-better-advice",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "b1-u06-l05-lifestyle-choices",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "b1-u06-l06-changing-a-habit",
+              "contentVersion": 1
+            }
+          ]
+        },
+        {
+          "unitId": "b1-u07-technology-media-and-opinions",
+          "title": "Technology, Media & Opinions",
+          "description": "Develop B1 communication through technology, media & opinions.",
+          "objectives": [
+            "Use technology habits and present forms to explain and handle ideas related to technology in our lives with appropriate B1 complexity.",
+            "Use news vocabulary and source language to explain and handle ideas related to news & media with appropriate B1 complexity."
+          ],
+          "skillFocus": [
+            "grammar",
+            "vocabulary",
+            "listening",
+            "pronunciation",
+            "speaking",
+            "interaction"
+          ],
+          "grammarTopics": [
+            "technology habits and present forms",
+            "news vocabulary and source language",
+            "introductory active and passive voice",
+            "opinion and supporting reason",
+            "balanced advantage and disadvantage linkers",
+            "integrated technology discussion review"
+          ],
+          "vocabularyTopics": [
+            "digital tool",
+            "stay connected",
+            "privacy setting",
+            "reliable source",
+            "headline",
+            "report an event",
+            "is used for",
+            "was created by"
+          ],
+          "communicativeFunctions": [
+            "Communicate effectively through technology in our lives.",
+            "Communicate effectively through news & media.",
+            "Communicate effectively through active or passive?.",
+            "Communicate effectively through expressing opinions.",
+            "Communicate effectively through advantages & disadvantages."
+          ],
+          "lessons": [
+            {
+              "lessonId": "b1-u07-l01-technology-in-our-lives",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "b1-u07-l02-news-and-media",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "b1-u07-l03-active-or-passive",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "b1-u07-l04-expressing-opinions",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "b1-u07-l05-advantages-and-disadvantages",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "b1-u07-l06-technology-discussion",
+              "contentVersion": 1
+            }
+          ]
+        },
+        {
+          "unitId": "b1-u08-independent-communication",
+          "title": "Independent Communication",
+          "description": "Develop B1 communication through independent communication.",
+          "objectives": [
+            "Use linking reasons and examples to explain and handle ideas related to explaining your point with appropriate B1 complexity.",
+            "Use problem-solution sequence to explain and handle ideas related to solving everyday problems with appropriate B1 complexity."
+          ],
+          "skillFocus": [
+            "grammar",
+            "vocabulary",
+            "listening",
+            "pronunciation",
+            "speaking",
+            "interaction"
+          ],
+          "grammarTopics": [
+            "linking reasons and examples",
+            "problem-solution sequence",
+            "integrated narrative tenses",
+            "suggestion modals and phrases",
+            "comparison and conditional choices",
+            "integrated B1 communication review"
+          ],
+          "vocabularyTopics": [
+            "make a point",
+            "give an example",
+            "in other words",
+            "practical problem",
+            "possible solution",
+            "step by step",
+            "set the scene",
+            "unexpected event"
+          ],
+          "communicativeFunctions": [
+            "Communicate effectively through explaining your point.",
+            "Communicate effectively through solving everyday problems.",
+            "Communicate effectively through telling detailed stories.",
+            "Communicate effectively through making suggestions.",
+            "Communicate effectively through discussing different options."
+          ],
+          "lessons": [
+            {
+              "lessonId": "b1-u08-l01-explaining-your-point",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "b1-u08-l02-solving-everyday-problems",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "b1-u08-l03-telling-detailed-stories",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "b1-u08-l04-making-suggestions",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "b1-u08-l05-discussing-different-options",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "b1-u08-l06-b1-real-life-mission",
+              "contentVersion": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "levelId": "b2",
+      "cefrLevel": "B2",
+      "title": "Upper Intermediate",
+      "description": "Structure arguments, negotiate solutions, and communicate confidently in complex situations.",
+      "objectives": [
+        "Structure arguments, negotiate solutions, and communicate confidently in complex situations."
+      ],
+      "units": [
+        {
+          "unitId": "b2-u01-advanced-storytelling",
+          "title": "Advanced Storytelling",
+          "description": "Develop B2 communication through advanced storytelling.",
+          "objectives": [
+            "Use narrative tense control to structure, justify, and negotiate ideas related to telling better stories with appropriate B2 complexity.",
+            "Use past perfect for earlier events to structure, justify, and negotiate ideas related to past perfect with appropriate B2 complexity."
+          ],
+          "skillFocus": [
+            "grammar",
+            "vocabulary",
+            "listening",
+            "pronunciation",
+            "speaking",
+            "interaction"
+          ],
+          "grammarTopics": [
+            "narrative tense control",
+            "past perfect for earlier events",
+            "descriptive background and viewpoint",
+            "used to and would for repeated past actions",
+            "suspense, pacing, and delayed information",
+            "integrated advanced storytelling review"
+          ],
+          "vocabularyTopics": [
+            "compelling account",
+            "vivid detail",
+            "sequence of events",
+            "had already happened",
+            "by the time",
+            "set the scene",
+            "in the distance",
+            "would often"
+          ],
+          "communicativeFunctions": [
+            "Communicate effectively through telling better stories.",
+            "Communicate effectively through past perfect.",
+            "Communicate effectively through setting the scene.",
+            "Communicate effectively through used to & would.",
+            "Communicate effectively through building suspense."
+          ],
+          "lessons": [
+            {
+              "lessonId": "b2-u01-l01-telling-better-stories",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "b2-u01-l02-past-perfect",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "b2-u01-l03-setting-the-scene",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "b2-u01-l04-used-to-and-would",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "b2-u01-l05-building-suspense",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "b2-u01-l06-storytelling-mission",
+              "contentVersion": 1
+            }
+          ]
+        },
+        {
+          "unitId": "b2-u02-hypothetical-situations",
+          "title": "Hypothetical Situations",
+          "description": "Develop B2 communication through hypothetical situations.",
+          "objectives": [
+            "Use hypothetical framing to structure, justify, and negotiate ideas related to imagining different situations with appropriate B2 complexity.",
+            "Use second conditional nuance to structure, justify, and negotiate ideas related to second conditional in depth with appropriate B2 complexity."
+          ],
+          "skillFocus": [
+            "grammar",
+            "vocabulary",
+            "listening",
+            "pronunciation",
+            "speaking",
+            "interaction"
+          ],
+          "grammarTopics": [
+            "hypothetical framing",
+            "second conditional nuance",
+            "third conditional",
+            "wish and if only patterns",
+            "past regret and alternative outcomes",
+            "integrated hypothetical review"
+          ],
+          "vocabularyTopics": [
+            "hypothetical scenario",
+            "imagine that",
+            "provided that",
+            "were to happen",
+            "If I had known",
+            "would have changed",
+            "I wish I could",
+            "If only we had"
+          ],
+          "communicativeFunctions": [
+            "Communicate effectively through imagining different situations.",
+            "Communicate effectively through second conditional in depth.",
+            "Communicate effectively through third conditional.",
+            "Communicate effectively through wish & if only.",
+            "Communicate effectively through regrets & alternatives."
+          ],
+          "lessons": [
+            {
+              "lessonId": "b2-u02-l01-imagining-different-situations",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "b2-u02-l02-second-conditional-in-depth",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "b2-u02-l03-third-conditional",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "b2-u02-l04-wish-and-if-only",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "b2-u02-l05-regrets-and-alternatives",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "b2-u02-l06-what-would-have-happened",
+              "contentVersion": 1
+            }
+          ]
+        },
+        {
+          "unitId": "b2-u03-deduction-possibility-and-certainty",
+          "title": "Deduction, Possibility & Certainty",
+          "description": "Develop B2 communication through deduction, possibility & certainty.",
+          "objectives": [
+            "Use degrees of certainty to structure, justify, and negotiate ideas related to how certain are you? with appropriate B2 complexity.",
+            "Use present modal deduction to structure, justify, and negotiate ideas related to must, might & can't with appropriate B2 complexity."
+          ],
+          "skillFocus": [
+            "grammar",
+            "vocabulary",
+            "listening",
+            "pronunciation",
+            "speaking",
+            "interaction"
+          ],
+          "grammarTopics": [
+            "degrees of certainty",
+            "present modal deduction",
+            "past modal deduction",
+            "should have for criticism and expectation",
+            "evidence-based speculation",
+            "integrated deduction review"
+          ],
+          "vocabularyTopics": [
+            "almost certain",
+            "highly likely",
+            "reasonable possibility",
+            "must be",
+            "might be",
+            "can't be",
+            "may have overlooked",
+            "could have happened"
+          ],
+          "communicativeFunctions": [
+            "Communicate effectively through how certain are you?.",
+            "Communicate effectively through must, might & can't.",
+            "Communicate effectively through what might have happened?.",
+            "Communicate effectively through should have.",
+            "Communicate effectively through speculating about events."
+          ],
+          "lessons": [
+            {
+              "lessonId": "b2-u03-l01-how-certain-are-you",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "b2-u03-l02-must-might-and-can-t",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "b2-u03-l03-what-might-have-happened",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "b2-u03-l04-should-have",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "b2-u03-l05-speculating-about-events",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "b2-u03-l06-mystery-discussion",
+              "contentVersion": 1
+            }
+          ]
+        },
+        {
+          "unitId": "b2-u04-passive-and-reporting",
+          "title": "Passive & Reporting",
+          "description": "Develop B2 communication through passive & reporting.",
+          "objectives": [
+            "Use passive focus and agent choice to structure, justify, and negotiate ideas related to the passive voice with appropriate B2 complexity.",
+            "Use passive across common tenses to structure, justify, and negotiate ideas related to passive across tenses with appropriate B2 complexity."
+          ],
+          "skillFocus": [
+            "grammar",
+            "vocabulary",
+            "listening",
+            "pronunciation",
+            "speaking",
+            "interaction"
+          ],
+          "grammarTopics": [
+            "passive focus and agent choice",
+            "passive across common tenses",
+            "reported statements and questions",
+            "reporting verb patterns",
+            "basic causative have",
+            "integrated reporting review"
+          ],
+          "vocabularyTopics": [
+            "be carried out",
+            "was announced",
+            "has been confirmed",
+            "is expected to",
+            "according to",
+            "official statement",
+            "reportedly",
+            "claim that"
+          ],
+          "communicativeFunctions": [
+            "Communicate effectively through the passive voice.",
+            "Communicate effectively through passive across tenses.",
+            "Communicate effectively through reporting information.",
+            "Communicate effectively through reporting verbs.",
+            "Communicate effectively through have something done."
+          ],
+          "lessons": [
+            {
+              "lessonId": "b2-u04-l01-the-passive-voice",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "b2-u04-l02-passive-across-tenses",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "b2-u04-l03-reporting-information",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "b2-u04-l04-reporting-verbs",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "b2-u04-l05-have-something-done",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "b2-u04-l06-news-and-reporting-mission",
+              "contentVersion": 1
+            }
+          ]
+        },
+        {
+          "unitId": "b2-u05-professional-communication",
+          "title": "Professional Communication",
+          "description": "Develop B2 communication through professional communication.",
+          "objectives": [
+            "Use professional register and clarity to structure, justify, and negotiate ideas related to professional communication with appropriate B2 complexity.",
+            "Use meeting management language to structure, justify, and negotiate ideas related to meetings & discussions with appropriate B2 complexity."
+          ],
+          "skillFocus": [
+            "grammar",
+            "vocabulary",
+            "listening",
+            "pronunciation",
+            "speaking",
+            "interaction"
+          ],
+          "grammarTopics": [
+            "professional register and clarity",
+            "meeting management language",
+            "structured presentation language",
+            "diplomatic agreement and disagreement",
+            "negotiation and compromise",
+            "integrated workplace communication review"
+          ],
+          "vocabularyTopics": [
+            "clarify the objective",
+            "key priority",
+            "action item",
+            "bring up a point",
+            "keep to the agenda",
+            "outline a proposal",
+            "main benefit",
+            "I take your point"
+          ],
+          "communicativeFunctions": [
+            "Communicate effectively through professional communication.",
+            "Communicate effectively through meetings & discussions.",
+            "Communicate effectively through presenting an idea.",
+            "Communicate effectively through agreeing & disagreeing professionally.",
+            "Communicate effectively through negotiating solutions."
+          ],
+          "lessons": [
+            {
+              "lessonId": "b2-u05-l01-professional-communication",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "b2-u05-l02-meetings-and-discussions",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "b2-u05-l03-presenting-an-idea",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "b2-u05-l04-agreeing-and-disagreeing-professionally",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "b2-u05-l05-negotiating-solutions",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "b2-u05-l06-workplace-challenge",
+              "contentVersion": 1
+            }
+          ]
+        },
+        {
+          "unitId": "b2-u06-academic-and-structured-communication",
+          "title": "Academic & Structured Communication",
+          "description": "Develop B2 communication through academic & structured communication.",
+          "objectives": [
+            "Use structured discourse markers to structure, justify, and negotiate ideas related to organizing your ideas with appropriate B2 complexity.",
+            "Use cause and effect chains to structure, justify, and negotiate ideas related to cause & effect with appropriate B2 complexity."
+          ],
+          "skillFocus": [
+            "grammar",
+            "vocabulary",
+            "listening",
+            "pronunciation",
+            "speaking",
+            "interaction"
+          ],
+          "grammarTopics": [
+            "structured discourse markers",
+            "cause and effect chains",
+            "contrast and comparison structures",
+            "example and illustration language",
+            "hedging claims and opinions",
+            "integrated complex explanation review"
+          ],
+          "vocabularyTopics": [
+            "central claim",
+            "supporting point",
+            "logical sequence",
+            "lead to",
+            "stem from",
+            "consequently",
+            "in contrast",
+            "by comparison"
+          ],
+          "communicativeFunctions": [
+            "Communicate effectively through organizing your ideas.",
+            "Communicate effectively through cause & effect.",
+            "Communicate effectively through contrast & comparison.",
+            "Communicate effectively through giving examples.",
+            "Communicate effectively through hedging your opinion."
+          ],
+          "lessons": [
+            {
+              "lessonId": "b2-u06-l01-organizing-your-ideas",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "b2-u06-l02-cause-and-effect",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "b2-u06-l03-contrast-and-comparison",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "b2-u06-l04-giving-examples",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "b2-u06-l05-hedging-your-opinion",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "b2-u06-l06-explaining-a-complex-idea",
+              "contentVersion": 1
+            }
+          ]
+        },
+        {
+          "unitId": "b2-u07-society-media-and-debate",
+          "title": "Society, Media & Debate",
+          "description": "Develop B2 communication through society, media & debate.",
+          "objectives": [
+            "Use qualified strong opinions to structure, justify, and negotiate ideas related to stronger opinions with appropriate B2 complexity.",
+            "Use claim, reason, and evidence to structure, justify, and negotiate ideas related to supporting an argument with appropriate B2 complexity."
+          ],
+          "skillFocus": [
+            "grammar",
+            "vocabulary",
+            "listening",
+            "pronunciation",
+            "speaking",
+            "interaction"
+          ],
+          "grammarTopics": [
+            "qualified strong opinions",
+            "claim, reason, and evidence",
+            "paraphrasing another viewpoint",
+            "concession and counterargument",
+            "media influence discourse",
+            "integrated structured debate review"
+          ],
+          "vocabularyTopics": [
+            "firmly believe",
+            "contentious issue",
+            "support a claim",
+            "relevant evidence",
+            "underlying assumption",
+            "from their perspective",
+            "a fair point",
+            "concede that"
+          ],
+          "communicativeFunctions": [
+            "Communicate effectively through stronger opinions.",
+            "Communicate effectively through supporting an argument.",
+            "Communicate effectively through understanding another view.",
+            "Communicate effectively through counterarguments.",
+            "Communicate effectively through media & society."
+          ],
+          "lessons": [
+            {
+              "lessonId": "b2-u07-l01-stronger-opinions",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "b2-u07-l02-supporting-an-argument",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "b2-u07-l03-understanding-another-view",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "b2-u07-l04-counterarguments",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "b2-u07-l05-media-and-society",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "b2-u07-l06-structured-debate",
+              "contentVersion": 1
+            }
+          ]
+        },
+        {
+          "unitId": "b2-u08-advanced-real-life-communication",
+          "title": "Advanced Real-Life Communication",
+          "description": "Develop B2 communication through advanced real-life communication.",
+          "objectives": [
+            "Use multi-step problem explanation to structure, justify, and negotiate ideas related to handling complex problems with appropriate B2 complexity.",
+            "Use persuasive reason and benefit to structure, justify, and negotiate ideas related to persuading someone with appropriate B2 complexity."
+          ],
+          "skillFocus": [
+            "grammar",
+            "vocabulary",
+            "listening",
+            "pronunciation",
+            "speaking",
+            "interaction"
+          ],
+          "grammarTopics": [
+            "multi-step problem explanation",
+            "persuasive reason and benefit",
+            "clarification and analogy",
+            "de-escalating disagreement",
+            "evaluating alternatives",
+            "integrated B2 communication review"
+          ],
+          "vocabularyTopics": [
+            "complex issue",
+            "root cause",
+            "practical constraint",
+            "convincing case",
+            "mutual benefit",
+            "address a concern",
+            "put it another way",
+            "use an analogy"
+          ],
+          "communicativeFunctions": [
+            "Communicate effectively through handling complex problems.",
+            "Communicate effectively through persuading someone.",
+            "Communicate effectively through explaining difficult ideas.",
+            "Communicate effectively through managing disagreement.",
+            "Communicate effectively through discussing alternatives."
+          ],
+          "lessons": [
+            {
+              "lessonId": "b2-u08-l01-handling-complex-problems",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "b2-u08-l02-persuading-someone",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "b2-u08-l03-explaining-difficult-ideas",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "b2-u08-l04-managing-disagreement",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "b2-u08-l05-discussing-alternatives",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "b2-u08-l06-b2-real-life-mission",
+              "contentVersion": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "levelId": "c1",
+      "cefrLevel": "C1",
+      "title": "Advanced",
+      "description": "Communicate with precision, nuance, register control, and sustained argumentation.",
+      "objectives": [
+        "Communicate with precision, nuance, register control, and sustained argumentation."
+      ],
+      "units": [
+        {
+          "unitId": "c1-u01-precision-and-nuance",
+          "title": "Precision & Nuance",
+          "description": "Develop C1 communication through precision & nuance.",
+          "objectives": [
+            "Use precise reformulation to analyze and communicate ideas related to saying exactly what you mean with appropriate C1 complexity.",
+            "Use nuanced epistemic modality to analyze and communicate ideas related to degrees of certainty with appropriate C1 complexity."
+          ],
+          "skillFocus": [
+            "grammar",
+            "vocabulary",
+            "listening",
+            "pronunciation",
+            "speaking",
+            "interaction"
+          ],
+          "grammarTopics": [
+            "precise reformulation",
+            "nuanced epistemic modality",
+            "near-synonym distinctions",
+            "lexical choice by context and connotation",
+            "controlled emphasis and qualification",
+            "integrated precision review"
+          ],
+          "vocabularyTopics": [
+            "to be precise",
+            "more specifically",
+            "broadly speaking",
+            "all but certain",
+            "conceivable",
+            "a remote possibility",
+            "subtle distinction",
+            "carry a connotation"
+          ],
+          "communicativeFunctions": [
+            "Communicate effectively through saying exactly what you mean.",
+            "Communicate effectively through degrees of certainty.",
+            "Communicate effectively through subtle differences in meaning.",
+            "Communicate effectively through choosing the right word.",
+            "Communicate effectively through emphasis & qualification."
+          ],
+          "lessons": [
+            {
+              "lessonId": "c1-u01-l01-saying-exactly-what-you-mean",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "c1-u01-l02-degrees-of-certainty",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "c1-u01-l03-subtle-differences-in-meaning",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "c1-u01-l04-choosing-the-right-word",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "c1-u01-l05-emphasis-and-qualification",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "c1-u01-l06-precision-mission",
+              "contentVersion": 1
+            }
+          ]
+        },
+        {
+          "unitId": "c1-u02-advanced-grammar-in-context",
+          "title": "Advanced Grammar in Context",
+          "description": "Develop C1 communication through advanced grammar in context.",
+          "objectives": [
+            "Use advanced conditional alternatives to analyze and communicate ideas related to advanced conditionals with appropriate C1 complexity.",
+            "Use mixed-time conditionals to analyze and communicate ideas related to mixed conditionals with appropriate C1 complexity."
+          ],
+          "skillFocus": [
+            "grammar",
+            "vocabulary",
+            "listening",
+            "pronunciation",
+            "speaking",
+            "interaction"
+          ],
+          "grammarTopics": [
+            "advanced conditional alternatives",
+            "mixed-time conditionals",
+            "non-defining and reduced relative structures",
+            "participle clauses for information flow",
+            "inversion and cleft emphasis",
+            "integrated advanced grammar review"
+          ],
+          "vocabularyTopics": [
+            "assuming that",
+            "on condition that",
+            "but for",
+            "Had it not been for",
+            "If I were better prepared",
+            "which in turn",
+            "many of whom",
+            "the extent to which"
+          ],
+          "communicativeFunctions": [
+            "Communicate effectively through advanced conditionals.",
+            "Communicate effectively through mixed conditionals.",
+            "Communicate effectively through advanced relative structures.",
+            "Communicate effectively through participle clauses.",
+            "Communicate effectively through emphasis & inversion."
+          ],
+          "lessons": [
+            {
+              "lessonId": "c1-u02-l01-advanced-conditionals",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "c1-u02-l02-mixed-conditionals",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "c1-u02-l03-advanced-relative-structures",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "c1-u02-l04-participle-clauses",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "c1-u02-l05-emphasis-and-inversion",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "c1-u02-l06-grammar-in-real-communication",
+              "contentVersion": 1
+            }
+          ]
+        },
+        {
+          "unitId": "c1-u03-advanced-professional-english",
+          "title": "Advanced Professional English",
+          "description": "Develop C1 communication through advanced professional english.",
+          "objectives": [
+            "Use facilitation and turn management to analyze and communicate ideas related to leading a discussion with appropriate C1 complexity.",
+            "Use layered presentation structure to analyze and communicate ideas related to presenting complex information with appropriate C1 complexity."
+          ],
+          "skillFocus": [
+            "grammar",
+            "vocabulary",
+            "listening",
+            "pronunciation",
+            "speaking",
+            "interaction"
+          ],
+          "grammarTopics": [
+            "facilitation and turn management",
+            "layered presentation structure",
+            "diplomatic challenge and mitigation",
+            "strategic negotiation",
+            "sensitive conversation management",
+            "integrated professional leadership review"
+          ],
+          "vocabularyTopics": [
+            "frame the discussion",
+            "invite contributions",
+            "draw together",
+            "key implication",
+            "walk through the findings",
+            "a degree of uncertainty",
+            "I wonder whether",
+            "That may overlook"
+          ],
+          "communicativeFunctions": [
+            "Communicate effectively through leading a discussion.",
+            "Communicate effectively through presenting complex information.",
+            "Communicate effectively through diplomatic disagreement.",
+            "Communicate effectively through negotiating strategically.",
+            "Communicate effectively through managing difficult conversations."
+          ],
+          "lessons": [
+            {
+              "lessonId": "c1-u03-l01-leading-a-discussion",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "c1-u03-l02-presenting-complex-information",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "c1-u03-l03-diplomatic-disagreement",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "c1-u03-l04-negotiating-strategically",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "c1-u03-l05-managing-difficult-conversations",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "c1-u03-l06-professional-leadership-mission",
+              "contentVersion": 1
+            }
+          ]
+        },
+        {
+          "unitId": "c1-u04-academic-communication",
+          "title": "Academic Communication",
+          "description": "Develop C1 communication through academic communication.",
+          "objectives": [
+            "Use thesis and argument architecture to analyze and communicate ideas related to building an academic argument with appropriate C1 complexity.",
+            "Use evidence versus interpretation to analyze and communicate ideas related to evidence & interpretation with appropriate C1 complexity."
+          ],
+          "skillFocus": [
+            "grammar",
+            "vocabulary",
+            "listening",
+            "pronunciation",
+            "speaking",
+            "interaction"
+          ],
+          "grammarTopics": [
+            "thesis and argument architecture",
+            "evidence versus interpretation",
+            "academic hedging",
+            "source synthesis and relationship",
+            "research explanation and limitations",
+            "integrated academic discussion review"
+          ],
+          "vocabularyTopics": [
+            "advance an argument",
+            "central premise",
+            "line of reasoning",
+            "empirical evidence",
+            "plausible interpretation",
+            "cannot establish",
+            "arguably",
+            "may indicate"
+          ],
+          "communicativeFunctions": [
+            "Communicate effectively through building an academic argument.",
+            "Communicate effectively through evidence & interpretation.",
+            "Communicate effectively through hedging & caution.",
+            "Communicate effectively through synthesizing information.",
+            "Communicate effectively through explaining research."
+          ],
+          "lessons": [
+            {
+              "lessonId": "c1-u04-l01-building-an-academic-argument",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "c1-u04-l02-evidence-and-interpretation",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "c1-u04-l03-hedging-and-caution",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "c1-u04-l04-synthesizing-information",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "c1-u04-l05-explaining-research",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "c1-u04-l06-academic-discussion-mission",
+              "contentVersion": 1
+            }
+          ]
+        },
+        {
+          "unitId": "c1-u05-persuasion-and-rhetoric",
+          "title": "Persuasion & Rhetoric",
+          "description": "Develop C1 communication through persuasion & rhetoric.",
+          "objectives": [
+            "Use ethical persuasive appeals to analyze and communicate ideas related to persuasive language with appropriate C1 complexity.",
+            "Use argument framing to analyze and communicate ideas related to framing an argument with appropriate C1 complexity."
+          ],
+          "skillFocus": [
+            "grammar",
+            "vocabulary",
+            "listening",
+            "pronunciation",
+            "speaking",
+            "interaction"
+          ],
+          "grammarTopics": [
+            "ethical persuasive appeals",
+            "argument framing",
+            "polite rigorous challenge",
+            "concession and rebuttal",
+            "audience adaptation",
+            "integrated persuasion review"
+          ],
+          "vocabularyTopics": [
+            "compelling reason",
+            "appeal to values",
+            "credible evidence",
+            "frame the issue",
+            "shift the focus",
+            "underlying premise",
+            "May I challenge",
+            "I am not entirely convinced"
+          ],
+          "communicativeFunctions": [
+            "Communicate effectively through persuasive language.",
+            "Communicate effectively through framing an argument.",
+            "Communicate effectively through challenging an idea politely.",
+            "Communicate effectively through concession & counterargument.",
+            "Communicate effectively through influencing an audience."
+          ],
+          "lessons": [
+            {
+              "lessonId": "c1-u05-l01-persuasive-language",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "c1-u05-l02-framing-an-argument",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "c1-u05-l03-challenging-an-idea-politely",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "c1-u05-l04-concession-and-counterargument",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "c1-u05-l05-influencing-an-audience",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "c1-u05-l06-persuasion-mission",
+              "contentVersion": 1
+            }
+          ]
+        },
+        {
+          "unitId": "c1-u06-idiomatic-and-natural-english",
+          "title": "Idiomatic & Natural English",
+          "description": "Develop C1 communication through idiomatic & natural english.",
+          "objectives": [
+            "Use high-frequency advanced collocations to analyze and communicate ideas related to natural collocations with appropriate C1 complexity.",
+            "Use advanced phrasal verbs in context to analyze and communicate ideas related to advanced phrasal verbs with appropriate C1 complexity."
+          ],
+          "skillFocus": [
+            "grammar",
+            "vocabulary",
+            "listening",
+            "pronunciation",
+            "speaking",
+            "interaction"
+          ],
+          "grammarTopics": [
+            "high-frequency advanced collocations",
+            "advanced phrasal verbs in context",
+            "transparent idiomatic meaning",
+            "register-sensitive alternatives",
+            "discourse rhythm and natural chunks",
+            "integrated natural communication review"
+          ],
+          "vocabularyTopics": [
+            "reach a consensus",
+            "raise awareness",
+            "pose a challenge",
+            "phase out",
+            "follow through on",
+            "come across as",
+            "read between the lines",
+            "a grey area"
+          ],
+          "communicativeFunctions": [
+            "Communicate effectively through natural collocations.",
+            "Communicate effectively through advanced phrasal verbs.",
+            "Communicate effectively through idiomatic expressions in context.",
+            "Communicate effectively through formal vs conversational english.",
+            "Communicate effectively through sounding more natural."
+          ],
+          "lessons": [
+            {
+              "lessonId": "c1-u06-l01-natural-collocations",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "c1-u06-l02-advanced-phrasal-verbs",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "c1-u06-l03-idiomatic-expressions-in-context",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "c1-u06-l04-formal-vs-conversational-english",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "c1-u06-l05-sounding-more-natural",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "c1-u06-l06-natural-communication-mission",
+              "contentVersion": 1
+            }
+          ]
+        },
+        {
+          "unitId": "c1-u07-society-ideas-and-complex-topics",
+          "title": "Society, Ideas & Complex Topics",
+          "description": "Develop C1 communication through society, ideas & complex topics.",
+          "objectives": [
+            "Use change, trend, and impact discourse to analyze and communicate ideas related to discussing social change with appropriate C1 complexity.",
+            "Use ethical reasoning and trade-offs to analyze and communicate ideas related to technology & ethics with appropriate C1 complexity."
+          ],
+          "skillFocus": [
+            "grammar",
+            "vocabulary",
+            "listening",
+            "pronunciation",
+            "speaking",
+            "interaction"
+          ],
+          "grammarTopics": [
+            "change, trend, and impact discourse",
+            "ethical reasoning and trade-offs",
+            "opportunity and inequality discourse",
+            "labor and social impact",
+            "perspective synthesis",
+            "integrated advanced debate review"
+          ],
+          "vocabularyTopics": [
+            "social shift",
+            "long-term trend",
+            "uneven impact",
+            "ethical implication",
+            "informed consent",
+            "unintended consequence",
+            "equal access",
+            "structural barrier"
+          ],
+          "communicativeFunctions": [
+            "Communicate effectively through discussing social change.",
+            "Communicate effectively through technology & ethics.",
+            "Communicate effectively through education & opportunity.",
+            "Communicate effectively through work & society.",
+            "Communicate effectively through different perspectives."
+          ],
+          "lessons": [
+            {
+              "lessonId": "c1-u07-l01-discussing-social-change",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "c1-u07-l02-technology-and-ethics",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "c1-u07-l03-education-and-opportunity",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "c1-u07-l04-work-and-society",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "c1-u07-l05-different-perspectives",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "c1-u07-l06-advanced-debate",
+              "contentVersion": 1
+            }
+          ]
+        },
+        {
+          "unitId": "c1-u08-flexible-advanced-communication",
+          "title": "Flexible Advanced Communication",
+          "description": "Develop C1 communication through flexible advanced communication.",
+          "objectives": [
+            "Use analogy and abstraction to analyze and communicate ideas related to explaining abstract ideas with appropriate C1 complexity.",
+            "Use register adaptation to analyze and communicate ideas related to adapting your register with appropriate C1 complexity."
+          ],
+          "skillFocus": [
+            "grammar",
+            "vocabulary",
+            "listening",
+            "pronunciation",
+            "speaking",
+            "interaction"
+          ],
+          "grammarTopics": [
+            "analogy and abstraction",
+            "register adaptation",
+            "structured spontaneous response",
+            "advanced reformulation",
+            "interaction repair and redirection",
+            "integrated C1 communication review"
+          ],
+          "vocabularyTopics": [
+            "abstract concept",
+            "concrete analogy",
+            "underlying principle",
+            "adapt the register",
+            "level of formality",
+            "audience expectation",
+            "think on your feet",
+            "initial response"
+          ],
+          "communicativeFunctions": [
+            "Communicate effectively through explaining abstract ideas.",
+            "Communicate effectively through adapting your register.",
+            "Communicate effectively through responding under pressure.",
+            "Communicate effectively through reformulating your message.",
+            "Communicate effectively through managing complex interaction."
+          ],
+          "lessons": [
+            {
+              "lessonId": "c1-u08-l01-explaining-abstract-ideas",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "c1-u08-l02-adapting-your-register",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "c1-u08-l03-responding-under-pressure",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "c1-u08-l04-reformulating-your-message",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "c1-u08-l05-managing-complex-interaction",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "c1-u08-l06-c1-real-life-mission",
+              "contentVersion": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "levelId": "c2",
+      "cefrLevel": "C2",
+      "title": "Proficiency Content",
+      "description": "Use English flexibly and precisely across subtle, high-complexity interactions.",
+      "objectives": [
+        "Use English flexibly and precisely across subtle, high-complexity interactions."
+      ],
+      "units": [
+        {
+          "unitId": "c2-u01-meaning-ambiguity-and-precision",
+          "title": "Meaning, Ambiguity & Precision",
+          "description": "Develop C2 communication through meaning, ambiguity & precision.",
+          "objectives": [
+            "Use fine-grained lexical distinctions to synthesize and reformulate ideas related to fine shades of meaning with appropriate C2 complexity.",
+            "Use productive ambiguity management to synthesize and reformulate ideas related to managing ambiguity with appropriate C2 complexity."
+          ],
+          "skillFocus": [
+            "grammar",
+            "vocabulary",
+            "listening",
+            "pronunciation",
+            "speaking",
+            "interaction"
+          ],
+          "grammarTopics": [
+            "fine-grained lexical distinctions",
+            "productive ambiguity management",
+            "pragmatic implication and inference",
+            "meaning-preserving reformulation",
+            "precision through concision",
+            "integrated meaning and precision review"
+          ],
+          "vocabularyTopics": [
+            "fine distinction",
+            "semantic range",
+            "pragmatic force",
+            "deliberately ambiguous",
+            "open to interpretation",
+            "resolve the ambiguity",
+            "unstated implication",
+            "reasonable inference"
+          ],
+          "communicativeFunctions": [
+            "Communicate effectively through fine shades of meaning.",
+            "Communicate effectively through managing ambiguity.",
+            "Communicate effectively through implication & inference.",
+            "Communicate effectively through precise reformulation.",
+            "Communicate effectively through saying more with less."
+          ],
+          "lessons": [
+            {
+              "lessonId": "c2-u01-l01-fine-shades-of-meaning",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "c2-u01-l02-managing-ambiguity",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "c2-u01-l03-implication-and-inference",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "c2-u01-l04-precise-reformulation",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "c2-u01-l05-saying-more-with-less",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "c2-u01-l06-precision-and-meaning-mission",
+              "contentVersion": 1
+            }
+          ]
+        },
+        {
+          "unitId": "c2-u02-mastering-register",
+          "title": "Mastering Register",
+          "description": "Develop C2 communication through mastering register.",
+          "objectives": [
+            "Use three-way register calibration to synthesize and reformulate ideas related to formal, neutral & informal with appropriate C2 complexity.",
+            "Use highly diplomatic mitigation to synthesize and reformulate ideas related to diplomatic language with appropriate C2 complexity."
+          ],
+          "skillFocus": [
+            "grammar",
+            "vocabulary",
+            "listening",
+            "pronunciation",
+            "speaking",
+            "interaction"
+          ],
+          "grammarTopics": [
+            "three-way register calibration",
+            "highly diplomatic mitigation",
+            "professional subtext and nuance",
+            "dense but clear academic register",
+            "real-time register switching",
+            "integrated register control review"
+          ],
+          "vocabularyTopics": [
+            "register continuum",
+            "stylistic choice",
+            "plain equivalent",
+            "with due respect",
+            "I would be hesitant to",
+            "tactful reservation",
+            "professional subtext",
+            "strategic understatement"
+          ],
+          "communicativeFunctions": [
+            "Communicate effectively through formal, neutral & informal.",
+            "Communicate effectively through diplomatic language.",
+            "Communicate effectively through professional nuance.",
+            "Communicate effectively through academic register.",
+            "Communicate effectively through switching register naturally."
+          ],
+          "lessons": [
+            {
+              "lessonId": "c2-u02-l01-formal-neutral-and-informal",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "c2-u02-l02-diplomatic-language",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "c2-u02-l03-professional-nuance",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "c2-u02-l04-academic-register",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "c2-u02-l05-switching-register-naturally",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "c2-u02-l06-register-control-mission",
+              "contentVersion": 1
+            }
+          ]
+        },
+        {
+          "unitId": "c2-u03-complex-argumentation",
+          "title": "Complex Argumentation",
+          "description": "Develop C2 communication through complex argumentation.",
+          "objectives": [
+            "Use multi-layered argument architecture to synthesize and reformulate ideas related to building multi-layered arguments with appropriate C2 complexity.",
+            "Use assumption analysis to synthesize and reformulate ideas related to evaluating assumptions with appropriate C2 complexity."
+          ],
+          "skillFocus": [
+            "grammar",
+            "vocabulary",
+            "listening",
+            "pronunciation",
+            "speaking",
+            "interaction"
+          ],
+          "grammarTopics": [
+            "multi-layered argument architecture",
+            "assumption analysis",
+            "evidential challenge",
+            "weighted perspective synthesis",
+            "strategic reframing",
+            "integrated complex argument review"
+          ],
+          "vocabularyTopics": [
+            "subsidiary claim",
+            "interdependent reason",
+            "logical consequence",
+            "tacit assumption",
+            "questionable premise",
+            "scope condition",
+            "evidential threshold",
+            "alternative explanation"
+          ],
+          "communicativeFunctions": [
+            "Communicate effectively through building multi-layered arguments.",
+            "Communicate effectively through evaluating assumptions.",
+            "Communicate effectively through challenging evidence.",
+            "Communicate effectively through balancing perspectives.",
+            "Communicate effectively through reframing an argument."
+          ],
+          "lessons": [
+            {
+              "lessonId": "c2-u03-l01-building-multi-layered-arguments",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "c2-u03-l02-evaluating-assumptions",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "c2-u03-l03-challenging-evidence",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "c2-u03-l04-balancing-perspectives",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "c2-u03-l05-reframing-an-argument",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "c2-u03-l06-advanced-argument-mission",
+              "contentVersion": 1
+            }
+          ]
+        },
+        {
+          "unitId": "c2-u04-rhetoric-and-persuasion",
+          "title": "Rhetoric & Persuasion",
+          "description": "Develop C2 communication through rhetoric & persuasion.",
+          "objectives": [
+            "Use rhetorical choice and effect to synthesize and reformulate ideas related to rhetorical choices with appropriate C2 complexity.",
+            "Use strategic foregrounding to synthesize and reformulate ideas related to strategic emphasis with appropriate C2 complexity."
+          ],
+          "skillFocus": [
+            "grammar",
+            "vocabulary",
+            "listening",
+            "pronunciation",
+            "speaking",
+            "interaction"
+          ],
+          "grammarTopics": [
+            "rhetorical choice and effect",
+            "strategic foregrounding",
+            "persuasive frame selection",
+            "layered alignment and dissent",
+            "calibrated influence",
+            "integrated rhetorical control review"
+          ],
+          "vocabularyTopics": [
+            "rhetorical effect",
+            "deliberate choice",
+            "shape interpretation",
+            "foreground a concern",
+            "strategic repetition",
+            "measured emphasis",
+            "persuasive frame",
+            "value-laden term"
+          ],
+          "communicativeFunctions": [
+            "Communicate effectively through rhetorical choices.",
+            "Communicate effectively through strategic emphasis.",
+            "Communicate effectively through persuasive framing.",
+            "Communicate effectively through subtle agreement & disagreement.",
+            "Communicate effectively through influencing without overstating."
+          ],
+          "lessons": [
+            {
+              "lessonId": "c2-u04-l01-rhetorical-choices",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "c2-u04-l02-strategic-emphasis",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "c2-u04-l03-persuasive-framing",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "c2-u04-l04-subtle-agreement-and-disagreement",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "c2-u04-l05-influencing-without-overstating",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "c2-u04-l06-rhetorical-mission",
+              "contentVersion": 1
+            }
+          ]
+        },
+        {
+          "unitId": "c2-u05-complex-professional-communication",
+          "title": "Complex Professional Communication",
+          "description": "Develop C2 communication through complex professional communication.",
+          "objectives": [
+            "Use concise executive synthesis to synthesize and reformulate ideas related to executive communication with appropriate C2 complexity.",
+            "Use high-stakes risk communication to synthesize and reformulate ideas related to high-stakes discussions with appropriate C2 complexity."
+          ],
+          "skillFocus": [
+            "grammar",
+            "vocabulary",
+            "listening",
+            "pronunciation",
+            "speaking",
+            "interaction"
+          ],
+          "grammarTopics": [
+            "concise executive synthesis",
+            "high-stakes risk communication",
+            "multi-variable negotiation",
+            "face-sensitive disagreement",
+            "strategic narrative in presentations",
+            "integrated executive communication review"
+          ],
+          "vocabularyTopics": [
+            "executive summary",
+            "decision-critical",
+            "material risk",
+            "high-stakes consequence",
+            "escalation path",
+            "shared accountability",
+            "negotiating leverage",
+            "package an agreement"
+          ],
+          "communicativeFunctions": [
+            "Communicate effectively through executive communication.",
+            "Communicate effectively through high-stakes discussions.",
+            "Communicate effectively through complex negotiation.",
+            "Communicate effectively through handling sensitive disagreement.",
+            "Communicate effectively through strategic presentations."
+          ],
+          "lessons": [
+            {
+              "lessonId": "c2-u05-l01-executive-communication",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "c2-u05-l02-high-stakes-discussions",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "c2-u05-l03-complex-negotiation",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "c2-u05-l04-handling-sensitive-disagreement",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "c2-u05-l05-strategic-presentations",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "c2-u05-l06-executive-communication-mission",
+              "contentVersion": 1
+            }
+          ]
+        },
+        {
+          "unitId": "c2-u06-advanced-academic-and-intellectual-discussion",
+          "title": "Advanced Academic & Intellectual Discussion",
+          "description": "Develop C2 communication through advanced academic & intellectual discussion.",
+          "objectives": [
+            "Use complex cross-source synthesis to synthesize and reformulate ideas related to synthesizing complex ideas with appropriate C2 complexity.",
+            "Use principled argument critique to synthesize and reformulate ideas related to critiquing an argument with appropriate C2 complexity."
+          ],
+          "skillFocus": [
+            "grammar",
+            "vocabulary",
+            "listening",
+            "pronunciation",
+            "speaking",
+            "interaction"
+          ],
+          "grammarTopics": [
+            "complex cross-source synthesis",
+            "principled argument critique",
+            "method-evidence alignment",
+            "intellectual caution and scope",
+            "evolving multi-part position",
+            "integrated academic synthesis review"
+          ],
+          "vocabularyTopics": [
+            "conceptual synthesis",
+            "interdisciplinary link",
+            "apparent contradiction",
+            "internal coherence",
+            "explanatory power",
+            "analytical weakness",
+            "methodological fit",
+            "quality of evidence"
+          ],
+          "communicativeFunctions": [
+            "Communicate effectively through synthesizing complex ideas.",
+            "Communicate effectively through critiquing an argument.",
+            "Communicate effectively through discussing method & evidence.",
+            "Communicate effectively through expressing intellectual caution.",
+            "Communicate effectively through developing a complex position."
+          ],
+          "lessons": [
+            {
+              "lessonId": "c2-u06-l01-synthesizing-complex-ideas",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "c2-u06-l02-critiquing-an-argument",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "c2-u06-l03-discussing-method-and-evidence",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "c2-u06-l04-expressing-intellectual-caution",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "c2-u06-l05-developing-a-complex-position",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "c2-u06-l06-academic-synthesis-mission",
+              "contentVersion": 1
+            }
+          ]
+        },
+        {
+          "unitId": "c2-u07-idiomaticity-and-stylistic-control",
+          "title": "Idiomaticity & Stylistic Control",
+          "description": "Develop C2 communication through idiomaticity & stylistic control.",
+          "objectives": [
+            "Use precise advanced collocation to synthesize and reformulate ideas related to advanced collocations with appropriate C2 complexity.",
+            "Use idiom constrained by context to synthesize and reformulate ideas related to idioms with precision with appropriate C2 complexity."
+          ],
+          "skillFocus": [
+            "grammar",
+            "vocabulary",
+            "listening",
+            "pronunciation",
+            "speaking",
+            "interaction"
+          ],
+          "grammarTopics": [
+            "precise advanced collocation",
+            "idiom constrained by context",
+            "controlled conceptual metaphor",
+            "stylistic and tonal modulation",
+            "elegant compression",
+            "integrated stylistic control review"
+          ],
+          "vocabularyTopics": [
+            "deeply entrenched",
+            "glaring discrepancy",
+            "draw a sharp distinction",
+            "move the goalposts",
+            "walk a fine line",
+            "lose sight of",
+            "conceptual metaphor",
+            "frame as a journey"
+          ],
+          "communicativeFunctions": [
+            "Communicate effectively through advanced collocations.",
+            "Communicate effectively through idioms with precision.",
+            "Communicate effectively through metaphorical language.",
+            "Communicate effectively through style & tone.",
+            "Communicate effectively through concision & elegance."
+          ],
+          "lessons": [
+            {
+              "lessonId": "c2-u07-l01-advanced-collocations",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "c2-u07-l02-idioms-with-precision",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "c2-u07-l03-metaphorical-language",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "c2-u07-l04-style-and-tone",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "c2-u07-l05-concision-and-elegance",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "c2-u07-l06-stylistic-control-mission",
+              "contentVersion": 1
+            }
+          ]
+        },
+        {
+          "unitId": "c2-u08-mastery-of-flexible-communication",
+          "title": "Mastery of Flexible Communication",
+          "description": "Develop C2 communication through mastery of flexible communication.",
+          "objectives": [
+            "Use rapid framing of unfamiliar topics to synthesize and reformulate ideas related to handling unexpected topics with appropriate C2 complexity.",
+            "Use spontaneous fine distinction to synthesize and reformulate ideas related to explaining subtle differences with appropriate C2 complexity."
+          ],
+          "skillFocus": [
+            "grammar",
+            "vocabulary",
+            "listening",
+            "pronunciation",
+            "speaking",
+            "interaction"
+          ],
+          "grammarTopics": [
+            "rapid framing of unfamiliar topics",
+            "spontaneous fine distinction",
+            "real-time strategy adaptation",
+            "multi-party dialogue management",
+            "complex perspective integration",
+            "integrated C2 communication review"
+          ],
+          "vocabularyTopics": [
+            "unfamiliar angle",
+            "provisional frame",
+            "draw on analogy",
+            "subtle difference",
+            "material distinction",
+            "contextual nuance",
+            "adapt on the fly",
+            "revise the approach"
+          ],
+          "communicativeFunctions": [
+            "Communicate effectively through handling unexpected topics.",
+            "Communicate effectively through explaining subtle differences.",
+            "Communicate effectively through adapting in real time.",
+            "Communicate effectively through managing complex dialogue.",
+            "Communicate effectively through integrating multiple perspectives."
+          ],
+          "lessons": [
+            {
+              "lessonId": "c2-u08-l01-handling-unexpected-topics",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "c2-u08-l02-explaining-subtle-differences",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "c2-u08-l03-adapting-in-real-time",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "c2-u08-l04-managing-complex-dialogue",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "c2-u08-l05-integrating-multiple-perspectives",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "c2-u08-l06-c2-real-life-mission",
+              "contentVersion": 1
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

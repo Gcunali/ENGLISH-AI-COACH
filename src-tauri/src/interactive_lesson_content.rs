@@ -1130,4 +1130,145 @@ mod tests {
         assert_eq!(registry.invalid_count(), 4);
         fs::remove_dir_all(root).unwrap();
     }
+
+    #[test]
+    #[ignore = "manual Phase X gate for the six draft production pilot packages"]
+    fn physical_phase_x_a1_unit1_pilot_packages_are_valid() {
+        let root = PathBuf::from(env!("CARGO_MANIFEST_DIR"))
+            .join("resources")
+            .join("interactive-lessons");
+        let registry = InteractiveLessonContentRegistry::load(root);
+        assert_eq!(registry.invalid_count(), 0);
+        assert_eq!(registry.published_count(), 0);
+        assert_eq!(
+            registry
+                .exact_versions
+                .keys()
+                .filter(|(lesson_id, _)| lesson_id.starts_with("a1-u01-"))
+                .count(),
+            6
+        );
+        let expected = [
+            InteractiveStageType::Theory,
+            InteractiveStageType::VisualVocabulary,
+            InteractiveStageType::Listening,
+            InteractiveStageType::Repeat,
+            InteractiveStageType::SpeakingCheck,
+            InteractiveStageType::Exercise,
+            InteractiveStageType::GuidedConversation,
+            InteractiveStageType::Analysis,
+        ];
+        for registered in registry
+            .exact_versions
+            .values()
+            .filter(|lesson| lesson.package.lesson_id.starts_with("a1-u01-"))
+        {
+            assert!(matches!(
+                registered.package.publication_state,
+                PublicationState::Draft
+            ));
+            assert_eq!(registered.package.content_version, 1);
+            assert_eq!(registered.package.cefr_band, crate::placement::CefrBand::A1);
+            assert_eq!(registered.package.stages.len(), expected.len());
+            for (stage, stage_type) in registered.package.stages.iter().zip(expected.iter()) {
+                assert_eq!(&stage.stage_type, stage_type);
+                assert!(stage.required);
+            }
+        }
+    }
+
+    #[test]
+    #[ignore = "manual Phase X A1 production gate before A2 authoring"]
+    fn physical_phase_x_a1_draft_production_packages_are_valid() {
+        let root = PathBuf::from(env!("CARGO_MANIFEST_DIR"))
+            .join("resources")
+            .join("interactive-lessons");
+        let registry = InteractiveLessonContentRegistry::load(root);
+        assert_eq!(registry.invalid_count(), 0);
+        assert_eq!(registry.published_count(), 0);
+        assert_eq!(
+            registry
+                .exact_versions
+                .values()
+                .filter(|lesson| lesson.package.lesson_id.starts_with("a1-"))
+                .count(),
+            48
+        );
+        let mut ids = BTreeSet::new();
+        for registered in registry
+            .exact_versions
+            .values()
+            .filter(|lesson| lesson.package.lesson_id.starts_with("a1-"))
+        {
+            let package = &registered.package;
+            assert!(ids.insert(package.lesson_id.clone()));
+            assert!(package.lesson_id.starts_with("a1-"));
+            assert!(matches!(package.publication_state, PublicationState::Draft));
+            assert_eq!(package.content_version, 1);
+            assert_eq!(package.stages.len(), InteractiveStageType::ORDER.len());
+            assert!(package.stages.iter().all(|stage| stage.required));
+        }
+    }
+
+    #[test]
+    fn production_phase_yz_all_288_packages_are_published_and_valid() {
+        let root = PathBuf::from(env!("CARGO_MANIFEST_DIR"))
+            .join("resources")
+            .join("interactive-lessons");
+        let registry = InteractiveLessonContentRegistry::load(root);
+        assert_eq!(registry.invalid_count(), 0);
+        assert_eq!(registry.published_count(), 288);
+        assert_eq!(registry.exact_versions.len(), 288);
+        let mut counts = [0usize; 6];
+        for registered in registry.exact_versions.values() {
+            let package = &registered.package;
+            assert!(matches!(
+                package.publication_state,
+                PublicationState::Published
+            ));
+            assert_eq!(package.content_version, 1);
+            assert_eq!(package.stages.len(), InteractiveStageType::ORDER.len());
+            assert!(package.stages.iter().all(|stage| stage.required));
+            match package.cefr_band {
+                crate::placement::CefrBand::A1 => counts[0] += 1,
+                crate::placement::CefrBand::A2 => counts[1] += 1,
+                crate::placement::CefrBand::B1 => counts[2] += 1,
+                crate::placement::CefrBand::B2 => counts[3] += 1,
+                crate::placement::CefrBand::C1 => counts[4] += 1,
+                crate::placement::CefrBand::C2 => counts[5] += 1,
+            }
+        }
+        assert_eq!(counts, [48, 48, 48, 48, 48, 48]);
+    }
+
+    #[test]
+    fn production_phase_yz_candidate_packages_use_the_real_schema() {
+        let root = PathBuf::from(env!("CARGO_MANIFEST_DIR"))
+            .join("resources")
+            .join("interactive-lessons");
+        let registry = InteractiveLessonContentRegistry::load(root);
+        if registry.invalid_count() != 0 {
+            eprintln!(
+                "Phase Y/Z invalid packages: {:#?}",
+                registry.invalid_packages
+            );
+        }
+        assert_eq!(registry.invalid_count(), 0);
+        for prefix in ["b1-", "b2-", "c1-", "c2-"] {
+            let count = registry
+                .exact_versions
+                .values()
+                .filter(|registered| registered.package.lesson_id.starts_with(prefix))
+                .count();
+            assert_eq!(count, 48, "incomplete production set for {prefix}");
+        }
+        assert_eq!(
+            registry
+                .exact_versions
+                .values()
+                .filter(|registered| registered.package.lesson_id.starts_with("b1-"))
+                .count(),
+            48
+        );
+    }
 }

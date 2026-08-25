@@ -1,0 +1,615 @@
+{
+  "packageSchemaVersion": 1,
+  "lessonFlowVersion": 1,
+  "lessonId": "a2-u08-l02-agreeing-disagreeing",
+  "contentVersion": 1,
+  "publicationState": "published",
+  "title": "Agreeing & Disagreeing",
+  "description": "Respond to an opinion with respectful agreement or disagreement.",
+  "language": "en",
+  "referenceLocale": "en-US",
+  "cefrBand": "A2",
+  "estimatedMinutes": 30,
+  "objectives": [
+    "Respond to an opinion with respectful agreement or disagreement."
+  ],
+  "tags": [
+    "english-core",
+    "a2",
+    "unit-08",
+    "production"
+  ],
+  "assets": [],
+  "stages": [
+    {
+      "stageId": "theory",
+      "stageType": "theory",
+      "stageSchemaVersion": 1,
+      "title": "Understand the language",
+      "instructions": "Read the explanation, examples, common error, and recap.",
+      "required": true,
+      "payload": {
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "This lesson prepares you to respond to an opinion with respectful agreement or disagreement. The central language is agreement phrases and polite contrast. It belongs to the practical context of opinions, technology & social life. Focus first on meaning: decide what information the listener needs. Then choose the subject, verb form, and useful detail. At A2, connect the main message to a time, reason, contrast, or result. Listen for context before choosing the tense or functional phrase. The same language returns in the listening, repeat, speaking, exercises, and guided conversation stages."
+          },
+          {
+            "type": "callout",
+            "title": "Pattern",
+            "text": "agreement phrases and polite contrast"
+          },
+          {
+            "type": "example",
+            "english": "I agree with you about online safety.",
+            "explanation": "Use this model to begin the agreeing & disagreeing exchange."
+          },
+          {
+            "type": "example",
+            "english": "I see your point, but I prefer meeting in person.",
+            "explanation": "This agreeing & disagreeing model adds a different detail or response."
+          },
+          {
+            "type": "example",
+            "english": "What do you think?",
+            "explanation": "Use this question or response to keep the agreeing & disagreeing exchange moving."
+          },
+          {
+            "type": "paragraph",
+            "text": "Notice the two models: “I agree with you about online safety.” and “I see your point, but I prefer meeting in person.” They show the pattern in complete communication, not as isolated grammar. Say the model aloud, replace one detail, and check that the new sentence keeps the intended meaning. When the other person asks a follow-up question, answer directly and add a relevant detail. This makes the exchange natural while keeping the language controlled. Compare the time and viewpoint in each model, and use a linker when two ideas need a clear relationship. Avoid adding advanced forms when the lesson pattern already communicates the message accurately."
+          },
+          {
+            "type": "callout",
+            "title": "Common error",
+            "text": "Do not mix the word order or verb form with another pattern. Keep the controlled form for this lesson: agreement phrases and polite contrast."
+          },
+          {
+            "type": "bullet_list",
+            "items": [
+              "Communicative goal: Respond to an opinion with respectful agreement or disagreement.",
+              "Core pattern: agreement phrases and polite contrast.",
+              "Use one clear model, add a relevant detail, and respond to the other speaker."
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "stageId": "visual-vocabulary",
+      "stageType": "visual_vocabulary",
+      "stageSchemaVersion": 1,
+      "title": "Build your vocabulary",
+      "instructions": "Study each term, meaning, and contextual example.",
+      "required": true,
+      "payload": {
+        "items": [
+          {
+            "itemId": "disagree",
+            "term": "disagree",
+            "meaning": "have a different opinion",
+            "example": "Use “disagree” while you practice agreeing & disagreeing in context.",
+            "imageAssetId": null
+          },
+          {
+            "itemId": "reason",
+            "term": "reason",
+            "meaning": "a cause or explanation",
+            "example": "Use “reason” while you practice agreeing & disagreeing in context.",
+            "imageAssetId": null
+          },
+          {
+            "itemId": "device",
+            "term": "device",
+            "meaning": "a piece of electronic equipment",
+            "example": "Use “device” while you practice agreeing & disagreeing in context.",
+            "imageAssetId": null
+          },
+          {
+            "itemId": "app",
+            "term": "app",
+            "meaning": "a program used on a phone or computer",
+            "example": "Use “app” while you practice agreeing & disagreeing in context.",
+            "imageAssetId": null
+          },
+          {
+            "itemId": "screen",
+            "term": "screen",
+            "meaning": "the surface where digital information appears",
+            "example": "Use “screen” while you practice agreeing & disagreeing in context.",
+            "imageAssetId": null
+          },
+          {
+            "itemId": "message",
+            "term": "message",
+            "meaning": "a piece of information sent to someone",
+            "example": "Use “message” while you practice agreeing & disagreeing in context.",
+            "imageAssetId": null
+          },
+          {
+            "itemId": "privacy",
+            "term": "privacy",
+            "meaning": "control over personal information",
+            "example": "Use “privacy” while you practice agreeing & disagreeing in context.",
+            "imageAssetId": null
+          },
+          {
+            "itemId": "useful",
+            "term": "useful",
+            "meaning": "helpful for a purpose",
+            "example": "Use “useful” while you practice agreeing & disagreeing in context.",
+            "imageAssetId": null
+          },
+          {
+            "itemId": "social",
+            "term": "social",
+            "meaning": "related to meeting and communicating with people",
+            "example": "Use “social” while you practice agreeing & disagreeing in context.",
+            "imageAssetId": null
+          }
+        ]
+      }
+    },
+    {
+      "stageId": "listening",
+      "stageType": "listening",
+      "stageSchemaVersion": 1,
+      "title": "Listen in context",
+      "instructions": "Listen before revealing the text, then notice the target pattern.",
+      "required": true,
+      "payload": {
+        "segments": [
+          {
+            "segmentId": "segment-1",
+            "text": "I agree with you about online safety. I see your point, but I prefer meeting in person.",
+            "audioAssetId": null
+          },
+          {
+            "segmentId": "segment-2",
+            "text": "What do you think? I understand your point.",
+            "audioAssetId": null
+          },
+          {
+            "segmentId": "segment-3",
+            "text": "I see your point, but I prefer meeting in person. What do you think?",
+            "audioAssetId": null
+          },
+          {
+            "segmentId": "segment-4",
+            "text": "I understand your point. Thanks for talking about opinions, technology & social life with me.",
+            "audioAssetId": null
+          }
+        ],
+        "revealTextAfterFirstPlay": true
+      }
+    },
+    {
+      "stageId": "repeat",
+      "stageType": "repeat",
+      "stageSchemaVersion": 1,
+      "title": "Repeat useful chunks",
+      "instructions": "Repeat each complete expression with clear rhythm.",
+      "required": true,
+      "payload": {
+        "targets": [
+          {
+            "targetId": "repeat-1",
+            "text": "I agree with you about online safety.",
+            "referenceAudioAssetId": null,
+            "hint": "Keep the words together as one communicative chunk."
+          },
+          {
+            "targetId": "repeat-2",
+            "text": "I see your point, but I prefer meeting in person.",
+            "referenceAudioAssetId": null,
+            "hint": "Keep the words together as one communicative chunk."
+          },
+          {
+            "targetId": "repeat-3",
+            "text": "What do you think?",
+            "referenceAudioAssetId": null,
+            "hint": "Keep the words together as one communicative chunk."
+          },
+          {
+            "targetId": "repeat-4",
+            "text": "I understand your point.",
+            "referenceAudioAssetId": null,
+            "hint": "Keep the words together as one communicative chunk."
+          },
+          {
+            "targetId": "repeat-5",
+            "text": "Thanks for talking about opinions, technology & social life with me.",
+            "referenceAudioAssetId": null,
+            "hint": "Keep the words together as one communicative chunk."
+          }
+        ]
+      }
+    },
+    {
+      "stageId": "speaking-check",
+      "stageType": "speaking_check",
+      "stageSchemaVersion": 1,
+      "title": "Speaking Check",
+      "instructions": "Say expressions already presented in this Lesson.",
+      "required": true,
+      "payload": {
+        "targets": [
+          {
+            "targetId": "speaking-1",
+            "instruction": "Say the complete model naturally.",
+            "targetText": "I agree with you about online safety.",
+            "hint": "Use the same words and clear sentence stress."
+          },
+          {
+            "targetId": "speaking-2",
+            "instruction": "Say the complete model naturally.",
+            "targetText": "I see your point, but I prefer meeting in person.",
+            "hint": "Use the same words and clear sentence stress."
+          },
+          {
+            "targetId": "speaking-3",
+            "instruction": "Say the complete model naturally.",
+            "targetText": "What do you think?",
+            "hint": "Use the same words and clear sentence stress."
+          },
+          {
+            "targetId": "speaking-4",
+            "instruction": "Say the complete model naturally.",
+            "targetText": "I understand your point.",
+            "hint": "Use the same words and clear sentence stress."
+          }
+        ]
+      }
+    },
+    {
+      "stageId": "exercise",
+      "stageType": "exercise",
+      "stageSchemaVersion": 1,
+      "title": "Check your understanding",
+      "instructions": "Complete each deterministic practice item.",
+      "required": true,
+      "payload": {
+        "items": [
+          {
+            "exerciseId": "choose-model",
+            "exerciseType": "single_choice",
+            "prompt": "Choose the model that fits the communicative goal.",
+            "instructions": null,
+            "hint": "Respond to an opinion with respectful agreement or disagreement.",
+            "payload": {
+              "options": [
+                {
+                  "optionId": "a",
+                  "text": "I agree with you about online safety."
+                },
+                {
+                  "optionId": "b",
+                  "text": "The purple engine sleeps quickly."
+                },
+                {
+                  "optionId": "c",
+                  "text": "No information is possible."
+                }
+              ],
+              "correctOptionId": "a"
+            },
+            "feedback": {
+              "correct": "Correct. The answer fits the lesson context.",
+              "incorrect": "Try again and use the model from this lesson.",
+              "explanation": "agreement phrases and polite contrast"
+            }
+          },
+          {
+            "exerciseId": "select-core-vocabulary",
+            "exerciseType": "multiple_select",
+            "prompt": "Select both words that belong to this lesson context.",
+            "instructions": null,
+            "hint": "Opinions, Technology & Social Life",
+            "payload": {
+              "options": [
+                {
+                  "optionId": "a",
+                  "text": "disagree"
+                },
+                {
+                  "optionId": "b",
+                  "text": "reason"
+                },
+                {
+                  "optionId": "c",
+                  "text": "industrial turbine"
+                },
+                {
+                  "optionId": "d",
+                  "text": "quantum geology"
+                }
+              ],
+              "correctOptionIds": [
+                "a",
+                "b"
+              ]
+            },
+            "feedback": {
+              "correct": "Correct. The answer fits the lesson context.",
+              "incorrect": "Try again and use the model from this lesson.",
+              "explanation": "Both correct words appear in Visual Vocabulary."
+            }
+          },
+          {
+            "exerciseId": "complete-response",
+            "exerciseType": "fill_blank",
+            "prompt": "Type the exact practiced response shown in the hint.",
+            "instructions": null,
+            "hint": "I see your point, but I prefer meeting in person.",
+            "payload": {
+              "prefix": "",
+              "suffix": "",
+              "acceptedAnswers": [
+                "I see your point, but I prefer meeting in person."
+              ],
+              "normalizationProfile": "english_basic_v1"
+            },
+            "feedback": {
+              "correct": "Correct. The answer fits the lesson context.",
+              "incorrect": "Try again and use the model from this lesson.",
+              "explanation": "Use the complete model response."
+            }
+          },
+          {
+            "exerciseId": "order-model",
+            "exerciseType": "word_order",
+            "prompt": "Put the model in its natural order.",
+            "instructions": null,
+            "hint": null,
+            "payload": {
+              "tokens": [
+                {
+                  "tokenId": "t8",
+                  "text": "."
+                },
+                {
+                  "tokenId": "t7",
+                  "text": "safety"
+                },
+                {
+                  "tokenId": "t6",
+                  "text": "online"
+                },
+                {
+                  "tokenId": "t5",
+                  "text": "about"
+                },
+                {
+                  "tokenId": "t4",
+                  "text": "you"
+                },
+                {
+                  "tokenId": "t3",
+                  "text": "with"
+                },
+                {
+                  "tokenId": "t2",
+                  "text": "agree"
+                },
+                {
+                  "tokenId": "t1",
+                  "text": "I"
+                }
+              ],
+              "correctOrder": [
+                "t1",
+                "t2",
+                "t3",
+                "t4",
+                "t5",
+                "t6",
+                "t7",
+                "t8"
+              ]
+            },
+            "feedback": {
+              "correct": "Correct. The answer fits the lesson context.",
+              "incorrect": "Try again and use the model from this lesson.",
+              "explanation": "Keep the modeled English word order."
+            }
+          },
+          {
+            "exerciseId": "match-vocabulary",
+            "exerciseType": "matching",
+            "prompt": "Match each term to its meaning.",
+            "instructions": null,
+            "hint": null,
+            "payload": {
+              "leftItems": [
+                {
+                  "itemId": "l1",
+                  "text": "disagree"
+                },
+                {
+                  "itemId": "l2",
+                  "text": "reason"
+                },
+                {
+                  "itemId": "l3",
+                  "text": "device"
+                }
+              ],
+              "rightItems": [
+                {
+                  "itemId": "r1",
+                  "text": "have a different opinion"
+                },
+                {
+                  "itemId": "r2",
+                  "text": "a cause or explanation"
+                },
+                {
+                  "itemId": "r3",
+                  "text": "a piece of electronic equipment"
+                }
+              ],
+              "correctPairs": [
+                {
+                  "leftId": "l1",
+                  "rightId": "r1"
+                },
+                {
+                  "leftId": "l2",
+                  "rightId": "r2"
+                },
+                {
+                  "leftId": "l3",
+                  "rightId": "r3"
+                }
+              ]
+            },
+            "feedback": {
+              "correct": "Correct. The answer fits the lesson context.",
+              "incorrect": "Try again and use the model from this lesson.",
+              "explanation": "Review each term with its meaning and example."
+            }
+          },
+          {
+            "exerciseId": "exact-useful-chunk",
+            "exerciseType": "short_answer_exact",
+            "prompt": "Type the finite model chunk shown in the hint.",
+            "instructions": null,
+            "hint": "What do you think?",
+            "payload": {
+              "acceptedAnswers": [
+                "What do you think?"
+              ],
+              "normalizationProfile": "english_basic_v1"
+            },
+            "feedback": {
+              "correct": "Correct. The answer fits the lesson context.",
+              "incorrect": "Try again and use the model from this lesson.",
+              "explanation": "This checks one exact practiced chunk, not an open response."
+            }
+          },
+          {
+            "exerciseId": "choose-correct-form",
+            "exerciseType": "single_choice",
+            "prompt": "Which sentence follows the lesson pattern?",
+            "instructions": null,
+            "hint": "agreement phrases and polite contrast",
+            "payload": {
+              "options": [
+                {
+                  "optionId": "a",
+                  "text": "I see your point, but I prefer meeting in person."
+                },
+                {
+                  "optionId": "b",
+                  "text": "She are did going."
+                },
+                {
+                  "optionId": "c",
+                  "text": "I is to yesterday."
+                }
+              ],
+              "correctOptionId": "a"
+            },
+            "feedback": {
+              "correct": "Correct. The answer fits the lesson context.",
+              "incorrect": "Try again and use the model from this lesson.",
+              "explanation": "agreement phrases and polite contrast"
+            }
+          },
+          {
+            "exerciseId": "recall-vocabulary",
+            "exerciseType": "fill_blank",
+            "prompt": "Type the term that means: a program used on a phone or computer",
+            "instructions": null,
+            "hint": "It appears in Visual Vocabulary.",
+            "payload": {
+              "prefix": "",
+              "suffix": "",
+              "acceptedAnswers": [
+                "app"
+              ],
+              "normalizationProfile": "english_basic_v1"
+            },
+            "feedback": {
+              "correct": "Correct. The answer fits the lesson context.",
+              "incorrect": "Try again and use the model from this lesson.",
+              "explanation": "a program used on a phone or computer"
+            }
+          },
+          {
+            "exerciseId": "context-choice",
+            "exerciseType": "single_choice",
+            "prompt": "Choose the response that adds a relevant detail.",
+            "instructions": null,
+            "hint": "A2 responses connect ideas and context.",
+            "payload": {
+              "options": [
+                {
+                  "optionId": "a",
+                  "text": "I understand your point."
+                },
+                {
+                  "optionId": "b",
+                  "text": "Banana seven because blue."
+                },
+                {
+                  "optionId": "c",
+                  "text": "I have no sentence."
+                }
+              ],
+              "correctOptionId": "a"
+            },
+            "feedback": {
+              "correct": "Correct. The answer fits the lesson context.",
+              "incorrect": "Try again and use the model from this lesson.",
+              "explanation": "Use a relevant follow-up in the same situation."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "stageId": "guided-conversation",
+      "stageType": "guided_conversation",
+      "stageSchemaVersion": 1,
+      "title": "Opinions, Technology & Social Life conversation",
+      "instructions": "Use the prepared language in a practical exchange.",
+      "required": true,
+      "payload": {
+        "scenario": "You are in a realistic everyday situation related to opinions, technology & social life. Practice agreeing & disagreeing and respond to relevant follow-up questions.",
+        "studentRole": "English learner handling the situation",
+        "teacherRole": "Helpful conversation partner",
+        "goal": "Respond to an opinion with respectful agreement or disagreement.",
+        "targetVocabulary": [
+          "disagree",
+          "reason",
+          "device",
+          "app",
+          "screen",
+          "message",
+          "privacy",
+          "useful",
+          "social"
+        ],
+        "targetExpressions": [
+          "I agree with you about online safety.",
+          "I see your point, but I prefer meeting in person.",
+          "What do you think?",
+          "I understand your point.",
+          "Thanks for talking about opinions, technology & social life with me."
+        ],
+        "minimumStudentTurns": 5,
+        "recommendedStudentTurns": 7,
+        "maximumStudentTurns": 10
+      }
+    },
+    {
+      "stageId": "analysis",
+      "stageType": "analysis",
+      "stageSchemaVersion": 1,
+      "title": "Lesson Review",
+      "instructions": "Review the evidence from your completed practice.",
+      "required": true,
+      "payload": {}
+    }
+  ]
+}

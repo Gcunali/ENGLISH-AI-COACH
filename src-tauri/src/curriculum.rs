@@ -971,6 +971,27 @@ mod tests {
     }
 
     #[test]
+    #[ignore = "manual Phase X gate for the draft A1 Unit 1 production Curriculum"]
+    fn physical_phase_x_a1_unit1_draft_curriculum_resolves() {
+        let manifest_root = PathBuf::from(env!("CARGO_MANIFEST_DIR")).join("resources");
+        let lessons =
+            InteractiveLessonContentRegistry::load(manifest_root.join("interactive-lessons"));
+        let registry = CurriculumRegistry::load(manifest_root.join("curriculum"), &lessons);
+        assert_eq!(registry.invalid_count(), 0);
+        assert_eq!(registry.published_count(), 0);
+        for (lesson_id, content_version) in [
+            ("a1-u01-l01-hello-goodbye", 1),
+            ("a1-u01-l02-whats-your-name", 1),
+            ("a1-u01-l03-countries-nationalities", 1),
+            ("a1-u01-l04-personal-information", 1),
+            ("a1-u01-l05-i-am-you-are-he-is", 1),
+            ("a1-u01-l06-introductions-mission", 1),
+        ] {
+            assert!(lessons.get_exact(lesson_id, content_version).is_some());
+        }
+    }
+
+    #[test]
     fn progress_is_derived_by_stable_id_ignores_scores_and_noncompleted_sessions() {
         let (root, service) = temp_service();
         let db_path = root.join("test.sqlite3");
@@ -1177,5 +1198,145 @@ mod tests {
                 "foreignKeys": foreign_keys,
             })
         );
+    }
+
+    #[test]
+    fn production_english_core_resolves_every_installed_level_at_zero_progress() {
+        let resources = PathBuf::from(env!("CARGO_MANIFEST_DIR")).join("resources");
+        let lessons = InteractiveLessonContentRegistry::load(resources.join("interactive-lessons"));
+        assert!(matches!(lessons.published_count(), 192 | 288));
+        let registry = CurriculumRegistry::load(resources.join("curriculum"), &lessons);
+        if registry.invalid_count() != 0 {
+            eprintln!("Production curriculum errors: {:#?}", registry.invalid);
+        }
+        assert_eq!(registry.invalid_count(), 0);
+        assert_eq!(registry.published_count(), 1);
+
+        let root = std::env::temp_dir().join(format!("production-course-{}", uuid::Uuid::new_v4()));
+        fs::create_dir_all(&root).unwrap();
+        let database_path = root.join("course.sqlite3");
+        database::migrate(&database_path).unwrap();
+        let placement = PlacementRepository::new(database_path.clone()).unwrap();
+        let profiles = StudentProfileRepository::new(database_path.clone(), placement);
+        let service = CurriculumService::new(registry, database_path.clone(), profiles);
+        let catalog = service.catalog().unwrap();
+        assert_eq!(catalog.published_curriculum_count, 1);
+        let course = &catalog.curricula[0];
+        assert_eq!(course.curriculum_id, "english-core");
+        let expected_levels = if lessons.published_count() == 192 {
+            vec![CefrBand::A1, CefrBand::A2, CefrBand::B1, CefrBand::B2]
+        } else {
+            vec![
+                CefrBand::A1,
+                CefrBand::A2,
+                CefrBand::B1,
+                CefrBand::B2,
+                CefrBand::C1,
+                CefrBand::C2,
+            ]
+        };
+        assert_eq!(course.levels.len(), expected_levels.len());
+        assert_eq!(
+            course
+                .levels
+                .iter()
+                .map(|level| level.cefr_level)
+                .collect::<Vec<_>>(),
+            expected_levels
+        );
+        assert_eq!(
+            course
+                .levels
+                .iter()
+                .map(|level| level.units.len())
+                .sum::<usize>(),
+            course.levels.len() * 8
+        );
+        assert_eq!(
+            course.progress.total_lessons,
+            lessons.published_count() as u32
+        );
+        assert_eq!(course.progress.completed_lessons, 0);
+        assert_eq!(course.progress.percent, 0);
+        assert!(course
+            .levels
+            .iter()
+            .flat_map(|level| &level.units)
+            .flat_map(|unit| &unit.lessons)
+            .all(|lesson| lesson.status == CurriculumLessonStatus::NotStarted));
+
+        let connection = database::open(&database_path).unwrap();
+        connection.execute("INSERT INTO placement_attempt(id,status,test_version,question_bank_version,scoring_version,speaking_prompt_version,started_at,completed_at,overall_estimated_level,confidence,speaking_status,created_at,updated_at) VALUES('phase-x-placement-b1','completed',1,1,1,1,'now','now','B1','high','skipped','now','now')", []).unwrap();
+        drop(connection);
+        let outside = service.catalog().unwrap();
+        let course = &outside.curricula[0];
+        assert_eq!(course.suggested_level, Some(CefrBand::B1));
+        assert_eq!(
+            course
+                .levels
+                .iter()
+                .filter(|level| level.recommended)
+                .count(),
+            1
+        );
+        assert!(
+            course
+                .levels
+                .iter()
+                .find(|level| level.cefr_level == CefrBand::B1)
+                .unwrap()
+                .recommended
+        );
+        fs::remove_dir_all(root).unwrap();
+    }
+
+    #[test]
+    #[ignore = "writes the controlled Phase X production content manifest artifact"]
+    fn physical_phase_x_write_production_content_manifest() {
+        use std::fmt::Write as _;
+
+        let project = PathBuf::from(env!("CARGO_MANIFEST_DIR"))
+            .parent()
+            .unwrap()
+            .to_path_buf();
+        let resources = project.join("src-tauri").join("resources");
+        let lessons = InteractiveLessonContentRegistry::load(resources.join("interactive-lessons"));
+        let registry = CurriculumRegistry::load(resources.join("curriculum"), &lessons);
+        let curriculum = registry.published.get("english-core").unwrap();
+        let mut output = String::from(
+            "# Production Content Manifest\n\nGenerated from the official typed Package Registry.\n\n| lessonId | level | unit | title | contentVersion | publicationState | packageHash |\n|---|---|---|---|---:|---|---|\n",
+        );
+        let mut count = 0;
+        for level in &curriculum.manifest.levels {
+            for unit in &level.units {
+                for reference in &unit.lessons {
+                    let lesson = curriculum
+                        .lessons
+                        .get(&(reference.lesson_id.clone(), reference.content_version))
+                        .unwrap();
+                    writeln!(
+                        output,
+                        "| {} | {} | {} | {} | {} | published | `{}` |",
+                        lesson.package.lesson_id,
+                        level.cefr_level.as_str(),
+                        unit.title,
+                        lesson.package.title,
+                        lesson.package.content_version,
+                        lesson.package_hash
+                    )
+                    .unwrap();
+                    count += 1;
+                }
+            }
+        }
+        assert_eq!(count, 96);
+        fs::create_dir_all(project.join(".phase-x-artifacts")).unwrap();
+        fs::write(
+            project
+                .join(".phase-x-artifacts")
+                .join("PRODUCTION_CONTENT_MANIFEST.md"),
+            output,
+        )
+        .unwrap();
     }
 }

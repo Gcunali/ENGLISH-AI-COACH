@@ -320,6 +320,244 @@ mod tests {
     }
 
     #[test]
+    #[ignore = "manual Phase X gate for startability and public DTO privacy of the draft pilot"]
+    fn physical_phase_x_a1_unit1_pilot_is_startable_without_answer_leaks() {
+        let root = std::env::temp_dir().join(format!("phase-x-pilot-{}", uuid::Uuid::new_v4()));
+        let content = root.join("content");
+        fs::create_dir_all(&content).unwrap();
+        let production = PathBuf::from(env!("CARGO_MANIFEST_DIR"))
+            .join("resources")
+            .join("interactive-lessons");
+        let mut lesson_ids = Vec::new();
+        for entry in fs::read_dir(production).unwrap().filter_map(Result::ok) {
+            if !entry.file_name().to_string_lossy().starts_with("a1-u01-") {
+                continue;
+            }
+            let source = entry.path().join("lesson.json");
+            let mut value: serde_json::Value =
+                serde_json::from_slice(&fs::read(source).unwrap()).unwrap();
+            value["publicationState"] = serde_json::json!("published");
+            let lesson_id = value["lessonId"].as_str().unwrap().to_owned();
+            let target = content.join(format!("{lesson_id}-v1"));
+            fs::create_dir_all(&target).unwrap();
+            fs::write(
+                target.join("lesson.json"),
+                serde_json::to_vec_pretty(&value).unwrap(),
+            )
+            .unwrap();
+            lesson_ids.push(lesson_id);
+        }
+        lesson_ids.sort();
+        assert_eq!(lesson_ids.len(), 6);
+        let database_path = root.join("pilot.sqlite3");
+        database::migrate(&database_path).unwrap();
+        let registry = InteractiveLessonContentRegistry::load(content);
+        assert_eq!(registry.published_count(), 6);
+        let summaries = registry.list().iter().map(summary).collect::<Vec<_>>();
+        let public = serde_json::to_string(&summaries).unwrap();
+        for private_field in [
+            "correctOptionId",
+            "correctOptionIds",
+            "acceptedAnswers",
+            "correctOrder",
+            "correctPairs",
+        ] {
+            assert!(!public.contains(private_field));
+        }
+        let placement = PlacementRepository::new(database_path.clone()).unwrap();
+        let engine = InteractiveLessonEngine::new(
+            registry,
+            InteractiveLessonRepository::new(database_path),
+            StudentProfileRepository::new(root.join("pilot.sqlite3"), placement),
+            root.join("session-assets"),
+        );
+        for lesson_id in lesson_ids {
+            let started = engine
+                .start(StartInteractiveLessonRequest {
+                    lesson_id,
+                    content_version: Some(1),
+                    start_over: false,
+                })
+                .unwrap();
+            assert_eq!(started.current_stage_index, 0);
+            let serialized = serde_json::to_string(&started).unwrap();
+            assert!(!serialized.contains("acceptedAnswers"));
+            engine.abandon(&started.id).unwrap();
+        }
+        fs::remove_dir_all(root).unwrap();
+    }
+
+    #[test]
+    #[ignore = "manual Phase X A1 startability gate before A2 authoring"]
+    fn physical_phase_x_all_a1_draft_packages_are_startable() {
+        let root = std::env::temp_dir().join(format!("phase-x-a1-{}", uuid::Uuid::new_v4()));
+        let content = root.join("content");
+        fs::create_dir_all(&content).unwrap();
+        let production = PathBuf::from(env!("CARGO_MANIFEST_DIR"))
+            .join("resources")
+            .join("interactive-lessons");
+        let mut lesson_ids = Vec::new();
+        for entry in fs::read_dir(production).unwrap().filter_map(Result::ok) {
+            if !entry.file_name().to_string_lossy().starts_with("a1-") {
+                continue;
+            }
+            let mut value: serde_json::Value =
+                serde_json::from_slice(&fs::read(entry.path().join("lesson.json")).unwrap())
+                    .unwrap();
+            value["publicationState"] = serde_json::json!("published");
+            let lesson_id = value["lessonId"].as_str().unwrap().to_owned();
+            let target = content.join(format!("{lesson_id}-v1"));
+            fs::create_dir_all(&target).unwrap();
+            fs::write(
+                target.join("lesson.json"),
+                serde_json::to_vec_pretty(&value).unwrap(),
+            )
+            .unwrap();
+            lesson_ids.push(lesson_id);
+        }
+        lesson_ids.sort();
+        assert_eq!(lesson_ids.len(), 48);
+        let database_path = root.join("a1.sqlite3");
+        database::migrate(&database_path).unwrap();
+        let registry = InteractiveLessonContentRegistry::load(content);
+        assert_eq!(registry.published_count(), 48);
+        let placement = PlacementRepository::new(database_path.clone()).unwrap();
+        let engine = InteractiveLessonEngine::new(
+            registry,
+            InteractiveLessonRepository::new(database_path.clone()),
+            StudentProfileRepository::new(database_path, placement),
+            root.join("session-assets"),
+        );
+        for lesson_id in lesson_ids {
+            let started = engine
+                .start(StartInteractiveLessonRequest {
+                    lesson_id,
+                    content_version: Some(1),
+                    start_over: false,
+                })
+                .unwrap();
+            assert_eq!(started.current_stage_index, 0);
+            engine.abandon(&started.id).unwrap();
+        }
+        fs::remove_dir_all(root).unwrap();
+    }
+
+    #[test]
+    fn production_phase_x_all_packages_are_startable() {
+        let root = std::env::temp_dir().join(format!("phase-x-all-{}", uuid::Uuid::new_v4()));
+        let content = root.join("content");
+        fs::create_dir_all(&content).unwrap();
+        let production = PathBuf::from(env!("CARGO_MANIFEST_DIR"))
+            .join("resources")
+            .join("interactive-lessons");
+        let mut lesson_ids = Vec::new();
+        for entry in fs::read_dir(production).unwrap().filter_map(Result::ok) {
+            let name = entry.file_name().to_string_lossy().to_string();
+            if !name.starts_with("a1-") && !name.starts_with("a2-") {
+                continue;
+            }
+            let mut value: serde_json::Value =
+                serde_json::from_slice(&fs::read(entry.path().join("lesson.json")).unwrap())
+                    .unwrap();
+            value["publicationState"] = serde_json::json!("published");
+            let lesson_id = value["lessonId"].as_str().unwrap().to_owned();
+            let target = content.join(format!("{lesson_id}-v1"));
+            fs::create_dir_all(&target).unwrap();
+            fs::write(
+                target.join("lesson.json"),
+                serde_json::to_vec_pretty(&value).unwrap(),
+            )
+            .unwrap();
+            lesson_ids.push(lesson_id);
+        }
+        lesson_ids.sort();
+        assert_eq!(lesson_ids.len(), 96);
+        let database_path = root.join("all.sqlite3");
+        database::migrate(&database_path).unwrap();
+        let registry = InteractiveLessonContentRegistry::load(content);
+        assert_eq!(registry.published_count(), 96);
+        let placement = PlacementRepository::new(database_path.clone()).unwrap();
+        let engine = InteractiveLessonEngine::new(
+            registry,
+            InteractiveLessonRepository::new(database_path.clone()),
+            StudentProfileRepository::new(database_path, placement),
+            root.join("session-assets"),
+        );
+        for lesson_id in lesson_ids {
+            let started = engine
+                .start(StartInteractiveLessonRequest {
+                    lesson_id,
+                    content_version: Some(1),
+                    start_over: false,
+                })
+                .unwrap();
+            assert_eq!(started.current_stage_index, 0);
+            engine.abandon(&started.id).unwrap();
+        }
+        fs::remove_dir_all(root).unwrap();
+    }
+
+    #[test]
+    fn production_phase_yz_all_288_lessons_are_startable() {
+        let root =
+            std::env::temp_dir().join(format!("phase-yz-candidates-{}", uuid::Uuid::new_v4()));
+        let content = root.join("content");
+        fs::create_dir_all(&content).unwrap();
+        let production = PathBuf::from(env!("CARGO_MANIFEST_DIR"))
+            .join("resources")
+            .join("interactive-lessons");
+        let mut lesson_ids = Vec::new();
+        for entry in fs::read_dir(production).unwrap().filter_map(Result::ok) {
+            let name = entry.file_name().to_string_lossy().to_string();
+            if !["a1-", "a2-", "b1-", "b2-", "c1-", "c2-"]
+                .iter()
+                .any(|prefix| name.starts_with(prefix))
+            {
+                continue;
+            }
+            let mut value: serde_json::Value =
+                serde_json::from_slice(&fs::read(entry.path().join("lesson.json")).unwrap())
+                    .unwrap();
+            value["publicationState"] = serde_json::json!("published");
+            let lesson_id = value["lessonId"].as_str().unwrap().to_owned();
+            let target = content.join(format!("{lesson_id}-v1"));
+            fs::create_dir_all(&target).unwrap();
+            fs::write(
+                target.join("lesson.json"),
+                serde_json::to_vec_pretty(&value).unwrap(),
+            )
+            .unwrap();
+            lesson_ids.push(lesson_id);
+        }
+        lesson_ids.sort();
+        assert_eq!(lesson_ids.len(), 288);
+        let database_path = root.join("all.sqlite3");
+        database::migrate(&database_path).unwrap();
+        let registry = InteractiveLessonContentRegistry::load(content);
+        assert_eq!(registry.invalid_count(), 0);
+        assert_eq!(registry.published_count(), lesson_ids.len());
+        let placement = PlacementRepository::new(database_path.clone()).unwrap();
+        let engine = InteractiveLessonEngine::new(
+            registry,
+            InteractiveLessonRepository::new(database_path.clone()),
+            StudentProfileRepository::new(database_path, placement),
+            root.join("session-assets"),
+        );
+        for lesson_id in lesson_ids {
+            let started = engine
+                .start(StartInteractiveLessonRequest {
+                    lesson_id,
+                    content_version: Some(1),
+                    start_over: false,
+                })
+                .unwrap();
+            assert_eq!(started.current_stage_index, 0);
+            engine.abandon(&started.id).unwrap();
+        }
+        fs::remove_dir_all(root).unwrap();
+    }
+
+    #[test]
     fn physical_session_resumes_from_snapshot_and_has_no_downstream_side_effects() {
         let (root, content, engine) = harness();
         let request = || StartInteractiveLessonRequest {

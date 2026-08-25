@@ -1,0 +1,565 @@
+{
+  "packageSchemaVersion": 1,
+  "lessonFlowVersion": 1,
+  "lessonId": "a1-u01-l03-countries-nationalities",
+  "contentVersion": 1,
+  "publicationState": "published",
+  "title": "Countries & Nationalities",
+  "description": "Say where you are from, state your nationality, and ask another person about origin.",
+  "language": "en",
+  "referenceLocale": "en-US",
+  "cefrBand": "A1",
+  "estimatedMinutes": 24,
+  "objectives": [
+    "Say where you are from, state your nationality, and ask another person about origin."
+  ],
+  "tags": [
+    "english-core",
+    "a1",
+    "unit-01",
+    "production"
+  ],
+  "assets": [],
+  "stages": [
+    {
+      "stageId": "theory",
+      "stageType": "theory",
+      "stageSchemaVersion": 1,
+      "title": "Understand the language",
+      "instructions": "Read the explanation, examples, common error, and recap.",
+      "required": true,
+      "payload": {
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Use be from plus a country to talk about origin: I'm from Brazil. Use be plus a nationality adjective to describe nationality: I'm Brazilian. A country and a nationality are related, but the words can be different. Ask Where are you from? to learn a person's country. Ask What language do you speak? when you want to know about language. Country, nationality, and language are separate ideas."
+          },
+          {
+            "type": "callout",
+            "title": "Pattern",
+            "text": "Subject + be + from + country; Subject + be + nationality adjective"
+          },
+          {
+            "type": "example",
+            "english": "Where are you from?",
+            "explanation": "This complete model prepares the learner to say: Where are you from?"
+          },
+          {
+            "type": "example",
+            "english": "I'm from Brazil.",
+            "explanation": "This complete model prepares the learner to say: I'm from Brazil."
+          },
+          {
+            "type": "example",
+            "english": "I'm Brazilian.",
+            "explanation": "This complete model prepares the learner to say: I'm Brazilian."
+          },
+          {
+            "type": "paragraph",
+            "text": "The practical goal is to say where you are from, state your nationality, and ask another person about origin. Use the pattern in a short exchange, notice the other speaker's words, and answer with one clear idea. The examples below prepare the same language used in listening, pronunciation practice, exercises, and the final conversation."
+          },
+          {
+            "type": "callout",
+            "title": "Common error",
+            "text": "Do not say I am from Brazilian. After from, use the country Brazil. Without from, use the adjective Brazilian."
+          },
+          {
+            "type": "bullet_list",
+            "items": [
+              "Choose the expression that fits the person and situation.",
+              "Remember the core pattern: Subject + be + from + country; Subject + be + nationality adjective.",
+              "Answer clearly, then invite the other person to continue."
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "stageId": "visual-vocabulary",
+      "stageType": "visual_vocabulary",
+      "stageSchemaVersion": 1,
+      "title": "Build your vocabulary",
+      "instructions": "Study each term, meaning, and example.",
+      "required": true,
+      "payload": {
+        "items": [
+          {
+            "itemId": "country",
+            "term": "country",
+            "meaning": "a nation and its territory",
+            "example": "Brazil is a large country.",
+            "imageAssetId": null
+          },
+          {
+            "itemId": "nationality",
+            "term": "nationality",
+            "meaning": "the national group a person belongs to",
+            "example": "My nationality is Mexican.",
+            "imageAssetId": null
+          },
+          {
+            "itemId": "language",
+            "term": "language",
+            "meaning": "a system people use to communicate",
+            "example": "English is a language.",
+            "imageAssetId": null
+          },
+          {
+            "itemId": "brazil",
+            "term": "brazil",
+            "meaning": "a country in South America",
+            "example": "I'm from Brazil.",
+            "imageAssetId": null
+          },
+          {
+            "itemId": "brazilian",
+            "term": "brazilian",
+            "meaning": "from Brazil",
+            "example": "I'm Brazilian.",
+            "imageAssetId": null
+          },
+          {
+            "itemId": "mexico",
+            "term": "mexico",
+            "meaning": "a country in North America",
+            "example": "She's from Mexico.",
+            "imageAssetId": null
+          },
+          {
+            "itemId": "mexican",
+            "term": "mexican",
+            "meaning": "from Mexico",
+            "example": "She's Mexican.",
+            "imageAssetId": null
+          },
+          {
+            "itemId": "united-states",
+            "term": "united states",
+            "meaning": "a country in North America",
+            "example": "He's from the United States.",
+            "imageAssetId": null
+          },
+          {
+            "itemId": "american",
+            "term": "american",
+            "meaning": "from the United States",
+            "example": "He's American.",
+            "imageAssetId": null
+          }
+        ]
+      }
+    },
+    {
+      "stageId": "listening",
+      "stageType": "listening",
+      "stageSchemaVersion": 1,
+      "title": "Listen in context",
+      "instructions": "Listen to the short exchange before revealing the text.",
+      "required": true,
+      "payload": {
+        "segments": [
+          {
+            "segmentId": "segment-1",
+            "text": "Where are you from? I'm from Brazil.",
+            "audioAssetId": null
+          },
+          {
+            "segmentId": "segment-2",
+            "text": "I'm Brazilian. What language do you speak?",
+            "audioAssetId": null
+          },
+          {
+            "segmentId": "segment-3",
+            "text": "I speak Portuguese and English. Thanks for the conversation.",
+            "audioAssetId": null
+          }
+        ],
+        "revealTextAfterFirstPlay": true
+      }
+    },
+    {
+      "stageId": "repeat",
+      "stageType": "repeat",
+      "stageSchemaVersion": 1,
+      "title": "Repeat useful chunks",
+      "instructions": "Repeat each complete expression with clear rhythm.",
+      "required": true,
+      "payload": {
+        "targets": [
+          {
+            "targetId": "repeat-1",
+            "text": "Where are you from?",
+            "referenceAudioAssetId": null,
+            "hint": "Keep the expression together as one useful chunk."
+          },
+          {
+            "targetId": "repeat-2",
+            "text": "I'm from Brazil.",
+            "referenceAudioAssetId": null,
+            "hint": "Keep the expression together as one useful chunk."
+          },
+          {
+            "targetId": "repeat-3",
+            "text": "I'm Brazilian.",
+            "referenceAudioAssetId": null,
+            "hint": "Keep the expression together as one useful chunk."
+          },
+          {
+            "targetId": "repeat-4",
+            "text": "What language do you speak?",
+            "referenceAudioAssetId": null,
+            "hint": "Keep the expression together as one useful chunk."
+          },
+          {
+            "targetId": "repeat-5",
+            "text": "I speak Portuguese and English.",
+            "referenceAudioAssetId": null,
+            "hint": "Keep the expression together as one useful chunk."
+          }
+        ]
+      }
+    },
+    {
+      "stageId": "speaking-check",
+      "stageType": "speaking_check",
+      "stageSchemaVersion": 1,
+      "title": "Speaking Check",
+      "instructions": "Say the expressions you have already studied.",
+      "required": true,
+      "payload": {
+        "targets": [
+          {
+            "targetId": "speaking-1",
+            "instruction": "Say the complete model naturally.",
+            "targetText": "Where are you from?",
+            "hint": "Use the same words and clear sentence stress."
+          },
+          {
+            "targetId": "speaking-2",
+            "instruction": "Say the complete model naturally.",
+            "targetText": "I'm from Brazil.",
+            "hint": "Use the same words and clear sentence stress."
+          },
+          {
+            "targetId": "speaking-3",
+            "instruction": "Say the complete model naturally.",
+            "targetText": "I'm Brazilian.",
+            "hint": "Use the same words and clear sentence stress."
+          },
+          {
+            "targetId": "speaking-4",
+            "instruction": "Say the complete model naturally.",
+            "targetText": "What language do you speak?",
+            "hint": "Use the same words and clear sentence stress."
+          }
+        ]
+      }
+    },
+    {
+      "stageId": "exercise",
+      "stageType": "exercise",
+      "stageSchemaVersion": 1,
+      "title": "Check your understanding",
+      "instructions": "Complete each deterministic practice item.",
+      "required": true,
+      "payload": {
+        "items": [
+          {
+            "exerciseId": "choose-expression",
+            "exerciseType": "single_choice",
+            "prompt": "Choose the expression that best fits the lesson goal.",
+            "instructions": null,
+            "hint": "Use the practiced communicative chunk.",
+            "payload": {
+              "options": [
+                {
+                  "optionId": "a",
+                  "text": "Where are you from?"
+                },
+                {
+                  "optionId": "b",
+                  "text": "I don't know this word."
+                },
+                {
+                  "optionId": "c",
+                  "text": "The window is blue."
+                }
+              ],
+              "correctOptionId": "a"
+            },
+            "feedback": {
+              "correct": "Correct. The form fits this introduction.",
+              "incorrect": "Try again and use the lesson pattern.",
+              "explanation": "Subject + be + from + country; Subject + be + nationality adjective"
+            }
+          },
+          {
+            "exerciseId": "select-useful-words",
+            "exerciseType": "multiple_select",
+            "prompt": "Select the two words that belong to this lesson's core situation.",
+            "instructions": null,
+            "hint": null,
+            "payload": {
+              "options": [
+                {
+                  "optionId": "a",
+                  "text": "country"
+                },
+                {
+                  "optionId": "b",
+                  "text": "nationality"
+                },
+                {
+                  "optionId": "c",
+                  "text": "refrigerator"
+                },
+                {
+                  "optionId": "d",
+                  "text": "mountain engine"
+                }
+              ],
+              "correctOptionIds": [
+                "a",
+                "b"
+              ]
+            },
+            "feedback": {
+              "correct": "Correct. The form fits this introduction.",
+              "incorrect": "Try again and use the lesson pattern.",
+              "explanation": "Both words were introduced in Visual Vocabulary."
+            }
+          },
+          {
+            "exerciseId": "complete-chunk",
+            "exerciseType": "fill_blank",
+            "prompt": "Complete the practiced expression.",
+            "instructions": null,
+            "hint": "I'm from Brazil.",
+            "payload": {
+              "prefix": "",
+              "suffix": "",
+              "acceptedAnswers": [
+                "I'm from Brazil."
+              ],
+              "normalizationProfile": "english_basic_v1"
+            },
+            "feedback": {
+              "correct": "Correct. The form fits this introduction.",
+              "incorrect": "Try again and use the lesson pattern.",
+              "explanation": "Use the full practiced expression."
+            }
+          },
+          {
+            "exerciseId": "order-first-expression",
+            "exerciseType": "word_order",
+            "prompt": "Put the words in the natural order.",
+            "instructions": null,
+            "hint": null,
+            "payload": {
+              "tokens": [
+                {
+                  "tokenId": "t5",
+                  "text": "?"
+                },
+                {
+                  "tokenId": "t4",
+                  "text": "from"
+                },
+                {
+                  "tokenId": "t3",
+                  "text": "you"
+                },
+                {
+                  "tokenId": "t2",
+                  "text": "are"
+                },
+                {
+                  "tokenId": "t1",
+                  "text": "Where"
+                }
+              ],
+              "correctOrder": [
+                "t1",
+                "t2",
+                "t3",
+                "t4",
+                "t5"
+              ]
+            },
+            "feedback": {
+              "correct": "Correct. The form fits this introduction.",
+              "incorrect": "Try again and use the lesson pattern.",
+              "explanation": "English statements and questions follow the modeled order."
+            }
+          },
+          {
+            "exerciseId": "match-meaning",
+            "exerciseType": "matching",
+            "prompt": "Match each lesson word to its meaning.",
+            "instructions": null,
+            "hint": null,
+            "payload": {
+              "leftItems": [
+                {
+                  "itemId": "l1",
+                  "text": "country"
+                },
+                {
+                  "itemId": "l2",
+                  "text": "nationality"
+                },
+                {
+                  "itemId": "l3",
+                  "text": "language"
+                }
+              ],
+              "rightItems": [
+                {
+                  "itemId": "r1",
+                  "text": "a nation and its territory"
+                },
+                {
+                  "itemId": "r2",
+                  "text": "the national group a person belongs to"
+                },
+                {
+                  "itemId": "r3",
+                  "text": "a system people use to communicate"
+                }
+              ],
+              "correctPairs": [
+                {
+                  "leftId": "l1",
+                  "rightId": "r1"
+                },
+                {
+                  "leftId": "l2",
+                  "rightId": "r2"
+                },
+                {
+                  "leftId": "l3",
+                  "rightId": "r3"
+                }
+              ]
+            },
+            "feedback": {
+              "correct": "Correct. The form fits this introduction.",
+              "incorrect": "Try again and use the lesson pattern.",
+              "explanation": "Review the term, meaning, and example together."
+            }
+          },
+          {
+            "exerciseId": "exact-response",
+            "exerciseType": "short_answer_exact",
+            "prompt": "Type the exact model response shown in the hint.",
+            "instructions": null,
+            "hint": "I'm Brazilian.",
+            "payload": {
+              "acceptedAnswers": [
+                "I'm Brazilian."
+              ],
+              "normalizationProfile": "english_basic_v1"
+            },
+            "feedback": {
+              "correct": "Correct. The form fits this introduction.",
+              "incorrect": "Try again and use the lesson pattern.",
+              "explanation": "This item checks one finite model response, not an open opinion."
+            }
+          },
+          {
+            "exerciseId": "choose-pattern",
+            "exerciseType": "single_choice",
+            "prompt": "Which line follows the lesson pattern?",
+            "instructions": null,
+            "hint": "verb be plus from, and adjective forms for nationality",
+            "payload": {
+              "options": [
+                {
+                  "optionId": "a",
+                  "text": "What language do you speak?"
+                },
+                {
+                  "optionId": "b",
+                  "text": "Is are my."
+                },
+                {
+                  "optionId": "c",
+                  "text": "You am from?"
+                }
+              ],
+              "correctOptionId": "a"
+            },
+            "feedback": {
+              "correct": "Correct. The form fits this introduction.",
+              "incorrect": "Try again and use the lesson pattern.",
+              "explanation": "verb be plus from, and adjective forms for nationality"
+            }
+          },
+          {
+            "exerciseId": "complete-vocabulary",
+            "exerciseType": "fill_blank",
+            "prompt": "Type the vocabulary item that means: a country in South America",
+            "instructions": null,
+            "hint": "The item appears in Visual Vocabulary.",
+            "payload": {
+              "prefix": "",
+              "suffix": "",
+              "acceptedAnswers": [
+                "brazil"
+              ],
+              "normalizationProfile": "english_basic_v1"
+            },
+            "feedback": {
+              "correct": "Correct. The form fits this introduction.",
+              "incorrect": "Try again and use the lesson pattern.",
+              "explanation": "a country in South America"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "stageId": "guided-conversation",
+      "stageType": "guided_conversation",
+      "stageSchemaVersion": 1,
+      "title": "First-meeting conversation",
+      "instructions": "Use the lesson language in a practical first meeting.",
+      "required": true,
+      "payload": {
+        "scenario": "You meet a new person in a community English class. Practice countries & nationalities in a friendly, appropriate exchange.",
+        "studentRole": "English learner meeting someone new",
+        "teacherRole": "Friendly new classmate",
+        "goal": "Say where you are from, state your nationality, and ask another person about origin.",
+        "targetVocabulary": [
+          "country",
+          "nationality",
+          "language",
+          "brazil",
+          "brazilian",
+          "mexico",
+          "mexican",
+          "united states"
+        ],
+        "targetExpressions": [
+          "Where are you from?",
+          "I'm from Brazil.",
+          "I'm Brazilian.",
+          "What language do you speak?",
+          "I speak Portuguese and English."
+        ],
+        "minimumStudentTurns": 4,
+        "recommendedStudentTurns": 6,
+        "maximumStudentTurns": 8
+      }
+    },
+    {
+      "stageId": "analysis",
+      "stageType": "analysis",
+      "stageSchemaVersion": 1,
+      "title": "Lesson Review",
+      "instructions": "Review the evidence from your completed practice.",
+      "required": true,
+      "payload": {}
+    }
+  ]
+}

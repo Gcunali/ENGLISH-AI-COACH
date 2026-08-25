@@ -1,0 +1,1073 @@
+{
+  "curriculumSchemaVersion": 1,
+  "curriculumId": "english-core",
+  "curriculumVersion": 1,
+  "publicationState": "published",
+  "title": "English Course",
+  "description": "An original structured en-US course for practical A1 and A2 communication.",
+  "targetLanguage": "en",
+  "referenceLocale": "en-US",
+  "levels": [
+    {
+      "levelId": "a1",
+      "cefrLevel": "A1",
+      "title": "Beginner",
+      "description": "Build essential English for concrete everyday communication.",
+      "objectives": [
+        "Communicate in familiar everyday situations with controlled language."
+      ],
+      "units": [
+        {
+          "unitId": "a1-u01-meeting-people",
+          "title": "Meeting People",
+          "description": "Greet people, exchange basic information, and complete a first introduction.",
+          "objectives": [
+            "Introduce yourself and another person.",
+            "Ask and answer basic personal questions."
+          ],
+          "skillFocus": [
+            "grammar",
+            "vocabulary",
+            "listening",
+            "pronunciation",
+            "speaking",
+            "interaction"
+          ],
+          "grammarTopics": [
+            "subject pronouns",
+            "verb be",
+            "basic WH questions",
+            "yes/no questions with be",
+            "basic possessive adjectives"
+          ],
+          "vocabularyTopics": [
+            "greetings",
+            "names",
+            "countries",
+            "nationalities",
+            "languages",
+            "personal information"
+          ],
+          "communicativeFunctions": [
+            "greeting",
+            "introducing yourself",
+            "asking for basic information",
+            "closing a conversation"
+          ],
+          "lessons": [
+            {
+              "lessonId": "a1-u01-l01-hello-goodbye",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "a1-u01-l02-whats-your-name",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "a1-u01-l03-countries-nationalities",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "a1-u01-l04-personal-information",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "a1-u01-l05-i-am-you-are-he-is",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "a1-u01-l06-introductions-mission",
+              "contentVersion": 1
+            }
+          ]
+        },
+        {
+          "unitId": "a1-u02-numbers-time-dates",
+          "title": "Numbers, Time & Dates",
+          "description": "Use numbers, spelling, dates, and clock time to exchange practical details and arrange a meeting.",
+          "objectives": [
+            "Say, understand, and use numbers from zero to one hundred in everyday exchanges.",
+            "Spell names and exchange a practice phone number and email address clearly."
+          ],
+          "skillFocus": [
+            "grammar",
+            "vocabulary",
+            "listening",
+            "pronunciation",
+            "speaking",
+            "interaction"
+          ],
+          "grammarTopics": [
+            "cardinal numbers 0–100",
+            "alphabet spelling and digit-by-digit numbers",
+            "What day/date and ordinal date forms",
+            "What time, o'clock, half past, and time prepositions",
+            "present simple with time expressions",
+            "integrated numbers, dates, time, and availability"
+          ],
+          "vocabularyTopics": [
+            "number",
+            "zero",
+            "hundred",
+            "spell",
+            "phone number",
+            "email address"
+          ],
+          "communicativeFunctions": [
+            "Say, understand, and use numbers from zero to one hundred in everyday exchanges.",
+            "Spell names and exchange a practice phone number and email address clearly.",
+            "Ask for and state weekdays, months, and simple calendar dates.",
+            "Ask for and tell common clock times."
+          ],
+          "lessons": [
+            {
+              "lessonId": "a1-u02-l01-numbers-0-100",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "a1-u02-l02-spelling-phones-emails",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "a1-u02-l03-days-months-dates",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "a1-u02-l04-what-time-is-it",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "a1-u02-l05-my-schedule",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "a1-u02-l06-making-simple-appointment",
+              "contentVersion": 1
+            }
+          ]
+        },
+        {
+          "unitId": "a1-u03-family-people",
+          "title": "Family & People",
+          "description": "Identify family members, describe people, and express basic possession.",
+          "objectives": [
+            "Name close family members and say how they are related.",
+            "Ask and answer who a person is in a photo or group."
+          ],
+          "skillFocus": [
+            "grammar",
+            "vocabulary",
+            "listening",
+            "pronunciation",
+            "speaking",
+            "interaction"
+          ],
+          "grammarTopics": [
+            "family nouns and possessive adjectives",
+            "Who is and demonstrative this",
+            "have with I/you/we/they and has with he/she/it",
+            "be and have for descriptions",
+            "possessive adjectives and apostrophe-s",
+            "integrated family description review"
+          ],
+          "vocabularyTopics": [
+            "parent",
+            "mother",
+            "father",
+            "sister",
+            "brother",
+            "child"
+          ],
+          "communicativeFunctions": [
+            "Name close family members and say how they are related.",
+            "Ask and answer who a person is in a photo or group.",
+            "Say what people have and ask about family or personal features.",
+            "Give a short respectful description of a person's appearance and character."
+          ],
+          "lessons": [
+            {
+              "lessonId": "a1-u03-l01-my-family",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "a1-u03-l02-who-is-this",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "a1-u03-l03-have-has",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "a1-u03-l04-describing-people",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "a1-u03-l05-possession",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "a1-u03-l06-meet-my-family",
+              "contentVersion": 1
+            }
+          ]
+        },
+        {
+          "unitId": "a1-u04-daily-life",
+          "title": "Daily Life",
+          "description": "Talk about routines, frequency, and simple present questions and negatives.",
+          "objectives": [
+            "Describe the main actions in a typical day in sequence.",
+            "Use the present simple for regular actions and facts."
+          ],
+          "skillFocus": [
+            "grammar",
+            "vocabulary",
+            "listening",
+            "pronunciation",
+            "speaking",
+            "interaction"
+          ],
+          "grammarTopics": [
+            "present simple first-person routine verbs",
+            "present simple affirmative and third-person -s",
+            "do not and does not plus base verb",
+            "do/does questions and short answers",
+            "frequency adverbs before main verbs and after be",
+            "integrated present simple and frequency review"
+          ],
+          "vocabularyTopics": [
+            "wake up",
+            "get dressed",
+            "breakfast",
+            "commute",
+            "work",
+            "study"
+          ],
+          "communicativeFunctions": [
+            "Describe the main actions in a typical day in sequence.",
+            "Use the present simple for regular actions and facts.",
+            "Make clear present simple negative statements about routines.",
+            "Ask and answer present simple questions about regular activities."
+          ],
+          "lessons": [
+            {
+              "lessonId": "a1-u04-l01-my-daily-routine",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "a1-u04-l02-present-simple",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "a1-u04-l03-dont-doesnt",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "a1-u04-l04-do-you-does-she",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "a1-u04-l05-frequency-adverbs",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "a1-u04-l06-day-in-my-life",
+              "contentVersion": 1
+            }
+          ]
+        },
+        {
+          "unitId": "a1-u05-home-around-town",
+          "title": "Home & Around Town",
+          "description": "Describe a home and neighborhood, locate places, and give short directions.",
+          "objectives": [
+            "Name rooms and give a simple description of a home.",
+            "Say what exists in a room or neighborhood."
+          ],
+          "skillFocus": [
+            "grammar",
+            "vocabulary",
+            "listening",
+            "pronunciation",
+            "speaking",
+            "interaction"
+          ],
+          "grammarTopics": [
+            "be, have, and room nouns",
+            "there is for singular and there are for plural",
+            "where questions and place prepositions",
+            "place nouns and there is/are review",
+            "imperatives, turn, go straight, and location phrases",
+            "integrated town and direction review"
+          ],
+          "vocabularyTopics": [
+            "living room",
+            "kitchen",
+            "bedroom",
+            "bathroom",
+            "furniture",
+            "there is"
+          ],
+          "communicativeFunctions": [
+            "Name rooms and give a simple description of a home.",
+            "Say what exists in a room or neighborhood.",
+            "Ask for and state an object's location using basic prepositions.",
+            "Identify useful places and say where they are in town."
+          ],
+          "lessons": [
+            {
+              "lessonId": "a1-u05-l01-my-home",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "a1-u05-l02-there-is-there-are",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "a1-u05-l03-where-is-it",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "a1-u05-l04-places-in-town",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "a1-u05-l05-giving-directions",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "a1-u05-l06-finding-a-place",
+              "contentVersion": 1
+            }
+          ]
+        },
+        {
+          "unitId": "a1-u06-food-cafe-english",
+          "title": "Food & Café English",
+          "description": "Talk about food preferences and quantities and place a polite café order.",
+          "objectives": [
+            "Name common foods and drinks and say what you eat or drink.",
+            "Distinguish items that can be counted from food substances and liquids."
+          ],
+          "skillFocus": [
+            "grammar",
+            "vocabulary",
+            "listening",
+            "pronunciation",
+            "speaking",
+            "interaction"
+          ],
+          "grammarTopics": [
+            "food nouns and present simple",
+            "a/an, plural nouns, and uncountable nouns",
+            "some in affirmatives and any in questions/negatives",
+            "like, don't like, and preference questions",
+            "would like as a fixed polite request",
+            "integrated café-order review"
+          ],
+          "vocabularyTopics": [
+            "water",
+            "coffee",
+            "tea",
+            "bread",
+            "rice",
+            "fruit"
+          ],
+          "communicativeFunctions": [
+            "Name common foods and drinks and say what you eat or drink.",
+            "Distinguish items that can be counted from food substances and liquids.",
+            "Ask about and describe available food with some and any.",
+            "Ask about and state food preferences."
+          ],
+          "lessons": [
+            {
+              "lessonId": "a1-u06-l01-food-drinks",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "a1-u06-l02-countable-uncountable",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "a1-u06-l03-some-any",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "a1-u06-l04-what-do-you-like",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "a1-u06-l05-id-like",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "a1-u06-l06-at-the-cafe",
+              "contentVersion": 1
+            }
+          ]
+        },
+        {
+          "unitId": "a1-u07-free-time-abilities",
+          "title": "Free Time & Abilities",
+          "description": "Talk about hobbies, abilities, current activities, invitations, and simple plans.",
+          "objectives": [
+            "Name hobbies and describe regular free-time activities.",
+            "Ask about and state basic abilities with can."
+          ],
+          "skillFocus": [
+            "grammar",
+            "vocabulary",
+            "listening",
+            "pronunciation",
+            "speaking",
+            "interaction"
+          ],
+          "grammarTopics": [
+            "like plus noun or to-infinitive",
+            "can/can't and ability questions",
+            "like/love/don't like plus activities",
+            "present continuous for actions now",
+            "let's and invitation responses",
+            "integrated free-time review"
+          ],
+          "vocabularyTopics": [
+            "hobby",
+            "read",
+            "cook",
+            "dance",
+            "swim",
+            "play"
+          ],
+          "communicativeFunctions": [
+            "Name hobbies and describe regular free-time activities.",
+            "Ask about and state basic abilities with can.",
+            "Compare simple likes and dislikes and ask about preferences.",
+            "Ask and say what is happening at the present moment."
+          ],
+          "lessons": [
+            {
+              "lessonId": "a1-u07-l01-hobbies-free-time",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "a1-u07-l02-can-you",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "a1-u07-l03-likes-dislikes",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "a1-u07-l04-what-are-you-doing",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "a1-u07-l05-lets-do-something",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "a1-u07-l06-weekend-plans",
+              "contentVersion": 1
+            }
+          ]
+        },
+        {
+          "unitId": "a1-u08-shopping-everyday-english",
+          "title": "Shopping & Everyday English",
+          "description": "Discuss clothes, colors, sizes, prices, choices, help requests, and common problems.",
+          "objectives": [
+            "Name basic clothing and describe its color.",
+            "Ask for a clothing size and understand a simple price."
+          ],
+          "skillFocus": [
+            "grammar",
+            "vocabulary",
+            "listening",
+            "pronunciation",
+            "speaking",
+            "interaction"
+          ],
+          "grammarTopics": [
+            "be plus color and clothing nouns",
+            "what size/how much and number review",
+            "this/that and one as a substitute noun",
+            "can/could requests in a store",
+            "be negative, doesn't work, and help requests",
+            "integrated A1 shopping and help review"
+          ],
+          "vocabularyTopics": [
+            "shirt",
+            "pants",
+            "dress",
+            "shoes",
+            "color",
+            "size"
+          ],
+          "communicativeFunctions": [
+            "Name basic clothing and describe its color.",
+            "Ask for a clothing size and understand a simple price.",
+            "Compare and choose between nearby and more distant items.",
+            "Ask a store worker for an item, size, or fitting room politely."
+          ],
+          "lessons": [
+            {
+              "lessonId": "a1-u08-l01-clothes-colors",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "a1-u08-l02-sizes-prices",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "a1-u08-l03-this-one-that-one",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "a1-u08-l04-can-you-help-me",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "a1-u08-l05-everyday-problems",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "a1-u08-l06-a1-real-life-mission",
+              "contentVersion": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "levelId": "a2",
+      "cefrLevel": "A2",
+      "title": "Elementary",
+      "description": "Extend basic English to connected everyday communication and problem solving.",
+      "objectives": [
+        "Connect ideas and handle common everyday situations with increasing independence."
+      ],
+      "units": [
+        {
+          "unitId": "a2-u01-talking-about-past",
+          "title": "Talking About the Past",
+          "description": "Describe past states and completed actions and ask what happened.",
+          "objectives": [
+            "Describe where people were and how situations felt in the past.",
+            "Describe completed past actions with regular verbs and time markers."
+          ],
+          "skillFocus": [
+            "grammar",
+            "vocabulary",
+            "listening",
+            "pronunciation",
+            "speaking",
+            "interaction"
+          ],
+          "grammarTopics": [
+            "was/were in statements, negatives, and questions",
+            "regular past -ed and pronunciation patterns",
+            "went, had, saw, made, took, came, and bought",
+            "did/didn't plus base verb",
+            "past simple sequence with time expressions",
+            "integrated past simple review"
+          ],
+          "vocabularyTopics": [
+            "yesterday",
+            "last night",
+            "weekend",
+            "ago",
+            "visit",
+            "arrive"
+          ],
+          "communicativeFunctions": [
+            "Describe where people were and how situations felt in the past.",
+            "Describe completed past actions with regular verbs and time markers.",
+            "Use frequent irregular past forms in a short account.",
+            "Ask and answer about completed past actions."
+          ],
+          "lessons": [
+            {
+              "lessonId": "a2-u01-l01-was-were",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "a2-u01-l02-past-simple-regular",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "a2-u01-l03-common-irregular-verbs",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "a2-u01-l04-did-you",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "a2-u01-l05-yesterday-last-weekend",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "a2-u01-l06-tell-what-happened",
+              "contentVersion": 1
+            }
+          ]
+        },
+        {
+          "unitId": "a2-u02-stories-experiences",
+          "title": "Stories & Experiences",
+          "description": "Set a scene, connect events, and discuss basic life experiences.",
+          "objectives": [
+            "Describe an action that was in progress at a past moment.",
+            "Connect a continuing background action with a shorter past event."
+          ],
+          "skillFocus": [
+            "grammar",
+            "vocabulary",
+            "listening",
+            "pronunciation",
+            "speaking",
+            "interaction"
+          ],
+          "grammarTopics": [
+            "past continuous was/were plus -ing",
+            "past continuous with while and past simple with when",
+            "past tenses with first, then, suddenly, and finally",
+            "present perfect with ever and never",
+            "present perfect experience plus past simple detail",
+            "integrated past and present perfect review"
+          ],
+          "vocabularyTopics": [
+            "story",
+            "event",
+            "scene",
+            "suddenly",
+            "while",
+            "when"
+          ],
+          "communicativeFunctions": [
+            "Describe an action that was in progress at a past moment.",
+            "Connect a continuing background action with a shorter past event.",
+            "Organize a short story with a beginning, sequence, and ending.",
+            "Ask and answer about life experience without a finished time."
+          ],
+          "lessons": [
+            {
+              "lessonId": "a2-u02-l01-what-were-you-doing",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "a2-u02-l02-when-while",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "a2-u02-l03-telling-a-story",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "a2-u02-l04-have-you-ever",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "a2-u02-l05-life-experiences",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "a2-u02-l06-memorable-experience",
+              "contentVersion": 1
+            }
+          ]
+        },
+        {
+          "unitId": "a2-u03-plans-future",
+          "title": "Plans & the Future",
+          "description": "Express intentions, arrangements, decisions, predictions, and possibilities.",
+          "objectives": [
+            "State planned intentions based on a decision already made.",
+            "Discuss fixed personal arrangements with time and place details."
+          ],
+          "skillFocus": [
+            "grammar",
+            "vocabulary",
+            "listening",
+            "pronunciation",
+            "speaking",
+            "interaction"
+          ],
+          "grammarTopics": [
+            "be going to plus base verb",
+            "present continuous for arranged future events",
+            "will plus base verb and contractions",
+            "will and going to for predictions",
+            "might/may plus base verb and maybe",
+            "integrated future forms review"
+          ],
+          "vocabularyTopics": [
+            "plan",
+            "arrangement",
+            "intention",
+            "prediction",
+            "possibility",
+            "book"
+          ],
+          "communicativeFunctions": [
+            "State planned intentions based on a decision already made.",
+            "Discuss fixed personal arrangements with time and place details.",
+            "Make an immediate decision, offer help, or state a neutral future fact.",
+            "Make and explain simple predictions about the future."
+          ],
+          "lessons": [
+            {
+              "lessonId": "a2-u03-l01-going-to",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "a2-u03-l02-future-arrangements",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "a2-u03-l03-will",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "a2-u03-l04-predictions",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "a2-u03-l05-maybe-might",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "a2-u03-l06-planning-a-trip",
+              "contentVersion": 1
+            }
+          ]
+        },
+        {
+          "unitId": "a2-u04-comparing-choosing",
+          "title": "Comparing & Choosing",
+          "description": "Compare people and options, describe extremes, and make a reasoned choice.",
+          "objectives": [
+            "Compare two people, places, or products using common comparative forms.",
+            "Identify an extreme or top option in a group."
+          ],
+          "skillFocus": [
+            "grammar",
+            "vocabulary",
+            "listening",
+            "pronunciation",
+            "speaking",
+            "interaction"
+          ],
+          "grammarTopics": [
+            "comparatives with -er, more, and irregular better",
+            "superlatives with the -est, the most, and the best",
+            "as adjective as and not as adjective as",
+            "too much/many and not enough",
+            "comparative linkers and because",
+            "integrated comparison review"
+          ],
+          "vocabularyTopics": [
+            "compare",
+            "choice",
+            "option",
+            "quality",
+            "feature",
+            "price"
+          ],
+          "communicativeFunctions": [
+            "Compare two people, places, or products using common comparative forms.",
+            "Identify an extreme or top option in a group.",
+            "Describe equal and unequal qualities in two options.",
+            "Explain why an amount or quality does not fit a need."
+          ],
+          "lessons": [
+            {
+              "lessonId": "a2-u04-l01-bigger-better-faster",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "a2-u04-l02-the-best-choice",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "a2-u04-l03-as-as",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "a2-u04-l04-too-much-not-enough",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "a2-u04-l05-comparing-options",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "a2-u04-l06-choosing-best-option",
+              "contentVersion": 1
+            }
+          ]
+        },
+        {
+          "unitId": "a2-u05-travel-accommodation",
+          "title": "Travel & Accommodation",
+          "description": "Navigate travel services, request information, and solve common airport and hotel problems.",
+          "objectives": [
+            "Find a gate, understand basic departure information, and answer check-in questions.",
+            "Check in at a hotel and confirm a reservation and room details."
+          ],
+          "skillFocus": [
+            "grammar",
+            "vocabulary",
+            "listening",
+            "pronunciation",
+            "speaking",
+            "interaction"
+          ],
+          "grammarTopics": [
+            "travel questions and airport instructions",
+            "polite requests and reservation details",
+            "indirect polite questions with could and can",
+            "present/past facts with problem and request language",
+            "present perfect with just, already, and yet",
+            "integrated travel and present perfect review"
+          ],
+          "vocabularyTopics": [
+            "boarding pass",
+            "gate",
+            "departure",
+            "arrival",
+            "luggage",
+            "reservation"
+          ],
+          "communicativeFunctions": [
+            "Find a gate, understand basic departure information, and answer check-in questions.",
+            "Check in at a hotel and confirm a reservation and room details.",
+            "Request and clarify times, platforms, locations, and prices.",
+            "Report a delay, missing item, or reservation problem and request action."
+          ],
+          "lessons": [
+            {
+              "lessonId": "a2-u05-l01-at-the-airport",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "a2-u05-l02-checking-in",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "a2-u05-l03-asking-travel-information",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "a2-u05-l04-travel-problems",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "a2-u05-l05-just-already-yet",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "a2-u05-l06-solving-travel-problem",
+              "contentVersion": 1
+            }
+          ]
+        },
+        {
+          "unitId": "a2-u06-work-study-responsibilities",
+          "title": "Work, Study & Responsibilities",
+          "description": "Discuss work and study duties, rules, advice, and personal goals.",
+          "objectives": [
+            "Describe current work or study and the main tasks involved.",
+            "Explain external duties and things that are not necessary."
+          ],
+          "skillFocus": [
+            "grammar",
+            "vocabulary",
+            "listening",
+            "pronunciation",
+            "speaking",
+            "interaction"
+          ],
+          "grammarTopics": [
+            "present simple and work/study vocabulary",
+            "have to/don't have to for obligation",
+            "must and mustn't for rules",
+            "should/shouldn't plus base verb",
+            "to-infinitive for purpose and want to",
+            "integrated obligation, advice, and purpose review"
+          ],
+          "vocabularyTopics": [
+            "job",
+            "course",
+            "assignment",
+            "deadline",
+            "meeting",
+            "responsibility"
+          ],
+          "communicativeFunctions": [
+            "Describe current work or study and the main tasks involved.",
+            "Explain external duties and things that are not necessary.",
+            "State strong rules and prohibitions clearly.",
+            "Ask for and give practical work or study advice."
+          ],
+          "lessons": [
+            {
+              "lessonId": "a2-u06-l01-jobs-studies",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "a2-u06-l02-have-to",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "a2-u06-l03-must-mustnt",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "a2-u06-l04-giving-advice",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "a2-u06-l05-goals-purpose",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "a2-u06-l06-work-study-conversation",
+              "contentVersion": 1
+            }
+          ]
+        },
+        {
+          "unitId": "a2-u07-health-everyday-problems",
+          "title": "Health & Everyday Problems",
+          "description": "Describe common symptoms, request pharmacy help, give advice, and discuss likely results.",
+          "objectives": [
+            "Name major body parts and locate simple pain or discomfort.",
+            "Describe common symptoms and answer basic follow-up questions."
+          ],
+          "skillFocus": [
+            "grammar",
+            "vocabulary",
+            "listening",
+            "pronunciation",
+            "speaking",
+            "interaction"
+          ],
+          "grammarTopics": [
+            "body nouns and possessive forms",
+            "have plus symptom and feel plus adjective",
+            "polite requests and quantity/frequency language",
+            "should/shouldn't for advice",
+            "first conditional if plus present, will plus base",
+            "integrated symptom, advice, and conditional review"
+          ],
+          "vocabularyTopics": [
+            "head",
+            "throat",
+            "stomach",
+            "back",
+            "fever",
+            "cough"
+          ],
+          "communicativeFunctions": [
+            "Name major body parts and locate simple pain or discomfort.",
+            "Describe common symptoms and answer basic follow-up questions.",
+            "Ask a pharmacist for a suitable non-emergency product and understand basic directions.",
+            "Give and respond to sensible everyday health advice."
+          ],
+          "lessons": [
+            {
+              "lessonId": "a2-u07-l01-parts-body",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "a2-u07-l02-whats-wrong-health",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "a2-u07-l03-at-the-pharmacy",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "a2-u07-l04-you-should",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "a2-u07-l05-if-you-feel-sick",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "a2-u07-l06-getting-help",
+              "contentVersion": 1
+            }
+          ]
+        },
+        {
+          "unitId": "a2-u08-opinions-technology-social-life",
+          "title": "Opinions, Technology & Social Life",
+          "description": "Express opinions, respond respectfully, describe things with relative clauses, and arrange social plans.",
+          "objectives": [
+            "State a clear opinion and support it with a simple reason.",
+            "Respond to an opinion with respectful agreement or disagreement."
+          ],
+          "skillFocus": [
+            "grammar",
+            "vocabulary",
+            "listening",
+            "pronunciation",
+            "speaking",
+            "interaction"
+          ],
+          "grammarTopics": [
+            "I think, in my opinion, and because",
+            "agreement phrases and polite contrast",
+            "basic relative clauses with who, that, and where",
+            "relative clauses and present tense integration",
+            "future arrangements and invitation language",
+            "integrated A2 tense and function review"
+          ],
+          "vocabularyTopics": [
+            "opinion",
+            "agree",
+            "disagree",
+            "reason",
+            "device",
+            "app"
+          ],
+          "communicativeFunctions": [
+            "State a clear opinion and support it with a simple reason.",
+            "Respond to an opinion with respectful agreement or disagreement.",
+            "Add identifying information about a person, thing, or place.",
+            "Describe how a device or app helps or creates an everyday problem."
+          ],
+          "lessons": [
+            {
+              "lessonId": "a2-u08-l01-giving-opinion",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "a2-u08-l02-agreeing-disagreeing",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "a2-u08-l03-people-things-places",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "a2-u08-l04-technology-daily-life",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "a2-u08-l05-social-plans",
+              "contentVersion": 1
+            },
+            {
+              "lessonId": "a2-u08-l06-a2-real-life-mission",
+              "contentVersion": 1
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,208 @@
+{
+  "curriculum": {
+    "version": 3,
+    "state": "published",
+    "levels": 6,
+    "units": 48,
+    "lessons": 288,
+    "order": [
+      "A1",
+      "A2",
+      "B1",
+      "B2",
+      "C1",
+      "C2"
+    ]
+  },
+  "packages": {
+    "total": 288,
+    "invalidJson": 0,
+    "published": 288,
+    "uniqueIds": 288,
+    "allEightStages": true,
+    "brokenRefs": 0,
+    "orphanPackages": 0,
+    "duplicateWholeStagePayloads": 0
+  },
+  "metrics": {
+    "A1": {
+      "lessons": 48,
+      "published": 48,
+      "theoryWords": {
+        "min": 171,
+        "max": 232,
+        "average": 213.9
+      },
+      "averageVocabulary": 8.0,
+      "averageListening": 3.0,
+      "averageExercises": 8.0,
+      "conversationTurns": [
+        [
+          4,
+          6,
+          8
+        ]
+      ]
+    },
+    "A2": {
+      "lessons": 48,
+      "published": 48,
+      "theoryWords": {
+        "min": 244,
+        "max": 275,
+        "average": 259.8
+      },
+      "averageVocabulary": 9.0,
+      "averageListening": 4.0,
+      "averageExercises": 9.0,
+      "conversationTurns": [
+        [
+          5,
+          7,
+          10
+        ]
+      ]
+    },
+    "B1": {
+      "lessons": 48,
+      "published": 48,
+      "theoryWords": {
+        "min": 390,
+        "max": 427,
+        "average": 410.0
+      },
+      "averageVocabulary": 10.0,
+      "averageListening": 5.0,
+      "averageExercises": 10.0,
+      "conversationTurns": [
+        [
+          6,
+          8,
+          12
+        ]
+      ]
+    },
+    "B2": {
+      "lessons": 48,
+      "published": 48,
+      "theoryWords": {
+        "min": 388,
+        "max": 439,
+        "average": 407.0
+      },
+      "averageVocabulary": 11.0,
+      "averageListening": 6.0,
+      "averageExercises": 11.0,
+      "conversationTurns": [
+        [
+          7,
+          10,
+          14
+        ]
+      ]
+    },
+    "C1": {
+      "lessons": 48,
+      "published": 48,
+      "theoryWords": {
+        "min": 384,
+        "max": 426,
+        "average": 405.9
+      },
+      "averageVocabulary": 12.0,
+      "averageListening": 7.0,
+      "averageExercises": 12.0,
+      "conversationTurns": [
+        [
+          8,
+          11,
+          16
+        ]
+      ]
+    },
+    "C2": {
+      "lessons": 48,
+      "published": 48,
+      "theoryWords": {
+        "min": 389,
+        "max": 430,
+        "average": 403.9
+      },
+      "averageVocabulary": 12.0,
+      "averageListening": 8.0,
+      "averageExercises": 12.0,
+      "conversationTurns": [
+        [
+          8,
+          12,
+          18
+        ]
+      ]
+    }
+  },
+  "a1a2RecordHash": "022ec24db1155ebc1b140c9be63ee964060393d66f878aa5bf11b7874b67675b",
+  "a1a2MatchesBaseline": true,
+  "database": {
+    "sha256": "F49AB7E6DD7DB23CD984798A7DF055D36A0FC5A9A2B45E1B0A2D80BCA4ABC3A8",
+    "schema": 18,
+    "integrity": "ok",
+    "foreignKeys": 0,
+    "counts": {
+      "achievement_unlock": 3,
+      "app_system_event": 0,
+      "conversation_exchange": 0,
+      "correction_candidate": 7,
+      "gamification_profile": 1,
+      "gamification_xp_event": 5,
+      "interactive_lesson_analysis": 0,
+      "interactive_lesson_exercise_attempt": 0,
+      "interactive_lesson_guided_conversation_turn": 0,
+      "interactive_lesson_pronunciation_attempt": 0,
+      "interactive_lesson_session": 0,
+      "interactive_lesson_stage_runtime_state": 0,
+      "interactive_lesson_stage_state": 0,
+      "lesson": 13,
+      "lesson_analysis": 9,
+      "lesson_configuration_snapshot": 6,
+      "lesson_student_profile_snapshot": 4,
+      "lesson_teacher_memory": 8,
+      "lesson_vocabulary": 3,
+      "placement_answer": 27,
+      "placement_attempt": 4,
+      "placement_speaking_response": 3,
+      "pronunciation_attempt": 1,
+      "pronunciation_word_result": 3,
+      "recurring_mistake": 6,
+      "recurring_mistake_occurrence": 6,
+      "review_session": 0,
+      "review_session_item": 0,
+      "schema_migration": 18,
+      "settings": 3,
+      "student_learning_profile": 1,
+      "student_learning_summary": 1,
+      "transcript_message": 84,
+      "vocabulary_item": 3,
+      "voice_turn_performance": 2
+    }
+  },
+  "protectedHashes": {
+    "package.json": "572A27D52E3A998A6A22F4BF642A39B6D855708925E7BF9DB2EAB7E8AFDA5E9D",
+    "package-lock.json": "5CE35927AFEB8FEA1C35A4DC1E87439553BC48545BEDAB715A79A97628990317",
+    "src-tauri/Cargo.toml": "D8321E70A0B2674C4346919A8AB589D79E15CDEBCD2B3BE56FB6ADE8FEADB3BA",
+    "src-tauri/Cargo.lock": "A8683F025603460629000B3FF99225550B042C58743D2F71D0DD1E402C75B21A",
+    "local-ai/voice_coach_v2.py": "F56E16A71130C0BC4974DF13038D5937DA611AF3C90B2CE4C7891F28523D2E2D",
+    "local-ai/voice_coach_v2_STABLE.py": "F56E16A71130C0BC4974DF13038D5937DA611AF3C90B2CE4C7891F28523D2E2D",
+    "local-ai/voice_streaming_runtime.py": "8A8BB8FB0CFAB51F37BABC6839FF012C8C051483DA7C57AA251C08CB79E2EAFE",
+    "local-ai/pronunciation/pronunciation_engine.py": "FA28B35D8948D325AF79686276EB51703677A2187B31215D06EF669147BE0968",
+    "local-ai/pronunciation/pronunciation_core.py": "0ED7D58735C64844D0B45EDB6455929DA437E3FD009557DE45C64D0057A8E71F",
+    "src-tauri/src/interactive_exercise.rs": "B9364253812942FDE3E924958619EEA48873B1D797DB36F3B3251F9F6B41F97A",
+    "src-tauri/src/guided_conversation.rs": "88077435525CC597C28233CBED8F645B2C44B072BED61E741917C6F50A6A0005",
+    "src-tauri/src/interactive_lesson_analysis.rs": "13DFB37114C25504F0A949ABFEDBE7927795DB564B2D0252505AE27F6BAE7944",
+    "src-tauri/prompts/conversation_teacher.txt": "8B5E07911A50F18E23C6338F8521660BF4CEC652496C785F4B40A4B57056F19D",
+    "src-tauri/prompts/lesson_analyzer_v1.txt": "6D4CB204B7D74C337546D466BCAB309A87C0859C6B38E1E067C3FA7A5D7C8C41",
+    "src-tauri/resources/placement/placement_bank_v1.json": "746C059F9146A44BDFFB4D7F4FEFF1BB98DC83D6F9BD2E2AEB24626C5A9F7ECF",
+    "src-tauri/src/placement_scoring.rs": "5075B4FDA052E914B7F076A88223CB6F3E5750026E2F58C8E2CCC8A95E8BAB5C",
+    "src-tauri/src/placement_evaluator.rs": "828B5B24ED3D88EAE9B315E22DAA30742499E2DC4A0B7FE4CA453081C9D7FF7A"
+  },
+  "curriculumSha256": "2395C6925AE62F26F0F60D73293C17E78AA475AA186EC0949B2D3E6A3FE18688"
+}

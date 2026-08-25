@@ -1,0 +1,568 @@
+{
+  "packageSchemaVersion": 1,
+  "lessonFlowVersion": 1,
+  "lessonId": "a1-u07-l01-hobbies-free-time",
+  "contentVersion": 1,
+  "publicationState": "published",
+  "title": "Hobbies & Free Time",
+  "description": "Name hobbies and describe regular free-time activities.",
+  "language": "en",
+  "referenceLocale": "en-US",
+  "cefrBand": "A1",
+  "estimatedMinutes": 24,
+  "objectives": [
+    "Name hobbies and describe regular free-time activities."
+  ],
+  "tags": [
+    "english-core",
+    "a1",
+    "unit-07",
+    "production"
+  ],
+  "assets": [],
+  "stages": [
+    {
+      "stageId": "theory",
+      "stageType": "theory",
+      "stageSchemaVersion": 1,
+      "title": "Understand the language",
+      "instructions": "Read the explanation, examples, common error, and recap.",
+      "required": true,
+      "payload": {
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "This lesson prepares you to name hobbies and describe regular free-time activities. The central language is like plus noun or to-infinitive. It belongs to the practical context of free time & abilities. Focus first on meaning: decide what information the listener needs. Then choose the subject, verb form, and useful detail. At A1, keep the message short and concrete. One clear sentence is enough before the other person responds. The same language returns in the listening, repeat, speaking, exercises, and guided conversation stages."
+          },
+          {
+            "type": "callout",
+            "title": "Pattern",
+            "text": "like plus noun or to-infinitive"
+          },
+          {
+            "type": "example",
+            "english": "I like to read after dinner.",
+            "explanation": "Use this model to begin the hobbies & free time exchange."
+          },
+          {
+            "type": "example",
+            "english": "We play games on the weekend.",
+            "explanation": "This hobbies & free time model adds a different detail or response."
+          },
+          {
+            "type": "example",
+            "english": "What do you like to do?",
+            "explanation": "Use this question or response to keep the hobbies & free time exchange moving."
+          },
+          {
+            "type": "paragraph",
+            "text": "Notice the two models: “I like to read after dinner.” and “We play games on the weekend.” They show the pattern in complete communication, not as isolated grammar. Say the model aloud, replace one detail, and check that the new sentence keeps the intended meaning. When the other person asks a follow-up question, answer directly and add a relevant detail. This makes the exchange natural while keeping the language controlled."
+          },
+          {
+            "type": "callout",
+            "title": "Common error",
+            "text": "Do not mix the word order or verb form with another pattern. Keep the controlled form for this lesson: like plus noun or to-infinitive."
+          },
+          {
+            "type": "bullet_list",
+            "items": [
+              "Communicative goal: Name hobbies and describe regular free-time activities.",
+              "Core pattern: like plus noun or to-infinitive.",
+              "Use one clear model, add a relevant detail, and respond to the other speaker."
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "stageId": "visual-vocabulary",
+      "stageType": "visual_vocabulary",
+      "stageSchemaVersion": 1,
+      "title": "Build your vocabulary",
+      "instructions": "Study each term, meaning, and contextual example.",
+      "required": true,
+      "payload": {
+        "items": [
+          {
+            "itemId": "hobby",
+            "term": "hobby",
+            "meaning": "an activity done regularly for enjoyment",
+            "example": "Use “hobby” while you practice hobbies & free time in context.",
+            "imageAssetId": null
+          },
+          {
+            "itemId": "read",
+            "term": "read",
+            "meaning": "look at and understand written words",
+            "example": "Use “read” while you practice hobbies & free time in context.",
+            "imageAssetId": null
+          },
+          {
+            "itemId": "cook",
+            "term": "cook",
+            "meaning": "prepare food with heat",
+            "example": "Use “cook” while you practice hobbies & free time in context.",
+            "imageAssetId": null
+          },
+          {
+            "itemId": "dance",
+            "term": "dance",
+            "meaning": "move rhythmically to music",
+            "example": "Use “dance” while you practice hobbies & free time in context.",
+            "imageAssetId": null
+          },
+          {
+            "itemId": "swim",
+            "term": "swim",
+            "meaning": "move through water using the body",
+            "example": "Use “swim” while you practice hobbies & free time in context.",
+            "imageAssetId": null
+          },
+          {
+            "itemId": "play",
+            "term": "play",
+            "meaning": "take part in a game or use an instrument",
+            "example": "Use “play” while you practice hobbies & free time in context.",
+            "imageAssetId": null
+          },
+          {
+            "itemId": "can",
+            "term": "can",
+            "meaning": "be able to do something",
+            "example": "Use “can” while you practice hobbies & free time in context.",
+            "imageAssetId": null
+          },
+          {
+            "itemId": "free-time",
+            "term": "free time",
+            "meaning": "time with no required work",
+            "example": "Use “free time” while you practice hobbies & free time in context.",
+            "imageAssetId": null
+          }
+        ]
+      }
+    },
+    {
+      "stageId": "listening",
+      "stageType": "listening",
+      "stageSchemaVersion": 1,
+      "title": "Listen in context",
+      "instructions": "Listen before revealing the text, then notice the target pattern.",
+      "required": true,
+      "payload": {
+        "segments": [
+          {
+            "segmentId": "segment-1",
+            "text": "I like to read after dinner. We play games on the weekend.",
+            "audioAssetId": null
+          },
+          {
+            "segmentId": "segment-2",
+            "text": "What do you like to do? That sounds fun.",
+            "audioAssetId": null
+          },
+          {
+            "segmentId": "segment-3",
+            "text": "We play games on the weekend. What do you like to do?",
+            "audioAssetId": null
+          }
+        ],
+        "revealTextAfterFirstPlay": true
+      }
+    },
+    {
+      "stageId": "repeat",
+      "stageType": "repeat",
+      "stageSchemaVersion": 1,
+      "title": "Repeat useful chunks",
+      "instructions": "Repeat each complete expression with clear rhythm.",
+      "required": true,
+      "payload": {
+        "targets": [
+          {
+            "targetId": "repeat-1",
+            "text": "I like to read after dinner.",
+            "referenceAudioAssetId": null,
+            "hint": "Keep the words together as one communicative chunk."
+          },
+          {
+            "targetId": "repeat-2",
+            "text": "We play games on the weekend.",
+            "referenceAudioAssetId": null,
+            "hint": "Keep the words together as one communicative chunk."
+          },
+          {
+            "targetId": "repeat-3",
+            "text": "What do you like to do?",
+            "referenceAudioAssetId": null,
+            "hint": "Keep the words together as one communicative chunk."
+          },
+          {
+            "targetId": "repeat-4",
+            "text": "That sounds fun.",
+            "referenceAudioAssetId": null,
+            "hint": "Keep the words together as one communicative chunk."
+          },
+          {
+            "targetId": "repeat-5",
+            "text": "Thanks for talking about free time & abilities with me.",
+            "referenceAudioAssetId": null,
+            "hint": "Keep the words together as one communicative chunk."
+          }
+        ]
+      }
+    },
+    {
+      "stageId": "speaking-check",
+      "stageType": "speaking_check",
+      "stageSchemaVersion": 1,
+      "title": "Speaking Check",
+      "instructions": "Say expressions already presented in this Lesson.",
+      "required": true,
+      "payload": {
+        "targets": [
+          {
+            "targetId": "speaking-1",
+            "instruction": "Say the complete model naturally.",
+            "targetText": "I like to read after dinner.",
+            "hint": "Use the same words and clear sentence stress."
+          },
+          {
+            "targetId": "speaking-2",
+            "instruction": "Say the complete model naturally.",
+            "targetText": "We play games on the weekend.",
+            "hint": "Use the same words and clear sentence stress."
+          },
+          {
+            "targetId": "speaking-3",
+            "instruction": "Say the complete model naturally.",
+            "targetText": "What do you like to do?",
+            "hint": "Use the same words and clear sentence stress."
+          },
+          {
+            "targetId": "speaking-4",
+            "instruction": "Say the complete model naturally.",
+            "targetText": "That sounds fun.",
+            "hint": "Use the same words and clear sentence stress."
+          }
+        ]
+      }
+    },
+    {
+      "stageId": "exercise",
+      "stageType": "exercise",
+      "stageSchemaVersion": 1,
+      "title": "Check your understanding",
+      "instructions": "Complete each deterministic practice item.",
+      "required": true,
+      "payload": {
+        "items": [
+          {
+            "exerciseId": "choose-model",
+            "exerciseType": "single_choice",
+            "prompt": "Choose the model that fits the communicative goal.",
+            "instructions": null,
+            "hint": "Name hobbies and describe regular free-time activities.",
+            "payload": {
+              "options": [
+                {
+                  "optionId": "a",
+                  "text": "I like to read after dinner."
+                },
+                {
+                  "optionId": "b",
+                  "text": "The purple engine sleeps quickly."
+                },
+                {
+                  "optionId": "c",
+                  "text": "No information is possible."
+                }
+              ],
+              "correctOptionId": "a"
+            },
+            "feedback": {
+              "correct": "Correct. The answer fits the lesson context.",
+              "incorrect": "Try again and use the model from this lesson.",
+              "explanation": "like plus noun or to-infinitive"
+            }
+          },
+          {
+            "exerciseId": "select-core-vocabulary",
+            "exerciseType": "multiple_select",
+            "prompt": "Select both words that belong to this lesson context.",
+            "instructions": null,
+            "hint": "Free Time & Abilities",
+            "payload": {
+              "options": [
+                {
+                  "optionId": "a",
+                  "text": "hobby"
+                },
+                {
+                  "optionId": "b",
+                  "text": "read"
+                },
+                {
+                  "optionId": "c",
+                  "text": "industrial turbine"
+                },
+                {
+                  "optionId": "d",
+                  "text": "quantum geology"
+                }
+              ],
+              "correctOptionIds": [
+                "a",
+                "b"
+              ]
+            },
+            "feedback": {
+              "correct": "Correct. The answer fits the lesson context.",
+              "incorrect": "Try again and use the model from this lesson.",
+              "explanation": "Both correct words appear in Visual Vocabulary."
+            }
+          },
+          {
+            "exerciseId": "complete-response",
+            "exerciseType": "fill_blank",
+            "prompt": "Type the exact practiced response shown in the hint.",
+            "instructions": null,
+            "hint": "We play games on the weekend.",
+            "payload": {
+              "prefix": "",
+              "suffix": "",
+              "acceptedAnswers": [
+                "We play games on the weekend."
+              ],
+              "normalizationProfile": "english_basic_v1"
+            },
+            "feedback": {
+              "correct": "Correct. The answer fits the lesson context.",
+              "incorrect": "Try again and use the model from this lesson.",
+              "explanation": "Use the complete model response."
+            }
+          },
+          {
+            "exerciseId": "order-model",
+            "exerciseType": "word_order",
+            "prompt": "Put the model in its natural order.",
+            "instructions": null,
+            "hint": null,
+            "payload": {
+              "tokens": [
+                {
+                  "tokenId": "t7",
+                  "text": "."
+                },
+                {
+                  "tokenId": "t6",
+                  "text": "dinner"
+                },
+                {
+                  "tokenId": "t5",
+                  "text": "after"
+                },
+                {
+                  "tokenId": "t4",
+                  "text": "read"
+                },
+                {
+                  "tokenId": "t3",
+                  "text": "to"
+                },
+                {
+                  "tokenId": "t2",
+                  "text": "like"
+                },
+                {
+                  "tokenId": "t1",
+                  "text": "I"
+                }
+              ],
+              "correctOrder": [
+                "t1",
+                "t2",
+                "t3",
+                "t4",
+                "t5",
+                "t6",
+                "t7"
+              ]
+            },
+            "feedback": {
+              "correct": "Correct. The answer fits the lesson context.",
+              "incorrect": "Try again and use the model from this lesson.",
+              "explanation": "Keep the modeled English word order."
+            }
+          },
+          {
+            "exerciseId": "match-vocabulary",
+            "exerciseType": "matching",
+            "prompt": "Match each term to its meaning.",
+            "instructions": null,
+            "hint": null,
+            "payload": {
+              "leftItems": [
+                {
+                  "itemId": "l1",
+                  "text": "hobby"
+                },
+                {
+                  "itemId": "l2",
+                  "text": "read"
+                },
+                {
+                  "itemId": "l3",
+                  "text": "cook"
+                }
+              ],
+              "rightItems": [
+                {
+                  "itemId": "r1",
+                  "text": "an activity done regularly for enjoyment"
+                },
+                {
+                  "itemId": "r2",
+                  "text": "look at and understand written words"
+                },
+                {
+                  "itemId": "r3",
+                  "text": "prepare food with heat"
+                }
+              ],
+              "correctPairs": [
+                {
+                  "leftId": "l1",
+                  "rightId": "r1"
+                },
+                {
+                  "leftId": "l2",
+                  "rightId": "r2"
+                },
+                {
+                  "leftId": "l3",
+                  "rightId": "r3"
+                }
+              ]
+            },
+            "feedback": {
+              "correct": "Correct. The answer fits the lesson context.",
+              "incorrect": "Try again and use the model from this lesson.",
+              "explanation": "Review each term with its meaning and example."
+            }
+          },
+          {
+            "exerciseId": "exact-useful-chunk",
+            "exerciseType": "short_answer_exact",
+            "prompt": "Type the finite model chunk shown in the hint.",
+            "instructions": null,
+            "hint": "What do you like to do?",
+            "payload": {
+              "acceptedAnswers": [
+                "What do you like to do?"
+              ],
+              "normalizationProfile": "english_basic_v1"
+            },
+            "feedback": {
+              "correct": "Correct. The answer fits the lesson context.",
+              "incorrect": "Try again and use the model from this lesson.",
+              "explanation": "This checks one exact practiced chunk, not an open response."
+            }
+          },
+          {
+            "exerciseId": "choose-correct-form",
+            "exerciseType": "single_choice",
+            "prompt": "Which sentence follows the lesson pattern?",
+            "instructions": null,
+            "hint": "like plus noun or to-infinitive",
+            "payload": {
+              "options": [
+                {
+                  "optionId": "a",
+                  "text": "We play games on the weekend."
+                },
+                {
+                  "optionId": "b",
+                  "text": "She are did going."
+                },
+                {
+                  "optionId": "c",
+                  "text": "I is to yesterday."
+                }
+              ],
+              "correctOptionId": "a"
+            },
+            "feedback": {
+              "correct": "Correct. The answer fits the lesson context.",
+              "incorrect": "Try again and use the model from this lesson.",
+              "explanation": "like plus noun or to-infinitive"
+            }
+          },
+          {
+            "exerciseId": "recall-vocabulary",
+            "exerciseType": "fill_blank",
+            "prompt": "Type the term that means: move rhythmically to music",
+            "instructions": null,
+            "hint": "It appears in Visual Vocabulary.",
+            "payload": {
+              "prefix": "",
+              "suffix": "",
+              "acceptedAnswers": [
+                "dance"
+              ],
+              "normalizationProfile": "english_basic_v1"
+            },
+            "feedback": {
+              "correct": "Correct. The answer fits the lesson context.",
+              "incorrect": "Try again and use the model from this lesson.",
+              "explanation": "move rhythmically to music"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "stageId": "guided-conversation",
+      "stageType": "guided_conversation",
+      "stageSchemaVersion": 1,
+      "title": "Free Time & Abilities conversation",
+      "instructions": "Use the prepared language in a practical exchange.",
+      "required": true,
+      "payload": {
+        "scenario": "You are in a realistic everyday situation related to free time & abilities. Practice hobbies & free time and respond to relevant follow-up questions.",
+        "studentRole": "English learner handling the situation",
+        "teacherRole": "Helpful conversation partner",
+        "goal": "Name hobbies and describe regular free-time activities.",
+        "targetVocabulary": [
+          "hobby",
+          "read",
+          "cook",
+          "dance",
+          "swim",
+          "play",
+          "can",
+          "free time"
+        ],
+        "targetExpressions": [
+          "I like to read after dinner.",
+          "We play games on the weekend.",
+          "What do you like to do?",
+          "That sounds fun.",
+          "Thanks for talking about free time & abilities with me."
+        ],
+        "minimumStudentTurns": 4,
+        "recommendedStudentTurns": 6,
+        "maximumStudentTurns": 8
+      }
+    },
+    {
+      "stageId": "analysis",
+      "stageType": "analysis",
+      "stageSchemaVersion": 1,
+      "title": "Lesson Review",
+      "instructions": "Review the evidence from your completed practice.",
+      "required": true,
+      "payload": {}
+    }
+  ]
+}

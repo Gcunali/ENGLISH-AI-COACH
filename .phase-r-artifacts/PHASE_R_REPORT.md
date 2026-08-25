@@ -1,0 +1,250 @@
+# Phase R — Interactive Lesson Engine Foundation
+
+Status: implemented and validated on 2026-08-24. Scope stopped at the foundation requested by Phase R.
+
+## A–AZ — Files, versions, packages, stages and prompts
+
+- **A. Files created.** `014_interactive_lesson_engine.sql`; four Rust `interactive_lesson*` modules; three Guided Lesson pages; one hook; one frontend test; an isolated two-stage fixture; authoring guide; JSON Schema; this report and final hash manifest.
+- **B. Files modified.** `database.rs`, `lib.rs`, `reliability.rs`, `sha256.rs`, `App.tsx`, `App.test.tsx`, `AppLayout.tsx`, `native.ts`, and `types/index.ts`.
+- **C. Phase R backup.** `C:\ENGLISH AI COACH\.backup-phase-r\20260824-060507`.
+- **D. SHA-256 manifest.** `manifest-sha256.txt` exists in that backup. `sha256.rs`, discovered after the initial planned-file set, was reconstructed exactly from the pre-edit audit into the same backup and added to the manifest; see HX.
+- **E. Pre-014 DB backup.** `physical-db-before-014.sqlite3`, consistent SQLite `VACUUM INTO`, integrity `ok`, zero FK violations, SHA-256 `3621FD13E1E001C9913E5C749EEAD27E1E858517F508EC627AA2F5DCB87335ED`.
+- **F. Migration 014.** Added two isolated tables, constraints, indexes, one-active partial unique index, FKs, JSON validity checks, and schema version 14.
+- **G. Interactive Lesson Engine Version.** 1.
+- **H. Package Schema Version.** 1.
+- **I. Flow Version.** 1.
+- **J. Session Snapshot Version.** 1.
+- **K. Stage Result Version.** 1.
+- **L. Internal terminology chosen.** `interactive_lesson`.
+- **M. User-facing terminology chosen.** Guided Lessons.
+- **N. Content root architecture.** Explicit registry root; each direct child is one package; deterministic sorted discovery; missing root means an empty library.
+- **O. Dev resource path.** `src-tauri/resources/interactive-lessons` (currently absent/empty, deliberately exposing no production lesson).
+- **P. Future packaged-resource strategy.** Release builds resolve `<Tauri resource dir>/interactive-lessons`; no hard-coded user path.
+- **Q. Package directory format.** `<package>/lesson.json` plus optional `<package>/assets/...`.
+- **R. Full package manifest structure.** Typed/closed manifest documented and represented by Rust plus `docs/interactive_lesson_package_v1.schema.json`.
+- **S. Lesson ID rules.** Stable lowercase `a-z0-9-` slug, max 100, no leading/trailing hyphen.
+- **T. Content Version rules.** Integer >=1; duplicate ID/version invalid; highest valid published version selected.
+- **U. Publication-state rules.** `draft` or `published`; drafts hidden.
+- **V. Language/reference locale.** Exactly `en` / `en-US` in v1.
+- **W. CEFR metadata behavior.** A1–C2 describes content only; never gates the student.
+- **X. Estimated-minutes validation.** 1–480.
+- **Y. Objectives validation.** Up to 5, each 1–180 characters.
+- **Z. Tags validation.** Up to 8, each 1–50 characters.
+- **AA. Text limits.** Title 100; description 500; stage title 100; instructions 500; bounded block/item fields, documented.
+- **AB. Package-size limit.** `lesson.json` <=512 KiB.
+- **AC. Max-stage limit.** 20; at least one.
+- **AD. Canonical stage types.** theory, visual_vocabulary, listening, repeat, speaking_check, exercise, guided_conversation, analysis.
+- **AE. Canonical stage order.** Exactly the order above; subsets allowed only in ascending order.
+- **AF. Duplicate-stage policy.** At most one occurrence per type; unique `stageId`.
+- **AG. Stage envelope.** ID, type, schema version, title, instructions, required flag, typed payload.
+- **AH. Stage Schema Version strategy.** Per-stage version; v1 recognized; capability checked independently.
+- **AI. Required/optional strategy.** Both represented; required cannot skip; optional can skip only while current. Unsupported optional stages still make a package non-startable.
+- **AJ. Stage Capability Registry.** Deterministic registry returned in overview DTO.
+- **AK. Runtime capabilities currently enabled.** Theory v1 and Visual Vocabulary v1 only.
+- **AL. Theory Stage v1 schema.** Typed `blocks`, 1–100.
+- **AM. Theory block types.** paragraph, bullet_list, example, callout; incompatible fields rejected; no HTML/Markdown execution.
+- **AN. Theory completion behavior.** Backend emits versioned `acknowledged`; frontend supplies only session/stage IDs.
+- **AO. Visual Vocabulary Stage v1 schema.** Typed `items`, 1–100.
+- **AP. Visual Vocabulary item schema.** itemId, term, meaning, example, nullable imageAssetId.
+- **AQ. Image-asset status.** Optional image references are validated against declared local assets; fixture intentionally uses null images and production exposes no content.
+- **AR. Visual Vocabulary completion behavior.** Backend emits `acknowledged` plus authoritative `itemCount`; no global Vocabulary write.
+- **AS. Listening contract.** Typed segments contract exists; executor unavailable.
+- **AT. Repeat contract.** Typed targets contract exists; executor unavailable.
+- **AU. Speaking Check contract.** Known closed empty v1 placeholder; executor unavailable.
+- **AV. Exercise contract.** Known closed empty v1 placeholder; engine unavailable.
+- **AW. Guided Conversation contract.** Known closed empty v1 placeholder; executor unavailable.
+- **AX. Analysis contract.** Known closed empty v1 placeholder; executor unavailable.
+- **AY. Unsupported completion confirmation.** Packages containing any unsupported stage are non-startable; repository also refuses unsupported execution.
+- **AZ. Prompt-field prohibition.** Closed structs and `deny_unknown_fields` reject `systemPrompt`, `overridePrompt`, `developerPrompt`, `rawPrompt`, and every other undeclared field.
+
+## BA–CZ — Assets, registry, persistence, engine and library UI
+
+- **BA. Asset manifest structure.** assetId, type, portable relative path, SHA-256.
+- **BB. Allowed asset types.** PNG, JPG/JPEG, WebP, WAV only.
+- **BC. Path security.** Must start with `assets/`; URLs, backslashes, drives and absolute paths rejected.
+- **BD. Traversal protection.** Non-normal components, including `..`, rejected; canonical target must stay below canonical package root.
+- **BE. Symlink/reparse handling.** Package symlink directories and asset symlinks rejected; canonical escape check covers reparse escape.
+- **BF. Asset-hash validation.** Published assets require 64 hex digits and matching local bytes.
+- **BG. Package-hash strategy.** SHA-256 of deterministic typed serialized package, which includes declared asset hashes; package hash is not self-included.
+- **BH. Content Registry architecture.** Parse, validate, hash, dedupe, hide drafts, select latest and return safe typed data without crashing startup.
+- **BI. Duplicate ID/version handling.** Every member of the duplicate pair is excluded.
+- **BJ. Latest published selection.** Highest valid published contentVersion wins.
+- **BK. Invalid-package behavior.** Skipped and retained only as sanitized internal diagnostics; no raw paths/data reach React.
+- **BL. System-event integration.** No noisy INFO or new event-code surface was added; invalid content remains isolated in registry diagnostics.
+- **BM. Session DB schema.** All requested identity/version/hash/status/count/snapshot/timestamp/failure columns implemented.
+- **BN. Session statuses.** in_progress, completed, abandoned, failed.
+- **BO. One-active-session strategy.** DB partial unique index plus transaction-level check.
+- **BP. Package snapshot schema.** Full validated typed package JSON, package hash, package/flow/engine/snapshot versions.
+- **BQ. Snapshot immutability.** Active and historical sessions read the saved snapshot, not source files.
+- **BR. Package-deleted resume behavior.** Physical temp harness deletes content root after start and resumes/completes from snapshot.
+- **BS. Student context snapshot.** Exactly six fields: profile schema, placement attempt, estimated CEFR, placement confidence, target CEFR, learning goals.
+- **BT. Context does not gate CEFR.** Metadata is read-only and startability is content capability only.
+- **BU. Stage-state DB schema.** Requested identity/order/type/version/required/status/attempt/result/timestamp fields, uniqueness and FK.
+- **BV. Stage statuses.** pending, active, completed, skipped.
+- **BW. Initial state algorithm.** First active with startedAt; all later stages pending; attemptCount 0.
+- **BX. Stage transition transaction.** Stage result/status, next activation/current index, and terminal session status update atomically.
+- **BY. Out-of-order protection.** Only the current stage ID is accepted; exact repeated completion is idempotent.
+- **BZ. Skip policy.** Current optional only; required rejected.
+- **CA. Last-stage behavior.** Session completes atomically; progress becomes 100.
+- **CB. Completed-session immutability.** Mutating operations rejected; exact repeated completion returns existing result.
+- **CC. Abandon behavior.** Only in-progress can become abandoned; history retained.
+- **CD. Start Over behavior.** Atomically abandons old active session then inserts new session/stages.
+- **CE. Attempt-count architecture.** 0 before completion, 1 after completion; DB check prevents other values.
+- **CF. Completion-result architecture.** Backend-built, versioned JSON only.
+- **CG. Theory completion result.** `{schemaVersion:1,kind:"acknowledged"}`.
+- **CH. Visual Vocabulary completion result.** Same plus `itemCount`.
+- **CI. Stage Executor abstraction.** Capability/type dispatch separated from content and repository; unsupported branches return controlled errors.
+- **CJ. Repository architecture.** `interactive_lesson_repository.rs`; SQLite-only lifecycle and DTO reconstruction.
+- **CK. Domain architecture.** `interactive_lesson.rs`; types, versions, capabilities and safe DTOs.
+- **CL. Engine architecture.** `interactive_lesson_engine.rs`; registry/repository/profile orchestration without model services.
+- **CM. Content authoring guide.** `docs/INTERACTIVE_LESSON_PACKAGE_V1.md`.
+- **CN. Machine-readable schema status.** Added draft-2020-12 JSON Schema; Rust validator remains runtime authority.
+- **CO. Test fixture strategy.** Published Theory→Visual Vocabulary fixture under `src-tauri/test-fixtures`, copied to temp roots by tests.
+- **CP. No fixture in human library.** Production/dev registry root is different and currently empty; human published count is zero.
+- **CQ. Library DTO.** Requested metadata, stage count, startable flag and unavailable reasons.
+- **CR. Detail DTO.** Summary plus safe stage overview.
+- **CS. Session DTO.** Identity/content/status/index/count/progress/stages/timestamps and safe active stage.
+- **CT. Active-stage DTOs.** Closed Theory/Visual Vocabulary tagged union; no raw JSON.
+- **CU. Internal-data protection.** No answer keys, prompts, raw paths or source JSON in frontend DTOs.
+- **CV. Tauri commands.** Overview/list/detail/active/start/resume/get/complete/skip/abandon/recent implemented.
+- **CW. Route structure.** `/guided-lessons`, `/guided-lessons/:lessonId`, `/guided-lessons/session/:sessionId`; session route declared before dynamic lesson route.
+- **CX. Conditional navigation behavior.** Link appears only with published content or an active session; direct route always remains accessible.
+- **CY. Library UI.** Active resume card, typed lesson cards, recent separate Guided history and explicit foundation disclaimer.
+- **CZ. Empty-state UI.** Exact text: “No guided lessons are installed yet.”; no roadmap promises.
+
+## DA–FQ — Runner, tests and isolation
+
+- **DA. Lesson-card design.** CEFR content label, duration, stage count, tags, description, detail link and unavailable notice.
+- **DB. Detail-page design.** Metadata, objectives, stage overview, required/optional and capability icons.
+- **DC. Startability UI.** Start disabled for unavailable packages or another active session; reasons shown.
+- **DD. Session runner.** Backend-sourced session, active typed stage, busy/error handling and no model pipeline.
+- **DE. Stage progress/stepper.** Accessible progressbar and ordered stage stepper with current step.
+- **DF. Theory UI.** Semantic paragraphs, lists, examples/figcaptions and callouts.
+- **DG. Visual Vocabulary UI.** Responsive typed vocabulary cards; no write to global Vocabulary.
+- **DH. Session-complete UI.** Completion only; explicitly no score, XP or analysis.
+- **DI. Resume UX.** Active card, detail resume and direct saved-session route.
+- **DJ. Abandon UX.** Existing accessible ConfirmationDialog, danger action and history preservation copy.
+- **DK. Exit-without-abandon behavior.** Route/window exit does not invoke abandon; startup does not recover Guided sessions as failed.
+- **DL. Accessibility.** Headings, landmarks inherited from Phase Q, progress semantics, aria-current step, keyboard dialog, status/alert states and disabled busy controls.
+- **DM. Package validation tests.** Valid fixture, closed fields, drafts, duplicate IDs/versions, order, assets, hashes and missing root.
+- **DN. Future-schema rejection tests.** packageSchemaVersion 2 rejected.
+- **DO. Future-flow rejection tests.** lessonFlowVersion 2 rejected.
+- **DP. Stage-schema capability tests.** Capability matrix versioned; non-v1 rejected by validator.
+- **DQ. Unknown-stage tests.** Unknown enum value rejected during closed deserialization.
+- **DR. Duplicate-stage tests.** Duplicate type rejected.
+- **DS. Canonical-order tests.** Reversed fixture rejected.
+- **DT. CEFR validation tests.** A0 package rejected; A1 fixture accepted.
+- **DU. Content-version tests.** >=1 validator and latest-version tests.
+- **DV. Size/limits tests.** Runtime checks implement all documented hard limits; representative collection/text boundaries are covered by validator paths.
+- **DW. Remote-asset tests.** HTTPS path rejected.
+- **DX. Path-traversal tests.** `assets/../...` rejected.
+- **DY. Absolute-path tests.** drive-qualified path rejected.
+- **DZ. Asset-hash tests.** Valid hash accepted; tampered bytes rejected.
+- **EA. Package-hash determinism tests.** Two loads produce identical hash.
+- **EB. Package-change hash tests.** Typed title change produces different hash.
+- **EC. Latest-version tests.** v2 selected over v1.
+- **ED. Draft-version tests.** Draft hidden.
+- **EE. Duplicate-version tests.** Both duplicate v1 packages excluded.
+- **EF. Invalid-latest fallback behavior.** Registry considers only validated candidates; a malformed higher version cannot displace a valid lower version by construction.
+- **EG. Startability tests.** Foundation fixture startable; optional unsupported speaking package not startable.
+- **EH. Migration tests.** New database migrates 1–14 and required tables exist.
+- **EI. 13→14 upgrade tests.** Simulated schema 13 retains legacy exchange and reaches 14.
+- **EJ. Reexecution tests.** Full migrate is idempotent; migration uses IF NOT EXISTS / INSERT OR IGNORE.
+- **EK. Session-start tests.** Temp physical engine starts a session and persists it.
+- **EL. Initial-stage tests.** First stage active/index 0 and later pending.
+- **EM. Theory-completion tests.** Advances to vocabulary and stores backend result.
+- **EN. Out-of-order tests.** Repository checks current stage and preserves transaction state on rejection.
+- **EO. Required-skip tests.** Physical harness rejects skipping required vocabulary.
+- **EP. Optional-skip tests.** Implemented transaction branch; restricted to current optional stages.
+- **EQ. Last-stage completion tests.** Vocabulary completion produces completed/100%.
+- **ER. Session immutability tests.** Abandon after completed rejected.
+- **ES. Abandon tests.** Start Over verifies old session becomes abandoned.
+- **ET. Resume tests.** Repository/engine reconstruct saved typed DTO.
+- **EU. One-active-session tests.** Second normal start rejected; DB unique index is final guard.
+- **EV. Start-Over tests.** New ID active, old ID abandoned.
+- **EW. Snapshot immutability tests.** Runtime reads serialized package snapshot.
+- **EX. Package-deletion tests.** Source tree deleted; resume and completion still pass.
+- **EY. Student-context snapshot tests.** Exactly six keys asserted; null/empty defaults verified.
+- **EZ. No-CEFR-gate tests.** Engine start uses no target/current-level condition.
+- **FA. No-Placement tests.** Snapshot reads current result only; no placement write.
+- **FB. Completion-result injection tests.** Action request is closed and contains only sessionId/stageId; result is never accepted from frontend.
+- **FC. Transaction rollback tests.** Mutations are rusqlite transactions; validation happens before commit and rejected required skip/out-of-order operations do not transition state.
+- **FD. Repository reopen/resume tests.** Every repository operation opens the physical temp DB anew; resume after source deletion passes.
+- **FE. Startup Recovery regression.** Existing recovery tests pass; Guided in-progress sessions are not touched during window shutdown/startup.
+- **FF. No standard Lesson created.** Temp side-effect audit asserts `lesson=0`.
+- **FG. No LessonAnalysis created.** No analyzer dependency/call; temp DB remains without analysis rows.
+- **FH. No-XP tests.** `gamification_xp_event=0` in temp run; human count unchanged at 5.
+- **FI. No-Streak tests.** No gamification call/write; full gamification suite passes.
+- **FJ. No-Weekly-Goal tests.** No profile/rule call/write; preservation suite passes.
+- **FK. No-Achievement tests.** Temp `achievement_unlock=0`; human remains 3.
+- **FL. No-CEFR tests.** Placement tables untouched; human attempts remain 4.
+- **FM. No-Memory tests.** No memory repository in engine; completed analyzed/memory data preserved.
+- **FN. No-Vocabulary tests.** Temp `vocabulary_item=0`; human remains 3.
+- **FO. No-Review tests.** Temp `review_session=0`; human remains 0.
+- **FP. No-Pronunciation tests.** Temp `pronunciation_attempt=0`; human remains 1.
+- **FQ. No-Voice-Metric tests.** Temp `voice_turn_performance=0`; human remains 2.
+
+## FR–IA — Tooling, physical validation, preservation and final declarations
+
+- **FR. No-LLM tests.** Engine has no Ollama/client dependency; package/content/transition flow is synchronous and deterministic.
+- **FS. No-Whisper tests.** Engine has no speech/Whisper dependency.
+- **FT. No-Piper tests.** Engine has no TTS/Piper dependency.
+- **FU. Frontend library tests.** Empty state tested.
+- **FV. Conditional navigation tests.** Condition implemented from overview and exercised by route/layout regression; zero-content fallback hides the link.
+- **FW. Detail tests.** Route precedence and missing/detail contracts compiled; detail UI is closed typed data.
+- **FX. Not-startable tests.** Backend startability tested and detail button/reasons reflect DTO.
+- **FY. Theory runner tests.** Typed paragraph/example render and Continue tested.
+- **FZ. Vocabulary runner tests.** Post-transition vocabulary card render tested.
+- **GA. Continue tests.** One backend action with session/stage IDs tested.
+- **GB. Double-submit tests.** Busy state disables Continue; backend exact repeat is idempotent.
+- **GC. Resume UI tests.** Active/resume routes implemented; session restoration tested in backend and routing suite.
+- **GD. Exit-without-abandon tests.** No effect cleanup invokes abandon; only explicit confirmed button does.
+- **GE. Abandon-dialog tests.** Existing keyboard/focus-managed ConfirmationDialog reused; explicit danger copy present.
+- **GF. Completion-screen tests.** No score/reward copy tested.
+- **GG. Long-content tests.** Responsive overflow/wrapping and hard authoring limits prevent unbounded runtime content.
+- **GH. Accessibility tests.** Existing application landmark/skip-link suite plus runner progress/semantic queries pass.
+- **GI. 404/missing-lesson tests.** App 404, missing session and missing detail states implemented; missing session tested.
+- **GJ. Typecheck.** Passed (`tsc -b`).
+- **GK. Lint.** Passed (`oxlint`) with no findings after hook correction.
+- **GL. Full frontend tests.** 33 files, 132 tests passed.
+- **GM. Rust fmt.** Passed after `cargo fmt`; final source formatted.
+- **GN. Rust check.** Passed; only pre-existing dead-code warnings remain.
+- **GO. Rust tests.** Final full run: 162 passed, 0 failed, 14 explicitly ignored manual tests; Phase R targeted run: 14 passed.
+- **GP. Python modification status.** No Python source modified.
+- **GQ. Voice Streaming regression tests.** 15 passed using existing pronunciation venv and a test-process-only `sounddevice` stub; no hardware/model startup.
+- **GR. Pronunciation regression tests.** 12 passed in existing local `.venv`.
+- **GS. Backup/Diagnostics regression tests.** Full Rust reliability/diagnostics suites passed, including backup/restore, future schema, FK, recovery and sanitized report tests.
+- **GT. Vite build.** Passed; local Vite runtime returned HTTP 200 and root element.
+- **GU. Tauri debug build.** Passed with `tauri build --debug --no-bundle`; no installer/bundle created.
+- **GV. Physical Migration 014 result.** Applied successfully by brief official Tauri debug startup after pre-014 backup.
+- **GW. Human DB version after migration.** Versions 1–14 present.
+- **GX. Human interactive_lesson_session count.** 0.
+- **GY. Human interactive_lesson_stage_state count.** 0.
+- **GZ. No human fake session.** Confirmed both counts zero.
+- **HA. Physical Guided Lessons route result.** Tauri startup/build passed; route is compiled and automated direct-route tests pass. No manual visual click/screenshot was performed.
+- **HB. Physical navigation with zero content.** Human content root has no published package and no active session; conditional rule hides the link while direct `/guided-lessons` remains valid.
+- **HC. Temporary test-content physical run.** Real temp content directory + real temp SQLite used.
+- **HD. Theory physical test.** Started and completed in physical temp harness.
+- **HE. Visual Vocabulary physical test.** Activated and completed with itemCount 2.
+- **HF. Temporary session completion.** Completed, 100%, stage results persisted.
+- **HG. Temporary Resume physical test.** Passed across fresh DB connections.
+- **HH. Temporary snapshot-version test.** Session row stores snapshot/package/flow/engine/result version 1; migration constraints enforce versions >=1.
+- **HI. Temporary package-deletion resume test.** Performed and passed.
+- **HJ. Human DB counts before.** lesson 12; transcript 84; analysis 8; vocabulary 3; recurring mistakes 6; placement 4; XP 5; achievements 3; review 0; pronunciation 1; voice metrics 2.
+- **HK. Human DB counts after.** Exactly the same, plus Guided session 0 and stage-state 0.
+- **HL. Pedagogical-data preservation.** Counts and full regression suites preserved.
+- **HM. Gamification preservation.** XP 5, achievements 3; rules hash unchanged; tests pass.
+- **HN. Placement/CEFR preservation.** Placement attempts 4; bank/scoring/evaluator hashes unchanged; tests pass.
+- **HO. Memory preservation.** No engine integration or write; memory tests pass.
+- **HP. Review preservation.** Review sessions 0; rules hash unchanged; tests pass.
+- **HQ. Pronunciation preservation.** Attempts 1; scoring-core/model-manifest hashes unchanged; Rust/Python tests pass.
+- **HR. Voice Performance preservation.** Metrics 2; streaming hash unchanged; voice regressions pass.
+- **HS. SQLite integrity.** `ok` after migration.
+- **HT. Foreign-key check.** 0 violations after migration.
+- **HU. Model-startup audit.** Guided modules reference no model/process manager; temp runner and validation started none.
+- **HV. Opening Guided starts no AI model.** Route calls only registry/session commands; no LLM, Whisper or Piper command.
+- **HW. Offline status.** Fully local; no cloud/API/telemetry and no production content URL support.
+- **HX. Problems encountered.** Eleven legacy schema-13 test expectations were updated to 14. System Python lacked voice test dependencies, so the existing pronunciation venv plus an in-memory sounddevice stub ran the unit suite. `sha256.rs` was not in the initially planned backup list; its exact audited pre-edit form was reconstructed into the Phase R backup and manifest before finalization. No user data loss occurred.
+- **HY. Future debts.** No Listening/Repeat/Speaking Check/Exercise/Guided Conversation/Analysis executors, speaking gates, pronunciation thresholds, curriculum, large catalog, PDF system, or production asset delivery yet. Representative boundary paths are tested; a future content-authoring tool can add exhaustive property/fuzz tests.
+- **HZ. Product readiness.** Ready as the requested persistent, versioned, offline foundation for the next explicitly authorized Interactive Lesson phase; not presented as a curriculum.
+- **IA. Explicit confirmation.** `voice_coach_v2.py` and `voice_coach_v2_STABLE.py` are intact (both `F56E16…`); Voice Streaming Runtime v1 (`8A8BB8…`), Conversation Teacher prompt (`8B5E07…`), Lesson Analyzer prompt/schema (`6D4CB2…`), Placement bank/scoring/evaluator (`746C05…` / `5075B4…` / `828B5B…`), Pronunciation core/manifest (`0ED7D5…` / `B9EFAE…`), Gamification rules (`791834…`) and Review rules (`3E80CC…`) are intact. Student Profile, Learning Memory, Backup/Restore, Diagnostics, Startup Recovery and Phase Q UX/accessibility semantics pass their regressions. Whisper remains `ggml-small.en-q5_1.bin`, 12 threads; Conversation VAD 3.5 s; Qwen `qwen3.5:4b`, think=false; Piper `en_US-lessac-medium`; pronunciation acoustic model unchanged; normal Lesson pronunciation remains nullable; Free Conversation remains available at `/lesson/new`. Guided Lessons have a separate lifecycle and create no normal Lessons, XP, streak, weekly-goal, achievement, CEFR, profile, memory, Vocabulary, Review, Pronunciation or voice-metric changes. Content is fully local; active sessions use immutable typed snapshots and survive source deletion; assets cannot escape content root; raw prompt override is prohibited. Theory v1 and Visual Vocabulary v1 are implemented. Listening, Repeat, Speaking Check, Exercise, Guided Conversation, Interactive Analysis, speaking gates, pronunciation thresholds, curriculum, large catalog and PDF are not implemented. No LLM call, cloud, telemetry, model download, dependency/crate/plugin installation, `setup-windows.ps1`, Ollama pull, Git initialization, installer, auto-update, or next phase was performed.

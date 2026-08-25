@@ -1,0 +1,381 @@
+# Fase V — Relatório final de implementação
+
+Data: 2026-08-24  
+Projeto oficial: `C:\ENGLISH AI COACH`  
+Resultado: **IMPLEMENTADA E VALIDADA**, limitada à Interactive Lesson Analysis.
+
+Não foram implementados Curriculum/Content, CEFR, nota geral/final de inglês, pass/fail, mastery, writes globais, nuvem, downloads, dependências ou instalador.
+
+## A–K — arquivos, backup e migração
+
+- **A. Files created:** `src-tauri/migrations/018_interactive_lesson_analysis.sql`; `src-tauri/prompts/guided_conversation_analyzer_v1.txt`; `src-tauri/src/interactive_lesson_analysis.rs`; `src/components/InteractiveLessonAnalysisStage.tsx`; `src/components/InteractiveLessonAnalysisStage.test.tsx`; fixtures `interactive-lessons-phase-v/full-v1` e `interactive-lessons-phase-v-deterministic/short-v1`; `.phase-v-artifacts/PHASE_V_AUDIT.md`; `.phase-v-artifacts/PHASE_V_REPORT.md`; TEMP DB `.phase-v-artifacts/phase-v-temp-validation.sqlite3`.
+- **B. Files modified:** `database.rs`, `reliability.rs`, `interactive_lesson.rs`, `interactive_lesson_content.rs`, `interactive_lesson_repository.rs`, `lib.rs`, `types/index.ts`, `services/native.ts`, `GuidedLessonSessionPage.tsx`, `GuidedLessonsPage.tsx`, `GuidedLessons.test.tsx`, os dois documentos do Package V1. `interactive_lesson_engine.rs` foi comparado ao backup e permaneceu byte a byte igual.
+- **C. Pre-Phase V backup:** `C:\ENGLISH AI COACH\.backup-phase-v\20260824-223529`.
+- **D. SHA-256 manifest:** `11988F0056413ACCC1827D12EB59BD34B4339C7BAC58BDF117D1B6B0F6669C89`.
+- **E. Pre-018 database backup:** `.backup-phase-v/20260824-223529/physical-db-before-018.sqlite3`.
+- **F. PHASE_V_AUDIT:** `.phase-v-artifacts/PHASE_V_AUDIT.md`.
+- **G. Migration 018:** aplicada no banco humano; schema 18.
+- **H. Rationale:** tabela própria, única por Guided session, sem alterar semântica de 001–017 e sem backfill/fabricação.
+- **I. Analysis Engine Version:** 1.
+- **J. Analysis Result Schema Version:** 1.
+- **K. Evidence Schema Version:** 1.
+
+## L–AZ — contrato, evidência e cálculos determinísticos
+
+- **L. Guided Conversation Evaluator Version:** 1.
+- **M. Analyzer Prompt Version:** 1.
+- **N. Analysis Stage Schema Version:** 1.
+- **O. Completion Result Version:** 1.
+- **P. Package Schema final:** 1.
+- **Q. Flow Version:** 1.
+- **R. Capability Registry before:** Analysis `NOT_READY`; sete stages anteriores `READY`.
+- **S. Capability Registry after:** oito stage types `READY`, inclusive Analysis.
+- **T. Analysis payload:** objeto estritamente vazio `{}`; unknown fields rejeitados.
+- **U. Package weights:** inexistentes e proibidos.
+- **V. Package pass score:** inexistente e proibido.
+- **W. Package analyzer prompt:** inexistente e proibido.
+- **X. Analysis-last:** validator exige Analysis como último stage e no máximo uma ocorrência.
+- **Y. Evidence Builder:** backend Rust separado do standard Lesson Analyzer.
+- **Z. Source of truth:** package/session snapshot imutável e registros committed/selected persistidos.
+- **AA. Snapshot:** JSON canônico versionado com participação, agregados determinísticos, metadados/hashes de turnos e objetivos.
+- **AB. Hash:** SHA-256 do JSON canônico; conferido novamente no retry.
+- **AC. Immutability:** unique por session, finalized bloqueia retry/reanálise e resultado reabre persistido.
+- **AD. Package independence:** evidência vem do snapshot da sessão; teste cobre independência de fonte/pacote.
+- **AE. Participation:** contagem de required completed e optional skipped pelos stage states.
+- **AF. Theory:** participação/completion apenas; não gera nota.
+- **AG. Visual Vocabulary:** quantidade de itens praticados; não grava Global Vocabulary.
+- **AH. Listening:** segmentos, segmentos ouvidos e playbacks persistidos; não gera compreensão inferida.
+- **AI. Repeat:** somente IDs selecionados congelados em completion/runtime.
+- **AJ. Speaking Check:** mesma regra de seleção; nenhuma escolha de maior score.
+- **AK. Pronunciation summary:** somente acoustic results persistidos dos selected attempts.
+- **AL. Acoustic mean:** soma dos `overall_score` disponíveis / quantidade disponível.
+- **AM. Rounding:** inteiro mais próximo, determinístico.
+- **AN. Confidence:** quantidade low-confidence separada; não mistura com score.
+- **AO. Issues:** agregação de evidência acústica persistida, sem nova inferência do Qwen.
+- **AP. Focus ordering:** frequência desc, mean score asc, phone estável; máximo três.
+- **AQ. Qwen/pronunciation:** evaluator não recebe nem cria feedback acústico.
+- **AR. Exercise evidence:** tentativas determinísticas persistidas.
+- **AS. Exercise selection:** somente `selected=1`, uma por exercício via índice único parcial.
+- **AT. Accuracy:** selected correct / selected attempt count, arredondado; 0% é válido.
+- **AU. Qwen/exercises:** Qwen não recebe respostas/chaves e não corrige exercícios.
+- **AV. Conversation evidence:** committed turns da mesma session/stage, ordenados por sequence.
+- **AW. Filtering:** `partial=0`; drafts streaming excluídos.
+- **AX. Word count:** soma do `word_count` persistido apenas para role student.
+- **AY. Eligibility:** `studentTurnCount >= 2` e `studentWordCount >= 20`.
+- **AZ. Insufficient evidence:** nenhuma chamada Qwen; deterministic result `insufficient_evidence`.
+
+## BA–BZ — evaluator local e segurança
+
+- **BA. Prompt:** `src-tauri/prompts/guided_conversation_analyzer_v1.txt`.
+- **BB. Static rules:** rubric e schema estão no prompt estático, fora do conteúdo não confiável.
+- **BC. Model:** `qwen3.5:4b` local.
+- **BD. think:** `false`.
+- **BE. Config:** chamada normal `temperature=0.1`, `top_p=0.9`, `num_predict=900`, `num_ctx=8192`; no-proxy, loopback, timeout controlado.
+- **BF. Call count:** uma chamada normal; somente se JSON inválido, uma reparação; nunca terceira chamada.
+- **BG. Repair:** estrutura apenas, sem reavaliar/adicionar fatos; temperature 0.0.
+- **BH. Output:** DTO strict `deny_unknown_fields`, schema/status, quatro scores inteiros, goal progress, strengths e focus areas.
+- **BI. Grammar:** score/evidência conversacional apenas.
+- **BJ. Vocabulary:** variedade/adequação conversacional apenas.
+- **BK. Conversational Fluency:** fluxo textual conversacional; não timing acústico.
+- **BL. Acoustic timing:** explicitamente não inferido.
+- **BM. Interaction:** resposta/continuidade/adequação ao interlocutor.
+- **BN. Goal Progress:** enum controlado, não mastery nem aprovação.
+- **BO. Strengths:** lista limitada a três, texto plain e referências de turnos student.
+- **BP. Focus Areas:** lista limitada a três, mesma validação grounding.
+- **BQ. Grounding:** referências somente a sequence indexes de student turns existentes.
+- **BR. Backend validation:** assistant/unknown references são rejeitadas.
+- **BS. Limits:** scores/arrays/texto/input limitados; input máximo 48.000 bytes.
+- **BT. Prompt injection:** transcript tratado como dados não confiáveis.
+- **BU. Delimiters:** `[GUIDED_ANALYSIS_DATA_BEGIN]` e `[GUIDED_ANALYSIS_DATA_END]`.
+- **BV. Final guardrail:** instrução depois do bloco reafirma regras e strict JSON.
+- **BW. Answer keys:** excluídas do request e evidence.
+- **BX. Raw phonemes:** excluídos do request; somente agregado determinístico final.
+- **BY. Exercise responses:** excluídas do request e evidence.
+- **BZ. CEFR:** excluído do input, output, DB/UI da Fase V.
+
+## CA–ER — resultado, persistência, lifecycle e UI
+
+- **CA. Final Result Builder:** combina seções incompatíveis sem média geral.
+- **CB. Final schema:** version/status/participation/conversation/exercises/pronunciation/strengths/focus/practiced objectives.
+- **CC. Participation schema:** contagens e resumo listening/vocabulary/stages.
+- **CD. Conversation statuses:** completed, insufficient_evidence, unavailable, not_practiced.
+- **CE. Exercise statuses:** completed ou not_practiced; zero é resultado real.
+- **CF. Pronunciation statuses:** completed ou not_practiced; missing scores continuam explícitos.
+- **CG. Practiced Objectives:** metadados do package snapshot.
+- **CH. Mastered wording:** não usado.
+- **CI. Overall score:** inexistente.
+- **CJ. Final English score:** inexistente.
+- **CK. Pass/fail:** inexistente como conclusão pedagógica.
+- **CL. CEFR field:** inexistente.
+- **CM. DB architecture:** tabela separada `interactive_lesson_analysis`.
+- **CN. Table:** versões, evidence hash/json, conversation status/result, final result, status/error/timestamps/finalized.
+- **CO. Unique:** `session_id UNIQUE`.
+- **CP. Evidence JSON:** persistido canonicamente antes do HTTP.
+- **CQ. Final Result JSON:** deterministic preliminary persistido antes do HTTP e atualizado de forma controlada.
+- **CR. Transcript duplication:** texto não é duplicado na evidence; guarda IDs/sequence/role/count/hash e reconstrói dos committed turns.
+- **CS. Prompt persistence:** prompt não é persistido.
+- **CT. Model metadata:** model ID e evaluator/prompt versions persistidos.
+- **CU. Lifecycle:** pending/running/completed/partial/failed; uso normal conclui completed/partial.
+- **CV. Pre-analysis UI:** explicação e botão explícito.
+- **CW. Opening stage:** GET apenas; zero chamada Qwen.
+- **CX. Analyze Lesson:** ação explícita e protegida contra clique duplo.
+- **CY. Deterministic flow:** build/hash/insert preliminary antes de avaliar conversation.
+- **CZ. Evaluator flow:** apenas conversation elegível, local, strict parse e no máximo um repair.
+- **DA. Partial:** mantém participação/exercise/pronunciation e marca conversation unavailable.
+- **DB. Qwen failure:** sanitizado; não apaga nem inventa resultados determinísticos.
+- **DC. Retry Conversation Feedback:** explícito, só partial, não finalized.
+- **DD. Retry hash:** rebuild canônico deve igualar hash persistido.
+- **DE. Finalization:** explicit Finish completa Analysis stage e session.
+- **DF. Finalized:** imutável e reaberto sem Qwen.
+- **DG. Analysis executor:** commands Tauri dedicados no serviço separado.
+- **DH. Completion:** payload interno versionado e valida status completed/partial.
+- **DI. Partial completion:** permitido explicitamente.
+- **DJ. Startup recovery:** running não finalizado vira partial com deterministic result preservado.
+- **DK. Crash evaluator:** recovery usa `evaluator_interrupted`, sem fake score.
+- **DL. Backup/Restore:** nova tabela via cópia SQLite; teste compara evidence/final JSON exatos.
+- **DM. UI:** componente dedicado `InteractiveLessonAnalysisStage`.
+- **DN. Analyze button:** presente antes da análise.
+- **DO. Analyzing:** busy/aria-live e controles desabilitados.
+- **DP. Participation:** card independente.
+- **DQ. Conversation:** seção independente, sem score geral.
+- **DR. Grammar:** card próprio.
+- **DS. Vocabulary:** card próprio.
+- **DT. Fluency:** card próprio.
+- **DU. Interaction:** card próprio.
+- **DV. Disclaimer:** scores são feedback textual daquela conversa.
+- **DW. Goal Progress:** label sem mastery/pass.
+- **DX. Strengths:** grounding exibido.
+- **DY. Focus Next:** sugestões separadas.
+- **DZ. Exercise:** selected accuracy/counts, inclusive 0%.
+- **EA. Pronunciation:** acoustic mean/range/confidence separados.
+- **EB. Pronunciation disclaimer:** acoustic practice apenas.
+- **EC. Focus sounds:** até três agregados.
+- **ED. No Exercise:** estado factual not practiced.
+- **EE. No Pronunciation:** estado factual not practiced.
+- **EF. No Conversation:** estado factual not practiced.
+- **EG. Insufficient Conversation:** mensagem explícita, sem Qwen score.
+- **EH. Partial:** deterministic sections continuam visíveis.
+- **EI. Retry:** botão só quando aplicável.
+- **EJ. Practiced Objectives:** apresentados como praticados, não mastered.
+- **EK. Finish:** ação explícita.
+- **EL. Completed session:** resultado persistido aparece ao reabrir.
+- **EM. Guided History:** recent Guided sessions roteiam à sessão/result persistido.
+- **EN. Standard History:** permaneceu separado.
+- **EO. Accessibility:** headings, labels, buttons, focus/disabled e live regions semânticos.
+- **EP. Color:** score não depende somente de cor.
+- **EQ. aria-live:** estado de análise/erro/resultado anunciado.
+- **ER. Responsive:** grids colapsáveis e wrapping Tailwind.
+
+## ES–ID — documentação e testes de domínio
+
+- **ES. Phase Q reuse:** cards/buttons/layout/tokens existentes reutilizados.
+- **ET. Authoring Guide:** atualizado para Analysis v1 vazio e último.
+- **EU. JSON Schema:** atualizado com Analysis strict e ordering.
+- **EV. Package Analysis validation:** APROVADO.
+- **EW. Analysis-last tests:** APROVADO.
+- **EX. Evidence Builder:** APROVADO.
+- **EY. Participation:** APROVADO.
+- **EZ. Vocabulary item count:** APROVADO.
+- **FA. Listening summary:** APROVADO.
+- **FB. Repeat selection:** APROVADO.
+- **FC. Speaking selection:** APROVADO.
+- **FD. Pronunciation retry selection:** APROVADO.
+- **FE. No-best pronunciation:** APROVADO; 80 selecionado + 99 não selecionado usa 80.
+- **FF. Pronunciation mean:** APROVADO; synthetic selected 60 e 80 = 70.
+- **FG. Rounding:** APROVADO.
+- **FH. Confidence:** APROVADO; low-confidence count independente.
+- **FI. Issue aggregation:** APROVADO.
+- **FJ. Max three issues:** APROVADO.
+- **FK. Exercise selected:** APROVADO.
+- **FL. No-best exercise:** APROVADO; retry não selecionado ignorado.
+- **FM. Accuracy:** APROVADO.
+- **FN. Zero correct:** APROVADO; 0% persistido/exibido.
+- **FO. No Exercise:** APROVADO.
+- **FP. No Pronunciation:** APROVADO.
+- **FQ. Conversation boundary:** APROVADO em 2 turns/20 words e abaixo.
+- **FR. Insufficient Conversation:** APROVADO.
+- **FS. No Conversation:** APROVADO.
+- **FT. Answer-key leak:** APROVADO.
+- **FU. Raw-phoneme leak:** APROVADO no request.
+- **FV. Exercise-response leak:** APROVADO.
+- **FW. Analyzer CEFR exclusion:** APROVADO.
+- **FX. Analyzer pronunciation exclusion:** APROVADO.
+- **FY. Valid evaluator:** APROVADO com Qwen local real.
+- **FZ. Score bounds:** APROVADO.
+- **GA. Goal enum:** APROVADO.
+- **GB. Turn references:** APROVADO.
+- **GC. Assistant references:** rejeitadas; APROVADO.
+- **GD. Strength limit:** APROVADO.
+- **GE. Focus limit:** APROVADO.
+- **GF. Text limit/Markdown:** APROVADO.
+- **GG. Repair:** APROVADO pela política e parser tests.
+- **GH. Max one repair:** APROVADO por controle de fluxo.
+- **GI. Qwen failure:** APROVADO pela arquitetura partial/recovery.
+- **GJ. Timeout:** timeout configurado e converte falha em partial.
+- **GK. Deterministic survives:** APROVADO.
+- **GL. Retry:** APROVADO.
+- **GM. Hash stability:** APROVADO.
+- **GN. Partial finalization:** APROVADO.
+- **GO. Completed finalization:** APROVADO.
+- **GP. Pending rejection:** APROVADO.
+- **GQ. Running rejection:** APROVADO.
+- **GR. Finalized immutability:** APROVADO.
+- **GS. Stage completion:** APROVADO.
+- **GT. Session completion:** APROVADO.
+- **GU. No-overall DTO:** APROVADO.
+- **GV. No-pass/fail DTO:** APROVADO.
+- **GW. No-CEFR DTO:** APROVADO.
+- **GX. Migration:** APROVADO.
+- **GY. 17→18:** APROVADO em TEMP e banco humano.
+- **GZ. Idempotency:** APROVADO.
+- **HA. Integrity:** `ok`.
+- **HB. Foreign keys:** 0 violações.
+- **HC. Unique analysis:** APROVADO.
+- **HD. Double analyze:** protegido por unique/INSERT OR IGNORE/status.
+- **HE. Concurrent analysis:** protegido atomicamente pela DB.
+- **HF. Startup recovery:** APROVADO.
+- **HG. Crash after deterministic save:** APROVADO por recovery fixture.
+- **HH. Crash before Qwen result:** APROVADO por running recovery.
+- **HI. No fake score:** APROVADO.
+- **HJ. Snapshot immutability:** APROVADO.
+- **HK. Package change:** snapshot/hash independente.
+- **HL. Package delete:** sessão usa snapshot persistido.
+- **HM. Answer-key change:** keys ausentes da evidence.
+- **HN. Transcript immutability:** committed hashes e rebuild/hashing controlado.
+- **HO. Standard Analyzer call:** zero chamadas no novo módulo.
+- **HP. Standard lesson_analysis row:** zero writes.
+- **HQ. Standard lesson row:** zero writes.
+- **HR. Pronunciation mutation:** zero writes.
+- **HS. Exercise mutation:** zero writes.
+- **HT. Guided transcript mutation:** zero writes.
+- **HU. Memory:** zero writes.
+- **HV. Vocabulary:** zero writes.
+- **HW. Recurring Mistake:** zero writes.
+- **HX. Review:** zero writes.
+- **HY. XP:** zero writes.
+- **HZ. Streak:** zero writes.
+- **IA. Weekly Goal:** zero writes.
+- **IB. Achievement:** zero writes.
+- **IC. CEFR:** zero writes.
+- **ID. Profile:** zero writes.
+
+## IE–KD — regressões, frontend e builds
+
+- **IE. Voice Metrics:** zero writes.
+- **IF. Whisper:** não chamado.
+- **IG. Piper:** não chamado.
+- **IH. WAV:** nenhum arquivo gerado/lido pelo analyzer.
+- **II. Pronunciation model:** não carregado.
+- **IJ. Frontend pre-analysis:** APROVADO.
+- **IK. No autostart:** APROVADO.
+- **IL. Analyzing state:** APROVADO.
+- **IM. Completed result:** APROVADO.
+- **IN. Partial result:** APROVADO.
+- **IO. Insufficient UI:** APROVADO.
+- **IP. No conversation UI:** APROVADO.
+- **IQ. No exercise UI:** APROVADO.
+- **IR. No pronunciation UI:** APROVADO.
+- **IS. Zero accuracy UI:** APROVADO.
+- **IT. Low pronunciation UI:** APROVADO sem pass/fail.
+- **IU. Strengths UI:** APROVADO.
+- **IV. Focus UI:** APROVADO.
+- **IW. Objectives UI:** APROVADO.
+- **IX. No mastered copy:** APROVADO.
+- **IY. No overall UI:** APROVADO.
+- **IZ. No CEFR UI:** APROVADO.
+- **JA. Retry UI:** APROVADO.
+- **JB. Finish partial:** APROVADO por UI/backend lifecycle.
+- **JC. Finish completed:** APROVADO.
+- **JD. Double analyze UI:** APROVADO.
+- **JE. Double finish UI:** controls/status e backend idempotente protegem.
+- **JF. Reopen:** GET do resultado persistido, sem rerun.
+- **JG. Guided History:** teste de rota/listagem APROVADO.
+- **JH. Standard History separation:** APROVADO.
+- **JI. Accessibility:** APROVADO por testes semânticos.
+- **JJ. Responsive:** classes/grid/wrap auditados.
+- **JK. Long content:** limites/backend e wrapping UI.
+- **JL. Typecheck:** PASS.
+- **JM. Lint:** PASS.
+- **JN. Frontend:** 35 files, 143 tests PASS (executados em quatro blocos auditáveis; uma execução concorrente flutuou e o teste isolado passou).
+- **JO. Rust fmt:** PASS.
+- **JP. Rust check offline:** PASS; apenas warnings preexistentes.
+- **JQ. Rust tests:** 215 total; 196 PASS, 19 ignored manuais, 0 fail.
+- **JR. Python changes:** nenhum arquivo Python alterado; hashes protegidos idênticos.
+- **JS. Voice Streaming:** 18 PASS no `.venv` local do Piper.
+- **JT. Pronunciation:** 12 PASS no Python 3.13 local.
+- **JU. Exercise regression:** coberta pela suíte Rust/frontend; PASS.
+- **JV. Guided Conversation regression:** coberta; PASS.
+- **JW. Listening regression:** coberta; PASS.
+- **JX. Repeat regression:** coberta; PASS.
+- **JY. Speaking Check regression:** coberta; PASS.
+- **JZ. Theory regression:** coberta; PASS.
+- **KA. Visual Vocabulary regression:** coberta; PASS.
+- **KB. Vite production build:** PASS; 1.863 módulos.
+- **KC. Tauri debug build:** PASS; `src-tauri/target/debug/english-ai-coach.exe`.
+- **KD. Installer:** não criado (`--no-bundle`).
+
+## KE–MK — validação física, preservação e encerramento
+
+- **KE. Physical Migration 018:** executada após backup; PASS.
+- **KF. Human schema:** 18.
+- **KG. Human analysis rows:** 0.
+- **KH. No fake human Analysis:** confirmado.
+- **KI. TEMP deterministic fixture:** `src-tauri/test-fixtures/interactive-lessons-phase-v-deterministic/short-v1/lesson.json`.
+- **KJ. TEMP conversation fixture:** `src-tauri/test-fixtures/interactive-lessons-phase-v/full-v1/lesson.json`.
+- **KK. TEMP DB:** `.phase-v-artifacts/phase-v-temp-validation.sqlite3` (573.440 bytes).
+- **KL. Deterministic-only:** completed, conversation `not_practiced`, evidence hash `D97D7E918F11E7676D9890D9E23BD178643D67046F26FA86B4EFAB485855ACDC`.
+- **KM. Exercise synthetic:** 1 selected, 0 correct, 0% válido; retry não selecionado ignorado.
+- **KN. Pronunciation synthetic:** selected 60 e 80, mean 70; tentativa melhor não selecionada ignorada; 1 low confidence; issue θ agregado.
+- **KO. Real local Qwen:** `qwen3.5:4b` executado na fixture sintética.
+- **KP. Strict JSON:** aceito; grammar 95, vocabulary 90, fluency 85, interaction 90.
+- **KQ. Human Guided Analysis:** **PENDENTE** — banco humano possui zero Guided sessions.
+- **KR. Human Grammar quality:** **PENDENTE** pelo mesmo motivo.
+- **KS. Human Vocabulary quality:** **PENDENTE**.
+- **KT. Human Fluency quality:** **PENDENTE**.
+- **KU. Human Interaction quality:** **PENDENTE**.
+- **KV. Human Strength grounding:** **PENDENTE**; synthetic grounding em student turns 1/3 foi validado.
+- **KW. Human Focus grounding:** **PENDENTE**; synthetic grounding em student turns 1/3 foi validado.
+- **KX. Human pronunciation summary:** **PENDENTE**; synthetic validado.
+- **KY. Human exercise summary:** **PENDENTE**; synthetic validado.
+- **KZ. No fabricated human result:** confirmado.
+- **LA. Partial validation:** automated recovery/UI validation PASS.
+- **LB. Retry validation:** automated hash/status validation PASS; human physical PENDENTE por falta de sessão.
+- **LC. Completed reopen:** automated persisted-result validation PASS.
+- **LD. Guided History physical:** automated PASS; human physical PENDENTE por zero Guided sessions.
+- **LE. Request inspection:** contém somente context + committed transcript; sem keys/responses/acoustic data/CEFR.
+- **LF. Network audit:** único endpoint novo é `http://127.0.0.1:11434/api/chat` com no-proxy.
+- **LG. Qwen request count:** synthetic valid JSON = 1; política máxima = 2 contando repair.
+- **LH. Analyzer input:** synthetic = 914 bytes; limite = 48.000 bytes.
+- **LI. npx:** não usado; zero download.
+- **LJ. package.json:** hash inalterado `572A27...DA5E9D`.
+- **LK. package-lock.json:** hash inalterado `5CE359...90317`.
+- **LL. Backup regression:** PASS.
+- **LM. Restore regression:** PASS; evidence hash/json, conversation result e final result preservados exatamente.
+- **LN. Diagnostics regression:** Rust/frontend PASS; analyzer não participa de Diagnostics nem chama Qwen ali.
+- **LO. Startup Recovery:** PASS.
+- **LP. Human counts before:** ver auditoria; schema 17, analysis table inexistente, 12 lessons, 8 analyses, 84 transcript messages e demais contagens registradas.
+- **LQ. Human counts after:** todas iguais; somente `schema_migration` 17→18 e nova `interactive_lesson_analysis=0`.
+- **LR. Standard data:** lessons 12, lesson_analysis 8, transcript 84 preservados.
+- **LS. Gamification:** profile 1, XP events 5, achievements 3 preservados.
+- **LT. CEFR/Placement:** placement attempts 4, answers 27, speaking 3 preservados.
+- **LU. Profile:** 1 preservado.
+- **LV. Learning Memory:** summaries 1, teacher memory 7 preservados.
+- **LW. Vocabulary:** global 3, lesson vocabulary 3 preservados.
+- **LX. Recurring Mistakes:** 6 + 6 occurrences preservados.
+- **LY. Review:** 0 sessions/items, preservado.
+- **LZ. Pronunciation:** 1 attempt + 3 word results preservados.
+- **MA. Interactive Exercise:** 0 attempts no humano, preservado.
+- **MB. Guided Conversation:** 0 turns no humano, preservado.
+- **MC. Standard Lesson Analyzer:** prompt/hash e dados preservados; não reutilizado.
+- **MD. SQLite integrity:** `ok` depois da migração.
+- **ME. Foreign keys:** 0 violações.
+- **MF. Offline:** sim; builds/tests offline onde aplicável.
+- **MG. External network:** nenhuma; somente loopback Ollama.
+- **MH. Problems:** runner frontend concorrente apresentou uma flutuação e depois encerramento externo antes do resumo; teste isolado e os quatro blocos completos passaram. Python global tinha dependências divididas; foram usados ambientes locais existentes, sem instalar nada.
+- **MI. Future debts:** validação humana de feedback/History/partial/retry permanece PENDENTE até existir uma Guided Lesson humana; não é autorizada nesta fase.
+- **MJ. Curriculum readiness:** fundação técnica pronta, mas Curriculum/Content não foi iniciado.
+- **MK. Confirmação explícita:** sem overall/final English score; sem pass/fail/mastery/CEFR; sem writes em Memory/Vocabulary/Recurring/Review/XP/Streak/Goal/Achievement/Profile/Voice; sem Whisper/Piper/WAV/model load; sem dependências/downloads/instalador; banco humano íntegro e sem análise fabricada; Fase V encerrada aqui.
+
+## Hashes protegidos pós-Fase V
+
+Todos idênticos ao pré-audit: Voice V2/STABLE `F56E16...D2E2D`; streaming `8A8BB8...EAFE`; pronunciation engine `FA28B3...0968`; core `0ED7D5...E71F`; conversation teacher `8B5E07...F19D`; standard analyzer prompt `6D4CB2...8C41`; guided policy `C52A34...04A4`; package manifests conforme LJ/LK.

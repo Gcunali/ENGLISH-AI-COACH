@@ -1,0 +1,72 @@
+﻿[
+    {
+        "path":  "physical-db-before-009.sqlite3",
+        "sha256":  "335680B2450E32D06E64CA4FAD2F422F8D7FE5DBB4930405ADCF3B1B81241748",
+        "bytes":  303104
+    },
+    {
+        "path":  "src\\App.test.tsx",
+        "sha256":  "ED9486F55046196837153FF5805426167CD7F8E0D391B610686105465262C0B2",
+        "bytes":  2333
+    },
+    {
+        "path":  "src\\App.tsx",
+        "sha256":  "C79CA67C6C1985706E91A50ABC5922FD3E6CD56177BEFFF34197FCEB1CE4867F",
+        "bytes":  1694
+    },
+    {
+        "path":  "src\\components\\AppLayout.tsx",
+        "sha256":  "82B48DCA00ABCA1C587E0BC9B8DD8AE768DFF8DAAA936CEC495BCA96D646BB2E",
+        "bytes":  2401
+    },
+    {
+        "path":  "src\\hooks\\useLearningData.ts",
+        "sha256":  "44734B2D124E9728AC9D9241F34585A6CE5B9270C5AC05F101B872627F46E445",
+        "bytes":  3720
+    },
+    {
+        "path":  "src\\pages\\DashboardPage.test.tsx",
+        "sha256":  "C20C281EAF80C2F82F177C26A0149799F4611CD56F6B565152769E0487D90676",
+        "bytes":  3541
+    },
+    {
+        "path":  "src\\pages\\DashboardPage.tsx",
+        "sha256":  "19C5605B08C3649A80268FD9E12E87C2D9962784CABCEE71C0B6642B2ABE492F",
+        "bytes":  14884
+    },
+    {
+        "path":  "src\\pages\\ProgressPage.test.tsx",
+        "sha256":  "ED9D5D9A6691806C1F3E5A60A47D5E69EF8D2F086B5D0BC019BE58E70ADE5E0E",
+        "bytes":  2544
+    },
+    {
+        "path":  "src\\pages\\ProgressPage.tsx",
+        "sha256":  "877BC5EA388A185E091756A16C7662EB6D7AE11AEE087BF763A13B2B217E101F",
+        "bytes":  5659
+    },
+    {
+        "path":  "src\\services\\native.ts",
+        "sha256":  "F1D84D52ED01CA2A9C950619B4860D84F0FB8915122EC0B92977D3716F7A622F",
+        "bytes":  14994
+    },
+    {
+        "path":  "src\\test\\learningFixtures.ts",
+        "sha256":  "7D9C6D6DB75DDEAD4E1FEB515CF185BA8712387FBB47801A4DCE21238F075839",
+        "bytes":  6800
+    },
+    {
+        "path":  "src\\types\\index.ts",
+        "sha256":  "9EE5A8F382B91C0577ACDAEEE55FE0415D2E5AD4783E75C0F7CBB73534CDA9DA",
+        "bytes":  16595
+    },
+    {
+        "path":  "src-tauri\\src\\database.rs",
+        "sha256":  "0D32A4D2BF160BD2A0C211531C4FF20406A740812D8773E20A29EBF8D862DFFB",
+        "bytes":  19013
+    },
+    {
+        "path":  "src-tauri\\src\\lib.rs",
+        "sha256":  "875FADE6284F186C5927DD7ED83C7E56B7570B4019A16EA625B1C5D4E73B3D22",
+        "bytes":  24538
+    }
+]

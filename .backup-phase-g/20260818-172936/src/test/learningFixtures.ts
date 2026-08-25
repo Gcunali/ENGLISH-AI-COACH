@@ -1,0 +1,50 @@
+import type { DashboardSummary, Lesson, LessonAnalysis, LessonDetails, LessonHistoryItem, ProgressOverview, TranscriptMessage } from '../types'
+
+export const lesson: Lesson = {
+  id: 'lesson-1', startedAt: '2026-08-17T19:44:27.388Z', endedAt: '2026-08-17T19:46:08.388Z',
+  status: 'completed', topic: null, mode: 'free_conversation', durationSeconds: 101,
+  studentTurnCount: 3, teacherTurnCount: 3, correctionCount: 1, whisperModel: 'ggml-small.en-q5_1.bin',
+  whisperThreads: 12, ollamaModel: 'qwen3.5:4b', piperVoice: 'en_US-lessac-medium',
+  voiceEngineVersion: 'voice_v2_bridge_v1', errorMessage: null,
+  createdAt: '2026-08-17T19:44:27.388Z', updatedAt: '2026-08-17T19:46:08.388Z',
+}
+
+export const analysis: LessonAnalysis = {
+  id: 'analysis-1', lessonId: lesson.id, status: 'completed', schemaVersion: 1, promptVersion: 1,
+  analyzerModel: 'qwen3.5:4b', startedAt: lesson.startedAt, completedAt: lesson.endedAt,
+  overallScore: 81, scores: { fluency: 85, grammar: 70, vocabulary: 80, comprehension: 90, interaction: 80, pronunciation: null },
+  strengths: [{ title: 'Boa abertura e engajamento', evidence: 'Hello teacher' }],
+  priorityImprovements: [{ area: 'word_choice', title: 'Preposição natural', explanation: "Use 'terrible at'.", exampleFromLesson: 'I am terrible cooking.', betterAlternative: "I'm terrible at cooking." }],
+  corrections: [{ original: 'I am terrible cooking.', corrected: "I'm terrible at cooking.", explanation: "Use 'at'.", category: 'preposition' }],
+  naturalAlternatives: [], vocabulary: [{ wordOrPhrase: 'terrible at', meaning: 'muito ruim em', example: "I'm terrible at math." }], recurringPatterns: [],
+  nextLessonRecommendations: ['Praticar preposições.'], summary: 'Resumo real da aula.', pronunciationAvailable: false,
+  errorMessage: null, createdAt: lesson.startedAt, updatedAt: lesson.endedAt ?? lesson.startedAt,
+}
+
+export const historyItem: LessonHistoryItem = {
+  id: lesson.id, startedAt: lesson.startedAt, endedAt: lesson.endedAt, durationSeconds: 101,
+  status: 'completed', topic: null, mode: 'free_conversation', studentTurnCount: 3,
+  teacherTurnCount: 3, correctionCount: 1, analysisStatus: 'completed', overallScore: 81,
+}
+
+export const dashboard: DashboardSummary = {
+  totalLessons: 1, completedLessons: 1, totalPracticeSeconds: 101, totalStudentTurns: 3,
+  totalCorrections: 1, analyzedLessons: 1, averageOverallScore: 81, latestLesson: historyItem,
+  latestAnalyzedLesson: { lessonId: lesson.id, startedAt: lesson.startedAt, durationSeconds: 101, overallScore: 81, scores: analysis.scores! },
+  latestRecommendation: 'Praticar preposições.',
+}
+
+export const messages: TranscriptMessage[] = [
+  { id: 'student-1', lessonId: lesson.id, sequenceIndex: 1, turnIndex: 1, role: 'student', text: 'I am terrible cooking.', source: 'whisper', engineEventType: 'transcript', createdAt: lesson.startedAt },
+  { id: 'teacher-1', lessonId: lesson.id, sequenceIndex: 2, turnIndex: 1, role: 'teacher', text: "You can say: I'm terrible at cooking.", source: 'ollama', engineEventType: 'teacher_response', createdAt: lesson.startedAt },
+]
+
+export const details: LessonDetails = {
+  lesson, messages, correctionCandidates: [{ id: 'correction-1', lessonId: lesson.id, studentMessageId: 'student-1', teacherMessageId: 'teacher-1', studentText: messages[0].text, teacherResponseText: messages[1].text, detectionMethod: 'teacher_cue_v1', createdAt: lesson.startedAt }], analysis,
+}
+
+export const progress: ProgressOverview = {
+  analyzedLessonCount: 1, averages: { overall: 81, fluency: 85, grammar: 70, vocabulary: 80, comprehension: 90, interaction: 80 },
+  strongestAreas: ['comprehension'], focusAreas: ['grammar'], latestRecommendation: 'Praticar preposições.',
+  points: [{ lessonId: lesson.id, date: lesson.startedAt, durationSeconds: 101, overall: 81, fluency: 85, grammar: 70, vocabulary: 80, comprehension: 90, interaction: 80 }],
+}

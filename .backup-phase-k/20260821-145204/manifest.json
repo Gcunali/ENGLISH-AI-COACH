@@ -1,0 +1,82 @@
+﻿[
+    {
+        "path":  "physical-db-before-008.sqlite3",
+        "sha256":  "1EFFB0E08E4329FA6E2561D54F26D72B8D709883B8EAD41D8AB5EFF7D2119DA9",
+        "bytes":  278528
+    },
+    {
+        "path":  "local-ai\\voice_engine_bridge.py",
+        "sha256":  "6CD377595D8B0377F66C09348D1471CF14073B7394F3A5DB79011038F40D6378",
+        "bytes":  6972
+    },
+    {
+        "path":  "src\\App.test.tsx",
+        "sha256":  "ED9486F55046196837153FF5805426167CD7F8E0D391B610686105465262C0B2",
+        "bytes":  2333
+    },
+    {
+        "path":  "src\\App.tsx",
+        "sha256":  "AEAE0C79E0538FFC1BA2D19870C042CF801038752193FAA6F4F21E8E2D3BE7B6",
+        "bytes":  1587
+    },
+    {
+        "path":  "src\\components\\AppLayout.tsx",
+        "sha256":  "CBCF5EA0ED80D0560D4BAF09EBFCE8152F03B30EA992C7F0A6EBA1ECEB14C595",
+        "bytes":  2333
+    },
+    {
+        "path":  "src\\pages\\LessonDetailsPage.test.tsx",
+        "sha256":  "4ABFD2EB092DE2064E9F799B2BC3059B171A6365C5056173C7D63CE1A5A58D5B",
+        "bytes":  2483
+    },
+    {
+        "path":  "src\\pages\\LessonDetailsPage.tsx",
+        "sha256":  "8BA8D5866ED5FC34DB67F0ED6760FB7E8B59D00A889F6DFF76DACFF7AB571B39",
+        "bytes":  6282
+    },
+    {
+        "path":  "src\\pages\\NewLessonPage.test.tsx",
+        "sha256":  "68C6BB54065D7B6EED3858BDB42E311E7DBAA7133D4EE100E3628B0A9D080797",
+        "bytes":  3833
+    },
+    {
+        "path":  "src\\pages\\NewLessonPage.tsx",
+        "sha256":  "03166793685D5422096B1D0661E997AFA9BB86A5E9378176862F871B94F5A56C",
+        "bytes":  8314
+    },
+    {
+        "path":  "src\\services\\native.ts",
+        "sha256":  "F59EDC5EB98FCDF9ACB7BB67A6A8CC52EA70A140F19D147E79E91EE7FA38B2DC",
+        "bytes":  14109
+    },
+    {
+        "path":  "src\\test\\learningFixtures.ts",
+        "sha256":  "38F77C2158FED69086FA42FF181E1274C98B527FF84BD7119E0B255A5F1C8254",
+        "bytes":  6791
+    },
+    {
+        "path":  "src\\types\\index.ts",
+        "sha256":  "2D28F8A2D0E6383527E84F700BC94BE6644B449F78D8E107D00CA13453D9527D",
+        "bytes":  15104
+    },
+    {
+        "path":  "src-tauri\\src\\database.rs",
+        "sha256":  "0EFCD008F29D0C7368FF27899DF07DBB3FFF185ECE964005A4A73F9922DF0E6A",
+        "bytes":  18693
+    },
+    {
+        "path":  "src-tauri\\src\\learning_repository.rs",
+        "sha256":  "820E1D5E8A841C1B974E603AF00768A50AF7739513BAF2D167D4D7139F1AA2CC",
+        "bytes":  34546
+    },
+    {
+        "path":  "src-tauri\\src\\lib.rs",
+        "sha256":  "3751131404906F416FE1C573B1CFB0F82536BCFEA32AF186A1CF2A423706DD3C",
+        "bytes":  21927
+    },
+    {
+        "path":  "src-tauri\\src\\voice_engine.rs",
+        "sha256":  "88BA10DAC51E1DC6326A3C150B9976FF0D0F8B7E759D9E0FC21FDB870D3826FE",
+        "bytes":  22920
+    }
+]

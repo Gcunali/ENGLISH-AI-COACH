@@ -1,0 +1,59 @@
+{
+  "source": "C:\\Users\\guicu\\AppData\\Local\\com.englishaicoach.desktop\\database\\english-ai-coach.sqlite3",
+  "journalMode": "wal",
+  "schemaVersions": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+  ],
+  "integrity": "ok",
+  "foreignKeyViolations": [],
+  "counts": {
+    "achievement_unlock": 3,
+    "conversation_exchange": 0,
+    "correction_candidate": 7,
+    "gamification_profile": 1,
+    "gamification_xp_event": 5,
+    "lesson": 12,
+    "lesson_analysis": 8,
+    "lesson_configuration_snapshot": 5,
+    "lesson_student_profile_snapshot": 3,
+    "lesson_teacher_memory": 7,
+    "lesson_vocabulary": 3,
+    "placement_answer": 27,
+    "placement_attempt": 4,
+    "placement_speaking_response": 3,
+    "pronunciation_attempt": 1,
+    "pronunciation_word_result": 3,
+    "recurring_mistake": 6,
+    "recurring_mistake_occurrence": 6,
+    "review_session": 0,
+    "review_session_item": 0,
+    "schema_migration": 12,
+    "settings": 2,
+    "student_learning_profile": 1,
+    "student_learning_summary": 1,
+    "transcript_message": 84,
+    "vocabulary_item": 3,
+    "voice_turn_performance": 2
+  },
+  "settings": [
+    [
+      "use_learning_memory_in_lessons",
+      "true"
+    ],
+    [
+      "use_streaming_voice_response",
+      "true"
+    ]
+  ]
+}

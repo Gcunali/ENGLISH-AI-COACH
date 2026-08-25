@@ -1,0 +1,267 @@
+# Fase S — Relatório final
+
+Data: 2026-08-24  
+Projeto: `C:\ENGLISH AI COACH`  
+Resultado: Listening v1, Repeat v1 e Speaking Check v1 implementados localmente. Validação técnica aprovada; testes humanos de microfone/alto-falante/Bluetooth estão explicitamente pendentes.
+
+## A–AZ — Entrega, áudio e pronúncia
+
+- **A. Arquivos criados.** `src-tauri/migrations/015_interactive_lesson_audio_practice.sql`, `src-tauri/src/guided_lesson_audio.rs`, `src/hooks/useGuidedLessonRecorder.ts`, fixture isolada Phase S, `PHASE_S_AUDIT.md`, este relatório e manifesto final.
+- **B. Arquivos modificados.** `database.rs`, `lib.rs`, `reliability.rs`, `paths.rs`, os quatro módulos `interactive_lesson*`, `pronunciation_repository.rs`, `types/index.ts`, `native.ts`, `GuidedLessonSessionPage.tsx`, `GuidedLessons.test.tsx`, authoring guide e JSON Schema.
+- **C. Backup pré-Fase S.** `C:\ENGLISH AI COACH\.backup-phase-s\20260824-190650`.
+- **D. Manifest SHA-256.** `manifest-sha256.txt`; SHA-256 `089454B57AFCD46F096BC6673BF1390E9C2F61FFC01ECC9DF6AFE53BA3F034E8`.
+- **E. Database backup pré-015.** `physical-db-before-015.sqlite3`; cópia consistente, integrity `ok`, 0 FKs, SHA-256 `3A7D905622C56FD89FBA12FB0CAB3377622403C59C2EB1EE62A0107593E853F2`.
+- **F. Migration 015.** Criada: `015_interactive_lesson_audio_practice.sql`.
+- **G. Justificativa.** Necessária para progresso parcial retomável, tentativas guiadas, seleção explícita, recovery e expansão segura do `source_type`.
+- **H. Audit path.** `.phase-s-artifacts/PHASE_S_AUDIT.md`, criado antes do código.
+- **I. Guided Lesson Audio Runtime Version.** 1.
+- **J. Listening Stage Schema Version.** 1.
+- **K. Repeat Stage Schema Version.** 1.
+- **L. Speaking Check Stage Schema Version.** 1.
+- **M. Package Schema Version final.** 1, inalterada.
+- **N. Flow Version final.** 1, inalterada.
+- **O. Capability Registry.** Antes: Theory/Visual. Depois: Theory/Visual/Listening/Repeat/Speaking Check; Exercise/Guided Conversation/Analysis fechados.
+- **P. Piper encontrado.** O legado Rust procurava `piper.exe`/`voices`; a instalação oficial usa `local-ai/piper/.venv` e modelo local. Voice V2 possui runtime persistente protegido.
+- **Q. Arquitetura de reference audio.** Runtime Rust isolado para Guided: WAV de sessão quando declarado; Piper local quando asset é nulo.
+- **R. Voice Bridge reutilizado?** Não. Evita iniciar/couplar conversa, Whisper e Qwen; somente a instalação Piper aprovada é reutilizada.
+- **S. Qwen.** Não participa de Listening, Repeat ou Speaking Check.
+- **T. Bundled WAV.** Validado por path/hash/tipo, copiado imutavelmente por sessão e usado sem fallback se declarado.
+- **U. Piper fallback.** Somente quando `audioAssetId/referenceAudioAssetId` é nulo; subprocesso local `python -m piper`.
+- **V. Reference voice.** `en_US-lessac-medium`.
+- **W. Reference locale.** `en-US`.
+- **X. Bluetooth wake.** 500 ms de silêncio prepended em memória/cópia gerada; asset original nunca é reescrito.
+- **Y. Autoplay.** Proibido; toda reprodução nasce de clique do usuário.
+- **Z. Playback ID.** UUID backend ligado a sessão, etapa e item.
+- **AA. Detecção de conclusão.** Evento `ended` do player + ID ativo + validação temporal backend pela duração WAV.
+- **AB. Cancelamento.** Pausa no frontend e invalidação backend; cancel/error/partial não contam.
+- **AC. Concorrência.** Uma reprodução Guided ativa; nova preparação invalida a anterior; stale é rejeitado.
+- **AD. Áudio temporário.** Prefixo privado `guided-lesson-`; somente WAV sintetizado controlado.
+- **AE. Cache.** Em runtime por referência; replay não ressintetiza a mesma chave.
+- **AF. Cache key.** Package hash + stage + item + text hash implícito na chave hash + voice + runtime version.
+- **AG. Cleanup.** Completion/abandon/shutdown e startup reliability removem somente arquivos próprios; probe físico removeu o WAV.
+- **AH. Listening schema.** `segments` + `revealTextAfterFirstPlay`.
+- **AI. Segment schema.** `segmentId`, `text`, `audioAssetId: string|null`.
+- **AJ. Segment limits.** 1–12; texto 1–240 caracteres e até 50 palavras.
+- **AK. revealText.** Texto oculto até primeiro playback completo quando habilitado.
+- **AL. Completion rule.** Todos os segmentos precisam de pelo menos um playback completo.
+- **AM. Progress persistence.** `completedPlaybackCount` por segmento em runtime state v1.
+- **AN. Completion result.** `listening_completed`, contagem de segmentos e play counts; sem áudio/transcript/path.
+- **AO. Repeat schema.** `targets` tipados.
+- **AP. Repeat target.** `targetId`, `text`, `referenceAudioAssetId`, `hint`.
+- **AQ. Validação.** Reutiliza `pronunciation::validate_target`: 1–160 caracteres e 1–12 palavras.
+- **AR. Reference requirement.** Primeiro playback completo obrigatório antes de gravar cada target.
+- **AS. Recording.** Manual record/stop, hard stop 15 s, AudioWorklet PCM.
+- **AT. Recorder reuse.** Repeat e Speaking Check compartilham `useGuidedLessonRecorder` e o processador PCM existente.
+- **AU. Audio format.** WAV PCM mono 16-bit 16 kHz enviado ao backend.
+- **AV. Max duration.** 15.000 ms.
+- **AW. Pronunciation integration.** Mesmo Whisper content check + mesmo manager Wav2Vec2 persistente + mesmo validator/repository.
+- **AX. Content checker separado.** Não criado; o checker existente foi reutilizado.
+- **AY. Statuses.** Só `completed` é selecionável; todos os demais exigem retry.
+- **AZ. Low score.** Score 12 e score 0 foram testados como concluídos/selecionáveis; não há gate.
+
+## BA–CZ — Semântica, runtime, persistência e UI
+
+- **BA. Low confidence.** `completed + low` continua selecionável e exibe aviso/valor; sem gate.
+- **BB. content_mismatch.** Persistido como tentativa real, sem score falso e não selecionável.
+- **BC. alignment_failed.** Não selecionável pela regra única `status='completed'`.
+- **BD. engine_unavailable.** Não selecionável; UI mostra erro e link para Diagnostics.
+- **BE. Retry.** Cria novo índice, limpa seleção anterior e preserva histórico.
+- **BF. Seleção.** Somente tentativa concluída do mesmo session/stage/item.
+- **BG. Best score.** Nunca auto-selecionado; teste usa 12 selecionado, retry 99 e exige nova seleção explícita.
+- **BH. Repeat target completion.** Reference completo + tentativa `completed` explicitamente selecionada.
+- **BI. Repeat stage completion.** Todos os targets precisam estar selecionados.
+- **BJ. Repeat result.** `repeat_completed`, target/attempt counts e selected IDs apenas.
+- **BK. Speaking schema.** `targets` tipados, sem reference audio.
+- **BL. Speaking target.** `targetId`, `instruction`, `targetText`, `hint`.
+- **BM. Sem reference.** Speaking Check mede produção direta de alvo visível; tocar modelo antes mudaria a tarefa.
+- **BN. Speaking flow.** Alvo visível → record/stop → análise local → retry ou seleção.
+- **BO. Speaking result.** Mesmo DTO acústico real, word breakdown e confidence.
+- **BP. Speaking completion result.** `speaking_check_completed`, target/attempt counts e selected IDs.
+- **BQ. Score gate.** Confirmado inexistente no backend e UI.
+- **BR. Runtime readiness.** Capability registry fechado por tipo/schema; engine local continua opcional/lazy.
+- **BS. Listening requirements.** Piper ou WAV local e player; nenhum LLM/Whisper.
+- **BT. Repeat requirements.** Reference audio, mic e Pronunciation Engine.
+- **BU. Speaking requirements.** Mic e Pronunciation Engine; nenhum TTS obrigatório.
+- **BV. Lazy models.** Piper só no play sem asset; Whisper/Wav2Vec2 só no submit; Qwen nunca.
+- **BW. Mutual exclusion.** Playback Guided único; gravação para reprodução; UI bloqueia play durante record/analyze.
+- **BX. Voice Conversation.** Runtime/prompt/streaming não foram acoplados nem alterados.
+- **BY. Pronunciation Practice.** Core preservado; Guided usa proveniência própria e fica fora de Recent Practice.
+- **BZ. Backup/restore.** Schema corrente passou a 15; teste específico restaura runtime state Guided S.
+- **CA. Persistência de runtime.** Tabela `interactive_lesson_stage_runtime_state`.
+- **CB. Runtime schema.** PK `(session_id,stage_id)`, version 1, JSON válido, FK cascade.
+- **CC. Listening state.** Kind + segmentos `{segmentId,completedPlaybackCount}`.
+- **CD. Repeat state.** Targets `{itemId,completedReferencePlaybackCount,selectedAttemptId}`.
+- **CE. Speaking state.** Targets `{itemId,completedReferencePlaybackCount:0,selectedAttemptId}`.
+- **CF. Attempt table.** `interactive_lesson_pronunciation_attempt` com session/stage/item/type/index/status/result/ref/timestamps.
+- **CG. Attempt statuses.** analyzing + os sete status terminais do Pronunciation Engine.
+- **CH. Indexing.** `attempt_index >= 1`, unique por session/stage/item/index.
+- **CI. Relação.** FK opcional para `pronunciation_attempt`, `ON DELETE SET NULL`; completed exige referência não nula.
+- **CJ. Proveniência.** `source_type='interactive_lesson'`, `source_id=guided attempt id`.
+- **CK. Recent Practice.** Lista avulsa filtra somente `custom` e `vocabulary`.
+- **CL. Recovery.** `analyzing` stale vira `failed/interrupted` no startup sem falhar sessão.
+- **CM. Resume.** Estado e tentativas são reabertos do SQLite; assets de áudio ficam no snapshot privado de sessão.
+- **CN. Executor changes.** Executor fechado foi ampliado apenas para os três tipos S.
+- **CO. Listening executor.** Backend valida fonte/item/playback e completion completa.
+- **CP. Repeat executor.** Backend valida reference, tentativa, status, seleção e completion.
+- **CQ. Speaking executor.** Backend bloqueia reference e valida tentativa/seleção/completion.
+- **CR. Completion validation.** Resultado sempre construído pelo backend; frontend não injeta JSON.
+- **CS. Teste de score sem gate.** Scores 12 e 0 passam quando status é completed.
+- **CT. Transações.** Runtime update, attempt start, selection e stage transition usam transações SQLite.
+- **CU. Rollback.** Erros antes do commit preservam estado; suíte de transações/rollback passou.
+- **CV. UI.** Runner tipado passou a renderizar cinco tipos.
+- **CW. Listening UI.** Play/replay, status, count e reveal pós-play.
+- **CX. Repeat UI.** Play reference, record/stop, analyzing, attempts, word scores, retry e seleção.
+- **CY. Speaking UI.** Instruction/target, record imediato, resultado/retry/seleção; nenhum botão de reference.
+- **CZ. Componentes de resultado.** Reutilizado o DTO/semântica de Pronunciation; apresentação compacta Guided criada, sem duplicar a página inteira.
+
+## DA–FZ — Acessibilidade e testes
+
+- **DA. Accessibility.** Botões nativos, headings, labels de progresso, roles status/alert e texto não dependente só de cor.
+- **DB. Keyboard.** Ações são `<button>`/`Link`, alcançáveis por teclado; sem handlers exclusivos de mouse.
+- **DC. aria-live.** Progresso/reprodução/status de análise usam regiões live/status.
+- **DD. Recording UX.** Record e Stop explícitos; hard stop; feedback checking/analyzing.
+- **DE. Mic denied.** Erro amigável `Microphone unavailable`, sessão preservada.
+- **DF. Piper unavailable.** Erro controlado; asset declarado não cai silenciosamente em Piper.
+- **DG. Pronunciation unavailable.** Erro controlado, tentativa failed e nenhum fake score.
+- **DH. Diagnostics.** Link `/diagnostics` exibido no estado de erro.
+- **DI. Responsive.** Cards, grids, flex-wrap e controles existentes preservam layout estreito/largo.
+- **DJ. Authoring guide.** Atualizado para contratos, limites, execução e privacidade S.
+- **DK. JSON Schema.** Atualizado com payloads Listening/Repeat/Speaking e limites.
+- **DL. Listening validation.** Fixture tipada e limites/asset refs cobertos pelo validator.
+- **DM. Repeat validation.** Validator reutiliza limites Pronunciation.
+- **DN. Speaking validation.** Instruction/target/hint, IDs e limites cobertos.
+- **DO. Capability tests.** Cinco tipos ready; três futuros fechados.
+- **DP. Migration tests.** Banco novo 1→15 e tabelas/constraints.
+- **DQ. 14→15.** Preserva tentativa antiga e expande proveniência.
+- **DR. Idempotência.** `migrate` repetido passa e 015 não reconstrói novamente.
+- **DS. Listening progress.** Count persistido e lido pelo DTO.
+- **DT. Partial play.** Evento antes da duração é rejeitado.
+- **DU. Replay.** Dois completions geram count 2.
+- **DV. Listening resume.** Operações reabrem DB e completion posterior usa estado persistido.
+- **DW. Premature completion.** Stage completion antes de todos os plays falha.
+- **DX. Reference before record.** Begin Repeat antes do play falha.
+- **DY. Partial reference.** Usa o mesmo gate temporal de playback completo.
+- **DZ. Valid attempt.** Completed com FK acústica é selecionável.
+- **EA. Low score.** 12 passa.
+- **EB. Score zero.** 0 passa.
+- **EC. Low confidence.** Low foi persistido/retornado sem gate.
+- **ED. Content mismatch.** Rejeição de seleção testada e benchmark físico técnico confirmou mismatch.
+- **EE. Alignment failure.** Coberto pela query completed-only/constraint; sem caso acústico físico dedicado.
+- **EF. Retry.** Nova tentativa indexada testada.
+- **EG. History.** Múltiplas tentativas preservadas e ordenadas.
+- **EH. Selected attempt.** Seleção explícita testada.
+- **EI. Best not auto-selected.** 12/99 prova que retry não escolhe 99 automaticamente.
+- **EJ. Repeat resume.** Estado/attempts vêm de DB; fluxo usa conexões reabertas.
+- **EK. Speaking no reference.** Teste frontend confirma Record habilitado e ausência de reference.
+- **EL. Speaking valid attempt.** Completed/FK/selection testados.
+- **EM. Speaking low score.** Score 0 concluído/selecionado.
+- **EN. Speaking mismatch.** Mismatch não selecionável pela mesma regra; benchmark confirmou status.
+- **EO. Multi-target.** Validator/state usam vetores 1–12; completion exige `all`; fixture tem um alvo, sem teste físico multi-target dedicado.
+- **EP. Stage transactions.** Sequência completa 5-stage testada.
+- **EQ. Rollback.** Suites repository/reliability passam; mutations rejeitadas não avançam.
+- **ER. Restart/resume.** Snapshot/state persistentes e recovery testados tecnicamente.
+- **ES. Stale analysis.** Recovery converte `analyzing` em failed; regra implementada, sem kill real no meio do worker.
+- **ET. Cancel analysis.** Manager existente e comando Guided reutilizam cancel; regressão Python/Rust passa.
+- **EU. App close during analysis.** Shutdown cancela manager e startup recupera stale; teste destrutivo real não executado.
+- **EV. Startup recovery.** Integrado e regressões de startup/reliability passam.
+- **EW. TTS cache.** Chave/mapa impedem ressíntese em runtime; probe físico confirmou Piper, sem contador end-to-end de duas sínteses.
+- **EX. Cache invalidation.** Package/text/stage/item/voice/version alteram chave.
+- **EY. Temp cleanup.** Prefixo allowlisted; pós-auditoria encontrou 0 arquivos Guided.
+- **EZ. Asset safety.** Path/hash/type/containment e no-fallback; snapshot sobrevive à exclusão do pacote.
+- **FA. Playback overlap.** Runtime mantém um active ID; stale/overlap invalidado.
+- **FB. Record during play.** `stopPlayback()` precede start.
+- **FC. Play during record.** Botões de play ficam disabled.
+- **FD. Student audio cleanup.** WAV `pronunciation-*` removido em sucesso/erro; não entra no cache.
+- **FE. No audio persistence.** DB schemas e testes não contêm áudio/path.
+- **FF. No transcript persistence.** Whisper heard text não é salvo.
+- **FG. Source tests.** `interactive_lesson` aceito/preservado.
+- **FH. Standalone history.** Guided excluído de `list()`.
+- **FI. No Qwen.** Auditoria estática em código S: nenhuma referência, exceto URL remota proposital em teste de rejeição de asset.
+- **FJ. No standard Lesson.** Side-effect test permanece zero.
+- **FK. No LessonAnalysis.** Zero side effect.
+- **FL. No XP.** Zero side effect.
+- **FM. No streak.** Nenhuma chamada/mutation.
+- **FN. No weekly goal.** Nenhuma chamada/mutation.
+- **FO. No achievement.** Zero side effect.
+- **FP. No CEFR.** Apenas snapshot metadata; nenhuma mutation.
+- **FQ. No Profile mutation.** Read-only snapshot.
+- **FR. No Memory.** Nenhuma chamada/mutation.
+- **FS. No Vocabulary.** Nenhuma promoção/escrita global.
+- **FT. No Review.** Nenhuma chamada/mutation.
+- **FU. No Voice Metric.** Zero side effect.
+- **FV. Free Conversation.** 15 testes Python streaming + testes Rust voice passaram.
+- **FW. Pronunciation regression.** 12 testes Python + Rust pronunciation passaram.
+- **FX. Theory regression.** Engine/UI tests passaram.
+- **FY. Visual Vocabulary regression.** Engine/UI tests passaram.
+- **FZ. Snapshot immutability.** Package JSON persistido e assets de sessão isolados.
+
+## GA–IP — Build, físico, preservação e confirmações
+
+- **GA. Package deletion/resume.** Testes de package snapshot e asset snapshot passam após apagar fonte.
+- **GB. Asset snapshot/version.** Cópia privada `interactive_lesson_assets/<session>/<assetId>.wav`, package hash/content version congelados.
+- **GC. Frontend Listening.** Hide-before-first-play e Play testados.
+- **GD. Frontend Repeat.** Estados/controles tipados compilados; fluxo backend completo testado.
+- **GE. Frontend Speaking.** Record imediato/no-reference testado.
+- **GF. Frontend resume.** DTO persistido é a única fonte; páginas recarregam por session ID.
+- **GG. Frontend error.** Estados de sessão ausente e link Diagnostics cobertos/compilados.
+- **GH. Double submission.** Backend rejeita análise Guided simultânea e stale playback.
+- **GI. Accessibility tests.** Queries por role/button/headings passam; auditoria estrutural descrita em DA–DC.
+- **GJ. Typecheck.** PASS via `npm run build`.
+- **GK. Lint.** PASS, zero findings.
+- **GL. Full frontend.** 33 files, 134 tests, 0 fail.
+- **GM. Rust fmt.** PASS `cargo fmt --check`.
+- **GN. Rust check.** PASS; apenas warnings legados/dead-code, sem erro.
+- **GO. Rust tests.** Execução final após todas as alterações: 170 pass, 0 fail, 15 ignored (total 185; inclui novos replay/snapshot/restore).
+- **GP. Python modification.** Nenhum arquivo Python alterado.
+- **GQ. Voice Streaming Python.** 15/15 PASS.
+- **GR. Pronunciation Python.** 12/12 PASS.
+- **GS. Vite build.** PASS.
+- **GT. Tauri debug.** PASS sem bundle; `src-tauri/target/debug/english-ai-coach.exe`.
+- **GU. Physical migration.** PASS pelo Rust, executada duas vezes; contagens preservadas.
+- **GV. Human DB schema.** 15.
+- **GW. Human Guided sessions.** 0.
+- **GX. Human Guided runtime states.** 0.
+- **GY. Human Guided attempts.** 0.
+- **GZ. Fake human data.** Nenhuma sessão/tentativa humana inserida.
+- **HA. Fixture Phase S.** `src-tauri/test-fixtures/interactive-lessons-phase-s/audio-foundation-v1/lesson.json`.
+- **HB. Temporary DB.** `%TEMP%/guided-audio-engine-<uuid>/test.sqlite3`, removido pelos testes.
+- **HC. Physical Listening.** Componente Piper físico PASS; playback humano end-to-end PENDENTE por ausência de speaker controlável.
+- **HD. Real Piper.** PASS: mono, 16-bit, 22050 Hz, 2,833 s de áudio, 124.972 bytes; WAV removido.
+- **HE. Replay.** PASS automatizado, count 2.
+- **HF. Bluetooth first word.** PENDENTE em hardware; prepend de 500 ms foi testado byte a byte.
+- **HG. Synthetic Repeat.** PASS técnico Piper→Pronunciation: completed 100.0 e 92.4.
+- **HH. Synthetic Speaking Check.** PASS técnico pelo mesmo pipeline/engine e fluxo de stage; não rotulado como humano.
+- **HI. Synthetic mismatch.** PASS: dois casos `content_mismatch`, score null.
+- **HJ. Human Repeat.** PENDENTE; nenhum microfone humano disponível neste ambiente.
+- **HK. Human Repeat score.** N/A, não fabricado.
+- **HL. Human Speaking Check.** PENDENTE.
+- **HM. Human Speaking score.** N/A, não fabricado.
+- **HN. Human results.** Nenhum resultado humano foi inventado.
+- **HO. Physical Listening resume.** PASS técnico em DB/fixture; validação humana PENDENTE.
+- **HP. Physical Repeat resume.** PASS técnico em DB/fixture; validação humana PENDENTE.
+- **HQ. Physical Speaking resume.** PASS técnico em DB/fixture; validação humana PENDENTE.
+- **HR. Package snapshot.** PASS.
+- **HS. Asset snapshot/deletion.** PASS dedicado.
+- **HT. Temp WAV audit.** 0 `guided-lesson-*` após testes.
+- **HU. Orphan process.** 0 Piper/voice bridge/pronunciation worker Python órfão.
+- **HV. Backup regression.** PASS.
+- **HW. Restore with Guided S.** PASS dedicado, runtime count restaurado.
+- **HX. Human DB before.** lesson 12; transcript 84; analysis 8; vocab 3; mistakes 6; placement 4; XP 5; achievements 3; review 0; pronunciation 1; voice metrics 2; Guided session/stage 0/0.
+- **HY. Human DB after.** Mesmos valores; novos runtime/attempt 0/0; schema 15.
+- **HZ. Pedagogical preservation.** Todos os counts HX=HY.
+- **IA. Gamification.** XP 5 e achievements 3 preservados.
+- **IB. CEFR.** Placement 4 preservado; sem mutation.
+- **IC. Memory.** Mistakes 6 e demais dados preservados.
+- **ID. Vocabulary.** 3 preservados.
+- **IE. Review.** 0 preservado.
+- **IF. Standalone Pronunciation.** 1 preservado; Guided não aparece na lista avulsa.
+- **IG. Voice Performance.** 2 preservados.
+- **IH. SQLite integrity.** `ok`.
+- **II. Foreign keys.** 0 violations.
+- **IJ. Offline.** Implementação e probes 100% locais.
+- **IK. Network audit.** Código S não adiciona HTTP/fetch; URL encontrada é somente fixture negativa de asset remoto.
+- **IL. Performance.** Pronunciation model load 1.657 ms (1,657 s); análises técnicas 452/259/16/14 ms. Piper físico gerou WAV válido; wall time do comando inclui startup do processo.
+- **IM. Problemas.** Corrigidos: comandos unittest inicialmente em cwd errado; reliability ainda declarava schema 14; fixture temp precisava criar root; nenhum ficou aberto.
+- **IN. Dívidas futuras.** Aceite manual de speaker/Bluetooth/microfone; catálogo de produção permanece propositalmente vazio; testes físicos humanos pendentes.
+- **IO. Readiness.** Fundação técnica pronta para a próxima fase Guided, condicionada ao aceite manual de hardware exigido acima; próxima fase não iniciada.
+- **IP. Confirmações.** `voice_coach_v2.py` e `voice_coach_v2_STABLE.py` intactos e com o mesmo hash; Voice Streaming v1, Teacher prompt, Analyzer prompt/schema, Placement, Profile, Memory, XP v1, Review, Pronunciation Engine/Score v1, Backup/Restore, Diagnostics, Startup Recovery, Phase Q e Phase R preservados. Whisper continua small.en-q5_1/12 threads; Conversation VAD 3,5 s; `qwen3.5:4b`/`think=false`; Piper `en_US-lessac-medium`; modelo acústico inalterado. Free Conversation segue disponível; normal Lesson pronunciation permanece null; Guided separado. Listening/Repeat/Speaking Check v1 implementados com áudio local e resultado acústico real, sem score gate, fake score, áudio/transcript persistido, Qwen, Lesson/Analysis/XP/streak/goal/achievement/CEFR/Profile/Memory/Vocabulary/Review/voice-metric mutation. Progresso ativo persiste; sem autoplay/mic auto-start. Exercise, Guided Conversation, Interactive Analysis, Speaking Gate, Curriculum, catálogo de produção, PDF, cloud, telemetry, installer, auto-update e próxima fase não foram implementados. Nenhum modelo/dependência/crate/plugin foi instalado; `setup-windows.ps1`, `ollama pull` e Git init não foram executados.

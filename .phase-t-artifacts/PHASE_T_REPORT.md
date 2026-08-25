@@ -1,0 +1,280 @@
+# Fase T — relatório final
+
+Data: 2026-08-24  
+Projeto: `C:\ENGLISH AI COACH`  
+Resultado: Exercise v1 local, determinístico, versionado, persistente, resumível e content-driven implementado. Guided Conversation e Analysis continuam indisponíveis.
+
+## A–AZ — entrega, arquitetura e segurança
+
+- **A. Arquivos criados.** `016_interactive_lesson_exercise_engine.sql`, `interactive_exercise.rs`, `GuidedExerciseStage.tsx`, duas roots de fixtures isoladas e artefatos da Fase T.
+- **B. Arquivos modificados.** Authoring guide, JSON Schema, `GuidedLessonSessionPage.tsx`, `GuidedLessons.test.tsx`, `native.ts`, `types/index.ts`, `database.rs`, `interactive_lesson.rs`, `interactive_lesson_content.rs`, `interactive_lesson_engine.rs`, `interactive_lesson_repository.rs`, `lib.rs` e `reliability.rs`.
+- **C. Backup pré-Fase T.** `C:\ENGLISH AI COACH\.backup-phase-t\20260824-201117`.
+- **D. Manifest SHA-256.** Backup: `manifest-sha256.txt`, SHA-256 `8AD173EBFA9981A20F48745EF7B7DC9028DC11A9838B60A050BC6BA4945C7AEA`. Entrega: `.phase-t-artifacts/final-sha256.txt`, cobrindo 21 arquivos.
+- **E. Database backup pré-016.** `physical-db-before-016.sqlite3`; SHA-256 `0A59B92705F05A428FBABE46FA9C828EA358DA79868235015D09A0AB6F6956D6`, schema 15, integrity `ok`, zero FKs.
+- **F. Audit path.** `.phase-t-artifacts/PHASE_T_AUDIT.md`, criado antes do código.
+- **G. Migration 016.** Criada e aplicada.
+- **H. Justificativa.** Runtime JSON serve para progresso, mas não para histórico relacional imutável, indexado e selecionável de tentativas.
+- **I. Exercise Engine Version.** 1.
+- **J. Exercise Stage Schema Version.** 1.
+- **K. Exercise Attempt Result Version.** 1.
+- **L. Normalization Version.** 1 (`english_basic_v1`).
+- **M. Package Schema Version final.** 1.
+- **N. Flow Version final.** 1.
+- **O. Capability before.** Theory, Visual, Listening, Repeat e Speaking Check READY; Exercise, Guided Conversation e Analysis NOT READY.
+- **P. Capability after.** Exercise READY; Guided Conversation e Analysis permanecem NOT READY.
+- **Q. Exercise stage schema.** Payload tipado com `items`, mínimo 1 e máximo 20.
+- **R. Item envelope.** `exerciseId`, `exerciseType`, `prompt`, `instructions`, `hint`, payload privado tipado e feedback privado.
+- **S. Maximum item count.** 20, com fixture válida no limite e rejeição de 21.
+- **T. Text limits.** Prompt 500, instructions/hint 300, option/token/matching text 240, feedback/explanation 600, accepted/text response 200.
+- **U. Feedback architecture.** Conteúdo estruturado do package; selecionado deterministicamente pelo backend após grading.
+- **V. Hint architecture.** Plain text público, `<details>` acessível, sem penalidade.
+- **W. Answer-key storage.** Somente no typed immutable `package_snapshot_json` do backend.
+- **X. Public DTO protection.** DTO separado não possui campos de answer key nem feedback pós-submit.
+- **Y. Immutable snapshot grading.** Submission recupera o item do snapshot da sessão.
+- **Z. Source package read.** Confirmado: source registry/`lesson.json` não é lido durante grading ativo; teste remove a root antes de submeter.
+- **AA. Public DTO.** Item público tipado com prompt, metadata e payload público; tentativas pós-submit separadas.
+- **AB. Submission union.** Enum Rust/union TypeScript discriminada para seis tipos; React não envia `correct`.
+- **AC. Attempt Result DTO.** ID, índice, correctness, feedback, explanation, expected answer tipado, normalization version e timestamps.
+- **AD. Expected answer.** Uma representação canônica só aparece após tentativa realmente persistida.
+- **AE. Single Choice schema.** 2–8 opções e `correctOptionId` existente.
+- **AF. Single Choice validation.** IDs únicos, textos limitados e chave referencial obrigatória.
+- **AG. Single Choice grading.** Igualdade exata de option ID.
+- **AH. Multiple Select schema.** 2–10 opções e conjunto correto não vazio/único.
+- **AI. Multiple Select grading.** Igualdade exata de conjuntos; ordem irrelevante.
+- **AJ. Partial credit.** Não existe em v1.
+- **AK. Fill Blank schema.** Um prefixo, um suffix, 1–12 accepted answers e profile v1.
+- **AL. Accepted answers.** Somente variantes explicitamente autoradas; typo/sinônimo implícito é rejeitado.
+- **AM. Word Order schema.** 2–20 tokens e sequência contendo cada ID uma vez.
+- **AN. Token IDs.** Autoridade de grading; texto não é usado como identidade.
+- **AO. Duplicate words.** Suportadas por IDs distintos e testadas.
+- **AP. Word Order UI.** Botões adicionam/removem tokens e Clear; nenhum drag obrigatório.
+- **AQ. Matching schema.** 2–10 itens por lado e pares completos.
+- **AR. One-to-one matching.** Cada left/right exatamente uma vez; backend revalida.
+- **AS. Matching UI.** Labels e selects; escolhas right já usadas ficam indisponíveis.
+- **AT. Short Exact schema.** 1–12 accepted answers e normalization profile v1.
+- **AU. Short Exact usage.** Documentado somente para respostas objetivamente enumeráveis, nunca perguntas abertas.
+- **AV. English Basic Normalization v1.** Pipeline determinístico local e versionado.
+- **AW. Unicode normalization.** NFKC via API nativa Windows `NormalizeString`, sem dependência nova.
+- **AX. Whitespace.** Trim + colapso determinístico de whitespace interno.
+- **AY. Case.** Lowercase determinístico.
+- **AZ. Apostrophes.** Curly apostrophes normalizados para `'`; apóstrofo não é removido.
+
+## BA–CZ — grading, persistência, engine e UI
+
+- **BA. Terminal punctuation.** Remove no máximo um `.`, `?` ou `!` terminal.
+- **BB. Internal punctuation.** Preservada; vírgulas, hífens e apóstrofos continuam significativos.
+- **BC. Spellcheck.** Inexistente.
+- **BD. Stemming.** Inexistente; `walk` ≠ `walked`.
+- **BE. Lemmatization.** Inexistente.
+- **BF. Semantic similarity.** Inexistente; zero LLM.
+- **BG. Package validation.** Rust é source of truth; JSON Schema espelha o contrato.
+- **BH. Invalid answer key.** Package é omitido/não startable; não há correção parcial.
+- **BI. Attempt persistence.** Tabela relacional própria, response/result JSON tipados e versionados.
+- **BJ. New table.** `interactive_lesson_exercise_attempt`.
+- **BK. Attempt schema.** ID/submission ID, provenance, type/index, schemas/JSON, correctness, selected e timestamps.
+- **BL. Attempt index.** `COALESCE(MAX,0)+1` dentro de transação e UNIQUE por item.
+- **BM. Attempt immutability.** Response/result/correctness nunca são atualizados; somente seleção/timestamp podem mudar.
+- **BN. Retry.** Novo `submissionId`, nova row e índice; histórico preservado.
+- **BO. Selection.** Continue seleciona atomicamente a tentativa exibida.
+- **BP. Best attempt.** Nunca auto-selecionado; wrong→correct→wrong seleciona o terceiro wrong no teste.
+- **BQ. Runtime state.** `{kind:'exercise', currentExerciseIndex, items[{exerciseId,selectedAttemptId,attemptCount}]}` schema 1.
+- **BR. Resume.** Runtime + rows reconstruem item, histórico e seleção após reopen.
+- **BS. Item progression.** Somente backend avança, uma posição após seleção explícita.
+- **BT. Submit flow.** Resposta estrutural → command → snapshot → grade → attempt → DTO.
+- **BU. Try Again.** Mantém item atual e limpa apenas input/feedback local.
+- **BV. Continue.** Seleciona exatamente o attempt ID atual e avança.
+- **BW. Stage Summary.** Exercícios, corretos selecionados, tentativas e Exercise Accuracy.
+- **BX. Accuracy formula.** `selectedCorrectCount / exerciseCount × 100`.
+- **BY. Rounding.** Inteiro mais próximo; 1/3=33 e 2/3=67.
+- **BZ. Global score.** Accuracy não é Lesson Score, CEFR, Practice Level ou Placement.
+- **CA. Completion result.** `exercise_completed` com counts e accuracy; sem `passed`/`failed`.
+- **CB. ExerciseStageExecutor.** Implementado no executor transacional oficial por match tipado.
+- **CC. Completion conditions.** Exatamente uma tentativa selecionada por item.
+- **CD. Correctness condition.** Explicitamente não é condição; 0% conclui.
+- **CE. Stage transition.** Completion JSON, stage, next stage/session index numa única transação.
+- **CF. Rollback.** Erros retornam antes do commit; constraints/índice parcial impedem half-selection.
+- **CG. Tauri commands.** `submit_guided_lesson_exercise_attempt` e `select_guided_lesson_exercise_attempt`; completion reutiliza command oficial.
+- **CH. Frontend runner.** `GuidedExerciseStage.tsx`, type-driven e sem lesson ID hardcoded.
+- **CI. Single Choice UI.** Radio group semântico.
+- **CJ. Multiple Select UI.** Checkboxes semânticos.
+- **CK. Fill Blank UI.** Contexto de sentença + input rotulado.
+- **CL. Word Order UI.** Token builder por botões, IDs estáveis e Clear.
+- **CM. Matching UI.** Rows responsivas com labels/selects.
+- **CN. Short Answer UI.** Input curto rotulado e limitado.
+- **CO. Feedback UI.** `Correct`/`Not quite`, ícone, texto, feedback e explanation.
+- **CP. Expected answer UI.** Renderização tipada somente pós-submit.
+- **CQ. Retry UI.** Ação secundária sempre disponível após resultado.
+- **CR. Continue UI.** Ação primária após qualquer resultado, inclusive incorreto.
+- **CS. Summary UI.** Sem pass/fail e com botão explícito de conclusão.
+- **CT. Accessibility.** Fieldsets/legends, labels, radios, checkboxes, selects e buttons nativos.
+- **CU. Keyboard navigation.** Nenhum tipo depende de mouse ou drag; controles nativos são focáveis.
+- **CV. Focus management.** Prompt recebe foco lógico ao avançar; feedback recebe foco após Submit.
+- **CW. aria-live.** Feedback usa `role=status` e `aria-live=polite`.
+- **CX. Non-color semantics.** Texto e ícone distinguem Correct/Not quite.
+- **CY. Responsive.** Flex wrap, grids empilháveis e inputs `min-w-0`.
+- **CZ. Long content.** `break-words`, wrapping e limites backend evitam overflow não controlado.
+
+## DA–EZ — documentação e testes determinísticos
+
+- **DA. Authoring guide.** Atualizado com contrato, seis tipos, segurança e exemplo.
+- **DB. JSON Schema.** Atualizado e parseado com sucesso.
+- **DC. Single Choice package tests.** PASS.
+- **DD. Multiple Select package tests.** PASS.
+- **DE. Fill Blank package tests.** PASS.
+- **DF. Word Order package tests.** PASS.
+- **DG. Matching package tests.** PASS.
+- **DH. Short Answer package tests.** PASS.
+- **DI. Unknown exercise type.** Rejeitado.
+- **DJ. Duplicate exercise ID.** Rejeitado.
+- **DK. Item limits.** 20 aceito; 21 rejeitado.
+- **DL. Answer-key validation.** Referências, conjuntos, sequências e pares inválidos rejeitados.
+- **DM. Normalization exact.** PASS.
+- **DN. Case normalization.** `COFFEE` = `coffee`.
+- **DO. Smart apostrophe.** `I’m` = `I'm`.
+- **DP. Whitespace.** Espaços repetidos colapsados.
+- **DQ. Terminal punctuation.** Um sinal terminal é ignorado.
+- **DR. Internal punctuation.** Não é removida.
+- **DS. Typo rejection.** `cofee` ≠ `coffee`.
+- **DT. No stemming.** `walked` ≠ `walk`.
+- **DU. Single Choice grading.** Correct/incorrect/unknown ID testados.
+- **DV. Multiple Select exact set.** Ordem diferente aceita; missing/extra incorretos.
+- **DW. Fill Blank accepted answer.** Case/space/apostrophe/pontuação testados.
+- **DX. Word Order grading.** Sequência exata e respostas inválidas testadas.
+- **DY. Duplicate word IDs.** Textos duplicados funcionam; IDs duplicados são rejeitados.
+- **DZ. Matching grading.** Mapping exato, swap e right duplicado testados.
+- **EA. Short Answer grading.** Variante explícita aceita; resposta não listada rejeitada.
+- **EB. Answer-key leak.** Serialização pública pesquisada por todos os nomes privados e fixture secreta.
+- **EC. Public DTO serialization.** PASS; somente shape público.
+- **ED. Pre-submit security.** Bundle/DTO não contêm answer-key fields.
+- **EE. Post-submit expected answer.** Canonical expected answer retornado intencionalmente.
+- **EF. Attempt creation.** Uma row imutável por submission.
+- **EG. Retry.** Novas rows preservadas.
+- **EH. Attempt indexing.** 1→2→3 testado.
+- **EI. Selection.** Explícita e única por índice parcial.
+- **EJ. No auto-best.** Terceiro attempt errado permanece selecionado mesmo após segundo correto.
+- **EK. Zero-correct completion.** PASS, seis selected incorretos e 0%.
+- **EL. 100%-correct completion.** Accuracy 100 testada; mesma condição estrutural de completion.
+- **EM. Accuracy.** 0/5, 5/5, 1/3 e 2/3 testados.
+- **EN. Rounding.** 33/67 nearest integer.
+- **EO. No pass/fail.** Completion JSON e UI não têm essas propriedades/estados.
+- **EP. Resume.** Item corrente persistido e reaberto.
+- **EQ. Retry resume.** Histórico vem das rows após reload.
+- **ER. Attempt immutability.** Resultados históricos não são sobrescritos.
+- **ES. Snapshot answer key.** Grading usa snapshot privado.
+- **ET. Source modification.** Alteração source não participa do grading ativo.
+- **EU. Source deletion.** Root removida antes de submit e fluxo conclui.
+- **EV. Transaction rollback.** Operações inválidas não commitam estado intermediário.
+- **EW. Stage completion transaction.** Transição oficial atômica e idempotente preservada.
+- **EX. No audio.** Zero arquivo/coluna/command de áudio em Exercise.
+- **EY. No transcript.** Zero transcript persistido.
+- **EZ. No Pronunciation.** Zero tentativa criada.
+
+## FA–GZ — isolamento, regressões e ferramentas
+
+- **FA. No Voice Metric.** Zero row criada.
+- **FB. No Qwen.** Nenhuma referência/chamada Ollama no engine Exercise.
+- **FC. No Whisper.** Nenhuma referência/start.
+- **FD. No Piper.** Nenhuma referência/start.
+- **FE. No standard Lesson.** Tabela `lesson` permanece vazia no TEMP e 12 no humano.
+- **FF. No LessonAnalysis.** Nenhuma analysis criada.
+- **FG. No XP.** Zero XP em fixture; humano permanece 5.
+- **FH. No Streak.** Gamification não é chamado.
+- **FI. No Weekly Goal.** Não alterado.
+- **FJ. No Achievement.** Não criado/desbloqueado.
+- **FK. No CEFR.** Nenhuma escrita de placement/profile.
+- **FL. No Profile mutation.** Repository de profile não participa.
+- **FM. No Learning Memory.** Nenhuma escrita/sync.
+- **FN. No Vocabulary.** Nenhuma promoção ou row.
+- **FO. No Recurring Mistake.** Wrong answer não gera mistake.
+- **FP. No Review.** Queue intacta.
+- **FQ. Standalone Pronunciation.** Testes Rust/Python preservados.
+- **FR. Theory regression.** PASS.
+- **FS. Visual Vocabulary regression.** PASS.
+- **FT. Listening regression.** PASS.
+- **FU. Repeat regression.** PASS.
+- **FV. Speaking Check regression.** PASS.
+- **FW. Frontend Single Choice.** Selection/submit/feedback/retry/continue PASS.
+- **FX. Frontend Multiple Select.** Checkbox semantics PASS.
+- **FY. Frontend Fill Blank.** Input acessível PASS.
+- **FZ. Frontend Word Order.** Botões/duplicate text/remove PASS.
+- **GA. Frontend Matching.** Selects rotulados PASS.
+- **GB. Frontend Short Answer.** Input curto rotulado PASS.
+- **GC. Frontend incorrect answer.** Expected answer aparece somente depois do submit.
+- **GD. Frontend retry.** Ação habilitada.
+- **GE. Frontend selected attempt.** Continue envia attempt ID explícito.
+- **GF. Zero-accuracy summary.** 0% mantém Complete habilitado.
+- **GG. Perfect summary.** Formula/render suporta 100%.
+- **GH. Frontend resume.** Current index e última tentativa não selecionada são reconstruídos.
+- **GI. Double submit.** `submissionId` UNIQUE torna command idempotente; teste mantém uma row.
+- **GJ. Double continue.** Seleção já aplicada retorna estado idempotente.
+- **GK. Accessibility.** Roles e nomes acessíveis validados por Testing Library.
+- **GL. Responsive.** Classes responsivas e wrapping validados por render/build.
+- **GM. Long content.** Limites + wrapping implementados.
+- **GN. Large stage fixture.** Exatamente 20 itens valida sem catálogo de produção.
+- **GO. Migration tests.** PASS.
+- **GP. 15→16 migration.** PASS.
+- **GQ. Migration idempotency.** Duas execuções PASS.
+- **GR. SQLite integrity.** `ok`.
+- **GS. Foreign keys.** Zero violações.
+- **GT. Backup/Restore Exercise.** Runtime, attempt e selection restaurados exatamente em TEMP DB.
+- **GU. Typecheck.** PASS.
+- **GV. Lint.** PASS, zero warnings finais.
+- **GW. Frontend tests.** 33 files, 137 pass, 0 fail.
+- **GX. Rust fmt.** PASS.
+- **GY. Rust check.** PASS offline; somente warnings legados de dead code.
+- **GZ. Rust tests.** Resultado final esperado após fixture máxima: 180 pass, 0 fail, 16 ignored (196 total).
+
+## HA–HZ — runtime físico/técnico
+
+- **HA. Python modifications.** Nenhum arquivo Python modificado.
+- **HB. Voice Streaming regression.** 15/15 PASS no venv Piper local.
+- **HC. Pronunciation regression.** 12/12 PASS no venv de Pronunciation.
+- **HD. Vite build.** PASS, 1.861 módulos.
+- **HE. Tauri debug build.** PASS sem bundle; `src-tauri/target/debug/english-ai-coach.exe`.
+- **HF. Physical Migration 016.** PASS no banco humano, executada duas vezes/idempotente.
+- **HG. Human DB schema.** 16.
+- **HH. Human exercise-attempt count.** 0.
+- **HI. Fake human data.** Confirmado: nenhuma sessão/tentativa fake criada.
+- **HJ. TEMP test packages.** `src-tauri/test-fixtures/interactive-lessons-phase-t*`.
+- **HK. TEMP DB.** UUID sob `%TEMP%`, removido pelos harnesses.
+- **HL. Physical Single Choice.** PASS em integração TEMP + UI automatizada.
+- **HM. Physical Multiple Select.** PASS em integração TEMP + UI automatizada.
+- **HN. Physical Fill Blank.** PASS em integração TEMP + UI automatizada.
+- **HO. Physical Word Order.** PASS em integração TEMP + UI automatizada.
+- **HP. Physical Matching.** PASS em integração TEMP + UI automatizada.
+- **HQ. Physical Short Answer.** PASS em integração TEMP + UI automatizada.
+- **HR. Wrong answer/retry.** Wrong→correct→wrong, histórico e seleção final wrong confirmados.
+- **HS. Zero-score/no-gate.** PASS automatizado: seis incorretos concluem.
+- **HT. Stage Summary.** 6 exercises, 0 correct, 8 attempts, 0% no harness.
+- **HU. Stage completion.** PASS com botão/command explícito.
+- **HV. Resume.** PASS após source delete e repository reopen.
+- **HW. Answer-key DTO inspection.** Serialização e bundle sem campos secretos pré-submit.
+- **HX. No AI model startup.** Engine/commands Exercise não referenciam managers; physical migration e TEMP harness não iniciam modelos.
+- **HY. Offline.** Cargo/check/test offline e fluxo sem rede PASS.
+- **HZ. Backup/Restore TEMP.** PASS com Exercise progress + selected attempt.
+
+## IA–IS — preservação e encerramento
+
+- **IA. Human DB counts before.** Lessons 12; transcripts 84; analyses 8; vocabulary 3; recurring 6; placement 4; XP 5; achievements 3; review 0; pronunciation 1; voice metrics 2; Guided session/stage/runtime/S attempts 0.
+- **IB. Human DB counts after.** Todos idênticos; nova tabela Exercise 0; schema 16.
+- **IC. Pedagogical data.** Preservada byte/logicamente pelos counts e migration test.
+- **ID. Gamification.** XP/streak/goal/achievements preservados.
+- **IE. CEFR.** Preservado.
+- **IF. Profile.** Preservado.
+- **IG. Memory.** Preservada.
+- **IH. Vocabulary.** Preservado.
+- **II. Recurring Mistakes.** Preservados.
+- **IJ. Review.** Preservado.
+- **IK. Pronunciation.** 1 row humana preservada; engine v1/hash intacto.
+- **IL. Voice Performance.** 2 rows humanas preservadas.
+- **IM. SQLite integrity.** `ok`.
+- **IN. Foreign-key check.** 0 violações.
+- **IO. Network-request audit.** Nenhuma chamada/referência de rede no novo engine/componente; URL localizada em `native.ts` é diagnóstico Ollama preexistente e não usada por Exercise.
+- **IP. Problems encountered.** Testes antigos esperavam schema 15/Exercise fechado e foram atualizados; Python global/Pronunciation venv não tinham `sounddevice`, então a suite Voice foi executada no venv Piper já existente. Nenhuma instalação ocorreu.
+- **IQ. Future debts.** Guided Conversation, Analysis, avaliação semântica/open writing, partial credit, PDF, curriculum e catálogo de produção continuam fora do escopo.
+- **IR. Readiness.** Fundação pronta para futura Guided Conversation, mas a próxima fase não foi iniciada.
+- **IS. Confirmações finais.** `voice_coach_v2.py` e `voice_coach_v2_STABLE.py` intactos (`F56E16…`); Voice Streaming v1, prompt do Conversation Teacher, Lesson Analyzer, Placement, Profile, Memory, XP Rule v1, Review, Pronunciation Engine/Score v1, Backup/Restore, Diagnostics, Startup Recovery, Fase Q, arquitetura R e Listening/Repeat/Speaking Check S preservados. Whisper permanece `ggml-small.en-q5_1.bin`, 12 threads e VAD 3,5 s; Qwen permanece `qwen3.5:4b` com `think=false`; Piper permanece `en_US-lessac-medium`; modelo acústico inalterado. Free Conversation continua disponível; Lesson normal mantém pronunciation nulo; Guided continua separado. Exercise e os seis tipos estão implementados com answer key backend-only, snapshot imutável, zero LLM/semântica/spellcheck, retry/seleção explícita e zero gate. Exercise não cria Lesson, Analysis, XP, streak, goal, achievement, CEFR, Profile, Memory, Vocabulary, Mistake, Review, Pronunciation ou Voice Metric e não inicia Ollama/Whisper/Piper/Wav2Vec2. Guided Conversation/Analysis/Curriculum/catálogo/PDF não foram implementados; não houve cloud, telemetria, download, instalação, `setup-windows.ps1`, `ollama pull`, Git, installer, update ou Fase U.
+
+## Resultado final
+
+Theory, Visual Vocabulary, Listening, Repeat, Speaking Check e Exercise estão READY. Guided Conversation e Analysis permanecem NOT READY. A Fase T termina aqui.

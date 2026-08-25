@@ -1,0 +1,563 @@
+{
+  "packageSchemaVersion": 1,
+  "lessonFlowVersion": 1,
+  "lessonId": "a1-u08-l02-sizes-prices",
+  "contentVersion": 1,
+  "publicationState": "published",
+  "title": "Sizes & Prices",
+  "description": "Ask for a clothing size and understand a simple price.",
+  "language": "en",
+  "referenceLocale": "en-US",
+  "cefrBand": "A1",
+  "estimatedMinutes": 24,
+  "objectives": [
+    "Ask for a clothing size and understand a simple price."
+  ],
+  "tags": [
+    "english-core",
+    "a1",
+    "unit-08",
+    "production"
+  ],
+  "assets": [],
+  "stages": [
+    {
+      "stageId": "theory",
+      "stageType": "theory",
+      "stageSchemaVersion": 1,
+      "title": "Understand the language",
+      "instructions": "Read the explanation, examples, common error, and recap.",
+      "required": true,
+      "payload": {
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "This lesson prepares you to ask for a clothing size and understand a simple price. The central language is what size/how much and number review. It belongs to the practical context of shopping & everyday english. Focus first on meaning: decide what information the listener needs. Then choose the subject, verb form, and useful detail. At A1, keep the message short and concrete. One clear sentence is enough before the other person responds. The same language returns in the listening, repeat, speaking, exercises, and guided conversation stages."
+          },
+          {
+            "type": "callout",
+            "title": "Pattern",
+            "text": "what size/how much and number review"
+          },
+          {
+            "type": "example",
+            "english": "What size do you need?",
+            "explanation": "Use this model to begin the sizes & prices exchange."
+          },
+          {
+            "type": "example",
+            "english": "How much is this jacket?",
+            "explanation": "This sizes & prices model adds a different detail or response."
+          },
+          {
+            "type": "example",
+            "english": "Can you help me, please?",
+            "explanation": "Use this question or response to keep the sizes & prices exchange moving."
+          },
+          {
+            "type": "paragraph",
+            "text": "Notice the two models: “What size do you need?” and “How much is this jacket?” They show the pattern in complete communication, not as isolated grammar. Say the model aloud, replace one detail, and check that the new sentence keeps the intended meaning. When the other person asks a follow-up question, answer directly and add a relevant detail. This makes the exchange natural while keeping the language controlled."
+          },
+          {
+            "type": "callout",
+            "title": "Common error",
+            "text": "Do not mix the word order or verb form with another pattern. Keep the controlled form for this lesson: what size/how much and number review."
+          },
+          {
+            "type": "bullet_list",
+            "items": [
+              "Communicative goal: Ask for a clothing size and understand a simple price.",
+              "Core pattern: what size/how much and number review.",
+              "Use one clear model, add a relevant detail, and respond to the other speaker."
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "stageId": "visual-vocabulary",
+      "stageType": "visual_vocabulary",
+      "stageSchemaVersion": 1,
+      "title": "Build your vocabulary",
+      "instructions": "Study each term, meaning, and contextual example.",
+      "required": true,
+      "payload": {
+        "items": [
+          {
+            "itemId": "dress",
+            "term": "dress",
+            "meaning": "a one-piece garment covering the body",
+            "example": "Use “dress” while you practice sizes & prices in context.",
+            "imageAssetId": null
+          },
+          {
+            "itemId": "shoes",
+            "term": "shoes",
+            "meaning": "outer coverings worn on the feet",
+            "example": "Use “shoes” while you practice sizes & prices in context.",
+            "imageAssetId": null
+          },
+          {
+            "itemId": "color",
+            "term": "color",
+            "meaning": "the appearance described as red, blue, or another hue",
+            "example": "Use “color” while you practice sizes & prices in context.",
+            "imageAssetId": null
+          },
+          {
+            "itemId": "size",
+            "term": "size",
+            "meaning": "a measurement showing how large something is",
+            "example": "Use “size” while you practice sizes & prices in context.",
+            "imageAssetId": null
+          },
+          {
+            "itemId": "price",
+            "term": "price",
+            "meaning": "the amount of money something costs",
+            "example": "Use “price” while you practice sizes & prices in context.",
+            "imageAssetId": null
+          },
+          {
+            "itemId": "cheap",
+            "term": "cheap",
+            "meaning": "costing little money",
+            "example": "Use “cheap” while you practice sizes & prices in context.",
+            "imageAssetId": null
+          },
+          {
+            "itemId": "expensive",
+            "term": "expensive",
+            "meaning": "costing a lot of money",
+            "example": "Use “expensive” while you practice sizes & prices in context.",
+            "imageAssetId": null
+          },
+          {
+            "itemId": "this",
+            "term": "this",
+            "meaning": "the near thing being indicated",
+            "example": "Use “this” while you practice sizes & prices in context.",
+            "imageAssetId": null
+          }
+        ]
+      }
+    },
+    {
+      "stageId": "listening",
+      "stageType": "listening",
+      "stageSchemaVersion": 1,
+      "title": "Listen in context",
+      "instructions": "Listen before revealing the text, then notice the target pattern.",
+      "required": true,
+      "payload": {
+        "segments": [
+          {
+            "segmentId": "segment-1",
+            "text": "What size do you need? How much is this jacket?",
+            "audioAssetId": null
+          },
+          {
+            "segmentId": "segment-2",
+            "text": "Can you help me, please? Yes, of course.",
+            "audioAssetId": null
+          },
+          {
+            "segmentId": "segment-3",
+            "text": "How much is this jacket? Can you help me, please?",
+            "audioAssetId": null
+          }
+        ],
+        "revealTextAfterFirstPlay": true
+      }
+    },
+    {
+      "stageId": "repeat",
+      "stageType": "repeat",
+      "stageSchemaVersion": 1,
+      "title": "Repeat useful chunks",
+      "instructions": "Repeat each complete expression with clear rhythm.",
+      "required": true,
+      "payload": {
+        "targets": [
+          {
+            "targetId": "repeat-1",
+            "text": "What size do you need?",
+            "referenceAudioAssetId": null,
+            "hint": "Keep the words together as one communicative chunk."
+          },
+          {
+            "targetId": "repeat-2",
+            "text": "How much is this jacket?",
+            "referenceAudioAssetId": null,
+            "hint": "Keep the words together as one communicative chunk."
+          },
+          {
+            "targetId": "repeat-3",
+            "text": "Can you help me, please?",
+            "referenceAudioAssetId": null,
+            "hint": "Keep the words together as one communicative chunk."
+          },
+          {
+            "targetId": "repeat-4",
+            "text": "Yes, of course.",
+            "referenceAudioAssetId": null,
+            "hint": "Keep the words together as one communicative chunk."
+          },
+          {
+            "targetId": "repeat-5",
+            "text": "Thanks for talking about shopping & everyday english with me.",
+            "referenceAudioAssetId": null,
+            "hint": "Keep the words together as one communicative chunk."
+          }
+        ]
+      }
+    },
+    {
+      "stageId": "speaking-check",
+      "stageType": "speaking_check",
+      "stageSchemaVersion": 1,
+      "title": "Speaking Check",
+      "instructions": "Say expressions already presented in this Lesson.",
+      "required": true,
+      "payload": {
+        "targets": [
+          {
+            "targetId": "speaking-1",
+            "instruction": "Say the complete model naturally.",
+            "targetText": "What size do you need?",
+            "hint": "Use the same words and clear sentence stress."
+          },
+          {
+            "targetId": "speaking-2",
+            "instruction": "Say the complete model naturally.",
+            "targetText": "How much is this jacket?",
+            "hint": "Use the same words and clear sentence stress."
+          },
+          {
+            "targetId": "speaking-3",
+            "instruction": "Say the complete model naturally.",
+            "targetText": "Can you help me, please?",
+            "hint": "Use the same words and clear sentence stress."
+          },
+          {
+            "targetId": "speaking-4",
+            "instruction": "Say the complete model naturally.",
+            "targetText": "Yes, of course.",
+            "hint": "Use the same words and clear sentence stress."
+          }
+        ]
+      }
+    },
+    {
+      "stageId": "exercise",
+      "stageType": "exercise",
+      "stageSchemaVersion": 1,
+      "title": "Check your understanding",
+      "instructions": "Complete each deterministic practice item.",
+      "required": true,
+      "payload": {
+        "items": [
+          {
+            "exerciseId": "choose-model",
+            "exerciseType": "single_choice",
+            "prompt": "Choose the model that fits the communicative goal.",
+            "instructions": null,
+            "hint": "Ask for a clothing size and understand a simple price.",
+            "payload": {
+              "options": [
+                {
+                  "optionId": "a",
+                  "text": "What size do you need?"
+                },
+                {
+                  "optionId": "b",
+                  "text": "The purple engine sleeps quickly."
+                },
+                {
+                  "optionId": "c",
+                  "text": "No information is possible."
+                }
+              ],
+              "correctOptionId": "a"
+            },
+            "feedback": {
+              "correct": "Correct. The answer fits the lesson context.",
+              "incorrect": "Try again and use the model from this lesson.",
+              "explanation": "what size/how much and number review"
+            }
+          },
+          {
+            "exerciseId": "select-core-vocabulary",
+            "exerciseType": "multiple_select",
+            "prompt": "Select both words that belong to this lesson context.",
+            "instructions": null,
+            "hint": "Shopping & Everyday English",
+            "payload": {
+              "options": [
+                {
+                  "optionId": "a",
+                  "text": "dress"
+                },
+                {
+                  "optionId": "b",
+                  "text": "shoes"
+                },
+                {
+                  "optionId": "c",
+                  "text": "industrial turbine"
+                },
+                {
+                  "optionId": "d",
+                  "text": "quantum geology"
+                }
+              ],
+              "correctOptionIds": [
+                "a",
+                "b"
+              ]
+            },
+            "feedback": {
+              "correct": "Correct. The answer fits the lesson context.",
+              "incorrect": "Try again and use the model from this lesson.",
+              "explanation": "Both correct words appear in Visual Vocabulary."
+            }
+          },
+          {
+            "exerciseId": "complete-response",
+            "exerciseType": "fill_blank",
+            "prompt": "Type the exact practiced response shown in the hint.",
+            "instructions": null,
+            "hint": "How much is this jacket?",
+            "payload": {
+              "prefix": "",
+              "suffix": "",
+              "acceptedAnswers": [
+                "How much is this jacket?"
+              ],
+              "normalizationProfile": "english_basic_v1"
+            },
+            "feedback": {
+              "correct": "Correct. The answer fits the lesson context.",
+              "incorrect": "Try again and use the model from this lesson.",
+              "explanation": "Use the complete model response."
+            }
+          },
+          {
+            "exerciseId": "order-model",
+            "exerciseType": "word_order",
+            "prompt": "Put the model in its natural order.",
+            "instructions": null,
+            "hint": null,
+            "payload": {
+              "tokens": [
+                {
+                  "tokenId": "t6",
+                  "text": "?"
+                },
+                {
+                  "tokenId": "t5",
+                  "text": "need"
+                },
+                {
+                  "tokenId": "t4",
+                  "text": "you"
+                },
+                {
+                  "tokenId": "t3",
+                  "text": "do"
+                },
+                {
+                  "tokenId": "t2",
+                  "text": "size"
+                },
+                {
+                  "tokenId": "t1",
+                  "text": "What"
+                }
+              ],
+              "correctOrder": [
+                "t1",
+                "t2",
+                "t3",
+                "t4",
+                "t5",
+                "t6"
+              ]
+            },
+            "feedback": {
+              "correct": "Correct. The answer fits the lesson context.",
+              "incorrect": "Try again and use the model from this lesson.",
+              "explanation": "Keep the modeled English word order."
+            }
+          },
+          {
+            "exerciseId": "match-vocabulary",
+            "exerciseType": "matching",
+            "prompt": "Match each term to its meaning.",
+            "instructions": null,
+            "hint": null,
+            "payload": {
+              "leftItems": [
+                {
+                  "itemId": "l1",
+                  "text": "dress"
+                },
+                {
+                  "itemId": "l2",
+                  "text": "shoes"
+                },
+                {
+                  "itemId": "l3",
+                  "text": "color"
+                }
+              ],
+              "rightItems": [
+                {
+                  "itemId": "r1",
+                  "text": "a one-piece garment covering the body"
+                },
+                {
+                  "itemId": "r2",
+                  "text": "outer coverings worn on the feet"
+                },
+                {
+                  "itemId": "r3",
+                  "text": "the appearance described as red, blue, or another hue"
+                }
+              ],
+              "correctPairs": [
+                {
+                  "leftId": "l1",
+                  "rightId": "r1"
+                },
+                {
+                  "leftId": "l2",
+                  "rightId": "r2"
+                },
+                {
+                  "leftId": "l3",
+                  "rightId": "r3"
+                }
+              ]
+            },
+            "feedback": {
+              "correct": "Correct. The answer fits the lesson context.",
+              "incorrect": "Try again and use the model from this lesson.",
+              "explanation": "Review each term with its meaning and example."
+            }
+          },
+          {
+            "exerciseId": "exact-useful-chunk",
+            "exerciseType": "short_answer_exact",
+            "prompt": "Type the finite model chunk shown in the hint.",
+            "instructions": null,
+            "hint": "Can you help me, please?",
+            "payload": {
+              "acceptedAnswers": [
+                "Can you help me, please?"
+              ],
+              "normalizationProfile": "english_basic_v1"
+            },
+            "feedback": {
+              "correct": "Correct. The answer fits the lesson context.",
+              "incorrect": "Try again and use the model from this lesson.",
+              "explanation": "This checks one exact practiced chunk, not an open response."
+            }
+          },
+          {
+            "exerciseId": "choose-correct-form",
+            "exerciseType": "single_choice",
+            "prompt": "Which sentence follows the lesson pattern?",
+            "instructions": null,
+            "hint": "what size/how much and number review",
+            "payload": {
+              "options": [
+                {
+                  "optionId": "a",
+                  "text": "How much is this jacket?"
+                },
+                {
+                  "optionId": "b",
+                  "text": "She are did going."
+                },
+                {
+                  "optionId": "c",
+                  "text": "I is to yesterday."
+                }
+              ],
+              "correctOptionId": "a"
+            },
+            "feedback": {
+              "correct": "Correct. The answer fits the lesson context.",
+              "incorrect": "Try again and use the model from this lesson.",
+              "explanation": "what size/how much and number review"
+            }
+          },
+          {
+            "exerciseId": "recall-vocabulary",
+            "exerciseType": "fill_blank",
+            "prompt": "Type the term that means: a measurement showing how large something is",
+            "instructions": null,
+            "hint": "It appears in Visual Vocabulary.",
+            "payload": {
+              "prefix": "",
+              "suffix": "",
+              "acceptedAnswers": [
+                "size"
+              ],
+              "normalizationProfile": "english_basic_v1"
+            },
+            "feedback": {
+              "correct": "Correct. The answer fits the lesson context.",
+              "incorrect": "Try again and use the model from this lesson.",
+              "explanation": "a measurement showing how large something is"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "stageId": "guided-conversation",
+      "stageType": "guided_conversation",
+      "stageSchemaVersion": 1,
+      "title": "Shopping & Everyday English conversation",
+      "instructions": "Use the prepared language in a practical exchange.",
+      "required": true,
+      "payload": {
+        "scenario": "You are in a realistic everyday situation related to shopping & everyday english. Practice sizes & prices and respond to relevant follow-up questions.",
+        "studentRole": "English learner handling the situation",
+        "teacherRole": "Helpful conversation partner",
+        "goal": "Ask for a clothing size and understand a simple price.",
+        "targetVocabulary": [
+          "dress",
+          "shoes",
+          "color",
+          "size",
+          "price",
+          "cheap",
+          "expensive",
+          "this"
+        ],
+        "targetExpressions": [
+          "What size do you need?",
+          "How much is this jacket?",
+          "Can you help me, please?",
+          "Yes, of course.",
+          "Thanks for talking about shopping & everyday english with me."
+        ],
+        "minimumStudentTurns": 4,
+        "recommendedStudentTurns": 6,
+        "maximumStudentTurns": 8
+      }
+    },
+    {
+      "stageId": "analysis",
+      "stageType": "analysis",
+      "stageSchemaVersion": 1,
+      "title": "Lesson Review",
+      "instructions": "Review the evidence from your completed practice.",
+      "required": true,
+      "payload": {}
+    }
+  ]
+}

@@ -1,0 +1,563 @@
+{
+  "packageSchemaVersion": 1,
+  "lessonFlowVersion": 1,
+  "lessonId": "a1-u05-l01-my-home",
+  "contentVersion": 1,
+  "publicationState": "published",
+  "title": "My Home",
+  "description": "Name rooms and give a simple description of a home.",
+  "language": "en",
+  "referenceLocale": "en-US",
+  "cefrBand": "A1",
+  "estimatedMinutes": 24,
+  "objectives": [
+    "Name rooms and give a simple description of a home."
+  ],
+  "tags": [
+    "english-core",
+    "a1",
+    "unit-05",
+    "production"
+  ],
+  "assets": [],
+  "stages": [
+    {
+      "stageId": "theory",
+      "stageType": "theory",
+      "stageSchemaVersion": 1,
+      "title": "Understand the language",
+      "instructions": "Read the explanation, examples, common error, and recap.",
+      "required": true,
+      "payload": {
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "This lesson prepares you to name rooms and give a simple description of a home. The central language is be, have, and room nouns. It belongs to the practical context of home & around town. Focus first on meaning: decide what information the listener needs. Then choose the subject, verb form, and useful detail. At A1, keep the message short and concrete. One clear sentence is enough before the other person responds. The same language returns in the listening, repeat, speaking, exercises, and guided conversation stages."
+          },
+          {
+            "type": "callout",
+            "title": "Pattern",
+            "text": "be, have, and room nouns"
+          },
+          {
+            "type": "example",
+            "english": "My home has two bedrooms.",
+            "explanation": "Use this model to begin the my home exchange."
+          },
+          {
+            "type": "example",
+            "english": "The kitchen is next to the living room.",
+            "explanation": "This my home model adds a different detail or response."
+          },
+          {
+            "type": "example",
+            "english": "Where is it?",
+            "explanation": "Use this question or response to keep the my home exchange moving."
+          },
+          {
+            "type": "paragraph",
+            "text": "Notice the two models: “My home has two bedrooms.” and “The kitchen is next to the living room.” They show the pattern in complete communication, not as isolated grammar. Say the model aloud, replace one detail, and check that the new sentence keeps the intended meaning. When the other person asks a follow-up question, answer directly and add a relevant detail. This makes the exchange natural while keeping the language controlled."
+          },
+          {
+            "type": "callout",
+            "title": "Common error",
+            "text": "Do not mix the word order or verb form with another pattern. Keep the controlled form for this lesson: be, have, and room nouns."
+          },
+          {
+            "type": "bullet_list",
+            "items": [
+              "Communicative goal: Name rooms and give a simple description of a home.",
+              "Core pattern: be, have, and room nouns.",
+              "Use one clear model, add a relevant detail, and respond to the other speaker."
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "stageId": "visual-vocabulary",
+      "stageType": "visual_vocabulary",
+      "stageSchemaVersion": 1,
+      "title": "Build your vocabulary",
+      "instructions": "Study each term, meaning, and contextual example.",
+      "required": true,
+      "payload": {
+        "items": [
+          {
+            "itemId": "living-room",
+            "term": "living room",
+            "meaning": "a room for relaxing and receiving visitors",
+            "example": "Use “living room” while you practice my home in context.",
+            "imageAssetId": null
+          },
+          {
+            "itemId": "kitchen",
+            "term": "kitchen",
+            "meaning": "a room where food is prepared",
+            "example": "Use “kitchen” while you practice my home in context.",
+            "imageAssetId": null
+          },
+          {
+            "itemId": "bedroom",
+            "term": "bedroom",
+            "meaning": "a room for sleeping",
+            "example": "Use “bedroom” while you practice my home in context.",
+            "imageAssetId": null
+          },
+          {
+            "itemId": "bathroom",
+            "term": "bathroom",
+            "meaning": "a room with a toilet or bath",
+            "example": "Use “bathroom” while you practice my home in context.",
+            "imageAssetId": null
+          },
+          {
+            "itemId": "furniture",
+            "term": "furniture",
+            "meaning": "movable items such as tables and chairs",
+            "example": "Use “furniture” while you practice my home in context.",
+            "imageAssetId": null
+          },
+          {
+            "itemId": "there-is",
+            "term": "there is",
+            "meaning": "phrase showing one thing exists in a place",
+            "example": "Use “there is” while you practice my home in context.",
+            "imageAssetId": null
+          },
+          {
+            "itemId": "there-are",
+            "term": "there are",
+            "meaning": "phrase showing several things exist in a place",
+            "example": "Use “there are” while you practice my home in context.",
+            "imageAssetId": null
+          },
+          {
+            "itemId": "next-to",
+            "term": "next to",
+            "meaning": "at the side of something",
+            "example": "Use “next to” while you practice my home in context.",
+            "imageAssetId": null
+          }
+        ]
+      }
+    },
+    {
+      "stageId": "listening",
+      "stageType": "listening",
+      "stageSchemaVersion": 1,
+      "title": "Listen in context",
+      "instructions": "Listen before revealing the text, then notice the target pattern.",
+      "required": true,
+      "payload": {
+        "segments": [
+          {
+            "segmentId": "segment-1",
+            "text": "My home has two bedrooms. The kitchen is next to the living room.",
+            "audioAssetId": null
+          },
+          {
+            "segmentId": "segment-2",
+            "text": "Where is it? It's near here.",
+            "audioAssetId": null
+          },
+          {
+            "segmentId": "segment-3",
+            "text": "The kitchen is next to the living room. Where is it?",
+            "audioAssetId": null
+          }
+        ],
+        "revealTextAfterFirstPlay": true
+      }
+    },
+    {
+      "stageId": "repeat",
+      "stageType": "repeat",
+      "stageSchemaVersion": 1,
+      "title": "Repeat useful chunks",
+      "instructions": "Repeat each complete expression with clear rhythm.",
+      "required": true,
+      "payload": {
+        "targets": [
+          {
+            "targetId": "repeat-1",
+            "text": "My home has two bedrooms.",
+            "referenceAudioAssetId": null,
+            "hint": "Keep the words together as one communicative chunk."
+          },
+          {
+            "targetId": "repeat-2",
+            "text": "The kitchen is next to the living room.",
+            "referenceAudioAssetId": null,
+            "hint": "Keep the words together as one communicative chunk."
+          },
+          {
+            "targetId": "repeat-3",
+            "text": "Where is it?",
+            "referenceAudioAssetId": null,
+            "hint": "Keep the words together as one communicative chunk."
+          },
+          {
+            "targetId": "repeat-4",
+            "text": "It's near here.",
+            "referenceAudioAssetId": null,
+            "hint": "Keep the words together as one communicative chunk."
+          },
+          {
+            "targetId": "repeat-5",
+            "text": "Thanks for talking about home & around town with me.",
+            "referenceAudioAssetId": null,
+            "hint": "Keep the words together as one communicative chunk."
+          }
+        ]
+      }
+    },
+    {
+      "stageId": "speaking-check",
+      "stageType": "speaking_check",
+      "stageSchemaVersion": 1,
+      "title": "Speaking Check",
+      "instructions": "Say expressions already presented in this Lesson.",
+      "required": true,
+      "payload": {
+        "targets": [
+          {
+            "targetId": "speaking-1",
+            "instruction": "Say the complete model naturally.",
+            "targetText": "My home has two bedrooms.",
+            "hint": "Use the same words and clear sentence stress."
+          },
+          {
+            "targetId": "speaking-2",
+            "instruction": "Say the complete model naturally.",
+            "targetText": "The kitchen is next to the living room.",
+            "hint": "Use the same words and clear sentence stress."
+          },
+          {
+            "targetId": "speaking-3",
+            "instruction": "Say the complete model naturally.",
+            "targetText": "Where is it?",
+            "hint": "Use the same words and clear sentence stress."
+          },
+          {
+            "targetId": "speaking-4",
+            "instruction": "Say the complete model naturally.",
+            "targetText": "It's near here.",
+            "hint": "Use the same words and clear sentence stress."
+          }
+        ]
+      }
+    },
+    {
+      "stageId": "exercise",
+      "stageType": "exercise",
+      "stageSchemaVersion": 1,
+      "title": "Check your understanding",
+      "instructions": "Complete each deterministic practice item.",
+      "required": true,
+      "payload": {
+        "items": [
+          {
+            "exerciseId": "choose-model",
+            "exerciseType": "single_choice",
+            "prompt": "Choose the model that fits the communicative goal.",
+            "instructions": null,
+            "hint": "Name rooms and give a simple description of a home.",
+            "payload": {
+              "options": [
+                {
+                  "optionId": "a",
+                  "text": "My home has two bedrooms."
+                },
+                {
+                  "optionId": "b",
+                  "text": "The purple engine sleeps quickly."
+                },
+                {
+                  "optionId": "c",
+                  "text": "No information is possible."
+                }
+              ],
+              "correctOptionId": "a"
+            },
+            "feedback": {
+              "correct": "Correct. The answer fits the lesson context.",
+              "incorrect": "Try again and use the model from this lesson.",
+              "explanation": "be, have, and room nouns"
+            }
+          },
+          {
+            "exerciseId": "select-core-vocabulary",
+            "exerciseType": "multiple_select",
+            "prompt": "Select both words that belong to this lesson context.",
+            "instructions": null,
+            "hint": "Home & Around Town",
+            "payload": {
+              "options": [
+                {
+                  "optionId": "a",
+                  "text": "living room"
+                },
+                {
+                  "optionId": "b",
+                  "text": "kitchen"
+                },
+                {
+                  "optionId": "c",
+                  "text": "industrial turbine"
+                },
+                {
+                  "optionId": "d",
+                  "text": "quantum geology"
+                }
+              ],
+              "correctOptionIds": [
+                "a",
+                "b"
+              ]
+            },
+            "feedback": {
+              "correct": "Correct. The answer fits the lesson context.",
+              "incorrect": "Try again and use the model from this lesson.",
+              "explanation": "Both correct words appear in Visual Vocabulary."
+            }
+          },
+          {
+            "exerciseId": "complete-response",
+            "exerciseType": "fill_blank",
+            "prompt": "Type the exact practiced response shown in the hint.",
+            "instructions": null,
+            "hint": "The kitchen is next to the living room.",
+            "payload": {
+              "prefix": "",
+              "suffix": "",
+              "acceptedAnswers": [
+                "The kitchen is next to the living room."
+              ],
+              "normalizationProfile": "english_basic_v1"
+            },
+            "feedback": {
+              "correct": "Correct. The answer fits the lesson context.",
+              "incorrect": "Try again and use the model from this lesson.",
+              "explanation": "Use the complete model response."
+            }
+          },
+          {
+            "exerciseId": "order-model",
+            "exerciseType": "word_order",
+            "prompt": "Put the model in its natural order.",
+            "instructions": null,
+            "hint": null,
+            "payload": {
+              "tokens": [
+                {
+                  "tokenId": "t6",
+                  "text": "."
+                },
+                {
+                  "tokenId": "t5",
+                  "text": "bedrooms"
+                },
+                {
+                  "tokenId": "t4",
+                  "text": "two"
+                },
+                {
+                  "tokenId": "t3",
+                  "text": "has"
+                },
+                {
+                  "tokenId": "t2",
+                  "text": "home"
+                },
+                {
+                  "tokenId": "t1",
+                  "text": "My"
+                }
+              ],
+              "correctOrder": [
+                "t1",
+                "t2",
+                "t3",
+                "t4",
+                "t5",
+                "t6"
+              ]
+            },
+            "feedback": {
+              "correct": "Correct. The answer fits the lesson context.",
+              "incorrect": "Try again and use the model from this lesson.",
+              "explanation": "Keep the modeled English word order."
+            }
+          },
+          {
+            "exerciseId": "match-vocabulary",
+            "exerciseType": "matching",
+            "prompt": "Match each term to its meaning.",
+            "instructions": null,
+            "hint": null,
+            "payload": {
+              "leftItems": [
+                {
+                  "itemId": "l1",
+                  "text": "living room"
+                },
+                {
+                  "itemId": "l2",
+                  "text": "kitchen"
+                },
+                {
+                  "itemId": "l3",
+                  "text": "bedroom"
+                }
+              ],
+              "rightItems": [
+                {
+                  "itemId": "r1",
+                  "text": "a room for relaxing and receiving visitors"
+                },
+                {
+                  "itemId": "r2",
+                  "text": "a room where food is prepared"
+                },
+                {
+                  "itemId": "r3",
+                  "text": "a room for sleeping"
+                }
+              ],
+              "correctPairs": [
+                {
+                  "leftId": "l1",
+                  "rightId": "r1"
+                },
+                {
+                  "leftId": "l2",
+                  "rightId": "r2"
+                },
+                {
+                  "leftId": "l3",
+                  "rightId": "r3"
+                }
+              ]
+            },
+            "feedback": {
+              "correct": "Correct. The answer fits the lesson context.",
+              "incorrect": "Try again and use the model from this lesson.",
+              "explanation": "Review each term with its meaning and example."
+            }
+          },
+          {
+            "exerciseId": "exact-useful-chunk",
+            "exerciseType": "short_answer_exact",
+            "prompt": "Type the finite model chunk shown in the hint.",
+            "instructions": null,
+            "hint": "Where is it?",
+            "payload": {
+              "acceptedAnswers": [
+                "Where is it?"
+              ],
+              "normalizationProfile": "english_basic_v1"
+            },
+            "feedback": {
+              "correct": "Correct. The answer fits the lesson context.",
+              "incorrect": "Try again and use the model from this lesson.",
+              "explanation": "This checks one exact practiced chunk, not an open response."
+            }
+          },
+          {
+            "exerciseId": "choose-correct-form",
+            "exerciseType": "single_choice",
+            "prompt": "Which sentence follows the lesson pattern?",
+            "instructions": null,
+            "hint": "be, have, and room nouns",
+            "payload": {
+              "options": [
+                {
+                  "optionId": "a",
+                  "text": "The kitchen is next to the living room."
+                },
+                {
+                  "optionId": "b",
+                  "text": "She are did going."
+                },
+                {
+                  "optionId": "c",
+                  "text": "I is to yesterday."
+                }
+              ],
+              "correctOptionId": "a"
+            },
+            "feedback": {
+              "correct": "Correct. The answer fits the lesson context.",
+              "incorrect": "Try again and use the model from this lesson.",
+              "explanation": "be, have, and room nouns"
+            }
+          },
+          {
+            "exerciseId": "recall-vocabulary",
+            "exerciseType": "fill_blank",
+            "prompt": "Type the term that means: a room with a toilet or bath",
+            "instructions": null,
+            "hint": "It appears in Visual Vocabulary.",
+            "payload": {
+              "prefix": "",
+              "suffix": "",
+              "acceptedAnswers": [
+                "bathroom"
+              ],
+              "normalizationProfile": "english_basic_v1"
+            },
+            "feedback": {
+              "correct": "Correct. The answer fits the lesson context.",
+              "incorrect": "Try again and use the model from this lesson.",
+              "explanation": "a room with a toilet or bath"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "stageId": "guided-conversation",
+      "stageType": "guided_conversation",
+      "stageSchemaVersion": 1,
+      "title": "Home & Around Town conversation",
+      "instructions": "Use the prepared language in a practical exchange.",
+      "required": true,
+      "payload": {
+        "scenario": "You are in a realistic everyday situation related to home & around town. Practice my home and respond to relevant follow-up questions.",
+        "studentRole": "English learner handling the situation",
+        "teacherRole": "Helpful conversation partner",
+        "goal": "Name rooms and give a simple description of a home.",
+        "targetVocabulary": [
+          "living room",
+          "kitchen",
+          "bedroom",
+          "bathroom",
+          "furniture",
+          "there is",
+          "there are",
+          "next to"
+        ],
+        "targetExpressions": [
+          "My home has two bedrooms.",
+          "The kitchen is next to the living room.",
+          "Where is it?",
+          "It's near here.",
+          "Thanks for talking about home & around town with me."
+        ],
+        "minimumStudentTurns": 4,
+        "recommendedStudentTurns": 6,
+        "maximumStudentTurns": 8
+      }
+    },
+    {
+      "stageId": "analysis",
+      "stageType": "analysis",
+      "stageSchemaVersion": 1,
+      "title": "Lesson Review",
+      "instructions": "Review the evidence from your completed practice.",
+      "required": true,
+      "payload": {}
+    }
+  ]
+}

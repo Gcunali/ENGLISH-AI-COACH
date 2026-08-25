@@ -17,11 +17,14 @@ afterEach(() => { cleanup(); vi.clearAllMocks() })
 describe('WelcomePanel', () => {
   it('guides a new user without blocking navigation and persists dismissal', async () => {
     render(<MemoryRouter><WelcomePanel /></MemoryRouter>)
-    expect(await screen.findByRole('heading', { name: 'Welcome to your English practice space.' })).toBeInTheDocument()
-    expect(screen.getByRole('link', { name: 'Start a Conversation' })).toHaveAttribute('href', '/lesson/new')
+    expect(await screen.findByRole('heading', { name: 'Welcome to your English learning space.' })).toBeInTheDocument()
+    expect(screen.getByRole('link', { name: 'Open Course' })).toHaveAttribute('href', '/course')
+    expect(screen.getByRole('link', { name: 'Optional Placement Test' })).toHaveAttribute('href', '/placement')
+    expect(screen.getByRole('link', { name: 'Free Conversation' })).toHaveAttribute('href', '/lesson/new')
+    expect(screen.getByRole('link', { name: 'Check Readiness' })).toHaveAttribute('href', '/diagnostics')
     fireEvent.click(screen.getByRole('button', { name: 'Dismiss welcome' }))
     await waitFor(() => expect(native.setWelcomeSeen).toHaveBeenCalledWith(true))
-    expect(screen.queryByRole('heading', { name: 'Welcome to your English practice space.' })).not.toBeInTheDocument()
+    expect(screen.queryByRole('heading', { name: 'Welcome to your English learning space.' })).not.toBeInTheDocument()
   })
 
   it('does not show onboarding for an existing user', async () => {

@@ -11,9 +11,9 @@ import { WelcomePanel } from '../components/WelcomePanel'
 import { useDashboardData, useLearningMemorySummaryData } from '../hooks/useLearningData'
 import { useLessonAnalysis } from '../hooks/useLessonAnalysis'
 import { useLocalVoiceEngine } from '../hooks/useLocalVoiceEngine'
-import { probeLocalVoiceEngine } from '../services/native'
+import { getCourseCatalog, probeLocalVoiceEngine } from '../services/native'
 import { correctionCountForDisplay, useConversationStore } from '../stores/conversation'
-import type { LocalVoiceEngineProbe } from '../types'
+import type { CurriculumCatalog, LocalVoiceEngineProbe } from '../types'
 import { formatDuration, formatLocalDate, humanize, lessonTitle } from '../utils/format'
 
 const EMPTY_PROBE: LocalVoiceEngineProbe = {
@@ -43,6 +43,7 @@ export function DashboardPage() {
   const dashboard = useDashboardData()
   const memory = useLearningMemorySummaryData()
   const [probe, setProbe] = useState(EMPTY_PROBE)
+  const [courseCatalog, setCourseCatalog] = useState<CurriculumCatalog | null>(null)
   const [showTranscript, setShowTranscript] = useState(true)
   const state = useConversationStore((store) => store.state)
   const messages = useConversationStore((store) => store.messages)
@@ -60,6 +61,7 @@ export function DashboardPage() {
 
   const refreshProbe = useCallback(async () => setProbe(await probeLocalVoiceEngine()), [])
   useEffect(() => { void refreshProbe() }, [refreshProbe])
+  useEffect(() => { void getCourseCatalog().then(setCourseCatalog).catch(()=>setCourseCatalog(null)) }, [])
   const active = ['starting', 'running', 'stopping'].includes(voice.engineState)
   useEffect(() => {
     if (!active) return undefined
@@ -74,6 +76,7 @@ export function DashboardPage() {
   return <PageShell width="wide">
     <PageHeader eyebrow="Home" title="Practice and review your real progress." description="Your conversations, progress and next practice steps stay together here." actions={<div className="flex items-center gap-2 rounded-full border border-white/10 px-3 py-2 text-xs"><WifiOff size={14} className="text-[var(--accent)]" /> Local AI · SQLite</div>} />
     <WelcomePanel />
+    {courseCatalog&&courseCatalog.curricula[0]&&<ContinueCourse catalog={courseCatalog}/>}
 
     {dashboard.loading && <LoadingState label="Loading dashboard from this computer…" />}
     {dashboard.error && <ErrorState message={dashboard.error} onRetry={dashboard.reload} />}
@@ -96,7 +99,7 @@ export function DashboardPage() {
         <div className="flex-1 flex flex-col items-center justify-center py-10">
           <div className="relative h-40 w-40 grid place-items-center">
             {active && <div className="pulse-ring absolute inset-2 rounded-full border border-[var(--accent)]/40" />}
-            <div className="absolute inset-5 rounded-full bg-gradient-to-br from-[#1d2634] to-[#0c1017] border border-white/10" />
+            <div className="absolute inset-5 rounded-full border border-blue-200 bg-gradient-to-br from-white to-blue-100 shadow-inner" />
             <Mic2 className="relative text-[var(--accent)]" size={42} />
           </div>
           <p className="mt-5 mb-1 text-sm font-semibold tracking-[.12em] uppercase">{STATE_LABELS[state]}</p>
@@ -136,6 +139,15 @@ export function DashboardPage() {
     {dashboard.data?.latestRecommendation && <section className="glass mt-5 rounded-[28px] p-5 md:p-7"><div className="flex items-start gap-3"><BookOpen className="mt-1 text-[var(--accent)]" size={18} /><div><p className="muted mb-1 text-[10px] uppercase tracking-widest">Suggested next focus · latest analysis</p><p className="m-0 text-sm">{dashboard.data.latestRecommendation}</p></div></div></section>}
     {summary && <LessonAnalysisReport analysis={lessonAnalysis.analysis} status={lessonAnalysis.status} error={lessonAnalysis.error} onRetry={() => void lessonAnalysis.retry()} />}
   </PageShell>
+}
+
+function ContinueCourse({catalog}:{catalog:CurriculumCatalog}) {
+  const course=catalog.curricula[0]
+  const next=catalog.continueLearning
+  const href=next.kind==='resume_lesson'&&next.sessionId?`/guided-lessons/session/${next.sessionId}`:'/course'
+  const level=next.levelId?course.levels.find(item=>item.levelId===next.levelId):course.levels.find(item=>item.progress.completedLessons>0&&item.progress.completedLessons<item.progress.totalLessons)
+  const unit=level?.units.find(item=>item.unitId===next.unitId)??level?.units.find(item=>item.progress.completedLessons<item.progress.totalLessons)
+  return <section className="glass mb-5 rounded-[28px] border border-[var(--accent)]/20 p-5 md:p-6" aria-label="Continue Learning"><div className="flex flex-wrap items-start justify-between gap-4"><div><p className="eyebrow">Continue Learning</p><h2 className="m-0 text-xl">{next.title}</h2><p className="muted mb-0 mt-2 text-sm">{next.description}</p></div><Link className="button-primary" to={href}><Play size={16}/>{next.actionLabel}</Link></div><div className="mt-5 grid gap-3 sm:grid-cols-3"><MiniValue label="Course" value={`${course.progress.completedLessons}/${course.progress.totalLessons}`}/><MiniValue label="Current level" value={level?`${level.cefrLevel} · ${level.progress.completedLessons}/${level.progress.totalLessons}`:'Choose freely'}/><MiniValue label="Current unit" value={unit?`${unit.progress.completedLessons}/${unit.progress.totalLessons}`:'Not started'}/></div>{catalog.practiceSuggestion&&<p className="muted mb-0 mt-4 text-xs">Practice suggestion: <Link to={catalog.practiceSuggestion.route}>{catalog.practiceSuggestion.title} ({catalog.practiceSuggestion.itemCount})</Link>. This never blocks your next lesson.</p>}</section>
 }
 
 function FactCard({ label, value, detail }: { label: string; value: string; detail?: string }) {

@@ -1,0 +1,558 @@
+{
+  "packageSchemaVersion": 1,
+  "lessonFlowVersion": 1,
+  "lessonId": "a1-u02-l04-what-time-is-it",
+  "contentVersion": 1,
+  "publicationState": "published",
+  "title": "What Time Is It?",
+  "description": "Ask for and tell common clock times.",
+  "language": "en",
+  "referenceLocale": "en-US",
+  "cefrBand": "A1",
+  "estimatedMinutes": 24,
+  "objectives": [
+    "Ask for and tell common clock times."
+  ],
+  "tags": [
+    "english-core",
+    "a1",
+    "unit-02",
+    "production"
+  ],
+  "assets": [],
+  "stages": [
+    {
+      "stageId": "theory",
+      "stageType": "theory",
+      "stageSchemaVersion": 1,
+      "title": "Understand the language",
+      "instructions": "Read the explanation, examples, common error, and recap.",
+      "required": true,
+      "payload": {
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "This lesson prepares you to ask for and tell common clock times. The central language is What time, o'clock, half past, and time prepositions. It belongs to the practical context of numbers, time & dates. Focus first on meaning: decide what information the listener needs. Then choose the subject, verb form, and useful detail. At A1, keep the message short and concrete. One clear sentence is enough before the other person responds. The same language returns in the listening, repeat, speaking, exercises, and guided conversation stages."
+          },
+          {
+            "type": "callout",
+            "title": "Pattern",
+            "text": "What time, o'clock, half past, and time prepositions"
+          },
+          {
+            "type": "example",
+            "english": "What time is it?",
+            "explanation": "Use this model to begin the what time is it? exchange."
+          },
+          {
+            "type": "example",
+            "english": "It's half past three.",
+            "explanation": "This what time is it? model adds a different detail or response."
+          },
+          {
+            "type": "example",
+            "english": "What time works for you?",
+            "explanation": "Use this question or response to keep the what time is it? exchange moving."
+          },
+          {
+            "type": "paragraph",
+            "text": "Notice the two models: “What time is it?” and “It's half past three.” They show the pattern in complete communication, not as isolated grammar. Say the model aloud, replace one detail, and check that the new sentence keeps the intended meaning. When the other person asks a follow-up question, answer directly and add a relevant detail. This makes the exchange natural while keeping the language controlled."
+          },
+          {
+            "type": "callout",
+            "title": "Common error",
+            "text": "Do not mix the word order or verb form with another pattern. Keep the controlled form for this lesson: What time, o'clock, half past, and time prepositions."
+          },
+          {
+            "type": "bullet_list",
+            "items": [
+              "Communicative goal: Ask for and tell common clock times.",
+              "Core pattern: What time, o'clock, half past, and time prepositions.",
+              "Use one clear model, add a relevant detail, and respond to the other speaker."
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "stageId": "visual-vocabulary",
+      "stageType": "visual_vocabulary",
+      "stageSchemaVersion": 1,
+      "title": "Build your vocabulary",
+      "instructions": "Study each term, meaning, and contextual example.",
+      "required": true,
+      "payload": {
+        "items": [
+          {
+            "itemId": "weekday",
+            "term": "weekday",
+            "meaning": "a day from Monday through Friday",
+            "example": "Use “weekday” while you practice what time is it? in context.",
+            "imageAssetId": null
+          },
+          {
+            "itemId": "weekend",
+            "term": "weekend",
+            "meaning": "Saturday and Sunday",
+            "example": "Use “weekend” while you practice what time is it? in context.",
+            "imageAssetId": null
+          },
+          {
+            "itemId": "date",
+            "term": "date",
+            "meaning": "a specific day, month, and year",
+            "example": "Use “date” while you practice what time is it? in context.",
+            "imageAssetId": null
+          },
+          {
+            "itemId": "o-clock",
+            "term": "o'clock",
+            "meaning": "used for an exact clock hour",
+            "example": "Use “o'clock” while you practice what time is it? in context.",
+            "imageAssetId": null
+          },
+          {
+            "itemId": "noon",
+            "term": "noon",
+            "meaning": "twelve o'clock in the day",
+            "example": "Use “noon” while you practice what time is it? in context.",
+            "imageAssetId": null
+          },
+          {
+            "itemId": "appointment",
+            "term": "appointment",
+            "meaning": "a planned meeting at a set time",
+            "example": "Use “appointment” while you practice what time is it? in context.",
+            "imageAssetId": null
+          },
+          {
+            "itemId": "schedule",
+            "term": "schedule",
+            "meaning": "a plan showing activities and times",
+            "example": "Use “schedule” while you practice what time is it? in context.",
+            "imageAssetId": null
+          },
+          {
+            "itemId": "available",
+            "term": "available",
+            "meaning": "free and able to meet",
+            "example": "Use “available” while you practice what time is it? in context.",
+            "imageAssetId": null
+          }
+        ]
+      }
+    },
+    {
+      "stageId": "listening",
+      "stageType": "listening",
+      "stageSchemaVersion": 1,
+      "title": "Listen in context",
+      "instructions": "Listen before revealing the text, then notice the target pattern.",
+      "required": true,
+      "payload": {
+        "segments": [
+          {
+            "segmentId": "segment-1",
+            "text": "What time is it? It's half past three.",
+            "audioAssetId": null
+          },
+          {
+            "segmentId": "segment-2",
+            "text": "What time works for you? That time works for me.",
+            "audioAssetId": null
+          },
+          {
+            "segmentId": "segment-3",
+            "text": "It's half past three. What time works for you?",
+            "audioAssetId": null
+          }
+        ],
+        "revealTextAfterFirstPlay": true
+      }
+    },
+    {
+      "stageId": "repeat",
+      "stageType": "repeat",
+      "stageSchemaVersion": 1,
+      "title": "Repeat useful chunks",
+      "instructions": "Repeat each complete expression with clear rhythm.",
+      "required": true,
+      "payload": {
+        "targets": [
+          {
+            "targetId": "repeat-1",
+            "text": "What time is it?",
+            "referenceAudioAssetId": null,
+            "hint": "Keep the words together as one communicative chunk."
+          },
+          {
+            "targetId": "repeat-2",
+            "text": "It's half past three.",
+            "referenceAudioAssetId": null,
+            "hint": "Keep the words together as one communicative chunk."
+          },
+          {
+            "targetId": "repeat-3",
+            "text": "What time works for you?",
+            "referenceAudioAssetId": null,
+            "hint": "Keep the words together as one communicative chunk."
+          },
+          {
+            "targetId": "repeat-4",
+            "text": "That time works for me.",
+            "referenceAudioAssetId": null,
+            "hint": "Keep the words together as one communicative chunk."
+          },
+          {
+            "targetId": "repeat-5",
+            "text": "Thanks for talking about numbers, time & dates with me.",
+            "referenceAudioAssetId": null,
+            "hint": "Keep the words together as one communicative chunk."
+          }
+        ]
+      }
+    },
+    {
+      "stageId": "speaking-check",
+      "stageType": "speaking_check",
+      "stageSchemaVersion": 1,
+      "title": "Speaking Check",
+      "instructions": "Say expressions already presented in this Lesson.",
+      "required": true,
+      "payload": {
+        "targets": [
+          {
+            "targetId": "speaking-1",
+            "instruction": "Say the complete model naturally.",
+            "targetText": "What time is it?",
+            "hint": "Use the same words and clear sentence stress."
+          },
+          {
+            "targetId": "speaking-2",
+            "instruction": "Say the complete model naturally.",
+            "targetText": "It's half past three.",
+            "hint": "Use the same words and clear sentence stress."
+          },
+          {
+            "targetId": "speaking-3",
+            "instruction": "Say the complete model naturally.",
+            "targetText": "What time works for you?",
+            "hint": "Use the same words and clear sentence stress."
+          },
+          {
+            "targetId": "speaking-4",
+            "instruction": "Say the complete model naturally.",
+            "targetText": "That time works for me.",
+            "hint": "Use the same words and clear sentence stress."
+          }
+        ]
+      }
+    },
+    {
+      "stageId": "exercise",
+      "stageType": "exercise",
+      "stageSchemaVersion": 1,
+      "title": "Check your understanding",
+      "instructions": "Complete each deterministic practice item.",
+      "required": true,
+      "payload": {
+        "items": [
+          {
+            "exerciseId": "choose-model",
+            "exerciseType": "single_choice",
+            "prompt": "Choose the model that fits the communicative goal.",
+            "instructions": null,
+            "hint": "Ask for and tell common clock times.",
+            "payload": {
+              "options": [
+                {
+                  "optionId": "a",
+                  "text": "What time is it?"
+                },
+                {
+                  "optionId": "b",
+                  "text": "The purple engine sleeps quickly."
+                },
+                {
+                  "optionId": "c",
+                  "text": "No information is possible."
+                }
+              ],
+              "correctOptionId": "a"
+            },
+            "feedback": {
+              "correct": "Correct. The answer fits the lesson context.",
+              "incorrect": "Try again and use the model from this lesson.",
+              "explanation": "What time, o'clock, half past, and time prepositions"
+            }
+          },
+          {
+            "exerciseId": "select-core-vocabulary",
+            "exerciseType": "multiple_select",
+            "prompt": "Select both words that belong to this lesson context.",
+            "instructions": null,
+            "hint": "Numbers, Time & Dates",
+            "payload": {
+              "options": [
+                {
+                  "optionId": "a",
+                  "text": "weekday"
+                },
+                {
+                  "optionId": "b",
+                  "text": "weekend"
+                },
+                {
+                  "optionId": "c",
+                  "text": "industrial turbine"
+                },
+                {
+                  "optionId": "d",
+                  "text": "quantum geology"
+                }
+              ],
+              "correctOptionIds": [
+                "a",
+                "b"
+              ]
+            },
+            "feedback": {
+              "correct": "Correct. The answer fits the lesson context.",
+              "incorrect": "Try again and use the model from this lesson.",
+              "explanation": "Both correct words appear in Visual Vocabulary."
+            }
+          },
+          {
+            "exerciseId": "complete-response",
+            "exerciseType": "fill_blank",
+            "prompt": "Type the exact practiced response shown in the hint.",
+            "instructions": null,
+            "hint": "It's half past three.",
+            "payload": {
+              "prefix": "",
+              "suffix": "",
+              "acceptedAnswers": [
+                "It's half past three."
+              ],
+              "normalizationProfile": "english_basic_v1"
+            },
+            "feedback": {
+              "correct": "Correct. The answer fits the lesson context.",
+              "incorrect": "Try again and use the model from this lesson.",
+              "explanation": "Use the complete model response."
+            }
+          },
+          {
+            "exerciseId": "order-model",
+            "exerciseType": "word_order",
+            "prompt": "Put the model in its natural order.",
+            "instructions": null,
+            "hint": null,
+            "payload": {
+              "tokens": [
+                {
+                  "tokenId": "t5",
+                  "text": "?"
+                },
+                {
+                  "tokenId": "t4",
+                  "text": "it"
+                },
+                {
+                  "tokenId": "t3",
+                  "text": "is"
+                },
+                {
+                  "tokenId": "t2",
+                  "text": "time"
+                },
+                {
+                  "tokenId": "t1",
+                  "text": "What"
+                }
+              ],
+              "correctOrder": [
+                "t1",
+                "t2",
+                "t3",
+                "t4",
+                "t5"
+              ]
+            },
+            "feedback": {
+              "correct": "Correct. The answer fits the lesson context.",
+              "incorrect": "Try again and use the model from this lesson.",
+              "explanation": "Keep the modeled English word order."
+            }
+          },
+          {
+            "exerciseId": "match-vocabulary",
+            "exerciseType": "matching",
+            "prompt": "Match each term to its meaning.",
+            "instructions": null,
+            "hint": null,
+            "payload": {
+              "leftItems": [
+                {
+                  "itemId": "l1",
+                  "text": "weekday"
+                },
+                {
+                  "itemId": "l2",
+                  "text": "weekend"
+                },
+                {
+                  "itemId": "l3",
+                  "text": "date"
+                }
+              ],
+              "rightItems": [
+                {
+                  "itemId": "r1",
+                  "text": "a day from Monday through Friday"
+                },
+                {
+                  "itemId": "r2",
+                  "text": "Saturday and Sunday"
+                },
+                {
+                  "itemId": "r3",
+                  "text": "a specific day, month, and year"
+                }
+              ],
+              "correctPairs": [
+                {
+                  "leftId": "l1",
+                  "rightId": "r1"
+                },
+                {
+                  "leftId": "l2",
+                  "rightId": "r2"
+                },
+                {
+                  "leftId": "l3",
+                  "rightId": "r3"
+                }
+              ]
+            },
+            "feedback": {
+              "correct": "Correct. The answer fits the lesson context.",
+              "incorrect": "Try again and use the model from this lesson.",
+              "explanation": "Review each term with its meaning and example."
+            }
+          },
+          {
+            "exerciseId": "exact-useful-chunk",
+            "exerciseType": "short_answer_exact",
+            "prompt": "Type the finite model chunk shown in the hint.",
+            "instructions": null,
+            "hint": "What time works for you?",
+            "payload": {
+              "acceptedAnswers": [
+                "What time works for you?"
+              ],
+              "normalizationProfile": "english_basic_v1"
+            },
+            "feedback": {
+              "correct": "Correct. The answer fits the lesson context.",
+              "incorrect": "Try again and use the model from this lesson.",
+              "explanation": "This checks one exact practiced chunk, not an open response."
+            }
+          },
+          {
+            "exerciseId": "choose-correct-form",
+            "exerciseType": "single_choice",
+            "prompt": "Which sentence follows the lesson pattern?",
+            "instructions": null,
+            "hint": "What time, o'clock, half past, and time prepositions",
+            "payload": {
+              "options": [
+                {
+                  "optionId": "a",
+                  "text": "It's half past three."
+                },
+                {
+                  "optionId": "b",
+                  "text": "She are did going."
+                },
+                {
+                  "optionId": "c",
+                  "text": "I is to yesterday."
+                }
+              ],
+              "correctOptionId": "a"
+            },
+            "feedback": {
+              "correct": "Correct. The answer fits the lesson context.",
+              "incorrect": "Try again and use the model from this lesson.",
+              "explanation": "What time, o'clock, half past, and time prepositions"
+            }
+          },
+          {
+            "exerciseId": "recall-vocabulary",
+            "exerciseType": "fill_blank",
+            "prompt": "Type the term that means: used for an exact clock hour",
+            "instructions": null,
+            "hint": "It appears in Visual Vocabulary.",
+            "payload": {
+              "prefix": "",
+              "suffix": "",
+              "acceptedAnswers": [
+                "o'clock"
+              ],
+              "normalizationProfile": "english_basic_v1"
+            },
+            "feedback": {
+              "correct": "Correct. The answer fits the lesson context.",
+              "incorrect": "Try again and use the model from this lesson.",
+              "explanation": "used for an exact clock hour"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "stageId": "guided-conversation",
+      "stageType": "guided_conversation",
+      "stageSchemaVersion": 1,
+      "title": "Numbers, Time & Dates conversation",
+      "instructions": "Use the prepared language in a practical exchange.",
+      "required": true,
+      "payload": {
+        "scenario": "You are in a realistic everyday situation related to numbers, time & dates. Practice what time is it? and respond to relevant follow-up questions.",
+        "studentRole": "English learner handling the situation",
+        "teacherRole": "Helpful conversation partner",
+        "goal": "Ask for and tell common clock times.",
+        "targetVocabulary": [
+          "weekday",
+          "weekend",
+          "date",
+          "o'clock",
+          "noon",
+          "appointment",
+          "schedule",
+          "available"
+        ],
+        "targetExpressions": [
+          "What time is it?",
+          "It's half past three.",
+          "What time works for you?",
+          "That time works for me.",
+          "Thanks for talking about numbers, time & dates with me."
+        ],
+        "minimumStudentTurns": 4,
+        "recommendedStudentTurns": 6,
+        "maximumStudentTurns": 8
+      }
+    },
+    {
+      "stageId": "analysis",
+      "stageType": "analysis",
+      "stageSchemaVersion": 1,
+      "title": "Lesson Review",
+      "instructions": "Review the evidence from your completed practice.",
+      "required": true,
+      "payload": {}
+    }
+  ]
+}

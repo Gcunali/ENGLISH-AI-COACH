@@ -1,0 +1,563 @@
+{
+  "packageSchemaVersion": 1,
+  "lessonFlowVersion": 1,
+  "lessonId": "a1-u01-l01-hello-goodbye",
+  "contentVersion": 1,
+  "publicationState": "published",
+  "title": "Hello & Goodbye",
+  "description": "Greet someone, respond naturally, and end a short conversation politely.",
+  "language": "en",
+  "referenceLocale": "en-US",
+  "cefrBand": "A1",
+  "estimatedMinutes": 24,
+  "objectives": [
+    "Greet someone, respond naturally, and end a short conversation politely."
+  ],
+  "tags": [
+    "english-core",
+    "a1",
+    "unit-01",
+    "production"
+  ],
+  "assets": [],
+  "stages": [
+    {
+      "stageId": "theory",
+      "stageType": "theory",
+      "stageSchemaVersion": 1,
+      "title": "Understand the language",
+      "instructions": "Read the explanation, examples, common error, and recap.",
+      "required": true,
+      "payload": {
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Greetings open a conversation and goodbyes close it. Choose the expression for the time and relationship. Hello is neutral, while hi is more informal. Good morning, good afternoon, and good evening refer to the time of day. After a first introduction, Nice to meet you is a polite response. When you leave, goodbye is neutral and See you is friendly."
+          },
+          {
+            "type": "callout",
+            "title": "Pattern",
+            "text": "Greeting + short response; goodbye + optional good wish"
+          },
+          {
+            "type": "example",
+            "english": "Hello! How are you?",
+            "explanation": "This complete model prepares the learner to say: Hello! How are you?"
+          },
+          {
+            "type": "example",
+            "english": "Hi! I'm fine, thank you.",
+            "explanation": "This complete model prepares the learner to say: Hi! I'm fine, thank you."
+          },
+          {
+            "type": "example",
+            "english": "Nice to meet you.",
+            "explanation": "This complete model prepares the learner to say: Nice to meet you."
+          },
+          {
+            "type": "paragraph",
+            "text": "The practical goal is to greet someone, respond naturally, and end a short conversation politely. Use the pattern in a short exchange, notice the other speaker's words, and answer with one clear idea. The examples below prepare the same language used in listening, pronunciation practice, exercises, and the final conversation."
+          },
+          {
+            "type": "callout",
+            "title": "Common error",
+            "text": "Do not use good night to greet someone. In en-US, good night normally closes an evening conversation or comes before sleep."
+          },
+          {
+            "type": "bullet_list",
+            "items": [
+              "Choose the expression that fits the person and situation.",
+              "Remember the core pattern: Greeting + short response; goodbye + optional good wish.",
+              "Answer clearly, then invite the other person to continue."
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "stageId": "visual-vocabulary",
+      "stageType": "visual_vocabulary",
+      "stageSchemaVersion": 1,
+      "title": "Build your vocabulary",
+      "instructions": "Study each term, meaning, and example.",
+      "required": true,
+      "payload": {
+        "items": [
+          {
+            "itemId": "hello",
+            "term": "hello",
+            "meaning": "a neutral greeting",
+            "example": "Hello, I'm Maya.",
+            "imageAssetId": null
+          },
+          {
+            "itemId": "hi",
+            "term": "hi",
+            "meaning": "a friendly informal greeting",
+            "example": "Hi, Leo!",
+            "imageAssetId": null
+          },
+          {
+            "itemId": "good-morning",
+            "term": "good morning",
+            "meaning": "a greeting used in the morning",
+            "example": "Good morning, Mr. Lee.",
+            "imageAssetId": null
+          },
+          {
+            "itemId": "good-afternoon",
+            "term": "good afternoon",
+            "meaning": "a greeting used after midday",
+            "example": "Good afternoon, Ana.",
+            "imageAssetId": null
+          },
+          {
+            "itemId": "good-evening",
+            "term": "good evening",
+            "meaning": "a greeting used in the evening",
+            "example": "Good evening, everyone.",
+            "imageAssetId": null
+          },
+          {
+            "itemId": "goodbye",
+            "term": "goodbye",
+            "meaning": "a neutral expression when leaving",
+            "example": "Goodbye, and have a good day.",
+            "imageAssetId": null
+          },
+          {
+            "itemId": "see-you",
+            "term": "see you",
+            "meaning": "a friendly expression before leaving",
+            "example": "See you tomorrow!",
+            "imageAssetId": null
+          },
+          {
+            "itemId": "nice-to-meet-you",
+            "term": "nice to meet you",
+            "meaning": "a polite response at a first meeting",
+            "example": "Nice to meet you, Sam.",
+            "imageAssetId": null
+          }
+        ]
+      }
+    },
+    {
+      "stageId": "listening",
+      "stageType": "listening",
+      "stageSchemaVersion": 1,
+      "title": "Listen in context",
+      "instructions": "Listen to the short exchange before revealing the text.",
+      "required": true,
+      "payload": {
+        "segments": [
+          {
+            "segmentId": "segment-1",
+            "text": "Hello! How are you? Hi! I'm fine, thank you.",
+            "audioAssetId": null
+          },
+          {
+            "segmentId": "segment-2",
+            "text": "Nice to meet you. Goodbye! Have a good day.",
+            "audioAssetId": null
+          },
+          {
+            "segmentId": "segment-3",
+            "text": "See you tomorrow! Thanks for the conversation.",
+            "audioAssetId": null
+          }
+        ],
+        "revealTextAfterFirstPlay": true
+      }
+    },
+    {
+      "stageId": "repeat",
+      "stageType": "repeat",
+      "stageSchemaVersion": 1,
+      "title": "Repeat useful chunks",
+      "instructions": "Repeat each complete expression with clear rhythm.",
+      "required": true,
+      "payload": {
+        "targets": [
+          {
+            "targetId": "repeat-1",
+            "text": "Hello! How are you?",
+            "referenceAudioAssetId": null,
+            "hint": "Keep the expression together as one useful chunk."
+          },
+          {
+            "targetId": "repeat-2",
+            "text": "Hi! I'm fine, thank you.",
+            "referenceAudioAssetId": null,
+            "hint": "Keep the expression together as one useful chunk."
+          },
+          {
+            "targetId": "repeat-3",
+            "text": "Nice to meet you.",
+            "referenceAudioAssetId": null,
+            "hint": "Keep the expression together as one useful chunk."
+          },
+          {
+            "targetId": "repeat-4",
+            "text": "Goodbye! Have a good day.",
+            "referenceAudioAssetId": null,
+            "hint": "Keep the expression together as one useful chunk."
+          },
+          {
+            "targetId": "repeat-5",
+            "text": "See you tomorrow!",
+            "referenceAudioAssetId": null,
+            "hint": "Keep the expression together as one useful chunk."
+          }
+        ]
+      }
+    },
+    {
+      "stageId": "speaking-check",
+      "stageType": "speaking_check",
+      "stageSchemaVersion": 1,
+      "title": "Speaking Check",
+      "instructions": "Say the expressions you have already studied.",
+      "required": true,
+      "payload": {
+        "targets": [
+          {
+            "targetId": "speaking-1",
+            "instruction": "Say the complete model naturally.",
+            "targetText": "Hello! How are you?",
+            "hint": "Use the same words and clear sentence stress."
+          },
+          {
+            "targetId": "speaking-2",
+            "instruction": "Say the complete model naturally.",
+            "targetText": "Hi! I'm fine, thank you.",
+            "hint": "Use the same words and clear sentence stress."
+          },
+          {
+            "targetId": "speaking-3",
+            "instruction": "Say the complete model naturally.",
+            "targetText": "Nice to meet you.",
+            "hint": "Use the same words and clear sentence stress."
+          },
+          {
+            "targetId": "speaking-4",
+            "instruction": "Say the complete model naturally.",
+            "targetText": "Goodbye! Have a good day.",
+            "hint": "Use the same words and clear sentence stress."
+          }
+        ]
+      }
+    },
+    {
+      "stageId": "exercise",
+      "stageType": "exercise",
+      "stageSchemaVersion": 1,
+      "title": "Check your understanding",
+      "instructions": "Complete each deterministic practice item.",
+      "required": true,
+      "payload": {
+        "items": [
+          {
+            "exerciseId": "choose-expression",
+            "exerciseType": "single_choice",
+            "prompt": "Choose the expression that best fits the lesson goal.",
+            "instructions": null,
+            "hint": "Use the practiced communicative chunk.",
+            "payload": {
+              "options": [
+                {
+                  "optionId": "a",
+                  "text": "Hello! How are you?"
+                },
+                {
+                  "optionId": "b",
+                  "text": "I don't know this word."
+                },
+                {
+                  "optionId": "c",
+                  "text": "The window is blue."
+                }
+              ],
+              "correctOptionId": "a"
+            },
+            "feedback": {
+              "correct": "Correct. The form fits this introduction.",
+              "incorrect": "Try again and use the lesson pattern.",
+              "explanation": "Greeting + short response; goodbye + optional good wish"
+            }
+          },
+          {
+            "exerciseId": "select-useful-words",
+            "exerciseType": "multiple_select",
+            "prompt": "Select the two words that belong to this lesson's core situation.",
+            "instructions": null,
+            "hint": null,
+            "payload": {
+              "options": [
+                {
+                  "optionId": "a",
+                  "text": "hello"
+                },
+                {
+                  "optionId": "b",
+                  "text": "hi"
+                },
+                {
+                  "optionId": "c",
+                  "text": "refrigerator"
+                },
+                {
+                  "optionId": "d",
+                  "text": "mountain engine"
+                }
+              ],
+              "correctOptionIds": [
+                "a",
+                "b"
+              ]
+            },
+            "feedback": {
+              "correct": "Correct. The form fits this introduction.",
+              "incorrect": "Try again and use the lesson pattern.",
+              "explanation": "Both words were introduced in Visual Vocabulary."
+            }
+          },
+          {
+            "exerciseId": "complete-chunk",
+            "exerciseType": "fill_blank",
+            "prompt": "Complete the practiced expression.",
+            "instructions": null,
+            "hint": "Hi! I'm fine, thank you.",
+            "payload": {
+              "prefix": "",
+              "suffix": "",
+              "acceptedAnswers": [
+                "Hi! I'm fine, thank you."
+              ],
+              "normalizationProfile": "english_basic_v1"
+            },
+            "feedback": {
+              "correct": "Correct. The form fits this introduction.",
+              "incorrect": "Try again and use the lesson pattern.",
+              "explanation": "Use the full practiced expression."
+            }
+          },
+          {
+            "exerciseId": "order-first-expression",
+            "exerciseType": "word_order",
+            "prompt": "Put the words in the natural order.",
+            "instructions": null,
+            "hint": null,
+            "payload": {
+              "tokens": [
+                {
+                  "tokenId": "t6",
+                  "text": "?"
+                },
+                {
+                  "tokenId": "t5",
+                  "text": "you"
+                },
+                {
+                  "tokenId": "t4",
+                  "text": "are"
+                },
+                {
+                  "tokenId": "t3",
+                  "text": "How"
+                },
+                {
+                  "tokenId": "t2",
+                  "text": "!"
+                },
+                {
+                  "tokenId": "t1",
+                  "text": "Hello"
+                }
+              ],
+              "correctOrder": [
+                "t1",
+                "t2",
+                "t3",
+                "t4",
+                "t5",
+                "t6"
+              ]
+            },
+            "feedback": {
+              "correct": "Correct. The form fits this introduction.",
+              "incorrect": "Try again and use the lesson pattern.",
+              "explanation": "English statements and questions follow the modeled order."
+            }
+          },
+          {
+            "exerciseId": "match-meaning",
+            "exerciseType": "matching",
+            "prompt": "Match each lesson word to its meaning.",
+            "instructions": null,
+            "hint": null,
+            "payload": {
+              "leftItems": [
+                {
+                  "itemId": "l1",
+                  "text": "hello"
+                },
+                {
+                  "itemId": "l2",
+                  "text": "hi"
+                },
+                {
+                  "itemId": "l3",
+                  "text": "good morning"
+                }
+              ],
+              "rightItems": [
+                {
+                  "itemId": "r1",
+                  "text": "a neutral greeting"
+                },
+                {
+                  "itemId": "r2",
+                  "text": "a friendly informal greeting"
+                },
+                {
+                  "itemId": "r3",
+                  "text": "a greeting used in the morning"
+                }
+              ],
+              "correctPairs": [
+                {
+                  "leftId": "l1",
+                  "rightId": "r1"
+                },
+                {
+                  "leftId": "l2",
+                  "rightId": "r2"
+                },
+                {
+                  "leftId": "l3",
+                  "rightId": "r3"
+                }
+              ]
+            },
+            "feedback": {
+              "correct": "Correct. The form fits this introduction.",
+              "incorrect": "Try again and use the lesson pattern.",
+              "explanation": "Review the term, meaning, and example together."
+            }
+          },
+          {
+            "exerciseId": "exact-response",
+            "exerciseType": "short_answer_exact",
+            "prompt": "Type the exact model response shown in the hint.",
+            "instructions": null,
+            "hint": "Nice to meet you.",
+            "payload": {
+              "acceptedAnswers": [
+                "Nice to meet you."
+              ],
+              "normalizationProfile": "english_basic_v1"
+            },
+            "feedback": {
+              "correct": "Correct. The form fits this introduction.",
+              "incorrect": "Try again and use the lesson pattern.",
+              "explanation": "This item checks one finite model response, not an open opinion."
+            }
+          },
+          {
+            "exerciseId": "choose-pattern",
+            "exerciseType": "single_choice",
+            "prompt": "Which line follows the lesson pattern?",
+            "instructions": null,
+            "hint": "fixed greeting expressions and subject pronouns I and you",
+            "payload": {
+              "options": [
+                {
+                  "optionId": "a",
+                  "text": "Goodbye! Have a good day."
+                },
+                {
+                  "optionId": "b",
+                  "text": "Is are my."
+                },
+                {
+                  "optionId": "c",
+                  "text": "You am from?"
+                }
+              ],
+              "correctOptionId": "a"
+            },
+            "feedback": {
+              "correct": "Correct. The form fits this introduction.",
+              "incorrect": "Try again and use the lesson pattern.",
+              "explanation": "fixed greeting expressions and subject pronouns I and you"
+            }
+          },
+          {
+            "exerciseId": "complete-vocabulary",
+            "exerciseType": "fill_blank",
+            "prompt": "Type the vocabulary item that means: a greeting used after midday",
+            "instructions": null,
+            "hint": "The item appears in Visual Vocabulary.",
+            "payload": {
+              "prefix": "",
+              "suffix": "",
+              "acceptedAnswers": [
+                "good afternoon"
+              ],
+              "normalizationProfile": "english_basic_v1"
+            },
+            "feedback": {
+              "correct": "Correct. The form fits this introduction.",
+              "incorrect": "Try again and use the lesson pattern.",
+              "explanation": "a greeting used after midday"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "stageId": "guided-conversation",
+      "stageType": "guided_conversation",
+      "stageSchemaVersion": 1,
+      "title": "First-meeting conversation",
+      "instructions": "Use the lesson language in a practical first meeting.",
+      "required": true,
+      "payload": {
+        "scenario": "You meet a new person in a community English class. Practice hello & goodbye in a friendly, appropriate exchange.",
+        "studentRole": "English learner meeting someone new",
+        "teacherRole": "Friendly new classmate",
+        "goal": "Greet someone, respond naturally, and end a short conversation politely.",
+        "targetVocabulary": [
+          "hello",
+          "hi",
+          "good morning",
+          "good afternoon",
+          "good evening",
+          "goodbye",
+          "see you",
+          "nice to meet you"
+        ],
+        "targetExpressions": [
+          "Hello! How are you?",
+          "Hi! I'm fine, thank you.",
+          "Nice to meet you.",
+          "Goodbye! Have a good day.",
+          "See you tomorrow!"
+        ],
+        "minimumStudentTurns": 4,
+        "recommendedStudentTurns": 6,
+        "maximumStudentTurns": 8
+      }
+    },
+    {
+      "stageId": "analysis",
+      "stageType": "analysis",
+      "stageSchemaVersion": 1,
+      "title": "Lesson Review",
+      "instructions": "Review the evidence from your completed practice.",
+      "required": true,
+      "payload": {}
+    }
+  ]
+}

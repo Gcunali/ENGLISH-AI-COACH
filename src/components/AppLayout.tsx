@@ -81,13 +81,13 @@ export function AppLayout() {
       </div>
       <main id="main-content" tabIndex={-1} className="mx-auto w-full min-w-0 max-w-[1500px] overflow-x-hidden p-5 md:p-8"><RouteErrorBoundary key={pathname}><Outlet /></RouteErrorBoundary></main>
     </div>
-    {unlocked && <div role="status" className="fixed bottom-5 right-5 z-50 max-w-sm rounded-2xl border border-[var(--accent)]/25 bg-[#151b24] p-4 shadow-2xl"><div className="flex items-center gap-2 text-sm font-semibold"><Award size={18} className="text-[var(--accent)]" /> Achievement unlocked</div><p className="mb-0 mt-1 text-sm">{unlocked.title}</p></div>}
+    {unlocked && <div role="status" className="fixed bottom-5 right-5 z-50 max-w-sm rounded-2xl border border-[var(--accent)]/25 bg-white p-4 shadow-2xl"><div className="flex items-center gap-2 text-sm font-semibold"><Award size={18} className="text-[var(--accent)]" /> Achievement unlocked</div><p className="mb-0 mt-1 text-sm">{unlocked.title}</p></div>}
   </div>
 }
 
 function Brand() {
   return <div className="flex items-center gap-3 px-2 py-2">
-    <div className="h-9 w-9 rounded-xl bg-[var(--accent)] text-black grid place-items-center"><Sparkles size={18} /></div>
+    <div className="h-9 w-9 rounded-xl bg-[var(--accent)] text-white grid place-items-center"><Sparkles size={18} /></div>
     <div><div className="font-semibold tracking-tight">English AI</div><div className="text-xs muted">Local Coach</div></div>
   </div>
 }

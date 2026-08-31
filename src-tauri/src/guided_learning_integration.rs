@@ -109,7 +109,9 @@ impl GuidedLearningIntegrationRepository {
                 format!("Completed Guided Lesson package snapshot is invalid: {error}")
             })?;
         if package.lesson_id != lesson_id {
-            return Err("Completed Guided Lesson identity does not match its package snapshot.".into());
+            return Err(
+                "Completed Guided Lesson identity does not match its package snapshot.".into(),
+            );
         }
 
         let mut result = GuidedLearningSyncResult {
@@ -184,8 +186,7 @@ impl GuidedLearningIntegrationRepository {
             .map_err(db)?
             .collect::<Result<Vec<_>, _>>()
             .map_err(db)?;
-        for (correction_id, source_index, category, original, corrected, explanation) in
-            corrections
+        for (correction_id, source_index, category, original, corrected, explanation) in corrections
         {
             let signature = mistake_signature(&category, &original, &corrected);
             let title = mistake_title(&category, &corrected);
@@ -273,7 +274,9 @@ impl GuidedLearningIntegrationRepository {
             .optional()
             .map_err(db)?;
         if status.as_deref() != Some("in_progress") {
-            return Err("Active practice time is accepted only for an in-progress Guided Lesson.".into());
+            return Err(
+                "Active practice time is accepted only for an in-progress Guided Lesson.".into(),
+            );
         }
         let inserted = connection
             .execute(
@@ -435,9 +438,16 @@ mod tests {
     use crate::database;
     use rusqlite::Connection;
 
-    fn harness() -> (PathBuf, PathBuf, GuidedLearningIntegrationRepository, String) {
-        let directory = std::env::temp_dir()
-            .join(format!("guided-learning-integration-{}", uuid::Uuid::new_v4()));
+    fn harness() -> (
+        PathBuf,
+        PathBuf,
+        GuidedLearningIntegrationRepository,
+        String,
+    ) {
+        let directory = std::env::temp_dir().join(format!(
+            "guided-learning-integration-{}",
+            uuid::Uuid::new_v4()
+        ));
         std::fs::create_dir_all(&directory).unwrap();
         let path = directory.join("test.sqlite3");
         database::migrate(&path).unwrap();
@@ -450,8 +460,18 @@ mod tests {
         let second_package = serde_json::to_string(&second).unwrap();
         let connection = Connection::open(&path).unwrap();
         for (id, lesson_id, snapshot, completed) in [
-            ("guided-1", lesson.lesson_id.as_str(), package.as_str(), "2026-08-24T10:00:00Z"),
-            ("guided-2", second.lesson_id.as_str(), second_package.as_str(), "2026-08-25T10:00:00Z"),
+            (
+                "guided-1",
+                lesson.lesson_id.as_str(),
+                package.as_str(),
+                "2026-08-24T10:00:00Z",
+            ),
+            (
+                "guided-2",
+                second.lesson_id.as_str(),
+                second_package.as_str(),
+                "2026-08-25T10:00:00Z",
+            ),
         ] {
             connection.execute("INSERT INTO interactive_lesson_session(id,lesson_id,lesson_content_version,package_schema_version,lesson_flow_version,package_hash,engine_version,snapshot_version,status,stage_count,current_stage_index,package_snapshot_json,student_context_snapshot_json,started_at,updated_at,completed_at) VALUES(?1,?2,1,1,1,?3,1,1,'completed',1,0,?4,'{}',?5,?5,?5)",params![id,lesson_id,"a".repeat(64),snapshot,completed]).unwrap();
         }
@@ -475,13 +495,21 @@ mod tests {
         assert!(review.vocabulary.total_eligible_count > 0);
         let connection = Connection::open(&path).unwrap();
         let id: String = connection
-            .query_row("SELECT id FROM vocabulary_item LIMIT 1", [], |row| row.get(0))
+            .query_row("SELECT id FROM vocabulary_item LIMIT 1", [], |row| {
+                row.get(0)
+            })
             .unwrap();
         connection
-            .execute("UPDATE vocabulary_item SET status='known' WHERE id=?1", [&id])
+            .execute(
+                "UPDATE vocabulary_item SET status='known' WHERE id=?1",
+                [&id],
+            )
             .unwrap();
         drop(connection);
-        assert_eq!(repo.sync_completed("guided-1").unwrap().integrated_sessions, 0);
+        assert_eq!(
+            repo.sync_completed("guided-1").unwrap().integrated_sessions,
+            0
+        );
         let connection = Connection::open(&path).unwrap();
         let state: (String, i64) = connection
             .query_row(
@@ -493,7 +521,11 @@ mod tests {
         assert_eq!(state.0, "known");
         assert_eq!(
             connection
-                .query_row("SELECT COUNT(*) FROM guided_learning_integration", [], |r| r.get::<_, i64>(0))
+                .query_row(
+                    "SELECT COUNT(*) FROM guided_learning_integration",
+                    [],
+                    |r| r.get::<_, i64>(0)
+                )
                 .unwrap(),
             1
         );
@@ -516,12 +548,33 @@ mod tests {
         drop(connection);
         repo.sync_completed("guided-1").unwrap();
         let connection = Connection::open(&path).unwrap();
-        assert_eq!(connection.query_row("SELECT lesson_count FROM recurring_mistake",[],|r|r.get::<_,i64>(0)).unwrap(),1);
-        assert_eq!(connection.query_row("SELECT COUNT(*) FROM vocabulary_item WHERE canonical_text='i go yesterday'",[],|r|r.get::<_,i64>(0)).unwrap(),0);
+        assert_eq!(
+            connection
+                .query_row("SELECT lesson_count FROM recurring_mistake", [], |r| r
+                    .get::<_, i64>(0))
+                .unwrap(),
+            1
+        );
+        assert_eq!(
+            connection
+                .query_row(
+                    "SELECT COUNT(*) FROM vocabulary_item WHERE canonical_text='i go yesterday'",
+                    [],
+                    |r| r.get::<_, i64>(0)
+                )
+                .unwrap(),
+            0
+        );
         drop(connection);
         repo.sync_completed("guided-2").unwrap();
         let connection = Connection::open(&path).unwrap();
-        assert_eq!(connection.query_row("SELECT lesson_count FROM recurring_mistake",[],|r|r.get::<_,i64>(0)).unwrap(),2);
+        assert_eq!(
+            connection
+                .query_row("SELECT lesson_count FROM recurring_mistake", [], |r| r
+                    .get::<_, i64>(0))
+                .unwrap(),
+            2
+        );
         drop(connection);
         std::fs::remove_dir_all(directory).unwrap();
     }
@@ -532,11 +585,18 @@ mod tests {
         let connection = Connection::open(&path).unwrap();
         connection.execute("UPDATE interactive_lesson_session SET status='in_progress',completed_at=NULL WHERE id='guided-1'",[]).unwrap();
         drop(connection);
-        assert_eq!(repo.record_active_practice("guided-1","tick-1",15).unwrap().active_seconds,15);
-        let repeated=repo.record_active_practice("guided-1","tick-1",15).unwrap();
+        assert_eq!(
+            repo.record_active_practice("guided-1", "tick-1", 15)
+                .unwrap()
+                .active_seconds,
+            15
+        );
+        let repeated = repo
+            .record_active_practice("guided-1", "tick-1", 15)
+            .unwrap();
         assert!(!repeated.event_recorded);
-        assert_eq!(repeated.active_seconds,15);
-        assert!(repo.record_active_practice("guided-1","bad",31).is_err());
+        assert_eq!(repeated.active_seconds, 15);
+        assert!(repo.record_active_practice("guided-1", "bad", 31).is_err());
         std::fs::remove_dir_all(directory).unwrap();
     }
 
@@ -548,28 +608,70 @@ mod tests {
             .join("database")
             .join("english-ai-coach.sqlite3");
         let before = database::open(&path).unwrap();
-        let sessions_before: i64 = before.query_row("SELECT COUNT(*) FROM interactive_lesson_session",[],|row|row.get(0)).unwrap();
-        let completed_before: i64 = before.query_row("SELECT COUNT(*) FROM interactive_lesson_session WHERE status='completed'",[],|row|row.get(0)).unwrap();
-        let vocabulary_before: i64 = before.query_row("SELECT COUNT(*) FROM vocabulary_item",[],|row|row.get(0)).unwrap();
+        let sessions_before: i64 = before
+            .query_row(
+                "SELECT COUNT(*) FROM interactive_lesson_session",
+                [],
+                |row| row.get(0),
+            )
+            .unwrap();
+        let completed_before: i64 = before
+            .query_row(
+                "SELECT COUNT(*) FROM interactive_lesson_session WHERE status='completed'",
+                [],
+                |row| row.get(0),
+            )
+            .unwrap();
+        let vocabulary_before: i64 = before
+            .query_row("SELECT COUNT(*) FROM vocabulary_item", [], |row| row.get(0))
+            .unwrap();
         drop(before);
         database::migrate(&path).unwrap();
         database::migrate(&path).unwrap();
         let connection = database::open(&path).unwrap();
-        let version: i64 = connection.query_row("SELECT MAX(version) FROM schema_migration",[],|row|row.get(0)).unwrap();
-        let integrity: String = connection.query_row("PRAGMA integrity_check",[],|row|row.get(0)).unwrap();
-        let foreign_keys: i64 = connection.query_row("SELECT COUNT(*) FROM pragma_foreign_key_check",[],|row|row.get(0)).unwrap();
-        let after: (i64,i64,i64,i64,i64,i64) = connection.query_row("SELECT
+        let version: i64 = connection
+            .query_row("SELECT MAX(version) FROM schema_migration", [], |row| {
+                row.get(0)
+            })
+            .unwrap();
+        let integrity: String = connection
+            .query_row("PRAGMA integrity_check", [], |row| row.get(0))
+            .unwrap();
+        let foreign_keys: i64 = connection
+            .query_row("SELECT COUNT(*) FROM pragma_foreign_key_check", [], |row| {
+                row.get(0)
+            })
+            .unwrap();
+        let after: (i64, i64, i64, i64, i64, i64) = connection
+            .query_row(
+                "SELECT
           (SELECT COUNT(*) FROM interactive_lesson_session),
           (SELECT COUNT(*) FROM interactive_lesson_session WHERE status='completed'),
           (SELECT COUNT(*) FROM vocabulary_item),
           (SELECT COUNT(*) FROM guided_learning_integration),
           (SELECT COUNT(*) FROM interactive_lesson_active_practice_event),
-          (SELECT COUNT(*) FROM guided_gamification_xp_event)",[],|row|Ok((row.get(0)?,row.get(1)?,row.get(2)?,row.get(3)?,row.get(4)?,row.get(5)?))).unwrap();
-        assert_eq!(version,19);
-        assert_eq!(integrity,"ok");
-        assert_eq!(foreign_keys,0);
-        assert_eq!((after.0,after.1,after.2),(sessions_before,completed_before,vocabulary_before));
-        assert_eq!((after.3,after.4,after.5),(0,0,0));
+          (SELECT COUNT(*) FROM guided_gamification_xp_event)",
+                [],
+                |row| {
+                    Ok((
+                        row.get(0)?,
+                        row.get(1)?,
+                        row.get(2)?,
+                        row.get(3)?,
+                        row.get(4)?,
+                        row.get(5)?,
+                    ))
+                },
+            )
+            .unwrap();
+        assert_eq!(version, 19);
+        assert_eq!(integrity, "ok");
+        assert_eq!(foreign_keys, 0);
+        assert_eq!(
+            (after.0, after.1, after.2),
+            (sessions_before, completed_before, vocabulary_before)
+        );
+        assert_eq!((after.3, after.4, after.5), (0, 0, 0));
         println!("PHASE_AA_PHYSICAL schema={version} sessions={} completed={} vocabulary={} integrations={} active_events={} guided_xp={} integrity={integrity} fk={foreign_keys}",after.0,after.1,after.2,after.3,after.4,after.5);
     }
 }

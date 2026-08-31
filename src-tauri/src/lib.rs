@@ -30,6 +30,7 @@ mod placement_evaluator;
 mod placement_repository;
 mod placement_scoring;
 mod placement_speech;
+mod practice_repository;
 mod pronunciation;
 mod pronunciation_engine;
 mod pronunciation_repository;
@@ -55,15 +56,14 @@ use gamification_repository::{
 use guided_conversation::{
     GuidedConversationRepository, GUIDED_CONVERSATION_FINAL_GUARDRAIL, GUIDED_CONVERSATION_POLICY,
 };
-use guided_lesson_audio::{GuidedAudioDto, GuidedLessonAudioRuntime};
-use guided_learning_integration::{
-    GuidedLearningIntegrationRepository, GuidedPracticeTimeResult,
-};
+use guided_learning_integration::{GuidedLearningIntegrationRepository, GuidedPracticeTimeResult};
+use guided_lesson_audio::{GuidedAudioDto, GuidedLessonAudioRuntime, StaticTtsCacheStatusDto};
 use interactive_exercise::{SelectExerciseAttemptRequest, SubmitExerciseAttemptRequest};
 use interactive_lesson::{
-    GuidedLessonOverviewDto, GuidedPlaybackRequest, GuidedPronunciationRequest,
-    InteractiveLessonDetailDto, InteractiveLessonSessionDto, InteractiveLessonSummaryDto,
-    SelectGuidedAttemptRequest, StageActionRequest, StartInteractiveLessonRequest,
+    GuidedLessonOverviewDto, GuidedPlaybackRequest, GuidedPlaybackSource,
+    GuidedPronunciationRequest, InteractiveLessonDetailDto, InteractiveLessonSessionDto,
+    InteractiveLessonSummaryDto, SelectGuidedAttemptRequest, StageActionRequest,
+    StartInteractiveLessonRequest,
 };
 use interactive_lesson_analysis::{
     InteractiveAnalysisRequest, InteractiveLessonAnalysisDto, InteractiveLessonAnalysisService,
@@ -101,6 +101,10 @@ use placement::{
 };
 use placement_evaluator::PlacementSpeakingEvaluator;
 use placement_repository::{normalize_transcript, PlacementRepository};
+use practice_repository::{
+    CompletePracticeItemRequest, PracticeAvailabilityDto, PracticeItemResultDto,
+    PracticeRepository, PracticeSessionDto, StartPracticeRequest,
+};
 use pronunciation::{
     validate_result, validate_target as validate_pronunciation_target, AnalyzePronunciationRequest,
     PronunciationAttemptDto, PronunciationEngineStatus,
@@ -151,6 +155,7 @@ struct AppState {
     placement_evaluator: PlacementSpeakingEvaluator,
     gamification: GamificationRepository,
     review: ReviewRepository,
+    practice: PracticeRepository,
     voice_performance: VoicePerformanceRepository,
     pronunciation_engine: PronunciationEngineManager,
     pronunciation: PronunciationRepository,
@@ -182,6 +187,70 @@ fn integrate_completed_guided(
         }
     }
     Ok(())
+}
+
+#[tauri::command]
+fn get_practice_availability(
+    state: State<'_, AppState>,
+) -> Result<PracticeAvailabilityDto, String> {
+    state.practice.availability()
+}
+
+#[tauri::command]
+fn start_practice_session(
+    state: State<'_, AppState>,
+    request: StartPracticeRequest,
+) -> Result<PracticeSessionDto, String> {
+    state.practice.start(request)
+}
+
+#[tauri::command]
+fn get_practice_session(
+    state: State<'_, AppState>,
+    session_id: String,
+) -> Result<PracticeSessionDto, String> {
+    state.practice.get(&session_id)
+}
+
+#[tauri::command]
+fn record_practice_time(
+    state: State<'_, AppState>,
+    session_id: String,
+    event_id: String,
+    duration_seconds: u32,
+) -> Result<u32, String> {
+    state
+        .practice
+        .record_time(&session_id, &event_id, duration_seconds)
+}
+
+#[tauri::command]
+fn complete_practice_item(
+    state: State<'_, AppState>,
+    request: CompletePracticeItemRequest,
+) -> Result<PracticeItemResultDto, String> {
+    state.practice.complete_item(request)
+}
+
+#[tauri::command]
+fn complete_practice_session(
+    app: tauri::AppHandle,
+    state: State<'_, AppState>,
+    session_id: String,
+) -> Result<PracticeSessionDto, String> {
+    let result = state.practice.complete(&session_id)?;
+    match state.gamification.sync() {
+        Ok(sync) => {
+            let _ = app.emit("english-ai-coach:gamification-changed", &sync);
+        }
+        Err(error) => log::error!("Practice gamification sync failed: {error}"),
+    }
+    Ok(result)
+}
+
+#[tauri::command]
+fn abandon_practice_session(state: State<'_, AppState>, session_id: String) -> Result<(), String> {
+    state.practice.abandon(&session_id)
 }
 
 #[tauri::command]
@@ -450,6 +519,42 @@ fn complete_guided_lesson_audio(
 #[tauri::command]
 fn cancel_guided_lesson_audio(state: State<'_, AppState>, playback_id: String) -> bool {
     state.guided_audio.cancel(&playback_id)
+}
+
+#[tauri::command]
+async fn prepare_practice_audio(
+    state: State<'_, AppState>,
+    session_id: String,
+    item_id: String,
+) -> Result<GuidedAudioDto, String> {
+    let text = state.practice.audio_text(&session_id, &item_id)?;
+    state
+        .guided_audio
+        .prepare(
+            state.paths.clone(),
+            state.local_ai.clone(),
+            GuidedPlaybackRequest {
+                session_id,
+                stage_id: "practice".into(),
+                item_id,
+            },
+            GuidedPlaybackSource {
+                text,
+                asset_id: None,
+                package_hash: "static-practice-v1".into(),
+            },
+        )
+        .await
+}
+
+#[tauri::command]
+fn get_static_tts_cache_status(state: State<'_, AppState>) -> StaticTtsCacheStatusDto {
+    state.guided_audio.cache_status(&state.paths)
+}
+
+#[tauri::command]
+fn clear_static_tts_cache(state: State<'_, AppState>) -> Result<StaticTtsCacheStatusDto, String> {
+    state.guided_audio.clear_cache(&state.paths)
 }
 
 #[tauri::command]
@@ -1132,7 +1237,8 @@ async fn transcribe_audio(
     state: State<'_, AppState>,
     audio_base64: String,
 ) -> Result<TimedText, String> {
-    speech::transcribe(state.paths.clone(), audio_base64).await
+    speech::transcribe_official_local_ai(state.paths.clone(), state.local_ai.clone(), audio_base64)
+        .await
 }
 
 #[tauri::command]
@@ -1559,6 +1665,7 @@ pub fn run() {
                 log::error!("Gamification startup sync failed: {error}");
             }
             let review = ReviewRepository::new(paths.db_file());
+            let practice = PracticeRepository::new(paths.db_file());
             let voice_performance = VoicePerformanceRepository::new(paths.db_file());
             let pronunciation = PronunciationRepository::new(paths.db_file());
             let guided_conversations = GuidedConversationRepository::new(&paths.db_file());
@@ -1588,6 +1695,7 @@ pub fn run() {
                 placement_evaluator,
                 gamification,
                 review,
+                practice,
                 voice_performance,
                 pronunciation_engine: PronunciationEngineManager::default(),
                 pronunciation,
@@ -1643,6 +1751,9 @@ pub fn run() {
             prepare_guided_lesson_audio,
             complete_guided_lesson_audio,
             cancel_guided_lesson_audio,
+            prepare_practice_audio,
+            get_static_tts_cache_status,
+            clear_static_tts_cache,
             submit_guided_lesson_pronunciation,
             cancel_guided_lesson_pronunciation,
             select_guided_lesson_pronunciation_attempt,
@@ -1712,6 +1823,13 @@ pub fn run() {
             list_achievements,
             sync_gamification,
             get_review_overview,
+            get_practice_availability,
+            start_practice_session,
+            get_practice_session,
+            record_practice_time,
+            complete_practice_item,
+            complete_practice_session,
+            abandon_practice_session,
             preview_review_queue,
             start_review_session,
             resume_review_session,

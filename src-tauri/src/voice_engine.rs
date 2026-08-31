@@ -118,6 +118,19 @@ pub enum VoiceEngineEvent {
         #[serde(flatten)]
         metrics: VoiceTurnPerformanceDto,
     },
+    WhisperPerformance {
+        #[serde(default, rename = "requestId")]
+        request_id: Option<String>,
+        #[serde(default)]
+        generation: Option<u32>,
+        #[serde(default, rename = "loadMs")]
+        load_ms: Option<u32>,
+        #[serde(default, rename = "inferenceMs")]
+        inference_ms: Option<u32>,
+        persistent: bool,
+        #[serde(default)]
+        fallback: bool,
+    },
     TeacherFinished {
         #[serde(
             default,

@@ -296,7 +296,9 @@ fn extract_structured_correction(response: &str) -> Option<String> {
     let candidate = quoted.unwrap_or_else(|| {
         let end = tail
             .char_indices()
-            .find_map(|(index, character)| matches!(character, '.' | '!' | '?').then_some(index + character.len_utf8()))
+            .find_map(|(index, character)| {
+                matches!(character, '.' | '!' | '?').then_some(index + character.len_utf8())
+            })
             .unwrap_or(tail.len());
         tail.get(..end).unwrap_or(tail).trim()
     });

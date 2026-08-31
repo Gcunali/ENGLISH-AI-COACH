@@ -21,6 +21,8 @@ import { GuidedLessonsPage } from './pages/GuidedLessonsPage'
 import { GuidedLessonDetailPage } from './pages/GuidedLessonDetailPage'
 import { GuidedLessonSessionPage } from './pages/GuidedLessonSessionPage'
 import { CoursePage } from './pages/CoursePage'
+import { PracticePage } from './pages/PracticePage'
+import { PracticeSessionPage } from './pages/PracticeSessionPage'
 
 function App() {
   return <Routes>
@@ -47,6 +49,8 @@ function App() {
       <Route path="vocabulary" element={<VocabularyPage />} />
       <Route path="vocabulary/:vocabularyId" element={<VocabularyDetailsPage />} />
       <Route path="pronunciation" element={<PronunciationPage />} />
+      <Route path="practice" element={<PracticePage />} />
+      <Route path="practice/session/:sessionId" element={<PracticeSessionPage />} />
       <Route path="settings" element={<SettingsPage />} />
       <Route path="diagnostics" element={<DiagnosticsPage />} />
       <Route path="*" element={<NotFoundPage />} />

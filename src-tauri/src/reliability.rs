@@ -13,7 +13,7 @@ pub const PLATFORM_RELIABILITY_SCHEMA_VERSION: u32 = 1;
 pub const APP_BACKUP_FORMAT_VERSION: u32 = 1;
 pub const DIAGNOSTIC_REPORT_VERSION: u32 = 1;
 pub const STARTUP_RECOVERY_RULE_VERSION: u32 = 1;
-pub const CURRENT_DATABASE_SCHEMA_VERSION: u32 = 19;
+pub const CURRENT_DATABASE_SCHEMA_VERSION: u32 = 20;
 pub const SYSTEM_EVENT_SCHEMA_VERSION: u32 = 1;
 pub const SYSTEM_EVENT_RETENTION: usize = 300;
 const DATABASE_FILE: &str = "database.sqlite3";
@@ -907,7 +907,7 @@ mod tests {
         assert_eq!(ids, vec!["state-a"]);
         assert_eq!(
             validate_database(&paths.db_file()).unwrap().schema_version,
-            19
+            20
         );
         drop(connection);
         fs::remove_dir_all(root).unwrap()
@@ -1027,7 +1027,7 @@ mod tests {
         .unwrap();
         assert_eq!(
             validate_database(&paths.db_file()).unwrap().schema_version,
-            19
+            20
         );
         let future = root.join("future.sqlite3");
         fs::copy(&paths.db_file(), &future).unwrap();

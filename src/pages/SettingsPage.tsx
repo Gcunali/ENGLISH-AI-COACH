@@ -1,9 +1,10 @@
-import { Activity, Brain, Gauge, ShieldCheck, UserRound } from 'lucide-react'
+import { Activity, Brain, Gauge, HardDrive, ShieldCheck, Trash2, UserRound } from 'lucide-react'
 import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { ErrorState, LoadingState } from '../components/PageState'
 import { useStudentLearningSummaryData } from '../hooks/useLearningData'
-import { getLearningMemoryEnabled, getStreamingVoiceResponseEnabled, setLearningMemoryEnabled, setStreamingVoiceResponseEnabled } from '../services/native'
+import { clearStaticTtsCache, getLearningMemoryEnabled, getStaticTtsCacheStatus, getStreamingVoiceResponseEnabled, setLearningMemoryEnabled, setStreamingVoiceResponseEnabled } from '../services/native'
+import type { StaticTtsCacheStatus } from '../types'
 import { notifyLearningDataChanged } from '../utils/learningData'
 import { DataBackupSection } from '../components/DataBackupSection'
 import { InlineNotice, PageHeader, PageShell, SectionHeader, ToggleRow } from '../components/ProductUI'
@@ -17,6 +18,8 @@ export function SettingsPage() {
   const [streamingError, setStreamingError] = useState<string | null>(null)
   const [savingStreaming, setSavingStreaming] = useState(false)
   const [savedNotice, setSavedNotice] = useState<string | null>(null)
+  const [ttsCache, setTtsCache] = useState<StaticTtsCacheStatus | null>(null)
+  const [clearingCache, setClearingCache] = useState(false)
 
   useEffect(() => {
     let disposed = false
@@ -27,6 +30,7 @@ export function SettingsPage() {
       })
     return () => { disposed = true }
   }, [])
+  useEffect(() => { void getStaticTtsCacheStatus().then(setTtsCache).catch(() => undefined) }, [])
 
   useEffect(() => {
     let disposed = false
@@ -86,6 +90,7 @@ export function SettingsPage() {
       <SectionHeader id="voice-performance-title" title="Voice" description="Conversation response preferences. Calibrated microphone and model defaults remain automatic." />
       <div className="mt-5"><ToggleRow label="Faster voice responses" description="Start speaking while the local AI is still finishing its response." checked={streamingEnabled} busy={savingStreaming} onChange={()=>void toggleStreaming()} icon={<Gauge size={21}/>} /></div>
       {streamingError && <p role="alert" className="mt-4 text-sm text-red-300">{streamingError}</p>}
+      <div className="settings-cache-row mt-6"><div className="flex gap-3"><HardDrive aria-hidden="true" size={21} className="text-[var(--accent)]"/><div><strong>Static lesson audio cache</strong><p className="section-description mt-1">Reuses Piper audio for fixed lesson and practice text. Dynamic conversation text is never stored here.</p><span>{ttsCache ? `${ttsCache.entryCount} files · ${(ttsCache.sizeBytes / 1024 / 1024).toFixed(1)} MB of ${(ttsCache.maxSizeBytes / 1024 / 1024).toFixed(0)} MB` : 'Checking local cache…'}</span></div></div><button className="button-secondary" disabled={!ttsCache || clearingCache} onClick={() => { setClearingCache(true); void clearStaticTtsCache().then(value => { setTtsCache(value); setSavedNotice('Static lesson audio cache cleared.') }).catch(value => setStreamingError(value instanceof Error ? value.message : String(value))).finally(() => setClearingCache(false)) }}><Trash2 size={16}/>{clearingCache ? 'Clearing…' : 'Clear cache'}</button></div>
     </section>
 
     <section id="settings-learning" className="glass mt-5 scroll-mt-5 rounded-[28px] p-5 md:p-7">

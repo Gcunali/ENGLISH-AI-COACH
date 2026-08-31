@@ -1598,7 +1598,7 @@ mod tests {
             let connection = Connection::open(&database).unwrap();
             connection
                 .execute_batch(
-                    "DROP TABLE guided_gamification_xp_event; DROP TABLE interactive_lesson_active_practice_event; DROP TABLE guided_recurring_mistake_occurrence; DROP TABLE interactive_lesson_guided_correction; DROP TABLE guided_session_vocabulary; DROP TABLE guided_learning_integration; DELETE FROM schema_migration WHERE version=19; DROP TABLE interactive_lesson_analysis; DELETE FROM schema_migration WHERE version=18;",
+                    "DROP TABLE learning_practice_xp_event; DROP TABLE learning_practice_active_time_event; DROP TABLE learning_practice_item_result; DROP TABLE learning_practice_session; DELETE FROM schema_migration WHERE version=20; DROP TABLE guided_gamification_xp_event; DROP TABLE interactive_lesson_active_practice_event; DROP TABLE guided_recurring_mistake_occurrence; DROP TABLE interactive_lesson_guided_correction; DROP TABLE guided_session_vocabulary; DROP TABLE guided_learning_integration; DELETE FROM schema_migration WHERE version=19; DROP TABLE interactive_lesson_analysis; DELETE FROM schema_migration WHERE version=18;",
                 )
                 .unwrap();
             let version: u32 = connection
@@ -1625,7 +1625,7 @@ mod tests {
                 row.get(0)
             })
             .unwrap();
-        assert_eq!(version, 19);
+        assert_eq!(version, 20);
         assert!(table);
         assert_eq!(integrity, "ok");
         assert_eq!(foreign_keys, 0);

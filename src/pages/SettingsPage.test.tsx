@@ -17,6 +17,8 @@ const native = vi.hoisted(() => ({
   createAppBackup: vi.fn(),
   restoreAppBackup: vi.fn(),
   openBackupFolder: vi.fn(),
+  getStaticTtsCacheStatus: vi.fn(),
+  clearStaticTtsCache: vi.fn(),
 }))
 
 vi.mock('../services/native', () => native)
@@ -34,6 +36,8 @@ beforeEach(() => {
   native.listAppBackups.mockResolvedValue([])
   native.createAppBackup.mockResolvedValue({})
   native.openBackupFolder.mockResolvedValue(undefined)
+  native.getStaticTtsCacheStatus.mockResolvedValue({ formatVersion:1, entryCount:2, sizeBytes:1024, maxSizeBytes:262144000 })
+  native.clearStaticTtsCache.mockResolvedValue({ formatVersion:1, entryCount:0, sizeBytes:0, maxSizeBytes:262144000 })
 })
 afterEach(() => { cleanup(); vi.clearAllMocks() })
 

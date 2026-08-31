@@ -1,6 +1,6 @@
 use crate::{
     models::{SpeechAudio, TimedText},
-    paths::LocalPaths,
+    paths::{LocalAiPaths, LocalPaths},
 };
 use base64::{engine::general_purpose::STANDARD, Engine};
 use std::{fs, process::Command, time::Instant};
@@ -65,6 +65,69 @@ pub async fn transcribe(paths: LocalPaths, audio_base64: String) -> Result<Timed
     let _ = fs::remove_file(&output_text);
     Ok(TimedText {
         text: text.trim().to_owned(),
+        elapsed_ms: started.elapsed().as_millis(),
+    })
+}
+
+pub async fn transcribe_official_local_ai(
+    paths: LocalPaths,
+    local_ai: LocalAiPaths,
+    audio_base64: String,
+) -> Result<TimedText, String> {
+    let started = Instant::now();
+    let audio = STANDARD
+        .decode(audio_base64)
+        .map_err(|_| "Microphone audio payload is invalid.".to_owned())?;
+    if audio.len() < 48 || audio.len() > 4_000_000 {
+        return Err("Recorded utterance is empty or too long.".into());
+    }
+    let executable = local_ai.whisper_cli();
+    let model = local_ai.whisper_model("ggml-small.en-q5_1.bin");
+    if !executable.is_file() || !model.is_file() {
+        return Err("The validated local Whisper engine is unavailable.".into());
+    }
+    let id = uuid::Uuid::new_v4().to_string();
+    let input = paths
+        .temporary_audio
+        .join(format!("{id}-practice-input.wav"));
+    let output_base = paths
+        .temporary_audio
+        .join(format!("{id}-practice-transcript"));
+    let output_text = output_base.with_extension("txt");
+    fs::write(&input, audio)
+        .map_err(|error| format!("Could not create temporary audio: {error}"))?;
+    let command_input = input.clone();
+    let output = tokio::task::spawn_blocking(move || {
+        Command::new(executable)
+            .arg("-m")
+            .arg(model)
+            .arg("-f")
+            .arg(&command_input)
+            .args(["-l", "en", "-t", "12", "--output-txt", "--output-file"])
+            .arg(&output_base)
+            .arg("-np")
+            .output()
+    })
+    .await
+    .map_err(|error| format!("Whisper task failed: {error}"))?
+    .map_err(|error| format!("Could not start Whisper: {error}"));
+    let _ = fs::remove_file(&input);
+    let output = output?;
+    if !output.status.success() {
+        let _ = fs::remove_file(&output_text);
+        return Err(format!(
+            "Local transcription failed: {}",
+            String::from_utf8_lossy(&output.stderr)
+                .chars()
+                .take(300)
+                .collect::<String>()
+        ));
+    }
+    let text = fs::read_to_string(&output_text)
+        .map_err(|error| format!("Whisper did not create a transcript: {error}"))?;
+    let _ = fs::remove_file(&output_text);
+    Ok(TimedText {
+        text: text.trim().into(),
         elapsed_ms: started.elapsed().as_millis(),
     })
 }

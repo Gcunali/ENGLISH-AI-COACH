@@ -571,7 +571,10 @@ fn continue_learning(
             return next_step(
                 CurriculumNextStepKind::StartLesson,
                 lesson.title.clone(),
-                format!("Continue in sequence with the next incomplete {} lesson.", level.cefr_level.as_str()),
+                format!(
+                    "Continue in sequence with the next incomplete {} lesson.",
+                    level.cefr_level.as_str()
+                ),
                 "Continue Learning",
                 Some(course),
                 Some(level),
@@ -582,7 +585,11 @@ fn continue_learning(
         }
     }
     if let Some(suggested) = course.suggested_level {
-        if let Some(level) = course.levels.iter().find(|level| level.cefr_level == suggested) {
+        if let Some(level) = course
+            .levels
+            .iter()
+            .find(|level| level.cefr_level == suggested)
+        {
             if let Some((unit, lesson)) = level
                 .units
                 .iter()
@@ -591,7 +598,10 @@ fn continue_learning(
                 return next_step(
                     CurriculumNextStepKind::StartLesson,
                     lesson.title.clone(),
-                    format!("Suggested starting point from your latest Placement result: {}.", suggested.as_str()),
+                    format!(
+                        "Suggested starting point from your latest Placement result: {}.",
+                        suggested.as_str()
+                    ),
                     "Start Suggested Lesson",
                     Some(course),
                     Some(level),
@@ -632,9 +642,16 @@ fn first_lesson(
 fn find_lesson<'a>(
     courses: &'a [CourseDto],
     lesson_id: &str,
-) -> Option<(&'a CourseDto, &'a CourseLevelDto, &'a CourseUnitDto, &'a CourseLessonDto)> {
+) -> Option<(
+    &'a CourseDto,
+    &'a CourseLevelDto,
+    &'a CourseUnitDto,
+    &'a CourseLessonDto,
+)> {
     for course in courses {
-        if let Some((level, unit, lesson)) = first_lesson(course, |lesson| lesson.lesson_id == lesson_id) {
+        if let Some((level, unit, lesson)) =
+            first_lesson(course, |lesson| lesson.lesson_id == lesson_id)
+        {
             return Some((course, level, unit, lesson));
         }
     }
@@ -666,21 +683,32 @@ fn next_step(
     }
 }
 
-fn practice_suggestion(connection: &Connection) -> Result<Option<CurriculumPracticeSuggestionDto>, String> {
+fn practice_suggestion(
+    connection: &Connection,
+) -> Result<Option<CurriculumPracticeSuggestionDto>, String> {
     let mistakes: u32 = connection
-        .query_row("SELECT COUNT(*) FROM recurring_mistake WHERE lesson_count>=2 AND status!='resolved'", [], |row| row.get(0))
+        .query_row(
+            "SELECT COUNT(*) FROM recurring_mistake WHERE lesson_count>=2 AND status!='resolved'",
+            [],
+            |row| row.get(0),
+        )
         .map_err(db)?;
     if mistakes > 0 {
         return Ok(Some(CurriculumPracticeSuggestionDto {
             kind: "recurring_mistakes".into(),
             title: "Review recurring mistakes".into(),
-            description: "Practice confirmed patterns without blocking your next Course lesson.".into(),
+            description: "Practice confirmed patterns without blocking your next Course lesson."
+                .into(),
             item_count: mistakes,
             route: "/review?mode=mistakes".into(),
         }));
     }
     let vocabulary: u32 = connection
-        .query_row("SELECT COUNT(*) FROM vocabulary_item WHERE status IN('new','learning')", [], |row| row.get(0))
+        .query_row(
+            "SELECT COUNT(*) FROM vocabulary_item WHERE status IN('new','learning')",
+            [],
+            |row| row.get(0),
+        )
         .map_err(db)?;
     Ok((vocabulary > 0).then(|| CurriculumPracticeSuggestionDto {
         kind: "vocabulary".into(),
@@ -1242,8 +1270,14 @@ mod tests {
         assert_eq!(travel.status, CurriculumLessonStatus::NotStarted);
         assert_eq!(course.progress.completed_lessons, 1);
         assert_eq!(course.progress.percent, 50);
-        assert_eq!(catalog.continue_learning.kind, CurriculumNextStepKind::StartLesson);
-        assert_eq!(catalog.continue_learning.lesson_id.as_deref(), Some("test-travel-problems"));
+        assert_eq!(
+            catalog.continue_learning.kind,
+            CurriculumNextStepKind::StartLesson
+        );
+        assert_eq!(
+            catalog.continue_learning.lesson_id.as_deref(),
+            Some("test-travel-problems")
+        );
         drop(connection);
         fs::remove_dir_all(root).unwrap();
     }
@@ -1267,8 +1301,14 @@ mod tests {
         assert_eq!(intro.status, CurriculumLessonStatus::InProgress);
         assert_eq!(intro.active_session_id.as_deref(), Some("active-old"));
         assert_eq!(intro.active_session_content_version, Some(1));
-        assert_eq!(catalog.continue_learning.kind, CurriculumNextStepKind::ResumeLesson);
-        assert_eq!(catalog.continue_learning.session_id.as_deref(), Some("active-old"));
+        assert_eq!(
+            catalog.continue_learning.kind,
+            CurriculumNextStepKind::ResumeLesson
+        );
+        assert_eq!(
+            catalog.continue_learning.session_id.as_deref(),
+            Some("active-old")
+        );
         drop(connection);
         fs::remove_dir_all(root).unwrap();
     }
@@ -1277,7 +1317,10 @@ mod tests {
     fn no_placement_never_fabricates_a1_and_safe_dto_has_no_private_content() {
         let (root, service) = temp_service();
         let catalog = service.catalog().unwrap();
-        assert_eq!(catalog.continue_learning.kind, CurriculumNextStepKind::ChooseLevel);
+        assert_eq!(
+            catalog.continue_learning.kind,
+            CurriculumNextStepKind::ChooseLevel
+        );
         let json = serde_json::to_string(&catalog).unwrap();
         assert!(json.contains("\"suggestedLevel\":null"));
         for forbidden in [
@@ -1300,9 +1343,19 @@ mod tests {
         connection.execute("INSERT INTO placement_attempt(id,status,test_version,question_bank_version,scoring_version,speaking_prompt_version,started_at,completed_at,overall_estimated_level,confidence,speaking_status,created_at,updated_at) VALUES('placement-b1-only','completed',1,1,1,1,'now','now','B1','high','skipped','now','now')",[]).unwrap();
         drop(connection);
         let catalog = service.catalog().unwrap();
-        assert_eq!(catalog.continue_learning.kind, CurriculumNextStepKind::StartLesson);
-        assert_eq!(catalog.continue_learning.lesson_id.as_deref(), Some("test-travel-problems"));
-        assert!(catalog.curricula.iter().flat_map(|course|&course.levels).all(|level|!level.units.is_empty()));
+        assert_eq!(
+            catalog.continue_learning.kind,
+            CurriculumNextStepKind::StartLesson
+        );
+        assert_eq!(
+            catalog.continue_learning.lesson_id.as_deref(),
+            Some("test-travel-problems")
+        );
+        assert!(catalog
+            .curricula
+            .iter()
+            .flat_map(|course| &course.levels)
+            .all(|level| !level.units.is_empty()));
         fs::remove_dir_all(root).unwrap();
     }
 

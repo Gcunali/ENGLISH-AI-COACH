@@ -115,14 +115,25 @@ impl GamificationRepository {
         let mut guided_events_created = 0_u64;
         for (id, completed_at) in &guided {
             let activity_day: String = transaction
-                .query_row("SELECT date(?1,'localtime')", [completed_at], |row| row.get(0))
+                .query_row("SELECT date(?1,'localtime')", [completed_at], |row| {
+                    row.get(0)
+                })
                 .map_err(db_error)?;
-            guided_events_created += transaction.execute(
-                "INSERT OR IGNORE INTO guided_gamification_xp_event
+            guided_events_created += transaction
+                .execute(
+                    "INSERT OR IGNORE INTO guided_gamification_xp_event
                  (id,session_id,rule_version,xp_amount,activity_day,created_at)
                  VALUES(?1,?2,?3,?4,?5,?6)",
-                params![uuid::Uuid::new_v4().to_string(),id,GUIDED_XP_RULE_VERSION,GUIDED_SESSION_XP,activity_day,completed_at],
-            ).map_err(db_error)? as u64;
+                    params![
+                        uuid::Uuid::new_v4().to_string(),
+                        id,
+                        GUIDED_XP_RULE_VERSION,
+                        GUIDED_SESSION_XP,
+                        activity_day,
+                        completed_at
+                    ],
+                )
+                .map_err(db_error)? as u64;
         }
         let newly_unlocked = unlock_achievements(&transaction)?;
         transaction.commit().map_err(db_error)?;
@@ -149,8 +160,9 @@ impl GamificationRepository {
         let total_xp = connection.query_row(
             "SELECT
                (SELECT COALESCE(SUM(xp_amount),0) FROM gamification_xp_event WHERE rule_version=?1)+
-               (SELECT COALESCE(SUM(xp_amount),0) FROM guided_gamification_xp_event WHERE rule_version=?2)",
-            params![GAMIFICATION_XP_RULE_VERSION,GUIDED_XP_RULE_VERSION], |row| row.get::<_, i64>(0),
+               (SELECT COALESCE(SUM(xp_amount),0) FROM guided_gamification_xp_event WHERE rule_version=?2)+
+               (SELECT COALESCE(SUM(xp_amount),0) FROM learning_practice_xp_event WHERE rule_version=?3)",
+            params![GAMIFICATION_XP_RULE_VERSION,GUIDED_XP_RULE_VERSION,crate::practice_repository::PRACTICE_XP_RULE_VERSION], |row| row.get::<_, i64>(0),
         ).map_err(db_error)?.max(0) as u64;
         let total_seconds = events
             .iter()
@@ -229,13 +241,19 @@ fn completed_lessons(transaction: &Transaction<'_>) -> Result<Vec<(String, i64, 
     Ok(rows)
 }
 
-fn completed_guided_sessions(transaction: &Transaction<'_>) -> Result<Vec<(String, String)>, String> {
-    transaction.prepare(
-        "SELECT id,completed_at FROM interactive_lesson_session
-         WHERE status='completed' AND completed_at IS NOT NULL ORDER BY completed_at,id"
-    ).map_err(db_error)?
-      .query_map([],|row|Ok((row.get(0)?,row.get(1)?))).map_err(db_error)?
-      .collect::<Result<Vec<_>,_>>().map_err(db_error)
+fn completed_guided_sessions(
+    transaction: &Transaction<'_>,
+) -> Result<Vec<(String, String)>, String> {
+    transaction
+        .prepare(
+            "SELECT id,completed_at FROM interactive_lesson_session
+         WHERE status='completed' AND completed_at IS NOT NULL ORDER BY completed_at,id",
+        )
+        .map_err(db_error)?
+        .query_map([], |row| Ok((row.get(0)?, row.get(1)?)))
+        .map_err(db_error)?
+        .collect::<Result<Vec<_>, _>>()
+        .map_err(db_error)
 }
 
 fn valid_student_turns(transaction: &Transaction<'_>, lesson_id: &str) -> Result<u32, String> {
@@ -266,18 +284,30 @@ fn events(connection: &Connection) -> Result<Vec<Event>, String> {
                       COALESCE((SELECT SUM(p.duration_seconds) FROM interactive_lesson_active_practice_event p WHERE p.session_id=e.session_id),0),
                       'guided',e.session_id
                FROM guided_gamification_xp_event e WHERE e.rule_version=?2
+               UNION ALL
+               SELECT e.created_at,e.activity_day,
+                      COALESCE((SELECT SUM(p.duration_seconds) FROM learning_practice_active_time_event p WHERE p.session_id=e.session_id),0),
+                      'practice',e.session_id
+               FROM learning_practice_xp_event e WHERE e.rule_version=?3
              ) ORDER BY created_at,source_id",
         )
         .map_err(db_error)?;
     let raw = statement
-        .query_map(params![GAMIFICATION_XP_RULE_VERSION,GUIDED_XP_RULE_VERSION], |row| {
-            Ok((
-                row.get::<_, String>(0)?,
-                row.get::<_, String>(1)?,
-                row.get::<_, i64>(2)?,
-                row.get::<_, String>(3)?,
-            ))
-        })
+        .query_map(
+            params![
+                GAMIFICATION_XP_RULE_VERSION,
+                GUIDED_XP_RULE_VERSION,
+                crate::practice_repository::PRACTICE_XP_RULE_VERSION
+            ],
+            |row| {
+                Ok((
+                    row.get::<_, String>(0)?,
+                    row.get::<_, String>(1)?,
+                    row.get::<_, i64>(2)?,
+                    row.get::<_, String>(3)?,
+                ))
+            },
+        )
         .map_err(db_error)?
         .collect::<Result<Vec<_>, _>>()
         .map_err(db_error)?;
@@ -287,7 +317,11 @@ fn events(connection: &Connection) -> Result<Vec<Event>, String> {
                 ended_at,
                 activity_day: LocalDate::parse(&day)?,
                 duration_seconds: duration.max(0) as u64,
-                source_type: if source_type == "guided" { "guided" } else { "standard" },
+                source_type: match source_type.as_str() {
+                    "guided" => "guided",
+                    "practice" => "practice",
+                    _ => "standard",
+                },
             })
         })
         .collect()
@@ -340,7 +374,10 @@ fn unlock_achievements(transaction: &Transaction<'_>) -> Result<Vec<String>, Str
     for definition in ACHIEVEMENTS {
         let (value, timestamp) = match definition.criterion {
             AchievementCriterion::Lessons(target) => (
-                events.iter().filter(|event| event.source_type == "standard").count() as u64,
+                events
+                    .iter()
+                    .filter(|event| event.source_type == "standard")
+                    .count() as u64,
                 events
                     .iter()
                     .filter(|event| event.source_type == "standard")
@@ -454,14 +491,19 @@ fn guided_progress_facts(connection: &Connection) -> Result<GuidedProgressFacts,
              WHERE status='completed' AND completed_at IS NOT NULL ORDER BY completed_at,id",
         )
         .map_err(db_error)?
-        .query_map([], |row| Ok((row.get::<_, String>(0)?, row.get::<_, String>(1)?)))
+        .query_map([], |row| {
+            Ok((row.get::<_, String>(0)?, row.get::<_, String>(1)?))
+        })
         .map_err(db_error)?
         .collect::<Result<Vec<_>, _>>()
         .map_err(db_error)?;
     let mut facts = GuidedProgressFacts::default();
     for (lesson_id, completed_at) in rows {
         facts.completed_sessions.push(completed_at.clone());
-        facts.unique_lessons.entry(lesson_id).or_insert(completed_at);
+        facts
+            .unique_lessons
+            .entry(lesson_id)
+            .or_insert(completed_at);
     }
     Ok(facts)
 }
@@ -657,11 +699,38 @@ mod tests {
         assert_eq!(overview.qualifying_lesson_count, 2);
         assert_eq!(overview.total_practice_minutes, 1);
         let achievements = repo.achievements().unwrap();
-        assert!(achievements.iter().find(|item| item.id=="first_guided_lesson").unwrap().unlocked);
-        assert!(!achievements.iter().find(|item| item.id=="ten_guided_lessons").unwrap().unlocked);
+        assert!(
+            achievements
+                .iter()
+                .find(|item| item.id == "first_guided_lesson")
+                .unwrap()
+                .unlocked
+        );
+        assert!(
+            !achievements
+                .iter()
+                .find(|item| item.id == "ten_guided_lessons")
+                .unwrap()
+                .unlocked
+        );
         let connection = database::open(&repo.database).unwrap();
-        assert_eq!(connection.query_row("SELECT COUNT(*) FROM placement_attempt",[],|row|row.get::<_,i64>(0)).unwrap(),0);
-        assert_eq!(connection.query_row("SELECT COUNT(*) FROM guided_gamification_xp_event",[],|row|row.get::<_,i64>(0)).unwrap(),2);
+        assert_eq!(
+            connection
+                .query_row("SELECT COUNT(*) FROM placement_attempt", [], |row| row
+                    .get::<_, i64>(0))
+                .unwrap(),
+            0
+        );
+        assert_eq!(
+            connection
+                .query_row(
+                    "SELECT COUNT(*) FROM guided_gamification_xp_event",
+                    [],
+                    |row| row.get::<_, i64>(0)
+                )
+                .unwrap(),
+            2
+        );
         drop(connection);
         std::fs::remove_dir_all(directory).unwrap();
     }

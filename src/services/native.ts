@@ -25,6 +25,10 @@ import type {
   PlacementOverview,
   PlacementResult,
   PlacementSession,
+  PracticeAvailability,
+  PracticeItemResult,
+  PracticeMode,
+  PracticeSession,
   ProgressOverview,
   RecurringMistake,
   RecurringMistakeDetails,
@@ -51,6 +55,7 @@ import type {
   VocabularySummary,
   VoiceEngineEvent,
   VoiceEngineStatus,
+  StaticTtsCacheStatus,
 } from "../types";
 import type { PronunciationAttempt, PronunciationEngineStatus } from "../types";
 import type {
@@ -1046,4 +1051,37 @@ export async function selectGuidedLessonExerciseAttempt(
   return invoke<GuidedLessonSession>("select_guided_lesson_exercise_attempt", {
     request: { sessionId, stageId, exerciseId, attemptId },
   });
+}
+
+export async function getPracticeAvailability(): Promise<PracticeAvailability> {
+  if (!isTauri()) throw new Error("Practice requires the desktop runtime.");
+  return invoke<PracticeAvailability>("get_practice_availability");
+}
+export async function startPracticeSession(mode: PracticeMode, itemCount = 5): Promise<PracticeSession> {
+  if (!isTauri()) throw new Error("Practice requires the desktop runtime.");
+  return invoke<PracticeSession>("start_practice_session", { request: { mode, itemCount } });
+}
+export async function getPracticeSession(sessionId: string): Promise<PracticeSession> {
+  return invoke<PracticeSession>("get_practice_session", { sessionId });
+}
+export async function recordPracticeTime(sessionId: string, eventId: string, durationSeconds: number): Promise<number> {
+  return invoke<number>("record_practice_time", { sessionId, eventId, durationSeconds });
+}
+export async function completePracticeItem(request: { sessionId: string; itemId: string; response?: string; selfAssessment?: string }): Promise<PracticeItemResult> {
+  return invoke<PracticeItemResult>("complete_practice_item", { request });
+}
+export async function completePracticeSession(sessionId: string): Promise<PracticeSession> {
+  return invoke<PracticeSession>("complete_practice_session", { sessionId });
+}
+export async function abandonPracticeSession(sessionId: string): Promise<void> {
+  return invoke<void>("abandon_practice_session", { sessionId });
+}
+export async function preparePracticeAudio(sessionId: string, itemId: string): Promise<GuidedAudio> {
+  return invoke<GuidedAudio>("prepare_practice_audio", { sessionId, itemId });
+}
+export async function getStaticTtsCacheStatus(): Promise<StaticTtsCacheStatus> {
+  return invoke<StaticTtsCacheStatus>("get_static_tts_cache_status");
+}
+export async function clearStaticTtsCache(): Promise<StaticTtsCacheStatus> {
+  return invoke<StaticTtsCacheStatus>("clear_static_tts_cache");
 }

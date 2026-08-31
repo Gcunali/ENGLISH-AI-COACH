@@ -1,19 +1,85 @@
-import { ChevronDown, ChevronUp, Mic, RotateCcw, Square, Volume2 } from 'lucide-react'
+import { AudioLines, CheckCircle2, ChevronDown, ChevronUp, Clock3, Mic, RotateCcw, ShieldCheck, Square, Target, Volume2 } from 'lucide-react'
 import { useState } from 'react'
 import { useSearchParams } from 'react-router-dom'
+import { AppCard, InlineNotice, PageHero, PageShell, SectionHeader, StatusBadge } from '../components/ProductUI'
 import { usePronunciationPractice, validatePronunciationTarget } from '../hooks/usePronunciationPractice'
 import type { PronunciationAttempt } from '../types'
-import { InlineNotice, PageHeader, PageShell } from '../components/ProductUI'
 import { formatLocalDate } from '../utils/format'
+import { WORD_PRONUNCIATION_FEEDBACK_VERSION, wordFeedback } from '../utils/pronunciationFeedback'
 
-export function PronunciationPage(){const[params]=useSearchParams();const source=params.get('text')??'',sourceId=params.get('sourceId'),sourceType=params.get('source')==='vocabulary'&&sourceId?'vocabulary':'custom';const practice=usePronunciationPractice(source,sourceType,sourceId);const validation=validatePronunciationTarget(practice.target);const unavailable=practice.state==='error'&&!practice.engine?.ready;return <PageShell width="standard"><div className="space-y-6"><PageHeader eyebrow="Local acoustic feedback" title="Pronunciation Practice" description="Practice a word or short phrase and get local acoustic feedback without changing your lesson scores." />
-  <section className="glass rounded-3xl p-6 space-y-5"><label className="block font-medium" htmlFor="pronunciation-target">Target word or phrase</label><textarea id="pronunciation-target" aria-describedby="pronunciation-help" aria-invalid={!!practice.target&&!!validation} value={practice.target} onChange={e=>practice.setTarget(e.target.value)} maxLength={160} rows={3} disabled={practice.state==='recording'||practice.state==='checking'||practice.state==='analyzing'} placeholder="I'm terrible at cooking." className="w-full rounded-2xl border border-white/10 bg-black/20 p-4"/><div id="pronunciation-help" className="flex flex-wrap justify-between gap-2 text-xs muted"><span className={practice.target&&validation?'text-red-200':undefined}>{practice.target&&validation?validation:'General American English reference · maximum 12 words'}</span><span>{practice.target.length}/160</span></div>
-  {practice.state==='loading_engine'&&<Status text="Loading local pronunciation model…"/>}{practice.state==='recording'&&<Status text="Recording… Speak the target, then stop."/>}{practice.state==='checking'&&<Status text="Checking phrase…"/>}{practice.state==='analyzing'&&<Status text="Analyzing pronunciation…"/>}{practice.error&&<p role="alert" className="rounded-xl bg-red-500/10 p-3 text-sm text-red-200">{practice.error}</p>}
-  {unavailable&&<InlineNotice tone="warning" title="Pronunciation is unavailable">Check System Diagnostics for the local acoustic model status. Other learning features remain available.</InlineNotice>}
-  <div className="flex flex-wrap gap-3">{practice.state==='recording'?<button className="button-primary" onClick={()=>void practice.stop()}><Square size={16}/> Stop recording</button>:<button className="button-primary" aria-busy={practice.state==='checking'||practice.state==='analyzing'} disabled={!!validation||!practice.engine?.ready||practice.state==='checking'||practice.state==='analyzing'} onClick={()=>void practice.start()}><Mic size={17}/> Record pronunciation</button>}{(practice.state==='checking'||practice.state==='analyzing')&&<button className="button-secondary" onClick={()=>void practice.cancel()}>Cancel</button>}<button className="button-secondary" disabled aria-describedby="hear-target-help"><Volume2 size={16}/> Hear target</button></div><p id="hear-target-help" className="muted mb-0 text-xs">Target playback remains unavailable while acoustic scoring calibration is protected.</p></section>
-  {practice.result&&<ResultCard attempt={practice.result} retry={practice.retry}/>}<History items={practice.history}/>
-  <p className="muted text-xs">This is a local pronunciation-practice estimate, not a language certification. Accent variation, microphone quality and background noise may affect the score.</p></div></PageShell>}
+export function PronunciationPage() {
+  const [params] = useSearchParams()
+  const source = params.get('text') ?? ''
+  const sourceId = params.get('sourceId')
+  const sourceType = params.get('source') === 'vocabulary' && sourceId ? 'vocabulary' : 'custom'
+  const practice = usePronunciationPractice(source, sourceType, sourceId)
+  const validation = validatePronunciationTarget(practice.target)
+  const unavailable = practice.state === 'error' && !practice.engine?.ready
+  const busy = practice.state === 'recording' || practice.state === 'checking' || practice.state === 'analyzing'
 
-function Status({text}:{text:string}){return <p role="status" className="rounded-xl bg-white/[.05] p-3 text-sm">{text}</p>}
-function ResultCard({attempt,retry}:{attempt:PronunciationAttempt;retry:()=>void}){const[open,setOpen]=useState<number|null>(null);if(attempt.status==='content_mismatch')return <section className="glass rounded-3xl p-6"><h2>Try the phrase again</h2><p>The recording did not match the target closely enough. Try the phrase again.</p><button className="button-secondary" onClick={retry}><RotateCcw size={16}/> Try Again</button></section>;if(attempt.status!=='completed')return <section className="glass rounded-3xl p-6"><h2>No score available</h2><p className="muted">There was not enough reliable acoustic evidence. Please record again.</p><button className="button-secondary" onClick={retry}><RotateCcw size={16}/> Try Again</button></section>;return <section className="glass rounded-3xl p-6 space-y-5"><div className="flex flex-wrap items-end justify-between gap-4"><div><p className="eyebrow">Pronunciation Practice score</p><div className="text-5xl font-semibold">{Math.round(attempt.overallScore??0)}<span className="text-xl muted">/100</span></div></div><div className="min-w-0"><div className="text-sm">Confidence: <strong>{attempt.confidence}</strong></div><div className="muted break-words text-sm">Target: {attempt.targetText}</div></div></div>{attempt.confidence==='low'&&<InlineNotice tone="warning">Low-confidence acoustic evidence. Treat this result as guidance and try again in a quieter setting.</InlineNotice>}<div className="grid gap-3">{attempt.words.map(word=><div key={word.index} className="min-w-0 rounded-2xl border border-white/[.08]"><button className="flex w-full items-center justify-between gap-3 p-4 text-left" aria-expanded={open===word.index} onClick={()=>setOpen(open===word.index?null:word.index)}><span className="min-w-0 break-words font-medium">{word.word}</span><span className="flex shrink-0 items-center gap-2"><strong>{Math.round(word.score)}</strong>{open===word.index?<ChevronUp size={16}/>:<ChevronDown size={16}/>}</span></button>{open===word.index&&<div className="border-t border-white/[.08] p-4"><p className="muted break-words text-xs">Expected sounds: {word.expectedPhones.join(' · ')}</p><div className="grid gap-2">{word.phoneResults.map((phone,index)=><div key={`${phone.phone}-${index}`} className="rounded-xl bg-white/[.04] p-3"><div className="flex justify-between"><code>/{phone.phone}/</code><strong>{Math.round(phone.score)}</strong></div>{phone.closestAlternative&&<p className="muted mb-0 break-words text-xs">This part was acoustically closer to /{phone.closestAlternative}/ than the target /{phone.phone}/.</p>}{phone.hint&&<p className="mb-0 break-words text-sm">{phone.hint}</p>}</div>)}</div></div>}</div>)}</div><button className="button-secondary" onClick={retry}><RotateCcw size={16}/> Try Again</button></section>}
-function History({items}:{items:PronunciationAttempt[]}){return <section aria-labelledby="pronunciation-history"><h2 id="pronunciation-history" className="section-title text-lg">Recent Practice</h2>{!items.length?<div className="state-card mt-4"><p className="m-0 font-medium">No pronunciation attempts yet.</p><p className="page-description">Enter a short target above, record it, and your local results will appear here.</p></div>:<div className="mt-4 grid gap-2">{items.map(item=><div key={item.id} className="glass flex flex-wrap items-center justify-between gap-3 rounded-2xl p-4"><div className="min-w-0"><div className="break-words font-medium">{item.targetText}</div><div className="muted text-xs">{formatLocalDate(item.createdAt)}</div></div><div className="text-right"><strong>{item.overallScore===null?'No score':Math.round(item.overallScore)}</strong><div className="muted text-xs">{item.confidence??item.status.replace('_',' ')}</div></div></div>)}</div>}</section>}
+  return <PageShell width="wide">
+    <PageHero eyebrow="Let’s make your pronunciation clear and confident" title="Pronunciation" accent="Practice" description="Practice a word or short phrase and get local acoustic feedback without changing your lesson score." compact illustration="background" />
+
+    <AppCard>
+      <div className="pronunciation-input-layout">
+        <div>
+          <p className="eyebrow">Practice input</p>
+          <label className="form-label mt-4" htmlFor="pronunciation-target">Target word or phrase</label>
+          <textarea id="pronunciation-target" aria-describedby="pronunciation-help" aria-invalid={!!practice.target && !!validation} value={practice.target} onChange={(event) => practice.setTarget(event.target.value)} maxLength={160} rows={3} disabled={busy} placeholder="I'm terrible at cooking." className="form-control mt-2" />
+          <div id="pronunciation-help" className="pronunciation-help"><span className={practice.target && validation ? 'text-red-200' : undefined}>{practice.target && validation ? validation : 'General American English reference · maximum 12 words'}</span><span>{practice.target.length}/160</span></div>
+          <PracticeStatus state={practice.state} />
+          {practice.error && <p role="alert" className="notice notice-error mt-4">{practice.error}</p>}
+          {unavailable && <div className="mt-4"><InlineNotice tone="warning" title="Pronunciation is unavailable">Check System Diagnostics for the local acoustic model status. Other learning features remain available.</InlineNotice></div>}
+          <div className="pronunciation-actions">
+            {practice.state === 'recording' ? <button className="button-primary" onClick={() => void practice.stop()}><Square size={16} fill="currentColor" /> Stop recording</button> : <button className="button-primary" aria-busy={practice.state === 'checking' || practice.state === 'analyzing'} disabled={!!validation || !practice.engine?.ready || practice.state === 'checking' || practice.state === 'analyzing'} onClick={() => void practice.start()}><Mic size={17} /> Record pronunciation</button>}
+            {(practice.state === 'checking' || practice.state === 'analyzing') && <button className="button-secondary" onClick={() => void practice.cancel()}>Cancel</button>}
+            <button className="button-secondary" disabled aria-describedby="hear-target-help"><Volume2 size={16} /> Hear target</button>
+          </div>
+          <p id="hear-target-help" className="page-footnote">Target playback remains unavailable while acoustic scoring calibration is protected.</p>
+        </div>
+        <aside className="session-status-panel">
+          <p className="eyebrow">Session status</p>
+          <SessionLine icon={<Mic />} label="Microphone" value={practice.engine?.ready ? 'Ready' : 'Unavailable'} tone={practice.engine?.ready ? 'success' : 'warning'} />
+          <SessionLine icon={<AudioLines />} label="Analysis" value={busy ? 'Active' : 'Ready on demand'} tone={busy ? 'info' : 'neutral'} />
+          <SessionLine icon={<ShieldCheck />} label="Feedback mode" value="Local acoustic" tone="info" />
+        </aside>
+      </div>
+    </AppCard>
+
+    <div className="pronunciation-results-layout">
+      <History items={practice.history} />
+      {practice.result ? <ResultCard attempt={practice.result} retry={practice.retry} /> : <AppCard><SectionHeader title="Pronunciation Score" /><div className="empty-score"><AudioLines size={28} /><strong>Your result will appear here</strong><span>Record the target phrase to receive local acoustic feedback.</span></div></AppCard>}
+    </div>
+    <p className="page-footnote"><ShieldCheck size={14} /> This is a local pronunciation-practice estimate, not a language certification. Accent variation, microphone quality and background noise may affect the score.</p>
+  </PageShell>
+}
+
+function PracticeStatus({ state }: { state: string }) {
+  const text = state === 'loading_engine' ? 'Loading local pronunciation model…' : state === 'recording' ? 'Recording… Speak the target, then stop.' : state === 'checking' ? 'Checking phrase…' : state === 'analyzing' ? 'Analyzing pronunciation…' : null
+  return text ? <p role="status" className="practice-live-status"><AudioLines size={17} />{text}</p> : null
+}
+
+function SessionLine({ icon, label, value, tone }: { icon: React.ReactNode; label: string; value: string; tone: 'success' | 'warning' | 'info' | 'neutral' }) { return <div className="session-status-line"><span aria-hidden="true">{icon}</span><div><strong>{label}</strong><StatusBadge tone={tone}>{value}</StatusBadge></div></div> }
+
+function ResultCard({ attempt, retry }: { attempt: PronunciationAttempt; retry: () => void }) {
+  const [open, setOpen] = useState<number | null>(null)
+  if (attempt.status === 'content_mismatch') return <AppCard><SectionHeader title="Try the phrase again" /><p className="section-description mt-3">The recording did not match the target closely enough. Try the phrase again.</p><button className="button-secondary mt-5" onClick={retry}><RotateCcw size={16} /> Try Again</button></AppCard>
+  if (attempt.status !== 'completed') return <AppCard><SectionHeader title="No score available" /><p className="section-description mt-3">There was not enough reliable acoustic evidence. Please record again.</p><button className="button-secondary mt-5" onClick={retry}><RotateCcw size={16} /> Try Again</button></AppCard>
+  const score = Math.round(attempt.overallScore ?? 0)
+  const feedback = wordFeedback(attempt)
+  return <AppCard>
+    <SectionHeader title="Pronunciation Score" description={`Acoustic score v1 · word feedback v${WORD_PRONUNCIATION_FEEDBACK_VERSION} · confidence: ${attempt.confidence}`} />
+    <div className="score-circle" style={{ '--score': `${score * 3.6}deg` } as React.CSSProperties}><div><strong>{score}%</strong><span>{score >= 85 ? 'Great work!' : score >= 70 ? 'Good job!' : 'Keep practicing'}</span></div></div>
+    <p className="target-summary">Target: <strong>{attempt.targetText}</strong></p>
+    {!feedback.available && <InlineNotice tone="warning">{feedback.reason}</InlineNotice>}
+    {feedback.available && feedback.items.some(item => item.focus) && <div className="pronunciation-focus"><Target size={17} /><div><strong>Focus words</strong><span>{feedback.items.filter(item => item.focus).map(item => item.word.word).join(' · ')}</span></div></div>}
+    {feedback.available && <div className="word-feedback-list">{feedback.items.map(({ word, label, focus }) => <div key={word.index} className={focus ? 'is-focus' : ''}>
+      <button aria-expanded={open === word.index} onClick={() => setOpen(open === word.index ? null : word.index)}><span><CheckCircle2 size={17} />{word.word}</span><span><em className={`word-label word-label-${label.toLowerCase().replace(' ','-')}`}>{label}</em><strong>{Math.round(word.score)}</strong>{open === word.index ? <ChevronUp size={16} /> : <ChevronDown size={16} />}</span></button>
+      {open === word.index && <div className="phone-feedback"><p>Expected sounds: {word.expectedPhones.join(' · ')}</p>{word.phoneResults.map((phone, index) => <div key={`${phone.phone}-${index}`}><div><code>/{phone.phone}/</code><strong>{Math.round(phone.score)}</strong></div>{phone.closestAlternative && <p>This part was acoustically closer to /{phone.closestAlternative}/ than the target /{phone.phone}/.</p>}{phone.hint && <p>{phone.hint}</p>}</div>)}</div>}
+    </div>)}</div>}
+    <button className="button-secondary mt-5" onClick={retry}><RotateCcw size={16} /> Try Again</button>
+  </AppCard>
+}
+
+function History({ items }: { items: PronunciationAttempt[] }) { return <AppCard className="recent-practice-card"><SectionHeader id="pronunciation-history" title="Recent Practice" />{!items.length ? <div className="empty-practice"><Clock3 size={24} /><strong>No pronunciation attempts yet.</strong><span>Record a short target and your local results will appear here.</span></div> : <div className="recent-attempts">{items.map((item) => <div key={item.id}><span className="attempt-play"><PlayIcon /></span><div className="min-w-0"><strong>{item.targetText}</strong><span>{formatLocalDate(item.createdAt)}</span></div><b>{item.overallScore === null ? 'No score' : `${Math.round(item.overallScore)}%`}</b></div>)}</div>}</AppCard> }
+function PlayIcon() { return <span aria-hidden="true">▶</span> }

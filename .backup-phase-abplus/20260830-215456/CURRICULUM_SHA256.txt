@@ -1,0 +1,1 @@
+2395C6925AE62F26F0F60D73293C17E78AA475AA186EC0949B2D3E6A3FE18688  src-tauri\resources\curriculum\english-core\curriculum.json

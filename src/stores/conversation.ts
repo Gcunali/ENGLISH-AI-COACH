@@ -144,6 +144,8 @@ export function reduceVoiceEngineEvent(store: VoiceEventState, event: VoiceEngin
       const { type: _type, ...metrics } = event
       return { voiceTurnMetrics: metrics }
     }
+    case 'whisper_performance':
+      return {}
     case 'error':
       return event.recoverable
         ? { state: 'LISTENING', error: event.message, streamedTeacherText: '', activeGenerationId: null }

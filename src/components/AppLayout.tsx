@@ -1,8 +1,9 @@
-import { Activity, Award, BookOpen, CircleGauge, ClipboardCheck, GraduationCap, History, Home, Mic2, RefreshCw, Settings, ShieldCheck, Sparkles, UserRound } from 'lucide-react'
+import { Activity, Award, BookOpen, ChevronDown, CircleGauge, ClipboardCheck, Dumbbell, GraduationCap, History, Home, Mic2, RefreshCw, Settings, Sparkles, UserRound } from 'lucide-react'
 import { NavLink, Outlet, useLocation } from 'react-router-dom'
 import { useEffect, useState } from 'react'
-import { getCourseCatalog, getGuidedLessonOverview, subscribeGamificationChanges, subscribeReviewChanges } from '../services/native'
+import { getCourseCatalog, getGuidedLessonOverview, probeLocalVoiceEngine, subscribeGamificationChanges, subscribeReviewChanges } from '../services/native'
 import type { Achievement } from '../types'
+import coachMascot from '../assets/coach-mascot-v1.png'
 import { notifyGamificationDataChanged } from '../utils/gamificationData'
 import { notifyReviewDataChanged } from '../utils/reviewData'
 import { RouteErrorBoundary } from './RouteErrorBoundary'
@@ -13,6 +14,7 @@ const NAVIGATION = [
     { to: '/lesson/new', label: 'New Lesson', icon: Sparkles },
     { to: '/review', label: 'Review', icon: RefreshCw },
     { to: '/pronunciation', label: 'Pronunciation', icon: Mic2 },
+    { to: '/practice', label: 'Practice Lab', icon: Dumbbell },
   ] },
   { label: 'Learning', items: [
     { to: '/course', label: 'Course', icon: BookOpen, course: true },
@@ -37,6 +39,7 @@ const ROUTE_TITLES: Array<[RegExp, string]> = [
   [/^\/guided-lessons\/session\//, 'Guided Lesson'], [/^\/guided-lessons\//, 'Guided Lesson Details'], [/^\/guided-lessons$/, 'Guided Lessons'],
   [/^\/course/, 'English Course'],
   [/^\/progress$/, 'Progress'], [/^\/review\/session\//, 'Review Session'], [/^\/review$/, 'Review'],
+  [/^\/practice\/session\//, 'Practice Session'], [/^\/practice$/, 'Practice Lab'],
   [/^\/placement\/results\//, 'Placement Result'], [/^\/placement$/, 'Placement Test'], [/^\/profile$/, 'Student Profile'],
   [/^\/achievements$/, 'Achievements'], [/^\/vocabulary\//, 'Vocabulary Details'], [/^\/vocabulary$/, 'Vocabulary'],
   [/^\/pronunciation$/, 'Pronunciation Practice'], [/^\/settings$/, 'Settings'], [/^\/diagnostics$/, 'System Diagnostics'],
@@ -47,6 +50,7 @@ export function AppLayout() {
   const [unlocked, setUnlocked] = useState<Achievement | null>(null)
   const [showGuidedLessons, setShowGuidedLessons] = useState(false)
   const [showCourse, setShowCourse] = useState(false)
+  const [localAiReady, setLocalAiReady] = useState<boolean | null>(null)
   useEffect(() => {
     document.documentElement.scrollTop = 0
     document.body.scrollTop = 0
@@ -63,32 +67,30 @@ export function AppLayout() {
   }, [])
   useEffect(()=>{let stop:()=>void=()=>undefined;void subscribeReviewChanges(notifyReviewDataChanged).then(value=>{stop=value});return()=>stop()},[])
   useEffect(()=>{let active=true;void Promise.all([getGuidedLessonOverview(),getCourseCatalog()]).then(([guided,course])=>{if(active){setShowGuidedLessons(guided.publishedLessonCount>0||Boolean(guided.activeSession));setShowCourse(course.publishedCurriculumCount>0)}}).catch(()=>{if(active){setShowGuidedLessons(false);setShowCourse(false)}});return()=>{active=false}},[pathname])
+  useEffect(()=>{let active=true;void probeLocalVoiceEngine().then(value=>{if(active)setLocalAiReady(value.offlineReady)}).catch(()=>{if(active)setLocalAiReady(false)});return()=>{active=false}},[])
   useEffect(() => { if (!unlocked) return undefined; const timer = window.setTimeout(() => setUnlocked(null), 5000); return () => window.clearTimeout(timer) }, [unlocked])
   return <div className="app-shell flex min-h-screen">
     <a className="skip-link" href="#main-content">Skip to main content</a>
-    <aside className="desktop-nav h-screen w-64 shrink-0 overflow-y-auto border-r border-white/[.07] p-5 flex flex-col">
+    <aside className="desktop-nav app-sidebar h-screen w-64 shrink-0 overflow-y-auto p-5 flex flex-col">
       <Brand />
       <Navigation showGuidedLessons={showGuidedLessons} showCourse={showCourse} />
-      <div className="mt-auto glass rounded-2xl p-4">
-        <div className="flex items-center gap-2 text-sm font-medium"><ShieldCheck size={16} className="text-[var(--accent)]" /> Private by default</div>
-        <p className="muted text-xs leading-5 mb-0">Audio, transcripts and learning data stay on this computer.</p>
-      </div>
+      <ProfileCard />
     </aside>
-    <div className="min-w-0 flex-1">
-      <div className="mobile-nav border-b border-white/[.07] p-3">
-        <Brand />
+    <div className="app-content min-w-0 flex-1">
+      <div className="mobile-nav p-3">
+        <div className="flex items-center justify-between gap-3"><Brand /><LocalAiStatus ready={localAiReady} /></div>
         <Navigation compact showGuidedLessons={showGuidedLessons} showCourse={showCourse} />
       </div>
-      <main id="main-content" tabIndex={-1} className="mx-auto w-full min-w-0 max-w-[1500px] overflow-x-hidden p-5 md:p-8"><RouteErrorBoundary key={pathname}><Outlet /></RouteErrorBoundary></main>
+      <main id="main-content" tabIndex={-1} className="app-main mx-auto w-full min-w-0 overflow-x-hidden"><div className="app-utility-bar"><LocalAiStatus ready={localAiReady} /></div><RouteErrorBoundary key={pathname}><Outlet /></RouteErrorBoundary></main>
     </div>
     {unlocked && <div role="status" className="fixed bottom-5 right-5 z-50 max-w-sm rounded-2xl border border-[var(--accent)]/25 bg-white p-4 shadow-2xl"><div className="flex items-center gap-2 text-sm font-semibold"><Award size={18} className="text-[var(--accent)]" /> Achievement unlocked</div><p className="mb-0 mt-1 text-sm">{unlocked.title}</p></div>}
   </div>
 }
 
 function Brand() {
-  return <div className="flex items-center gap-3 px-2 py-2">
-    <div className="h-9 w-9 rounded-xl bg-[var(--accent)] text-white grid place-items-center"><Sparkles size={18} /></div>
-    <div><div className="font-semibold tracking-tight">English AI</div><div className="text-xs muted">Local Coach</div></div>
+  return <div className="app-brand flex items-center gap-3 px-2 py-2">
+    <div className="brand-mark"><img src={coachMascot} alt="" /></div>
+    <div><div className="font-bold tracking-tight">English AI</div><div className="text-xs muted">Local Coach</div></div>
   </div>
 }
 
@@ -98,7 +100,16 @@ function Navigation({ compact = false, showGuidedLessons = false, showCourse = f
       key={to}
       to={to}
       end={'end' in options ? options.end : false}
-      className={({ isActive }) => `nav-link ${compact ? 'shrink-0' : 'mb-1 w-full'} flex items-center gap-2 rounded-xl px-3 py-2.5 no-underline ${isActive ? 'bg-white/[.08] text-white' : 'muted'}`}
+      className={({ isActive }) => `nav-link ${compact ? 'shrink-0' : 'mb-1 w-full'} flex items-center gap-3 rounded-xl px-3 py-2.5 no-underline ${isActive ? 'is-active' : ''}`}
     ><Icon aria-hidden="true" size={17} /><span>{label}</span></NavLink>)}</div>)}
   </nav>
+}
+
+function LocalAiStatus({ ready }: { ready: boolean | null }) {
+  const label = ready === null ? 'Checking' : ready ? 'Ready' : 'Needs setup'
+  return <div className={`local-ai-status ${ready === false ? 'local-ai-status-warning' : ''}`} role="status"><span className="local-ai-dot" aria-hidden="true" />Local AI <span aria-hidden="true">·</span> {label}<ChevronDown aria-hidden="true" size={14}/></div>
+}
+
+function ProfileCard() {
+  return <div className="sidebar-profile mt-auto"><div className="sidebar-avatar"><UserRound aria-hidden="true" size={20}/></div><div className="min-w-0 flex-1"><div className="truncate text-sm font-semibold">Local learner</div><div className="truncate text-[10px] muted">Private profile</div></div><ChevronDown aria-hidden="true" size={14} className="muted"/></div>
 }

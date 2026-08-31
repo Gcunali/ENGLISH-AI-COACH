@@ -573,6 +573,7 @@ export type VoiceEngineEvent =
   | { type: "teacher_cancelled"; generationId: string; deliveredText: string }
   | { type: "streaming_fallback"; generationId: string; reason: string }
   | ({ type: "voice_turn_metrics" } & VoiceTurnPerformance)
+  | { type: "whisper_performance"; requestId?: string; generation?: number; loadMs?: number | null; inferenceMs?: number; persistent: boolean; fallback?: boolean }
   | { type: "teacher_finished"; generationId?: string }
   | { type: "error"; message: string; recoverable?: boolean }
   | { type: "engine_stopped" };
@@ -1435,6 +1436,53 @@ export interface GuidedLessonOverview {
   publishedLessonCount: number;
   activeSession: GuidedLessonSession | null;
   capabilities: GuidedStageCapability[];
+}
+
+export type PracticeMode = "daily" | "dictation" | "shadowing" | "mistake_repair" | "speaking_recall";
+type PracticeSource = { itemId: string; sourceLabel: string };
+export type PracticeItem =
+  | (PracticeSource & { kind: "vocabulary"; term: string; meaning: string; example: string; status: "new" | "learning" })
+  | (PracticeSource & { kind: "dictation"; targetText: string })
+  | (PracticeSource & { kind: "shadowing"; targetText: string; hint: string | null })
+  | (PracticeSource & { kind: "mistake_repair"; mistakeId: string; original: string; corrected: string; explanation: string })
+  | (PracticeSource & { kind: "speaking_recall"; situation: string; prompt: string; modelExpression: string });
+export interface PracticeAvailability {
+  schemaVersion: 1;
+  dailyCount: number;
+  dictationCount: number;
+  shadowingCount: number;
+  mistakeRepairCount: number;
+  speakingRecallCount: number;
+  confirmedMistakeCount: number;
+}
+export interface PracticeSession {
+  id: string;
+  mode: PracticeMode;
+  status: "in_progress" | "completed" | "abandoned";
+  schemaVersion: 1;
+  selectionVersion: 1;
+  items: PracticeItem[];
+  completedItemIds: string[];
+  activeSeconds: number;
+  xpAwarded: number;
+  startedAt: string;
+  completedAt: string | null;
+}
+export interface PracticeWordDiff { word: string; status: "match" | "review" }
+export interface PracticeItemResult {
+  session: PracticeSession;
+  itemId: string;
+  exactMatch: boolean | null;
+  similarityPercent: number | null;
+  expectedText: string | null;
+  normalizedResponse: string | null;
+  wordDiff: PracticeWordDiff[];
+}
+export interface StaticTtsCacheStatus {
+  formatVersion: 1;
+  entryCount: number;
+  sizeBytes: number;
+  maxSizeBytes: number;
 }
 
 export type CurriculumSkillFocus =

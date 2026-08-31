@@ -1,0 +1,12 @@
+{
+  "schemaVersion": 19,
+  "integrity": "ok",
+  "foreignKeyViolations": 0,
+  "counts": {
+    "lessons": 14,
+    "guidedSessions": 2,
+    "vocabulary": 12,
+    "recurringMistakes": 9,
+    "pronunciationAttempts": 18
+  }
+}

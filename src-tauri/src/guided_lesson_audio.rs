@@ -6,7 +6,7 @@ use crate::{
 use base64::{engine::general_purpose::STANDARD, Engine};
 use serde::Serialize;
 use std::{
-    collections::{BTreeMap, BTreeSet},
+    collections::BTreeMap,
     fs,
     process::Command,
     sync::{Arc, Mutex},
@@ -15,6 +15,9 @@ use std::{
 
 const BLUETOOTH_WAKE_MS: u64 = 500;
 const PIPER_VOICE: &str = "en_US-lessac-medium";
+const STATIC_TTS_CACHE_FORMAT_VERSION: u32 = 1;
+const STATIC_TTS_ENGINE_VERSION: u32 = 1;
+const STATIC_TTS_CACHE_MAX_BYTES: u64 = 250 * 1024 * 1024;
 
 #[derive(Clone, Debug, Serialize)]
 #[serde(rename_all = "camelCase")]
@@ -27,6 +30,15 @@ pub struct GuidedAudioDto {
     pub runtime_version: u32,
 }
 
+#[derive(Clone, Debug, Serialize)]
+#[serde(rename_all = "camelCase")]
+pub struct StaticTtsCacheStatusDto {
+    pub format_version: u32,
+    pub entry_count: u64,
+    pub size_bytes: u64,
+    pub max_size_bytes: u64,
+}
+
 #[derive(Clone)]
 pub struct GuidedLessonAudioRuntime {
     inner: Arc<Mutex<RuntimeState>>,
@@ -36,7 +48,6 @@ pub struct GuidedLessonAudioRuntime {
 struct RuntimeState {
     active: Option<ActivePlayback>,
     cache: BTreeMap<String, std::path::PathBuf>,
-    owned: BTreeSet<std::path::PathBuf>,
 }
 
 struct ActivePlayback {
@@ -62,28 +73,49 @@ impl GuidedLessonAudioRuntime {
         source: GuidedPlaybackSource,
     ) -> Result<GuidedAudioDto, String> {
         self.cancel_active();
-        let cache_key = sha256::bytes(
-            format!(
-                "{}|{}|{}|{}|{}|{}",
-                source.package_hash,
-                request.stage_id,
-                request.item_id,
-                source.text,
-                PIPER_VOICE,
-                GUIDED_LESSON_AUDIO_RUNTIME_VERSION
-            )
-            .as_bytes(),
+        let model = local_ai.piper_voice(PIPER_VOICE);
+        let model_identity = sha256::file(&model).unwrap_or_else(|_| "unavailable".into());
+        let config_identity = sha256::file(&model.with_extension("onnx.json"))
+            .unwrap_or_else(|_| "unavailable".into());
+        let normalized_text = source.text.split_whitespace().collect::<Vec<_>>().join(" ");
+        let cache_key = static_cache_key(
+            &normalized_text,
+            PIPER_VOICE,
+            &model_identity,
+            &config_identity,
+            STATIC_TTS_ENGINE_VERSION,
+            BLUETOOTH_WAKE_MS,
+            STATIC_TTS_CACHE_FORMAT_VERSION,
         );
-        let cached = {
+        let cached = if source.asset_id.is_none() {
             self.inner
                 .lock()
                 .map_err(|_| "Guided audio runtime lock failed.")?
                 .cache
                 .get(&cache_key)
                 .cloned()
+        } else {
+            None
         };
+        let persistent_path = paths.static_tts_cache.join(format!("{cache_key}.wav"));
+        let disk_cached = source.asset_id.is_none()
+            && persistent_path.is_file()
+            && fs::read(&persistent_path)
+                .ok()
+                .is_some_and(|bytes| wav_duration_ms(&bytes).is_ok());
+        if persistent_path.is_file() && !disk_cached {
+            let _ = fs::remove_file(&persistent_path);
+        }
         let (audio_path, kind) = if let Some(path) = cached.filter(|path| path.is_file()) {
             (path, "piper_cache".to_owned())
+        } else if disk_cached {
+            self.inner
+                .lock()
+                .map_err(|_| "Guided audio runtime lock failed.")?
+                .cache
+                .insert(cache_key.clone(), persistent_path.clone());
+            touch(&persistent_path);
+            (persistent_path, "piper_cache".to_owned())
         } else if let Some(asset_id) = &source.asset_id {
             let path = paths
                 .interactive_lesson_assets
@@ -95,17 +127,17 @@ impl GuidedLessonAudioRuntime {
             (path, "bundled".to_owned())
         } else {
             let python = local_ai.piper_python();
-            let model = local_ai.piper_voice(PIPER_VOICE);
             if !python.is_file() || !model.is_file() || !model.with_extension("onnx.json").is_file()
             {
                 return Err("Piper is unavailable for this Guided Lesson reference.".into());
             }
-            let final_path = paths
-                .temporary_audio
-                .join(format!("guided-lesson-{cache_key}.wav"));
+            let final_path = persistent_path;
             let raw_path = paths
                 .temporary_audio
-                .join(format!("guided-lesson-{cache_key}-raw.wav"));
+                .join(format!("guided-lesson-{}-raw.wav", uuid::Uuid::new_v4()));
+            let atomic_path = paths
+                .static_tts_cache
+                .join(format!(".{cache_key}-{}.tmp", uuid::Uuid::new_v4()));
             let text = source.text.clone();
             let cwd = local_ai.piper_root();
             let raw = raw_path.clone();
@@ -137,14 +169,18 @@ impl GuidedLessonAudioRuntime {
                 .map_err(|error| format!("Piper did not create Guided Lesson audio: {error}"))?;
             let _ = fs::remove_file(&raw_path);
             let (woken, _) = prepend_start_silence(&raw_bytes, BLUETOOTH_WAKE_MS)?;
-            fs::write(&final_path, woken)
+            fs::write(&atomic_path, woken)
                 .map_err(|error| format!("Could not cache Guided Lesson audio: {error}"))?;
+            fs::rename(&atomic_path, &final_path).map_err(|error| {
+                let _ = fs::remove_file(&atomic_path);
+                format!("Could not publish Guided Lesson audio cache: {error}")
+            })?;
+            prune_cache(&paths.static_tts_cache, STATIC_TTS_CACHE_MAX_BYTES);
             let mut state = self
                 .inner
                 .lock()
                 .map_err(|_| "Guided audio runtime lock failed.")?;
             state.cache.insert(cache_key, final_path.clone());
-            state.owned.insert(final_path.clone());
             (final_path, "piper".to_owned())
         };
         let bytes = fs::read(&audio_path)
@@ -222,18 +258,90 @@ impl GuidedLessonAudioRuntime {
     }
     pub fn cleanup_session(&self, _session_id: &str) {
         self.cancel_active();
-        self.cleanup_owned()
     }
     pub fn shutdown(&self) {
         self.cancel_active();
-        self.cleanup_owned()
     }
-    fn cleanup_owned(&self) {
+    pub fn cache_status(&self, paths: &LocalPaths) -> StaticTtsCacheStatusDto {
+        let entries = cache_entries(&paths.static_tts_cache);
+        StaticTtsCacheStatusDto {
+            format_version: STATIC_TTS_CACHE_FORMAT_VERSION,
+            entry_count: entries.len() as u64,
+            size_bytes: entries.iter().map(|(_, size, _)| *size).sum(),
+            max_size_bytes: STATIC_TTS_CACHE_MAX_BYTES,
+        }
+    }
+    pub fn clear_cache(&self, paths: &LocalPaths) -> Result<StaticTtsCacheStatusDto, String> {
+        self.cancel_active();
         if let Ok(mut state) = self.inner.lock() {
-            for path in std::mem::take(&mut state.owned) {
-                let _ = fs::remove_file(path);
-            }
             state.cache.clear();
+        }
+        for (path, _, _) in cache_entries(&paths.static_tts_cache) {
+            fs::remove_file(&path)
+                .map_err(|error| format!("Could not clear static TTS cache: {error}"))?;
+        }
+        Ok(self.cache_status(paths))
+    }
+}
+
+fn static_cache_key(
+    normalized_text: &str,
+    voice: &str,
+    model_identity: &str,
+    config_identity: &str,
+    engine_version: u32,
+    wake_ms: u64,
+    format_version: u32,
+) -> String {
+    sha256::bytes(
+        format!(
+            "{normalized_text}|{voice}|{model_identity}|{config_identity}|engine={engine_version}|wake={wake_ms}|format={format_version}"
+        )
+        .as_bytes(),
+    )
+}
+
+fn touch(path: &std::path::Path) {
+    if let Ok(bytes) = fs::read(path) {
+        let _ = fs::write(path, bytes);
+    }
+}
+
+fn cache_entries(
+    directory: &std::path::Path,
+) -> Vec<(std::path::PathBuf, u64, std::time::SystemTime)> {
+    let mut result = fs::read_dir(directory)
+        .ok()
+        .into_iter()
+        .flatten()
+        .filter_map(Result::ok)
+        .filter_map(|entry| {
+            let metadata = entry.metadata().ok()?;
+            (metadata.is_file() && entry.path().extension().and_then(|v| v.to_str()) == Some("wav"))
+                .then(|| {
+                    (
+                        entry.path(),
+                        metadata.len(),
+                        metadata
+                            .modified()
+                            .unwrap_or(std::time::SystemTime::UNIX_EPOCH),
+                    )
+                })
+        })
+        .collect::<Vec<_>>();
+    result.sort_by_key(|(_, _, modified)| *modified);
+    result
+}
+
+fn prune_cache(directory: &std::path::Path, maximum: u64) {
+    let entries = cache_entries(directory);
+    let mut total = entries.iter().map(|(_, size, _)| *size).sum::<u64>();
+    for (path, size, _) in entries {
+        if total <= maximum {
+            break;
+        }
+        if fs::remove_file(path).is_ok() {
+            total = total.saturating_sub(size);
         }
     }
 }
@@ -358,5 +466,61 @@ mod tests {
             .not_before = Instant::now() - Duration::from_millis(1);
         runtime.confirm_completed("active", &request).unwrap();
         assert!(runtime.inner.lock().unwrap().active.is_none());
+    }
+
+    #[test]
+    fn static_cache_key_is_deterministic_and_tracks_every_identity_input() {
+        let baseline = static_cache_key("hello world", "voice-a", "model-a", "config-a", 1, 500, 1);
+        assert_eq!(
+            baseline,
+            static_cache_key("hello world", "voice-a", "model-a", "config-a", 1, 500, 1)
+        );
+        assert_ne!(
+            baseline,
+            static_cache_key("hello!", "voice-a", "model-a", "config-a", 1, 500, 1)
+        );
+        assert_ne!(
+            baseline,
+            static_cache_key("hello world", "voice-b", "model-a", "config-a", 1, 500, 1)
+        );
+        assert_ne!(
+            baseline,
+            static_cache_key("hello world", "voice-a", "model-b", "config-a", 1, 500, 1)
+        );
+        assert_ne!(
+            baseline,
+            static_cache_key("hello world", "voice-a", "model-a", "config-b", 1, 500, 1)
+        );
+        assert_ne!(
+            baseline,
+            static_cache_key("hello world", "voice-a", "model-a", "config-a", 2, 500, 1)
+        );
+        assert_ne!(
+            baseline,
+            static_cache_key("hello world", "voice-a", "model-a", "config-a", 1, 0, 1)
+        );
+        assert_ne!(
+            baseline,
+            static_cache_key("hello world", "voice-a", "model-a", "config-a", 1, 500, 2)
+        );
+    }
+
+    #[test]
+    fn invalid_wav_is_rejected_and_size_pruning_is_bounded() {
+        assert!(wav_duration_ms(b"not a wav").is_err());
+        let directory =
+            std::env::temp_dir().join(format!("tts-cache-test-{}", uuid::Uuid::new_v4()));
+        std::fs::create_dir_all(&directory).unwrap();
+        std::fs::write(directory.join("one.wav"), wav()).unwrap();
+        std::fs::write(directory.join("two.wav"), wav()).unwrap();
+        prune_cache(&directory, 60);
+        assert!(
+            cache_entries(&directory)
+                .iter()
+                .map(|(_, size, _)| size)
+                .sum::<u64>()
+                <= 60
+        );
+        std::fs::remove_dir_all(directory).unwrap();
     }
 }

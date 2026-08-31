@@ -56,6 +56,16 @@ import type {
   VoiceEngineEvent,
   VoiceEngineStatus,
   StaticTtsCacheStatus,
+  ToeicAudio,
+  ToeicHistoryEntry,
+  ToeicOverview,
+  ToeicResult,
+  ToeicReviewItem,
+  ToeicSession,
+  ToeicPart2Overview,
+  ToeicPart2Session,
+  ToeicPart2Result,
+  ToeicPart2ReviewItem,
 } from "../types";
 import type { PronunciationAttempt, PronunciationEngineStatus } from "../types";
 import type {
@@ -81,6 +91,30 @@ import type {
 function isTauri(): boolean {
   return "__TAURI_INTERNALS__" in window;
 }
+
+export async function getToeicOverview(): Promise<ToeicOverview> { if (!isTauri()) throw new Error("TOEIC Preparation requires the desktop runtime."); return invoke("get_toeic_overview") }
+export async function startToeicSession(formId: string, formVersion: number): Promise<ToeicSession> { return invoke("start_toeic_session", { formId, formVersion }) }
+export async function getToeicSession(sessionId: string): Promise<ToeicSession> { return invoke("get_toeic_session", { sessionId }) }
+export async function submitToeicAnswer(sessionId: string, itemId: string, itemVersion: number, selectedChoice: string): Promise<ToeicSession> { return invoke("submit_toeic_answer", { request: { sessionId, itemId, itemVersion, selectedChoice } }) }
+export async function advanceToeicSession(sessionId: string): Promise<ToeicSession> { return invoke("advance_toeic_session", { sessionId }) }
+export async function abandonToeicSession(sessionId: string): Promise<void> { return invoke("abandon_toeic_session", { sessionId }) }
+export async function recordToeicActiveTime(sessionId: string, eventId: string, durationSeconds: number): Promise<number> { return invoke("record_toeic_active_time", { sessionId, eventId, durationSeconds }) }
+export async function getToeicResult(sessionId: string): Promise<ToeicResult> { return invoke("get_toeic_result", { sessionId }) }
+export async function getToeicReview(sessionId: string, mistakesOnly: boolean): Promise<ToeicReviewItem[]> { return invoke("get_toeic_review", { sessionId, mistakesOnly }) }
+export async function listToeicHistory(): Promise<ToeicHistoryEntry[]> { return invoke("list_toeic_history") }
+export async function prepareToeicAudio(sessionId: string): Promise<ToeicAudio> { return invoke("prepare_toeic_audio", { sessionId }) }
+export async function completeToeicAudio(audio: ToeicAudio, sessionId: string): Promise<ToeicSession> { return invoke("complete_toeic_audio", { playbackId: audio.playbackId, sessionId, itemId: audio.itemId, itemVersion: audio.itemVersion, presentationId: audio.presentationId }) }
+export async function cancelToeicAudio(audio: ToeicAudio): Promise<boolean> { return invoke("cancel_toeic_audio", { playbackId: audio.playbackId, presentationId: audio.presentationId }) }
+export async function getToeicPart2Overview(): Promise<ToeicPart2Overview> { return invoke("get_toeic_part2_overview") }
+export async function startToeicPart2Session(formId: string, formVersion: number): Promise<ToeicPart2Session> { return invoke("start_toeic_part2_session", { formId, formVersion }) }
+export async function getToeicPart2Session(sessionId: string): Promise<ToeicPart2Session> { return invoke("get_toeic_part2_session", { sessionId }) }
+export async function submitToeicPart2Answer(sessionId: string, itemId: string, itemVersion: number, selectedChoice: string): Promise<ToeicPart2Session> { return invoke("submit_toeic_part2_answer", { request: { sessionId, itemId, itemVersion, selectedChoice } }) }
+export async function advanceToeicPart2Session(sessionId: string): Promise<ToeicPart2Session> { return invoke("advance_toeic_part2_session", { sessionId }) }
+export async function getToeicPart2Result(sessionId: string): Promise<ToeicPart2Result> { return invoke("get_toeic_part2_result", { sessionId }) }
+export async function getToeicPart2Review(sessionId: string, mistakesOnly: boolean): Promise<ToeicPart2ReviewItem[]> { return invoke("get_toeic_part2_review", { sessionId, mistakesOnly }) }
+export async function prepareToeicPart2Audio(sessionId: string): Promise<ToeicAudio> { return invoke("prepare_toeic_part2_audio", { sessionId }) }
+export async function completeToeicPart2Audio(audio: ToeicAudio, sessionId: string): Promise<ToeicPart2Session> { return invoke("complete_toeic_part2_audio", { playbackId: audio.playbackId, sessionId, itemId: audio.itemId, itemVersion: audio.itemVersion, presentationId: audio.presentationId }) }
+export async function cancelToeicPart2Audio(audio: ToeicAudio): Promise<boolean> { return invoke("cancel_toeic_part2_audio", { playbackId: audio.playbackId, presentationId: audio.presentationId }) }
 
 export async function getWelcomeState(): Promise<WelcomeState> {
   if (!isTauri())

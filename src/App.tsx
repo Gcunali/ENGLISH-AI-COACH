@@ -23,6 +23,12 @@ import { GuidedLessonSessionPage } from './pages/GuidedLessonSessionPage'
 import { CoursePage } from './pages/CoursePage'
 import { PracticePage } from './pages/PracticePage'
 import { PracticeSessionPage } from './pages/PracticeSessionPage'
+import { ToeicPage } from './pages/ToeicPage'
+import { ToeicSessionPage } from './pages/ToeicSessionPage'
+import { ToeicResultsPage } from './pages/ToeicResultsPage'
+import { ToeicHistoryPage } from './pages/ToeicHistoryPage'
+import { ToeicPart2SessionPage } from './pages/ToeicPart2SessionPage'
+import { ToeicPart2ResultsPage } from './pages/ToeicPart2ResultsPage'
 
 function App() {
   return <Routes>
@@ -51,6 +57,12 @@ function App() {
       <Route path="pronunciation" element={<PronunciationPage />} />
       <Route path="practice" element={<PracticePage />} />
       <Route path="practice/session/:sessionId" element={<PracticeSessionPage />} />
+      <Route path="toeic" element={<ToeicPage />} />
+      <Route path="toeic/session/:sessionId" element={<ToeicSessionPage />} />
+      <Route path="toeic/results/:sessionId" element={<ToeicResultsPage />} />
+      <Route path="toeic/part2/session/:sessionId" element={<ToeicPart2SessionPage />} />
+      <Route path="toeic/part2/results/:sessionId" element={<ToeicPart2ResultsPage />} />
+      <Route path="toeic/history" element={<ToeicHistoryPage />} />
       <Route path="settings" element={<SettingsPage />} />
       <Route path="diagnostics" element={<DiagnosticsPage />} />
       <Route path="*" element={<NotFoundPage />} />

@@ -1,0 +1,38 @@
+[package]
+name = "english-ai-coach"
+version = "0.1.0"
+description = "A private, offline-first English conversation coach"
+authors = ["English AI Coach contributors"]
+license = "MIT"
+repository = ""
+edition = "2021"
+rust-version = "1.77.2"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[lib]
+name = "english_ai_coach_lib"
+crate-type = ["staticlib", "cdylib", "rlib"]
+
+[build-dependencies]
+tauri-build = { version = "2.6.3", features = [] }
+
+[dependencies]
+serde_json = "1.0"
+serde = { version = "1.0", features = ["derive"] }
+log = "0.4"
+tauri = { version = "2.11.5", features = [] }
+tauri-plugin-log = "2"
+base64 = "0.22"
+reqwest = { version = "0.13", default-features = false, features = ["json"] }
+rusqlite = { version = "0.38", features = ["bundled"] }
+tokio = { version = "1", features = ["process", "time"] }
+uuid = { version = "1", features = ["v4"] }
+
+[target.'cfg(windows)'.dependencies]
+windows-sys = { version = "0.61", features = [
+  "Win32_Foundation",
+  "Win32_Security",
+  "Win32_System_JobObjects",
+  "Win32_System_Threading",
+] }

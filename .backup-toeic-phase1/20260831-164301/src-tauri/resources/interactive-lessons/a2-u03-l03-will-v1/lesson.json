@@ -1,0 +1,610 @@
+{
+  "packageSchemaVersion": 1,
+  "lessonFlowVersion": 1,
+  "lessonId": "a2-u03-l03-will",
+  "contentVersion": 1,
+  "publicationState": "published",
+  "title": "Will",
+  "description": "Make an immediate decision, offer help, or state a neutral future fact.",
+  "language": "en",
+  "referenceLocale": "en-US",
+  "cefrBand": "A2",
+  "estimatedMinutes": 30,
+  "objectives": [
+    "Make an immediate decision, offer help, or state a neutral future fact."
+  ],
+  "tags": [
+    "english-core",
+    "a2",
+    "unit-03",
+    "production"
+  ],
+  "assets": [],
+  "stages": [
+    {
+      "stageId": "theory",
+      "stageType": "theory",
+      "stageSchemaVersion": 1,
+      "title": "Understand the language",
+      "instructions": "Read the explanation, examples, common error, and recap.",
+      "required": true,
+      "payload": {
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "This lesson prepares you to make an immediate decision, offer help, or state a neutral future fact. The central language is will plus base verb and contractions. It belongs to the practical context of plans & the future. Focus first on meaning: decide what information the listener needs. Then choose the subject, verb form, and useful detail. At A2, connect the main message to a time, reason, contrast, or result. Listen for context before choosing the tense or functional phrase. The same language returns in the listening, repeat, speaking, exercises, and guided conversation stages."
+          },
+          {
+            "type": "callout",
+            "title": "Pattern",
+            "text": "will plus base verb and contractions"
+          },
+          {
+            "type": "example",
+            "english": "I'll help you carry that bag.",
+            "explanation": "Use this model to begin the will exchange."
+          },
+          {
+            "type": "example",
+            "english": "The meeting will start at ten.",
+            "explanation": "This will model adds a different detail or response."
+          },
+          {
+            "type": "example",
+            "english": "What are your plans?",
+            "explanation": "Use this question or response to keep the will exchange moving."
+          },
+          {
+            "type": "paragraph",
+            "text": "Notice the two models: “I'll help you carry that bag.” and “The meeting will start at ten.” They show the pattern in complete communication, not as isolated grammar. Say the model aloud, replace one detail, and check that the new sentence keeps the intended meaning. When the other person asks a follow-up question, answer directly and add a relevant detail. This makes the exchange natural while keeping the language controlled. Compare the time and viewpoint in each model, and use a linker when two ideas need a clear relationship. Avoid adding advanced forms when the lesson pattern already communicates the message accurately."
+          },
+          {
+            "type": "callout",
+            "title": "Common error",
+            "text": "Do not mix the word order or verb form with another pattern. Keep the controlled form for this lesson: will plus base verb and contractions."
+          },
+          {
+            "type": "bullet_list",
+            "items": [
+              "Communicative goal: Make an immediate decision, offer help, or state a neutral future fact.",
+              "Core pattern: will plus base verb and contractions.",
+              "Use one clear model, add a relevant detail, and respond to the other speaker."
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "stageId": "visual-vocabulary",
+      "stageType": "visual_vocabulary",
+      "stageSchemaVersion": 1,
+      "title": "Build your vocabulary",
+      "instructions": "Study each term, meaning, and contextual example.",
+      "required": true,
+      "payload": {
+        "items": [
+          {
+            "itemId": "possibility",
+            "term": "possibility",
+            "meaning": "something that may happen",
+            "example": "Use “possibility” while you practice will in context.",
+            "imageAssetId": null
+          },
+          {
+            "itemId": "book",
+            "term": "book",
+            "meaning": "reserve a place or service",
+            "example": "Use “book” while you practice will in context.",
+            "imageAssetId": null
+          },
+          {
+            "itemId": "pack",
+            "term": "pack",
+            "meaning": "put belongings into a bag for travel",
+            "example": "Use “pack” while you practice will in context.",
+            "imageAssetId": null
+          },
+          {
+            "itemId": "leave",
+            "term": "leave",
+            "meaning": "go away from a place",
+            "example": "Use “leave” while you practice will in context.",
+            "imageAssetId": null
+          },
+          {
+            "itemId": "arrive",
+            "term": "arrive",
+            "meaning": "reach a destination",
+            "example": "Use “arrive” while you practice will in context.",
+            "imageAssetId": null
+          },
+          {
+            "itemId": "probably",
+            "term": "probably",
+            "meaning": "used when something is likely",
+            "example": "Use “probably” while you practice will in context.",
+            "imageAssetId": null
+          },
+          {
+            "itemId": "maybe",
+            "term": "maybe",
+            "meaning": "used when something is possible",
+            "example": "Use “maybe” while you practice will in context.",
+            "imageAssetId": null
+          },
+          {
+            "itemId": "forecast",
+            "term": "forecast",
+            "meaning": "a statement about expected weather",
+            "example": "Use “forecast” while you practice will in context.",
+            "imageAssetId": null
+          },
+          {
+            "itemId": "decision",
+            "term": "decision",
+            "meaning": "a choice made after thinking",
+            "example": "Use “decision” while you practice will in context.",
+            "imageAssetId": null
+          }
+        ]
+      }
+    },
+    {
+      "stageId": "listening",
+      "stageType": "listening",
+      "stageSchemaVersion": 1,
+      "title": "Listen in context",
+      "instructions": "Listen before revealing the text, then notice the target pattern.",
+      "required": true,
+      "payload": {
+        "segments": [
+          {
+            "segmentId": "segment-1",
+            "text": "I'll help you carry that bag. The meeting will start at ten.",
+            "audioAssetId": null
+          },
+          {
+            "segmentId": "segment-2",
+            "text": "What are your plans? Let's make a clear plan together.",
+            "audioAssetId": null
+          },
+          {
+            "segmentId": "segment-3",
+            "text": "The meeting will start at ten. What are your plans?",
+            "audioAssetId": null
+          },
+          {
+            "segmentId": "segment-4",
+            "text": "Let's make a clear plan together. Thanks for talking about plans & the future with me.",
+            "audioAssetId": null
+          }
+        ],
+        "revealTextAfterFirstPlay": true
+      }
+    },
+    {
+      "stageId": "repeat",
+      "stageType": "repeat",
+      "stageSchemaVersion": 1,
+      "title": "Repeat useful chunks",
+      "instructions": "Repeat each complete expression with clear rhythm.",
+      "required": true,
+      "payload": {
+        "targets": [
+          {
+            "targetId": "repeat-1",
+            "text": "I'll help you carry that bag.",
+            "referenceAudioAssetId": null,
+            "hint": "Keep the words together as one communicative chunk."
+          },
+          {
+            "targetId": "repeat-2",
+            "text": "The meeting will start at ten.",
+            "referenceAudioAssetId": null,
+            "hint": "Keep the words together as one communicative chunk."
+          },
+          {
+            "targetId": "repeat-3",
+            "text": "What are your plans?",
+            "referenceAudioAssetId": null,
+            "hint": "Keep the words together as one communicative chunk."
+          },
+          {
+            "targetId": "repeat-4",
+            "text": "Let's make a clear plan together.",
+            "referenceAudioAssetId": null,
+            "hint": "Keep the words together as one communicative chunk."
+          },
+          {
+            "targetId": "repeat-5",
+            "text": "Thanks for talking about plans & the future with me.",
+            "referenceAudioAssetId": null,
+            "hint": "Keep the words together as one communicative chunk."
+          }
+        ]
+      }
+    },
+    {
+      "stageId": "speaking-check",
+      "stageType": "speaking_check",
+      "stageSchemaVersion": 1,
+      "title": "Speaking Check",
+      "instructions": "Say expressions already presented in this Lesson.",
+      "required": true,
+      "payload": {
+        "targets": [
+          {
+            "targetId": "speaking-1",
+            "instruction": "Say the complete model naturally.",
+            "targetText": "I'll help you carry that bag.",
+            "hint": "Use the same words and clear sentence stress."
+          },
+          {
+            "targetId": "speaking-2",
+            "instruction": "Say the complete model naturally.",
+            "targetText": "The meeting will start at ten.",
+            "hint": "Use the same words and clear sentence stress."
+          },
+          {
+            "targetId": "speaking-3",
+            "instruction": "Say the complete model naturally.",
+            "targetText": "What are your plans?",
+            "hint": "Use the same words and clear sentence stress."
+          },
+          {
+            "targetId": "speaking-4",
+            "instruction": "Say the complete model naturally.",
+            "targetText": "Let's make a clear plan together.",
+            "hint": "Use the same words and clear sentence stress."
+          }
+        ]
+      }
+    },
+    {
+      "stageId": "exercise",
+      "stageType": "exercise",
+      "stageSchemaVersion": 1,
+      "title": "Check your understanding",
+      "instructions": "Complete each deterministic practice item.",
+      "required": true,
+      "payload": {
+        "items": [
+          {
+            "exerciseId": "choose-model",
+            "exerciseType": "single_choice",
+            "prompt": "Choose the model that fits the communicative goal.",
+            "instructions": null,
+            "hint": "Make an immediate decision, offer help, or state a neutral future fact.",
+            "payload": {
+              "options": [
+                {
+                  "optionId": "a",
+                  "text": "I'll help you carry that bag."
+                },
+                {
+                  "optionId": "b",
+                  "text": "The purple engine sleeps quickly."
+                },
+                {
+                  "optionId": "c",
+                  "text": "No information is possible."
+                }
+              ],
+              "correctOptionId": "a"
+            },
+            "feedback": {
+              "correct": "Correct. The answer fits the lesson context.",
+              "incorrect": "Try again and use the model from this lesson.",
+              "explanation": "will plus base verb and contractions"
+            }
+          },
+          {
+            "exerciseId": "select-core-vocabulary",
+            "exerciseType": "multiple_select",
+            "prompt": "Select both words that belong to this lesson context.",
+            "instructions": null,
+            "hint": "Plans & the Future",
+            "payload": {
+              "options": [
+                {
+                  "optionId": "a",
+                  "text": "possibility"
+                },
+                {
+                  "optionId": "b",
+                  "text": "book"
+                },
+                {
+                  "optionId": "c",
+                  "text": "industrial turbine"
+                },
+                {
+                  "optionId": "d",
+                  "text": "quantum geology"
+                }
+              ],
+              "correctOptionIds": [
+                "a",
+                "b"
+              ]
+            },
+            "feedback": {
+              "correct": "Correct. The answer fits the lesson context.",
+              "incorrect": "Try again and use the model from this lesson.",
+              "explanation": "Both correct words appear in Visual Vocabulary."
+            }
+          },
+          {
+            "exerciseId": "complete-response",
+            "exerciseType": "fill_blank",
+            "prompt": "Type the exact practiced response shown in the hint.",
+            "instructions": null,
+            "hint": "The meeting will start at ten.",
+            "payload": {
+              "prefix": "",
+              "suffix": "",
+              "acceptedAnswers": [
+                "The meeting will start at ten."
+              ],
+              "normalizationProfile": "english_basic_v1"
+            },
+            "feedback": {
+              "correct": "Correct. The answer fits the lesson context.",
+              "incorrect": "Try again and use the model from this lesson.",
+              "explanation": "Use the complete model response."
+            }
+          },
+          {
+            "exerciseId": "order-model",
+            "exerciseType": "word_order",
+            "prompt": "Put the model in its natural order.",
+            "instructions": null,
+            "hint": null,
+            "payload": {
+              "tokens": [
+                {
+                  "tokenId": "t7",
+                  "text": "."
+                },
+                {
+                  "tokenId": "t6",
+                  "text": "bag"
+                },
+                {
+                  "tokenId": "t5",
+                  "text": "that"
+                },
+                {
+                  "tokenId": "t4",
+                  "text": "carry"
+                },
+                {
+                  "tokenId": "t3",
+                  "text": "you"
+                },
+                {
+                  "tokenId": "t2",
+                  "text": "help"
+                },
+                {
+                  "tokenId": "t1",
+                  "text": "I'll"
+                }
+              ],
+              "correctOrder": [
+                "t1",
+                "t2",
+                "t3",
+                "t4",
+                "t5",
+                "t6",
+                "t7"
+              ]
+            },
+            "feedback": {
+              "correct": "Correct. The answer fits the lesson context.",
+              "incorrect": "Try again and use the model from this lesson.",
+              "explanation": "Keep the modeled English word order."
+            }
+          },
+          {
+            "exerciseId": "match-vocabulary",
+            "exerciseType": "matching",
+            "prompt": "Match each term to its meaning.",
+            "instructions": null,
+            "hint": null,
+            "payload": {
+              "leftItems": [
+                {
+                  "itemId": "l1",
+                  "text": "possibility"
+                },
+                {
+                  "itemId": "l2",
+                  "text": "book"
+                },
+                {
+                  "itemId": "l3",
+                  "text": "pack"
+                }
+              ],
+              "rightItems": [
+                {
+                  "itemId": "r1",
+                  "text": "something that may happen"
+                },
+                {
+                  "itemId": "r2",
+                  "text": "reserve a place or service"
+                },
+                {
+                  "itemId": "r3",
+                  "text": "put belongings into a bag for travel"
+                }
+              ],
+              "correctPairs": [
+                {
+                  "leftId": "l1",
+                  "rightId": "r1"
+                },
+                {
+                  "leftId": "l2",
+                  "rightId": "r2"
+                },
+                {
+                  "leftId": "l3",
+                  "rightId": "r3"
+                }
+              ]
+            },
+            "feedback": {
+              "correct": "Correct. The answer fits the lesson context.",
+              "incorrect": "Try again and use the model from this lesson.",
+              "explanation": "Review each term with its meaning and example."
+            }
+          },
+          {
+            "exerciseId": "exact-useful-chunk",
+            "exerciseType": "short_answer_exact",
+            "prompt": "Type the finite model chunk shown in the hint.",
+            "instructions": null,
+            "hint": "What are your plans?",
+            "payload": {
+              "acceptedAnswers": [
+                "What are your plans?"
+              ],
+              "normalizationProfile": "english_basic_v1"
+            },
+            "feedback": {
+              "correct": "Correct. The answer fits the lesson context.",
+              "incorrect": "Try again and use the model from this lesson.",
+              "explanation": "This checks one exact practiced chunk, not an open response."
+            }
+          },
+          {
+            "exerciseId": "choose-correct-form",
+            "exerciseType": "single_choice",
+            "prompt": "Which sentence follows the lesson pattern?",
+            "instructions": null,
+            "hint": "will plus base verb and contractions",
+            "payload": {
+              "options": [
+                {
+                  "optionId": "a",
+                  "text": "The meeting will start at ten."
+                },
+                {
+                  "optionId": "b",
+                  "text": "She are did going."
+                },
+                {
+                  "optionId": "c",
+                  "text": "I is to yesterday."
+                }
+              ],
+              "correctOptionId": "a"
+            },
+            "feedback": {
+              "correct": "Correct. The answer fits the lesson context.",
+              "incorrect": "Try again and use the model from this lesson.",
+              "explanation": "will plus base verb and contractions"
+            }
+          },
+          {
+            "exerciseId": "recall-vocabulary",
+            "exerciseType": "fill_blank",
+            "prompt": "Type the term that means: go away from a place",
+            "instructions": null,
+            "hint": "It appears in Visual Vocabulary.",
+            "payload": {
+              "prefix": "",
+              "suffix": "",
+              "acceptedAnswers": [
+                "leave"
+              ],
+              "normalizationProfile": "english_basic_v1"
+            },
+            "feedback": {
+              "correct": "Correct. The answer fits the lesson context.",
+              "incorrect": "Try again and use the model from this lesson.",
+              "explanation": "go away from a place"
+            }
+          },
+          {
+            "exerciseId": "context-choice",
+            "exerciseType": "single_choice",
+            "prompt": "Choose the response that adds a relevant detail.",
+            "instructions": null,
+            "hint": "A2 responses connect ideas and context.",
+            "payload": {
+              "options": [
+                {
+                  "optionId": "a",
+                  "text": "Let's make a clear plan together."
+                },
+                {
+                  "optionId": "b",
+                  "text": "Banana seven because blue."
+                },
+                {
+                  "optionId": "c",
+                  "text": "I have no sentence."
+                }
+              ],
+              "correctOptionId": "a"
+            },
+            "feedback": {
+              "correct": "Correct. The answer fits the lesson context.",
+              "incorrect": "Try again and use the model from this lesson.",
+              "explanation": "Use a relevant follow-up in the same situation."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "stageId": "guided-conversation",
+      "stageType": "guided_conversation",
+      "stageSchemaVersion": 1,
+      "title": "Plans & the Future conversation",
+      "instructions": "Use the prepared language in a practical exchange.",
+      "required": true,
+      "payload": {
+        "scenario": "You are in a realistic everyday situation related to plans & the future. Practice will and respond to relevant follow-up questions.",
+        "studentRole": "English learner handling the situation",
+        "teacherRole": "Helpful conversation partner",
+        "goal": "Make an immediate decision, offer help, or state a neutral future fact.",
+        "targetVocabulary": [
+          "possibility",
+          "book",
+          "pack",
+          "leave",
+          "arrive",
+          "probably",
+          "maybe",
+          "forecast",
+          "decision"
+        ],
+        "targetExpressions": [
+          "I'll help you carry that bag.",
+          "The meeting will start at ten.",
+          "What are your plans?",
+          "Let's make a clear plan together.",
+          "Thanks for talking about plans & the future with me."
+        ],
+        "minimumStudentTurns": 5,
+        "recommendedStudentTurns": 7,
+        "maximumStudentTurns": 10
+      }
+    },
+    {
+      "stageId": "analysis",
+      "stageType": "analysis",
+      "stageSchemaVersion": 1,
+      "title": "Lesson Review",
+      "instructions": "Review the evidence from your completed practice.",
+      "required": true,
+      "payload": {}
+    }
+  ]
+}

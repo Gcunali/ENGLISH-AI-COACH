@@ -43,6 +43,9 @@ mod speech;
 mod student_learning_summary_repository;
 mod student_profile_repository;
 mod system_diagnostics;
+mod toeic;
+mod toeic_item_bank;
+mod toeic_part2;
 mod ux_preferences;
 mod voice_engine;
 mod voice_performance_repository;
@@ -133,6 +136,14 @@ use student_profile_repository::{
 };
 use system_diagnostics::SystemDiagnosticsDto;
 use tauri::{Emitter, Manager, State};
+use toeic::{
+    ToeicOverviewDto, ToeicRepository, ToeicResultDto, ToeicReviewItemDto, ToeicSessionDto,
+    ToeicSubmitAnswerRequest,
+};
+use toeic_item_bank::ToeicItemBank;
+use toeic_part2::{
+    Part2Bank, Part2Overview, Part2Repository, Part2Result, Part2Session, ReviewItem, Submit,
+};
 use ux_preferences::WelcomeStateDto;
 use voice_engine::{GuidedVoiceSession, VoiceEngineManager, VoiceEngineState, VoiceEngineStatus};
 use voice_performance_repository::VoicePerformanceRepository;
@@ -166,6 +177,317 @@ struct AppState {
     guided_analysis: InteractiveLessonAnalysisService,
     guided_learning: GuidedLearningIntegrationRepository,
     curriculum: CurriculumService,
+    toeic: ToeicRepository,
+    toeic_part2: Part2Repository,
+}
+
+#[derive(Clone, Debug, Serialize)]
+#[serde(rename_all = "camelCase")]
+struct ToeicAudioDto {
+    playback_id: String,
+    audio_base64: String,
+    mime_type: String,
+    source: String,
+    duration_ms: u64,
+    runtime_version: u32,
+    presentation_id: Option<String>,
+    initial: bool,
+    item_id: String,
+    item_version: u32,
+}
+
+#[tauri::command]
+fn get_toeic_overview(state: State<'_, AppState>) -> Result<ToeicOverviewDto, String> {
+    state.toeic.overview()
+}
+
+#[tauri::command]
+fn start_toeic_session(
+    state: State<'_, AppState>,
+    form_id: String,
+    form_version: u32,
+) -> Result<ToeicSessionDto, String> {
+    state.toeic.start(&form_id, form_version)
+}
+
+#[tauri::command]
+fn get_toeic_session(
+    state: State<'_, AppState>,
+    session_id: String,
+) -> Result<ToeicSessionDto, String> {
+    state.toeic.session(&session_id)
+}
+
+#[tauri::command]
+fn submit_toeic_answer(
+    state: State<'_, AppState>,
+    request: ToeicSubmitAnswerRequest,
+) -> Result<ToeicSessionDto, String> {
+    state.toeic.submit(request)
+}
+
+#[tauri::command]
+fn advance_toeic_session(
+    state: State<'_, AppState>,
+    session_id: String,
+) -> Result<ToeicSessionDto, String> {
+    state.toeic.advance(&session_id)
+}
+
+#[tauri::command]
+fn abandon_toeic_session(state: State<'_, AppState>, session_id: String) -> Result<(), String> {
+    state.guided_audio.cancel_active();
+    state.toeic.abandon(&session_id)
+}
+
+#[tauri::command]
+fn record_toeic_active_time(
+    state: State<'_, AppState>,
+    session_id: String,
+    event_id: String,
+    duration_seconds: u32,
+) -> Result<u32, String> {
+    state
+        .toeic
+        .record_active_time(&session_id, &event_id, duration_seconds)
+}
+
+#[tauri::command]
+fn get_toeic_result(
+    state: State<'_, AppState>,
+    session_id: String,
+) -> Result<ToeicResultDto, String> {
+    state.toeic.result(&session_id)
+}
+
+#[tauri::command]
+fn get_toeic_review(
+    state: State<'_, AppState>,
+    session_id: String,
+    mistakes_only: bool,
+) -> Result<Vec<ToeicReviewItemDto>, String> {
+    state.toeic.review(&session_id, mistakes_only)
+}
+
+#[tauri::command]
+fn list_toeic_history(
+    state: State<'_, AppState>,
+) -> Result<Vec<toeic::ToeicHistoryEntryDto>, String> {
+    state.toeic.history()
+}
+
+#[tauri::command]
+async fn prepare_toeic_audio(
+    state: State<'_, AppState>,
+    session_id: String,
+) -> Result<ToeicAudioDto, String> {
+    let context = state.toeic.begin_audio(&session_id)?;
+    let request = GuidedPlaybackRequest {
+        session_id,
+        stage_id: "toeic-part1".into(),
+        item_id: context.item_id.clone(),
+    };
+    let prepared = state
+        .guided_audio
+        .prepare(
+            state.paths.clone(),
+            state.local_ai.clone(),
+            request,
+            GuidedPlaybackSource {
+                text: context.script,
+                asset_id: None,
+                package_hash: "toeic-bank-v1".into(),
+            },
+        )
+        .await;
+    let audio = match prepared {
+        Ok(audio) => audio,
+        Err(error) => {
+            state
+                .toeic
+                .interrupt_audio(context.presentation_id.as_deref())?;
+            return Err(error);
+        }
+    };
+    Ok(ToeicAudioDto {
+        playback_id: audio.playback_id,
+        audio_base64: audio.audio_base64,
+        mime_type: audio.mime_type,
+        source: audio.source,
+        duration_ms: audio.duration_ms,
+        runtime_version: audio.runtime_version,
+        presentation_id: context.presentation_id,
+        initial: context.initial,
+        item_id: context.item_id,
+        item_version: context.item_version,
+    })
+}
+
+#[tauri::command]
+fn complete_toeic_audio(
+    state: State<'_, AppState>,
+    playback_id: String,
+    session_id: String,
+    item_id: String,
+    item_version: u32,
+    presentation_id: Option<String>,
+) -> Result<ToeicSessionDto, String> {
+    let request = GuidedPlaybackRequest {
+        session_id: session_id.clone(),
+        stage_id: "toeic-part1".into(),
+        item_id: item_id.clone(),
+    };
+    state
+        .guided_audio
+        .confirm_completed(&playback_id, &request)?;
+    state.toeic.complete_audio(
+        &session_id,
+        &item_id,
+        item_version,
+        presentation_id.as_deref(),
+    )?;
+    state.toeic.session(&session_id)
+}
+
+#[tauri::command]
+fn cancel_toeic_audio(
+    state: State<'_, AppState>,
+    playback_id: String,
+    presentation_id: Option<String>,
+) -> Result<bool, String> {
+    let cancelled = state.guided_audio.cancel(&playback_id);
+    state.toeic.interrupt_audio(presentation_id.as_deref())?;
+    Ok(cancelled)
+}
+
+#[tauri::command]
+fn get_toeic_part2_overview(state: State<'_, AppState>) -> Result<Part2Overview, String> {
+    state.toeic_part2.overview()
+}
+#[tauri::command]
+fn start_toeic_part2_session(
+    state: State<'_, AppState>,
+    form_id: String,
+    form_version: u32,
+) -> Result<Part2Session, String> {
+    state.toeic_part2.start(&form_id, form_version)
+}
+#[tauri::command]
+fn get_toeic_part2_session(
+    state: State<'_, AppState>,
+    session_id: String,
+) -> Result<Part2Session, String> {
+    state.toeic_part2.session(&session_id)
+}
+#[tauri::command]
+fn submit_toeic_part2_answer(
+    state: State<'_, AppState>,
+    request: Submit,
+) -> Result<Part2Session, String> {
+    state.toeic_part2.submit(request)
+}
+#[tauri::command]
+fn advance_toeic_part2_session(
+    state: State<'_, AppState>,
+    session_id: String,
+) -> Result<Part2Session, String> {
+    state.toeic_part2.advance(&session_id)
+}
+#[tauri::command]
+fn get_toeic_part2_result(
+    state: State<'_, AppState>,
+    session_id: String,
+) -> Result<Part2Result, String> {
+    state.toeic_part2.result(&session_id)
+}
+#[tauri::command]
+fn get_toeic_part2_review(
+    state: State<'_, AppState>,
+    session_id: String,
+    mistakes_only: bool,
+) -> Result<Vec<ReviewItem>, String> {
+    state.toeic_part2.review(&session_id, mistakes_only)
+}
+#[tauri::command]
+async fn prepare_toeic_part2_audio(
+    state: State<'_, AppState>,
+    session_id: String,
+) -> Result<ToeicAudioDto, String> {
+    let context = state.toeic_part2.begin_audio(&session_id)?;
+    let request = GuidedPlaybackRequest {
+        session_id,
+        stage_id: "toeic-part2".into(),
+        item_id: context.item_id.clone(),
+    };
+    let prepared = state
+        .guided_audio
+        .prepare(
+            state.paths.clone(),
+            state.local_ai.clone(),
+            request,
+            GuidedPlaybackSource {
+                text: context.script,
+                asset_id: None,
+                package_hash: "toeic-part2-bank-v1".into(),
+            },
+        )
+        .await;
+    let audio = match prepared {
+        Ok(audio) => audio,
+        Err(error) => {
+            state
+                .toeic_part2
+                .interrupt(context.presentation_id.as_deref())?;
+            return Err(error);
+        }
+    };
+    Ok(ToeicAudioDto {
+        playback_id: audio.playback_id,
+        audio_base64: audio.audio_base64,
+        mime_type: audio.mime_type,
+        source: audio.source,
+        duration_ms: audio.duration_ms,
+        runtime_version: audio.runtime_version,
+        presentation_id: context.presentation_id,
+        initial: context.initial,
+        item_id: context.item_id,
+        item_version: context.item_version,
+    })
+}
+#[tauri::command]
+fn complete_toeic_part2_audio(
+    state: State<'_, AppState>,
+    playback_id: String,
+    session_id: String,
+    item_id: String,
+    item_version: u32,
+    presentation_id: Option<String>,
+) -> Result<Part2Session, String> {
+    let request = GuidedPlaybackRequest {
+        session_id: session_id.clone(),
+        stage_id: "toeic-part2".into(),
+        item_id: item_id.clone(),
+    };
+    state
+        .guided_audio
+        .confirm_completed(&playback_id, &request)?;
+    if item_version != 1 {
+        return Err("Unsupported Part 2 item version.".into());
+    }
+    state
+        .toeic_part2
+        .complete_audio(&session_id, &item_id, presentation_id.as_deref())?;
+    state.toeic_part2.session(&session_id)
+}
+#[tauri::command]
+fn cancel_toeic_part2_audio(
+    state: State<'_, AppState>,
+    playback_id: String,
+    presentation_id: Option<String>,
+) -> Result<bool, String> {
+    let cancelled = state.guided_audio.cancel(&playback_id);
+    state.toeic_part2.interrupt(presentation_id.as_deref())?;
+    Ok(cancelled)
 }
 
 fn integrate_completed_guided(
@@ -1650,6 +1972,15 @@ pub fn run() {
                 paths.db_file(),
                 profiles.clone(),
             );
+            let toeic_content_root = if cfg!(debug_assertions) {
+                std::path::PathBuf::from(env!("CARGO_MANIFEST_DIR")).join("resources/toeic/item-bank-v1")
+            } else {
+                app.path().resource_dir().map_err(|error| std::io::Error::other(format!("Resource directory unavailable: {error}")))?.join("toeic/item-bank-v1")
+            };
+            let toeic_bank = ToeicItemBank::load(toeic_content_root.clone()).map_err(std::io::Error::other)?;
+            let toeic = ToeicRepository::new(paths.db_file(), toeic_bank).map_err(std::io::Error::other)?;
+            let toeic_part2_bank = Part2Bank::load(toeic_content_root.join("part2.json")).map_err(std::io::Error::other)?;
+            let toeic_part2 = Part2Repository::new(paths.db_file(), toeic_part2_bank);
             let guided_lessons = InteractiveLessonEngine::new(
                 guided_registry,
                 InteractiveLessonRepository::new(paths.db_file()),
@@ -1706,6 +2037,8 @@ pub fn run() {
                 guided_analysis,
                 guided_learning,
                 curriculum,
+                toeic,
+                toeic_part2,
             });
             if let Some(result) = restore_result { let _ = app.emit("english-ai-coach:data-restored", result); }
             Ok(())
@@ -1722,6 +2055,29 @@ pub fn run() {
             }
         })
         .invoke_handler(tauri::generate_handler![
+            get_toeic_overview,
+            start_toeic_session,
+            get_toeic_session,
+            submit_toeic_answer,
+            advance_toeic_session,
+            abandon_toeic_session,
+            record_toeic_active_time,
+            get_toeic_result,
+            get_toeic_review,
+            list_toeic_history,
+            prepare_toeic_audio,
+            complete_toeic_audio,
+            cancel_toeic_audio,
+            get_toeic_part2_overview,
+            start_toeic_part2_session,
+            get_toeic_part2_session,
+            submit_toeic_part2_answer,
+            advance_toeic_part2_session,
+            get_toeic_part2_result,
+            get_toeic_part2_review,
+            prepare_toeic_part2_audio,
+            complete_toeic_part2_audio,
+            cancel_toeic_part2_audio,
             diagnostics,
             probe_local_voice_engine,
             get_system_diagnostics,

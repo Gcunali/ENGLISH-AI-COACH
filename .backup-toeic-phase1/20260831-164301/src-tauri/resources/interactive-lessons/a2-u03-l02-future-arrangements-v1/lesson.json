@@ -1,0 +1,610 @@
+{
+  "packageSchemaVersion": 1,
+  "lessonFlowVersion": 1,
+  "lessonId": "a2-u03-l02-future-arrangements",
+  "contentVersion": 1,
+  "publicationState": "published",
+  "title": "Future Arrangements",
+  "description": "Discuss fixed personal arrangements with time and place details.",
+  "language": "en",
+  "referenceLocale": "en-US",
+  "cefrBand": "A2",
+  "estimatedMinutes": 30,
+  "objectives": [
+    "Discuss fixed personal arrangements with time and place details."
+  ],
+  "tags": [
+    "english-core",
+    "a2",
+    "unit-03",
+    "production"
+  ],
+  "assets": [],
+  "stages": [
+    {
+      "stageId": "theory",
+      "stageType": "theory",
+      "stageSchemaVersion": 1,
+      "title": "Understand the language",
+      "instructions": "Read the explanation, examples, common error, and recap.",
+      "required": true,
+      "payload": {
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "This lesson prepares you to discuss fixed personal arrangements with time and place details. The central language is present continuous for arranged future events. It belongs to the practical context of plans & the future. Focus first on meaning: decide what information the listener needs. Then choose the subject, verb form, and useful detail. At A2, connect the main message to a time, reason, contrast, or result. Listen for context before choosing the tense or functional phrase. The same language returns in the listening, repeat, speaking, exercises, and guided conversation stages."
+          },
+          {
+            "type": "callout",
+            "title": "Pattern",
+            "text": "present continuous for arranged future events"
+          },
+          {
+            "type": "example",
+            "english": "I'm meeting Nina at six tomorrow.",
+            "explanation": "Use this model to begin the future arrangements exchange."
+          },
+          {
+            "type": "example",
+            "english": "We're flying on Friday morning.",
+            "explanation": "This future arrangements model adds a different detail or response."
+          },
+          {
+            "type": "example",
+            "english": "What are your plans?",
+            "explanation": "Use this question or response to keep the future arrangements exchange moving."
+          },
+          {
+            "type": "paragraph",
+            "text": "Notice the two models: “I'm meeting Nina at six tomorrow.” and “We're flying on Friday morning.” They show the pattern in complete communication, not as isolated grammar. Say the model aloud, replace one detail, and check that the new sentence keeps the intended meaning. When the other person asks a follow-up question, answer directly and add a relevant detail. This makes the exchange natural while keeping the language controlled. Compare the time and viewpoint in each model, and use a linker when two ideas need a clear relationship. Avoid adding advanced forms when the lesson pattern already communicates the message accurately."
+          },
+          {
+            "type": "callout",
+            "title": "Common error",
+            "text": "Do not mix the word order or verb form with another pattern. Keep the controlled form for this lesson: present continuous for arranged future events."
+          },
+          {
+            "type": "bullet_list",
+            "items": [
+              "Communicative goal: Discuss fixed personal arrangements with time and place details.",
+              "Core pattern: present continuous for arranged future events.",
+              "Use one clear model, add a relevant detail, and respond to the other speaker."
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "stageId": "visual-vocabulary",
+      "stageType": "visual_vocabulary",
+      "stageSchemaVersion": 1,
+      "title": "Build your vocabulary",
+      "instructions": "Study each term, meaning, and contextual example.",
+      "required": true,
+      "payload": {
+        "items": [
+          {
+            "itemId": "intention",
+            "term": "intention",
+            "meaning": "something a person plans to do",
+            "example": "Use “intention” while you practice future arrangements in context.",
+            "imageAssetId": null
+          },
+          {
+            "itemId": "prediction",
+            "term": "prediction",
+            "meaning": "a statement about what may happen",
+            "example": "Use “prediction” while you practice future arrangements in context.",
+            "imageAssetId": null
+          },
+          {
+            "itemId": "possibility",
+            "term": "possibility",
+            "meaning": "something that may happen",
+            "example": "Use “possibility” while you practice future arrangements in context.",
+            "imageAssetId": null
+          },
+          {
+            "itemId": "book",
+            "term": "book",
+            "meaning": "reserve a place or service",
+            "example": "Use “book” while you practice future arrangements in context.",
+            "imageAssetId": null
+          },
+          {
+            "itemId": "pack",
+            "term": "pack",
+            "meaning": "put belongings into a bag for travel",
+            "example": "Use “pack” while you practice future arrangements in context.",
+            "imageAssetId": null
+          },
+          {
+            "itemId": "leave",
+            "term": "leave",
+            "meaning": "go away from a place",
+            "example": "Use “leave” while you practice future arrangements in context.",
+            "imageAssetId": null
+          },
+          {
+            "itemId": "arrive",
+            "term": "arrive",
+            "meaning": "reach a destination",
+            "example": "Use “arrive” while you practice future arrangements in context.",
+            "imageAssetId": null
+          },
+          {
+            "itemId": "probably",
+            "term": "probably",
+            "meaning": "used when something is likely",
+            "example": "Use “probably” while you practice future arrangements in context.",
+            "imageAssetId": null
+          },
+          {
+            "itemId": "maybe",
+            "term": "maybe",
+            "meaning": "used when something is possible",
+            "example": "Use “maybe” while you practice future arrangements in context.",
+            "imageAssetId": null
+          }
+        ]
+      }
+    },
+    {
+      "stageId": "listening",
+      "stageType": "listening",
+      "stageSchemaVersion": 1,
+      "title": "Listen in context",
+      "instructions": "Listen before revealing the text, then notice the target pattern.",
+      "required": true,
+      "payload": {
+        "segments": [
+          {
+            "segmentId": "segment-1",
+            "text": "I'm meeting Nina at six tomorrow. We're flying on Friday morning.",
+            "audioAssetId": null
+          },
+          {
+            "segmentId": "segment-2",
+            "text": "What are your plans? Let's make a clear plan together.",
+            "audioAssetId": null
+          },
+          {
+            "segmentId": "segment-3",
+            "text": "We're flying on Friday morning. What are your plans?",
+            "audioAssetId": null
+          },
+          {
+            "segmentId": "segment-4",
+            "text": "Let's make a clear plan together. Thanks for talking about plans & the future with me.",
+            "audioAssetId": null
+          }
+        ],
+        "revealTextAfterFirstPlay": true
+      }
+    },
+    {
+      "stageId": "repeat",
+      "stageType": "repeat",
+      "stageSchemaVersion": 1,
+      "title": "Repeat useful chunks",
+      "instructions": "Repeat each complete expression with clear rhythm.",
+      "required": true,
+      "payload": {
+        "targets": [
+          {
+            "targetId": "repeat-1",
+            "text": "I'm meeting Nina at six tomorrow.",
+            "referenceAudioAssetId": null,
+            "hint": "Keep the words together as one communicative chunk."
+          },
+          {
+            "targetId": "repeat-2",
+            "text": "We're flying on Friday morning.",
+            "referenceAudioAssetId": null,
+            "hint": "Keep the words together as one communicative chunk."
+          },
+          {
+            "targetId": "repeat-3",
+            "text": "What are your plans?",
+            "referenceAudioAssetId": null,
+            "hint": "Keep the words together as one communicative chunk."
+          },
+          {
+            "targetId": "repeat-4",
+            "text": "Let's make a clear plan together.",
+            "referenceAudioAssetId": null,
+            "hint": "Keep the words together as one communicative chunk."
+          },
+          {
+            "targetId": "repeat-5",
+            "text": "Thanks for talking about plans & the future with me.",
+            "referenceAudioAssetId": null,
+            "hint": "Keep the words together as one communicative chunk."
+          }
+        ]
+      }
+    },
+    {
+      "stageId": "speaking-check",
+      "stageType": "speaking_check",
+      "stageSchemaVersion": 1,
+      "title": "Speaking Check",
+      "instructions": "Say expressions already presented in this Lesson.",
+      "required": true,
+      "payload": {
+        "targets": [
+          {
+            "targetId": "speaking-1",
+            "instruction": "Say the complete model naturally.",
+            "targetText": "I'm meeting Nina at six tomorrow.",
+            "hint": "Use the same words and clear sentence stress."
+          },
+          {
+            "targetId": "speaking-2",
+            "instruction": "Say the complete model naturally.",
+            "targetText": "We're flying on Friday morning.",
+            "hint": "Use the same words and clear sentence stress."
+          },
+          {
+            "targetId": "speaking-3",
+            "instruction": "Say the complete model naturally.",
+            "targetText": "What are your plans?",
+            "hint": "Use the same words and clear sentence stress."
+          },
+          {
+            "targetId": "speaking-4",
+            "instruction": "Say the complete model naturally.",
+            "targetText": "Let's make a clear plan together.",
+            "hint": "Use the same words and clear sentence stress."
+          }
+        ]
+      }
+    },
+    {
+      "stageId": "exercise",
+      "stageType": "exercise",
+      "stageSchemaVersion": 1,
+      "title": "Check your understanding",
+      "instructions": "Complete each deterministic practice item.",
+      "required": true,
+      "payload": {
+        "items": [
+          {
+            "exerciseId": "choose-model",
+            "exerciseType": "single_choice",
+            "prompt": "Choose the model that fits the communicative goal.",
+            "instructions": null,
+            "hint": "Discuss fixed personal arrangements with time and place details.",
+            "payload": {
+              "options": [
+                {
+                  "optionId": "a",
+                  "text": "I'm meeting Nina at six tomorrow."
+                },
+                {
+                  "optionId": "b",
+                  "text": "The purple engine sleeps quickly."
+                },
+                {
+                  "optionId": "c",
+                  "text": "No information is possible."
+                }
+              ],
+              "correctOptionId": "a"
+            },
+            "feedback": {
+              "correct": "Correct. The answer fits the lesson context.",
+              "incorrect": "Try again and use the model from this lesson.",
+              "explanation": "present continuous for arranged future events"
+            }
+          },
+          {
+            "exerciseId": "select-core-vocabulary",
+            "exerciseType": "multiple_select",
+            "prompt": "Select both words that belong to this lesson context.",
+            "instructions": null,
+            "hint": "Plans & the Future",
+            "payload": {
+              "options": [
+                {
+                  "optionId": "a",
+                  "text": "intention"
+                },
+                {
+                  "optionId": "b",
+                  "text": "prediction"
+                },
+                {
+                  "optionId": "c",
+                  "text": "industrial turbine"
+                },
+                {
+                  "optionId": "d",
+                  "text": "quantum geology"
+                }
+              ],
+              "correctOptionIds": [
+                "a",
+                "b"
+              ]
+            },
+            "feedback": {
+              "correct": "Correct. The answer fits the lesson context.",
+              "incorrect": "Try again and use the model from this lesson.",
+              "explanation": "Both correct words appear in Visual Vocabulary."
+            }
+          },
+          {
+            "exerciseId": "complete-response",
+            "exerciseType": "fill_blank",
+            "prompt": "Type the exact practiced response shown in the hint.",
+            "instructions": null,
+            "hint": "We're flying on Friday morning.",
+            "payload": {
+              "prefix": "",
+              "suffix": "",
+              "acceptedAnswers": [
+                "We're flying on Friday morning."
+              ],
+              "normalizationProfile": "english_basic_v1"
+            },
+            "feedback": {
+              "correct": "Correct. The answer fits the lesson context.",
+              "incorrect": "Try again and use the model from this lesson.",
+              "explanation": "Use the complete model response."
+            }
+          },
+          {
+            "exerciseId": "order-model",
+            "exerciseType": "word_order",
+            "prompt": "Put the model in its natural order.",
+            "instructions": null,
+            "hint": null,
+            "payload": {
+              "tokens": [
+                {
+                  "tokenId": "t7",
+                  "text": "."
+                },
+                {
+                  "tokenId": "t6",
+                  "text": "tomorrow"
+                },
+                {
+                  "tokenId": "t5",
+                  "text": "six"
+                },
+                {
+                  "tokenId": "t4",
+                  "text": "at"
+                },
+                {
+                  "tokenId": "t3",
+                  "text": "Nina"
+                },
+                {
+                  "tokenId": "t2",
+                  "text": "meeting"
+                },
+                {
+                  "tokenId": "t1",
+                  "text": "I'm"
+                }
+              ],
+              "correctOrder": [
+                "t1",
+                "t2",
+                "t3",
+                "t4",
+                "t5",
+                "t6",
+                "t7"
+              ]
+            },
+            "feedback": {
+              "correct": "Correct. The answer fits the lesson context.",
+              "incorrect": "Try again and use the model from this lesson.",
+              "explanation": "Keep the modeled English word order."
+            }
+          },
+          {
+            "exerciseId": "match-vocabulary",
+            "exerciseType": "matching",
+            "prompt": "Match each term to its meaning.",
+            "instructions": null,
+            "hint": null,
+            "payload": {
+              "leftItems": [
+                {
+                  "itemId": "l1",
+                  "text": "intention"
+                },
+                {
+                  "itemId": "l2",
+                  "text": "prediction"
+                },
+                {
+                  "itemId": "l3",
+                  "text": "possibility"
+                }
+              ],
+              "rightItems": [
+                {
+                  "itemId": "r1",
+                  "text": "something a person plans to do"
+                },
+                {
+                  "itemId": "r2",
+                  "text": "a statement about what may happen"
+                },
+                {
+                  "itemId": "r3",
+                  "text": "something that may happen"
+                }
+              ],
+              "correctPairs": [
+                {
+                  "leftId": "l1",
+                  "rightId": "r1"
+                },
+                {
+                  "leftId": "l2",
+                  "rightId": "r2"
+                },
+                {
+                  "leftId": "l3",
+                  "rightId": "r3"
+                }
+              ]
+            },
+            "feedback": {
+              "correct": "Correct. The answer fits the lesson context.",
+              "incorrect": "Try again and use the model from this lesson.",
+              "explanation": "Review each term with its meaning and example."
+            }
+          },
+          {
+            "exerciseId": "exact-useful-chunk",
+            "exerciseType": "short_answer_exact",
+            "prompt": "Type the finite model chunk shown in the hint.",
+            "instructions": null,
+            "hint": "What are your plans?",
+            "payload": {
+              "acceptedAnswers": [
+                "What are your plans?"
+              ],
+              "normalizationProfile": "english_basic_v1"
+            },
+            "feedback": {
+              "correct": "Correct. The answer fits the lesson context.",
+              "incorrect": "Try again and use the model from this lesson.",
+              "explanation": "This checks one exact practiced chunk, not an open response."
+            }
+          },
+          {
+            "exerciseId": "choose-correct-form",
+            "exerciseType": "single_choice",
+            "prompt": "Which sentence follows the lesson pattern?",
+            "instructions": null,
+            "hint": "present continuous for arranged future events",
+            "payload": {
+              "options": [
+                {
+                  "optionId": "a",
+                  "text": "We're flying on Friday morning."
+                },
+                {
+                  "optionId": "b",
+                  "text": "She are did going."
+                },
+                {
+                  "optionId": "c",
+                  "text": "I is to yesterday."
+                }
+              ],
+              "correctOptionId": "a"
+            },
+            "feedback": {
+              "correct": "Correct. The answer fits the lesson context.",
+              "incorrect": "Try again and use the model from this lesson.",
+              "explanation": "present continuous for arranged future events"
+            }
+          },
+          {
+            "exerciseId": "recall-vocabulary",
+            "exerciseType": "fill_blank",
+            "prompt": "Type the term that means: reserve a place or service",
+            "instructions": null,
+            "hint": "It appears in Visual Vocabulary.",
+            "payload": {
+              "prefix": "",
+              "suffix": "",
+              "acceptedAnswers": [
+                "book"
+              ],
+              "normalizationProfile": "english_basic_v1"
+            },
+            "feedback": {
+              "correct": "Correct. The answer fits the lesson context.",
+              "incorrect": "Try again and use the model from this lesson.",
+              "explanation": "reserve a place or service"
+            }
+          },
+          {
+            "exerciseId": "context-choice",
+            "exerciseType": "single_choice",
+            "prompt": "Choose the response that adds a relevant detail.",
+            "instructions": null,
+            "hint": "A2 responses connect ideas and context.",
+            "payload": {
+              "options": [
+                {
+                  "optionId": "a",
+                  "text": "Let's make a clear plan together."
+                },
+                {
+                  "optionId": "b",
+                  "text": "Banana seven because blue."
+                },
+                {
+                  "optionId": "c",
+                  "text": "I have no sentence."
+                }
+              ],
+              "correctOptionId": "a"
+            },
+            "feedback": {
+              "correct": "Correct. The answer fits the lesson context.",
+              "incorrect": "Try again and use the model from this lesson.",
+              "explanation": "Use a relevant follow-up in the same situation."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "stageId": "guided-conversation",
+      "stageType": "guided_conversation",
+      "stageSchemaVersion": 1,
+      "title": "Plans & the Future conversation",
+      "instructions": "Use the prepared language in a practical exchange.",
+      "required": true,
+      "payload": {
+        "scenario": "You are in a realistic everyday situation related to plans & the future. Practice future arrangements and respond to relevant follow-up questions.",
+        "studentRole": "English learner handling the situation",
+        "teacherRole": "Helpful conversation partner",
+        "goal": "Discuss fixed personal arrangements with time and place details.",
+        "targetVocabulary": [
+          "intention",
+          "prediction",
+          "possibility",
+          "book",
+          "pack",
+          "leave",
+          "arrive",
+          "probably",
+          "maybe"
+        ],
+        "targetExpressions": [
+          "I'm meeting Nina at six tomorrow.",
+          "We're flying on Friday morning.",
+          "What are your plans?",
+          "Let's make a clear plan together.",
+          "Thanks for talking about plans & the future with me."
+        ],
+        "minimumStudentTurns": 5,
+        "recommendedStudentTurns": 7,
+        "maximumStudentTurns": 10
+      }
+    },
+    {
+      "stageId": "analysis",
+      "stageType": "analysis",
+      "stageSchemaVersion": 1,
+      "title": "Lesson Review",
+      "instructions": "Review the evidence from your completed practice.",
+      "required": true,
+      "payload": {}
+    }
+  ]
+}

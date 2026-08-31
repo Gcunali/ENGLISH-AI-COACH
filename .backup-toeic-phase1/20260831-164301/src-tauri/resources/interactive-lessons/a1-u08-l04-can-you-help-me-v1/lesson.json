@@ -1,0 +1,573 @@
+{
+  "packageSchemaVersion": 1,
+  "lessonFlowVersion": 1,
+  "lessonId": "a1-u08-l04-can-you-help-me",
+  "contentVersion": 1,
+  "publicationState": "published",
+  "title": "Can You Help Me?",
+  "description": "Ask a store worker for an item, size, or fitting room politely.",
+  "language": "en",
+  "referenceLocale": "en-US",
+  "cefrBand": "A1",
+  "estimatedMinutes": 24,
+  "objectives": [
+    "Ask a store worker for an item, size, or fitting room politely."
+  ],
+  "tags": [
+    "english-core",
+    "a1",
+    "unit-08",
+    "production"
+  ],
+  "assets": [],
+  "stages": [
+    {
+      "stageId": "theory",
+      "stageType": "theory",
+      "stageSchemaVersion": 1,
+      "title": "Understand the language",
+      "instructions": "Read the explanation, examples, common error, and recap.",
+      "required": true,
+      "payload": {
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "This lesson prepares you to ask a store worker for an item, size, or fitting room politely. The central language is can/could requests in a store. It belongs to the practical context of shopping & everyday english. Focus first on meaning: decide what information the listener needs. Then choose the subject, verb form, and useful detail. At A1, keep the message short and concrete. One clear sentence is enough before the other person responds. The same language returns in the listening, repeat, speaking, exercises, and guided conversation stages."
+          },
+          {
+            "type": "callout",
+            "title": "Pattern",
+            "text": "can/could requests in a store"
+          },
+          {
+            "type": "example",
+            "english": "Can you help me find a medium?",
+            "explanation": "Use this model to begin the can you help me? exchange."
+          },
+          {
+            "type": "example",
+            "english": "Could I try this on?",
+            "explanation": "This can you help me? model adds a different detail or response."
+          },
+          {
+            "type": "example",
+            "english": "Can you help me, please?",
+            "explanation": "Use this question or response to keep the can you help me? exchange moving."
+          },
+          {
+            "type": "paragraph",
+            "text": "Notice the two models: “Can you help me find a medium?” and “Could I try this on?” They show the pattern in complete communication, not as isolated grammar. Say the model aloud, replace one detail, and check that the new sentence keeps the intended meaning. When the other person asks a follow-up question, answer directly and add a relevant detail. This makes the exchange natural while keeping the language controlled."
+          },
+          {
+            "type": "callout",
+            "title": "Common error",
+            "text": "Do not mix the word order or verb form with another pattern. Keep the controlled form for this lesson: can/could requests in a store."
+          },
+          {
+            "type": "bullet_list",
+            "items": [
+              "Communicative goal: Ask a store worker for an item, size, or fitting room politely.",
+              "Core pattern: can/could requests in a store.",
+              "Use one clear model, add a relevant detail, and respond to the other speaker."
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "stageId": "visual-vocabulary",
+      "stageType": "visual_vocabulary",
+      "stageSchemaVersion": 1,
+      "title": "Build your vocabulary",
+      "instructions": "Study each term, meaning, and contextual example.",
+      "required": true,
+      "payload": {
+        "items": [
+          {
+            "itemId": "price",
+            "term": "price",
+            "meaning": "the amount of money something costs",
+            "example": "Use “price” while you practice can you help me? in context.",
+            "imageAssetId": null
+          },
+          {
+            "itemId": "cheap",
+            "term": "cheap",
+            "meaning": "costing little money",
+            "example": "Use “cheap” while you practice can you help me? in context.",
+            "imageAssetId": null
+          },
+          {
+            "itemId": "expensive",
+            "term": "expensive",
+            "meaning": "costing a lot of money",
+            "example": "Use “expensive” while you practice can you help me? in context.",
+            "imageAssetId": null
+          },
+          {
+            "itemId": "this",
+            "term": "this",
+            "meaning": "the near thing being indicated",
+            "example": "Use “this” while you practice can you help me? in context.",
+            "imageAssetId": null
+          },
+          {
+            "itemId": "that",
+            "term": "that",
+            "meaning": "the more distant thing being indicated",
+            "example": "Use “that” while you practice can you help me? in context.",
+            "imageAssetId": null
+          },
+          {
+            "itemId": "try-on",
+            "term": "try on",
+            "meaning": "put on clothing to test its fit",
+            "example": "Use “try on” while you practice can you help me? in context.",
+            "imageAssetId": null
+          },
+          {
+            "itemId": "receipt",
+            "term": "receipt",
+            "meaning": "a paper or digital record of a purchase",
+            "example": "Use “receipt” while you practice can you help me? in context.",
+            "imageAssetId": null
+          },
+          {
+            "itemId": "broken",
+            "term": "broken",
+            "meaning": "damaged and not working correctly",
+            "example": "Use “broken” while you practice can you help me? in context.",
+            "imageAssetId": null
+          }
+        ]
+      }
+    },
+    {
+      "stageId": "listening",
+      "stageType": "listening",
+      "stageSchemaVersion": 1,
+      "title": "Listen in context",
+      "instructions": "Listen before revealing the text, then notice the target pattern.",
+      "required": true,
+      "payload": {
+        "segments": [
+          {
+            "segmentId": "segment-1",
+            "text": "Can you help me find a medium? Could I try this on?",
+            "audioAssetId": null
+          },
+          {
+            "segmentId": "segment-2",
+            "text": "Can you help me, please? Yes, of course.",
+            "audioAssetId": null
+          },
+          {
+            "segmentId": "segment-3",
+            "text": "Could I try this on? Can you help me, please?",
+            "audioAssetId": null
+          }
+        ],
+        "revealTextAfterFirstPlay": true
+      }
+    },
+    {
+      "stageId": "repeat",
+      "stageType": "repeat",
+      "stageSchemaVersion": 1,
+      "title": "Repeat useful chunks",
+      "instructions": "Repeat each complete expression with clear rhythm.",
+      "required": true,
+      "payload": {
+        "targets": [
+          {
+            "targetId": "repeat-1",
+            "text": "Can you help me find a medium?",
+            "referenceAudioAssetId": null,
+            "hint": "Keep the words together as one communicative chunk."
+          },
+          {
+            "targetId": "repeat-2",
+            "text": "Could I try this on?",
+            "referenceAudioAssetId": null,
+            "hint": "Keep the words together as one communicative chunk."
+          },
+          {
+            "targetId": "repeat-3",
+            "text": "Can you help me, please?",
+            "referenceAudioAssetId": null,
+            "hint": "Keep the words together as one communicative chunk."
+          },
+          {
+            "targetId": "repeat-4",
+            "text": "Yes, of course.",
+            "referenceAudioAssetId": null,
+            "hint": "Keep the words together as one communicative chunk."
+          },
+          {
+            "targetId": "repeat-5",
+            "text": "Thanks for talking about shopping & everyday english with me.",
+            "referenceAudioAssetId": null,
+            "hint": "Keep the words together as one communicative chunk."
+          }
+        ]
+      }
+    },
+    {
+      "stageId": "speaking-check",
+      "stageType": "speaking_check",
+      "stageSchemaVersion": 1,
+      "title": "Speaking Check",
+      "instructions": "Say expressions already presented in this Lesson.",
+      "required": true,
+      "payload": {
+        "targets": [
+          {
+            "targetId": "speaking-1",
+            "instruction": "Say the complete model naturally.",
+            "targetText": "Can you help me find a medium?",
+            "hint": "Use the same words and clear sentence stress."
+          },
+          {
+            "targetId": "speaking-2",
+            "instruction": "Say the complete model naturally.",
+            "targetText": "Could I try this on?",
+            "hint": "Use the same words and clear sentence stress."
+          },
+          {
+            "targetId": "speaking-3",
+            "instruction": "Say the complete model naturally.",
+            "targetText": "Can you help me, please?",
+            "hint": "Use the same words and clear sentence stress."
+          },
+          {
+            "targetId": "speaking-4",
+            "instruction": "Say the complete model naturally.",
+            "targetText": "Yes, of course.",
+            "hint": "Use the same words and clear sentence stress."
+          }
+        ]
+      }
+    },
+    {
+      "stageId": "exercise",
+      "stageType": "exercise",
+      "stageSchemaVersion": 1,
+      "title": "Check your understanding",
+      "instructions": "Complete each deterministic practice item.",
+      "required": true,
+      "payload": {
+        "items": [
+          {
+            "exerciseId": "choose-model",
+            "exerciseType": "single_choice",
+            "prompt": "Choose the model that fits the communicative goal.",
+            "instructions": null,
+            "hint": "Ask a store worker for an item, size, or fitting room politely.",
+            "payload": {
+              "options": [
+                {
+                  "optionId": "a",
+                  "text": "Can you help me find a medium?"
+                },
+                {
+                  "optionId": "b",
+                  "text": "The purple engine sleeps quickly."
+                },
+                {
+                  "optionId": "c",
+                  "text": "No information is possible."
+                }
+              ],
+              "correctOptionId": "a"
+            },
+            "feedback": {
+              "correct": "Correct. The answer fits the lesson context.",
+              "incorrect": "Try again and use the model from this lesson.",
+              "explanation": "can/could requests in a store"
+            }
+          },
+          {
+            "exerciseId": "select-core-vocabulary",
+            "exerciseType": "multiple_select",
+            "prompt": "Select both words that belong to this lesson context.",
+            "instructions": null,
+            "hint": "Shopping & Everyday English",
+            "payload": {
+              "options": [
+                {
+                  "optionId": "a",
+                  "text": "price"
+                },
+                {
+                  "optionId": "b",
+                  "text": "cheap"
+                },
+                {
+                  "optionId": "c",
+                  "text": "industrial turbine"
+                },
+                {
+                  "optionId": "d",
+                  "text": "quantum geology"
+                }
+              ],
+              "correctOptionIds": [
+                "a",
+                "b"
+              ]
+            },
+            "feedback": {
+              "correct": "Correct. The answer fits the lesson context.",
+              "incorrect": "Try again and use the model from this lesson.",
+              "explanation": "Both correct words appear in Visual Vocabulary."
+            }
+          },
+          {
+            "exerciseId": "complete-response",
+            "exerciseType": "fill_blank",
+            "prompt": "Type the exact practiced response shown in the hint.",
+            "instructions": null,
+            "hint": "Could I try this on?",
+            "payload": {
+              "prefix": "",
+              "suffix": "",
+              "acceptedAnswers": [
+                "Could I try this on?"
+              ],
+              "normalizationProfile": "english_basic_v1"
+            },
+            "feedback": {
+              "correct": "Correct. The answer fits the lesson context.",
+              "incorrect": "Try again and use the model from this lesson.",
+              "explanation": "Use the complete model response."
+            }
+          },
+          {
+            "exerciseId": "order-model",
+            "exerciseType": "word_order",
+            "prompt": "Put the model in its natural order.",
+            "instructions": null,
+            "hint": null,
+            "payload": {
+              "tokens": [
+                {
+                  "tokenId": "t8",
+                  "text": "?"
+                },
+                {
+                  "tokenId": "t7",
+                  "text": "medium"
+                },
+                {
+                  "tokenId": "t6",
+                  "text": "a"
+                },
+                {
+                  "tokenId": "t5",
+                  "text": "find"
+                },
+                {
+                  "tokenId": "t4",
+                  "text": "me"
+                },
+                {
+                  "tokenId": "t3",
+                  "text": "help"
+                },
+                {
+                  "tokenId": "t2",
+                  "text": "you"
+                },
+                {
+                  "tokenId": "t1",
+                  "text": "Can"
+                }
+              ],
+              "correctOrder": [
+                "t1",
+                "t2",
+                "t3",
+                "t4",
+                "t5",
+                "t6",
+                "t7",
+                "t8"
+              ]
+            },
+            "feedback": {
+              "correct": "Correct. The answer fits the lesson context.",
+              "incorrect": "Try again and use the model from this lesson.",
+              "explanation": "Keep the modeled English word order."
+            }
+          },
+          {
+            "exerciseId": "match-vocabulary",
+            "exerciseType": "matching",
+            "prompt": "Match each term to its meaning.",
+            "instructions": null,
+            "hint": null,
+            "payload": {
+              "leftItems": [
+                {
+                  "itemId": "l1",
+                  "text": "price"
+                },
+                {
+                  "itemId": "l2",
+                  "text": "cheap"
+                },
+                {
+                  "itemId": "l3",
+                  "text": "expensive"
+                }
+              ],
+              "rightItems": [
+                {
+                  "itemId": "r1",
+                  "text": "the amount of money something costs"
+                },
+                {
+                  "itemId": "r2",
+                  "text": "costing little money"
+                },
+                {
+                  "itemId": "r3",
+                  "text": "costing a lot of money"
+                }
+              ],
+              "correctPairs": [
+                {
+                  "leftId": "l1",
+                  "rightId": "r1"
+                },
+                {
+                  "leftId": "l2",
+                  "rightId": "r2"
+                },
+                {
+                  "leftId": "l3",
+                  "rightId": "r3"
+                }
+              ]
+            },
+            "feedback": {
+              "correct": "Correct. The answer fits the lesson context.",
+              "incorrect": "Try again and use the model from this lesson.",
+              "explanation": "Review each term with its meaning and example."
+            }
+          },
+          {
+            "exerciseId": "exact-useful-chunk",
+            "exerciseType": "short_answer_exact",
+            "prompt": "Type the finite model chunk shown in the hint.",
+            "instructions": null,
+            "hint": "Can you help me, please?",
+            "payload": {
+              "acceptedAnswers": [
+                "Can you help me, please?"
+              ],
+              "normalizationProfile": "english_basic_v1"
+            },
+            "feedback": {
+              "correct": "Correct. The answer fits the lesson context.",
+              "incorrect": "Try again and use the model from this lesson.",
+              "explanation": "This checks one exact practiced chunk, not an open response."
+            }
+          },
+          {
+            "exerciseId": "choose-correct-form",
+            "exerciseType": "single_choice",
+            "prompt": "Which sentence follows the lesson pattern?",
+            "instructions": null,
+            "hint": "can/could requests in a store",
+            "payload": {
+              "options": [
+                {
+                  "optionId": "a",
+                  "text": "Could I try this on?"
+                },
+                {
+                  "optionId": "b",
+                  "text": "She are did going."
+                },
+                {
+                  "optionId": "c",
+                  "text": "I is to yesterday."
+                }
+              ],
+              "correctOptionId": "a"
+            },
+            "feedback": {
+              "correct": "Correct. The answer fits the lesson context.",
+              "incorrect": "Try again and use the model from this lesson.",
+              "explanation": "can/could requests in a store"
+            }
+          },
+          {
+            "exerciseId": "recall-vocabulary",
+            "exerciseType": "fill_blank",
+            "prompt": "Type the term that means: the near thing being indicated",
+            "instructions": null,
+            "hint": "It appears in Visual Vocabulary.",
+            "payload": {
+              "prefix": "",
+              "suffix": "",
+              "acceptedAnswers": [
+                "this"
+              ],
+              "normalizationProfile": "english_basic_v1"
+            },
+            "feedback": {
+              "correct": "Correct. The answer fits the lesson context.",
+              "incorrect": "Try again and use the model from this lesson.",
+              "explanation": "the near thing being indicated"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "stageId": "guided-conversation",
+      "stageType": "guided_conversation",
+      "stageSchemaVersion": 1,
+      "title": "Shopping & Everyday English conversation",
+      "instructions": "Use the prepared language in a practical exchange.",
+      "required": true,
+      "payload": {
+        "scenario": "You are in a realistic everyday situation related to shopping & everyday english. Practice can you help me? and respond to relevant follow-up questions.",
+        "studentRole": "English learner handling the situation",
+        "teacherRole": "Helpful conversation partner",
+        "goal": "Ask a store worker for an item, size, or fitting room politely.",
+        "targetVocabulary": [
+          "price",
+          "cheap",
+          "expensive",
+          "this",
+          "that",
+          "try on",
+          "receipt",
+          "broken"
+        ],
+        "targetExpressions": [
+          "Can you help me find a medium?",
+          "Could I try this on?",
+          "Can you help me, please?",
+          "Yes, of course.",
+          "Thanks for talking about shopping & everyday english with me."
+        ],
+        "minimumStudentTurns": 4,
+        "recommendedStudentTurns": 6,
+        "maximumStudentTurns": 8
+      }
+    },
+    {
+      "stageId": "analysis",
+      "stageType": "analysis",
+      "stageSchemaVersion": 1,
+      "title": "Lesson Review",
+      "instructions": "Review the evidence from your completed practice.",
+      "required": true,
+      "payload": {}
+    }
+  ]
+}

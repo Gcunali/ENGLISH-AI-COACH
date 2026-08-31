@@ -1,0 +1,803 @@
+{
+  "packageSchemaVersion": 1,
+  "lessonFlowVersion": 1,
+  "lessonId": "c1-u06-l01-natural-collocations",
+  "contentVersion": 1,
+  "publicationState": "published",
+  "title": "Natural Collocations",
+  "description": "Use high-frequency advanced collocations to analyze and communicate ideas related to natural collocations with appropriate C1 complexity.",
+  "language": "en",
+  "referenceLocale": "en-US",
+  "cefrBand": "C1",
+  "estimatedMinutes": 48,
+  "objectives": [
+    "Use high-frequency advanced collocations to analyze and communicate ideas related to natural collocations with appropriate C1 complexity."
+  ],
+  "tags": [
+    "english-core",
+    "c1",
+    "unit-06",
+    "production"
+  ],
+  "assets": [],
+  "stages": [
+    {
+      "stageId": "theory",
+      "stageType": "theory",
+      "stageSchemaVersion": 1,
+      "title": "Understand meaning and form",
+      "instructions": "Read the concept, pattern, examples, contrast, common issue, and recap.",
+      "required": true,
+      "payload": {
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "The communicative aim of this lesson is to use high-frequency advanced collocations to analyze and communicate ideas related to natural collocations with appropriate C1 complexity. The central language focus is high-frequency advanced collocations. In the context of idiomatic & natural english, form and meaning work together: first identify the relationship between the ideas, then choose wording that makes that relationship clear to another person. At C1, precision includes stance, register, and information structure. Make the relationship between claims explicit, qualify what cannot be fully supported, and adapt the wording to the audience without losing nuance."
+          },
+          {
+            "type": "callout",
+            "title": "Pattern",
+            "text": "high-frequency advanced collocations"
+          },
+          {
+            "type": "example",
+            "english": "We should consider reach a consensus carefully.",
+            "explanation": "This model establishes the main communicative move."
+          },
+          {
+            "type": "example",
+            "english": "The discussion highlighted raise awareness.",
+            "explanation": "This model develops or qualifies the message."
+          },
+          {
+            "type": "paragraph",
+            "text": "Start with the model “We should consider reach a consensus carefully.” It establishes a useful direction for the exchange. The second model, “The discussion highlighted raise awareness.” adds another layer: a reason, implication, contrast, or response. Notice how each complete chunk does a communicative job. Practice replacing one detail while preserving the original grammar, stance, and register. Then connect the revised sentence to a relevant consequence or example instead of changing topic abruptly."
+          },
+          {
+            "type": "paragraph",
+            "text": "A useful pattern for this lesson is: high-frequency advanced collocations. Use it when the situation genuinely calls for that meaning. Contrast matters: a direct factual statement presents information, while a qualified or hypothetical form changes the speaker's commitment to it. The choice should be driven by evidence, time reference, relationship, and purpose. In listening, pay attention not only to individual words but also to linkers, stress, and the speaker's degree of certainty."
+          },
+          {
+            "type": "callout",
+            "title": "Contrast",
+            "text": "Compare a direct statement with language shaped by high-frequency advanced collocations; the intended meaning determines the form."
+          },
+          {
+            "type": "paragraph",
+            "text": "A common issue is to select an advanced-looking form without maintaining its meaning across the sentence. That can create a mismatch in time, stance, or register. Check three things: what happened or is being proposed, how certain the speaker is, and what response is expected. For natural collocations, clarity comes from a coherent message rather than maximum complexity. The later stages recycle the same vocabulary and expressions so that recognition becomes controlled production and then flexible interaction."
+          },
+          {
+            "type": "callout",
+            "title": "Common issue",
+            "text": "Do not add complexity that changes the time reference, degree of certainty, or relationship with the listener."
+          },
+          {
+            "type": "bullet_list",
+            "items": [
+              "Goal: Use high-frequency advanced collocations to analyze and communicate ideas related to natural collocations with appropriate C1 complexity.",
+              "Core focus: high-frequency advanced collocations.",
+              "Use complete chunks, connect ideas, and keep the intended stance.",
+              "In the conversation, listen, respond, clarify, and develop the same topic."
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "stageId": "visual-vocabulary",
+      "stageType": "visual_vocabulary",
+      "stageSchemaVersion": 1,
+      "title": "Build precise vocabulary",
+      "instructions": "Study each useful word or chunk in a meaningful context.",
+      "required": true,
+      "payload": {
+        "items": [
+          {
+            "itemId": "item-1",
+            "term": "reach a consensus",
+            "meaning": "A useful word or chunk for communicating about idiomatic & natural english with the intended level of precision.",
+            "example": "We should consider reach a consensus carefully.",
+            "imageAssetId": null
+          },
+          {
+            "itemId": "item-2",
+            "term": "raise awareness",
+            "meaning": "A useful word or chunk for communicating about idiomatic & natural english with the intended level of precision.",
+            "example": "The discussion highlighted raise awareness.",
+            "imageAssetId": null
+          },
+          {
+            "itemId": "item-3",
+            "term": "pose a challenge",
+            "meaning": "A useful word or chunk for communicating about idiomatic & natural english with the intended level of precision.",
+            "example": "A clear explanation addresses pose a challenge directly.",
+            "imageAssetId": null
+          },
+          {
+            "itemId": "item-4",
+            "term": "phase out",
+            "meaning": "A useful word or chunk for communicating about idiomatic & natural english with the intended level of precision.",
+            "example": "The speaker emphasized phase out.",
+            "imageAssetId": null
+          },
+          {
+            "itemId": "item-5",
+            "term": "follow through on",
+            "meaning": "A useful word or chunk for communicating about idiomatic & natural english with the intended level of precision.",
+            "example": "Our response should account for follow through on.",
+            "imageAssetId": null
+          },
+          {
+            "itemId": "item-6",
+            "term": "come across as",
+            "meaning": "A useful word or chunk for communicating about idiomatic & natural english with the intended level of precision.",
+            "example": "This example illustrates come across as clearly.",
+            "imageAssetId": null
+          },
+          {
+            "itemId": "item-7",
+            "term": "read between the lines",
+            "meaning": "A useful word or chunk for communicating about idiomatic & natural english with the intended level of precision.",
+            "example": "We should consider read between the lines carefully.",
+            "imageAssetId": null
+          },
+          {
+            "itemId": "item-8",
+            "term": "a grey area",
+            "meaning": "A useful word or chunk for communicating about idiomatic & natural english with the intended level of precision.",
+            "example": "The discussion highlighted a grey area.",
+            "imageAssetId": null
+          },
+          {
+            "itemId": "item-9",
+            "term": "the bigger picture",
+            "meaning": "A useful word or chunk for communicating about idiomatic & natural english with the intended level of precision.",
+            "example": "A clear explanation addresses the bigger picture directly.",
+            "imageAssetId": null
+          },
+          {
+            "itemId": "item-10",
+            "term": "conduct an investigation",
+            "meaning": "A useful word or chunk for communicating about idiomatic & natural english with the intended level of precision.",
+            "example": "The speaker emphasized conduct an investigation.",
+            "imageAssetId": null
+          },
+          {
+            "itemId": "item-11",
+            "term": "look into the matter",
+            "meaning": "A useful word or chunk for communicating about idiomatic & natural english with the intended level of precision.",
+            "example": "Our response should account for look into the matter.",
+            "imageAssetId": null
+          },
+          {
+            "itemId": "item-12",
+            "term": "to be honest",
+            "meaning": "A useful word or chunk for communicating about idiomatic & natural english with the intended level of precision.",
+            "example": "This example illustrates to be honest clearly.",
+            "imageAssetId": null
+          }
+        ]
+      }
+    },
+    {
+      "stageId": "listening",
+      "stageType": "listening",
+      "stageSchemaVersion": 1,
+      "title": "Listen for meaning and stance",
+      "instructions": "Listen first, then reveal the text and notice connections, register, and emphasis.",
+      "required": true,
+      "payload": {
+        "segments": [
+          {
+            "segmentId": "segment-1",
+            "text": "To begin with, We should consider reach a consensus carefully. The discussion highlighted raise awareness.",
+            "audioAssetId": null
+          },
+          {
+            "segmentId": "segment-2",
+            "text": "In this situation, The discussion highlighted raise awareness. A clear explanation addresses pose a challenge directly.",
+            "audioAssetId": null
+          },
+          {
+            "segmentId": "segment-3",
+            "text": "From another perspective, A clear explanation addresses pose a challenge directly. The speaker emphasized phase out.",
+            "audioAssetId": null
+          },
+          {
+            "segmentId": "segment-4",
+            "text": "More specifically, The speaker emphasized phase out. Our response should account for follow through on.",
+            "audioAssetId": null
+          },
+          {
+            "segmentId": "segment-5",
+            "text": "Even so, Our response should account for follow through on. This example illustrates come across as clearly.",
+            "audioAssetId": null
+          },
+          {
+            "segmentId": "segment-6",
+            "text": "As a result, This example illustrates come across as clearly. We should consider read between the lines carefully.",
+            "audioAssetId": null
+          },
+          {
+            "segmentId": "segment-7",
+            "text": "On reflection, We should consider read between the lines carefully. The discussion highlighted a grey area.",
+            "audioAssetId": null
+          }
+        ],
+        "revealTextAfterFirstPlay": true
+      }
+    },
+    {
+      "stageId": "repeat",
+      "stageType": "repeat",
+      "stageSchemaVersion": 1,
+      "title": "Repeat connected chunks",
+      "instructions": "Repeat complete, useful expressions with natural phrasing and sentence stress.",
+      "required": true,
+      "payload": {
+        "targets": [
+          {
+            "targetId": "repeat-1",
+            "text": "We should consider reach a consensus carefully.",
+            "referenceAudioAssetId": null,
+            "hint": "Keep the chunk connected and preserve its intended stance."
+          },
+          {
+            "targetId": "repeat-2",
+            "text": "The discussion highlighted raise awareness.",
+            "referenceAudioAssetId": null,
+            "hint": "Keep the chunk connected and preserve its intended stance."
+          },
+          {
+            "targetId": "repeat-3",
+            "text": "A clear explanation addresses pose a challenge directly.",
+            "referenceAudioAssetId": null,
+            "hint": "Keep the chunk connected and preserve its intended stance."
+          },
+          {
+            "targetId": "repeat-4",
+            "text": "The speaker emphasized phase out.",
+            "referenceAudioAssetId": null,
+            "hint": "Keep the chunk connected and preserve its intended stance."
+          },
+          {
+            "targetId": "repeat-5",
+            "text": "Our response should account for follow through on.",
+            "referenceAudioAssetId": null,
+            "hint": "Keep the chunk connected and preserve its intended stance."
+          },
+          {
+            "targetId": "repeat-6",
+            "text": "This example illustrates come across as clearly.",
+            "referenceAudioAssetId": null,
+            "hint": "Keep the chunk connected and preserve its intended stance."
+          },
+          {
+            "targetId": "repeat-7",
+            "text": "We should consider read between the lines carefully.",
+            "referenceAudioAssetId": null,
+            "hint": "Keep the chunk connected and preserve its intended stance."
+          },
+          {
+            "targetId": "repeat-8",
+            "text": "The discussion highlighted a grey area.",
+            "referenceAudioAssetId": null,
+            "hint": "Keep the chunk connected and preserve its intended stance."
+          }
+        ]
+      }
+    },
+    {
+      "stageId": "speaking-check",
+      "stageType": "speaking_check",
+      "stageSchemaVersion": 1,
+      "title": "Speaking Check",
+      "instructions": "Say only expressions already prepared in this Lesson.",
+      "required": true,
+      "payload": {
+        "targets": [
+          {
+            "targetId": "speaking-1",
+            "instruction": "Say the complete prepared model naturally.",
+            "targetText": "We should consider reach a consensus carefully.",
+            "hint": "Use clear phrasing and preserve every meaning-bearing word."
+          },
+          {
+            "targetId": "speaking-2",
+            "instruction": "Say the complete prepared model naturally.",
+            "targetText": "The discussion highlighted raise awareness.",
+            "hint": "Use clear phrasing and preserve every meaning-bearing word."
+          },
+          {
+            "targetId": "speaking-3",
+            "instruction": "Say the complete prepared model naturally.",
+            "targetText": "A clear explanation addresses pose a challenge directly.",
+            "hint": "Use clear phrasing and preserve every meaning-bearing word."
+          },
+          {
+            "targetId": "speaking-4",
+            "instruction": "Say the complete prepared model naturally.",
+            "targetText": "The speaker emphasized phase out.",
+            "hint": "Use clear phrasing and preserve every meaning-bearing word."
+          },
+          {
+            "targetId": "speaking-5",
+            "instruction": "Say the complete prepared model naturally.",
+            "targetText": "Our response should account for follow through on.",
+            "hint": "Use clear phrasing and preserve every meaning-bearing word."
+          },
+          {
+            "targetId": "speaking-6",
+            "instruction": "Say the complete prepared model naturally.",
+            "targetText": "This example illustrates come across as clearly.",
+            "hint": "Use clear phrasing and preserve every meaning-bearing word."
+          },
+          {
+            "targetId": "speaking-7",
+            "instruction": "Say the complete prepared model naturally.",
+            "targetText": "We should consider read between the lines carefully.",
+            "hint": "Use clear phrasing and preserve every meaning-bearing word."
+          }
+        ]
+      }
+    },
+    {
+      "stageId": "exercise",
+      "stageType": "exercise",
+      "stageSchemaVersion": 1,
+      "title": "Apply the language",
+      "instructions": "Complete each deterministic meaning, form, vocabulary, and discourse task.",
+      "required": true,
+      "payload": {
+        "items": [
+          {
+            "exerciseId": "meaning-in-context",
+            "exerciseType": "single_choice",
+            "prompt": "Choose the line that best fits the stated communicative purpose.",
+            "instructions": null,
+            "hint": "high-frequency advanced collocations",
+            "payload": {
+              "options": [
+                {
+                  "optionId": "a",
+                  "text": "We should consider reach a consensus carefully."
+                },
+                {
+                  "optionId": "b",
+                  "text": "Our response should account for follow through on."
+                },
+                {
+                  "optionId": "c",
+                  "text": "The issue has no connection to this context."
+                }
+              ],
+              "correctOptionId": "a"
+            },
+            "feedback": {
+              "correct": "Correct. The choice fits the meaning and context.",
+              "incorrect": "Try again. Compare the context with the lesson models.",
+              "explanation": "high-frequency advanced collocations"
+            }
+          },
+          {
+            "exerciseId": "select-unit-language",
+            "exerciseType": "multiple_select",
+            "prompt": "Select the two chunks that support this lesson's context.",
+            "instructions": null,
+            "hint": null,
+            "payload": {
+              "options": [
+                {
+                  "optionId": "a",
+                  "text": "reach a consensus"
+                },
+                {
+                  "optionId": "b",
+                  "text": "raise awareness"
+                },
+                {
+                  "optionId": "c",
+                  "text": "unrelated mechanical component"
+                },
+                {
+                  "optionId": "d",
+                  "text": "random geological sample"
+                }
+              ],
+              "correctOptionIds": [
+                "a",
+                "b"
+              ]
+            },
+            "feedback": {
+              "correct": "Correct. The choice fits the meaning and context.",
+              "incorrect": "Try again. Compare the context with the lesson models.",
+              "explanation": "Both correct chunks were prepared in Visual Vocabulary."
+            }
+          },
+          {
+            "exerciseId": "complete-model",
+            "exerciseType": "fill_blank",
+            "prompt": "Type the complete model shown in the hint.",
+            "instructions": null,
+            "hint": "The discussion highlighted raise awareness.",
+            "payload": {
+              "prefix": "",
+              "suffix": "",
+              "acceptedAnswers": [
+                "The discussion highlighted raise awareness."
+              ],
+              "normalizationProfile": "english_basic_v1"
+            },
+            "feedback": {
+              "correct": "Correct. The choice fits the meaning and context.",
+              "incorrect": "Try again. Compare the context with the lesson models.",
+              "explanation": "This is a finite model-recall task."
+            }
+          },
+          {
+            "exerciseId": "order-message",
+            "exerciseType": "word_order",
+            "prompt": "Put the model in its natural order.",
+            "instructions": null,
+            "hint": null,
+            "payload": {
+              "tokens": [
+                {
+                  "tokenId": "t8",
+                  "text": "."
+                },
+                {
+                  "tokenId": "t7",
+                  "text": "carefully"
+                },
+                {
+                  "tokenId": "t6",
+                  "text": "consensus"
+                },
+                {
+                  "tokenId": "t5",
+                  "text": "a"
+                },
+                {
+                  "tokenId": "t4",
+                  "text": "reach"
+                },
+                {
+                  "tokenId": "t3",
+                  "text": "consider"
+                },
+                {
+                  "tokenId": "t2",
+                  "text": "should"
+                },
+                {
+                  "tokenId": "t1",
+                  "text": "We"
+                }
+              ],
+              "correctOrder": [
+                "t1",
+                "t2",
+                "t3",
+                "t4",
+                "t5",
+                "t6",
+                "t7",
+                "t8"
+              ]
+            },
+            "feedback": {
+              "correct": "Correct. The choice fits the meaning and context.",
+              "incorrect": "Try again. Compare the context with the lesson models.",
+              "explanation": "Use the modeled English information order."
+            }
+          },
+          {
+            "exerciseId": "match-chunks",
+            "exerciseType": "matching",
+            "prompt": "Match each chunk to its communicative use.",
+            "instructions": null,
+            "hint": null,
+            "payload": {
+              "leftItems": [
+                {
+                  "itemId": "l1",
+                  "text": "reach a consensus"
+                },
+                {
+                  "itemId": "l2",
+                  "text": "raise awareness"
+                },
+                {
+                  "itemId": "l3",
+                  "text": "pose a challenge"
+                }
+              ],
+              "rightItems": [
+                {
+                  "itemId": "r1",
+                  "text": "Language used to develop point 1 in this lesson context."
+                },
+                {
+                  "itemId": "r2",
+                  "text": "Language used to develop point 2 in this lesson context."
+                },
+                {
+                  "itemId": "r3",
+                  "text": "Language used to develop point 3 in this lesson context."
+                }
+              ],
+              "correctPairs": [
+                {
+                  "leftId": "l1",
+                  "rightId": "r1"
+                },
+                {
+                  "leftId": "l2",
+                  "rightId": "r2"
+                },
+                {
+                  "leftId": "l3",
+                  "rightId": "r3"
+                }
+              ]
+            },
+            "feedback": {
+              "correct": "Correct. The choice fits the meaning and context.",
+              "incorrect": "Try again. Compare the context with the lesson models.",
+              "explanation": "Review the chunks in their contextual examples."
+            }
+          },
+          {
+            "exerciseId": "exact-finite-response",
+            "exerciseType": "short_answer_exact",
+            "prompt": "Type the exact finite model shown in the hint.",
+            "instructions": null,
+            "hint": "A clear explanation addresses pose a challenge directly.",
+            "payload": {
+              "acceptedAnswers": [
+                "A clear explanation addresses pose a challenge directly."
+              ],
+              "normalizationProfile": "english_basic_v1"
+            },
+            "feedback": {
+              "correct": "Correct. The choice fits the meaning and context.",
+              "incorrect": "Try again. Compare the context with the lesson models.",
+              "explanation": "This checks recall of one displayed model, not a subjective response."
+            }
+          },
+          {
+            "exerciseId": "distinguish-purpose-6",
+            "exerciseType": "single_choice",
+            "prompt": "Which line has the appropriate focus and register?",
+            "instructions": null,
+            "hint": "high-frequency advanced collocations",
+            "payload": {
+              "options": [
+                {
+                  "optionId": "a",
+                  "text": "The discussion highlighted a grey area."
+                },
+                {
+                  "optionId": "b",
+                  "text": "Whatever, none of that matters at all."
+                },
+                {
+                  "optionId": "c",
+                  "text": "Words are being placed without a communicative purpose."
+                }
+              ],
+              "correctOptionId": "a"
+            },
+            "feedback": {
+              "correct": "Correct. The choice fits the meaning and context.",
+              "incorrect": "Try again. Compare the context with the lesson models.",
+              "explanation": "The lesson model preserves purpose, stance, and register."
+            }
+          },
+          {
+            "exerciseId": "select-coherent-pair-7",
+            "exerciseType": "multiple_select",
+            "prompt": "Select both expressions prepared for this interaction.",
+            "instructions": null,
+            "hint": null,
+            "payload": {
+              "options": [
+                {
+                  "optionId": "a",
+                  "text": "We should consider reach a consensus carefully."
+                },
+                {
+                  "optionId": "b",
+                  "text": "The discussion highlighted raise awareness."
+                },
+                {
+                  "optionId": "c",
+                  "text": "A sentence about an unrelated appliance."
+                },
+                {
+                  "optionId": "d",
+                  "text": "An answer with no semantic connection."
+                }
+              ],
+              "correctOptionIds": [
+                "a",
+                "b"
+              ]
+            },
+            "feedback": {
+              "correct": "Correct. The choice fits the meaning and context.",
+              "incorrect": "Try again. Compare the context with the lesson models.",
+              "explanation": "Both choices belong to the same prepared exchange."
+            }
+          },
+          {
+            "exerciseId": "context-choice-8",
+            "exerciseType": "single_choice",
+            "prompt": "Choose the response that develops the same topic coherently.",
+            "instructions": null,
+            "hint": null,
+            "payload": {
+              "options": [
+                {
+                  "optionId": "a",
+                  "text": "We should consider reach a consensus carefully."
+                },
+                {
+                  "optionId": "b",
+                  "text": "That conclusion ignores every detail just mentioned."
+                },
+                {
+                  "optionId": "c",
+                  "text": "A disconnected answer would change the subject."
+                }
+              ],
+              "correctOptionId": "a"
+            },
+            "feedback": {
+              "correct": "Correct. The choice fits the meaning and context.",
+              "incorrect": "Try again. Compare the context with the lesson models.",
+              "explanation": "The correct response remains relevant and coherent."
+            }
+          },
+          {
+            "exerciseId": "vocabulary-recall-9",
+            "exerciseType": "fill_blank",
+            "prompt": "Type the exact chunk displayed in the hint.",
+            "instructions": null,
+            "hint": "conduct an investigation",
+            "payload": {
+              "prefix": "",
+              "suffix": "",
+              "acceptedAnswers": [
+                "conduct an investigation"
+              ],
+              "normalizationProfile": "english_basic_v1"
+            },
+            "feedback": {
+              "correct": "Correct. The choice fits the meaning and context.",
+              "incorrect": "Try again. Compare the context with the lesson models.",
+              "explanation": "The answer is one finite prepared chunk."
+            }
+          },
+          {
+            "exerciseId": "distinguish-purpose-10",
+            "exerciseType": "single_choice",
+            "prompt": "Which line has the appropriate focus and register?",
+            "instructions": null,
+            "hint": "high-frequency advanced collocations",
+            "payload": {
+              "options": [
+                {
+                  "optionId": "a",
+                  "text": "The speaker emphasized phase out."
+                },
+                {
+                  "optionId": "b",
+                  "text": "Whatever, none of that matters at all."
+                },
+                {
+                  "optionId": "c",
+                  "text": "Words are being placed without a communicative purpose."
+                }
+              ],
+              "correctOptionId": "a"
+            },
+            "feedback": {
+              "correct": "Correct. The choice fits the meaning and context.",
+              "incorrect": "Try again. Compare the context with the lesson models.",
+              "explanation": "The lesson model preserves purpose, stance, and register."
+            }
+          },
+          {
+            "exerciseId": "select-coherent-pair-11",
+            "exerciseType": "multiple_select",
+            "prompt": "Select both expressions prepared for this interaction.",
+            "instructions": null,
+            "hint": null,
+            "payload": {
+              "options": [
+                {
+                  "optionId": "a",
+                  "text": "We should consider reach a consensus carefully."
+                },
+                {
+                  "optionId": "b",
+                  "text": "The discussion highlighted raise awareness."
+                },
+                {
+                  "optionId": "c",
+                  "text": "A sentence about an unrelated appliance."
+                },
+                {
+                  "optionId": "d",
+                  "text": "An answer with no semantic connection."
+                }
+              ],
+              "correctOptionIds": [
+                "a",
+                "b"
+              ]
+            },
+            "feedback": {
+              "correct": "Correct. The choice fits the meaning and context.",
+              "incorrect": "Try again. Compare the context with the lesson models.",
+              "explanation": "Both choices belong to the same prepared exchange."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "stageId": "guided-conversation",
+      "stageType": "guided_conversation",
+      "stageSchemaVersion": 1,
+      "title": "Natural Collocations conversation",
+      "instructions": "Sustain the interaction, respond to follow-ups, and use the prepared language flexibly.",
+      "required": true,
+      "payload": {
+        "scenario": "You are taking part in a realistic C1 discussion about idiomatic & natural english. The immediate task is natural collocations; develop the issue, respond to new information, and reach an appropriate communicative outcome.",
+        "studentRole": "Independent English user contributing and responding",
+        "teacherRole": "Responsive conversation partner who probes, clarifies, and challenges appropriately",
+        "goal": "Use high-frequency advanced collocations to analyze and communicate ideas related to natural collocations with appropriate C1 complexity.",
+        "targetVocabulary": [
+          "reach a consensus",
+          "raise awareness",
+          "pose a challenge",
+          "phase out",
+          "follow through on",
+          "come across as",
+          "read between the lines",
+          "a grey area",
+          "the bigger picture",
+          "conduct an investigation",
+          "look into the matter",
+          "to be honest"
+        ],
+        "targetExpressions": [
+          "We should consider reach a consensus carefully.",
+          "The discussion highlighted raise awareness.",
+          "A clear explanation addresses pose a challenge directly.",
+          "The speaker emphasized phase out.",
+          "Our response should account for follow through on.",
+          "This example illustrates come across as clearly.",
+          "We should consider read between the lines carefully.",
+          "The discussion highlighted a grey area."
+        ],
+        "minimumStudentTurns": 8,
+        "recommendedStudentTurns": 11,
+        "maximumStudentTurns": 16
+      }
+    },
+    {
+      "stageId": "analysis",
+      "stageType": "analysis",
+      "stageSchemaVersion": 1,
+      "title": "Lesson Review",
+      "instructions": "Review evidence from the completed Lesson with Interactive Lesson Analysis v1.",
+      "required": true,
+      "payload": {}
+    }
+  ]
+}

@@ -1596,3 +1596,25 @@ export interface GuidedAudio {
   durationMs: number;
   runtimeVersion: number;
 }
+
+export interface ToeicPartAvailability { part: string; title: string; questionCount: number; runtimeAvailable: boolean }
+export interface ToeicForm { formId: string; formVersion: number; title: string; questionCount: number; activeSessionId: string | null }
+export interface ToeicHistoryEntry { sessionId: string; formId: string; formTitle: string; status: "in_progress" | "completed" | "abandoned"; correct: number; answered: number; total: number; accuracy: number; createdAt: string; updatedAt: string; completedAt: string | null }
+export interface ToeicOverview { bankId: string; untimed: true; parts: ToeicPartAvailability[]; forms: ToeicForm[]; activeSessions: ToeicHistoryEntry[]; recentHistory: ToeicHistoryEntry[]; disclaimer: string }
+export interface ToeicPublicQuestion { itemId: string; itemVersion: number; questionNumber: number; totalQuestions: number; imageBase64: string; imageMimeType: "image/png"; choices: Array<"A" | "B" | "C" | "D">; initialAudioCompleted: boolean; initialAudioInterrupted: boolean }
+export interface ToeicTranscript { choice: "A" | "B" | "C" | "D"; text: string }
+export interface ToeicFeedback { selectedChoice: "A" | "B" | "C" | "D"; isCorrect: boolean; correctAnswer: "A" | "B" | "C" | "D"; statements: ToeicTranscript[]; correctExplanation: string; selectedExplanation: string | null; languageFocus: string[]; usefulVocabulary: string[]; answeredAt: string }
+export interface ToeicSession { sessionId: string; formId: string; formVersion: number; formTitle: string; status: "in_progress" | "completed" | "abandoned"; untimed: true; currentQuestionIndex: number; answeredCount: number; currentQuestion: ToeicPublicQuestion | null; feedback: ToeicFeedback | null; createdAt: string; updatedAt: string }
+export interface ToeicAudio extends GuidedAudio { presentationId: string | null; initial: boolean; itemId: string; itemVersion: number }
+export interface ToeicBreakdown { label: string; correct: number; total: number }
+export interface ToeicDistractorCount { distractorType: string; count: number }
+export interface ToeicResult { sessionId: string; formId: string; formTitle: string; status: string; correct: number; total: number; accuracy: number; skillBreakdown: ToeicBreakdown[]; difficultyBreakdown: ToeicBreakdown[]; commonDistractors: ToeicDistractorCount[]; hasScaledScore: false; scoreMessage: string; completedAt: string | null }
+export interface ToeicReviewItem { itemId: string; questionNumber: number; imageBase64: string; imageMimeType: "image/png"; difficulty: string; skillTags: string[]; feedback: ToeicFeedback }
+export interface ToeicPart2Form { formId: string; formVersion: number; title: string; activeSessionId: string | null }
+export interface ToeicPart2Overview { bankId: string; forms: ToeicPart2Form[] }
+export interface ToeicPart2Question { itemId: string; itemVersion: number; questionNumber: number; totalQuestions: 25; choices: Array<"A" | "B" | "C">; initialAudioCompleted: boolean; initialAudioInterrupted: boolean }
+export interface ToeicPart2Response { choice: "A" | "B" | "C"; text: string }
+export interface ToeicPart2Feedback { selectedChoice: "A" | "B" | "C"; isCorrect: boolean; correctAnswer: "A" | "B" | "C"; prompt: string; responses: ToeicPart2Response[]; correctExplanation: string; selectedExplanation: string | null; listeningFocus: string[]; usefulPattern: string | null }
+export interface ToeicPart2Session { sessionId: string; formId: string; status: "in_progress" | "completed"; currentQuestionIndex: number; answeredCount: number; currentQuestion: ToeicPart2Question | null; feedback: ToeicPart2Feedback | null }
+export interface ToeicPart2Result { sessionId: string; formId: string; correct: number; total: 25; accuracy: number; promptBreakdown: ToeicBreakdown[]; difficultyBreakdown: ToeicBreakdown[]; distractorBreakdown: ToeicBreakdown[]; hasScaledScore: false; scoreMessage: string }
+export interface ToeicPart2ReviewItem { questionNumber: number; difficulty: string; tags: string[]; feedback: ToeicPart2Feedback }

@@ -1,0 +1,615 @@
+{
+  "packageSchemaVersion": 1,
+  "lessonFlowVersion": 1,
+  "lessonId": "a2-u05-l01-at-the-airport",
+  "contentVersion": 1,
+  "publicationState": "published",
+  "title": "At the Airport",
+  "description": "Find a gate, understand basic departure information, and answer check-in questions.",
+  "language": "en",
+  "referenceLocale": "en-US",
+  "cefrBand": "A2",
+  "estimatedMinutes": 30,
+  "objectives": [
+    "Find a gate, understand basic departure information, and answer check-in questions."
+  ],
+  "tags": [
+    "english-core",
+    "a2",
+    "unit-05",
+    "production"
+  ],
+  "assets": [],
+  "stages": [
+    {
+      "stageId": "theory",
+      "stageType": "theory",
+      "stageSchemaVersion": 1,
+      "title": "Understand the language",
+      "instructions": "Read the explanation, examples, common error, and recap.",
+      "required": true,
+      "payload": {
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "This lesson prepares you to find a gate, understand basic departure information, and answer check-in questions. The central language is travel questions and airport instructions. It belongs to the practical context of travel & accommodation. Focus first on meaning: decide what information the listener needs. Then choose the subject, verb form, and useful detail. At A2, connect the main message to a time, reason, contrast, or result. Listen for context before choosing the tense or functional phrase. The same language returns in the listening, repeat, speaking, exercises, and guided conversation stages."
+          },
+          {
+            "type": "callout",
+            "title": "Pattern",
+            "text": "travel questions and airport instructions"
+          },
+          {
+            "type": "example",
+            "english": "Which gate does the flight leave from?",
+            "explanation": "Use this model to begin the at the airport exchange."
+          },
+          {
+            "type": "example",
+            "english": "Boarding begins at gate twelve.",
+            "explanation": "This at the airport model adds a different detail or response."
+          },
+          {
+            "type": "example",
+            "english": "Could you help me with this problem?",
+            "explanation": "Use this question or response to keep the at the airport exchange moving."
+          },
+          {
+            "type": "paragraph",
+            "text": "Notice the two models: “Which gate does the flight leave from?” and “Boarding begins at gate twelve.” They show the pattern in complete communication, not as isolated grammar. Say the model aloud, replace one detail, and check that the new sentence keeps the intended meaning. When the other person asks a follow-up question, answer directly and add a relevant detail. This makes the exchange natural while keeping the language controlled. Compare the time and viewpoint in each model, and use a linker when two ideas need a clear relationship. Avoid adding advanced forms when the lesson pattern already communicates the message accurately."
+          },
+          {
+            "type": "callout",
+            "title": "Common error",
+            "text": "Do not mix the word order or verb form with another pattern. Keep the controlled form for this lesson: travel questions and airport instructions."
+          },
+          {
+            "type": "bullet_list",
+            "items": [
+              "Communicative goal: Find a gate, understand basic departure information, and answer check-in questions.",
+              "Core pattern: travel questions and airport instructions.",
+              "Use one clear model, add a relevant detail, and respond to the other speaker."
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "stageId": "visual-vocabulary",
+      "stageType": "visual_vocabulary",
+      "stageSchemaVersion": 1,
+      "title": "Build your vocabulary",
+      "instructions": "Study each term, meaning, and contextual example.",
+      "required": true,
+      "payload": {
+        "items": [
+          {
+            "itemId": "boarding-pass",
+            "term": "boarding pass",
+            "meaning": "a document allowing a passenger onto a flight",
+            "example": "Use “boarding pass” while you practice at the airport in context.",
+            "imageAssetId": null
+          },
+          {
+            "itemId": "gate",
+            "term": "gate",
+            "meaning": "the airport area where passengers board",
+            "example": "Use “gate” while you practice at the airport in context.",
+            "imageAssetId": null
+          },
+          {
+            "itemId": "departure",
+            "term": "departure",
+            "meaning": "the act or time of leaving",
+            "example": "Use “departure” while you practice at the airport in context.",
+            "imageAssetId": null
+          },
+          {
+            "itemId": "arrival",
+            "term": "arrival",
+            "meaning": "the act or time of reaching a place",
+            "example": "Use “arrival” while you practice at the airport in context.",
+            "imageAssetId": null
+          },
+          {
+            "itemId": "luggage",
+            "term": "luggage",
+            "meaning": "bags carried while traveling",
+            "example": "Use “luggage” while you practice at the airport in context.",
+            "imageAssetId": null
+          },
+          {
+            "itemId": "reservation",
+            "term": "reservation",
+            "meaning": "an arrangement to keep a room or seat",
+            "example": "Use “reservation” while you practice at the airport in context.",
+            "imageAssetId": null
+          },
+          {
+            "itemId": "check-in",
+            "term": "check in",
+            "meaning": "register on arrival for a flight or hotel",
+            "example": "Use “check in” while you practice at the airport in context.",
+            "imageAssetId": null
+          },
+          {
+            "itemId": "available",
+            "term": "available",
+            "meaning": "ready to be used or booked",
+            "example": "Use “available” while you practice at the airport in context.",
+            "imageAssetId": null
+          },
+          {
+            "itemId": "delay",
+            "term": "delay",
+            "meaning": "a period of waiting because something is late",
+            "example": "Use “delay” while you practice at the airport in context.",
+            "imageAssetId": null
+          }
+        ]
+      }
+    },
+    {
+      "stageId": "listening",
+      "stageType": "listening",
+      "stageSchemaVersion": 1,
+      "title": "Listen in context",
+      "instructions": "Listen before revealing the text, then notice the target pattern.",
+      "required": true,
+      "payload": {
+        "segments": [
+          {
+            "segmentId": "segment-1",
+            "text": "Which gate does the flight leave from? Boarding begins at gate twelve.",
+            "audioAssetId": null
+          },
+          {
+            "segmentId": "segment-2",
+            "text": "Could you help me with this problem? Let me check the details for you.",
+            "audioAssetId": null
+          },
+          {
+            "segmentId": "segment-3",
+            "text": "Boarding begins at gate twelve. Could you help me with this problem?",
+            "audioAssetId": null
+          },
+          {
+            "segmentId": "segment-4",
+            "text": "Let me check the details for you. Thanks for talking about travel & accommodation with me.",
+            "audioAssetId": null
+          }
+        ],
+        "revealTextAfterFirstPlay": true
+      }
+    },
+    {
+      "stageId": "repeat",
+      "stageType": "repeat",
+      "stageSchemaVersion": 1,
+      "title": "Repeat useful chunks",
+      "instructions": "Repeat each complete expression with clear rhythm.",
+      "required": true,
+      "payload": {
+        "targets": [
+          {
+            "targetId": "repeat-1",
+            "text": "Which gate does the flight leave from?",
+            "referenceAudioAssetId": null,
+            "hint": "Keep the words together as one communicative chunk."
+          },
+          {
+            "targetId": "repeat-2",
+            "text": "Boarding begins at gate twelve.",
+            "referenceAudioAssetId": null,
+            "hint": "Keep the words together as one communicative chunk."
+          },
+          {
+            "targetId": "repeat-3",
+            "text": "Could you help me with this problem?",
+            "referenceAudioAssetId": null,
+            "hint": "Keep the words together as one communicative chunk."
+          },
+          {
+            "targetId": "repeat-4",
+            "text": "Let me check the details for you.",
+            "referenceAudioAssetId": null,
+            "hint": "Keep the words together as one communicative chunk."
+          },
+          {
+            "targetId": "repeat-5",
+            "text": "Thanks for talking about travel & accommodation with me.",
+            "referenceAudioAssetId": null,
+            "hint": "Keep the words together as one communicative chunk."
+          }
+        ]
+      }
+    },
+    {
+      "stageId": "speaking-check",
+      "stageType": "speaking_check",
+      "stageSchemaVersion": 1,
+      "title": "Speaking Check",
+      "instructions": "Say expressions already presented in this Lesson.",
+      "required": true,
+      "payload": {
+        "targets": [
+          {
+            "targetId": "speaking-1",
+            "instruction": "Say the complete model naturally.",
+            "targetText": "Which gate does the flight leave from?",
+            "hint": "Use the same words and clear sentence stress."
+          },
+          {
+            "targetId": "speaking-2",
+            "instruction": "Say the complete model naturally.",
+            "targetText": "Boarding begins at gate twelve.",
+            "hint": "Use the same words and clear sentence stress."
+          },
+          {
+            "targetId": "speaking-3",
+            "instruction": "Say the complete model naturally.",
+            "targetText": "Could you help me with this problem?",
+            "hint": "Use the same words and clear sentence stress."
+          },
+          {
+            "targetId": "speaking-4",
+            "instruction": "Say the complete model naturally.",
+            "targetText": "Let me check the details for you.",
+            "hint": "Use the same words and clear sentence stress."
+          }
+        ]
+      }
+    },
+    {
+      "stageId": "exercise",
+      "stageType": "exercise",
+      "stageSchemaVersion": 1,
+      "title": "Check your understanding",
+      "instructions": "Complete each deterministic practice item.",
+      "required": true,
+      "payload": {
+        "items": [
+          {
+            "exerciseId": "choose-model",
+            "exerciseType": "single_choice",
+            "prompt": "Choose the model that fits the communicative goal.",
+            "instructions": null,
+            "hint": "Find a gate, understand basic departure information, and answer check-in questions.",
+            "payload": {
+              "options": [
+                {
+                  "optionId": "a",
+                  "text": "Which gate does the flight leave from?"
+                },
+                {
+                  "optionId": "b",
+                  "text": "The purple engine sleeps quickly."
+                },
+                {
+                  "optionId": "c",
+                  "text": "No information is possible."
+                }
+              ],
+              "correctOptionId": "a"
+            },
+            "feedback": {
+              "correct": "Correct. The answer fits the lesson context.",
+              "incorrect": "Try again and use the model from this lesson.",
+              "explanation": "travel questions and airport instructions"
+            }
+          },
+          {
+            "exerciseId": "select-core-vocabulary",
+            "exerciseType": "multiple_select",
+            "prompt": "Select both words that belong to this lesson context.",
+            "instructions": null,
+            "hint": "Travel & Accommodation",
+            "payload": {
+              "options": [
+                {
+                  "optionId": "a",
+                  "text": "boarding pass"
+                },
+                {
+                  "optionId": "b",
+                  "text": "gate"
+                },
+                {
+                  "optionId": "c",
+                  "text": "industrial turbine"
+                },
+                {
+                  "optionId": "d",
+                  "text": "quantum geology"
+                }
+              ],
+              "correctOptionIds": [
+                "a",
+                "b"
+              ]
+            },
+            "feedback": {
+              "correct": "Correct. The answer fits the lesson context.",
+              "incorrect": "Try again and use the model from this lesson.",
+              "explanation": "Both correct words appear in Visual Vocabulary."
+            }
+          },
+          {
+            "exerciseId": "complete-response",
+            "exerciseType": "fill_blank",
+            "prompt": "Type the exact practiced response shown in the hint.",
+            "instructions": null,
+            "hint": "Boarding begins at gate twelve.",
+            "payload": {
+              "prefix": "",
+              "suffix": "",
+              "acceptedAnswers": [
+                "Boarding begins at gate twelve."
+              ],
+              "normalizationProfile": "english_basic_v1"
+            },
+            "feedback": {
+              "correct": "Correct. The answer fits the lesson context.",
+              "incorrect": "Try again and use the model from this lesson.",
+              "explanation": "Use the complete model response."
+            }
+          },
+          {
+            "exerciseId": "order-model",
+            "exerciseType": "word_order",
+            "prompt": "Put the model in its natural order.",
+            "instructions": null,
+            "hint": null,
+            "payload": {
+              "tokens": [
+                {
+                  "tokenId": "t8",
+                  "text": "?"
+                },
+                {
+                  "tokenId": "t7",
+                  "text": "from"
+                },
+                {
+                  "tokenId": "t6",
+                  "text": "leave"
+                },
+                {
+                  "tokenId": "t5",
+                  "text": "flight"
+                },
+                {
+                  "tokenId": "t4",
+                  "text": "the"
+                },
+                {
+                  "tokenId": "t3",
+                  "text": "does"
+                },
+                {
+                  "tokenId": "t2",
+                  "text": "gate"
+                },
+                {
+                  "tokenId": "t1",
+                  "text": "Which"
+                }
+              ],
+              "correctOrder": [
+                "t1",
+                "t2",
+                "t3",
+                "t4",
+                "t5",
+                "t6",
+                "t7",
+                "t8"
+              ]
+            },
+            "feedback": {
+              "correct": "Correct. The answer fits the lesson context.",
+              "incorrect": "Try again and use the model from this lesson.",
+              "explanation": "Keep the modeled English word order."
+            }
+          },
+          {
+            "exerciseId": "match-vocabulary",
+            "exerciseType": "matching",
+            "prompt": "Match each term to its meaning.",
+            "instructions": null,
+            "hint": null,
+            "payload": {
+              "leftItems": [
+                {
+                  "itemId": "l1",
+                  "text": "boarding pass"
+                },
+                {
+                  "itemId": "l2",
+                  "text": "gate"
+                },
+                {
+                  "itemId": "l3",
+                  "text": "departure"
+                }
+              ],
+              "rightItems": [
+                {
+                  "itemId": "r1",
+                  "text": "a document allowing a passenger onto a flight"
+                },
+                {
+                  "itemId": "r2",
+                  "text": "the airport area where passengers board"
+                },
+                {
+                  "itemId": "r3",
+                  "text": "the act or time of leaving"
+                }
+              ],
+              "correctPairs": [
+                {
+                  "leftId": "l1",
+                  "rightId": "r1"
+                },
+                {
+                  "leftId": "l2",
+                  "rightId": "r2"
+                },
+                {
+                  "leftId": "l3",
+                  "rightId": "r3"
+                }
+              ]
+            },
+            "feedback": {
+              "correct": "Correct. The answer fits the lesson context.",
+              "incorrect": "Try again and use the model from this lesson.",
+              "explanation": "Review each term with its meaning and example."
+            }
+          },
+          {
+            "exerciseId": "exact-useful-chunk",
+            "exerciseType": "short_answer_exact",
+            "prompt": "Type the finite model chunk shown in the hint.",
+            "instructions": null,
+            "hint": "Could you help me with this problem?",
+            "payload": {
+              "acceptedAnswers": [
+                "Could you help me with this problem?"
+              ],
+              "normalizationProfile": "english_basic_v1"
+            },
+            "feedback": {
+              "correct": "Correct. The answer fits the lesson context.",
+              "incorrect": "Try again and use the model from this lesson.",
+              "explanation": "This checks one exact practiced chunk, not an open response."
+            }
+          },
+          {
+            "exerciseId": "choose-correct-form",
+            "exerciseType": "single_choice",
+            "prompt": "Which sentence follows the lesson pattern?",
+            "instructions": null,
+            "hint": "travel questions and airport instructions",
+            "payload": {
+              "options": [
+                {
+                  "optionId": "a",
+                  "text": "Boarding begins at gate twelve."
+                },
+                {
+                  "optionId": "b",
+                  "text": "She are did going."
+                },
+                {
+                  "optionId": "c",
+                  "text": "I is to yesterday."
+                }
+              ],
+              "correctOptionId": "a"
+            },
+            "feedback": {
+              "correct": "Correct. The answer fits the lesson context.",
+              "incorrect": "Try again and use the model from this lesson.",
+              "explanation": "travel questions and airport instructions"
+            }
+          },
+          {
+            "exerciseId": "recall-vocabulary",
+            "exerciseType": "fill_blank",
+            "prompt": "Type the term that means: the act or time of reaching a place",
+            "instructions": null,
+            "hint": "It appears in Visual Vocabulary.",
+            "payload": {
+              "prefix": "",
+              "suffix": "",
+              "acceptedAnswers": [
+                "arrival"
+              ],
+              "normalizationProfile": "english_basic_v1"
+            },
+            "feedback": {
+              "correct": "Correct. The answer fits the lesson context.",
+              "incorrect": "Try again and use the model from this lesson.",
+              "explanation": "the act or time of reaching a place"
+            }
+          },
+          {
+            "exerciseId": "context-choice",
+            "exerciseType": "single_choice",
+            "prompt": "Choose the response that adds a relevant detail.",
+            "instructions": null,
+            "hint": "A2 responses connect ideas and context.",
+            "payload": {
+              "options": [
+                {
+                  "optionId": "a",
+                  "text": "Let me check the details for you."
+                },
+                {
+                  "optionId": "b",
+                  "text": "Banana seven because blue."
+                },
+                {
+                  "optionId": "c",
+                  "text": "I have no sentence."
+                }
+              ],
+              "correctOptionId": "a"
+            },
+            "feedback": {
+              "correct": "Correct. The answer fits the lesson context.",
+              "incorrect": "Try again and use the model from this lesson.",
+              "explanation": "Use a relevant follow-up in the same situation."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "stageId": "guided-conversation",
+      "stageType": "guided_conversation",
+      "stageSchemaVersion": 1,
+      "title": "Travel & Accommodation conversation",
+      "instructions": "Use the prepared language in a practical exchange.",
+      "required": true,
+      "payload": {
+        "scenario": "You are in a realistic everyday situation related to travel & accommodation. Practice at the airport and respond to relevant follow-up questions.",
+        "studentRole": "English learner handling the situation",
+        "teacherRole": "Helpful conversation partner",
+        "goal": "Find a gate, understand basic departure information, and answer check-in questions.",
+        "targetVocabulary": [
+          "boarding pass",
+          "gate",
+          "departure",
+          "arrival",
+          "luggage",
+          "reservation",
+          "check in",
+          "available",
+          "delay"
+        ],
+        "targetExpressions": [
+          "Which gate does the flight leave from?",
+          "Boarding begins at gate twelve.",
+          "Could you help me with this problem?",
+          "Let me check the details for you.",
+          "Thanks for talking about travel & accommodation with me."
+        ],
+        "minimumStudentTurns": 5,
+        "recommendedStudentTurns": 7,
+        "maximumStudentTurns": 10
+      }
+    },
+    {
+      "stageId": "analysis",
+      "stageType": "analysis",
+      "stageSchemaVersion": 1,
+      "title": "Lesson Review",
+      "instructions": "Review the evidence from your completed practice.",
+      "required": true,
+      "payload": {}
+    }
+  ]
+}

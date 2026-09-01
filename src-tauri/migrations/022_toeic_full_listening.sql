@@ -36,4 +36,12 @@ CREATE TABLE IF NOT EXISTS toeic_listening_score_profile (
   created_at TEXT NOT NULL,
   PRIMARY KEY(profile_id,version)
 );
+INSERT OR IGNORE INTO toeic_listening_score_profile(profile_id,version,methodology,mapping_json,created_at)
+VALUES(
+  'toeic-listening-unofficial-banded',
+  1,
+  'Versioned piecewise interpolation over documented raw-score anchors; rounded to five points with an uncertainty band.',
+  '{"anchors":[[0,5],[1,10],[10,45],[20,90],[30,145],[40,205],[50,265],[60,325],[70,380],[80,425],[90,465],[95,480],[100,495]],"uncertainty":{"rawBelow20":30,"raw20To79":25,"raw80Plus":20},"rounding":5}',
+  strftime('%Y-%m-%dT%H:%M:%fZ','now')
+);
 INSERT OR IGNORE INTO schema_migration(version) VALUES (22);

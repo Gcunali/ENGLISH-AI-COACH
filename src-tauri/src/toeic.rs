@@ -586,6 +586,7 @@ impl ToeicRepository {
             let total = match r.get::<_, String>(8)?.as_str() {
                 "part2_question_response" => 25,
                 "part3_conversation" => 39,
+                "part4_talk" => 30,
                 _ => FORM_LENGTH as u32,
             };
             Ok(ToeicHistoryEntryDto {
@@ -720,6 +721,9 @@ fn to_breakdown(map: BTreeMap<String, (u32, u32)>) -> Vec<ToeicBreakdownDto> {
 fn form_title(id: &str) -> String {
     if let Some(suffix) = id.strip_prefix("toeic-part3-form-") {
         return format!("Part 3 Form {}", suffix.to_uppercase());
+    }
+    if let Some(suffix) = id.strip_prefix("toeic-part4-form-") {
+        return format!("Part 4 Form {}", suffix.to_uppercase());
     }
     if let Some(suffix) = id.strip_prefix("toeic-part2-form-") {
         return format!("Part 2 Form {}", suffix.to_uppercase());

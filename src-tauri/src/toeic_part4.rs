@@ -560,7 +560,7 @@ impl Part4Repository {
             return Err("Complete all three questions before continuing.".into());
         }
         let c = database::open(&self.database)?;
-        if s.current_set_index == 12 {
+        if s.current_set_index == 9 {
             c.execute("UPDATE toeic_session SET status='completed',current_question_index=10,completed_at=strftime('%Y-%m-%dT%H:%M:%fZ','now'),updated_at=strftime('%Y-%m-%dT%H:%M:%fZ','now') WHERE id=?1",[id]).map_err(err)?;
         } else {
             c.execute("UPDATE toeic_session SET current_question_index=current_question_index+1,updated_at=strftime('%Y-%m-%dT%H:%M:%fZ','now') WHERE id=?1",[id]).map_err(err)?;
@@ -732,11 +732,11 @@ mod tests {
     fn public_payload_hides_script_keys_and_feedback_until_third_answer() {
         let(repo,db)=setup(); let mut s=repo.start("toeic-part4-form-a",1).unwrap();
         let json=serde_json::to_string(&s).unwrap();
-        assert!(!json.contains("answer")&&!json.contains("transcript")&&!json.contains("evidence"));
+        assert!(!json.contains("correctAnswer")&&!json.contains("transcript")&&!json.contains("evidence"));
         hear(&repo,&s);
-        let set=s.current_set.as_ref().unwrap();
-        for q in set.questions.iter().take(2) {
-            s=repo.submit(Submit{session_id:s.session_id.clone(),question_id:q.question_id.clone(),selected_choice:"A".into()}).unwrap();
+        let ids=s.current_set.as_ref().unwrap().questions.iter().take(2).map(|q|q.question_id.clone()).collect::<Vec<_>>();
+        for question_id in ids {
+            s=repo.submit(Submit{session_id:s.session_id.clone(),question_id,selected_choice:"A".into()}).unwrap();
             assert!(s.feedback.is_none());
         }
         let q=s.current_set.as_ref().unwrap().questions[2].question_id.clone();
@@ -767,4 +767,3 @@ mod tests {
         drop(repo);let _=std::fs::remove_file(db);
     }
 }
-

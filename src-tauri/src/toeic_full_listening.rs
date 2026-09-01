@@ -45,8 +45,8 @@ impl FullListeningRepository {
    c.execute("UPDATE toeic_full_listening_session SET status='completed',current_part=4,raw_correct=?2,estimated_score=?3,range_low=?4,range_high=?5,score_profile_id=?6,score_profile_version=?7,completed_at=COALESCE(completed_at,strftime('%Y-%m-%dT%H:%M:%fZ','now')),updated_at=strftime('%Y-%m-%dT%H:%M:%fZ','now') WHERE id=?1",params![id,raw,e.estimated_score,e.range_low,e.range_high,e.profile_id,e.profile_version]).map_err(err)?;
    estimate=Some(e);
   } else { c.execute("UPDATE toeic_full_listening_session SET current_part=?2,updated_at=strftime('%Y-%m-%dT%H:%M:%fZ','now') WHERE id=?1",params![id,current]).map_err(err)?; }
-  let meta=[("Photographs",6,"/toeic/session/"),("Question–Response",25,"/toeic/part2/session/"),("Conversations",39,"/toeic/part3/session/"),("Talks",30,"/toeic/part4/session/")];
-  let parts=rows.into_iter().enumerate().map(|(i,(n,sid,status))|FullPart{part_number:n,title:meta[i].0.into(),question_count:meta[i].1,route:format!("{}{}?fullListening={id}&mode={mode}",meta[i].2,sid),session_id:sid,status}).collect();
+  let meta=[("Photographs",6,"/toeic/session/","/toeic/results/"),("Question–Response",25,"/toeic/part2/session/","/toeic/part2/results/"),("Conversations",39,"/toeic/part3/session/","/toeic/part3/results/"),("Talks",30,"/toeic/part4/session/","/toeic/part4/results/")];
+  let parts=rows.into_iter().enumerate().map(|(i,(n,sid,status))|FullPart{part_number:n,title:meta[i].0.into(),question_count:meta[i].1,route:if complete{format!("{}{}",meta[i].3,sid)}else{format!("{}{}?fullListening={id}&mode={mode}",meta[i].2,sid)},session_id:sid,status}).collect();
   Ok(FullSession{session_id:id.into(),mode,status:if complete{"completed".into()}else{parent_status},current_part:current,answered_count:answered,total_questions:100,parts,estimate,disclaimer:"Unofficial practice estimate. This app is not affiliated with or endorsed by ETS.".into()})
  }
  pub fn history(&self)->Result<Vec<FullHistory>,String>{

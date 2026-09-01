@@ -18,6 +18,7 @@ export default defineConfig({
       '**/node_modules/**',
       '**/dist/**',
       '**/.backup-phase-*/**',
+      '**/.backup-*/**',
       '**/.artifacts-phase-*/**',
       '**/local-ai/**',
       '**/src-tauri/**',

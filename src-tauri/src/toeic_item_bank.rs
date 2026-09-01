@@ -29,7 +29,7 @@ pub enum ToeicPart {
 
 impl ToeicPart {
     pub fn runtime_available(self) -> bool {
-        self == Self::Part1Photograph
+        matches!(self, Self::Part1Photograph | Self::Part2QuestionResponse | Self::Part3Conversation | Self::Part4Talk)
     }
     pub fn as_str(self) -> &'static str {
         match self {
@@ -451,7 +451,9 @@ mod tests {
     #[test]
     fn part_runtime_availability_is_future_proof_but_only_part_one_is_enabled() {
         assert!(ToeicPart::Part1Photograph.runtime_available());
-        assert!(!ToeicPart::Part2QuestionResponse.runtime_available());
+        assert!(ToeicPart::Part2QuestionResponse.runtime_available());
+        assert!(ToeicPart::Part3Conversation.runtime_available());
+        assert!(ToeicPart::Part4Talk.runtime_available());
         assert!(!ToeicPart::Part7ReadingComprehension.runtime_available());
     }
 

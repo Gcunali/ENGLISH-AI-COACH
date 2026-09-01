@@ -29,6 +29,11 @@ import { ToeicResultsPage } from './pages/ToeicResultsPage'
 import { ToeicHistoryPage } from './pages/ToeicHistoryPage'
 import { ToeicPart2SessionPage } from './pages/ToeicPart2SessionPage'
 import { ToeicPart2ResultsPage } from './pages/ToeicPart2ResultsPage'
+import { ToeicPart3SessionPage } from './pages/ToeicPart3SessionPage'
+import { ToeicPart3ResultsPage } from './pages/ToeicPart3ResultsPage'
+import { ToeicPart4SessionPage } from './pages/ToeicPart4SessionPage'
+import { ToeicPart4ResultsPage } from './pages/ToeicPart4ResultsPage'
+import { ToeicFullListeningPage } from './pages/ToeicFullListeningPage'
 
 function App() {
   return <Routes>
@@ -62,6 +67,12 @@ function App() {
       <Route path="toeic/results/:sessionId" element={<ToeicResultsPage />} />
       <Route path="toeic/part2/session/:sessionId" element={<ToeicPart2SessionPage />} />
       <Route path="toeic/part2/results/:sessionId" element={<ToeicPart2ResultsPage />} />
+      <Route path="toeic/part3/session/:sessionId" element={<ToeicPart3SessionPage />} />
+      <Route path="toeic/part3/results/:sessionId" element={<ToeicPart3ResultsPage />} />
+      <Route path="toeic/part4/session/:sessionId" element={<ToeicPart4SessionPage />} />
+      <Route path="toeic/part4/results/:sessionId" element={<ToeicPart4ResultsPage />} />
+      <Route path="toeic/listening" element={<ToeicFullListeningPage />} />
+      <Route path="toeic/listening/:id" element={<ToeicFullListeningPage />} />
       <Route path="toeic/history" element={<ToeicHistoryPage />} />
       <Route path="settings" element={<SettingsPage />} />
       <Route path="diagnostics" element={<DiagnosticsPage />} />

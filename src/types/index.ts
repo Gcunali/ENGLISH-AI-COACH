@@ -1618,3 +1618,31 @@ export interface ToeicPart2Feedback { selectedChoice: "A" | "B" | "C"; isCorrect
 export interface ToeicPart2Session { sessionId: string; formId: string; status: "in_progress" | "completed"; currentQuestionIndex: number; answeredCount: number; currentQuestion: ToeicPart2Question | null; feedback: ToeicPart2Feedback | null }
 export interface ToeicPart2Result { sessionId: string; formId: string; correct: number; total: 25; accuracy: number; promptBreakdown: ToeicBreakdown[]; difficultyBreakdown: ToeicBreakdown[]; distractorBreakdown: ToeicBreakdown[]; hasScaledScore: false; scoreMessage: string }
 export interface ToeicPart2ReviewItem { questionNumber: number; difficulty: string; tags: string[]; feedback: ToeicPart2Feedback }
+export interface ToeicPart3Form { formId:string;formVersion:number;title:string;activeSessionId:string|null }
+export interface ToeicPart3Overview { bankId:string;forms:ToeicPart3Form[] }
+export interface ToeicPart3Graphic { title:string;columns:string[];rows:string[][] }
+export interface ToeicPart3Choice { choice:"A"|"B"|"C"|"D";text:string }
+export interface ToeicPart3Question { questionId:string;text:string;choices:ToeicPart3Choice[];answered:boolean;selectedChoice:string|null }
+export interface ToeicPart3Set { setId:string;setVersion:number;setNumber:number;totalSets:13;questions:ToeicPart3Question[];graphic:ToeicPart3Graphic|null;initialAudioCompleted:boolean;initialAudioInterrupted:boolean }
+export interface ToeicPart3QuestionFeedback { questionId:string;text:string;choices:ToeicPart3Choice[];selectedChoice:string;correctAnswer:string;isCorrect:boolean;correctExplanation:string;selectedExplanation:string|null;evidence:string;listeningSkill:string;usefulLanguage:string;noticeNextTime:string }
+export interface ToeicPart3Feedback { setId:string;questions:ToeicPart3QuestionFeedback[];transcript:Array<{speaker:string;text:string}> }
+export interface ToeicPart3Session { sessionId:string;formId:string;status:"in_progress"|"completed";currentSetIndex:number;answeredCount:number;completedSets:number;currentSet:ToeicPart3Set|null;feedback:ToeicPart3Feedback|null }
+export interface ToeicPart3Audio extends GuidedAudio { presentationId:string|null;initial:boolean;setId:string;setVersion:number;turnIndex:number;turnCount:number }
+export interface ToeicPart3Result { sessionId:string;formId:string;correct:number;total:39;accuracy:number;questionTypeBreakdown:ToeicBreakdown[];difficultyBreakdown:ToeicBreakdown[];scenarioBreakdown:ToeicBreakdown[];skillBreakdown:ToeicBreakdown[];hasScaledScore:false;scoreMessage:string }
+export interface ToeicPart3ReviewSet { setNumber:number;scenario:string;graphic:ToeicPart3Graphic|null;feedback:ToeicPart3Feedback }
+export interface ToeicPart4Form { formId:string;formVersion:number;title:string;activeSessionId:string|null }
+export interface ToeicPart4Overview { bankId:string;forms:ToeicPart4Form[] }
+export type ToeicPart4Graphic = ToeicPart3Graphic
+export type ToeicPart4Choice = ToeicPart3Choice
+export type ToeicPart4Question = ToeicPart3Question
+export interface ToeicPart4Set { setId:string;setVersion:number;setNumber:number;totalSets:10;questions:ToeicPart4Question[];graphic:ToeicPart4Graphic|null;initialAudioCompleted:boolean;initialAudioInterrupted:boolean }
+export type ToeicPart4QuestionFeedback = ToeicPart3QuestionFeedback
+export interface ToeicPart4Feedback { setId:string;questions:ToeicPart4QuestionFeedback[];transcript:Array<{speaker:string;text:string}> }
+export interface ToeicPart4Session { sessionId:string;formId:string;status:"in_progress"|"completed";currentSetIndex:number;answeredCount:number;completedSets:number;currentSet:ToeicPart4Set|null;feedback:ToeicPart4Feedback|null }
+export type ToeicPart4Audio = ToeicPart3Audio
+export interface ToeicPart4Result { sessionId:string;formId:string;correct:number;total:30;accuracy:number;questionTypeBreakdown:ToeicBreakdown[];difficultyBreakdown:ToeicBreakdown[];scenarioBreakdown:ToeicBreakdown[];skillBreakdown:ToeicBreakdown[];hasScaledScore:false;scoreMessage:string }
+export interface ToeicPart4ReviewSet { setNumber:number;scenario:string;graphic:ToeicPart4Graphic|null;feedback:ToeicPart4Feedback }
+export interface ToeicListeningEstimate { rawCorrect:number;estimatedScore:number;rangeLow:number;rangeHigh:number;profileId:string;profileVersion:number;label:string }
+export interface ToeicFullPart { partNumber:number;title:string;questionCount:number;sessionId:string;status:string;route:string }
+export interface ToeicFullSession { sessionId:string;mode:"simulation"|"learning";status:string;currentPart:number;answeredCount:number;totalQuestions:100;parts:ToeicFullPart[];estimate:ToeicListeningEstimate|null;disclaimer:string }
+export interface ToeicFullHistory { sessionId:string;mode:string;status:string;rawCorrect:number|null;estimatedScore:number|null;rangeLow:number|null;rangeHigh:number|null;createdAt:string;completedAt:string|null }

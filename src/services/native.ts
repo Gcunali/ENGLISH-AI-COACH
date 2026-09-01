@@ -66,6 +66,18 @@ import type {
   ToeicPart2Session,
   ToeicPart2Result,
   ToeicPart2ReviewItem,
+  ToeicPart3Overview,
+  ToeicPart3Session,
+  ToeicPart3Audio,
+  ToeicPart3Result,
+  ToeicPart3ReviewSet,
+  ToeicPart4Overview,
+  ToeicPart4Session,
+  ToeicPart4Audio,
+  ToeicPart4Result,
+  ToeicPart4ReviewSet,
+  ToeicFullSession,
+  ToeicFullHistory,
 } from "../types";
 import type { PronunciationAttempt, PronunciationEngineStatus } from "../types";
 import type {
@@ -115,6 +127,29 @@ export async function getToeicPart2Review(sessionId: string, mistakesOnly: boole
 export async function prepareToeicPart2Audio(sessionId: string): Promise<ToeicAudio> { return invoke("prepare_toeic_part2_audio", { sessionId }) }
 export async function completeToeicPart2Audio(audio: ToeicAudio, sessionId: string): Promise<ToeicPart2Session> { return invoke("complete_toeic_part2_audio", { playbackId: audio.playbackId, sessionId, itemId: audio.itemId, itemVersion: audio.itemVersion, presentationId: audio.presentationId }) }
 export async function cancelToeicPart2Audio(audio: ToeicAudio): Promise<boolean> { return invoke("cancel_toeic_part2_audio", { playbackId: audio.playbackId, presentationId: audio.presentationId }) }
+export async function getToeicPart3Overview():Promise<ToeicPart3Overview>{return invoke("get_toeic_part3_overview")}
+export async function startToeicPart3Session(formId:string,formVersion:number):Promise<ToeicPart3Session>{return invoke("start_toeic_part3_session",{formId,formVersion})}
+export async function getToeicPart3Session(sessionId:string):Promise<ToeicPart3Session>{return invoke("get_toeic_part3_session",{sessionId})}
+export async function submitToeicPart3Answer(sessionId:string,questionId:string,selectedChoice:string):Promise<ToeicPart3Session>{return invoke("submit_toeic_part3_answer",{request:{sessionId,questionId,selectedChoice}})}
+export async function advanceToeicPart3Session(sessionId:string):Promise<ToeicPart3Session>{return invoke("advance_toeic_part3_session",{sessionId})}
+export async function getToeicPart3Result(sessionId:string):Promise<ToeicPart3Result>{return invoke("get_toeic_part3_result",{sessionId})}
+export async function getToeicPart3Review(sessionId:string,mistakesOnly:boolean):Promise<ToeicPart3ReviewSet[]>{return invoke("get_toeic_part3_review",{sessionId,mistakesOnly})}
+export async function prepareToeicPart3Audio(sessionId:string,turnIndex:number,presentationId:string|null):Promise<ToeicPart3Audio>{return invoke("prepare_toeic_part3_audio",{sessionId,turnIndex,presentationId})}
+export async function completeToeicPart3Audio(audio:ToeicPart3Audio,sessionId:string):Promise<ToeicPart3Session>{return invoke("complete_toeic_part3_audio",{playbackId:audio.playbackId,sessionId,setId:audio.setId,setVersion:audio.setVersion,turnIndex:audio.turnIndex,turnCount:audio.turnCount,presentationId:audio.presentationId,initial:audio.initial})}
+export async function cancelToeicPart3Audio(audio:ToeicPart3Audio):Promise<boolean>{return invoke("cancel_toeic_part3_audio",{playbackId:audio.playbackId,presentationId:audio.presentationId,initial:audio.initial})}
+export async function getToeicPart4Overview():Promise<ToeicPart4Overview>{return invoke("get_toeic_part4_overview")}
+export async function startToeicPart4Session(formId:string,formVersion:number):Promise<ToeicPart4Session>{return invoke("start_toeic_part4_session",{formId,formVersion})}
+export async function getToeicPart4Session(sessionId:string):Promise<ToeicPart4Session>{return invoke("get_toeic_part4_session",{sessionId})}
+export async function submitToeicPart4Answer(sessionId:string,questionId:string,selectedChoice:string):Promise<ToeicPart4Session>{return invoke("submit_toeic_part4_answer",{request:{sessionId,questionId,selectedChoice}})}
+export async function advanceToeicPart4Session(sessionId:string):Promise<ToeicPart4Session>{return invoke("advance_toeic_part4_session",{sessionId})}
+export async function getToeicPart4Result(sessionId:string):Promise<ToeicPart4Result>{return invoke("get_toeic_part4_result",{sessionId})}
+export async function getToeicPart4Review(sessionId:string,mistakesOnly:boolean):Promise<ToeicPart4ReviewSet[]>{return invoke("get_toeic_part4_review",{sessionId,mistakesOnly})}
+export async function prepareToeicPart4Audio(sessionId:string,turnIndex:number,presentationId:string|null):Promise<ToeicPart4Audio>{return invoke("prepare_toeic_part4_audio",{sessionId,turnIndex,presentationId})}
+export async function completeToeicPart4Audio(audio:ToeicPart4Audio,sessionId:string):Promise<ToeicPart4Session>{return invoke("complete_toeic_part4_audio",{playbackId:audio.playbackId,sessionId,setId:audio.setId,setVersion:audio.setVersion,turnIndex:audio.turnIndex,turnCount:audio.turnCount,presentationId:audio.presentationId,initial:audio.initial})}
+export async function cancelToeicPart4Audio(audio:ToeicPart4Audio):Promise<boolean>{return invoke("cancel_toeic_part4_audio",{playbackId:audio.playbackId,presentationId:audio.presentationId,initial:audio.initial})}
+export async function startToeicFullListening(mode:"simulation"|"learning"):Promise<ToeicFullSession>{return invoke("start_toeic_full_listening",{mode})}
+export async function getToeicFullListening(sessionId:string):Promise<ToeicFullSession>{return invoke("get_toeic_full_listening",{sessionId})}
+export async function listToeicFullListeningHistory():Promise<ToeicFullHistory[]>{return invoke("list_toeic_full_listening_history")}
 
 export async function getWelcomeState(): Promise<WelcomeState> {
   if (!isTauri())

@@ -1,0 +1,1396 @@
+{
+  "schemaVersion": 1,
+  "bankId": "toeic-reading-part5-v1",
+  "forms": [
+    {
+      "formId": "toeic-part5-form-a",
+      "formVersion": 1,
+      "title": "Part 5 Form A",
+      "publicationState": "published",
+      "itemIds": [
+        "toeic-r-p5-0001",
+        "toeic-r-p5-0002",
+        "toeic-r-p5-0003",
+        "toeic-r-p5-0004",
+        "toeic-r-p5-0005",
+        "toeic-r-p5-0006",
+        "toeic-r-p5-0007",
+        "toeic-r-p5-0008",
+        "toeic-r-p5-0009",
+        "toeic-r-p5-0010",
+        "toeic-r-p5-0011",
+        "toeic-r-p5-0012",
+        "toeic-r-p5-0013",
+        "toeic-r-p5-0014",
+        "toeic-r-p5-0015",
+        "toeic-r-p5-0016",
+        "toeic-r-p5-0017",
+        "toeic-r-p5-0018",
+        "toeic-r-p5-0019",
+        "toeic-r-p5-0020",
+        "toeic-r-p5-0021",
+        "toeic-r-p5-0022",
+        "toeic-r-p5-0023",
+        "toeic-r-p5-0024",
+        "toeic-r-p5-0025",
+        "toeic-r-p5-0026",
+        "toeic-r-p5-0027",
+        "toeic-r-p5-0028",
+        "toeic-r-p5-0029",
+        "toeic-r-p5-0030"
+      ]
+    }
+  ],
+  "items": [
+    {
+      "itemId": "toeic-r-p5-0001",
+      "itemVersion": 1,
+      "publicationState": "published",
+      "section": "reading",
+      "part": 5,
+      "itemType": "part5_incomplete_sentence",
+      "sentence": "The conference room will remain _____ until the maintenance work is completed.",
+      "choices": [
+        {
+          "choice": "A",
+          "text": "closed"
+        },
+        {
+          "choice": "B",
+          "text": "close"
+        },
+        {
+          "choice": "C",
+          "text": "closing"
+        },
+        {
+          "choice": "D",
+          "text": "closure"
+        }
+      ],
+      "correctAnswer": "A",
+      "completeSentence": "The conference room will remain closed until the maintenance work is completed.",
+      "correctExplanation": "The sentence requires the adjective form shown in “closed.” The surrounding structure makes this the only grammatically complete choice.",
+      "distractorExplanations": {
+        "B": "“close” does not fit the required adjective pattern or meaning in this sentence.",
+        "C": "“closing” does not fit the required adjective pattern or meaning in this sentence.",
+        "D": "“closure” does not fit the required adjective pattern or meaning in this sentence."
+      },
+      "skillCategory": "grammar",
+      "skillSubcategory": "adjective",
+      "difficulty": "easy",
+      "domain": "maintenance",
+      "usefulPattern": "remain + adjective",
+      "extraExample": "The store remained open during renovations.",
+      "tags": [
+        "maintenance",
+        "adjective"
+      ]
+    },
+    {
+      "itemId": "toeic-r-p5-0002",
+      "itemVersion": 1,
+      "publicationState": "published",
+      "section": "reading",
+      "part": 5,
+      "itemType": "part5_incomplete_sentence",
+      "sentence": "Ms. Patel asked the design team _____ the revised proposal by Friday.",
+      "choices": [
+        {
+          "choice": "A",
+          "text": "submit"
+        },
+        {
+          "choice": "B",
+          "text": "to submit"
+        },
+        {
+          "choice": "C",
+          "text": "submitted"
+        },
+        {
+          "choice": "D",
+          "text": "submitting"
+        }
+      ],
+      "correctAnswer": "B",
+      "completeSentence": "Ms. Patel asked the design team to submit the revised proposal by Friday.",
+      "correctExplanation": "The sentence requires the gerund infinitive form shown in “to submit.” The surrounding structure makes this the only grammatically complete choice.",
+      "distractorExplanations": {
+        "A": "“submit” does not fit the required gerund infinitive pattern or meaning in this sentence.",
+        "C": "“submitted” does not fit the required gerund infinitive pattern or meaning in this sentence.",
+        "D": "“submitting” does not fit the required gerund infinitive pattern or meaning in this sentence."
+      },
+      "skillCategory": "grammar",
+      "skillSubcategory": "gerund_infinitive",
+      "difficulty": "easy",
+      "domain": "projects",
+      "usefulPattern": "ask someone to do something",
+      "extraExample": "The client asked us to confirm the date.",
+      "tags": [
+        "projects",
+        "gerund_infinitive"
+      ]
+    },
+    {
+      "itemId": "toeic-r-p5-0003",
+      "itemVersion": 1,
+      "publicationState": "published",
+      "section": "reading",
+      "part": 5,
+      "itemType": "part5_incomplete_sentence",
+      "sentence": "Neither the manager nor the assistants _____ available for the morning meeting.",
+      "choices": [
+        {
+          "choice": "A",
+          "text": "is"
+        },
+        {
+          "choice": "B",
+          "text": "was"
+        },
+        {
+          "choice": "C",
+          "text": "are"
+        },
+        {
+          "choice": "D",
+          "text": "be"
+        }
+      ],
+      "correctAnswer": "C",
+      "completeSentence": "Neither the manager nor the assistants are available for the morning meeting.",
+      "correctExplanation": "The sentence requires the subject verb agreement form shown in “are.” The surrounding structure makes this the only grammatically complete choice.",
+      "distractorExplanations": {
+        "A": "“is” does not fit the required subject verb agreement pattern or meaning in this sentence.",
+        "B": "“was” does not fit the required subject verb agreement pattern or meaning in this sentence.",
+        "D": "“be” does not fit the required subject verb agreement pattern or meaning in this sentence."
+      },
+      "skillCategory": "grammar",
+      "skillSubcategory": "subject_verb_agreement",
+      "difficulty": "medium",
+      "domain": "meetings",
+      "usefulPattern": "neither A nor B + verb agreeing with B",
+      "extraExample": "Neither the printer nor the computers are working.",
+      "tags": [
+        "meetings",
+        "subject_verb_agreement"
+      ]
+    },
+    {
+      "itemId": "toeic-r-p5-0004",
+      "itemVersion": 1,
+      "publicationState": "published",
+      "section": "reading",
+      "part": 5,
+      "itemType": "part5_incomplete_sentence",
+      "sentence": "The shipment arrived two days _____ because of severe weather near the port.",
+      "choices": [
+        {
+          "choice": "A",
+          "text": "later"
+        },
+        {
+          "choice": "B",
+          "text": "lately"
+        },
+        {
+          "choice": "C",
+          "text": "latest"
+        },
+        {
+          "choice": "D",
+          "text": "late"
+        }
+      ],
+      "correctAnswer": "D",
+      "completeSentence": "The shipment arrived two days late because of severe weather near the port.",
+      "correctExplanation": "The sentence requires the adverb form shown in “late.” The surrounding structure makes this the only grammatically complete choice.",
+      "distractorExplanations": {
+        "A": "“later” does not fit the required adverb pattern or meaning in this sentence.",
+        "B": "“lately” does not fit the required adverb pattern or meaning in this sentence.",
+        "C": "“latest” does not fit the required adverb pattern or meaning in this sentence."
+      },
+      "skillCategory": "grammar",
+      "skillSubcategory": "adverb",
+      "difficulty": "easy",
+      "domain": "deliveries",
+      "usefulPattern": "arrive late",
+      "extraExample": "Our flight arrived late last night.",
+      "tags": [
+        "deliveries",
+        "adverb"
+      ]
+    },
+    {
+      "itemId": "toeic-r-p5-0005",
+      "itemVersion": 1,
+      "publicationState": "published",
+      "section": "reading",
+      "part": 5,
+      "itemType": "part5_incomplete_sentence",
+      "sentence": "Employees must wear identification badges _____ they are inside the production area.",
+      "choices": [
+        {
+          "choice": "A",
+          "text": "while"
+        },
+        {
+          "choice": "B",
+          "text": "during"
+        },
+        {
+          "choice": "C",
+          "text": "despite"
+        },
+        {
+          "choice": "D",
+          "text": "unless"
+        }
+      ],
+      "correctAnswer": "A",
+      "completeSentence": "Employees must wear identification badges while they are inside the production area.",
+      "correctExplanation": "The sentence requires the conjunction form shown in “while.” The surrounding structure makes this the only grammatically complete choice.",
+      "distractorExplanations": {
+        "B": "“during” does not fit the required conjunction pattern or meaning in this sentence.",
+        "C": "“despite” does not fit the required conjunction pattern or meaning in this sentence.",
+        "D": "“unless” does not fit the required conjunction pattern or meaning in this sentence."
+      },
+      "skillCategory": "grammar",
+      "skillSubcategory": "conjunction",
+      "difficulty": "medium",
+      "domain": "factories",
+      "usefulPattern": "while + clause",
+      "extraExample": "Please remain seated while the vehicle is moving.",
+      "tags": [
+        "factories",
+        "conjunction"
+      ]
+    },
+    {
+      "itemId": "toeic-r-p5-0006",
+      "itemVersion": 1,
+      "publicationState": "published",
+      "section": "reading",
+      "part": 5,
+      "itemType": "part5_incomplete_sentence",
+      "sentence": "The finance department has not _____ the travel expenses yet.",
+      "choices": [
+        {
+          "choice": "A",
+          "text": "approve"
+        },
+        {
+          "choice": "B",
+          "text": "approved"
+        },
+        {
+          "choice": "C",
+          "text": "approving"
+        },
+        {
+          "choice": "D",
+          "text": "approval"
+        }
+      ],
+      "correctAnswer": "B",
+      "completeSentence": "The finance department has not approved the travel expenses yet.",
+      "correctExplanation": "The sentence requires the verb form form shown in “approved.” The surrounding structure makes this the only grammatically complete choice.",
+      "distractorExplanations": {
+        "A": "“approve” does not fit the required verb form pattern or meaning in this sentence.",
+        "C": "“approving” does not fit the required verb form pattern or meaning in this sentence.",
+        "D": "“approval” does not fit the required verb form pattern or meaning in this sentence."
+      },
+      "skillCategory": "grammar",
+      "skillSubcategory": "verb_form",
+      "difficulty": "easy",
+      "domain": "finance",
+      "usefulPattern": "has/have + past participle",
+      "extraExample": "The director has approved the budget.",
+      "tags": [
+        "finance",
+        "verb_form"
+      ]
+    },
+    {
+      "itemId": "toeic-r-p5-0007",
+      "itemVersion": 1,
+      "publicationState": "published",
+      "section": "reading",
+      "part": 5,
+      "itemType": "part5_incomplete_sentence",
+      "sentence": "Customers may return unopened products within thirty days, _____ they provide the original receipt.",
+      "choices": [
+        {
+          "choice": "A",
+          "text": "as a result"
+        },
+        {
+          "choice": "B",
+          "text": "in spite of"
+        },
+        {
+          "choice": "C",
+          "text": "provided that"
+        },
+        {
+          "choice": "D",
+          "text": "rather than"
+        }
+      ],
+      "correctAnswer": "C",
+      "completeSentence": "Customers may return unopened products within thirty days, provided that they provide the original receipt.",
+      "correctExplanation": "The sentence requires the subordinate clause form shown in “provided that.” The surrounding structure makes this the only grammatically complete choice.",
+      "distractorExplanations": {
+        "A": "“as a result” does not fit the required subordinate clause pattern or meaning in this sentence.",
+        "B": "“in spite of” does not fit the required subordinate clause pattern or meaning in this sentence.",
+        "D": "“rather than” does not fit the required subordinate clause pattern or meaning in this sentence."
+      },
+      "skillCategory": "grammar",
+      "skillSubcategory": "subordinate_clause",
+      "difficulty": "hard",
+      "domain": "retail",
+      "usefulPattern": "provided that + condition",
+      "extraExample": "A refund is available provided that the item is unused.",
+      "tags": [
+        "retail",
+        "subordinate_clause"
+      ]
+    },
+    {
+      "itemId": "toeic-r-p5-0008",
+      "itemVersion": 1,
+      "publicationState": "published",
+      "section": "reading",
+      "part": 5,
+      "itemType": "part5_incomplete_sentence",
+      "sentence": "The new scheduling system is considerably _____ than the previous one.",
+      "choices": [
+        {
+          "choice": "A",
+          "text": "efficient"
+        },
+        {
+          "choice": "B",
+          "text": "efficiently"
+        },
+        {
+          "choice": "C",
+          "text": "most efficient"
+        },
+        {
+          "choice": "D",
+          "text": "more efficient"
+        }
+      ],
+      "correctAnswer": "D",
+      "completeSentence": "The new scheduling system is considerably more efficient than the previous one.",
+      "correctExplanation": "The sentence requires the comparative form shown in “more efficient.” The surrounding structure makes this the only grammatically complete choice.",
+      "distractorExplanations": {
+        "A": "“efficient” does not fit the required comparative pattern or meaning in this sentence.",
+        "B": "“efficiently” does not fit the required comparative pattern or meaning in this sentence.",
+        "C": "“most efficient” does not fit the required comparative pattern or meaning in this sentence."
+      },
+      "skillCategory": "grammar",
+      "skillSubcategory": "comparative",
+      "difficulty": "easy",
+      "domain": "schedules",
+      "usefulPattern": "considerably + comparative",
+      "extraExample": "This route is considerably shorter.",
+      "tags": [
+        "schedules",
+        "comparative"
+      ]
+    },
+    {
+      "itemId": "toeic-r-p5-0009",
+      "itemVersion": 1,
+      "publicationState": "published",
+      "section": "reading",
+      "part": 5,
+      "itemType": "part5_incomplete_sentence",
+      "sentence": "All applications _____ by the human resources office before interviews are scheduled.",
+      "choices": [
+        {
+          "choice": "A",
+          "text": "are reviewed"
+        },
+        {
+          "choice": "B",
+          "text": "reviewed"
+        },
+        {
+          "choice": "C",
+          "text": "review"
+        },
+        {
+          "choice": "D",
+          "text": "are reviewing"
+        }
+      ],
+      "correctAnswer": "A",
+      "completeSentence": "All applications are reviewed by the human resources office before interviews are scheduled.",
+      "correctExplanation": "The sentence requires the passive voice form shown in “are reviewed.” The surrounding structure makes this the only grammatically complete choice.",
+      "distractorExplanations": {
+        "B": "“reviewed” does not fit the required passive voice pattern or meaning in this sentence.",
+        "C": "“review” does not fit the required passive voice pattern or meaning in this sentence.",
+        "D": "“are reviewing” does not fit the required passive voice pattern or meaning in this sentence."
+      },
+      "skillCategory": "grammar",
+      "skillSubcategory": "passive_voice",
+      "difficulty": "medium",
+      "domain": "employment",
+      "usefulPattern": "be + past participle",
+      "extraExample": "Orders are reviewed before shipment.",
+      "tags": [
+        "employment",
+        "passive_voice"
+      ]
+    },
+    {
+      "itemId": "toeic-r-p5-0010",
+      "itemVersion": 1,
+      "publicationState": "published",
+      "section": "reading",
+      "part": 5,
+      "itemType": "part5_incomplete_sentence",
+      "sentence": "The hotel offers complimentary transportation for guests _____ flights leave before 7 A.M.",
+      "choices": [
+        {
+          "choice": "A",
+          "text": "who"
+        },
+        {
+          "choice": "B",
+          "text": "whose"
+        },
+        {
+          "choice": "C",
+          "text": "whom"
+        },
+        {
+          "choice": "D",
+          "text": "which"
+        }
+      ],
+      "correctAnswer": "B",
+      "completeSentence": "The hotel offers complimentary transportation for guests whose flights leave before 7 A.M.",
+      "correctExplanation": "The sentence requires the relative pronoun form shown in “whose.” The surrounding structure makes this the only grammatically complete choice.",
+      "distractorExplanations": {
+        "A": "“who” does not fit the required relative pronoun pattern or meaning in this sentence.",
+        "C": "“whom” does not fit the required relative pronoun pattern or meaning in this sentence.",
+        "D": "“which” does not fit the required relative pronoun pattern or meaning in this sentence."
+      },
+      "skillCategory": "grammar",
+      "skillSubcategory": "relative_pronoun",
+      "difficulty": "hard",
+      "domain": "hotels",
+      "usefulPattern": "whose + noun",
+      "extraExample": "Passengers whose trains were canceled received refunds.",
+      "tags": [
+        "hotels",
+        "relative_pronoun"
+      ]
+    },
+    {
+      "itemId": "toeic-r-p5-0011",
+      "itemVersion": 1,
+      "publicationState": "published",
+      "section": "reading",
+      "part": 5,
+      "itemType": "part5_incomplete_sentence",
+      "sentence": "We recommend _____ a table in advance during the holiday season.",
+      "choices": [
+        {
+          "choice": "A",
+          "text": "reserve"
+        },
+        {
+          "choice": "B",
+          "text": "reserved"
+        },
+        {
+          "choice": "C",
+          "text": "reserving"
+        },
+        {
+          "choice": "D",
+          "text": "to reserved"
+        }
+      ],
+      "correctAnswer": "C",
+      "completeSentence": "We recommend reserving a table in advance during the holiday season.",
+      "correctExplanation": "The sentence requires the gerund infinitive form shown in “reserving.” The surrounding structure makes this the only grammatically complete choice.",
+      "distractorExplanations": {
+        "A": "“reserve” does not fit the required gerund infinitive pattern or meaning in this sentence.",
+        "B": "“reserved” does not fit the required gerund infinitive pattern or meaning in this sentence.",
+        "D": "“to reserved” does not fit the required gerund infinitive pattern or meaning in this sentence."
+      },
+      "skillCategory": "grammar",
+      "skillSubcategory": "gerund_infinitive",
+      "difficulty": "medium",
+      "domain": "restaurants",
+      "usefulPattern": "recommend + gerund",
+      "extraExample": "The guide recommends arriving early.",
+      "tags": [
+        "restaurants",
+        "gerund_infinitive"
+      ]
+    },
+    {
+      "itemId": "toeic-r-p5-0012",
+      "itemVersion": 1,
+      "publicationState": "published",
+      "section": "reading",
+      "part": 5,
+      "itemType": "part5_incomplete_sentence",
+      "sentence": "By the time the conference begins, the technicians _____ all of the equipment.",
+      "choices": [
+        {
+          "choice": "A",
+          "text": "test"
+        },
+        {
+          "choice": "B",
+          "text": "will test"
+        },
+        {
+          "choice": "C",
+          "text": "are testing"
+        },
+        {
+          "choice": "D",
+          "text": "will have tested"
+        }
+      ],
+      "correctAnswer": "D",
+      "completeSentence": "By the time the conference begins, the technicians will have tested all of the equipment.",
+      "correctExplanation": "The sentence requires the verb tense form shown in “will have tested.” The surrounding structure makes this the only grammatically complete choice.",
+      "distractorExplanations": {
+        "A": "“test” does not fit the required verb tense pattern or meaning in this sentence.",
+        "B": "“will test” does not fit the required verb tense pattern or meaning in this sentence.",
+        "C": "“are testing” does not fit the required verb tense pattern or meaning in this sentence."
+      },
+      "skillCategory": "grammar",
+      "skillSubcategory": "verb_tense",
+      "difficulty": "hard",
+      "domain": "conferences",
+      "usefulPattern": "by + future point → future perfect",
+      "extraExample": "By noon, we will have completed the inspection.",
+      "tags": [
+        "conferences",
+        "verb_tense"
+      ]
+    },
+    {
+      "itemId": "toeic-r-p5-0013",
+      "itemVersion": 1,
+      "publicationState": "published",
+      "section": "reading",
+      "part": 5,
+      "itemType": "part5_incomplete_sentence",
+      "sentence": "There are _____ parking spaces available behind the new office building.",
+      "choices": [
+        {
+          "choice": "A",
+          "text": "several"
+        },
+        {
+          "choice": "B",
+          "text": "every"
+        },
+        {
+          "choice": "C",
+          "text": "much"
+        },
+        {
+          "choice": "D",
+          "text": "another"
+        }
+      ],
+      "correctAnswer": "A",
+      "completeSentence": "There are several parking spaces available behind the new office building.",
+      "correctExplanation": "The sentence requires the quantity form shown in “several.” The surrounding structure makes this the only grammatically complete choice.",
+      "distractorExplanations": {
+        "B": "“every” does not fit the required quantity pattern or meaning in this sentence.",
+        "C": "“much” does not fit the required quantity pattern or meaning in this sentence.",
+        "D": "“another” does not fit the required quantity pattern or meaning in this sentence."
+      },
+      "skillCategory": "grammar",
+      "skillSubcategory": "quantity",
+      "difficulty": "easy",
+      "domain": "office",
+      "usefulPattern": "several + plural count noun",
+      "extraExample": "Several seats are still available.",
+      "tags": [
+        "office",
+        "quantity"
+      ]
+    },
+    {
+      "itemId": "toeic-r-p5-0014",
+      "itemVersion": 1,
+      "publicationState": "published",
+      "section": "reading",
+      "part": 5,
+      "itemType": "part5_incomplete_sentence",
+      "sentence": "The warranty does not cover damage _____ by improper installation.",
+      "choices": [
+        {
+          "choice": "A",
+          "text": "cause"
+        },
+        {
+          "choice": "B",
+          "text": "caused"
+        },
+        {
+          "choice": "C",
+          "text": "causing"
+        },
+        {
+          "choice": "D",
+          "text": "causes"
+        }
+      ],
+      "correctAnswer": "B",
+      "completeSentence": "The warranty does not cover damage caused by improper installation.",
+      "correctExplanation": "The sentence requires the participles form shown in “caused.” The surrounding structure makes this the only grammatically complete choice.",
+      "distractorExplanations": {
+        "A": "“cause” does not fit the required participles pattern or meaning in this sentence.",
+        "C": "“causing” does not fit the required participles pattern or meaning in this sentence.",
+        "D": "“causes” does not fit the required participles pattern or meaning in this sentence."
+      },
+      "skillCategory": "grammar",
+      "skillSubcategory": "participles",
+      "difficulty": "medium",
+      "domain": "purchases",
+      "usefulPattern": "past participle modifying a noun",
+      "extraExample": "Products damaged in transit will be replaced.",
+      "tags": [
+        "purchases",
+        "participles"
+      ]
+    },
+    {
+      "itemId": "toeic-r-p5-0015",
+      "itemVersion": 1,
+      "publicationState": "published",
+      "section": "reading",
+      "part": 5,
+      "itemType": "part5_incomplete_sentence",
+      "sentence": "_____ the sales figures improved, the company postponed its expansion plan.",
+      "choices": [
+        {
+          "choice": "A",
+          "text": "Therefore"
+        },
+        {
+          "choice": "B",
+          "text": "Because"
+        },
+        {
+          "choice": "C",
+          "text": "Although"
+        },
+        {
+          "choice": "D",
+          "text": "Besides"
+        }
+      ],
+      "correctAnswer": "C",
+      "completeSentence": "Although the sales figures improved, the company postponed its expansion plan.",
+      "correctExplanation": "The sentence requires the connector form shown in “Although.” The surrounding structure makes this the only grammatically complete choice.",
+      "distractorExplanations": {
+        "A": "“Therefore” does not fit the required connector pattern or meaning in this sentence.",
+        "B": "“Because” does not fit the required connector pattern or meaning in this sentence.",
+        "D": "“Besides” does not fit the required connector pattern or meaning in this sentence."
+      },
+      "skillCategory": "grammar",
+      "skillSubcategory": "connector",
+      "difficulty": "medium",
+      "domain": "sales",
+      "usefulPattern": "although + contrasting clause",
+      "extraExample": "Although demand increased, prices remained stable.",
+      "tags": [
+        "sales",
+        "connector"
+      ]
+    },
+    {
+      "itemId": "toeic-r-p5-0016",
+      "itemVersion": 1,
+      "publicationState": "published",
+      "section": "reading",
+      "part": 5,
+      "itemType": "part5_incomplete_sentence",
+      "sentence": "Each participant should bring _____ own laptop to the training session.",
+      "choices": [
+        {
+          "choice": "A",
+          "text": "theirs"
+        },
+        {
+          "choice": "B",
+          "text": "they"
+        },
+        {
+          "choice": "C",
+          "text": "them"
+        },
+        {
+          "choice": "D",
+          "text": "their"
+        }
+      ],
+      "correctAnswer": "D",
+      "completeSentence": "Each participant should bring their own laptop to the training session.",
+      "correctExplanation": "The sentence requires the pronoun form shown in “their.” The surrounding structure makes this the only grammatically complete choice.",
+      "distractorExplanations": {
+        "A": "“theirs” does not fit the required pronoun pattern or meaning in this sentence.",
+        "B": "“they” does not fit the required pronoun pattern or meaning in this sentence.",
+        "C": "“them” does not fit the required pronoun pattern or meaning in this sentence."
+      },
+      "skillCategory": "grammar",
+      "skillSubcategory": "pronoun",
+      "difficulty": "medium",
+      "domain": "training",
+      "usefulPattern": "singular they/their",
+      "extraExample": "Each visitor must show their identification.",
+      "tags": [
+        "training",
+        "pronoun"
+      ]
+    },
+    {
+      "itemId": "toeic-r-p5-0017",
+      "itemVersion": 1,
+      "publicationState": "published",
+      "section": "reading",
+      "part": 5,
+      "itemType": "part5_incomplete_sentence",
+      "sentence": "The director spoke _____ about the changes to the company policy.",
+      "choices": [
+        {
+          "choice": "A",
+          "text": "briefly"
+        },
+        {
+          "choice": "B",
+          "text": "brief"
+        },
+        {
+          "choice": "C",
+          "text": "briefness"
+        },
+        {
+          "choice": "D",
+          "text": "briefing"
+        }
+      ],
+      "correctAnswer": "A",
+      "completeSentence": "The director spoke briefly about the changes to the company policy.",
+      "correctExplanation": "The sentence requires the word family form shown in “briefly.” The surrounding structure makes this the only grammatically complete choice.",
+      "distractorExplanations": {
+        "B": "“brief” does not fit the required word family pattern or meaning in this sentence.",
+        "C": "“briefness” does not fit the required word family pattern or meaning in this sentence.",
+        "D": "“briefing” does not fit the required word family pattern or meaning in this sentence."
+      },
+      "skillCategory": "grammar",
+      "skillSubcategory": "word_family",
+      "difficulty": "easy",
+      "domain": "office",
+      "usefulPattern": "verb + adverb",
+      "extraExample": "The consultant explained the process clearly.",
+      "tags": [
+        "office",
+        "word_family"
+      ]
+    },
+    {
+      "itemId": "toeic-r-p5-0018",
+      "itemVersion": 1,
+      "publicationState": "published",
+      "section": "reading",
+      "part": 5,
+      "itemType": "part5_incomplete_sentence",
+      "sentence": "If the supplier _____ us earlier, we could have avoided the delay.",
+      "choices": [
+        {
+          "choice": "A",
+          "text": "informed"
+        },
+        {
+          "choice": "B",
+          "text": "had informed"
+        },
+        {
+          "choice": "C",
+          "text": "would inform"
+        },
+        {
+          "choice": "D",
+          "text": "has informed"
+        }
+      ],
+      "correctAnswer": "B",
+      "completeSentence": "If the supplier had informed us earlier, we could have avoided the delay.",
+      "correctExplanation": "The sentence requires the conditionals form shown in “had informed.” The surrounding structure makes this the only grammatically complete choice.",
+      "distractorExplanations": {
+        "A": "“informed” does not fit the required conditionals pattern or meaning in this sentence.",
+        "C": "“would inform” does not fit the required conditionals pattern or meaning in this sentence.",
+        "D": "“has informed” does not fit the required conditionals pattern or meaning in this sentence."
+      },
+      "skillCategory": "grammar",
+      "skillSubcategory": "conditionals",
+      "difficulty": "hard",
+      "domain": "deliveries",
+      "usefulPattern": "if + past perfect, could have + participle",
+      "extraExample": "If we had left earlier, we could have caught the train.",
+      "tags": [
+        "deliveries",
+        "conditionals"
+      ]
+    },
+    {
+      "itemId": "toeic-r-p5-0019",
+      "itemVersion": 1,
+      "publicationState": "published",
+      "section": "reading",
+      "part": 5,
+      "itemType": "part5_incomplete_sentence",
+      "sentence": "The committee reached a final _____ after reviewing all three proposals.",
+      "choices": [
+        {
+          "choice": "A",
+          "text": "decide"
+        },
+        {
+          "choice": "B",
+          "text": "decisive"
+        },
+        {
+          "choice": "C",
+          "text": "decision"
+        },
+        {
+          "choice": "D",
+          "text": "decisively"
+        }
+      ],
+      "correctAnswer": "C",
+      "completeSentence": "The committee reached a final decision after reviewing all three proposals.",
+      "correctExplanation": "“decision” is the natural word family choice in this context and completes the sentence precisely.",
+      "distractorExplanations": {
+        "A": "“decide” does not fit the required word family pattern or meaning in this sentence.",
+        "B": "“decisive” does not fit the required word family pattern or meaning in this sentence.",
+        "D": "“decisively” does not fit the required word family pattern or meaning in this sentence."
+      },
+      "skillCategory": "vocabulary",
+      "skillSubcategory": "word_family",
+      "difficulty": "easy",
+      "domain": "projects",
+      "usefulPattern": "reach a decision",
+      "extraExample": "The board reached a decision yesterday.",
+      "tags": [
+        "projects",
+        "word_family"
+      ]
+    },
+    {
+      "itemId": "toeic-r-p5-0020",
+      "itemVersion": 1,
+      "publicationState": "published",
+      "section": "reading",
+      "part": 5,
+      "itemType": "part5_incomplete_sentence",
+      "sentence": "Please _____ the attached form and return it to the purchasing department.",
+      "choices": [
+        {
+          "choice": "A",
+          "text": "comply"
+        },
+        {
+          "choice": "B",
+          "text": "compete"
+        },
+        {
+          "choice": "C",
+          "text": "compose"
+        },
+        {
+          "choice": "D",
+          "text": "complete"
+        }
+      ],
+      "correctAnswer": "D",
+      "completeSentence": "Please complete the attached form and return it to the purchasing department.",
+      "correctExplanation": "“complete” is the natural word choice choice in this context and completes the sentence precisely.",
+      "distractorExplanations": {
+        "A": "“comply” does not fit the required word choice pattern or meaning in this sentence.",
+        "B": "“compete” does not fit the required word choice pattern or meaning in this sentence.",
+        "C": "“compose” does not fit the required word choice pattern or meaning in this sentence."
+      },
+      "skillCategory": "vocabulary",
+      "skillSubcategory": "word_choice",
+      "difficulty": "medium",
+      "domain": "emails",
+      "usefulPattern": "complete a form",
+      "extraExample": "Please complete the survey by Monday.",
+      "tags": [
+        "emails",
+        "word_choice"
+      ]
+    },
+    {
+      "itemId": "toeic-r-p5-0021",
+      "itemVersion": 1,
+      "publicationState": "published",
+      "section": "reading",
+      "part": 5,
+      "itemType": "part5_incomplete_sentence",
+      "sentence": "The marketing team plans to _____ a new advertising campaign next month.",
+      "choices": [
+        {
+          "choice": "A",
+          "text": "launch"
+        },
+        {
+          "choice": "B",
+          "text": "land"
+        },
+        {
+          "choice": "C",
+          "text": "release from"
+        },
+        {
+          "choice": "D",
+          "text": "open up"
+        }
+      ],
+      "correctAnswer": "A",
+      "completeSentence": "The marketing team plans to launch a new advertising campaign next month.",
+      "correctExplanation": "“launch” is the natural collocation choice in this context and completes the sentence precisely.",
+      "distractorExplanations": {
+        "B": "“land” does not fit the required collocation pattern or meaning in this sentence.",
+        "C": "“release from” does not fit the required collocation pattern or meaning in this sentence.",
+        "D": "“open up” does not fit the required collocation pattern or meaning in this sentence."
+      },
+      "skillCategory": "vocabulary",
+      "skillSubcategory": "collocation",
+      "difficulty": "medium",
+      "domain": "marketing",
+      "usefulPattern": "launch a campaign",
+      "extraExample": "The company launched a new service.",
+      "tags": [
+        "marketing",
+        "collocation"
+      ]
+    },
+    {
+      "itemId": "toeic-r-p5-0022",
+      "itemVersion": 1,
+      "publicationState": "published",
+      "section": "reading",
+      "part": 5,
+      "itemType": "part5_incomplete_sentence",
+      "sentence": "Our customer-service representatives are available to _____ any concerns about your order.",
+      "choices": [
+        {
+          "choice": "A",
+          "text": "locate"
+        },
+        {
+          "choice": "B",
+          "text": "address"
+        },
+        {
+          "choice": "C",
+          "text": "deliver"
+        },
+        {
+          "choice": "D",
+          "text": "attend"
+        }
+      ],
+      "correctAnswer": "B",
+      "completeSentence": "Our customer-service representatives are available to address any concerns about your order.",
+      "correctExplanation": "“address” is the natural collocation choice in this context and completes the sentence precisely.",
+      "distractorExplanations": {
+        "A": "“locate” does not fit the required collocation pattern or meaning in this sentence.",
+        "C": "“deliver” does not fit the required collocation pattern or meaning in this sentence.",
+        "D": "“attend” does not fit the required collocation pattern or meaning in this sentence."
+      },
+      "skillCategory": "vocabulary",
+      "skillSubcategory": "collocation",
+      "difficulty": "hard",
+      "domain": "customer service",
+      "usefulPattern": "address a concern",
+      "extraExample": "The meeting will address safety concerns.",
+      "tags": [
+        "customer service",
+        "collocation"
+      ]
+    },
+    {
+      "itemId": "toeic-r-p5-0023",
+      "itemVersion": 1,
+      "publicationState": "published",
+      "section": "reading",
+      "part": 5,
+      "itemType": "part5_incomplete_sentence",
+      "sentence": "The factory inspection was _____ until replacement parts could be installed.",
+      "choices": [
+        {
+          "choice": "A",
+          "text": "put up"
+        },
+        {
+          "choice": "B",
+          "text": "put out"
+        },
+        {
+          "choice": "C",
+          "text": "put off"
+        },
+        {
+          "choice": "D",
+          "text": "put through"
+        }
+      ],
+      "correctAnswer": "C",
+      "completeSentence": "The factory inspection was put off until replacement parts could be installed.",
+      "correctExplanation": "“put off” is the natural phrasal verb choice in this context and completes the sentence precisely.",
+      "distractorExplanations": {
+        "A": "“put up” does not fit the required phrasal verb pattern or meaning in this sentence.",
+        "B": "“put out” does not fit the required phrasal verb pattern or meaning in this sentence.",
+        "D": "“put through” does not fit the required phrasal verb pattern or meaning in this sentence."
+      },
+      "skillCategory": "vocabulary",
+      "skillSubcategory": "phrasal_verb",
+      "difficulty": "medium",
+      "domain": "factories",
+      "usefulPattern": "put off = postpone",
+      "extraExample": "The outdoor event was put off because of rain.",
+      "tags": [
+        "factories",
+        "phrasal_verb"
+      ]
+    },
+    {
+      "itemId": "toeic-r-p5-0024",
+      "itemVersion": 1,
+      "publicationState": "published",
+      "section": "reading",
+      "part": 5,
+      "itemType": "part5_incomplete_sentence",
+      "sentence": "Travelers are advised to keep their receipts in order to _____ reimbursement.",
+      "choices": [
+        {
+          "choice": "A",
+          "text": "hire"
+        },
+        {
+          "choice": "B",
+          "text": "announce"
+        },
+        {
+          "choice": "C",
+          "text": "borrow"
+        },
+        {
+          "choice": "D",
+          "text": "claim"
+        }
+      ],
+      "correctAnswer": "D",
+      "completeSentence": "Travelers are advised to keep their receipts in order to claim reimbursement.",
+      "correctExplanation": "“claim” is the natural business vocabulary choice in this context and completes the sentence precisely.",
+      "distractorExplanations": {
+        "A": "“hire” does not fit the required business vocabulary pattern or meaning in this sentence.",
+        "B": "“announce” does not fit the required business vocabulary pattern or meaning in this sentence.",
+        "C": "“borrow” does not fit the required business vocabulary pattern or meaning in this sentence."
+      },
+      "skillCategory": "vocabulary",
+      "skillSubcategory": "business_vocabulary",
+      "difficulty": "medium",
+      "domain": "travel",
+      "usefulPattern": "claim reimbursement",
+      "extraExample": "Employees can claim reimbursement for approved expenses.",
+      "tags": [
+        "travel",
+        "business_vocabulary"
+      ]
+    },
+    {
+      "itemId": "toeic-r-p5-0025",
+      "itemVersion": 1,
+      "publicationState": "published",
+      "section": "reading",
+      "part": 5,
+      "itemType": "part5_incomplete_sentence",
+      "sentence": "The restaurant has earned an excellent _____ for its attentive service.",
+      "choices": [
+        {
+          "choice": "A",
+          "text": "reputation"
+        },
+        {
+          "choice": "B",
+          "text": "prediction"
+        },
+        {
+          "choice": "C",
+          "text": "permission"
+        },
+        {
+          "choice": "D",
+          "text": "operation"
+        }
+      ],
+      "correctAnswer": "A",
+      "completeSentence": "The restaurant has earned an excellent reputation for its attentive service.",
+      "correctExplanation": "“reputation” is the natural context vocabulary choice in this context and completes the sentence precisely.",
+      "distractorExplanations": {
+        "B": "“prediction” does not fit the required context vocabulary pattern or meaning in this sentence.",
+        "C": "“permission” does not fit the required context vocabulary pattern or meaning in this sentence.",
+        "D": "“operation” does not fit the required context vocabulary pattern or meaning in this sentence."
+      },
+      "skillCategory": "vocabulary",
+      "skillSubcategory": "context_vocabulary",
+      "difficulty": "medium",
+      "domain": "restaurants",
+      "usefulPattern": "earn a reputation",
+      "extraExample": "The hotel has a reputation for excellent service.",
+      "tags": [
+        "restaurants",
+        "context_vocabulary"
+      ]
+    },
+    {
+      "itemId": "toeic-r-p5-0026",
+      "itemVersion": 1,
+      "publicationState": "published",
+      "section": "reading",
+      "part": 5,
+      "itemType": "part5_incomplete_sentence",
+      "sentence": "The landlord will _____ the office space before the new tenant moves in.",
+      "choices": [
+        {
+          "choice": "A",
+          "text": "recover"
+        },
+        {
+          "choice": "B",
+          "text": "renovate"
+        },
+        {
+          "choice": "C",
+          "text": "replace"
+        },
+        {
+          "choice": "D",
+          "text": "relocate"
+        }
+      ],
+      "correctAnswer": "B",
+      "completeSentence": "The landlord will renovate the office space before the new tenant moves in.",
+      "correctExplanation": "“renovate” is the natural workplace vocabulary choice in this context and completes the sentence precisely.",
+      "distractorExplanations": {
+        "A": "“recover” does not fit the required workplace vocabulary pattern or meaning in this sentence.",
+        "C": "“replace” does not fit the required workplace vocabulary pattern or meaning in this sentence.",
+        "D": "“relocate” does not fit the required workplace vocabulary pattern or meaning in this sentence."
+      },
+      "skillCategory": "vocabulary",
+      "skillSubcategory": "workplace_vocabulary",
+      "difficulty": "medium",
+      "domain": "real estate",
+      "usefulPattern": "renovate a property",
+      "extraExample": "They renovated the lobby last year.",
+      "tags": [
+        "real estate",
+        "workplace_vocabulary"
+      ]
+    },
+    {
+      "itemId": "toeic-r-p5-0027",
+      "itemVersion": 1,
+      "publicationState": "published",
+      "section": "reading",
+      "part": 5,
+      "itemType": "part5_incomplete_sentence",
+      "sentence": "Due to high demand, the retailer is temporarily out of _____ of the newest model.",
+      "choices": [
+        {
+          "choice": "A",
+          "text": "store"
+        },
+        {
+          "choice": "B",
+          "text": "supply chain"
+        },
+        {
+          "choice": "C",
+          "text": "stock"
+        },
+        {
+          "choice": "D",
+          "text": "purchase"
+        }
+      ],
+      "correctAnswer": "C",
+      "completeSentence": "Due to high demand, the retailer is temporarily out of stock of the newest model.",
+      "correctExplanation": "“stock” is the natural fixed expression choice in this context and completes the sentence precisely.",
+      "distractorExplanations": {
+        "A": "“store” does not fit the required fixed expression pattern or meaning in this sentence.",
+        "B": "“supply chain” does not fit the required fixed expression pattern or meaning in this sentence.",
+        "D": "“purchase” does not fit the required fixed expression pattern or meaning in this sentence."
+      },
+      "skillCategory": "vocabulary",
+      "skillSubcategory": "fixed_expression",
+      "difficulty": "easy",
+      "domain": "retail",
+      "usefulPattern": "out of stock",
+      "extraExample": "The blue jacket is currently out of stock.",
+      "tags": [
+        "retail",
+        "fixed_expression"
+      ]
+    },
+    {
+      "itemId": "toeic-r-p5-0028",
+      "itemVersion": 1,
+      "publicationState": "published",
+      "section": "reading",
+      "part": 5,
+      "itemType": "part5_incomplete_sentence",
+      "sentence": "The airport shuttle operates _____ twenty-minute intervals throughout the day.",
+      "choices": [
+        {
+          "choice": "A",
+          "text": "from"
+        },
+        {
+          "choice": "B",
+          "text": "on"
+        },
+        {
+          "choice": "C",
+          "text": "by"
+        },
+        {
+          "choice": "D",
+          "text": "at"
+        }
+      ],
+      "correctAnswer": "D",
+      "completeSentence": "The airport shuttle operates at twenty-minute intervals throughout the day.",
+      "correctExplanation": "“at” is the natural prepositional phrase choice in this context and completes the sentence precisely.",
+      "distractorExplanations": {
+        "A": "“from” does not fit the required prepositional phrase pattern or meaning in this sentence.",
+        "B": "“on” does not fit the required prepositional phrase pattern or meaning in this sentence.",
+        "C": "“by” does not fit the required prepositional phrase pattern or meaning in this sentence."
+      },
+      "skillCategory": "vocabulary",
+      "skillSubcategory": "prepositional_phrase",
+      "difficulty": "hard",
+      "domain": "airports",
+      "usefulPattern": "at regular intervals",
+      "extraExample": "Buses depart at fifteen-minute intervals.",
+      "tags": [
+        "airports",
+        "prepositional_phrase"
+      ]
+    },
+    {
+      "itemId": "toeic-r-p5-0029",
+      "itemVersion": 1,
+      "publicationState": "published",
+      "section": "reading",
+      "part": 5,
+      "itemType": "part5_incomplete_sentence",
+      "sentence": "The maintenance crew completed the repairs ahead of _____.",
+      "choices": [
+        {
+          "choice": "A",
+          "text": "schedule"
+        },
+        {
+          "choice": "B",
+          "text": "calendar"
+        },
+        {
+          "choice": "C",
+          "text": "appointment"
+        },
+        {
+          "choice": "D",
+          "text": "agenda"
+        }
+      ],
+      "correctAnswer": "A",
+      "completeSentence": "The maintenance crew completed the repairs ahead of schedule.",
+      "correctExplanation": "“schedule” is the natural fixed expression choice in this context and completes the sentence precisely.",
+      "distractorExplanations": {
+        "B": "“calendar” does not fit the required fixed expression pattern or meaning in this sentence.",
+        "C": "“appointment” does not fit the required fixed expression pattern or meaning in this sentence.",
+        "D": "“agenda” does not fit the required fixed expression pattern or meaning in this sentence."
+      },
+      "skillCategory": "vocabulary",
+      "skillSubcategory": "fixed_expression",
+      "difficulty": "medium",
+      "domain": "maintenance",
+      "usefulPattern": "ahead of schedule",
+      "extraExample": "The project finished ahead of schedule.",
+      "tags": [
+        "maintenance",
+        "fixed_expression"
+      ]
+    },
+    {
+      "itemId": "toeic-r-p5-0030",
+      "itemVersion": 1,
+      "publicationState": "published",
+      "section": "reading",
+      "part": 5,
+      "itemType": "part5_incomplete_sentence",
+      "sentence": "The candidate's previous management experience is highly _____ to this position.",
+      "choices": [
+        {
+          "choice": "A",
+          "text": "available"
+        },
+        {
+          "choice": "B",
+          "text": "relevant"
+        },
+        {
+          "choice": "C",
+          "text": "capable"
+        },
+        {
+          "choice": "D",
+          "text": "dependent"
+        }
+      ],
+      "correctAnswer": "B",
+      "completeSentence": "The candidate's previous management experience is highly relevant to this position.",
+      "correctExplanation": "“relevant” is the natural word choice choice in this context and completes the sentence precisely.",
+      "distractorExplanations": {
+        "A": "“available” does not fit the required word choice pattern or meaning in this sentence.",
+        "C": "“capable” does not fit the required word choice pattern or meaning in this sentence.",
+        "D": "“dependent” does not fit the required word choice pattern or meaning in this sentence."
+      },
+      "skillCategory": "vocabulary",
+      "skillSubcategory": "word_choice",
+      "difficulty": "hard",
+      "domain": "employment",
+      "usefulPattern": "relevant to",
+      "extraExample": "Her experience is directly relevant to the role.",
+      "tags": [
+        "employment",
+        "word_choice"
+      ]
+    }
+  ]
+}

@@ -1646,3 +1646,38 @@ export interface ToeicListeningEstimate { rawCorrect:number;estimatedScore:numbe
 export interface ToeicFullPart { partNumber:number;title:string;questionCount:number;sessionId:string;status:string;route:string }
 export interface ToeicFullSession { sessionId:string;mode:"simulation"|"learning";status:string;currentPart:number;answeredCount:number;totalQuestions:100;parts:ToeicFullPart[];estimate:ToeicListeningEstimate|null;disclaimer:string }
 export interface ToeicFullHistory { sessionId:string;mode:string;status:string;rawCorrect:number|null;estimatedScore:number|null;rangeLow:number|null;rangeHigh:number|null;createdAt:string;completedAt:string|null }
+export interface ToeicPart5Form { formId:string;formVersion:number;title:string;activeSessionId:string|null }
+export interface ToeicPart5Overview { bankId:string;forms:ToeicPart5Form[] }
+export interface ToeicPart5Choice { choice:"A"|"B"|"C"|"D";text:string }
+export interface ToeicPart5Question { itemId:string;itemVersion:number;questionNumber:number;totalQuestions:30;sentence:string;choices:ToeicPart5Choice[] }
+export interface ToeicPart5ChoiceExplanation { choice:string;text:string;explanation:string }
+export interface ToeicPart5Feedback { selectedChoice:string;isCorrect:boolean;correctChoice:string;completeSentence:string;correctExplanation:string;selectedDistractorExplanation:string|null;otherDistractorExplanations:ToeicPart5ChoiceExplanation[];skillCategory:string;skillSubcategory:string;usefulPattern:string|null;extraExample:string|null }
+export interface ToeicPart5Session { sessionId:string;formId:string;formTitle:string;mode:"learning"|"simulation";status:"in_progress"|"completed";currentQuestionIndex:number;answeredCount:number;currentQuestion:ToeicPart5Question|null;feedback:ToeicPart5Feedback|null;createdAt:string;updatedAt:string }
+export interface ToeicPart5Breakdown { label:string;correct:number;total:number;accuracy:number }
+export interface ToeicPart5Result { sessionId:string;formId:string;correct:number;total:30;accuracy:number;grammar:ToeicPart5Breakdown;vocabulary:ToeicPart5Breakdown;subcategoryBreakdown:ToeicPart5Breakdown[];difficultyBreakdown:ToeicPart5Breakdown[];needsAttention:string[];hasScaledScore:false;scoreMessage:string }
+export interface ToeicPart5ReviewItem { questionNumber:number;sentence:string;choices:ToeicPart5Choice[];feedback:ToeicPart5Feedback }
+export interface ToeicPart6Form { formId:string;formVersion:number;title:string;activeSessionId:string|null }
+export interface ToeicPart6Overview { bankId:string;forms:ToeicPart6Form[] }
+export interface ToeicPart6Choice { choice:"A"|"B"|"C"|"D";text:string }
+export interface ToeicPart6Question { itemId:string;itemVersion:number;questionNumber:number;blankId:string;questionType:string;choices:ToeicPart6Choice[];selectedChoice:string|null;locked:boolean }
+export interface ToeicPart6Set { textSetId:string;setNumber:number;totalSets:4;title:string;documentType:string;passage:string;questions:ToeicPart6Question[];activeQuestionIndex:number }
+export interface ToeicPart6ChoiceExplanation { choice:string;text:string;explanation:string }
+export interface ToeicPart6QuestionFeedback { questionNumber:number;blankId:string;selectedChoice:string;isCorrect:boolean;correctChoice:string;completedContext:string;correctExplanation:string;selectedDistractorExplanation:string|null;otherDistractorExplanations:ToeicPart6ChoiceExplanation[];skillCategory:string;usefulPattern:string|null;extraExample:string|null }
+export interface ToeicPart6SetFeedback { textSetId:string;completedText:string;questions:ToeicPart6QuestionFeedback[] }
+export interface ToeicPart6Session { sessionId:string;formId:string;formTitle:string;mode:"learning"|"simulation";status:"in_progress"|"completed";currentSetIndex:number;answeredCount:number;currentSet:ToeicPart6Set|null;setFeedback:ToeicPart6SetFeedback|null;createdAt:string;updatedAt:string }
+export interface ToeicPart6Breakdown { label:string;correct:number;total:number;accuracy:number }
+export interface ToeicPart6Result { sessionId:string;formId:string;correct:number;total:16;accuracy:number;skillBreakdown:ToeicPart6Breakdown[];difficultyBreakdown:ToeicPart6Breakdown[];documentBreakdown:ToeicPart6Breakdown[];needsAttention:string[];hasScaledScore:false;scoreMessage:string }
+export interface ToeicPart6ReviewSet { textSetId:string;title:string;documentType:string;originalPassage:string;feedback:ToeicPart6SetFeedback }
+export type ToeicPart7Form=ToeicPart6Form
+export interface ToeicPart7Overview {bankId:string;forms:ToeicPart7Form[]}
+export type ToeicPart7Choice=ToeicPart6Choice
+export type ToeicPart7Question=ToeicPart6Question
+export interface ToeicPart7Set extends Omit<ToeicPart6Set,"totalSets">{totalSets:15}
+export type ToeicPart7SetFeedback=ToeicPart6SetFeedback
+export interface ToeicPart7Session extends Omit<ToeicPart6Session,"currentSet"|"setFeedback">{currentSet:ToeicPart7Set|null;setFeedback:ToeicPart7SetFeedback|null}
+export interface ToeicPart7Result extends Omit<ToeicPart6Result,"total">{total:54}
+export type ToeicPart7ReviewSet=ToeicPart6ReviewSet
+export interface ToeicFullReadingPart{partNumber:number;title:string;questionCount:number;sessionId:string;status:string;route:string}
+export interface ToeicReadingEstimate{rawCorrect:number;estimatedScore:number;rangeLow:number;rangeHigh:number;profileId:string;profileVersion:number;label:string}
+export interface ToeicFullReadingSession{sessionId:string;mode:"learning"|"simulation";status:string;currentPart:number;answeredCount:number;totalQuestions:100;parts:ToeicFullReadingPart[];estimate:ToeicReadingEstimate|null;disclaimer:string}
+export interface ToeicFullLrSession{sessionId:string;status:string;currentSection:string;listeningSessionId:string;readingSessionId:string;listeningRaw:number|null;readingRaw:number|null;totalRaw:number|null;listeningEstimate:number|null;readingEstimate:number|null;totalEstimate:number|null;rangeLow:number|null;rangeHigh:number|null;listeningRoute:string;readingRoute:string;disclaimer:string}

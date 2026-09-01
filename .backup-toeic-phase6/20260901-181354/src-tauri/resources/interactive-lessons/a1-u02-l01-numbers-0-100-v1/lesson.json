@@ -1,0 +1,558 @@
+{
+  "packageSchemaVersion": 1,
+  "lessonFlowVersion": 1,
+  "lessonId": "a1-u02-l01-numbers-0-100",
+  "contentVersion": 1,
+  "publicationState": "published",
+  "title": "Numbers 0–100",
+  "description": "Say, understand, and use numbers from zero to one hundred in everyday exchanges.",
+  "language": "en",
+  "referenceLocale": "en-US",
+  "cefrBand": "A1",
+  "estimatedMinutes": 24,
+  "objectives": [
+    "Say, understand, and use numbers from zero to one hundred in everyday exchanges."
+  ],
+  "tags": [
+    "english-core",
+    "a1",
+    "unit-02",
+    "production"
+  ],
+  "assets": [],
+  "stages": [
+    {
+      "stageId": "theory",
+      "stageType": "theory",
+      "stageSchemaVersion": 1,
+      "title": "Understand the language",
+      "instructions": "Read the explanation, examples, common error, and recap.",
+      "required": true,
+      "payload": {
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "This lesson prepares you to say, understand, and use numbers from zero to one hundred in everyday exchanges. The central language is cardinal numbers 0–100. It belongs to the practical context of numbers, time & dates. Focus first on meaning: decide what information the listener needs. Then choose the subject, verb form, and useful detail. At A1, keep the message short and concrete. One clear sentence is enough before the other person responds. The same language returns in the listening, repeat, speaking, exercises, and guided conversation stages."
+          },
+          {
+            "type": "callout",
+            "title": "Pattern",
+            "text": "cardinal numbers 0–100"
+          },
+          {
+            "type": "example",
+            "english": "The total is forty-two.",
+            "explanation": "Use this model to begin the numbers 0–100 exchange."
+          },
+          {
+            "type": "example",
+            "english": "My number is eighty-six.",
+            "explanation": "This numbers 0–100 model adds a different detail or response."
+          },
+          {
+            "type": "example",
+            "english": "What time works for you?",
+            "explanation": "Use this question or response to keep the numbers 0–100 exchange moving."
+          },
+          {
+            "type": "paragraph",
+            "text": "Notice the two models: “The total is forty-two.” and “My number is eighty-six.” They show the pattern in complete communication, not as isolated grammar. Say the model aloud, replace one detail, and check that the new sentence keeps the intended meaning. When the other person asks a follow-up question, answer directly and add a relevant detail. This makes the exchange natural while keeping the language controlled."
+          },
+          {
+            "type": "callout",
+            "title": "Common error",
+            "text": "Do not mix the word order or verb form with another pattern. Keep the controlled form for this lesson: cardinal numbers 0–100."
+          },
+          {
+            "type": "bullet_list",
+            "items": [
+              "Communicative goal: Say, understand, and use numbers from zero to one hundred in everyday exchanges.",
+              "Core pattern: cardinal numbers 0–100.",
+              "Use one clear model, add a relevant detail, and respond to the other speaker."
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "stageId": "visual-vocabulary",
+      "stageType": "visual_vocabulary",
+      "stageSchemaVersion": 1,
+      "title": "Build your vocabulary",
+      "instructions": "Study each term, meaning, and contextual example.",
+      "required": true,
+      "payload": {
+        "items": [
+          {
+            "itemId": "number",
+            "term": "number",
+            "meaning": "a symbol or word used for an amount",
+            "example": "Use “number” while you practice numbers 0–100 in context.",
+            "imageAssetId": null
+          },
+          {
+            "itemId": "zero",
+            "term": "zero",
+            "meaning": "the number before one",
+            "example": "Use “zero” while you practice numbers 0–100 in context.",
+            "imageAssetId": null
+          },
+          {
+            "itemId": "hundred",
+            "term": "hundred",
+            "meaning": "the number after ninety-nine",
+            "example": "Use “hundred” while you practice numbers 0–100 in context.",
+            "imageAssetId": null
+          },
+          {
+            "itemId": "spell",
+            "term": "spell",
+            "meaning": "say or write letters in order",
+            "example": "Use “spell” while you practice numbers 0–100 in context.",
+            "imageAssetId": null
+          },
+          {
+            "itemId": "phone-number",
+            "term": "phone number",
+            "meaning": "the digits used to call a phone",
+            "example": "Use “phone number” while you practice numbers 0–100 in context.",
+            "imageAssetId": null
+          },
+          {
+            "itemId": "email-address",
+            "term": "email address",
+            "meaning": "the address used for electronic messages",
+            "example": "Use “email address” while you practice numbers 0–100 in context.",
+            "imageAssetId": null
+          },
+          {
+            "itemId": "weekday",
+            "term": "weekday",
+            "meaning": "a day from Monday through Friday",
+            "example": "Use “weekday” while you practice numbers 0–100 in context.",
+            "imageAssetId": null
+          },
+          {
+            "itemId": "weekend",
+            "term": "weekend",
+            "meaning": "Saturday and Sunday",
+            "example": "Use “weekend” while you practice numbers 0–100 in context.",
+            "imageAssetId": null
+          }
+        ]
+      }
+    },
+    {
+      "stageId": "listening",
+      "stageType": "listening",
+      "stageSchemaVersion": 1,
+      "title": "Listen in context",
+      "instructions": "Listen before revealing the text, then notice the target pattern.",
+      "required": true,
+      "payload": {
+        "segments": [
+          {
+            "segmentId": "segment-1",
+            "text": "The total is forty-two. My number is eighty-six.",
+            "audioAssetId": null
+          },
+          {
+            "segmentId": "segment-2",
+            "text": "What time works for you? That time works for me.",
+            "audioAssetId": null
+          },
+          {
+            "segmentId": "segment-3",
+            "text": "My number is eighty-six. What time works for you?",
+            "audioAssetId": null
+          }
+        ],
+        "revealTextAfterFirstPlay": true
+      }
+    },
+    {
+      "stageId": "repeat",
+      "stageType": "repeat",
+      "stageSchemaVersion": 1,
+      "title": "Repeat useful chunks",
+      "instructions": "Repeat each complete expression with clear rhythm.",
+      "required": true,
+      "payload": {
+        "targets": [
+          {
+            "targetId": "repeat-1",
+            "text": "The total is forty-two.",
+            "referenceAudioAssetId": null,
+            "hint": "Keep the words together as one communicative chunk."
+          },
+          {
+            "targetId": "repeat-2",
+            "text": "My number is eighty-six.",
+            "referenceAudioAssetId": null,
+            "hint": "Keep the words together as one communicative chunk."
+          },
+          {
+            "targetId": "repeat-3",
+            "text": "What time works for you?",
+            "referenceAudioAssetId": null,
+            "hint": "Keep the words together as one communicative chunk."
+          },
+          {
+            "targetId": "repeat-4",
+            "text": "That time works for me.",
+            "referenceAudioAssetId": null,
+            "hint": "Keep the words together as one communicative chunk."
+          },
+          {
+            "targetId": "repeat-5",
+            "text": "Thanks for talking about numbers, time & dates with me.",
+            "referenceAudioAssetId": null,
+            "hint": "Keep the words together as one communicative chunk."
+          }
+        ]
+      }
+    },
+    {
+      "stageId": "speaking-check",
+      "stageType": "speaking_check",
+      "stageSchemaVersion": 1,
+      "title": "Speaking Check",
+      "instructions": "Say expressions already presented in this Lesson.",
+      "required": true,
+      "payload": {
+        "targets": [
+          {
+            "targetId": "speaking-1",
+            "instruction": "Say the complete model naturally.",
+            "targetText": "The total is forty-two.",
+            "hint": "Use the same words and clear sentence stress."
+          },
+          {
+            "targetId": "speaking-2",
+            "instruction": "Say the complete model naturally.",
+            "targetText": "My number is eighty-six.",
+            "hint": "Use the same words and clear sentence stress."
+          },
+          {
+            "targetId": "speaking-3",
+            "instruction": "Say the complete model naturally.",
+            "targetText": "What time works for you?",
+            "hint": "Use the same words and clear sentence stress."
+          },
+          {
+            "targetId": "speaking-4",
+            "instruction": "Say the complete model naturally.",
+            "targetText": "That time works for me.",
+            "hint": "Use the same words and clear sentence stress."
+          }
+        ]
+      }
+    },
+    {
+      "stageId": "exercise",
+      "stageType": "exercise",
+      "stageSchemaVersion": 1,
+      "title": "Check your understanding",
+      "instructions": "Complete each deterministic practice item.",
+      "required": true,
+      "payload": {
+        "items": [
+          {
+            "exerciseId": "choose-model",
+            "exerciseType": "single_choice",
+            "prompt": "Choose the model that fits the communicative goal.",
+            "instructions": null,
+            "hint": "Say, understand, and use numbers from zero to one hundred in everyday exchanges.",
+            "payload": {
+              "options": [
+                {
+                  "optionId": "a",
+                  "text": "The total is forty-two."
+                },
+                {
+                  "optionId": "b",
+                  "text": "The purple engine sleeps quickly."
+                },
+                {
+                  "optionId": "c",
+                  "text": "No information is possible."
+                }
+              ],
+              "correctOptionId": "a"
+            },
+            "feedback": {
+              "correct": "Correct. The answer fits the lesson context.",
+              "incorrect": "Try again and use the model from this lesson.",
+              "explanation": "cardinal numbers 0–100"
+            }
+          },
+          {
+            "exerciseId": "select-core-vocabulary",
+            "exerciseType": "multiple_select",
+            "prompt": "Select both words that belong to this lesson context.",
+            "instructions": null,
+            "hint": "Numbers, Time & Dates",
+            "payload": {
+              "options": [
+                {
+                  "optionId": "a",
+                  "text": "number"
+                },
+                {
+                  "optionId": "b",
+                  "text": "zero"
+                },
+                {
+                  "optionId": "c",
+                  "text": "industrial turbine"
+                },
+                {
+                  "optionId": "d",
+                  "text": "quantum geology"
+                }
+              ],
+              "correctOptionIds": [
+                "a",
+                "b"
+              ]
+            },
+            "feedback": {
+              "correct": "Correct. The answer fits the lesson context.",
+              "incorrect": "Try again and use the model from this lesson.",
+              "explanation": "Both correct words appear in Visual Vocabulary."
+            }
+          },
+          {
+            "exerciseId": "complete-response",
+            "exerciseType": "fill_blank",
+            "prompt": "Type the exact practiced response shown in the hint.",
+            "instructions": null,
+            "hint": "My number is eighty-six.",
+            "payload": {
+              "prefix": "",
+              "suffix": "",
+              "acceptedAnswers": [
+                "My number is eighty-six."
+              ],
+              "normalizationProfile": "english_basic_v1"
+            },
+            "feedback": {
+              "correct": "Correct. The answer fits the lesson context.",
+              "incorrect": "Try again and use the model from this lesson.",
+              "explanation": "Use the complete model response."
+            }
+          },
+          {
+            "exerciseId": "order-model",
+            "exerciseType": "word_order",
+            "prompt": "Put the model in its natural order.",
+            "instructions": null,
+            "hint": null,
+            "payload": {
+              "tokens": [
+                {
+                  "tokenId": "t5",
+                  "text": "."
+                },
+                {
+                  "tokenId": "t4",
+                  "text": "forty-two"
+                },
+                {
+                  "tokenId": "t3",
+                  "text": "is"
+                },
+                {
+                  "tokenId": "t2",
+                  "text": "total"
+                },
+                {
+                  "tokenId": "t1",
+                  "text": "The"
+                }
+              ],
+              "correctOrder": [
+                "t1",
+                "t2",
+                "t3",
+                "t4",
+                "t5"
+              ]
+            },
+            "feedback": {
+              "correct": "Correct. The answer fits the lesson context.",
+              "incorrect": "Try again and use the model from this lesson.",
+              "explanation": "Keep the modeled English word order."
+            }
+          },
+          {
+            "exerciseId": "match-vocabulary",
+            "exerciseType": "matching",
+            "prompt": "Match each term to its meaning.",
+            "instructions": null,
+            "hint": null,
+            "payload": {
+              "leftItems": [
+                {
+                  "itemId": "l1",
+                  "text": "number"
+                },
+                {
+                  "itemId": "l2",
+                  "text": "zero"
+                },
+                {
+                  "itemId": "l3",
+                  "text": "hundred"
+                }
+              ],
+              "rightItems": [
+                {
+                  "itemId": "r1",
+                  "text": "a symbol or word used for an amount"
+                },
+                {
+                  "itemId": "r2",
+                  "text": "the number before one"
+                },
+                {
+                  "itemId": "r3",
+                  "text": "the number after ninety-nine"
+                }
+              ],
+              "correctPairs": [
+                {
+                  "leftId": "l1",
+                  "rightId": "r1"
+                },
+                {
+                  "leftId": "l2",
+                  "rightId": "r2"
+                },
+                {
+                  "leftId": "l3",
+                  "rightId": "r3"
+                }
+              ]
+            },
+            "feedback": {
+              "correct": "Correct. The answer fits the lesson context.",
+              "incorrect": "Try again and use the model from this lesson.",
+              "explanation": "Review each term with its meaning and example."
+            }
+          },
+          {
+            "exerciseId": "exact-useful-chunk",
+            "exerciseType": "short_answer_exact",
+            "prompt": "Type the finite model chunk shown in the hint.",
+            "instructions": null,
+            "hint": "What time works for you?",
+            "payload": {
+              "acceptedAnswers": [
+                "What time works for you?"
+              ],
+              "normalizationProfile": "english_basic_v1"
+            },
+            "feedback": {
+              "correct": "Correct. The answer fits the lesson context.",
+              "incorrect": "Try again and use the model from this lesson.",
+              "explanation": "This checks one exact practiced chunk, not an open response."
+            }
+          },
+          {
+            "exerciseId": "choose-correct-form",
+            "exerciseType": "single_choice",
+            "prompt": "Which sentence follows the lesson pattern?",
+            "instructions": null,
+            "hint": "cardinal numbers 0–100",
+            "payload": {
+              "options": [
+                {
+                  "optionId": "a",
+                  "text": "My number is eighty-six."
+                },
+                {
+                  "optionId": "b",
+                  "text": "She are did going."
+                },
+                {
+                  "optionId": "c",
+                  "text": "I is to yesterday."
+                }
+              ],
+              "correctOptionId": "a"
+            },
+            "feedback": {
+              "correct": "Correct. The answer fits the lesson context.",
+              "incorrect": "Try again and use the model from this lesson.",
+              "explanation": "cardinal numbers 0–100"
+            }
+          },
+          {
+            "exerciseId": "recall-vocabulary",
+            "exerciseType": "fill_blank",
+            "prompt": "Type the term that means: say or write letters in order",
+            "instructions": null,
+            "hint": "It appears in Visual Vocabulary.",
+            "payload": {
+              "prefix": "",
+              "suffix": "",
+              "acceptedAnswers": [
+                "spell"
+              ],
+              "normalizationProfile": "english_basic_v1"
+            },
+            "feedback": {
+              "correct": "Correct. The answer fits the lesson context.",
+              "incorrect": "Try again and use the model from this lesson.",
+              "explanation": "say or write letters in order"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "stageId": "guided-conversation",
+      "stageType": "guided_conversation",
+      "stageSchemaVersion": 1,
+      "title": "Numbers, Time & Dates conversation",
+      "instructions": "Use the prepared language in a practical exchange.",
+      "required": true,
+      "payload": {
+        "scenario": "You are in a realistic everyday situation related to numbers, time & dates. Practice numbers 0–100 and respond to relevant follow-up questions.",
+        "studentRole": "English learner handling the situation",
+        "teacherRole": "Helpful conversation partner",
+        "goal": "Say, understand, and use numbers from zero to one hundred in everyday exchanges.",
+        "targetVocabulary": [
+          "number",
+          "zero",
+          "hundred",
+          "spell",
+          "phone number",
+          "email address",
+          "weekday",
+          "weekend"
+        ],
+        "targetExpressions": [
+          "The total is forty-two.",
+          "My number is eighty-six.",
+          "What time works for you?",
+          "That time works for me.",
+          "Thanks for talking about numbers, time & dates with me."
+        ],
+        "minimumStudentTurns": 4,
+        "recommendedStudentTurns": 6,
+        "maximumStudentTurns": 8
+      }
+    },
+    {
+      "stageId": "analysis",
+      "stageType": "analysis",
+      "stageSchemaVersion": 1,
+      "title": "Lesson Review",
+      "instructions": "Review the evidence from your completed practice.",
+      "required": true,
+      "payload": {}
+    }
+  ]
+}

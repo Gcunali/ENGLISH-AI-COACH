@@ -1,0 +1,23 @@
+{
+  "packageSchemaVersion": 1,
+  "lessonFlowVersion": 1,
+  "lessonId": "audio-foundation-a1",
+  "contentVersion": 1,
+  "publicationState": "published",
+  "title": "Audio Foundation",
+  "description": "An isolated five-stage package for Phase S runtime tests.",
+  "language": "en",
+  "referenceLocale": "en-US",
+  "cefrBand": "A1",
+  "estimatedMinutes": 8,
+  "objectives": ["Listen and produce two short English targets."],
+  "tags": ["phase-s", "isolated-test"],
+  "stages": [
+    {"stageId":"audio-theory","stageType":"theory","stageSchemaVersion":1,"title":"Prepare","instructions":"Read the short note.","required":true,"payload":{"blocks":[{"type":"paragraph","text":"Listen first, then speak clearly."}]}},
+    {"stageId":"audio-words","stageType":"visual_vocabulary","stageSchemaVersion":1,"title":"Words","instructions":"Review the words.","required":true,"payload":{"items":[{"itemId":"hello","term":"hello","meaning":"a greeting","example":"Hello, Sam.","imageAssetId":null}]}},
+    {"stageId":"audio-listening","stageType":"listening","stageSchemaVersion":1,"title":"Listen","instructions":"Play every segment completely.","required":true,"payload":{"revealTextAfterFirstPlay":true,"segments":[{"segmentId":"hello-one","text":"Hello, how are you?","audioAssetId":null}]}},
+    {"stageId":"audio-repeat","stageType":"repeat","stageSchemaVersion":1,"title":"Repeat","instructions":"Listen, record and select a completed attempt.","required":true,"payload":{"targets":[{"targetId":"repeat-one","text":"Hello, how are you?","referenceAudioAssetId":null,"hint":"Keep the words connected."}]}},
+    {"stageId":"audio-speaking","stageType":"speaking_check","stageSchemaVersion":1,"title":"Speaking Check","instructions":"Record directly and select a completed attempt.","required":true,"payload":{"targets":[{"targetId":"speaking-one","instruction":"Say the target naturally.","targetText":"Nice to meet you.","hint":null}]}}
+  ],
+  "assets": []
+}

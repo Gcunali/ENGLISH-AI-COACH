@@ -1,0 +1,7 @@
+{
+  "packageSchemaVersion":1,"lessonFlowVersion":1,"lessonId":"phase-u-cafe-a1","contentVersion":1,"publicationState":"published","title":"Ordering at a Café","description":"TEST-only Guided Conversation fixture.","language":"en","referenceLocale":"en-US","cefrBand":"A1","estimatedMinutes":8,"objectives":["Order a drink politely."],"tags":["test-only","phase-u"],"assets":[],
+  "stages":[
+    {"stageId":"cafe-theory","stageType":"theory","stageSchemaVersion":1,"title":"Prepare","instructions":"Read the goal.","required":true,"payload":{"blocks":[{"type":"paragraph","text":"Polite requests often use I'd like or Could I have."}]}},
+    {"stageId":"cafe-conversation","stageType":"guided_conversation","stageSchemaVersion":1,"title":"Order at a café","instructions":"Practice naturally. Target language is guidance, not a checklist.","required":true,"payload":{"scenario":"You are ordering at a café.","studentRole":"Customer","teacherRole":"Barista","goal":"Order a drink and answer simple questions politely.","targetVocabulary":["coffee","water","menu"],"targetExpressions":["I'd like...","Could I have...?","please"],"minimumStudentTurns":3,"recommendedStudentTurns":5,"maximumStudentTurns":7}}
+  ]
+}

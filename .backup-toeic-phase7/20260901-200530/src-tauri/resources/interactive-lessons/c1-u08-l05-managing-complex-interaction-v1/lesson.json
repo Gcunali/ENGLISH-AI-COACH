@@ -1,0 +1,813 @@
+{
+  "packageSchemaVersion": 1,
+  "lessonFlowVersion": 1,
+  "lessonId": "c1-u08-l05-managing-complex-interaction",
+  "contentVersion": 1,
+  "publicationState": "published",
+  "title": "Managing Complex Interaction",
+  "description": "Use interaction repair and redirection to analyze and communicate ideas related to managing complex interaction with appropriate C1 complexity.",
+  "language": "en",
+  "referenceLocale": "en-US",
+  "cefrBand": "C1",
+  "estimatedMinutes": 48,
+  "objectives": [
+    "Use interaction repair and redirection to analyze and communicate ideas related to managing complex interaction with appropriate C1 complexity."
+  ],
+  "tags": [
+    "english-core",
+    "c1",
+    "unit-08",
+    "production"
+  ],
+  "assets": [],
+  "stages": [
+    {
+      "stageId": "theory",
+      "stageType": "theory",
+      "stageSchemaVersion": 1,
+      "title": "Understand meaning and form",
+      "instructions": "Read the concept, pattern, examples, contrast, common issue, and recap.",
+      "required": true,
+      "payload": {
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "The communicative aim of this lesson is to use interaction repair and redirection to analyze and communicate ideas related to managing complex interaction with appropriate C1 complexity. The central language focus is interaction repair and redirection. In the context of flexible advanced communication, form and meaning work together: first identify the relationship between the ideas, then choose wording that makes that relationship clear to another person. At C1, precision includes stance, register, and information structure. Make the relationship between claims explicit, qualify what cannot be fully supported, and adapt the wording to the audience without losing nuance."
+          },
+          {
+            "type": "callout",
+            "title": "Pattern",
+            "text": "interaction repair and redirection"
+          },
+          {
+            "type": "example",
+            "english": "Our response should account for let me qualify that.",
+            "explanation": "This model establishes the main communicative move."
+          },
+          {
+            "type": "example",
+            "english": "This example illustrates to put it differently clearly.",
+            "explanation": "This model develops or qualifies the message."
+          },
+          {
+            "type": "paragraph",
+            "text": "Start with the model “Our response should account for let me qualify that.” It establishes a useful direction for the exchange. The second model, “This example illustrates to put it differently clearly.” adds another layer: a reason, implication, contrast, or response. Notice how each complete chunk does a communicative job. Practice replacing one detail while preserving the original grammar, stance, and register. Then connect the revised sentence to a relevant consequence or example instead of changing topic abruptly."
+          },
+          {
+            "type": "paragraph",
+            "text": "A useful pattern for this lesson is: interaction repair and redirection. Use it when the situation genuinely calls for that meaning. Contrast matters: a direct factual statement presents information, while a qualified or hypothetical form changes the speaker's commitment to it. The choice should be driven by evidence, time reference, relationship, and purpose. In listening, pay attention not only to individual words but also to linkers, stress, and the speaker's degree of certainty."
+          },
+          {
+            "type": "callout",
+            "title": "Contrast",
+            "text": "Compare a direct statement with language shaped by interaction repair and redirection; the intended meaning determines the form."
+          },
+          {
+            "type": "paragraph",
+            "text": "A common issue is to select an advanced-looking form without maintaining its meaning across the sentence. That can create a mismatch in time, stance, or register. Check three things: what happened or is being proposed, how certain the speaker is, and what response is expected. For managing complex interaction, clarity comes from a coherent message rather than maximum complexity. The later stages recycle the same vocabulary and expressions so that recognition becomes controlled production and then flexible interaction."
+          },
+          {
+            "type": "callout",
+            "title": "Common issue",
+            "text": "Do not add complexity that changes the time reference, degree of certainty, or relationship with the listener."
+          },
+          {
+            "type": "bullet_list",
+            "items": [
+              "Goal: Use interaction repair and redirection to analyze and communicate ideas related to managing complex interaction with appropriate C1 complexity.",
+              "Core focus: interaction repair and redirection.",
+              "Use complete chunks, connect ideas, and keep the intended stance.",
+              "In the conversation, listen, respond, clarify, and develop the same topic."
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "stageId": "visual-vocabulary",
+      "stageType": "visual_vocabulary",
+      "stageSchemaVersion": 1,
+      "title": "Build precise vocabulary",
+      "instructions": "Study each useful word or chunk in a meaningful context.",
+      "required": true,
+      "payload": {
+        "items": [
+          {
+            "itemId": "item-1",
+            "term": "let me qualify that",
+            "meaning": "A useful word or chunk for communicating about flexible advanced communication with the intended level of precision.",
+            "example": "Our response should account for let me qualify that.",
+            "imageAssetId": null
+          },
+          {
+            "itemId": "item-2",
+            "term": "to put it differently",
+            "meaning": "A useful word or chunk for communicating about flexible advanced communication with the intended level of precision.",
+            "example": "This example illustrates to put it differently clearly.",
+            "imageAssetId": null
+          },
+          {
+            "itemId": "item-3",
+            "term": "what I am getting at",
+            "meaning": "A useful word or chunk for communicating about flexible advanced communication with the intended level of precision.",
+            "example": "We should consider what I am getting at carefully.",
+            "imageAssetId": null
+          },
+          {
+            "itemId": "item-4",
+            "term": "manage the floor",
+            "meaning": "A useful word or chunk for communicating about flexible advanced communication with the intended level of precision.",
+            "example": "The discussion highlighted manage the floor.",
+            "imageAssetId": null
+          },
+          {
+            "itemId": "item-5",
+            "term": "redirect the discussion",
+            "meaning": "A useful word or chunk for communicating about flexible advanced communication with the intended level of precision.",
+            "example": "A clear explanation addresses redirect the discussion directly.",
+            "imageAssetId": null
+          },
+          {
+            "itemId": "item-6",
+            "term": "resolve ambiguity",
+            "meaning": "A useful word or chunk for communicating about flexible advanced communication with the intended level of precision.",
+            "example": "The speaker emphasized resolve ambiguity.",
+            "imageAssetId": null
+          },
+          {
+            "itemId": "item-7",
+            "term": "sustain the interaction",
+            "meaning": "A useful word or chunk for communicating about flexible advanced communication with the intended level of precision.",
+            "example": "Our response should account for sustain the interaction.",
+            "imageAssetId": null
+          },
+          {
+            "itemId": "item-8",
+            "term": "abstract concept",
+            "meaning": "A useful word or chunk for communicating about flexible advanced communication with the intended level of precision.",
+            "example": "This example illustrates abstract concept clearly.",
+            "imageAssetId": null
+          },
+          {
+            "itemId": "item-9",
+            "term": "concrete analogy",
+            "meaning": "A useful word or chunk for communicating about flexible advanced communication with the intended level of precision.",
+            "example": "We should consider concrete analogy carefully.",
+            "imageAssetId": null
+          },
+          {
+            "itemId": "item-10",
+            "term": "underlying principle",
+            "meaning": "A useful word or chunk for communicating about flexible advanced communication with the intended level of precision.",
+            "example": "The discussion highlighted underlying principle.",
+            "imageAssetId": null
+          },
+          {
+            "itemId": "item-11",
+            "term": "adapt the register",
+            "meaning": "A useful word or chunk for communicating about flexible advanced communication with the intended level of precision.",
+            "example": "A clear explanation addresses adapt the register directly.",
+            "imageAssetId": null
+          },
+          {
+            "itemId": "item-12",
+            "term": "level of formality",
+            "meaning": "A useful word or chunk for communicating about flexible advanced communication with the intended level of precision.",
+            "example": "The speaker emphasized level of formality.",
+            "imageAssetId": null
+          }
+        ]
+      }
+    },
+    {
+      "stageId": "listening",
+      "stageType": "listening",
+      "stageSchemaVersion": 1,
+      "title": "Listen for meaning and stance",
+      "instructions": "Listen first, then reveal the text and notice connections, register, and emphasis.",
+      "required": true,
+      "payload": {
+        "segments": [
+          {
+            "segmentId": "segment-1",
+            "text": "To begin with, Our response should account for let me qualify that. This example illustrates to put it differently clearly.",
+            "audioAssetId": null
+          },
+          {
+            "segmentId": "segment-2",
+            "text": "In this situation, This example illustrates to put it differently clearly. We should consider what I am getting at carefully.",
+            "audioAssetId": null
+          },
+          {
+            "segmentId": "segment-3",
+            "text": "From another perspective, We should consider what I am getting at carefully. The discussion highlighted manage the floor.",
+            "audioAssetId": null
+          },
+          {
+            "segmentId": "segment-4",
+            "text": "More specifically, The discussion highlighted manage the floor. A clear explanation addresses redirect the discussion directly.",
+            "audioAssetId": null
+          },
+          {
+            "segmentId": "segment-5",
+            "text": "Even so, A clear explanation addresses redirect the discussion directly. The speaker emphasized resolve ambiguity.",
+            "audioAssetId": null
+          },
+          {
+            "segmentId": "segment-6",
+            "text": "As a result, The speaker emphasized resolve ambiguity. Our response should account for sustain the interaction.",
+            "audioAssetId": null
+          },
+          {
+            "segmentId": "segment-7",
+            "text": "On reflection, Our response should account for sustain the interaction. This example illustrates abstract concept clearly.",
+            "audioAssetId": null
+          }
+        ],
+        "revealTextAfterFirstPlay": true
+      }
+    },
+    {
+      "stageId": "repeat",
+      "stageType": "repeat",
+      "stageSchemaVersion": 1,
+      "title": "Repeat connected chunks",
+      "instructions": "Repeat complete, useful expressions with natural phrasing and sentence stress.",
+      "required": true,
+      "payload": {
+        "targets": [
+          {
+            "targetId": "repeat-1",
+            "text": "Our response should account for let me qualify that.",
+            "referenceAudioAssetId": null,
+            "hint": "Keep the chunk connected and preserve its intended stance."
+          },
+          {
+            "targetId": "repeat-2",
+            "text": "This example illustrates to put it differently clearly.",
+            "referenceAudioAssetId": null,
+            "hint": "Keep the chunk connected and preserve its intended stance."
+          },
+          {
+            "targetId": "repeat-3",
+            "text": "We should consider what I am getting at carefully.",
+            "referenceAudioAssetId": null,
+            "hint": "Keep the chunk connected and preserve its intended stance."
+          },
+          {
+            "targetId": "repeat-4",
+            "text": "The discussion highlighted manage the floor.",
+            "referenceAudioAssetId": null,
+            "hint": "Keep the chunk connected and preserve its intended stance."
+          },
+          {
+            "targetId": "repeat-5",
+            "text": "A clear explanation addresses redirect the discussion directly.",
+            "referenceAudioAssetId": null,
+            "hint": "Keep the chunk connected and preserve its intended stance."
+          },
+          {
+            "targetId": "repeat-6",
+            "text": "The speaker emphasized resolve ambiguity.",
+            "referenceAudioAssetId": null,
+            "hint": "Keep the chunk connected and preserve its intended stance."
+          },
+          {
+            "targetId": "repeat-7",
+            "text": "Our response should account for sustain the interaction.",
+            "referenceAudioAssetId": null,
+            "hint": "Keep the chunk connected and preserve its intended stance."
+          },
+          {
+            "targetId": "repeat-8",
+            "text": "This example illustrates abstract concept clearly.",
+            "referenceAudioAssetId": null,
+            "hint": "Keep the chunk connected and preserve its intended stance."
+          }
+        ]
+      }
+    },
+    {
+      "stageId": "speaking-check",
+      "stageType": "speaking_check",
+      "stageSchemaVersion": 1,
+      "title": "Speaking Check",
+      "instructions": "Say only expressions already prepared in this Lesson.",
+      "required": true,
+      "payload": {
+        "targets": [
+          {
+            "targetId": "speaking-1",
+            "instruction": "Say the complete prepared model naturally.",
+            "targetText": "Our response should account for let me qualify that.",
+            "hint": "Use clear phrasing and preserve every meaning-bearing word."
+          },
+          {
+            "targetId": "speaking-2",
+            "instruction": "Say the complete prepared model naturally.",
+            "targetText": "This example illustrates to put it differently clearly.",
+            "hint": "Use clear phrasing and preserve every meaning-bearing word."
+          },
+          {
+            "targetId": "speaking-3",
+            "instruction": "Say the complete prepared model naturally.",
+            "targetText": "We should consider what I am getting at carefully.",
+            "hint": "Use clear phrasing and preserve every meaning-bearing word."
+          },
+          {
+            "targetId": "speaking-4",
+            "instruction": "Say the complete prepared model naturally.",
+            "targetText": "The discussion highlighted manage the floor.",
+            "hint": "Use clear phrasing and preserve every meaning-bearing word."
+          },
+          {
+            "targetId": "speaking-5",
+            "instruction": "Say the complete prepared model naturally.",
+            "targetText": "A clear explanation addresses redirect the discussion directly.",
+            "hint": "Use clear phrasing and preserve every meaning-bearing word."
+          },
+          {
+            "targetId": "speaking-6",
+            "instruction": "Say the complete prepared model naturally.",
+            "targetText": "The speaker emphasized resolve ambiguity.",
+            "hint": "Use clear phrasing and preserve every meaning-bearing word."
+          },
+          {
+            "targetId": "speaking-7",
+            "instruction": "Say the complete prepared model naturally.",
+            "targetText": "Our response should account for sustain the interaction.",
+            "hint": "Use clear phrasing and preserve every meaning-bearing word."
+          }
+        ]
+      }
+    },
+    {
+      "stageId": "exercise",
+      "stageType": "exercise",
+      "stageSchemaVersion": 1,
+      "title": "Apply the language",
+      "instructions": "Complete each deterministic meaning, form, vocabulary, and discourse task.",
+      "required": true,
+      "payload": {
+        "items": [
+          {
+            "exerciseId": "meaning-in-context",
+            "exerciseType": "single_choice",
+            "prompt": "Choose the line that best fits the stated communicative purpose.",
+            "instructions": null,
+            "hint": "interaction repair and redirection",
+            "payload": {
+              "options": [
+                {
+                  "optionId": "a",
+                  "text": "Our response should account for let me qualify that."
+                },
+                {
+                  "optionId": "b",
+                  "text": "A clear explanation addresses redirect the discussion directly."
+                },
+                {
+                  "optionId": "c",
+                  "text": "The issue has no connection to this context."
+                }
+              ],
+              "correctOptionId": "a"
+            },
+            "feedback": {
+              "correct": "Correct. The choice fits the meaning and context.",
+              "incorrect": "Try again. Compare the context with the lesson models.",
+              "explanation": "interaction repair and redirection"
+            }
+          },
+          {
+            "exerciseId": "select-unit-language",
+            "exerciseType": "multiple_select",
+            "prompt": "Select the two chunks that support this lesson's context.",
+            "instructions": null,
+            "hint": null,
+            "payload": {
+              "options": [
+                {
+                  "optionId": "a",
+                  "text": "let me qualify that"
+                },
+                {
+                  "optionId": "b",
+                  "text": "to put it differently"
+                },
+                {
+                  "optionId": "c",
+                  "text": "unrelated mechanical component"
+                },
+                {
+                  "optionId": "d",
+                  "text": "random geological sample"
+                }
+              ],
+              "correctOptionIds": [
+                "a",
+                "b"
+              ]
+            },
+            "feedback": {
+              "correct": "Correct. The choice fits the meaning and context.",
+              "incorrect": "Try again. Compare the context with the lesson models.",
+              "explanation": "Both correct chunks were prepared in Visual Vocabulary."
+            }
+          },
+          {
+            "exerciseId": "complete-model",
+            "exerciseType": "fill_blank",
+            "prompt": "Type the complete model shown in the hint.",
+            "instructions": null,
+            "hint": "This example illustrates to put it differently clearly.",
+            "payload": {
+              "prefix": "",
+              "suffix": "",
+              "acceptedAnswers": [
+                "This example illustrates to put it differently clearly."
+              ],
+              "normalizationProfile": "english_basic_v1"
+            },
+            "feedback": {
+              "correct": "Correct. The choice fits the meaning and context.",
+              "incorrect": "Try again. Compare the context with the lesson models.",
+              "explanation": "This is a finite model-recall task."
+            }
+          },
+          {
+            "exerciseId": "order-message",
+            "exerciseType": "word_order",
+            "prompt": "Put the model in its natural order.",
+            "instructions": null,
+            "hint": null,
+            "payload": {
+              "tokens": [
+                {
+                  "tokenId": "t10",
+                  "text": "."
+                },
+                {
+                  "tokenId": "t9",
+                  "text": "that"
+                },
+                {
+                  "tokenId": "t8",
+                  "text": "qualify"
+                },
+                {
+                  "tokenId": "t7",
+                  "text": "me"
+                },
+                {
+                  "tokenId": "t6",
+                  "text": "let"
+                },
+                {
+                  "tokenId": "t5",
+                  "text": "for"
+                },
+                {
+                  "tokenId": "t4",
+                  "text": "account"
+                },
+                {
+                  "tokenId": "t3",
+                  "text": "should"
+                },
+                {
+                  "tokenId": "t2",
+                  "text": "response"
+                },
+                {
+                  "tokenId": "t1",
+                  "text": "Our"
+                }
+              ],
+              "correctOrder": [
+                "t1",
+                "t2",
+                "t3",
+                "t4",
+                "t5",
+                "t6",
+                "t7",
+                "t8",
+                "t9",
+                "t10"
+              ]
+            },
+            "feedback": {
+              "correct": "Correct. The choice fits the meaning and context.",
+              "incorrect": "Try again. Compare the context with the lesson models.",
+              "explanation": "Use the modeled English information order."
+            }
+          },
+          {
+            "exerciseId": "match-chunks",
+            "exerciseType": "matching",
+            "prompt": "Match each chunk to its communicative use.",
+            "instructions": null,
+            "hint": null,
+            "payload": {
+              "leftItems": [
+                {
+                  "itemId": "l1",
+                  "text": "let me qualify that"
+                },
+                {
+                  "itemId": "l2",
+                  "text": "to put it differently"
+                },
+                {
+                  "itemId": "l3",
+                  "text": "what I am getting at"
+                }
+              ],
+              "rightItems": [
+                {
+                  "itemId": "r1",
+                  "text": "Language used to develop point 1 in this lesson context."
+                },
+                {
+                  "itemId": "r2",
+                  "text": "Language used to develop point 2 in this lesson context."
+                },
+                {
+                  "itemId": "r3",
+                  "text": "Language used to develop point 3 in this lesson context."
+                }
+              ],
+              "correctPairs": [
+                {
+                  "leftId": "l1",
+                  "rightId": "r1"
+                },
+                {
+                  "leftId": "l2",
+                  "rightId": "r2"
+                },
+                {
+                  "leftId": "l3",
+                  "rightId": "r3"
+                }
+              ]
+            },
+            "feedback": {
+              "correct": "Correct. The choice fits the meaning and context.",
+              "incorrect": "Try again. Compare the context with the lesson models.",
+              "explanation": "Review the chunks in their contextual examples."
+            }
+          },
+          {
+            "exerciseId": "exact-finite-response",
+            "exerciseType": "short_answer_exact",
+            "prompt": "Type the exact finite model shown in the hint.",
+            "instructions": null,
+            "hint": "We should consider what I am getting at carefully.",
+            "payload": {
+              "acceptedAnswers": [
+                "We should consider what I am getting at carefully."
+              ],
+              "normalizationProfile": "english_basic_v1"
+            },
+            "feedback": {
+              "correct": "Correct. The choice fits the meaning and context.",
+              "incorrect": "Try again. Compare the context with the lesson models.",
+              "explanation": "This checks recall of one displayed model, not a subjective response."
+            }
+          },
+          {
+            "exerciseId": "distinguish-purpose-6",
+            "exerciseType": "single_choice",
+            "prompt": "Which line has the appropriate focus and register?",
+            "instructions": null,
+            "hint": "interaction repair and redirection",
+            "payload": {
+              "options": [
+                {
+                  "optionId": "a",
+                  "text": "This example illustrates abstract concept clearly."
+                },
+                {
+                  "optionId": "b",
+                  "text": "Whatever, none of that matters at all."
+                },
+                {
+                  "optionId": "c",
+                  "text": "Words are being placed without a communicative purpose."
+                }
+              ],
+              "correctOptionId": "a"
+            },
+            "feedback": {
+              "correct": "Correct. The choice fits the meaning and context.",
+              "incorrect": "Try again. Compare the context with the lesson models.",
+              "explanation": "The lesson model preserves purpose, stance, and register."
+            }
+          },
+          {
+            "exerciseId": "select-coherent-pair-7",
+            "exerciseType": "multiple_select",
+            "prompt": "Select both expressions prepared for this interaction.",
+            "instructions": null,
+            "hint": null,
+            "payload": {
+              "options": [
+                {
+                  "optionId": "a",
+                  "text": "Our response should account for let me qualify that."
+                },
+                {
+                  "optionId": "b",
+                  "text": "This example illustrates to put it differently clearly."
+                },
+                {
+                  "optionId": "c",
+                  "text": "A sentence about an unrelated appliance."
+                },
+                {
+                  "optionId": "d",
+                  "text": "An answer with no semantic connection."
+                }
+              ],
+              "correctOptionIds": [
+                "a",
+                "b"
+              ]
+            },
+            "feedback": {
+              "correct": "Correct. The choice fits the meaning and context.",
+              "incorrect": "Try again. Compare the context with the lesson models.",
+              "explanation": "Both choices belong to the same prepared exchange."
+            }
+          },
+          {
+            "exerciseId": "context-choice-8",
+            "exerciseType": "single_choice",
+            "prompt": "Choose the response that develops the same topic coherently.",
+            "instructions": null,
+            "hint": null,
+            "payload": {
+              "options": [
+                {
+                  "optionId": "a",
+                  "text": "Our response should account for let me qualify that."
+                },
+                {
+                  "optionId": "b",
+                  "text": "That conclusion ignores every detail just mentioned."
+                },
+                {
+                  "optionId": "c",
+                  "text": "A disconnected answer would change the subject."
+                }
+              ],
+              "correctOptionId": "a"
+            },
+            "feedback": {
+              "correct": "Correct. The choice fits the meaning and context.",
+              "incorrect": "Try again. Compare the context with the lesson models.",
+              "explanation": "The correct response remains relevant and coherent."
+            }
+          },
+          {
+            "exerciseId": "vocabulary-recall-9",
+            "exerciseType": "fill_blank",
+            "prompt": "Type the exact chunk displayed in the hint.",
+            "instructions": null,
+            "hint": "underlying principle",
+            "payload": {
+              "prefix": "",
+              "suffix": "",
+              "acceptedAnswers": [
+                "underlying principle"
+              ],
+              "normalizationProfile": "english_basic_v1"
+            },
+            "feedback": {
+              "correct": "Correct. The choice fits the meaning and context.",
+              "incorrect": "Try again. Compare the context with the lesson models.",
+              "explanation": "The answer is one finite prepared chunk."
+            }
+          },
+          {
+            "exerciseId": "distinguish-purpose-10",
+            "exerciseType": "single_choice",
+            "prompt": "Which line has the appropriate focus and register?",
+            "instructions": null,
+            "hint": "interaction repair and redirection",
+            "payload": {
+              "options": [
+                {
+                  "optionId": "a",
+                  "text": "The discussion highlighted manage the floor."
+                },
+                {
+                  "optionId": "b",
+                  "text": "Whatever, none of that matters at all."
+                },
+                {
+                  "optionId": "c",
+                  "text": "Words are being placed without a communicative purpose."
+                }
+              ],
+              "correctOptionId": "a"
+            },
+            "feedback": {
+              "correct": "Correct. The choice fits the meaning and context.",
+              "incorrect": "Try again. Compare the context with the lesson models.",
+              "explanation": "The lesson model preserves purpose, stance, and register."
+            }
+          },
+          {
+            "exerciseId": "select-coherent-pair-11",
+            "exerciseType": "multiple_select",
+            "prompt": "Select both expressions prepared for this interaction.",
+            "instructions": null,
+            "hint": null,
+            "payload": {
+              "options": [
+                {
+                  "optionId": "a",
+                  "text": "Our response should account for let me qualify that."
+                },
+                {
+                  "optionId": "b",
+                  "text": "This example illustrates to put it differently clearly."
+                },
+                {
+                  "optionId": "c",
+                  "text": "A sentence about an unrelated appliance."
+                },
+                {
+                  "optionId": "d",
+                  "text": "An answer with no semantic connection."
+                }
+              ],
+              "correctOptionIds": [
+                "a",
+                "b"
+              ]
+            },
+            "feedback": {
+              "correct": "Correct. The choice fits the meaning and context.",
+              "incorrect": "Try again. Compare the context with the lesson models.",
+              "explanation": "Both choices belong to the same prepared exchange."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "stageId": "guided-conversation",
+      "stageType": "guided_conversation",
+      "stageSchemaVersion": 1,
+      "title": "Managing Complex Interaction conversation",
+      "instructions": "Sustain the interaction, respond to follow-ups, and use the prepared language flexibly.",
+      "required": true,
+      "payload": {
+        "scenario": "You are taking part in a realistic C1 discussion about flexible advanced communication. The immediate task is managing complex interaction; develop the issue, respond to new information, and reach an appropriate communicative outcome.",
+        "studentRole": "Independent English user contributing and responding",
+        "teacherRole": "Responsive conversation partner who probes, clarifies, and challenges appropriately",
+        "goal": "Use interaction repair and redirection to analyze and communicate ideas related to managing complex interaction with appropriate C1 complexity.",
+        "targetVocabulary": [
+          "let me qualify that",
+          "to put it differently",
+          "what I am getting at",
+          "manage the floor",
+          "redirect the discussion",
+          "resolve ambiguity",
+          "sustain the interaction",
+          "abstract concept",
+          "concrete analogy",
+          "underlying principle",
+          "adapt the register",
+          "level of formality"
+        ],
+        "targetExpressions": [
+          "Our response should account for let me qualify that.",
+          "This example illustrates to put it differently clearly.",
+          "We should consider what I am getting at carefully.",
+          "The discussion highlighted manage the floor.",
+          "A clear explanation addresses redirect the discussion directly.",
+          "The speaker emphasized resolve ambiguity.",
+          "Our response should account for sustain the interaction.",
+          "This example illustrates abstract concept clearly."
+        ],
+        "minimumStudentTurns": 8,
+        "recommendedStudentTurns": 11,
+        "maximumStudentTurns": 16
+      }
+    },
+    {
+      "stageId": "analysis",
+      "stageType": "analysis",
+      "stageSchemaVersion": 1,
+      "title": "Lesson Review",
+      "instructions": "Review evidence from the completed Lesson with Interactive Lesson Analysis v1.",
+      "required": true,
+      "payload": {}
+    }
+  ]
+}

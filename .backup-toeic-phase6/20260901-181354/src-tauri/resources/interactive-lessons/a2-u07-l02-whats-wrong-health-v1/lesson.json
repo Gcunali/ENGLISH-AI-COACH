@@ -1,0 +1,620 @@
+{
+  "packageSchemaVersion": 1,
+  "lessonFlowVersion": 1,
+  "lessonId": "a2-u07-l02-whats-wrong-health",
+  "contentVersion": 1,
+  "publicationState": "published",
+  "title": "What's Wrong?",
+  "description": "Describe common symptoms and answer basic follow-up questions.",
+  "language": "en",
+  "referenceLocale": "en-US",
+  "cefrBand": "A2",
+  "estimatedMinutes": 30,
+  "objectives": [
+    "Describe common symptoms and answer basic follow-up questions."
+  ],
+  "tags": [
+    "english-core",
+    "a2",
+    "unit-07",
+    "production"
+  ],
+  "assets": [],
+  "stages": [
+    {
+      "stageId": "theory",
+      "stageType": "theory",
+      "stageSchemaVersion": 1,
+      "title": "Understand the language",
+      "instructions": "Read the explanation, examples, common error, and recap.",
+      "required": true,
+      "payload": {
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "This lesson prepares you to describe common symptoms and answer basic follow-up questions. The central language is have plus symptom and feel plus adjective. It belongs to the practical context of health & everyday problems. Focus first on meaning: decide what information the listener needs. Then choose the subject, verb form, and useful detail. At A2, connect the main message to a time, reason, contrast, or result. Listen for context before choosing the tense or functional phrase. The same language returns in the listening, repeat, speaking, exercises, and guided conversation stages."
+          },
+          {
+            "type": "callout",
+            "title": "Pattern",
+            "text": "have plus symptom and feel plus adjective"
+          },
+          {
+            "type": "example",
+            "english": "I have a sore throat and a cough.",
+            "explanation": "Use this model to begin the what's wrong? exchange."
+          },
+          {
+            "type": "example",
+            "english": "I've felt tired since yesterday.",
+            "explanation": "This what's wrong? model adds a different detail or response."
+          },
+          {
+            "type": "example",
+            "english": "What's wrong?",
+            "explanation": "Use this question or response to keep the what's wrong? exchange moving."
+          },
+          {
+            "type": "paragraph",
+            "text": "Notice the two models: “I have a sore throat and a cough.” and “I've felt tired since yesterday.” They show the pattern in complete communication, not as isolated grammar. Say the model aloud, replace one detail, and check that the new sentence keeps the intended meaning. When the other person asks a follow-up question, answer directly and add a relevant detail. This makes the exchange natural while keeping the language controlled. Compare the time and viewpoint in each model, and use a linker when two ideas need a clear relationship. Avoid adding advanced forms when the lesson pattern already communicates the message accurately."
+          },
+          {
+            "type": "callout",
+            "title": "Common error",
+            "text": "Do not mix the word order or verb form with another pattern. Keep the controlled form for this lesson: have plus symptom and feel plus adjective."
+          },
+          {
+            "type": "bullet_list",
+            "items": [
+              "Communicative goal: Describe common symptoms and answer basic follow-up questions.",
+              "Core pattern: have plus symptom and feel plus adjective.",
+              "Use one clear model, add a relevant detail, and respond to the other speaker."
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "stageId": "visual-vocabulary",
+      "stageType": "visual_vocabulary",
+      "stageSchemaVersion": 1,
+      "title": "Build your vocabulary",
+      "instructions": "Study each term, meaning, and contextual example.",
+      "required": true,
+      "payload": {
+        "items": [
+          {
+            "itemId": "stomach",
+            "term": "stomach",
+            "meaning": "the organ that receives food",
+            "example": "Use “stomach” while you practice what's wrong? in context.",
+            "imageAssetId": null
+          },
+          {
+            "itemId": "back",
+            "term": "back",
+            "meaning": "the rear part of the body from shoulders to hips",
+            "example": "Use “back” while you practice what's wrong? in context.",
+            "imageAssetId": null
+          },
+          {
+            "itemId": "fever",
+            "term": "fever",
+            "meaning": "a body temperature higher than normal",
+            "example": "Use “fever” while you practice what's wrong? in context.",
+            "imageAssetId": null
+          },
+          {
+            "itemId": "cough",
+            "term": "cough",
+            "meaning": "force air noisily from the lungs",
+            "example": "Use “cough” while you practice what's wrong? in context.",
+            "imageAssetId": null
+          },
+          {
+            "itemId": "sore",
+            "term": "sore",
+            "meaning": "painful or uncomfortable",
+            "example": "Use “sore” while you practice what's wrong? in context.",
+            "imageAssetId": null
+          },
+          {
+            "itemId": "medicine",
+            "term": "medicine",
+            "meaning": "a substance used to treat illness",
+            "example": "Use “medicine” while you practice what's wrong? in context.",
+            "imageAssetId": null
+          },
+          {
+            "itemId": "pharmacy",
+            "term": "pharmacy",
+            "meaning": "a store that prepares and sells medicine",
+            "example": "Use “pharmacy” while you practice what's wrong? in context.",
+            "imageAssetId": null
+          },
+          {
+            "itemId": "dose",
+            "term": "dose",
+            "meaning": "the measured amount of medicine taken at one time",
+            "example": "Use “dose” while you practice what's wrong? in context.",
+            "imageAssetId": null
+          },
+          {
+            "itemId": "rest",
+            "term": "rest",
+            "meaning": "stop activity to recover energy",
+            "example": "Use “rest” while you practice what's wrong? in context.",
+            "imageAssetId": null
+          }
+        ]
+      }
+    },
+    {
+      "stageId": "listening",
+      "stageType": "listening",
+      "stageSchemaVersion": 1,
+      "title": "Listen in context",
+      "instructions": "Listen before revealing the text, then notice the target pattern.",
+      "required": true,
+      "payload": {
+        "segments": [
+          {
+            "segmentId": "segment-1",
+            "text": "I have a sore throat and a cough. I've felt tired since yesterday.",
+            "audioAssetId": null
+          },
+          {
+            "segmentId": "segment-2",
+            "text": "What's wrong? I can explain how I feel.",
+            "audioAssetId": null
+          },
+          {
+            "segmentId": "segment-3",
+            "text": "I've felt tired since yesterday. What's wrong?",
+            "audioAssetId": null
+          },
+          {
+            "segmentId": "segment-4",
+            "text": "I can explain how I feel. Thanks for talking about health & everyday problems with me.",
+            "audioAssetId": null
+          }
+        ],
+        "revealTextAfterFirstPlay": true
+      }
+    },
+    {
+      "stageId": "repeat",
+      "stageType": "repeat",
+      "stageSchemaVersion": 1,
+      "title": "Repeat useful chunks",
+      "instructions": "Repeat each complete expression with clear rhythm.",
+      "required": true,
+      "payload": {
+        "targets": [
+          {
+            "targetId": "repeat-1",
+            "text": "I have a sore throat and a cough.",
+            "referenceAudioAssetId": null,
+            "hint": "Keep the words together as one communicative chunk."
+          },
+          {
+            "targetId": "repeat-2",
+            "text": "I've felt tired since yesterday.",
+            "referenceAudioAssetId": null,
+            "hint": "Keep the words together as one communicative chunk."
+          },
+          {
+            "targetId": "repeat-3",
+            "text": "What's wrong?",
+            "referenceAudioAssetId": null,
+            "hint": "Keep the words together as one communicative chunk."
+          },
+          {
+            "targetId": "repeat-4",
+            "text": "I can explain how I feel.",
+            "referenceAudioAssetId": null,
+            "hint": "Keep the words together as one communicative chunk."
+          },
+          {
+            "targetId": "repeat-5",
+            "text": "Thanks for talking about health & everyday problems with me.",
+            "referenceAudioAssetId": null,
+            "hint": "Keep the words together as one communicative chunk."
+          }
+        ]
+      }
+    },
+    {
+      "stageId": "speaking-check",
+      "stageType": "speaking_check",
+      "stageSchemaVersion": 1,
+      "title": "Speaking Check",
+      "instructions": "Say expressions already presented in this Lesson.",
+      "required": true,
+      "payload": {
+        "targets": [
+          {
+            "targetId": "speaking-1",
+            "instruction": "Say the complete model naturally.",
+            "targetText": "I have a sore throat and a cough.",
+            "hint": "Use the same words and clear sentence stress."
+          },
+          {
+            "targetId": "speaking-2",
+            "instruction": "Say the complete model naturally.",
+            "targetText": "I've felt tired since yesterday.",
+            "hint": "Use the same words and clear sentence stress."
+          },
+          {
+            "targetId": "speaking-3",
+            "instruction": "Say the complete model naturally.",
+            "targetText": "What's wrong?",
+            "hint": "Use the same words and clear sentence stress."
+          },
+          {
+            "targetId": "speaking-4",
+            "instruction": "Say the complete model naturally.",
+            "targetText": "I can explain how I feel.",
+            "hint": "Use the same words and clear sentence stress."
+          }
+        ]
+      }
+    },
+    {
+      "stageId": "exercise",
+      "stageType": "exercise",
+      "stageSchemaVersion": 1,
+      "title": "Check your understanding",
+      "instructions": "Complete each deterministic practice item.",
+      "required": true,
+      "payload": {
+        "items": [
+          {
+            "exerciseId": "choose-model",
+            "exerciseType": "single_choice",
+            "prompt": "Choose the model that fits the communicative goal.",
+            "instructions": null,
+            "hint": "Describe common symptoms and answer basic follow-up questions.",
+            "payload": {
+              "options": [
+                {
+                  "optionId": "a",
+                  "text": "I have a sore throat and a cough."
+                },
+                {
+                  "optionId": "b",
+                  "text": "The purple engine sleeps quickly."
+                },
+                {
+                  "optionId": "c",
+                  "text": "No information is possible."
+                }
+              ],
+              "correctOptionId": "a"
+            },
+            "feedback": {
+              "correct": "Correct. The answer fits the lesson context.",
+              "incorrect": "Try again and use the model from this lesson.",
+              "explanation": "have plus symptom and feel plus adjective"
+            }
+          },
+          {
+            "exerciseId": "select-core-vocabulary",
+            "exerciseType": "multiple_select",
+            "prompt": "Select both words that belong to this lesson context.",
+            "instructions": null,
+            "hint": "Health & Everyday Problems",
+            "payload": {
+              "options": [
+                {
+                  "optionId": "a",
+                  "text": "stomach"
+                },
+                {
+                  "optionId": "b",
+                  "text": "back"
+                },
+                {
+                  "optionId": "c",
+                  "text": "industrial turbine"
+                },
+                {
+                  "optionId": "d",
+                  "text": "quantum geology"
+                }
+              ],
+              "correctOptionIds": [
+                "a",
+                "b"
+              ]
+            },
+            "feedback": {
+              "correct": "Correct. The answer fits the lesson context.",
+              "incorrect": "Try again and use the model from this lesson.",
+              "explanation": "Both correct words appear in Visual Vocabulary."
+            }
+          },
+          {
+            "exerciseId": "complete-response",
+            "exerciseType": "fill_blank",
+            "prompt": "Type the exact practiced response shown in the hint.",
+            "instructions": null,
+            "hint": "I've felt tired since yesterday.",
+            "payload": {
+              "prefix": "",
+              "suffix": "",
+              "acceptedAnswers": [
+                "I've felt tired since yesterday."
+              ],
+              "normalizationProfile": "english_basic_v1"
+            },
+            "feedback": {
+              "correct": "Correct. The answer fits the lesson context.",
+              "incorrect": "Try again and use the model from this lesson.",
+              "explanation": "Use the complete model response."
+            }
+          },
+          {
+            "exerciseId": "order-model",
+            "exerciseType": "word_order",
+            "prompt": "Put the model in its natural order.",
+            "instructions": null,
+            "hint": null,
+            "payload": {
+              "tokens": [
+                {
+                  "tokenId": "t9",
+                  "text": "."
+                },
+                {
+                  "tokenId": "t8",
+                  "text": "cough"
+                },
+                {
+                  "tokenId": "t7",
+                  "text": "a"
+                },
+                {
+                  "tokenId": "t6",
+                  "text": "and"
+                },
+                {
+                  "tokenId": "t5",
+                  "text": "throat"
+                },
+                {
+                  "tokenId": "t4",
+                  "text": "sore"
+                },
+                {
+                  "tokenId": "t3",
+                  "text": "a"
+                },
+                {
+                  "tokenId": "t2",
+                  "text": "have"
+                },
+                {
+                  "tokenId": "t1",
+                  "text": "I"
+                }
+              ],
+              "correctOrder": [
+                "t1",
+                "t2",
+                "t3",
+                "t4",
+                "t5",
+                "t6",
+                "t7",
+                "t8",
+                "t9"
+              ]
+            },
+            "feedback": {
+              "correct": "Correct. The answer fits the lesson context.",
+              "incorrect": "Try again and use the model from this lesson.",
+              "explanation": "Keep the modeled English word order."
+            }
+          },
+          {
+            "exerciseId": "match-vocabulary",
+            "exerciseType": "matching",
+            "prompt": "Match each term to its meaning.",
+            "instructions": null,
+            "hint": null,
+            "payload": {
+              "leftItems": [
+                {
+                  "itemId": "l1",
+                  "text": "stomach"
+                },
+                {
+                  "itemId": "l2",
+                  "text": "back"
+                },
+                {
+                  "itemId": "l3",
+                  "text": "fever"
+                }
+              ],
+              "rightItems": [
+                {
+                  "itemId": "r1",
+                  "text": "the organ that receives food"
+                },
+                {
+                  "itemId": "r2",
+                  "text": "the rear part of the body from shoulders to hips"
+                },
+                {
+                  "itemId": "r3",
+                  "text": "a body temperature higher than normal"
+                }
+              ],
+              "correctPairs": [
+                {
+                  "leftId": "l1",
+                  "rightId": "r1"
+                },
+                {
+                  "leftId": "l2",
+                  "rightId": "r2"
+                },
+                {
+                  "leftId": "l3",
+                  "rightId": "r3"
+                }
+              ]
+            },
+            "feedback": {
+              "correct": "Correct. The answer fits the lesson context.",
+              "incorrect": "Try again and use the model from this lesson.",
+              "explanation": "Review each term with its meaning and example."
+            }
+          },
+          {
+            "exerciseId": "exact-useful-chunk",
+            "exerciseType": "short_answer_exact",
+            "prompt": "Type the finite model chunk shown in the hint.",
+            "instructions": null,
+            "hint": "What's wrong?",
+            "payload": {
+              "acceptedAnswers": [
+                "What's wrong?"
+              ],
+              "normalizationProfile": "english_basic_v1"
+            },
+            "feedback": {
+              "correct": "Correct. The answer fits the lesson context.",
+              "incorrect": "Try again and use the model from this lesson.",
+              "explanation": "This checks one exact practiced chunk, not an open response."
+            }
+          },
+          {
+            "exerciseId": "choose-correct-form",
+            "exerciseType": "single_choice",
+            "prompt": "Which sentence follows the lesson pattern?",
+            "instructions": null,
+            "hint": "have plus symptom and feel plus adjective",
+            "payload": {
+              "options": [
+                {
+                  "optionId": "a",
+                  "text": "I've felt tired since yesterday."
+                },
+                {
+                  "optionId": "b",
+                  "text": "She are did going."
+                },
+                {
+                  "optionId": "c",
+                  "text": "I is to yesterday."
+                }
+              ],
+              "correctOptionId": "a"
+            },
+            "feedback": {
+              "correct": "Correct. The answer fits the lesson context.",
+              "incorrect": "Try again and use the model from this lesson.",
+              "explanation": "have plus symptom and feel plus adjective"
+            }
+          },
+          {
+            "exerciseId": "recall-vocabulary",
+            "exerciseType": "fill_blank",
+            "prompt": "Type the term that means: force air noisily from the lungs",
+            "instructions": null,
+            "hint": "It appears in Visual Vocabulary.",
+            "payload": {
+              "prefix": "",
+              "suffix": "",
+              "acceptedAnswers": [
+                "cough"
+              ],
+              "normalizationProfile": "english_basic_v1"
+            },
+            "feedback": {
+              "correct": "Correct. The answer fits the lesson context.",
+              "incorrect": "Try again and use the model from this lesson.",
+              "explanation": "force air noisily from the lungs"
+            }
+          },
+          {
+            "exerciseId": "context-choice",
+            "exerciseType": "single_choice",
+            "prompt": "Choose the response that adds a relevant detail.",
+            "instructions": null,
+            "hint": "A2 responses connect ideas and context.",
+            "payload": {
+              "options": [
+                {
+                  "optionId": "a",
+                  "text": "I can explain how I feel."
+                },
+                {
+                  "optionId": "b",
+                  "text": "Banana seven because blue."
+                },
+                {
+                  "optionId": "c",
+                  "text": "I have no sentence."
+                }
+              ],
+              "correctOptionId": "a"
+            },
+            "feedback": {
+              "correct": "Correct. The answer fits the lesson context.",
+              "incorrect": "Try again and use the model from this lesson.",
+              "explanation": "Use a relevant follow-up in the same situation."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "stageId": "guided-conversation",
+      "stageType": "guided_conversation",
+      "stageSchemaVersion": 1,
+      "title": "Health & Everyday Problems conversation",
+      "instructions": "Use the prepared language in a practical exchange.",
+      "required": true,
+      "payload": {
+        "scenario": "You are in a realistic everyday situation related to health & everyday problems. Practice what's wrong? and respond to relevant follow-up questions.",
+        "studentRole": "English learner handling the situation",
+        "teacherRole": "Helpful conversation partner",
+        "goal": "Describe common symptoms and answer basic follow-up questions.",
+        "targetVocabulary": [
+          "stomach",
+          "back",
+          "fever",
+          "cough",
+          "sore",
+          "medicine",
+          "pharmacy",
+          "dose",
+          "rest"
+        ],
+        "targetExpressions": [
+          "I have a sore throat and a cough.",
+          "I've felt tired since yesterday.",
+          "What's wrong?",
+          "I can explain how I feel.",
+          "Thanks for talking about health & everyday problems with me."
+        ],
+        "minimumStudentTurns": 5,
+        "recommendedStudentTurns": 7,
+        "maximumStudentTurns": 10
+      }
+    },
+    {
+      "stageId": "analysis",
+      "stageType": "analysis",
+      "stageSchemaVersion": 1,
+      "title": "Lesson Review",
+      "instructions": "Review the evidence from your completed practice.",
+      "required": true,
+      "payload": {}
+    }
+  ]
+}

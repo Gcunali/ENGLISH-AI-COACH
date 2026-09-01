@@ -1,0 +1,21 @@
+{
+  "packageSchemaVersion": 1,
+  "lessonFlowVersion": 1,
+  "lessonId": "phase-v-deterministic-a1",
+  "contentVersion": 1,
+  "publicationState": "published",
+  "title": "Deterministic Review Fixture",
+  "description": "TEST-only Theory, Exercise and Analysis fixture.",
+  "language": "en",
+  "referenceLocale": "en-US",
+  "cefrBand": "A1",
+  "estimatedMinutes": 3,
+  "objectives": ["Practice one exact answer."],
+  "tags": ["test-only", "phase-v"],
+  "assets": [],
+  "stages": [
+    {"stageId":"theory","stageType":"theory","stageSchemaVersion":1,"title":"Read","instructions":"Read the note.","required":true,"payload":{"blocks":[{"type":"paragraph","text":"This fixture tests deterministic analysis."}]}},
+    {"stageId":"exercise","stageType":"exercise","stageSchemaVersion":1,"title":"Practice","instructions":"Complete the exercise.","required":true,"payload":{"items":[{"exerciseId":"exact","exerciseType":"short_answer_exact","prompt":"Type coffee.","instructions":null,"hint":null,"payload":{"acceptedAnswers":["coffee"],"normalizationProfile":"english_basic_v1"},"feedback":{"correct":"Correct.","incorrect":"Try again.","explanation":null}}]}},
+    {"stageId":"analysis","stageType":"analysis","stageSchemaVersion":1,"title":"Lesson Review","instructions":"Review your practice results.","required":true,"payload":{}}
+  ]
+}

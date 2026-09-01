@@ -114,6 +114,9 @@ pub fn migrate(path: &Path) -> Result<(), String> {
         .execute_batch(include_str!("../migrations/022_toeic_full_listening.sql"))
         .map_err(|error| format!("TOEIC full listening migration failed: {error}"))?;
     transaction
+        .execute_batch(include_str!("../migrations/023_toeic_full_reading.sql"))
+        .map_err(|error| format!("TOEIC full reading migration failed: {error}"))?;
+    transaction
         .commit()
         .map_err(|error| format!("Could not commit database migration: {error}"))?;
     Ok(())
@@ -1184,4 +1187,3 @@ mod tests {
         println!("physical_phase_u|schema=18|counts={after_counts:?}|guided_turns=0|integrity=ok|foreign_keys=0");
     }
 }
-

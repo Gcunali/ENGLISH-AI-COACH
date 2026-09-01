@@ -1,0 +1,957 @@
+{
+  "schemaVersion": 1,
+  "bankId": "toeic-listening-part4-v1",
+  "forms": [
+    {
+      "formId": "toeic-part4-form-a",
+      "formVersion": 1,
+      "setIds": [
+        "toeic-l-p4-set-01",
+        "toeic-l-p4-set-02",
+        "toeic-l-p4-set-03",
+        "toeic-l-p4-set-04",
+        "toeic-l-p4-set-05",
+        "toeic-l-p4-set-06",
+        "toeic-l-p4-set-07",
+        "toeic-l-p4-set-08",
+        "toeic-l-p4-set-09",
+        "toeic-l-p4-set-10"
+      ]
+    }
+  ],
+  "sets": [
+    {
+      "setId": "toeic-l-p4-set-01",
+      "version": 1,
+      "difficulty": "easy",
+      "scenario": "airport announcement",
+      "speakers": [
+        {
+          "id": "speaker",
+          "voice": "amy",
+          "accent": "en-US"
+        }
+      ],
+      "turns": [
+        [
+          "speaker",
+          "Attention passengers traveling on Northstar Flight 218 to Denver. Boarding will begin at Gate 14 in approximately fifteen minutes. Families with small children and passengers who need extra assistance may board first. All other passengers should remain in the seating area until their group number is called. Please have your boarding pass and identification ready. The flight is full, so larger carry-on bags may need to be checked at the gate at no additional charge."
+        ]
+      ],
+      "questions": [
+        {
+          "id": "toeic-l-p4-set-01-q1",
+          "text": "What is the purpose of the announcement?",
+          "choices": [
+            "To explain a boarding procedure",
+            "To advertise a new flight",
+            "To report lost luggage",
+            "To change a ticket price"
+          ],
+          "answer": "A",
+          "type": "purpose",
+          "skill": "listening comprehension",
+          "difficulty": "easy",
+          "explanation": "The correct answer follows from this evidence: Boarding instructions and priority groups are announced.",
+          "wrong": {
+            "B": "Choice B conflicts with the specific information stated in the talk.",
+            "C": "Choice C conflicts with the specific information stated in the talk.",
+            "D": "Choice D conflicts with the specific information stated in the talk."
+          },
+          "evidence": "boarding procedure",
+          "notice": "Listen for the speaker's purpose, details, and paraphrased meaning."
+        },
+        {
+          "id": "toeic-l-p4-set-01-q2",
+          "text": "Who may board first?",
+          "choices": [
+            "Passengers seated near the window",
+            "Families with small children",
+            "People without carry-on bags",
+            "Travelers going to Denver tomorrow"
+          ],
+          "answer": "B",
+          "type": "detail",
+          "skill": "listening comprehension",
+          "difficulty": "easy",
+          "explanation": "The correct answer follows from this evidence: Families and passengers needing assistance receive priority.",
+          "wrong": {
+            "A": "Choice A conflicts with the specific information stated in the talk.",
+            "C": "Choice C conflicts with the specific information stated in the talk.",
+            "D": "Choice D conflicts with the specific information stated in the talk."
+          },
+          "evidence": "families",
+          "notice": "Listen for the speaker's purpose, details, and paraphrased meaning."
+        },
+        {
+          "id": "toeic-l-p4-set-01-q3",
+          "text": "What is suggested about the flight?",
+          "choices": [
+            "It will leave from another airport",
+            "It has been canceled",
+            "It has no empty seats",
+            "It includes a free meal"
+          ],
+          "answer": "C",
+          "type": "inference",
+          "skill": "listening comprehension",
+          "difficulty": "easy",
+          "explanation": "The correct answer follows from this evidence: The speaker explicitly says the flight is full.",
+          "wrong": {
+            "A": "Choice A conflicts with the specific information stated in the talk.",
+            "B": "Choice B conflicts with the specific information stated in the talk.",
+            "D": "Choice D conflicts with the specific information stated in the talk."
+          },
+          "evidence": "flight is full",
+          "notice": "Listen for the speaker's purpose, details, and paraphrased meaning."
+        }
+      ]
+    },
+    {
+      "setId": "toeic-l-p4-set-02",
+      "version": 1,
+      "difficulty": "easy",
+      "scenario": "office voicemail",
+      "speakers": [
+        {
+          "id": "speaker",
+          "voice": "lessac",
+          "accent": "en-US"
+        }
+      ],
+      "turns": [
+        [
+          "speaker",
+          "Hello, Ms. Rivera. This is Daniel from Bright Office Supplies. I am calling about the printer paper you ordered on Tuesday. The white paper is ready for delivery, but the blue paper is temporarily out of stock. We expect a new shipment on Friday. We can deliver the available items tomorrow and send the blue paper separately next week, or hold the entire order until Monday. Please call me before four o'clock today and tell me which option you prefer."
+        ]
+      ],
+      "questions": [
+        {
+          "id": "toeic-l-p4-set-02-q1",
+          "text": "Why is Daniel calling?",
+          "choices": [
+            "To confirm a job interview",
+            "To repair a printer",
+            "To request a price list",
+            "To discuss an order"
+          ],
+          "answer": "D",
+          "type": "purpose",
+          "skill": "listening comprehension",
+          "difficulty": "easy",
+          "explanation": "The correct answer follows from this evidence: Daniel explains a supply problem involving an order.",
+          "wrong": {
+            "A": "Choice A conflicts with the specific information stated in the talk.",
+            "B": "Choice B conflicts with the specific information stated in the talk.",
+            "C": "Choice C conflicts with the specific information stated in the talk."
+          },
+          "evidence": "order",
+          "notice": "Listen for the speaker's purpose, details, and paraphrased meaning."
+        },
+        {
+          "id": "toeic-l-p4-set-02-q2",
+          "text": "What item is unavailable?",
+          "choices": [
+            "Blue printer paper",
+            "A new printer",
+            "White printer paper",
+            "Delivery boxes"
+          ],
+          "answer": "A",
+          "type": "detail",
+          "skill": "listening comprehension",
+          "difficulty": "easy",
+          "explanation": "The correct answer follows from this evidence: The blue paper is temporarily out of stock.",
+          "wrong": {
+            "B": "Choice B conflicts with the specific information stated in the talk.",
+            "C": "Choice C conflicts with the specific information stated in the talk.",
+            "D": "Choice D conflicts with the specific information stated in the talk."
+          },
+          "evidence": "blue paper",
+          "notice": "Listen for the speaker's purpose, details, and paraphrased meaning."
+        },
+        {
+          "id": "toeic-l-p4-set-02-q3",
+          "text": "What does Daniel ask Ms. Rivera to do?",
+          "choices": [
+            "Visit the store on Friday",
+            "Call before four o'clock",
+            "Cancel the entire order",
+            "Pay an additional fee"
+          ],
+          "answer": "B",
+          "type": "request",
+          "skill": "listening comprehension",
+          "difficulty": "easy",
+          "explanation": "The correct answer follows from this evidence: He asks her to call before four with her preference.",
+          "wrong": {
+            "A": "Choice A conflicts with the specific information stated in the talk.",
+            "C": "Choice C conflicts with the specific information stated in the talk.",
+            "D": "Choice D conflicts with the specific information stated in the talk."
+          },
+          "evidence": "call before four",
+          "notice": "Listen for the speaker's purpose, details, and paraphrased meaning."
+        }
+      ]
+    },
+    {
+      "setId": "toeic-l-p4-set-03",
+      "version": 1,
+      "difficulty": "medium",
+      "scenario": "museum tour",
+      "speakers": [
+        {
+          "id": "speaker",
+          "voice": "amy",
+          "accent": "en-US"
+        }
+      ],
+      "turns": [
+        [
+          "speaker",
+          "Welcome to the Harbor City History Museum. Before we begin our guided tour, please place backpacks and large bags in the lockers beside the information desk. Photography is allowed in most galleries, but flash equipment is prohibited because it can damage older materials. Our tour starts here on the first floor with the city's maritime collection. At eleven thirty, we will continue upstairs to the special exhibition on early photography. The museum cafÃ© will remain open until three o'clock today."
+        ]
+      ],
+      "questions": [
+        {
+          "id": "toeic-l-p4-set-03-q1",
+          "text": "Where most likely are the listeners?",
+          "choices": [
+            "At a photography store",
+            "At a train station",
+            "At a history museum",
+            "At a city cafÃ©"
+          ],
+          "answer": "C",
+          "type": "location",
+          "skill": "listening comprehension",
+          "difficulty": "medium",
+          "explanation": "The correct answer follows from this evidence: The welcome and gallery rules identify a museum.",
+          "wrong": {
+            "A": "Choice A conflicts with the specific information stated in the talk.",
+            "B": "Choice B conflicts with the specific information stated in the talk.",
+            "D": "Choice D conflicts with the specific information stated in the talk."
+          },
+          "evidence": "museum",
+          "notice": "Listen for the speaker's purpose, details, and paraphrased meaning."
+        },
+        {
+          "id": "toeic-l-p4-set-03-q2",
+          "text": "What are visitors asked to do before the tour?",
+          "choices": [
+            "Buy a camera permit",
+            "Meet upstairs",
+            "Order lunch at the cafÃ©",
+            "Store large bags in lockers"
+          ],
+          "answer": "D",
+          "type": "request",
+          "skill": "listening comprehension",
+          "difficulty": "medium",
+          "explanation": "The correct answer follows from this evidence: Visitors must place large bags in the lockers.",
+          "wrong": {
+            "A": "Choice A conflicts with the specific information stated in the talk.",
+            "B": "Choice B conflicts with the specific information stated in the talk.",
+            "C": "Choice C conflicts with the specific information stated in the talk."
+          },
+          "evidence": "lockers",
+          "notice": "Listen for the speaker's purpose, details, and paraphrased meaning."
+        },
+        {
+          "id": "toeic-l-p4-set-03-q3",
+          "text": "What will happen at eleven thirty?",
+          "choices": [
+            "The group will go upstairs",
+            "The cafÃ© will close",
+            "A photographer will arrive",
+            "The maritime collection will open"
+          ],
+          "answer": "A",
+          "type": "future_action",
+          "skill": "listening comprehension",
+          "difficulty": "medium",
+          "explanation": "The correct answer follows from this evidence: The tour continues upstairs at eleven thirty.",
+          "wrong": {
+            "B": "Choice B conflicts with the specific information stated in the talk.",
+            "C": "Choice C conflicts with the specific information stated in the talk.",
+            "D": "Choice D conflicts with the specific information stated in the talk."
+          },
+          "evidence": "upstairs",
+          "notice": "Listen for the speaker's purpose, details, and paraphrased meaning."
+        }
+      ]
+    },
+    {
+      "setId": "toeic-l-p4-set-04",
+      "version": 1,
+      "difficulty": "medium",
+      "scenario": "weather report",
+      "speakers": [
+        {
+          "id": "speaker",
+          "voice": "lessac",
+          "accent": "en-US"
+        }
+      ],
+      "turns": [
+        [
+          "speaker",
+          "Here is your regional weather update. Light rain will continue through the morning, especially near the coast. By early afternoon, the clouds should begin to clear from west to east, and temperatures will reach about eighteen degrees. Drivers should use caution on Route Six because road crews are repairing a section near Lakeside. Tomorrow will be warmer and mostly sunny, making it a better day for outdoor events. The next complete forecast will follow the noon news."
+        ]
+      ],
+      "questions": [
+        {
+          "id": "toeic-l-p4-set-04-q1",
+          "text": "What is expected early this afternoon?",
+          "choices": [
+            "Heavy snow will begin",
+            "Clouds will start clearing",
+            "Temperatures will fall",
+            "Coastal winds will stop"
+          ],
+          "answer": "B",
+          "type": "future_action",
+          "skill": "listening comprehension",
+          "difficulty": "medium",
+          "explanation": "The correct answer follows from this evidence: The forecast says clouds should begin to clear.",
+          "wrong": {
+            "A": "Choice A conflicts with the specific information stated in the talk.",
+            "C": "Choice C conflicts with the specific information stated in the talk.",
+            "D": "Choice D conflicts with the specific information stated in the talk."
+          },
+          "evidence": "clouds clear",
+          "notice": "Listen for the speaker's purpose, details, and paraphrased meaning."
+        },
+        {
+          "id": "toeic-l-p4-set-04-q2",
+          "text": "Why should drivers be careful on Route Six?",
+          "choices": [
+            "A bridge is closed",
+            "Rain has caused flooding",
+            "The road is being repaired",
+            "An event is taking place"
+          ],
+          "answer": "C",
+          "type": "reason",
+          "skill": "listening comprehension",
+          "difficulty": "medium",
+          "explanation": "The correct answer follows from this evidence: Road crews are repairing a section near Lakeside.",
+          "wrong": {
+            "A": "Choice A conflicts with the specific information stated in the talk.",
+            "B": "Choice B conflicts with the specific information stated in the talk.",
+            "D": "Choice D conflicts with the specific information stated in the talk."
+          },
+          "evidence": "road crews",
+          "notice": "Listen for the speaker's purpose, details, and paraphrased meaning."
+        },
+        {
+          "id": "toeic-l-p4-set-04-q3",
+          "text": "What does the speaker imply about tomorrow?",
+          "choices": [
+            "Rain will be heavier",
+            "It will be colder than today",
+            "The noon news is canceled",
+            "It is suitable for outdoor plans"
+          ],
+          "answer": "D",
+          "type": "inference",
+          "skill": "listening comprehension",
+          "difficulty": "medium",
+          "explanation": "The correct answer follows from this evidence: Warmer, sunny weather makes outdoor plans more suitable.",
+          "wrong": {
+            "A": "Choice A conflicts with the specific information stated in the talk.",
+            "B": "Choice B conflicts with the specific information stated in the talk.",
+            "C": "Choice C conflicts with the specific information stated in the talk."
+          },
+          "evidence": "better day",
+          "notice": "Listen for the speaker's purpose, details, and paraphrased meaning."
+        }
+      ]
+    },
+    {
+      "setId": "toeic-l-p4-set-05",
+      "version": 1,
+      "difficulty": "medium",
+      "scenario": "store promotion",
+      "speakers": [
+        {
+          "id": "speaker",
+          "voice": "amy",
+          "accent": "en-US"
+        }
+      ],
+      "turns": [
+        [
+          "speaker",
+          "This weekend only, Greenway Home Store is offering twenty percent off all desk lamps and office chairs. Customers who spend more than one hundred dollars will also receive free local delivery. To get the discount, bring any advertised item to the checkout counter; no coupon is necessary. Please note that custom-order furniture and items already marked for clearance are excluded. Our design consultants are available from ten until six to help you choose products for your home office."
+        ]
+      ],
+      "questions": [
+        {
+          "id": "toeic-l-p4-set-05-q1",
+          "text": "What is being advertised?",
+          "choices": [
+            "A weekend sale",
+            "A design class",
+            "A new store location",
+            "A furniture repair service"
+          ],
+          "answer": "A",
+          "type": "main_idea",
+          "skill": "listening comprehension",
+          "difficulty": "medium",
+          "explanation": "The correct answer follows from this evidence: The talk promotes weekend discounts and delivery.",
+          "wrong": {
+            "B": "Choice B conflicts with the specific information stated in the talk.",
+            "C": "Choice C conflicts with the specific information stated in the talk.",
+            "D": "Choice D conflicts with the specific information stated in the talk."
+          },
+          "evidence": "weekend offer",
+          "notice": "Listen for the speaker's purpose, details, and paraphrased meaning."
+        },
+        {
+          "id": "toeic-l-p4-set-05-q2",
+          "text": "How can customers receive free local delivery?",
+          "choices": [
+            "By using a coupon",
+            "By spending over one hundred dollars",
+            "By visiting before ten",
+            "By buying a custom item"
+          ],
+          "answer": "B",
+          "type": "detail",
+          "skill": "listening comprehension",
+          "difficulty": "medium",
+          "explanation": "The correct answer follows from this evidence: The spending threshold is stated directly.",
+          "wrong": {
+            "A": "Choice A conflicts with the specific information stated in the talk.",
+            "C": "Choice C conflicts with the specific information stated in the talk.",
+            "D": "Choice D conflicts with the specific information stated in the talk."
+          },
+          "evidence": "more than one hundred",
+          "notice": "Listen for the speaker's purpose, details, and paraphrased meaning."
+        },
+        {
+          "id": "toeic-l-p4-set-05-q3",
+          "text": "What is NOT included in the discount?",
+          "choices": [
+            "Desk lamps",
+            "Office chairs",
+            "Clearance items",
+            "Advertised products"
+          ],
+          "answer": "C",
+          "type": "detail",
+          "skill": "listening comprehension",
+          "difficulty": "medium",
+          "explanation": "The correct answer follows from this evidence: Items already on clearance are excluded.",
+          "wrong": {
+            "A": "Choice A conflicts with the specific information stated in the talk.",
+            "B": "Choice B conflicts with the specific information stated in the talk.",
+            "D": "Choice D conflicts with the specific information stated in the talk."
+          },
+          "evidence": "clearance excluded",
+          "notice": "Listen for the speaker's purpose, details, and paraphrased meaning."
+        }
+      ]
+    },
+    {
+      "setId": "toeic-l-p4-set-06",
+      "version": 1,
+      "difficulty": "hard",
+      "scenario": "company training",
+      "speakers": [
+        {
+          "id": "speaker",
+          "voice": "lessac",
+          "accent": "en-US"
+        }
+      ],
+      "turns": [
+        [
+          "speaker",
+          "Good morning, everyone. Next month's customer-service workshop has been moved from Conference Room B to the Riverside Training Center because more employees registered than we expected. The date remains September twelfth, and the first session will begin at nine. A shuttle will leave our main entrance at eight fifteen and return at four thirty. Lunch and printed materials are included, but participants should bring a laptop for the afternoon exercises. Managers must submit final attendance lists to Human Resources by Wednesday."
+        ]
+      ],
+      "questions": [
+        {
+          "id": "toeic-l-p4-set-06-q1",
+          "text": "Why was the workshop location changed?",
+          "choices": [
+            "The original room is being repaired",
+            "The workshop date was postponed",
+            "The trainer requested a larger city",
+            "More employees registered than expected"
+          ],
+          "answer": "D",
+          "type": "reason",
+          "skill": "listening comprehension",
+          "difficulty": "hard",
+          "explanation": "The correct answer follows from this evidence: High registration required a different location.",
+          "wrong": {
+            "A": "Choice A conflicts with the specific information stated in the talk.",
+            "B": "Choice B conflicts with the specific information stated in the talk.",
+            "C": "Choice C conflicts with the specific information stated in the talk."
+          },
+          "evidence": "more employees",
+          "notice": "Listen for the speaker's purpose, details, and paraphrased meaning."
+        },
+        {
+          "id": "toeic-l-p4-set-06-q2",
+          "text": "What should participants bring?",
+          "choices": [
+            "A laptop computer",
+            "Their own lunch",
+            "A printed attendance list",
+            "Customer files"
+          ],
+          "answer": "A",
+          "type": "detail",
+          "skill": "listening comprehension",
+          "difficulty": "hard",
+          "explanation": "The correct answer follows from this evidence: The afternoon exercises require a laptop.",
+          "wrong": {
+            "B": "Choice B conflicts with the specific information stated in the talk.",
+            "C": "Choice C conflicts with the specific information stated in the talk.",
+            "D": "Choice D conflicts with the specific information stated in the talk."
+          },
+          "evidence": "bring a laptop",
+          "notice": "Listen for the speaker's purpose, details, and paraphrased meaning."
+        },
+        {
+          "id": "toeic-l-p4-set-06-q3",
+          "text": "Who must act by Wednesday?",
+          "choices": [
+            "Shuttle drivers",
+            "Managers",
+            "Training instructors",
+            "All participants"
+          ],
+          "answer": "B",
+          "type": "speaker_role",
+          "skill": "listening comprehension",
+          "difficulty": "hard",
+          "explanation": "The correct answer follows from this evidence: Managers must submit attendance lists by Wednesday.",
+          "wrong": {
+            "A": "Choice A conflicts with the specific information stated in the talk.",
+            "C": "Choice C conflicts with the specific information stated in the talk.",
+            "D": "Choice D conflicts with the specific information stated in the talk."
+          },
+          "evidence": "managers",
+          "notice": "Listen for the speaker's purpose, details, and paraphrased meaning."
+        }
+      ]
+    },
+    {
+      "setId": "toeic-l-p4-set-07",
+      "version": 1,
+      "difficulty": "hard",
+      "scenario": "radio traffic update",
+      "speakers": [
+        {
+          "id": "speaker",
+          "voice": "amy",
+          "accent": "en-US"
+        }
+      ],
+      "turns": [
+        [
+          "speaker",
+          "Commuters heading downtown should avoid Central Avenue between Pine Street and the river bridge. A delivery truck has broken down in the right lane, and traffic is backed up for nearly two kilometers. Police expect the lane to reopen by eight forty-five, but delays may continue afterward. Drivers approaching from the north can use Mason Road as an alternative. Bus routes twelve and sixteen are currently running about ten minutes late. We will provide another update after the next commercial break."
+        ]
+      ],
+      "graphic": {
+        "title": "Downtown Bus Schedule",
+        "columns": [
+          "Route",
+          "Normal arrival"
+        ],
+        "rows": [
+          [
+            "12",
+            "8:35"
+          ],
+          [
+            "16",
+            "8:42"
+          ],
+          [
+            "24",
+            "8:50"
+          ]
+        ]
+      },
+      "questions": [
+        {
+          "id": "toeic-l-p4-set-07-q1",
+          "text": "What caused the traffic problem?",
+          "choices": [
+            "Road construction",
+            "A traffic signal failure",
+            "A broken-down truck",
+            "A sporting event"
+          ],
+          "answer": "C",
+          "type": "problem",
+          "skill": "listening comprehension",
+          "difficulty": "hard",
+          "explanation": "The correct answer follows from this evidence: A delivery truck broke down in the right lane.",
+          "wrong": {
+            "A": "Choice A conflicts with the specific information stated in the talk.",
+            "B": "Choice B conflicts with the specific information stated in the talk.",
+            "D": "Choice D conflicts with the specific information stated in the talk."
+          },
+          "evidence": "truck",
+          "notice": "Listen for the speaker's purpose, details, and paraphrased meaning."
+        },
+        {
+          "id": "toeic-l-p4-set-07-q2",
+          "text": "What does the speaker recommend?",
+          "choices": [
+            "Crossing the river bridge",
+            "Waiting near Pine Street",
+            "Using Route 24",
+            "Taking Mason Road"
+          ],
+          "answer": "D",
+          "type": "suggestion",
+          "skill": "listening comprehension",
+          "difficulty": "hard",
+          "explanation": "The correct answer follows from this evidence: Mason Road is identified as the alternative.",
+          "wrong": {
+            "A": "Choice A conflicts with the specific information stated in the talk.",
+            "B": "Choice B conflicts with the specific information stated in the talk.",
+            "C": "Choice C conflicts with the specific information stated in the talk."
+          },
+          "evidence": "Mason Road",
+          "notice": "Listen for the speaker's purpose, details, and paraphrased meaning."
+        },
+        {
+          "id": "toeic-l-p4-set-07-q3",
+          "text": "Look at the graphic. About when should Route 16 now arrive?",
+          "choices": [
+            "8:52",
+            "8:42",
+            "8:32",
+            "9:02"
+          ],
+          "answer": "A",
+          "type": "graphic_integration",
+          "skill": "visual-audio integration",
+          "difficulty": "hard",
+          "explanation": "The correct answer follows from this evidence: Adding the reported ten-minute delay to 8:42 gives 8:52.",
+          "wrong": {
+            "B": "Choice B conflicts with the specific information stated in the talk.",
+            "C": "Choice C conflicts with the specific information stated in the talk.",
+            "D": "Choice D conflicts with the specific information stated in the talk."
+          },
+          "evidence": "ten minutes late",
+          "notice": "Listen for the speaker's purpose, details, and paraphrased meaning."
+        }
+      ]
+    },
+    {
+      "setId": "toeic-l-p4-set-08",
+      "version": 1,
+      "difficulty": "medium",
+      "scenario": "library notice",
+      "speakers": [
+        {
+          "id": "speaker",
+          "voice": "lessac",
+          "accent": "en-US"
+        }
+      ],
+      "turns": [
+        [
+          "speaker",
+          "The Westfield Library will close at six instead of eight this Thursday so technicians can upgrade the computer network. Visitors will still be able to return books through the outdoor slot, and digital books will remain available through our website. The children's reading program scheduled for six thirty has been moved to Saturday morning at ten. Anyone already registered will receive an email confirmation today. Normal opening hours will resume on Friday."
+        ]
+      ],
+      "graphic": {
+        "title": "Thursday Events",
+        "columns": [
+          "Event",
+          "Original time"
+        ],
+        "rows": [
+          [
+            "Research Help",
+            "5:00 P.M."
+          ],
+          [
+            "Children's Reading",
+            "6:30 P.M."
+          ],
+          [
+            "Book Club",
+            "7:00 P.M."
+          ]
+        ]
+      },
+      "questions": [
+        {
+          "id": "toeic-l-p4-set-08-q1",
+          "text": "Why will the library close early?",
+          "choices": [
+            "To hold a private event",
+            "To upgrade its computer network",
+            "To train new employees",
+            "To reorganize the book collection"
+          ],
+          "answer": "B",
+          "type": "reason",
+          "skill": "listening comprehension",
+          "difficulty": "medium",
+          "explanation": "The correct answer follows from this evidence: Technicians will upgrade the computer network.",
+          "wrong": {
+            "A": "Choice A conflicts with the specific information stated in the talk.",
+            "C": "Choice C conflicts with the specific information stated in the talk.",
+            "D": "Choice D conflicts with the specific information stated in the talk."
+          },
+          "evidence": "network upgrade",
+          "notice": "Listen for the speaker's purpose, details, and paraphrased meaning."
+        },
+        {
+          "id": "toeic-l-p4-set-08-q2",
+          "text": "What service will remain available?",
+          "choices": [
+            "In-person research help",
+            "The indoor reading room",
+            "Returns through the outdoor slot",
+            "Public desktop computers"
+          ],
+          "answer": "C",
+          "type": "detail",
+          "skill": "listening comprehension",
+          "difficulty": "medium",
+          "explanation": "The correct answer follows from this evidence: The outdoor return slot stays available.",
+          "wrong": {
+            "A": "Choice A conflicts with the specific information stated in the talk.",
+            "B": "Choice B conflicts with the specific information stated in the talk.",
+            "D": "Choice D conflicts with the specific information stated in the talk."
+          },
+          "evidence": "outdoor slot",
+          "notice": "Listen for the speaker's purpose, details, and paraphrased meaning."
+        },
+        {
+          "id": "toeic-l-p4-set-08-q3",
+          "text": "Look at the graphic. Which event was moved to Saturday?",
+          "choices": [
+            "Research Help",
+            "Computer Training",
+            "Book Club",
+            "Children's Reading"
+          ],
+          "answer": "D",
+          "type": "graphic_integration",
+          "skill": "visual-audio integration",
+          "difficulty": "medium",
+          "explanation": "The correct answer follows from this evidence: The talk moves the children's program to Saturday.",
+          "wrong": {
+            "A": "Choice A conflicts with the specific information stated in the talk.",
+            "B": "Choice B conflicts with the specific information stated in the talk.",
+            "C": "Choice C conflicts with the specific information stated in the talk."
+          },
+          "evidence": "children's program",
+          "notice": "Listen for the speaker's purpose, details, and paraphrased meaning."
+        }
+      ]
+    },
+    {
+      "setId": "toeic-l-p4-set-09",
+      "version": 1,
+      "difficulty": "hard",
+      "scenario": "hotel message",
+      "speakers": [
+        {
+          "id": "speaker",
+          "voice": "amy",
+          "accent": "en-US"
+        }
+      ],
+      "turns": [
+        [
+          "speaker",
+          "Good afternoon, guests. The rooftop swimming pool will be unavailable from two to five today for routine maintenance. During that time, hotel guests may use the fitness center pool on the second floor at no charge. Towels can be collected at the fitness center reception desk. Also, tonight's outdoor movie will begin thirty minutes later than planned because sunset is later this week. The film will now start at eight thirty on the garden terrace. In case of rain, it will be shown in the ballroom."
+        ]
+      ],
+      "graphic": {
+        "title": "Hotel Activities",
+        "columns": [
+          "Activity",
+          "Listed time"
+        ],
+        "rows": [
+          [
+            "Garden Movie",
+            "8:00 P.M."
+          ],
+          [
+            "Morning Yoga",
+            "7:30 A.M."
+          ],
+          [
+            "City Walk",
+            "9:00 A.M."
+          ]
+        ]
+      },
+      "questions": [
+        {
+          "id": "toeic-l-p4-set-09-q1",
+          "text": "What facility will be closed temporarily?",
+          "choices": [
+            "The rooftop pool",
+            "The ballroom",
+            "The fitness center",
+            "The garden terrace"
+          ],
+          "answer": "A",
+          "type": "detail",
+          "skill": "listening comprehension",
+          "difficulty": "hard",
+          "explanation": "The correct answer follows from this evidence: The rooftop swimming pool closes for maintenance.",
+          "wrong": {
+            "B": "Choice B conflicts with the specific information stated in the talk.",
+            "C": "Choice C conflicts with the specific information stated in the talk.",
+            "D": "Choice D conflicts with the specific information stated in the talk."
+          },
+          "evidence": "rooftop pool",
+          "notice": "Listen for the speaker's purpose, details, and paraphrased meaning."
+        },
+        {
+          "id": "toeic-l-p4-set-09-q2",
+          "text": "Where can guests get towels?",
+          "choices": [
+            "At the front desk",
+            "At fitness center reception",
+            "Beside the rooftop pool",
+            "In the ballroom"
+          ],
+          "answer": "B",
+          "type": "location",
+          "skill": "listening comprehension",
+          "difficulty": "hard",
+          "explanation": "The correct answer follows from this evidence: Towels are available at fitness center reception.",
+          "wrong": {
+            "A": "Choice A conflicts with the specific information stated in the talk.",
+            "C": "Choice C conflicts with the specific information stated in the talk.",
+            "D": "Choice D conflicts with the specific information stated in the talk."
+          },
+          "evidence": "reception desk",
+          "notice": "Listen for the speaker's purpose, details, and paraphrased meaning."
+        },
+        {
+          "id": "toeic-l-p4-set-09-q3",
+          "text": "Look at the graphic. When will the garden movie actually begin?",
+          "choices": [
+            "7:30 P.M.",
+            "8:00 P.M.",
+            "8:30 P.M.",
+            "9:00 P.M."
+          ],
+          "answer": "C",
+          "type": "graphic_integration",
+          "skill": "visual-audio integration",
+          "difficulty": "hard",
+          "explanation": "The correct answer follows from this evidence: Thirty minutes after the listed 8:00 time is 8:30.",
+          "wrong": {
+            "A": "Choice A conflicts with the specific information stated in the talk.",
+            "B": "Choice B conflicts with the specific information stated in the talk.",
+            "D": "Choice D conflicts with the specific information stated in the talk."
+          },
+          "evidence": "thirty minutes later",
+          "notice": "Listen for the speaker's purpose, details, and paraphrased meaning."
+        }
+      ]
+    },
+    {
+      "setId": "toeic-l-p4-set-10",
+      "version": 1,
+      "difficulty": "hard",
+      "scenario": "product presentation",
+      "speakers": [
+        {
+          "id": "speaker",
+          "voice": "lessac",
+          "accent": "en-US"
+        }
+      ],
+      "turns": [
+        [
+          "speaker",
+          "Today I am pleased to introduce the CompactAir purifier, designed for small offices and meeting rooms. Its new sensor automatically increases the fan speed when it detects dust or smoke. Unlike our previous model, CompactAir displays air-quality information on a front screen and sends a reminder when the filter should be replaced. The standard package includes one filter, which normally lasts six months. Online orders placed before Friday will ship free, and business customers ordering ten or more units can request an on-site demonstration."
+        ]
+      ],
+      "questions": [
+        {
+          "id": "toeic-l-p4-set-10-q1",
+          "text": "What product is being introduced?",
+          "choices": [
+            "A portable fan",
+            "A smoke alarm",
+            "A meeting-room screen",
+            "An office air purifier"
+          ],
+          "answer": "D",
+          "type": "main_idea",
+          "skill": "listening comprehension",
+          "difficulty": "hard",
+          "explanation": "The correct answer follows from this evidence: The speaker introduces the CompactAir purifier.",
+          "wrong": {
+            "A": "Choice A conflicts with the specific information stated in the talk.",
+            "B": "Choice B conflicts with the specific information stated in the talk.",
+            "C": "Choice C conflicts with the specific information stated in the talk."
+          },
+          "evidence": "purifier",
+          "notice": "Listen for the speaker's purpose, details, and paraphrased meaning."
+        },
+        {
+          "id": "toeic-l-p4-set-10-q2",
+          "text": "How does the product differ from the previous model?",
+          "choices": [
+            "It displays air-quality information",
+            "It works only in large rooms",
+            "It includes ten filters",
+            "It requires no filter"
+          ],
+          "answer": "A",
+          "type": "paraphrase",
+          "skill": "listening comprehension",
+          "difficulty": "hard",
+          "explanation": "The correct answer follows from this evidence: The new model shows air-quality information on its screen.",
+          "wrong": {
+            "B": "Choice B conflicts with the specific information stated in the talk.",
+            "C": "Choice C conflicts with the specific information stated in the talk.",
+            "D": "Choice D conflicts with the specific information stated in the talk."
+          },
+          "evidence": "front screen",
+          "notice": "Listen for the speaker's purpose, details, and paraphrased meaning."
+        },
+        {
+          "id": "toeic-l-p4-set-10-q3",
+          "text": "Who can request an on-site demonstration?",
+          "choices": [
+            "Customers ordering before Friday",
+            "Businesses buying at least ten units",
+            "Anyone replacing a filter",
+            "Previous-model owners"
+          ],
+          "answer": "B",
+          "type": "detail",
+          "skill": "listening comprehension",
+          "difficulty": "hard",
+          "explanation": "The correct answer follows from this evidence: Business orders of ten or more qualify.",
+          "wrong": {
+            "A": "Choice A conflicts with the specific information stated in the talk.",
+            "C": "Choice C conflicts with the specific information stated in the talk.",
+            "D": "Choice D conflicts with the specific information stated in the talk."
+          },
+          "evidence": "ten or more",
+          "notice": "Listen for the speaker's purpose, details, and paraphrased meaning."
+        }
+      ]
+    }
+  ]
+}

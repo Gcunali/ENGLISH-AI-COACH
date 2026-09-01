@@ -1,0 +1,32 @@
+{
+  "packageSchemaVersion": 1,
+  "lessonFlowVersion": 1,
+  "lessonId": "deterministic-exercises-a1",
+  "contentVersion": 1,
+  "publicationState": "published",
+  "title": "Deterministic Exercise Foundation",
+  "description": "Test-only coverage for all Exercise v1 item types.",
+  "language": "en",
+  "referenceLocale": "en-US",
+  "cefrBand": "A1",
+  "estimatedMinutes": 12,
+  "objectives": ["Practice objective English answers."],
+  "tags": ["test-only", "exercise-v1"],
+  "stages": [
+    {"stageId":"exercise-theory","stageType":"theory","stageSchemaVersion":1,"title":"Requests","instructions":"Read the short note.","required":true,"payload":{"blocks":[{"type":"paragraph","text":"Polite requests often use could or I'd like."}]}},
+    {"stageId":"exercise-words","stageType":"visual_vocabulary","stageSchemaVersion":1,"title":"Useful words","instructions":"Review the words.","required":true,"payload":{"items":[{"itemId":"coffee","term":"coffee","meaning":"a drink","example":"I'd like a coffee.","imageAssetId":null}]}},
+    {
+      "stageId":"exercise-practice","stageType":"exercise","stageSchemaVersion":1,"title":"Practice","instructions":"Complete the exercises.","required":true,
+      "payload":{"items":[
+        {"exerciseId":"polite-choice","exerciseType":"single_choice","prompt":"Choose the polite request.","instructions":null,"hint":"Look for please.","payload":{"options":[{"optionId":"a","text":"Give me coffee."},{"optionId":"b","text":"I'd like a coffee, please."},{"optionId":"c","text":"Coffee now."}],"correctOptionId":"b"},"feedback":{"correct":"That is a polite request.","incorrect":"Use a polite request form.","explanation":"I'd like ... please is polite."}},
+        {"exerciseId":"polite-multiple","exerciseType":"multiple_select","prompt":"Select all polite expressions.","instructions":"Choose every correct option.","hint":null,"payload":{"options":[{"optionId":"a","text":"Could I have some water?"},{"optionId":"b","text":"I'd like the menu, please."},{"optionId":"c","text":"Give me water."}],"correctOptionIds":["a","b"]},"feedback":{"correct":"Both polite expressions are selected.","incorrect":"The selected set is not exact.","explanation":"Could I and I'd like are polite forms here."}},
+        {"exerciseId":"coffee-blank","exerciseType":"fill_blank","prompt":"Complete the request.","instructions":null,"hint":"It is a common hot drink.","payload":{"prefix":"I'd like a ","suffix":", please.","acceptedAnswers":["coffee"],"normalizationProfile":"english_basic_v1"},"feedback":{"correct":"The sentence is complete.","incorrect":"Check the drink word.","explanation":"The expected word is coffee."}},
+        {"exerciseId":"water-order","exerciseType":"word_order","prompt":"Build the polite question.","instructions":"Select each token in order.","hint":null,"payload":{"tokens":[{"tokenId":"t1","text":"Could"},{"tokenId":"t2","text":"I"},{"tokenId":"t3","text":"have"},{"tokenId":"t4","text":"some"},{"tokenId":"t5","text":"water"},{"tokenId":"t6","text":"please"}],"correctOrder":["t1","t2","t3","t4","t5","t6"]},"feedback":{"correct":"The word order is correct.","incorrect":"Review question word order.","explanation":"Could comes before the subject I."}},
+        {"exerciseId":"menu-matching","exerciseType":"matching","prompt":"Match each English word to Portuguese.","instructions":"Choose one unique match per row.","hint":null,"payload":{"leftItems":[{"itemId":"l1","text":"coffee"},{"itemId":"l2","text":"water"},{"itemId":"l3","text":"menu"}],"rightItems":[{"itemId":"r1","text":"café"},{"itemId":"r2","text":"água"},{"itemId":"r3","text":"cardápio"}],"correctPairs":[{"leftId":"l1","rightId":"r1"},{"leftId":"l2","rightId":"r2"},{"leftId":"l3","rightId":"r3"}]},"feedback":{"correct":"Every pair matches.","incorrect":"At least one pair needs review.","explanation":"Each left item has one exact right match."}},
+        {"exerciseId":"cold-exact","exerciseType":"short_answer_exact","prompt":"What is the opposite of hot?","instructions":"Type one exact word.","hint":null,"payload":{"acceptedAnswers":["cold"],"normalizationProfile":"english_basic_v1"},"feedback":{"correct":"Cold is the opposite of hot.","incorrect":"Use the exact opposite adjective.","explanation":"The expected answer is cold."}}
+      ]}
+    }
+  ],
+  "assets": []
+}
+

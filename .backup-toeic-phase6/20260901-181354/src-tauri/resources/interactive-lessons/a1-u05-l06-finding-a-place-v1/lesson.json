@@ -1,0 +1,568 @@
+{
+  "packageSchemaVersion": 1,
+  "lessonFlowVersion": 1,
+  "lessonId": "a1-u05-l06-finding-a-place",
+  "contentVersion": 1,
+  "publicationState": "published",
+  "title": "Finding a Place",
+  "description": "Ask for a destination and follow an integrated set of simple directions.",
+  "language": "en",
+  "referenceLocale": "en-US",
+  "cefrBand": "A1",
+  "estimatedMinutes": 24,
+  "objectives": [
+    "Ask for a destination and follow an integrated set of simple directions."
+  ],
+  "tags": [
+    "english-core",
+    "a1",
+    "unit-05",
+    "production"
+  ],
+  "assets": [],
+  "stages": [
+    {
+      "stageId": "theory",
+      "stageType": "theory",
+      "stageSchemaVersion": 1,
+      "title": "Understand the language",
+      "instructions": "Read the explanation, examples, common error, and recap.",
+      "required": true,
+      "payload": {
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "This lesson prepares you to ask for a destination and follow an integrated set of simple directions. The central language is integrated town and direction review. It belongs to the practical context of home & around town. Focus first on meaning: decide what information the listener needs. Then choose the subject, verb form, and useful detail. At A1, keep the message short and concrete. One clear sentence is enough before the other person responds. The same language returns in the listening, repeat, speaking, exercises, and guided conversation stages."
+          },
+          {
+            "type": "callout",
+            "title": "Pattern",
+            "text": "integrated town and direction review"
+          },
+          {
+            "type": "example",
+            "english": "Excuse me, where is the pharmacy?",
+            "explanation": "Use this model to begin the finding a place exchange."
+          },
+          {
+            "type": "example",
+            "english": "Go straight and it's on your right.",
+            "explanation": "This finding a place model adds a different detail or response."
+          },
+          {
+            "type": "example",
+            "english": "Where is it?",
+            "explanation": "Use this question or response to keep the finding a place exchange moving."
+          },
+          {
+            "type": "paragraph",
+            "text": "Notice the two models: “Excuse me, where is the pharmacy?” and “Go straight and it's on your right.” They show the pattern in complete communication, not as isolated grammar. Say the model aloud, replace one detail, and check that the new sentence keeps the intended meaning. When the other person asks a follow-up question, answer directly and add a relevant detail. This makes the exchange natural while keeping the language controlled."
+          },
+          {
+            "type": "callout",
+            "title": "Common error",
+            "text": "Do not mix the word order or verb form with another pattern. Keep the controlled form for this lesson: integrated town and direction review."
+          },
+          {
+            "type": "bullet_list",
+            "items": [
+              "Communicative goal: Ask for a destination and follow an integrated set of simple directions.",
+              "Core pattern: integrated town and direction review.",
+              "Use one clear model, add a relevant detail, and respond to the other speaker."
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "stageId": "visual-vocabulary",
+      "stageType": "visual_vocabulary",
+      "stageSchemaVersion": 1,
+      "title": "Build your vocabulary",
+      "instructions": "Study each term, meaning, and contextual example.",
+      "required": true,
+      "payload": {
+        "items": [
+          {
+            "itemId": "bank",
+            "term": "bank",
+            "meaning": "a place that manages money",
+            "example": "Use “bank” while you practice finding a place in context.",
+            "imageAssetId": null
+          },
+          {
+            "itemId": "pharmacy",
+            "term": "pharmacy",
+            "meaning": "a store that sells medicine",
+            "example": "Use “pharmacy” while you practice finding a place in context.",
+            "imageAssetId": null
+          },
+          {
+            "itemId": "intersection",
+            "term": "intersection",
+            "meaning": "a place where roads cross",
+            "example": "Use “intersection” while you practice finding a place in context.",
+            "imageAssetId": null
+          },
+          {
+            "itemId": "turn",
+            "term": "turn",
+            "meaning": "change direction",
+            "example": "Use “turn” while you practice finding a place in context.",
+            "imageAssetId": null
+          },
+          {
+            "itemId": "living-room",
+            "term": "living room",
+            "meaning": "a room for relaxing and receiving visitors",
+            "example": "Use “living room” while you practice finding a place in context.",
+            "imageAssetId": null
+          },
+          {
+            "itemId": "kitchen",
+            "term": "kitchen",
+            "meaning": "a room where food is prepared",
+            "example": "Use “kitchen” while you practice finding a place in context.",
+            "imageAssetId": null
+          },
+          {
+            "itemId": "bedroom",
+            "term": "bedroom",
+            "meaning": "a room for sleeping",
+            "example": "Use “bedroom” while you practice finding a place in context.",
+            "imageAssetId": null
+          },
+          {
+            "itemId": "bathroom",
+            "term": "bathroom",
+            "meaning": "a room with a toilet or bath",
+            "example": "Use “bathroom” while you practice finding a place in context.",
+            "imageAssetId": null
+          }
+        ]
+      }
+    },
+    {
+      "stageId": "listening",
+      "stageType": "listening",
+      "stageSchemaVersion": 1,
+      "title": "Listen in context",
+      "instructions": "Listen before revealing the text, then notice the target pattern.",
+      "required": true,
+      "payload": {
+        "segments": [
+          {
+            "segmentId": "segment-1",
+            "text": "Excuse me, where is the pharmacy? Go straight and it's on your right.",
+            "audioAssetId": null
+          },
+          {
+            "segmentId": "segment-2",
+            "text": "Where is it? It's near here.",
+            "audioAssetId": null
+          },
+          {
+            "segmentId": "segment-3",
+            "text": "Go straight and it's on your right. Where is it?",
+            "audioAssetId": null
+          }
+        ],
+        "revealTextAfterFirstPlay": true
+      }
+    },
+    {
+      "stageId": "repeat",
+      "stageType": "repeat",
+      "stageSchemaVersion": 1,
+      "title": "Repeat useful chunks",
+      "instructions": "Repeat each complete expression with clear rhythm.",
+      "required": true,
+      "payload": {
+        "targets": [
+          {
+            "targetId": "repeat-1",
+            "text": "Excuse me, where is the pharmacy?",
+            "referenceAudioAssetId": null,
+            "hint": "Keep the words together as one communicative chunk."
+          },
+          {
+            "targetId": "repeat-2",
+            "text": "Go straight and it's on your right.",
+            "referenceAudioAssetId": null,
+            "hint": "Keep the words together as one communicative chunk."
+          },
+          {
+            "targetId": "repeat-3",
+            "text": "Where is it?",
+            "referenceAudioAssetId": null,
+            "hint": "Keep the words together as one communicative chunk."
+          },
+          {
+            "targetId": "repeat-4",
+            "text": "It's near here.",
+            "referenceAudioAssetId": null,
+            "hint": "Keep the words together as one communicative chunk."
+          },
+          {
+            "targetId": "repeat-5",
+            "text": "Thanks for talking about home & around town with me.",
+            "referenceAudioAssetId": null,
+            "hint": "Keep the words together as one communicative chunk."
+          }
+        ]
+      }
+    },
+    {
+      "stageId": "speaking-check",
+      "stageType": "speaking_check",
+      "stageSchemaVersion": 1,
+      "title": "Speaking Check",
+      "instructions": "Say expressions already presented in this Lesson.",
+      "required": true,
+      "payload": {
+        "targets": [
+          {
+            "targetId": "speaking-1",
+            "instruction": "Say the complete model naturally.",
+            "targetText": "Excuse me, where is the pharmacy?",
+            "hint": "Use the same words and clear sentence stress."
+          },
+          {
+            "targetId": "speaking-2",
+            "instruction": "Say the complete model naturally.",
+            "targetText": "Go straight and it's on your right.",
+            "hint": "Use the same words and clear sentence stress."
+          },
+          {
+            "targetId": "speaking-3",
+            "instruction": "Say the complete model naturally.",
+            "targetText": "Where is it?",
+            "hint": "Use the same words and clear sentence stress."
+          },
+          {
+            "targetId": "speaking-4",
+            "instruction": "Say the complete model naturally.",
+            "targetText": "It's near here.",
+            "hint": "Use the same words and clear sentence stress."
+          }
+        ]
+      }
+    },
+    {
+      "stageId": "exercise",
+      "stageType": "exercise",
+      "stageSchemaVersion": 1,
+      "title": "Check your understanding",
+      "instructions": "Complete each deterministic practice item.",
+      "required": true,
+      "payload": {
+        "items": [
+          {
+            "exerciseId": "choose-model",
+            "exerciseType": "single_choice",
+            "prompt": "Choose the model that fits the communicative goal.",
+            "instructions": null,
+            "hint": "Ask for a destination and follow an integrated set of simple directions.",
+            "payload": {
+              "options": [
+                {
+                  "optionId": "a",
+                  "text": "Excuse me, where is the pharmacy?"
+                },
+                {
+                  "optionId": "b",
+                  "text": "The purple engine sleeps quickly."
+                },
+                {
+                  "optionId": "c",
+                  "text": "No information is possible."
+                }
+              ],
+              "correctOptionId": "a"
+            },
+            "feedback": {
+              "correct": "Correct. The answer fits the lesson context.",
+              "incorrect": "Try again and use the model from this lesson.",
+              "explanation": "integrated town and direction review"
+            }
+          },
+          {
+            "exerciseId": "select-core-vocabulary",
+            "exerciseType": "multiple_select",
+            "prompt": "Select both words that belong to this lesson context.",
+            "instructions": null,
+            "hint": "Home & Around Town",
+            "payload": {
+              "options": [
+                {
+                  "optionId": "a",
+                  "text": "bank"
+                },
+                {
+                  "optionId": "b",
+                  "text": "pharmacy"
+                },
+                {
+                  "optionId": "c",
+                  "text": "industrial turbine"
+                },
+                {
+                  "optionId": "d",
+                  "text": "quantum geology"
+                }
+              ],
+              "correctOptionIds": [
+                "a",
+                "b"
+              ]
+            },
+            "feedback": {
+              "correct": "Correct. The answer fits the lesson context.",
+              "incorrect": "Try again and use the model from this lesson.",
+              "explanation": "Both correct words appear in Visual Vocabulary."
+            }
+          },
+          {
+            "exerciseId": "complete-response",
+            "exerciseType": "fill_blank",
+            "prompt": "Type the exact practiced response shown in the hint.",
+            "instructions": null,
+            "hint": "Go straight and it's on your right.",
+            "payload": {
+              "prefix": "",
+              "suffix": "",
+              "acceptedAnswers": [
+                "Go straight and it's on your right."
+              ],
+              "normalizationProfile": "english_basic_v1"
+            },
+            "feedback": {
+              "correct": "Correct. The answer fits the lesson context.",
+              "incorrect": "Try again and use the model from this lesson.",
+              "explanation": "Use the complete model response."
+            }
+          },
+          {
+            "exerciseId": "order-model",
+            "exerciseType": "word_order",
+            "prompt": "Put the model in its natural order.",
+            "instructions": null,
+            "hint": null,
+            "payload": {
+              "tokens": [
+                {
+                  "tokenId": "t7",
+                  "text": "?"
+                },
+                {
+                  "tokenId": "t6",
+                  "text": "pharmacy"
+                },
+                {
+                  "tokenId": "t5",
+                  "text": "the"
+                },
+                {
+                  "tokenId": "t4",
+                  "text": "is"
+                },
+                {
+                  "tokenId": "t3",
+                  "text": "where"
+                },
+                {
+                  "tokenId": "t2",
+                  "text": "me,"
+                },
+                {
+                  "tokenId": "t1",
+                  "text": "Excuse"
+                }
+              ],
+              "correctOrder": [
+                "t1",
+                "t2",
+                "t3",
+                "t4",
+                "t5",
+                "t6",
+                "t7"
+              ]
+            },
+            "feedback": {
+              "correct": "Correct. The answer fits the lesson context.",
+              "incorrect": "Try again and use the model from this lesson.",
+              "explanation": "Keep the modeled English word order."
+            }
+          },
+          {
+            "exerciseId": "match-vocabulary",
+            "exerciseType": "matching",
+            "prompt": "Match each term to its meaning.",
+            "instructions": null,
+            "hint": null,
+            "payload": {
+              "leftItems": [
+                {
+                  "itemId": "l1",
+                  "text": "bank"
+                },
+                {
+                  "itemId": "l2",
+                  "text": "pharmacy"
+                },
+                {
+                  "itemId": "l3",
+                  "text": "intersection"
+                }
+              ],
+              "rightItems": [
+                {
+                  "itemId": "r1",
+                  "text": "a place that manages money"
+                },
+                {
+                  "itemId": "r2",
+                  "text": "a store that sells medicine"
+                },
+                {
+                  "itemId": "r3",
+                  "text": "a place where roads cross"
+                }
+              ],
+              "correctPairs": [
+                {
+                  "leftId": "l1",
+                  "rightId": "r1"
+                },
+                {
+                  "leftId": "l2",
+                  "rightId": "r2"
+                },
+                {
+                  "leftId": "l3",
+                  "rightId": "r3"
+                }
+              ]
+            },
+            "feedback": {
+              "correct": "Correct. The answer fits the lesson context.",
+              "incorrect": "Try again and use the model from this lesson.",
+              "explanation": "Review each term with its meaning and example."
+            }
+          },
+          {
+            "exerciseId": "exact-useful-chunk",
+            "exerciseType": "short_answer_exact",
+            "prompt": "Type the finite model chunk shown in the hint.",
+            "instructions": null,
+            "hint": "Where is it?",
+            "payload": {
+              "acceptedAnswers": [
+                "Where is it?"
+              ],
+              "normalizationProfile": "english_basic_v1"
+            },
+            "feedback": {
+              "correct": "Correct. The answer fits the lesson context.",
+              "incorrect": "Try again and use the model from this lesson.",
+              "explanation": "This checks one exact practiced chunk, not an open response."
+            }
+          },
+          {
+            "exerciseId": "choose-correct-form",
+            "exerciseType": "single_choice",
+            "prompt": "Which sentence follows the lesson pattern?",
+            "instructions": null,
+            "hint": "integrated town and direction review",
+            "payload": {
+              "options": [
+                {
+                  "optionId": "a",
+                  "text": "Go straight and it's on your right."
+                },
+                {
+                  "optionId": "b",
+                  "text": "She are did going."
+                },
+                {
+                  "optionId": "c",
+                  "text": "I is to yesterday."
+                }
+              ],
+              "correctOptionId": "a"
+            },
+            "feedback": {
+              "correct": "Correct. The answer fits the lesson context.",
+              "incorrect": "Try again and use the model from this lesson.",
+              "explanation": "integrated town and direction review"
+            }
+          },
+          {
+            "exerciseId": "recall-vocabulary",
+            "exerciseType": "fill_blank",
+            "prompt": "Type the term that means: change direction",
+            "instructions": null,
+            "hint": "It appears in Visual Vocabulary.",
+            "payload": {
+              "prefix": "",
+              "suffix": "",
+              "acceptedAnswers": [
+                "turn"
+              ],
+              "normalizationProfile": "english_basic_v1"
+            },
+            "feedback": {
+              "correct": "Correct. The answer fits the lesson context.",
+              "incorrect": "Try again and use the model from this lesson.",
+              "explanation": "change direction"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "stageId": "guided-conversation",
+      "stageType": "guided_conversation",
+      "stageSchemaVersion": 1,
+      "title": "Home & Around Town conversation",
+      "instructions": "Use the prepared language in a practical exchange.",
+      "required": true,
+      "payload": {
+        "scenario": "You are in a realistic everyday situation related to home & around town. Practice finding a place and respond to relevant follow-up questions.",
+        "studentRole": "English learner handling the situation",
+        "teacherRole": "Helpful conversation partner",
+        "goal": "Ask for a destination and follow an integrated set of simple directions.",
+        "targetVocabulary": [
+          "bank",
+          "pharmacy",
+          "intersection",
+          "turn",
+          "living room",
+          "kitchen",
+          "bedroom",
+          "bathroom"
+        ],
+        "targetExpressions": [
+          "Excuse me, where is the pharmacy?",
+          "Go straight and it's on your right.",
+          "Where is it?",
+          "It's near here.",
+          "Thanks for talking about home & around town with me."
+        ],
+        "minimumStudentTurns": 4,
+        "recommendedStudentTurns": 6,
+        "maximumStudentTurns": 8
+      }
+    },
+    {
+      "stageId": "analysis",
+      "stageType": "analysis",
+      "stageSchemaVersion": 1,
+      "title": "Lesson Review",
+      "instructions": "Review the evidence from your completed practice.",
+      "required": true,
+      "payload": {}
+    }
+  ]
+}

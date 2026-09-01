@@ -1,0 +1,36 @@
+{
+  "packageSchemaVersion": 1,
+  "lessonFlowVersion": 1,
+  "lessonId": "everyday-greetings-a1",
+  "contentVersion": 1,
+  "publicationState": "published",
+  "title": "Everyday Greetings",
+  "description": "Learn a small set of friendly greetings and when to use them.",
+  "language": "en",
+  "referenceLocale": "en-US",
+  "cefrBand": "A1",
+  "estimatedMinutes": 8,
+  "objectives": ["Recognize common greetings", "Choose a greeting for the time of day"],
+  "tags": ["greetings", "everyday-english"],
+  "stages": [
+    {
+      "stageId": "greeting-theory", "stageType": "theory", "stageSchemaVersion": 1,
+      "title": "How greetings work", "instructions": "Read the short explanation and examples.", "required": true,
+      "payload": { "blocks": [
+        { "type": "paragraph", "text": "A greeting opens a conversation politely." },
+        { "type": "bullet_list", "items": ["Use Good morning before noon.", "Hello works at any time."] },
+        { "type": "example", "english": "Hello, Maya!", "explanation": "A neutral and friendly greeting." },
+        { "type": "callout", "title": "Tip", "text": "Match the greeting to the situation." }
+      ] }
+    },
+    {
+      "stageId": "greeting-words", "stageType": "visual_vocabulary", "stageSchemaVersion": 1,
+      "title": "Greeting words", "instructions": "Review each greeting and its example.", "required": true,
+      "payload": { "items": [
+        { "itemId": "hello", "term": "Hello", "meaning": "A greeting for any time of day.", "example": "Hello, it is nice to meet you.", "imageAssetId": null },
+        { "itemId": "good-morning", "term": "Good morning", "meaning": "A greeting used in the morning.", "example": "Good morning, everyone.", "imageAssetId": null }
+      ] }
+    }
+  ],
+  "assets": []
+}

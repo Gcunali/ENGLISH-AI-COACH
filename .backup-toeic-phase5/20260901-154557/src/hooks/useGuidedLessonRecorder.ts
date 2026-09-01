@@ -1,0 +1,15 @@
+import { useCallback, useEffect, useRef, useState } from 'react'
+import { downsample, encodeWavBase64 } from '../utils/audio'
+import { trimPlacementSpeech } from '../utils/placementAudio'
+import { cancelGuidedLessonPronunciation } from '../services/native'
+
+export type GuidedRecorderState='idle'|'recording'|'processing'|'error'
+
+export function useGuidedLessonRecorder(onCapture:(audioBase64:string)=>Promise<void>){
+  const[state,setState]=useState<GuidedRecorderState>('idle');const[error,setError]=useState<string|null>(null)
+  const context=useRef<AudioContext|null>(null),stream=useRef<MediaStream|null>(null),source=useRef<MediaStreamAudioSourceNode|null>(null),worklet=useRef<AudioWorkletNode|null>(null),samples=useRef<Float32Array[]>([]),timer=useRef<number|null>(null),callback=useRef(onCapture);callback.current=onCapture
+  const cleanup=useCallback(()=>{if(timer.current!==null)window.clearTimeout(timer.current);timer.current=null;worklet.current?.disconnect();source.current?.disconnect();stream.current?.getTracks().forEach(track=>track.stop());void context.current?.close();worklet.current=null;source.current=null;stream.current=null;context.current=null},[])
+  const stop=useCallback(async()=>{const audioContext=context.current;const chunks=trimPlacementSpeech(samples.current);cleanup();if(!audioContext||!chunks?.length){setError('No valid speech was detected. Please record again.');setState('error');return}const length=chunks.reduce((sum,chunk)=>sum+chunk.length,0),combined=new Float32Array(length);let offset=0;for(const chunk of chunks){combined.set(chunk,offset);offset+=chunk.length}setState('processing');setError(null);try{await callback.current(encodeWavBase64(downsample(combined,audioContext.sampleRate),16000));setState('idle')}catch(value){setError(value instanceof Error?value.message:String(value));setState('error')}},[cleanup])
+  const start=useCallback(async()=>{cleanup();samples.current=[];setError(null);try{const media=await navigator.mediaDevices.getUserMedia({audio:{channelCount:1,echoCancellation:true,noiseSuppression:true,autoGainControl:true}});const audioContext=new AudioContext({latencyHint:'interactive'});await audioContext.audioWorklet.addModule('/pcm-capture-processor.js');const input=audioContext.createMediaStreamSource(media),processor=new AudioWorkletNode(audioContext,'pcm-capture-processor'),silent=audioContext.createGain();silent.gain.value=0;input.connect(processor).connect(silent).connect(audioContext.destination);processor.port.onmessage=(event:MessageEvent<Float32Array>)=>samples.current.push(event.data);context.current=audioContext;stream.current=media;source.current=input;worklet.current=processor;setState('recording');timer.current=window.setTimeout(()=>void stop(),15000)}catch(value){cleanup();setError(`Microphone unavailable: ${value instanceof Error?value.message:String(value)}`);setState('error')}},[cleanup,stop])
+  const reset=useCallback(()=>{cleanup();setError(null);setState('idle')},[cleanup]);useEffect(()=>()=>{cleanup();void cancelGuidedLessonPronunciation()},[cleanup]);return{state,error,start,stop,reset}
+}

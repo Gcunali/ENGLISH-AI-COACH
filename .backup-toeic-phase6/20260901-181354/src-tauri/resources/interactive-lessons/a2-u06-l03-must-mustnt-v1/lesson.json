@@ -1,0 +1,610 @@
+{
+  "packageSchemaVersion": 1,
+  "lessonFlowVersion": 1,
+  "lessonId": "a2-u06-l03-must-mustnt",
+  "contentVersion": 1,
+  "publicationState": "published",
+  "title": "Must & Mustn't",
+  "description": "State strong rules and prohibitions clearly.",
+  "language": "en",
+  "referenceLocale": "en-US",
+  "cefrBand": "A2",
+  "estimatedMinutes": 30,
+  "objectives": [
+    "State strong rules and prohibitions clearly."
+  ],
+  "tags": [
+    "english-core",
+    "a2",
+    "unit-06",
+    "production"
+  ],
+  "assets": [],
+  "stages": [
+    {
+      "stageId": "theory",
+      "stageType": "theory",
+      "stageSchemaVersion": 1,
+      "title": "Understand the language",
+      "instructions": "Read the explanation, examples, common error, and recap.",
+      "required": true,
+      "payload": {
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "This lesson prepares you to state strong rules and prohibitions clearly. The central language is must and mustn't for rules. It belongs to the practical context of work, study & responsibilities. Focus first on meaning: decide what information the listener needs. Then choose the subject, verb form, and useful detail. At A2, connect the main message to a time, reason, contrast, or result. Listen for context before choosing the tense or functional phrase. The same language returns in the listening, repeat, speaking, exercises, and guided conversation stages."
+          },
+          {
+            "type": "callout",
+            "title": "Pattern",
+            "text": "must and mustn't for rules"
+          },
+          {
+            "type": "example",
+            "english": "Visitors must sign in at reception.",
+            "explanation": "Use this model to begin the must & mustn't exchange."
+          },
+          {
+            "type": "example",
+            "english": "You mustn't share your password.",
+            "explanation": "This must & mustn't model adds a different detail or response."
+          },
+          {
+            "type": "example",
+            "english": "What do you need to do?",
+            "explanation": "Use this question or response to keep the must & mustn't exchange moving."
+          },
+          {
+            "type": "paragraph",
+            "text": "Notice the two models: “Visitors must sign in at reception.” and “You mustn't share your password.” They show the pattern in complete communication, not as isolated grammar. Say the model aloud, replace one detail, and check that the new sentence keeps the intended meaning. When the other person asks a follow-up question, answer directly and add a relevant detail. This makes the exchange natural while keeping the language controlled. Compare the time and viewpoint in each model, and use a linker when two ideas need a clear relationship. Avoid adding advanced forms when the lesson pattern already communicates the message accurately."
+          },
+          {
+            "type": "callout",
+            "title": "Common error",
+            "text": "Do not mix the word order or verb form with another pattern. Keep the controlled form for this lesson: must and mustn't for rules."
+          },
+          {
+            "type": "bullet_list",
+            "items": [
+              "Communicative goal: State strong rules and prohibitions clearly.",
+              "Core pattern: must and mustn't for rules.",
+              "Use one clear model, add a relevant detail, and respond to the other speaker."
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "stageId": "visual-vocabulary",
+      "stageType": "visual_vocabulary",
+      "stageSchemaVersion": 1,
+      "title": "Build your vocabulary",
+      "instructions": "Study each term, meaning, and contextual example.",
+      "required": true,
+      "payload": {
+        "items": [
+          {
+            "itemId": "meeting",
+            "term": "meeting",
+            "meaning": "an organized discussion with people",
+            "example": "Use “meeting” while you practice must & mustn't in context.",
+            "imageAssetId": null
+          },
+          {
+            "itemId": "responsibility",
+            "term": "responsibility",
+            "meaning": "a duty a person is expected to handle",
+            "example": "Use “responsibility” while you practice must & mustn't in context.",
+            "imageAssetId": null
+          },
+          {
+            "itemId": "rule",
+            "term": "rule",
+            "meaning": "an instruction stating what is allowed",
+            "example": "Use “rule” while you practice must & mustn't in context.",
+            "imageAssetId": null
+          },
+          {
+            "itemId": "required",
+            "term": "required",
+            "meaning": "necessary according to a rule or need",
+            "example": "Use “required” while you practice must & mustn't in context.",
+            "imageAssetId": null
+          },
+          {
+            "itemId": "advice",
+            "term": "advice",
+            "meaning": "a suggestion about what someone should do",
+            "example": "Use “advice” while you practice must & mustn't in context.",
+            "imageAssetId": null
+          },
+          {
+            "itemId": "goal",
+            "term": "goal",
+            "meaning": "something a person works to achieve",
+            "example": "Use “goal” while you practice must & mustn't in context.",
+            "imageAssetId": null
+          },
+          {
+            "itemId": "skill",
+            "term": "skill",
+            "meaning": "an ability developed through practice",
+            "example": "Use “skill” while you practice must & mustn't in context.",
+            "imageAssetId": null
+          },
+          {
+            "itemId": "apply",
+            "term": "apply",
+            "meaning": "request formally for a job or program",
+            "example": "Use “apply” while you practice must & mustn't in context.",
+            "imageAssetId": null
+          },
+          {
+            "itemId": "improve",
+            "term": "improve",
+            "meaning": "become or make something better",
+            "example": "Use “improve” while you practice must & mustn't in context.",
+            "imageAssetId": null
+          }
+        ]
+      }
+    },
+    {
+      "stageId": "listening",
+      "stageType": "listening",
+      "stageSchemaVersion": 1,
+      "title": "Listen in context",
+      "instructions": "Listen before revealing the text, then notice the target pattern.",
+      "required": true,
+      "payload": {
+        "segments": [
+          {
+            "segmentId": "segment-1",
+            "text": "Visitors must sign in at reception. You mustn't share your password.",
+            "audioAssetId": null
+          },
+          {
+            "segmentId": "segment-2",
+            "text": "What do you need to do? I'll organize my responsibilities first.",
+            "audioAssetId": null
+          },
+          {
+            "segmentId": "segment-3",
+            "text": "You mustn't share your password. What do you need to do?",
+            "audioAssetId": null
+          },
+          {
+            "segmentId": "segment-4",
+            "text": "I'll organize my responsibilities first. Thanks for talking about work, study & responsibilities with me.",
+            "audioAssetId": null
+          }
+        ],
+        "revealTextAfterFirstPlay": true
+      }
+    },
+    {
+      "stageId": "repeat",
+      "stageType": "repeat",
+      "stageSchemaVersion": 1,
+      "title": "Repeat useful chunks",
+      "instructions": "Repeat each complete expression with clear rhythm.",
+      "required": true,
+      "payload": {
+        "targets": [
+          {
+            "targetId": "repeat-1",
+            "text": "Visitors must sign in at reception.",
+            "referenceAudioAssetId": null,
+            "hint": "Keep the words together as one communicative chunk."
+          },
+          {
+            "targetId": "repeat-2",
+            "text": "You mustn't share your password.",
+            "referenceAudioAssetId": null,
+            "hint": "Keep the words together as one communicative chunk."
+          },
+          {
+            "targetId": "repeat-3",
+            "text": "What do you need to do?",
+            "referenceAudioAssetId": null,
+            "hint": "Keep the words together as one communicative chunk."
+          },
+          {
+            "targetId": "repeat-4",
+            "text": "I'll organize my responsibilities first.",
+            "referenceAudioAssetId": null,
+            "hint": "Keep the words together as one communicative chunk."
+          },
+          {
+            "targetId": "repeat-5",
+            "text": "Thanks for talking about work, study & responsibilities with me.",
+            "referenceAudioAssetId": null,
+            "hint": "Keep the words together as one communicative chunk."
+          }
+        ]
+      }
+    },
+    {
+      "stageId": "speaking-check",
+      "stageType": "speaking_check",
+      "stageSchemaVersion": 1,
+      "title": "Speaking Check",
+      "instructions": "Say expressions already presented in this Lesson.",
+      "required": true,
+      "payload": {
+        "targets": [
+          {
+            "targetId": "speaking-1",
+            "instruction": "Say the complete model naturally.",
+            "targetText": "Visitors must sign in at reception.",
+            "hint": "Use the same words and clear sentence stress."
+          },
+          {
+            "targetId": "speaking-2",
+            "instruction": "Say the complete model naturally.",
+            "targetText": "You mustn't share your password.",
+            "hint": "Use the same words and clear sentence stress."
+          },
+          {
+            "targetId": "speaking-3",
+            "instruction": "Say the complete model naturally.",
+            "targetText": "What do you need to do?",
+            "hint": "Use the same words and clear sentence stress."
+          },
+          {
+            "targetId": "speaking-4",
+            "instruction": "Say the complete model naturally.",
+            "targetText": "I'll organize my responsibilities first.",
+            "hint": "Use the same words and clear sentence stress."
+          }
+        ]
+      }
+    },
+    {
+      "stageId": "exercise",
+      "stageType": "exercise",
+      "stageSchemaVersion": 1,
+      "title": "Check your understanding",
+      "instructions": "Complete each deterministic practice item.",
+      "required": true,
+      "payload": {
+        "items": [
+          {
+            "exerciseId": "choose-model",
+            "exerciseType": "single_choice",
+            "prompt": "Choose the model that fits the communicative goal.",
+            "instructions": null,
+            "hint": "State strong rules and prohibitions clearly.",
+            "payload": {
+              "options": [
+                {
+                  "optionId": "a",
+                  "text": "Visitors must sign in at reception."
+                },
+                {
+                  "optionId": "b",
+                  "text": "The purple engine sleeps quickly."
+                },
+                {
+                  "optionId": "c",
+                  "text": "No information is possible."
+                }
+              ],
+              "correctOptionId": "a"
+            },
+            "feedback": {
+              "correct": "Correct. The answer fits the lesson context.",
+              "incorrect": "Try again and use the model from this lesson.",
+              "explanation": "must and mustn't for rules"
+            }
+          },
+          {
+            "exerciseId": "select-core-vocabulary",
+            "exerciseType": "multiple_select",
+            "prompt": "Select both words that belong to this lesson context.",
+            "instructions": null,
+            "hint": "Work, Study & Responsibilities",
+            "payload": {
+              "options": [
+                {
+                  "optionId": "a",
+                  "text": "meeting"
+                },
+                {
+                  "optionId": "b",
+                  "text": "responsibility"
+                },
+                {
+                  "optionId": "c",
+                  "text": "industrial turbine"
+                },
+                {
+                  "optionId": "d",
+                  "text": "quantum geology"
+                }
+              ],
+              "correctOptionIds": [
+                "a",
+                "b"
+              ]
+            },
+            "feedback": {
+              "correct": "Correct. The answer fits the lesson context.",
+              "incorrect": "Try again and use the model from this lesson.",
+              "explanation": "Both correct words appear in Visual Vocabulary."
+            }
+          },
+          {
+            "exerciseId": "complete-response",
+            "exerciseType": "fill_blank",
+            "prompt": "Type the exact practiced response shown in the hint.",
+            "instructions": null,
+            "hint": "You mustn't share your password.",
+            "payload": {
+              "prefix": "",
+              "suffix": "",
+              "acceptedAnswers": [
+                "You mustn't share your password."
+              ],
+              "normalizationProfile": "english_basic_v1"
+            },
+            "feedback": {
+              "correct": "Correct. The answer fits the lesson context.",
+              "incorrect": "Try again and use the model from this lesson.",
+              "explanation": "Use the complete model response."
+            }
+          },
+          {
+            "exerciseId": "order-model",
+            "exerciseType": "word_order",
+            "prompt": "Put the model in its natural order.",
+            "instructions": null,
+            "hint": null,
+            "payload": {
+              "tokens": [
+                {
+                  "tokenId": "t7",
+                  "text": "."
+                },
+                {
+                  "tokenId": "t6",
+                  "text": "reception"
+                },
+                {
+                  "tokenId": "t5",
+                  "text": "at"
+                },
+                {
+                  "tokenId": "t4",
+                  "text": "in"
+                },
+                {
+                  "tokenId": "t3",
+                  "text": "sign"
+                },
+                {
+                  "tokenId": "t2",
+                  "text": "must"
+                },
+                {
+                  "tokenId": "t1",
+                  "text": "Visitors"
+                }
+              ],
+              "correctOrder": [
+                "t1",
+                "t2",
+                "t3",
+                "t4",
+                "t5",
+                "t6",
+                "t7"
+              ]
+            },
+            "feedback": {
+              "correct": "Correct. The answer fits the lesson context.",
+              "incorrect": "Try again and use the model from this lesson.",
+              "explanation": "Keep the modeled English word order."
+            }
+          },
+          {
+            "exerciseId": "match-vocabulary",
+            "exerciseType": "matching",
+            "prompt": "Match each term to its meaning.",
+            "instructions": null,
+            "hint": null,
+            "payload": {
+              "leftItems": [
+                {
+                  "itemId": "l1",
+                  "text": "meeting"
+                },
+                {
+                  "itemId": "l2",
+                  "text": "responsibility"
+                },
+                {
+                  "itemId": "l3",
+                  "text": "rule"
+                }
+              ],
+              "rightItems": [
+                {
+                  "itemId": "r1",
+                  "text": "an organized discussion with people"
+                },
+                {
+                  "itemId": "r2",
+                  "text": "a duty a person is expected to handle"
+                },
+                {
+                  "itemId": "r3",
+                  "text": "an instruction stating what is allowed"
+                }
+              ],
+              "correctPairs": [
+                {
+                  "leftId": "l1",
+                  "rightId": "r1"
+                },
+                {
+                  "leftId": "l2",
+                  "rightId": "r2"
+                },
+                {
+                  "leftId": "l3",
+                  "rightId": "r3"
+                }
+              ]
+            },
+            "feedback": {
+              "correct": "Correct. The answer fits the lesson context.",
+              "incorrect": "Try again and use the model from this lesson.",
+              "explanation": "Review each term with its meaning and example."
+            }
+          },
+          {
+            "exerciseId": "exact-useful-chunk",
+            "exerciseType": "short_answer_exact",
+            "prompt": "Type the finite model chunk shown in the hint.",
+            "instructions": null,
+            "hint": "What do you need to do?",
+            "payload": {
+              "acceptedAnswers": [
+                "What do you need to do?"
+              ],
+              "normalizationProfile": "english_basic_v1"
+            },
+            "feedback": {
+              "correct": "Correct. The answer fits the lesson context.",
+              "incorrect": "Try again and use the model from this lesson.",
+              "explanation": "This checks one exact practiced chunk, not an open response."
+            }
+          },
+          {
+            "exerciseId": "choose-correct-form",
+            "exerciseType": "single_choice",
+            "prompt": "Which sentence follows the lesson pattern?",
+            "instructions": null,
+            "hint": "must and mustn't for rules",
+            "payload": {
+              "options": [
+                {
+                  "optionId": "a",
+                  "text": "You mustn't share your password."
+                },
+                {
+                  "optionId": "b",
+                  "text": "She are did going."
+                },
+                {
+                  "optionId": "c",
+                  "text": "I is to yesterday."
+                }
+              ],
+              "correctOptionId": "a"
+            },
+            "feedback": {
+              "correct": "Correct. The answer fits the lesson context.",
+              "incorrect": "Try again and use the model from this lesson.",
+              "explanation": "must and mustn't for rules"
+            }
+          },
+          {
+            "exerciseId": "recall-vocabulary",
+            "exerciseType": "fill_blank",
+            "prompt": "Type the term that means: necessary according to a rule or need",
+            "instructions": null,
+            "hint": "It appears in Visual Vocabulary.",
+            "payload": {
+              "prefix": "",
+              "suffix": "",
+              "acceptedAnswers": [
+                "required"
+              ],
+              "normalizationProfile": "english_basic_v1"
+            },
+            "feedback": {
+              "correct": "Correct. The answer fits the lesson context.",
+              "incorrect": "Try again and use the model from this lesson.",
+              "explanation": "necessary according to a rule or need"
+            }
+          },
+          {
+            "exerciseId": "context-choice",
+            "exerciseType": "single_choice",
+            "prompt": "Choose the response that adds a relevant detail.",
+            "instructions": null,
+            "hint": "A2 responses connect ideas and context.",
+            "payload": {
+              "options": [
+                {
+                  "optionId": "a",
+                  "text": "I'll organize my responsibilities first."
+                },
+                {
+                  "optionId": "b",
+                  "text": "Banana seven because blue."
+                },
+                {
+                  "optionId": "c",
+                  "text": "I have no sentence."
+                }
+              ],
+              "correctOptionId": "a"
+            },
+            "feedback": {
+              "correct": "Correct. The answer fits the lesson context.",
+              "incorrect": "Try again and use the model from this lesson.",
+              "explanation": "Use a relevant follow-up in the same situation."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "stageId": "guided-conversation",
+      "stageType": "guided_conversation",
+      "stageSchemaVersion": 1,
+      "title": "Work, Study & Responsibilities conversation",
+      "instructions": "Use the prepared language in a practical exchange.",
+      "required": true,
+      "payload": {
+        "scenario": "You are in a realistic everyday situation related to work, study & responsibilities. Practice must & mustn't and respond to relevant follow-up questions.",
+        "studentRole": "English learner handling the situation",
+        "teacherRole": "Helpful conversation partner",
+        "goal": "State strong rules and prohibitions clearly.",
+        "targetVocabulary": [
+          "meeting",
+          "responsibility",
+          "rule",
+          "required",
+          "advice",
+          "goal",
+          "skill",
+          "apply",
+          "improve"
+        ],
+        "targetExpressions": [
+          "Visitors must sign in at reception.",
+          "You mustn't share your password.",
+          "What do you need to do?",
+          "I'll organize my responsibilities first.",
+          "Thanks for talking about work, study & responsibilities with me."
+        ],
+        "minimumStudentTurns": 5,
+        "recommendedStudentTurns": 7,
+        "maximumStudentTurns": 10
+      }
+    },
+    {
+      "stageId": "analysis",
+      "stageType": "analysis",
+      "stageSchemaVersion": 1,
+      "title": "Lesson Review",
+      "instructions": "Review the evidence from your completed practice.",
+      "required": true,
+      "payload": {}
+    }
+  ]
+}

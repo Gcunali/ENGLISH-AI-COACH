@@ -44,12 +44,18 @@ mod student_learning_summary_repository;
 mod student_profile_repository;
 mod system_diagnostics;
 mod toeic;
+mod toeic_full_listening;
+mod toeic_full_lr;
+mod toeic_full_reading;
 mod toeic_item_bank;
+mod toeic_listening_score;
+mod toeic_reading_score;
 mod toeic_part2;
 mod toeic_part3;
 mod toeic_part4;
-mod toeic_listening_score;
-mod toeic_full_listening;
+mod toeic_part5;
+mod toeic_part6;
+mod toeic_part7;
 mod ux_preferences;
 mod voice_engine;
 mod voice_performance_repository;
@@ -144,6 +150,9 @@ use toeic::{
     ToeicOverviewDto, ToeicRepository, ToeicResultDto, ToeicReviewItemDto, ToeicSessionDto,
     ToeicSubmitAnswerRequest,
 };
+use toeic_full_listening::{FullHistory, FullListeningRepository, FullSession};
+use toeic_full_lr::{FullLrRepository,FullLrSession};
+use toeic_full_reading::{FullHistory as FullReadingHistory,FullReadingRepository,FullSession as FullReadingSession};
 use toeic_item_bank::ToeicItemBank;
 use toeic_part2::{
     Part2Bank, Part2Overview, Part2Repository, Part2Result, Part2Session, ReviewItem, Submit,
@@ -156,7 +165,18 @@ use toeic_part4::{
     Overview as Part4Overview, Part4Bank, Part4Repository, ResultDto as Part4Result,
     ReviewSet as Part4ReviewSet, Session as Part4Session, Submit as Part4Submit,
 };
-use toeic_full_listening::{FullHistory, FullListeningRepository, FullSession};
+use toeic_part5::{
+    Overview as Part5Overview, Part5Bank, Part5Repository, ResultDto as Part5Result,
+    ReviewItem as Part5ReviewItem, Session as Part5Session, Submit as Part5Submit,
+};
+use toeic_part6::{
+    Overview as Part6Overview, Part6Bank, Part6Repository, ResultDto as Part6Result,
+    ReviewSet as Part6ReviewSet, Session as Part6Session, Submit as Part6Submit,
+};
+use toeic_part7::{
+    Overview as Part7Overview, Part7Bank, Part7Repository, ResultDto as Part7Result,
+    ReviewSet as Part7ReviewSet, Session as Part7Session, Submit as Part7Submit,
+};
 use ux_preferences::WelcomeStateDto;
 use voice_engine::{GuidedVoiceSession, VoiceEngineManager, VoiceEngineState, VoiceEngineStatus};
 use voice_performance_repository::VoicePerformanceRepository;
@@ -195,6 +215,11 @@ struct AppState {
     toeic_part3: Part3Repository,
     toeic_part4: Part4Repository,
     toeic_full_listening: FullListeningRepository,
+    toeic_part5: Part5Repository,
+    toeic_part6: Part6Repository,
+    toeic_part7: Part7Repository,
+    toeic_full_reading: FullReadingRepository,
+    toeic_full_lr: FullLrRepository,
 }
 
 #[derive(Clone, Debug, Serialize)]
@@ -821,14 +846,179 @@ fn cancel_toeic_part4_audio(
     Ok(cancelled)
 }
 
+#[tauri::command]
+fn start_toeic_full_listening(
+    state: State<'_, AppState>,
+    mode: String,
+) -> Result<FullSession, String> {
+    state.toeic_full_listening.start(&mode)
+}
+#[tauri::command]
+fn get_toeic_full_listening(
+    state: State<'_, AppState>,
+    session_id: String,
+) -> Result<FullSession, String> {
+    state.toeic_full_listening.session(&session_id)
+}
+#[tauri::command]
+fn list_toeic_full_listening_history(
+    state: State<'_, AppState>,
+) -> Result<Vec<FullHistory>, String> {
+    state.toeic_full_listening.history()
+}
+#[tauri::command]fn start_toeic_full_reading(state:State<'_,AppState>,mode:String)->Result<FullReadingSession,String>{state.toeic_full_reading.start(&mode)}
+#[tauri::command]fn get_toeic_full_reading(state:State<'_,AppState>,session_id:String)->Result<FullReadingSession,String>{state.toeic_full_reading.session(&session_id)}
+#[tauri::command]fn list_toeic_full_reading_history(state:State<'_,AppState>)->Result<Vec<FullReadingHistory>,String>{state.toeic_full_reading.history()}
+#[tauri::command]fn start_toeic_full_lr(state:State<'_,AppState>)->Result<FullLrSession,String>{state.toeic_full_lr.start()}
+#[tauri::command]fn get_toeic_full_lr(state:State<'_,AppState>,session_id:String)->Result<FullLrSession,String>{state.toeic_full_lr.session(&session_id)}
+#[tauri::command]
+fn get_toeic_part5_overview(state: State<'_, AppState>) -> Result<Part5Overview, String> {
+    state.toeic_part5.overview()
+}
+#[tauri::command]
+fn start_toeic_part5_session(
+    state: State<'_, AppState>,
+    form_id: String,
+    form_version: u32,
+    mode: String,
+) -> Result<Part5Session, String> {
+    state.toeic_part5.start(&form_id, form_version, &mode)
+}
+#[tauri::command]
+fn get_toeic_part5_session(
+    state: State<'_, AppState>,
+    session_id: String,
+) -> Result<Part5Session, String> {
+    state.toeic_part5.session(&session_id)
+}
+#[tauri::command]
+fn submit_toeic_part5_answer(
+    state: State<'_, AppState>,
+    request: Part5Submit,
+) -> Result<Part5Session, String> {
+    state.toeic_part5.submit(request)
+}
+#[tauri::command]
+fn advance_toeic_part5_session(
+    state: State<'_, AppState>,
+    session_id: String,
+) -> Result<Part5Session, String> {
+    state.toeic_part5.advance(&session_id)
+}
+#[tauri::command]
+fn get_toeic_part5_result(
+    state: State<'_, AppState>,
+    session_id: String,
+) -> Result<Part5Result, String> {
+    state.toeic_part5.result(&session_id)
+}
+#[tauri::command]
+fn get_toeic_part5_review(
+    state: State<'_, AppState>,
+    session_id: String,
+    mistakes_only: bool,
+) -> Result<Vec<Part5ReviewItem>, String> {
+    state.toeic_part5.review(&session_id, mistakes_only)
+}
 
-
 #[tauri::command]
-fn start_toeic_full_listening(state: State<'_, AppState>, mode:String) -> Result<FullSession,String> { state.toeic_full_listening.start(&mode) }
+fn get_toeic_part6_overview(state: State<'_, AppState>) -> Result<Part6Overview, String> {
+    state.toeic_part6.overview()
+}
 #[tauri::command]
-fn get_toeic_full_listening(state: State<'_, AppState>, session_id:String) -> Result<FullSession,String> { state.toeic_full_listening.session(&session_id) }
+fn start_toeic_part6_session(
+    state: State<'_, AppState>,
+    form_id: String,
+    form_version: u32,
+    mode: String,
+) -> Result<Part6Session, String> {
+    state.toeic_part6.start(&form_id, form_version, &mode)
+}
 #[tauri::command]
-fn list_toeic_full_listening_history(state: State<'_, AppState>) -> Result<Vec<FullHistory>,String> { state.toeic_full_listening.history() }
+fn get_toeic_part6_session(
+    state: State<'_, AppState>,
+    session_id: String,
+) -> Result<Part6Session, String> {
+    state.toeic_part6.session(&session_id)
+}
+#[tauri::command]
+fn submit_toeic_part6_answer(
+    state: State<'_, AppState>,
+    request: Part6Submit,
+) -> Result<Part6Session, String> {
+    state.toeic_part6.submit(request)
+}
+#[tauri::command]
+fn advance_toeic_part6_session(
+    state: State<'_, AppState>,
+    session_id: String,
+) -> Result<Part6Session, String> {
+    state.toeic_part6.advance(&session_id)
+}
+#[tauri::command]
+fn get_toeic_part6_result(
+    state: State<'_, AppState>,
+    session_id: String,
+) -> Result<Part6Result, String> {
+    state.toeic_part6.result(&session_id)
+}
+#[tauri::command]
+fn get_toeic_part6_review(
+    state: State<'_, AppState>,
+    session_id: String,
+    mistakes_only: bool,
+) -> Result<Vec<Part6ReviewSet>, String> {
+    state.toeic_part6.review(&session_id, mistakes_only)
+}
+#[tauri::command]
+fn get_toeic_part7_overview(state: State<'_, AppState>) -> Result<Part7Overview, String> {
+    state.toeic_part7.overview()
+}
+#[tauri::command]
+fn start_toeic_part7_session(
+    state: State<'_, AppState>,
+    form_id: String,
+    form_version: u32,
+    mode: String,
+) -> Result<Part7Session, String> {
+    state.toeic_part7.start(&form_id, form_version, &mode)
+}
+#[tauri::command]
+fn get_toeic_part7_session(
+    state: State<'_, AppState>,
+    session_id: String,
+) -> Result<Part7Session, String> {
+    state.toeic_part7.session(&session_id)
+}
+#[tauri::command]
+fn submit_toeic_part7_answer(
+    state: State<'_, AppState>,
+    request: Part7Submit,
+) -> Result<Part7Session, String> {
+    state.toeic_part7.submit(request)
+}
+#[tauri::command]
+fn advance_toeic_part7_session(
+    state: State<'_, AppState>,
+    session_id: String,
+) -> Result<Part7Session, String> {
+    state.toeic_part7.advance(&session_id)
+}
+#[tauri::command]
+fn get_toeic_part7_result(
+    state: State<'_, AppState>,
+    session_id: String,
+) -> Result<Part7Result, String> {
+    state.toeic_part7.result(&session_id)
+}
+#[tauri::command]
+fn get_toeic_part7_review(
+    state: State<'_, AppState>,
+    session_id: String,
+    mistakes_only: bool,
+) -> Result<Vec<Part7ReviewSet>, String> {
+    state.toeic_part7.review(&session_id, mistakes_only)
+}
 
 fn integrate_completed_guided(
     app: &tauri::AppHandle,
@@ -2326,6 +2516,14 @@ pub fn run() {
             let toeic_part4_bank = Part4Bank::load(toeic_content_root.join("part4.json")).map_err(std::io::Error::other)?;
             let toeic_part4 = Part4Repository::new(paths.db_file(), toeic_part4_bank);
             let toeic_full_listening = FullListeningRepository::new(paths.db_file(), toeic.clone(), toeic_part2.clone(), toeic_part3.clone(), toeic_part4.clone());
+            let toeic_part5_bank = Part5Bank::load(toeic_content_root.join("part5.json")).map_err(std::io::Error::other)?;
+            let toeic_part5 = Part5Repository::new(paths.db_file(), toeic_part5_bank);
+            let toeic_part6_bank = Part6Bank::load(toeic_content_root.join("part6.json")).map_err(std::io::Error::other)?;
+            let toeic_part6 = Part6Repository::new(paths.db_file(), toeic_part6_bank);
+            let toeic_part7_bank=Part7Bank::load(toeic_content_root.join("part7.json")).map_err(std::io::Error::other)?;
+            let toeic_part7=Part7Repository::new(paths.db_file(),toeic_part7_bank);
+            let toeic_full_reading=FullReadingRepository::new(paths.db_file(),toeic_part5.clone(),toeic_part6.clone(),toeic_part7.clone());
+            let toeic_full_lr=FullLrRepository::new(paths.db_file(),toeic_full_listening.clone(),toeic_full_reading.clone());
             let guided_lessons = InteractiveLessonEngine::new(
                 guided_registry,
                 InteractiveLessonRepository::new(paths.db_file()),
@@ -2387,6 +2585,11 @@ pub fn run() {
                 toeic_part3,
                 toeic_part4,
                 toeic_full_listening,
+                toeic_part5,
+                toeic_part6,
+                toeic_part7,
+                toeic_full_reading,
+                toeic_full_lr,
             });
             if let Some(result) = restore_result { let _ = app.emit("english-ai-coach:data-restored", result); }
             Ok(())
@@ -2449,6 +2652,32 @@ pub fn run() {
             start_toeic_full_listening,
             get_toeic_full_listening,
             list_toeic_full_listening_history,
+            start_toeic_full_reading,
+            get_toeic_full_reading,
+            list_toeic_full_reading_history,
+            start_toeic_full_lr,
+            get_toeic_full_lr,
+            get_toeic_part5_overview,
+            start_toeic_part5_session,
+            get_toeic_part5_session,
+            submit_toeic_part5_answer,
+            advance_toeic_part5_session,
+            get_toeic_part5_result,
+            get_toeic_part5_review,
+            get_toeic_part6_overview,
+            start_toeic_part6_session,
+            get_toeic_part6_session,
+            submit_toeic_part6_answer,
+            advance_toeic_part6_session,
+            get_toeic_part6_result,
+            get_toeic_part6_review,
+            get_toeic_part7_overview,
+            start_toeic_part7_session,
+            get_toeic_part7_session,
+            submit_toeic_part7_answer,
+            advance_toeic_part7_session,
+            get_toeic_part7_result,
+            get_toeic_part7_review,
             diagnostics,
             probe_local_voice_engine,
             get_system_diagnostics,

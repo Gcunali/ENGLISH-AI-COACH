@@ -29,7 +29,16 @@ pub enum ToeicPart {
 
 impl ToeicPart {
     pub fn runtime_available(self) -> bool {
-        matches!(self, Self::Part1Photograph | Self::Part2QuestionResponse | Self::Part3Conversation | Self::Part4Talk)
+        matches!(
+            self,
+            Self::Part1Photograph
+                | Self::Part2QuestionResponse
+                | Self::Part3Conversation
+                | Self::Part4Talk
+                | Self::Part5IncompleteSentence
+                | Self::Part6TextCompletion
+                | Self::Part7ReadingComprehension
+        )
     }
     pub fn as_str(self) -> &'static str {
         match self {
@@ -454,7 +463,9 @@ mod tests {
         assert!(ToeicPart::Part2QuestionResponse.runtime_available());
         assert!(ToeicPart::Part3Conversation.runtime_available());
         assert!(ToeicPart::Part4Talk.runtime_available());
-        assert!(!ToeicPart::Part7ReadingComprehension.runtime_available());
+        assert!(ToeicPart::Part5IncompleteSentence.runtime_available());
+        assert!(ToeicPart::Part6TextCompletion.runtime_available());
+        assert!(ToeicPart::Part7ReadingComprehension.runtime_available());
     }
 
     #[test]

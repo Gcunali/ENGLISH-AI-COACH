@@ -587,6 +587,9 @@ impl ToeicRepository {
                 "part2_question_response" => 25,
                 "part3_conversation" => 39,
                 "part4_talk" => 30,
+                "part5_incomplete_sentence" => 30,
+                "part6_text_completion" => 16,
+                "part7_reading_comprehension" => 54,
                 _ => FORM_LENGTH as u32,
             };
             Ok(ToeicHistoryEntryDto {
@@ -724,6 +727,15 @@ fn form_title(id: &str) -> String {
     }
     if let Some(suffix) = id.strip_prefix("toeic-part4-form-") {
         return format!("Part 4 Form {}", suffix.to_uppercase());
+    }
+    if let Some(suffix) = id.strip_prefix("toeic-part5-form-") {
+        return format!("Part 5 Form {}", suffix.to_uppercase());
+    }
+    if let Some(suffix) = id.strip_prefix("toeic-part6-form-") {
+        return format!("Part 6 Form {}", suffix.to_uppercase());
+    }
+    if let Some(suffix) = id.strip_prefix("toeic-part7-form-") {
+        return format!("Part 7 Form {}", suffix.to_uppercase());
     }
     if let Some(suffix) = id.strip_prefix("toeic-part2-form-") {
         return format!("Part 2 Form {}", suffix.to_uppercase());

@@ -1,0 +1,26 @@
+{
+  "packageSchemaVersion": 1,
+  "lessonFlowVersion": 1,
+  "lessonId": "phase-v-full-cafe-a1",
+  "contentVersion": 1,
+  "publicationState": "published",
+  "title": "Ordering at a Café",
+  "description": "TEST-only full eight-stage Guided Lesson Analysis fixture.",
+  "language": "en",
+  "referenceLocale": "en-US",
+  "cefrBand": "A1",
+  "estimatedMinutes": 12,
+  "objectives": ["Order a drink politely."],
+  "tags": ["test-only", "phase-v"],
+  "assets": [],
+  "stages": [
+    {"stageId":"theory","stageType":"theory","stageSchemaVersion":1,"title":"Prepare","instructions":"Read the note.","required":true,"payload":{"blocks":[{"type":"paragraph","text":"Polite requests often use I'd like."}]}},
+    {"stageId":"words","stageType":"visual_vocabulary","stageSchemaVersion":1,"title":"Useful words","instructions":"Review the words.","required":true,"payload":{"items":[{"itemId":"coffee","term":"coffee","meaning":"a drink","example":"I'd like a coffee.","imageAssetId":null}]}},
+    {"stageId":"listening","stageType":"listening","stageSchemaVersion":1,"title":"Listen","instructions":"Listen completely.","required":true,"payload":{"segments":[{"segmentId":"one","text":"I'd like a coffee, please.","audioAssetId":null}],"revealTextAfterFirstPlay":true}},
+    {"stageId":"repeat","stageType":"repeat","stageSchemaVersion":1,"title":"Repeat","instructions":"Repeat the phrase.","required":true,"payload":{"targets":[{"targetId":"one","text":"I'd like a coffee, please.","referenceAudioAssetId":null,"hint":null}]}},
+    {"stageId":"speaking","stageType":"speaking_check","stageSchemaVersion":1,"title":"Speaking Check","instructions":"Say the phrase.","required":true,"payload":{"targets":[{"targetId":"one","instruction":"Make a polite request.","targetText":"Could I have some water, please?","hint":null}]}},
+    {"stageId":"exercise","stageType":"exercise","stageSchemaVersion":1,"title":"Practice","instructions":"Complete the exercise.","required":true,"payload":{"items":[{"exerciseId":"secret-answer","exerciseType":"short_answer_exact","prompt":"Enter the TEST fixture token.","instructions":null,"hint":null,"payload":{"acceptedAnswers":["SUPER_SECRET_EXERCISE_4815162342"],"normalizationProfile":"english_basic_v1"},"feedback":{"correct":"Fixture accepted.","incorrect":"Fixture not accepted.","explanation":null}}]}},
+    {"stageId":"conversation","stageType":"guided_conversation","stageSchemaVersion":1,"title":"Order at a café","instructions":"Practice the scenario.","required":true,"payload":{"scenario":"You are ordering at a café.","studentRole":"Customer","teacherRole":"Barista","goal":"Order a drink and answer follow-up questions politely.","targetVocabulary":["coffee","water"],"targetExpressions":["I'd like...","Could I have...?"],"minimumStudentTurns":2,"recommendedStudentTurns":3,"maximumStudentTurns":5}},
+    {"stageId":"analysis","stageType":"analysis","stageSchemaVersion":1,"title":"Lesson Review","instructions":"Review your practice results.","required":true,"payload":{}}
+  ]
+}

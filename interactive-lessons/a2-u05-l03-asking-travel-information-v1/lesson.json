@@ -1,0 +1,620 @@
+{
+  "packageSchemaVersion": 1,
+  "lessonFlowVersion": 1,
+  "lessonId": "a2-u05-l03-asking-travel-information",
+  "contentVersion": 1,
+  "publicationState": "published",
+  "title": "Asking for Travel Information",
+  "description": "Request and clarify times, platforms, locations, and prices.",
+  "language": "en",
+  "referenceLocale": "en-US",
+  "cefrBand": "A2",
+  "estimatedMinutes": 30,
+  "objectives": [
+    "Request and clarify times, platforms, locations, and prices."
+  ],
+  "tags": [
+    "english-core",
+    "a2",
+    "unit-05",
+    "production"
+  ],
+  "assets": [],
+  "stages": [
+    {
+      "stageId": "theory",
+      "stageType": "theory",
+      "stageSchemaVersion": 1,
+      "title": "Understand the language",
+      "instructions": "Read the explanation, examples, common error, and recap.",
+      "required": true,
+      "payload": {
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "This lesson prepares you to request and clarify times, platforms, locations, and prices. The central language is indirect polite questions with could and can. It belongs to the practical context of travel & accommodation. Focus first on meaning: decide what information the listener needs. Then choose the subject, verb form, and useful detail. At A2, connect the main message to a time, reason, contrast, or result. Listen for context before choosing the tense or functional phrase. The same language returns in the listening, repeat, speaking, exercises, and guided conversation stages."
+          },
+          {
+            "type": "callout",
+            "title": "Pattern",
+            "text": "indirect polite questions with could and can"
+          },
+          {
+            "type": "example",
+            "english": "Could you tell me when the train leaves?",
+            "explanation": "Use this model to begin the asking for travel information exchange."
+          },
+          {
+            "type": "example",
+            "english": "Do you know which platform I need?",
+            "explanation": "This asking for travel information model adds a different detail or response."
+          },
+          {
+            "type": "example",
+            "english": "Could you help me with this problem?",
+            "explanation": "Use this question or response to keep the asking for travel information exchange moving."
+          },
+          {
+            "type": "paragraph",
+            "text": "Notice the two models: “Could you tell me when the train leaves?” and “Do you know which platform I need?” They show the pattern in complete communication, not as isolated grammar. Say the model aloud, replace one detail, and check that the new sentence keeps the intended meaning. When the other person asks a follow-up question, answer directly and add a relevant detail. This makes the exchange natural while keeping the language controlled. Compare the time and viewpoint in each model, and use a linker when two ideas need a clear relationship. Avoid adding advanced forms when the lesson pattern already communicates the message accurately."
+          },
+          {
+            "type": "callout",
+            "title": "Common error",
+            "text": "Do not mix the word order or verb form with another pattern. Keep the controlled form for this lesson: indirect polite questions with could and can."
+          },
+          {
+            "type": "bullet_list",
+            "items": [
+              "Communicative goal: Request and clarify times, platforms, locations, and prices.",
+              "Core pattern: indirect polite questions with could and can.",
+              "Use one clear model, add a relevant detail, and respond to the other speaker."
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "stageId": "visual-vocabulary",
+      "stageType": "visual_vocabulary",
+      "stageSchemaVersion": 1,
+      "title": "Build your vocabulary",
+      "instructions": "Study each term, meaning, and contextual example.",
+      "required": true,
+      "payload": {
+        "items": [
+          {
+            "itemId": "luggage",
+            "term": "luggage",
+            "meaning": "bags carried while traveling",
+            "example": "Use “luggage” while you practice asking for travel information in context.",
+            "imageAssetId": null
+          },
+          {
+            "itemId": "reservation",
+            "term": "reservation",
+            "meaning": "an arrangement to keep a room or seat",
+            "example": "Use “reservation” while you practice asking for travel information in context.",
+            "imageAssetId": null
+          },
+          {
+            "itemId": "check-in",
+            "term": "check in",
+            "meaning": "register on arrival for a flight or hotel",
+            "example": "Use “check in” while you practice asking for travel information in context.",
+            "imageAssetId": null
+          },
+          {
+            "itemId": "available",
+            "term": "available",
+            "meaning": "ready to be used or booked",
+            "example": "Use “available” while you practice asking for travel information in context.",
+            "imageAssetId": null
+          },
+          {
+            "itemId": "delay",
+            "term": "delay",
+            "meaning": "a period of waiting because something is late",
+            "example": "Use “delay” while you practice asking for travel information in context.",
+            "imageAssetId": null
+          },
+          {
+            "itemId": "canceled",
+            "term": "canceled",
+            "meaning": "stopped and not happening",
+            "example": "Use “canceled” while you practice asking for travel information in context.",
+            "imageAssetId": null
+          },
+          {
+            "itemId": "receipt",
+            "term": "receipt",
+            "meaning": "a record showing a payment",
+            "example": "Use “receipt” while you practice asking for travel information in context.",
+            "imageAssetId": null
+          },
+          {
+            "itemId": "single-room",
+            "term": "single room",
+            "meaning": "a hotel room for one person",
+            "example": "Use “single room” while you practice asking for travel information in context.",
+            "imageAssetId": null
+          },
+          {
+            "itemId": "already",
+            "term": "already",
+            "meaning": "before now or earlier than expected",
+            "example": "Use “already” while you practice asking for travel information in context.",
+            "imageAssetId": null
+          }
+        ]
+      }
+    },
+    {
+      "stageId": "listening",
+      "stageType": "listening",
+      "stageSchemaVersion": 1,
+      "title": "Listen in context",
+      "instructions": "Listen before revealing the text, then notice the target pattern.",
+      "required": true,
+      "payload": {
+        "segments": [
+          {
+            "segmentId": "segment-1",
+            "text": "Could you tell me when the train leaves? Do you know which platform I need?",
+            "audioAssetId": null
+          },
+          {
+            "segmentId": "segment-2",
+            "text": "Could you help me with this problem? Let me check the details for you.",
+            "audioAssetId": null
+          },
+          {
+            "segmentId": "segment-3",
+            "text": "Do you know which platform I need? Could you help me with this problem?",
+            "audioAssetId": null
+          },
+          {
+            "segmentId": "segment-4",
+            "text": "Let me check the details for you. Thanks for talking about travel & accommodation with me.",
+            "audioAssetId": null
+          }
+        ],
+        "revealTextAfterFirstPlay": true
+      }
+    },
+    {
+      "stageId": "repeat",
+      "stageType": "repeat",
+      "stageSchemaVersion": 1,
+      "title": "Repeat useful chunks",
+      "instructions": "Repeat each complete expression with clear rhythm.",
+      "required": true,
+      "payload": {
+        "targets": [
+          {
+            "targetId": "repeat-1",
+            "text": "Could you tell me when the train leaves?",
+            "referenceAudioAssetId": null,
+            "hint": "Keep the words together as one communicative chunk."
+          },
+          {
+            "targetId": "repeat-2",
+            "text": "Do you know which platform I need?",
+            "referenceAudioAssetId": null,
+            "hint": "Keep the words together as one communicative chunk."
+          },
+          {
+            "targetId": "repeat-3",
+            "text": "Could you help me with this problem?",
+            "referenceAudioAssetId": null,
+            "hint": "Keep the words together as one communicative chunk."
+          },
+          {
+            "targetId": "repeat-4",
+            "text": "Let me check the details for you.",
+            "referenceAudioAssetId": null,
+            "hint": "Keep the words together as one communicative chunk."
+          },
+          {
+            "targetId": "repeat-5",
+            "text": "Thanks for talking about travel & accommodation with me.",
+            "referenceAudioAssetId": null,
+            "hint": "Keep the words together as one communicative chunk."
+          }
+        ]
+      }
+    },
+    {
+      "stageId": "speaking-check",
+      "stageType": "speaking_check",
+      "stageSchemaVersion": 1,
+      "title": "Speaking Check",
+      "instructions": "Say expressions already presented in this Lesson.",
+      "required": true,
+      "payload": {
+        "targets": [
+          {
+            "targetId": "speaking-1",
+            "instruction": "Say the complete model naturally.",
+            "targetText": "Could you tell me when the train leaves?",
+            "hint": "Use the same words and clear sentence stress."
+          },
+          {
+            "targetId": "speaking-2",
+            "instruction": "Say the complete model naturally.",
+            "targetText": "Do you know which platform I need?",
+            "hint": "Use the same words and clear sentence stress."
+          },
+          {
+            "targetId": "speaking-3",
+            "instruction": "Say the complete model naturally.",
+            "targetText": "Could you help me with this problem?",
+            "hint": "Use the same words and clear sentence stress."
+          },
+          {
+            "targetId": "speaking-4",
+            "instruction": "Say the complete model naturally.",
+            "targetText": "Let me check the details for you.",
+            "hint": "Use the same words and clear sentence stress."
+          }
+        ]
+      }
+    },
+    {
+      "stageId": "exercise",
+      "stageType": "exercise",
+      "stageSchemaVersion": 1,
+      "title": "Check your understanding",
+      "instructions": "Complete each deterministic practice item.",
+      "required": true,
+      "payload": {
+        "items": [
+          {
+            "exerciseId": "choose-model",
+            "exerciseType": "single_choice",
+            "prompt": "Choose the model that fits the communicative goal.",
+            "instructions": null,
+            "hint": "Request and clarify times, platforms, locations, and prices.",
+            "payload": {
+              "options": [
+                {
+                  "optionId": "a",
+                  "text": "Could you tell me when the train leaves?"
+                },
+                {
+                  "optionId": "b",
+                  "text": "The purple engine sleeps quickly."
+                },
+                {
+                  "optionId": "c",
+                  "text": "No information is possible."
+                }
+              ],
+              "correctOptionId": "a"
+            },
+            "feedback": {
+              "correct": "Correct. The answer fits the lesson context.",
+              "incorrect": "Try again and use the model from this lesson.",
+              "explanation": "indirect polite questions with could and can"
+            }
+          },
+          {
+            "exerciseId": "select-core-vocabulary",
+            "exerciseType": "multiple_select",
+            "prompt": "Select both words that belong to this lesson context.",
+            "instructions": null,
+            "hint": "Travel & Accommodation",
+            "payload": {
+              "options": [
+                {
+                  "optionId": "a",
+                  "text": "luggage"
+                },
+                {
+                  "optionId": "b",
+                  "text": "reservation"
+                },
+                {
+                  "optionId": "c",
+                  "text": "industrial turbine"
+                },
+                {
+                  "optionId": "d",
+                  "text": "quantum geology"
+                }
+              ],
+              "correctOptionIds": [
+                "a",
+                "b"
+              ]
+            },
+            "feedback": {
+              "correct": "Correct. The answer fits the lesson context.",
+              "incorrect": "Try again and use the model from this lesson.",
+              "explanation": "Both correct words appear in Visual Vocabulary."
+            }
+          },
+          {
+            "exerciseId": "complete-response",
+            "exerciseType": "fill_blank",
+            "prompt": "Type the exact practiced response shown in the hint.",
+            "instructions": null,
+            "hint": "Do you know which platform I need?",
+            "payload": {
+              "prefix": "",
+              "suffix": "",
+              "acceptedAnswers": [
+                "Do you know which platform I need?"
+              ],
+              "normalizationProfile": "english_basic_v1"
+            },
+            "feedback": {
+              "correct": "Correct. The answer fits the lesson context.",
+              "incorrect": "Try again and use the model from this lesson.",
+              "explanation": "Use the complete model response."
+            }
+          },
+          {
+            "exerciseId": "order-model",
+            "exerciseType": "word_order",
+            "prompt": "Put the model in its natural order.",
+            "instructions": null,
+            "hint": null,
+            "payload": {
+              "tokens": [
+                {
+                  "tokenId": "t9",
+                  "text": "?"
+                },
+                {
+                  "tokenId": "t8",
+                  "text": "leaves"
+                },
+                {
+                  "tokenId": "t7",
+                  "text": "train"
+                },
+                {
+                  "tokenId": "t6",
+                  "text": "the"
+                },
+                {
+                  "tokenId": "t5",
+                  "text": "when"
+                },
+                {
+                  "tokenId": "t4",
+                  "text": "me"
+                },
+                {
+                  "tokenId": "t3",
+                  "text": "tell"
+                },
+                {
+                  "tokenId": "t2",
+                  "text": "you"
+                },
+                {
+                  "tokenId": "t1",
+                  "text": "Could"
+                }
+              ],
+              "correctOrder": [
+                "t1",
+                "t2",
+                "t3",
+                "t4",
+                "t5",
+                "t6",
+                "t7",
+                "t8",
+                "t9"
+              ]
+            },
+            "feedback": {
+              "correct": "Correct. The answer fits the lesson context.",
+              "incorrect": "Try again and use the model from this lesson.",
+              "explanation": "Keep the modeled English word order."
+            }
+          },
+          {
+            "exerciseId": "match-vocabulary",
+            "exerciseType": "matching",
+            "prompt": "Match each term to its meaning.",
+            "instructions": null,
+            "hint": null,
+            "payload": {
+              "leftItems": [
+                {
+                  "itemId": "l1",
+                  "text": "luggage"
+                },
+                {
+                  "itemId": "l2",
+                  "text": "reservation"
+                },
+                {
+                  "itemId": "l3",
+                  "text": "check in"
+                }
+              ],
+              "rightItems": [
+                {
+                  "itemId": "r1",
+                  "text": "bags carried while traveling"
+                },
+                {
+                  "itemId": "r2",
+                  "text": "an arrangement to keep a room or seat"
+                },
+                {
+                  "itemId": "r3",
+                  "text": "register on arrival for a flight or hotel"
+                }
+              ],
+              "correctPairs": [
+                {
+                  "leftId": "l1",
+                  "rightId": "r1"
+                },
+                {
+                  "leftId": "l2",
+                  "rightId": "r2"
+                },
+                {
+                  "leftId": "l3",
+                  "rightId": "r3"
+                }
+              ]
+            },
+            "feedback": {
+              "correct": "Correct. The answer fits the lesson context.",
+              "incorrect": "Try again and use the model from this lesson.",
+              "explanation": "Review each term with its meaning and example."
+            }
+          },
+          {
+            "exerciseId": "exact-useful-chunk",
+            "exerciseType": "short_answer_exact",
+            "prompt": "Type the finite model chunk shown in the hint.",
+            "instructions": null,
+            "hint": "Could you help me with this problem?",
+            "payload": {
+              "acceptedAnswers": [
+                "Could you help me with this problem?"
+              ],
+              "normalizationProfile": "english_basic_v1"
+            },
+            "feedback": {
+              "correct": "Correct. The answer fits the lesson context.",
+              "incorrect": "Try again and use the model from this lesson.",
+              "explanation": "This checks one exact practiced chunk, not an open response."
+            }
+          },
+          {
+            "exerciseId": "choose-correct-form",
+            "exerciseType": "single_choice",
+            "prompt": "Which sentence follows the lesson pattern?",
+            "instructions": null,
+            "hint": "indirect polite questions with could and can",
+            "payload": {
+              "options": [
+                {
+                  "optionId": "a",
+                  "text": "Do you know which platform I need?"
+                },
+                {
+                  "optionId": "b",
+                  "text": "She are did going."
+                },
+                {
+                  "optionId": "c",
+                  "text": "I is to yesterday."
+                }
+              ],
+              "correctOptionId": "a"
+            },
+            "feedback": {
+              "correct": "Correct. The answer fits the lesson context.",
+              "incorrect": "Try again and use the model from this lesson.",
+              "explanation": "indirect polite questions with could and can"
+            }
+          },
+          {
+            "exerciseId": "recall-vocabulary",
+            "exerciseType": "fill_blank",
+            "prompt": "Type the term that means: ready to be used or booked",
+            "instructions": null,
+            "hint": "It appears in Visual Vocabulary.",
+            "payload": {
+              "prefix": "",
+              "suffix": "",
+              "acceptedAnswers": [
+                "available"
+              ],
+              "normalizationProfile": "english_basic_v1"
+            },
+            "feedback": {
+              "correct": "Correct. The answer fits the lesson context.",
+              "incorrect": "Try again and use the model from this lesson.",
+              "explanation": "ready to be used or booked"
+            }
+          },
+          {
+            "exerciseId": "context-choice",
+            "exerciseType": "single_choice",
+            "prompt": "Choose the response that adds a relevant detail.",
+            "instructions": null,
+            "hint": "A2 responses connect ideas and context.",
+            "payload": {
+              "options": [
+                {
+                  "optionId": "a",
+                  "text": "Let me check the details for you."
+                },
+                {
+                  "optionId": "b",
+                  "text": "Banana seven because blue."
+                },
+                {
+                  "optionId": "c",
+                  "text": "I have no sentence."
+                }
+              ],
+              "correctOptionId": "a"
+            },
+            "feedback": {
+              "correct": "Correct. The answer fits the lesson context.",
+              "incorrect": "Try again and use the model from this lesson.",
+              "explanation": "Use a relevant follow-up in the same situation."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "stageId": "guided-conversation",
+      "stageType": "guided_conversation",
+      "stageSchemaVersion": 1,
+      "title": "Travel & Accommodation conversation",
+      "instructions": "Use the prepared language in a practical exchange.",
+      "required": true,
+      "payload": {
+        "scenario": "You are in a realistic everyday situation related to travel & accommodation. Practice asking for travel information and respond to relevant follow-up questions.",
+        "studentRole": "English learner handling the situation",
+        "teacherRole": "Helpful conversation partner",
+        "goal": "Request and clarify times, platforms, locations, and prices.",
+        "targetVocabulary": [
+          "luggage",
+          "reservation",
+          "check in",
+          "available",
+          "delay",
+          "canceled",
+          "receipt",
+          "single room",
+          "already"
+        ],
+        "targetExpressions": [
+          "Could you tell me when the train leaves?",
+          "Do you know which platform I need?",
+          "Could you help me with this problem?",
+          "Let me check the details for you.",
+          "Thanks for talking about travel & accommodation with me."
+        ],
+        "minimumStudentTurns": 5,
+        "recommendedStudentTurns": 7,
+        "maximumStudentTurns": 10
+      }
+    },
+    {
+      "stageId": "analysis",
+      "stageType": "analysis",
+      "stageSchemaVersion": 1,
+      "title": "Lesson Review",
+      "instructions": "Review the evidence from your completed practice.",
+      "required": true,
+      "payload": {}
+    }
+  ]
+}

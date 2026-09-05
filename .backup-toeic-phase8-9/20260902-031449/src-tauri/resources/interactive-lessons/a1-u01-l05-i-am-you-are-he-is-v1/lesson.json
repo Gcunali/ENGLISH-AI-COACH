@@ -1,0 +1,564 @@
+{
+  "packageSchemaVersion": 1,
+  "lessonFlowVersion": 1,
+  "lessonId": "a1-u01-l05-i-am-you-are-he-is",
+  "contentVersion": 1,
+  "publicationState": "published",
+  "title": "I Am, You Are, He Is",
+  "description": "Choose the correct present form of be to identify and describe people.",
+  "language": "en",
+  "referenceLocale": "en-US",
+  "cefrBand": "A1",
+  "estimatedMinutes": 24,
+  "objectives": [
+    "Choose the correct present form of be to identify and describe people."
+  ],
+  "tags": [
+    "english-core",
+    "a1",
+    "unit-01",
+    "production"
+  ],
+  "assets": [],
+  "stages": [
+    {
+      "stageId": "theory",
+      "stageType": "theory",
+      "stageSchemaVersion": 1,
+      "title": "Understand the language",
+      "instructions": "Read the explanation, examples, common error, and recap.",
+      "required": true,
+      "payload": {
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "The verb be changes with the subject. Use am only with I. Use is with he, she, it, or one person. Use are with you, we, they, or more than one person. A subject pronoun can replace a person's name after the listener knows who the person is. These short sentences help identify people, give nationality, and describe roles or relationships."
+          },
+          {
+            "type": "callout",
+            "title": "Pattern",
+            "text": "I am; he/she/it is; you/we/they are"
+          },
+          {
+            "type": "example",
+            "english": "I am a new student.",
+            "explanation": "This complete model prepares the learner to say: I am a new student."
+          },
+          {
+            "type": "example",
+            "english": "You are in my class.",
+            "explanation": "This complete model prepares the learner to say: You are in my class."
+          },
+          {
+            "type": "example",
+            "english": "He is my friend.",
+            "explanation": "This complete model prepares the learner to say: He is my friend."
+          },
+          {
+            "type": "paragraph",
+            "text": "The practical goal is to choose the correct present form of be to identify and describe people. Use the pattern in a short exchange, notice the other speaker's words, and answer with one clear idea. The examples below prepare the same language used in listening, pronunciation practice, exercises, and the final conversation."
+          },
+          {
+            "type": "callout",
+            "title": "Common error",
+            "text": "Do not combine a subject with the wrong form, such as I is or they is. Match the form of be to the subject."
+          },
+          {
+            "type": "bullet_list",
+            "items": [
+              "Choose the expression that fits the person and situation.",
+              "Remember the core pattern: I am; he/she/it is; you/we/they are.",
+              "Answer clearly, then invite the other person to continue."
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "stageId": "visual-vocabulary",
+      "stageType": "visual_vocabulary",
+      "stageSchemaVersion": 1,
+      "title": "Build your vocabulary",
+      "instructions": "Study each term, meaning, and example.",
+      "required": true,
+      "payload": {
+        "items": [
+          {
+            "itemId": "i",
+            "term": "i",
+            "meaning": "the speaker",
+            "example": "I am ready.",
+            "imageAssetId": null
+          },
+          {
+            "itemId": "you",
+            "term": "you",
+            "meaning": "the person or people addressed",
+            "example": "You are welcome.",
+            "imageAssetId": null
+          },
+          {
+            "itemId": "he",
+            "term": "he",
+            "meaning": "one male person",
+            "example": "He is my friend.",
+            "imageAssetId": null
+          },
+          {
+            "itemId": "she",
+            "term": "she",
+            "meaning": "one female person",
+            "example": "She is a student.",
+            "imageAssetId": null
+          },
+          {
+            "itemId": "we",
+            "term": "we",
+            "meaning": "the speaker and another person",
+            "example": "We are neighbors.",
+            "imageAssetId": null
+          },
+          {
+            "itemId": "they",
+            "term": "they",
+            "meaning": "two or more other people",
+            "example": "They are teachers.",
+            "imageAssetId": null
+          },
+          {
+            "itemId": "friend",
+            "term": "friend",
+            "meaning": "a person you know and like",
+            "example": "Alex is my friend.",
+            "imageAssetId": null
+          },
+          {
+            "itemId": "neighbor",
+            "term": "neighbor",
+            "meaning": "a person who lives near you",
+            "example": "She is my neighbor.",
+            "imageAssetId": null
+          }
+        ]
+      }
+    },
+    {
+      "stageId": "listening",
+      "stageType": "listening",
+      "stageSchemaVersion": 1,
+      "title": "Listen in context",
+      "instructions": "Listen to the short exchange before revealing the text.",
+      "required": true,
+      "payload": {
+        "segments": [
+          {
+            "segmentId": "segment-1",
+            "text": "I am a new student. You are in my class.",
+            "audioAssetId": null
+          },
+          {
+            "segmentId": "segment-2",
+            "text": "He is my friend. She is from Canada.",
+            "audioAssetId": null
+          },
+          {
+            "segmentId": "segment-3",
+            "text": "They are teachers. Thanks for the conversation.",
+            "audioAssetId": null
+          }
+        ],
+        "revealTextAfterFirstPlay": true
+      }
+    },
+    {
+      "stageId": "repeat",
+      "stageType": "repeat",
+      "stageSchemaVersion": 1,
+      "title": "Repeat useful chunks",
+      "instructions": "Repeat each complete expression with clear rhythm.",
+      "required": true,
+      "payload": {
+        "targets": [
+          {
+            "targetId": "repeat-1",
+            "text": "I am a new student.",
+            "referenceAudioAssetId": null,
+            "hint": "Keep the expression together as one useful chunk."
+          },
+          {
+            "targetId": "repeat-2",
+            "text": "You are in my class.",
+            "referenceAudioAssetId": null,
+            "hint": "Keep the expression together as one useful chunk."
+          },
+          {
+            "targetId": "repeat-3",
+            "text": "He is my friend.",
+            "referenceAudioAssetId": null,
+            "hint": "Keep the expression together as one useful chunk."
+          },
+          {
+            "targetId": "repeat-4",
+            "text": "She is from Canada.",
+            "referenceAudioAssetId": null,
+            "hint": "Keep the expression together as one useful chunk."
+          },
+          {
+            "targetId": "repeat-5",
+            "text": "We are neighbors.",
+            "referenceAudioAssetId": null,
+            "hint": "Keep the expression together as one useful chunk."
+          }
+        ]
+      }
+    },
+    {
+      "stageId": "speaking-check",
+      "stageType": "speaking_check",
+      "stageSchemaVersion": 1,
+      "title": "Speaking Check",
+      "instructions": "Say the expressions you have already studied.",
+      "required": true,
+      "payload": {
+        "targets": [
+          {
+            "targetId": "speaking-1",
+            "instruction": "Say the complete model naturally.",
+            "targetText": "I am a new student.",
+            "hint": "Use the same words and clear sentence stress."
+          },
+          {
+            "targetId": "speaking-2",
+            "instruction": "Say the complete model naturally.",
+            "targetText": "You are in my class.",
+            "hint": "Use the same words and clear sentence stress."
+          },
+          {
+            "targetId": "speaking-3",
+            "instruction": "Say the complete model naturally.",
+            "targetText": "He is my friend.",
+            "hint": "Use the same words and clear sentence stress."
+          },
+          {
+            "targetId": "speaking-4",
+            "instruction": "Say the complete model naturally.",
+            "targetText": "She is from Canada.",
+            "hint": "Use the same words and clear sentence stress."
+          }
+        ]
+      }
+    },
+    {
+      "stageId": "exercise",
+      "stageType": "exercise",
+      "stageSchemaVersion": 1,
+      "title": "Check your understanding",
+      "instructions": "Complete each deterministic practice item.",
+      "required": true,
+      "payload": {
+        "items": [
+          {
+            "exerciseId": "choose-expression",
+            "exerciseType": "single_choice",
+            "prompt": "Choose the expression that best fits the lesson goal.",
+            "instructions": null,
+            "hint": "Use the practiced communicative chunk.",
+            "payload": {
+              "options": [
+                {
+                  "optionId": "a",
+                  "text": "I am a new student."
+                },
+                {
+                  "optionId": "b",
+                  "text": "I don't know this word."
+                },
+                {
+                  "optionId": "c",
+                  "text": "The window is blue."
+                }
+              ],
+              "correctOptionId": "a"
+            },
+            "feedback": {
+              "correct": "Correct. The form fits this introduction.",
+              "incorrect": "Try again and use the lesson pattern.",
+              "explanation": "I am; he/she/it is; you/we/they are"
+            }
+          },
+          {
+            "exerciseId": "select-useful-words",
+            "exerciseType": "multiple_select",
+            "prompt": "Select the two words that belong to this lesson's core situation.",
+            "instructions": null,
+            "hint": null,
+            "payload": {
+              "options": [
+                {
+                  "optionId": "a",
+                  "text": "i"
+                },
+                {
+                  "optionId": "b",
+                  "text": "you"
+                },
+                {
+                  "optionId": "c",
+                  "text": "refrigerator"
+                },
+                {
+                  "optionId": "d",
+                  "text": "mountain engine"
+                }
+              ],
+              "correctOptionIds": [
+                "a",
+                "b"
+              ]
+            },
+            "feedback": {
+              "correct": "Correct. The form fits this introduction.",
+              "incorrect": "Try again and use the lesson pattern.",
+              "explanation": "Both words were introduced in Visual Vocabulary."
+            }
+          },
+          {
+            "exerciseId": "complete-chunk",
+            "exerciseType": "fill_blank",
+            "prompt": "Complete the practiced expression.",
+            "instructions": null,
+            "hint": "You are in my class.",
+            "payload": {
+              "prefix": "",
+              "suffix": "",
+              "acceptedAnswers": [
+                "You are in my class."
+              ],
+              "normalizationProfile": "english_basic_v1"
+            },
+            "feedback": {
+              "correct": "Correct. The form fits this introduction.",
+              "incorrect": "Try again and use the lesson pattern.",
+              "explanation": "Use the full practiced expression."
+            }
+          },
+          {
+            "exerciseId": "order-first-expression",
+            "exerciseType": "word_order",
+            "prompt": "Put the words in the natural order.",
+            "instructions": null,
+            "hint": null,
+            "payload": {
+              "tokens": [
+                {
+                  "tokenId": "t6",
+                  "text": "."
+                },
+                {
+                  "tokenId": "t5",
+                  "text": "student"
+                },
+                {
+                  "tokenId": "t4",
+                  "text": "new"
+                },
+                {
+                  "tokenId": "t3",
+                  "text": "a"
+                },
+                {
+                  "tokenId": "t2",
+                  "text": "am"
+                },
+                {
+                  "tokenId": "t1",
+                  "text": "I"
+                }
+              ],
+              "correctOrder": [
+                "t1",
+                "t2",
+                "t3",
+                "t4",
+                "t5",
+                "t6"
+              ]
+            },
+            "feedback": {
+              "correct": "Correct. The form fits this introduction.",
+              "incorrect": "Try again and use the lesson pattern.",
+              "explanation": "English statements and questions follow the modeled order."
+            }
+          },
+          {
+            "exerciseId": "match-meaning",
+            "exerciseType": "matching",
+            "prompt": "Match each lesson word to its meaning.",
+            "instructions": null,
+            "hint": null,
+            "payload": {
+              "leftItems": [
+                {
+                  "itemId": "l1",
+                  "text": "i"
+                },
+                {
+                  "itemId": "l2",
+                  "text": "you"
+                },
+                {
+                  "itemId": "l3",
+                  "text": "he"
+                }
+              ],
+              "rightItems": [
+                {
+                  "itemId": "r1",
+                  "text": "the speaker"
+                },
+                {
+                  "itemId": "r2",
+                  "text": "the person or people addressed"
+                },
+                {
+                  "itemId": "r3",
+                  "text": "one male person"
+                }
+              ],
+              "correctPairs": [
+                {
+                  "leftId": "l1",
+                  "rightId": "r1"
+                },
+                {
+                  "leftId": "l2",
+                  "rightId": "r2"
+                },
+                {
+                  "leftId": "l3",
+                  "rightId": "r3"
+                }
+              ]
+            },
+            "feedback": {
+              "correct": "Correct. The form fits this introduction.",
+              "incorrect": "Try again and use the lesson pattern.",
+              "explanation": "Review the term, meaning, and example together."
+            }
+          },
+          {
+            "exerciseId": "exact-response",
+            "exerciseType": "short_answer_exact",
+            "prompt": "Type the exact model response shown in the hint.",
+            "instructions": null,
+            "hint": "He is my friend.",
+            "payload": {
+              "acceptedAnswers": [
+                "He is my friend."
+              ],
+              "normalizationProfile": "english_basic_v1"
+            },
+            "feedback": {
+              "correct": "Correct. The form fits this introduction.",
+              "incorrect": "Try again and use the lesson pattern.",
+              "explanation": "This item checks one finite model response, not an open opinion."
+            }
+          },
+          {
+            "exerciseId": "choose-pattern",
+            "exerciseType": "single_choice",
+            "prompt": "Which line follows the lesson pattern?",
+            "instructions": null,
+            "hint": "subject pronouns and present forms am, is, and are",
+            "payload": {
+              "options": [
+                {
+                  "optionId": "a",
+                  "text": "She is from Canada."
+                },
+                {
+                  "optionId": "b",
+                  "text": "Is are my."
+                },
+                {
+                  "optionId": "c",
+                  "text": "You am from?"
+                }
+              ],
+              "correctOptionId": "a"
+            },
+            "feedback": {
+              "correct": "Correct. The form fits this introduction.",
+              "incorrect": "Try again and use the lesson pattern.",
+              "explanation": "subject pronouns and present forms am, is, and are"
+            }
+          },
+          {
+            "exerciseId": "complete-vocabulary",
+            "exerciseType": "fill_blank",
+            "prompt": "Type the vocabulary item that means: one female person",
+            "instructions": null,
+            "hint": "The item appears in Visual Vocabulary.",
+            "payload": {
+              "prefix": "",
+              "suffix": "",
+              "acceptedAnswers": [
+                "she"
+              ],
+              "normalizationProfile": "english_basic_v1"
+            },
+            "feedback": {
+              "correct": "Correct. The form fits this introduction.",
+              "incorrect": "Try again and use the lesson pattern.",
+              "explanation": "one female person"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "stageId": "guided-conversation",
+      "stageType": "guided_conversation",
+      "stageSchemaVersion": 1,
+      "title": "First-meeting conversation",
+      "instructions": "Use the lesson language in a practical first meeting.",
+      "required": true,
+      "payload": {
+        "scenario": "You meet a new person in a community English class. Practice i am, you are, he is in a friendly, appropriate exchange.",
+        "studentRole": "English learner meeting someone new",
+        "teacherRole": "Friendly new classmate",
+        "goal": "Choose the correct present form of be to identify and describe people.",
+        "targetVocabulary": [
+          "i",
+          "you",
+          "he",
+          "she",
+          "we",
+          "they",
+          "friend",
+          "neighbor"
+        ],
+        "targetExpressions": [
+          "I am a new student.",
+          "You are in my class.",
+          "He is my friend.",
+          "She is from Canada.",
+          "We are neighbors.",
+          "They are teachers."
+        ],
+        "minimumStudentTurns": 4,
+        "recommendedStudentTurns": 6,
+        "maximumStudentTurns": 8
+      }
+    },
+    {
+      "stageId": "analysis",
+      "stageType": "analysis",
+      "stageSchemaVersion": 1,
+      "title": "Lesson Review",
+      "instructions": "Review the evidence from your completed practice.",
+      "required": true,
+      "payload": {}
+    }
+  ]
+}

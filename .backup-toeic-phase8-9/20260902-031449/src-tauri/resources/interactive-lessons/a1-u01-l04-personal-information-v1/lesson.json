@@ -1,0 +1,558 @@
+{
+  "packageSchemaVersion": 1,
+  "lessonFlowVersion": 1,
+  "lessonId": "a1-u01-l04-personal-information",
+  "contentVersion": 1,
+  "publicationState": "published",
+  "title": "Personal Information",
+  "description": "Exchange basic age, city, phone, and email information in a safe everyday context.",
+  "language": "en",
+  "referenceLocale": "en-US",
+  "cefrBand": "A1",
+  "estimatedMinutes": 24,
+  "objectives": [
+    "Exchange basic age, city, phone, and email information in a safe everyday context."
+  ],
+  "tags": [
+    "english-core",
+    "a1",
+    "unit-01",
+    "production"
+  ],
+  "assets": [],
+  "stages": [
+    {
+      "stageId": "theory",
+      "stageType": "theory",
+      "stageSchemaVersion": 1,
+      "title": "Understand the language",
+      "instructions": "Read the explanation, examples, common error, and recap.",
+      "required": true,
+      "payload": {
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "Personal information helps people complete a simple form or stay in contact. Ask How old are you? for age and Where do you live? for a city. Ask What's your phone number? or What's your email address? only when the situation makes the question appropriate. Answer in a full short sentence. Protect private information: practice with invented details when you do not need to share real contact information."
+          },
+          {
+            "type": "callout",
+            "title": "Pattern",
+            "text": "WH question + be/do; short subject + verb answer"
+          },
+          {
+            "type": "example",
+            "english": "How old are you?",
+            "explanation": "This complete model prepares the learner to say: How old are you?"
+          },
+          {
+            "type": "example",
+            "english": "I'm twenty-four years old.",
+            "explanation": "This complete model prepares the learner to say: I'm twenty-four years old."
+          },
+          {
+            "type": "example",
+            "english": "Where do you live?",
+            "explanation": "This complete model prepares the learner to say: Where do you live?"
+          },
+          {
+            "type": "paragraph",
+            "text": "The practical goal is to exchange basic age, city, phone, and email information in a safe everyday context. Use the pattern in a short exchange, notice the other speaker's words, and answer with one clear idea. The examples below prepare the same language used in listening, pronunciation practice, exercises, and the final conversation."
+          },
+          {
+            "type": "callout",
+            "title": "Common error",
+            "text": "In English, say I am twenty-four years old, not I have twenty-four years. Use be for age."
+          },
+          {
+            "type": "bullet_list",
+            "items": [
+              "Choose the expression that fits the person and situation.",
+              "Remember the core pattern: WH question + be/do; short subject + verb answer.",
+              "Answer clearly, then invite the other person to continue."
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "stageId": "visual-vocabulary",
+      "stageType": "visual_vocabulary",
+      "stageSchemaVersion": 1,
+      "title": "Build your vocabulary",
+      "instructions": "Study each term, meaning, and example.",
+      "required": true,
+      "payload": {
+        "items": [
+          {
+            "itemId": "age",
+            "term": "age",
+            "meaning": "the number of years a person has lived",
+            "example": "My age is twenty-four.",
+            "imageAssetId": null
+          },
+          {
+            "itemId": "city",
+            "term": "city",
+            "meaning": "a large town",
+            "example": "My city is Austin.",
+            "imageAssetId": null
+          },
+          {
+            "itemId": "address",
+            "term": "address",
+            "meaning": "information that identifies a home or place",
+            "example": "This is my work address.",
+            "imageAssetId": null
+          },
+          {
+            "itemId": "phone-number",
+            "term": "phone number",
+            "meaning": "the numbers used to call a phone",
+            "example": "My phone number ends in nine.",
+            "imageAssetId": null
+          },
+          {
+            "itemId": "email",
+            "term": "email",
+            "meaning": "an electronic message address",
+            "example": "My email is on the form.",
+            "imageAssetId": null
+          },
+          {
+            "itemId": "form",
+            "term": "form",
+            "meaning": "a document with spaces for information",
+            "example": "Please complete this form.",
+            "imageAssetId": null
+          },
+          {
+            "itemId": "live",
+            "term": "live",
+            "meaning": "have your home in a place",
+            "example": "I live in Denver.",
+            "imageAssetId": null
+          },
+          {
+            "itemId": "contact",
+            "term": "contact",
+            "meaning": "communicate with a person",
+            "example": "You can contact me by email.",
+            "imageAssetId": null
+          }
+        ]
+      }
+    },
+    {
+      "stageId": "listening",
+      "stageType": "listening",
+      "stageSchemaVersion": 1,
+      "title": "Listen in context",
+      "instructions": "Listen to the short exchange before revealing the text.",
+      "required": true,
+      "payload": {
+        "segments": [
+          {
+            "segmentId": "segment-1",
+            "text": "How old are you? I'm twenty-four years old.",
+            "audioAssetId": null
+          },
+          {
+            "segmentId": "segment-2",
+            "text": "Where do you live? I live in Denver.",
+            "audioAssetId": null
+          },
+          {
+            "segmentId": "segment-3",
+            "text": "What's your email address? Thanks for the conversation.",
+            "audioAssetId": null
+          }
+        ],
+        "revealTextAfterFirstPlay": true
+      }
+    },
+    {
+      "stageId": "repeat",
+      "stageType": "repeat",
+      "stageSchemaVersion": 1,
+      "title": "Repeat useful chunks",
+      "instructions": "Repeat each complete expression with clear rhythm.",
+      "required": true,
+      "payload": {
+        "targets": [
+          {
+            "targetId": "repeat-1",
+            "text": "How old are you?",
+            "referenceAudioAssetId": null,
+            "hint": "Keep the expression together as one useful chunk."
+          },
+          {
+            "targetId": "repeat-2",
+            "text": "I'm twenty-four years old.",
+            "referenceAudioAssetId": null,
+            "hint": "Keep the expression together as one useful chunk."
+          },
+          {
+            "targetId": "repeat-3",
+            "text": "Where do you live?",
+            "referenceAudioAssetId": null,
+            "hint": "Keep the expression together as one useful chunk."
+          },
+          {
+            "targetId": "repeat-4",
+            "text": "I live in Denver.",
+            "referenceAudioAssetId": null,
+            "hint": "Keep the expression together as one useful chunk."
+          },
+          {
+            "targetId": "repeat-5",
+            "text": "What's your email address?",
+            "referenceAudioAssetId": null,
+            "hint": "Keep the expression together as one useful chunk."
+          }
+        ]
+      }
+    },
+    {
+      "stageId": "speaking-check",
+      "stageType": "speaking_check",
+      "stageSchemaVersion": 1,
+      "title": "Speaking Check",
+      "instructions": "Say the expressions you have already studied.",
+      "required": true,
+      "payload": {
+        "targets": [
+          {
+            "targetId": "speaking-1",
+            "instruction": "Say the complete model naturally.",
+            "targetText": "How old are you?",
+            "hint": "Use the same words and clear sentence stress."
+          },
+          {
+            "targetId": "speaking-2",
+            "instruction": "Say the complete model naturally.",
+            "targetText": "I'm twenty-four years old.",
+            "hint": "Use the same words and clear sentence stress."
+          },
+          {
+            "targetId": "speaking-3",
+            "instruction": "Say the complete model naturally.",
+            "targetText": "Where do you live?",
+            "hint": "Use the same words and clear sentence stress."
+          },
+          {
+            "targetId": "speaking-4",
+            "instruction": "Say the complete model naturally.",
+            "targetText": "I live in Denver.",
+            "hint": "Use the same words and clear sentence stress."
+          }
+        ]
+      }
+    },
+    {
+      "stageId": "exercise",
+      "stageType": "exercise",
+      "stageSchemaVersion": 1,
+      "title": "Check your understanding",
+      "instructions": "Complete each deterministic practice item.",
+      "required": true,
+      "payload": {
+        "items": [
+          {
+            "exerciseId": "choose-expression",
+            "exerciseType": "single_choice",
+            "prompt": "Choose the expression that best fits the lesson goal.",
+            "instructions": null,
+            "hint": "Use the practiced communicative chunk.",
+            "payload": {
+              "options": [
+                {
+                  "optionId": "a",
+                  "text": "How old are you?"
+                },
+                {
+                  "optionId": "b",
+                  "text": "I don't know this word."
+                },
+                {
+                  "optionId": "c",
+                  "text": "The window is blue."
+                }
+              ],
+              "correctOptionId": "a"
+            },
+            "feedback": {
+              "correct": "Correct. The form fits this introduction.",
+              "incorrect": "Try again and use the lesson pattern.",
+              "explanation": "WH question + be/do; short subject + verb answer"
+            }
+          },
+          {
+            "exerciseId": "select-useful-words",
+            "exerciseType": "multiple_select",
+            "prompt": "Select the two words that belong to this lesson's core situation.",
+            "instructions": null,
+            "hint": null,
+            "payload": {
+              "options": [
+                {
+                  "optionId": "a",
+                  "text": "age"
+                },
+                {
+                  "optionId": "b",
+                  "text": "city"
+                },
+                {
+                  "optionId": "c",
+                  "text": "refrigerator"
+                },
+                {
+                  "optionId": "d",
+                  "text": "mountain engine"
+                }
+              ],
+              "correctOptionIds": [
+                "a",
+                "b"
+              ]
+            },
+            "feedback": {
+              "correct": "Correct. The form fits this introduction.",
+              "incorrect": "Try again and use the lesson pattern.",
+              "explanation": "Both words were introduced in Visual Vocabulary."
+            }
+          },
+          {
+            "exerciseId": "complete-chunk",
+            "exerciseType": "fill_blank",
+            "prompt": "Complete the practiced expression.",
+            "instructions": null,
+            "hint": "I'm twenty-four years old.",
+            "payload": {
+              "prefix": "",
+              "suffix": "",
+              "acceptedAnswers": [
+                "I'm twenty-four years old."
+              ],
+              "normalizationProfile": "english_basic_v1"
+            },
+            "feedback": {
+              "correct": "Correct. The form fits this introduction.",
+              "incorrect": "Try again and use the lesson pattern.",
+              "explanation": "Use the full practiced expression."
+            }
+          },
+          {
+            "exerciseId": "order-first-expression",
+            "exerciseType": "word_order",
+            "prompt": "Put the words in the natural order.",
+            "instructions": null,
+            "hint": null,
+            "payload": {
+              "tokens": [
+                {
+                  "tokenId": "t5",
+                  "text": "?"
+                },
+                {
+                  "tokenId": "t4",
+                  "text": "you"
+                },
+                {
+                  "tokenId": "t3",
+                  "text": "are"
+                },
+                {
+                  "tokenId": "t2",
+                  "text": "old"
+                },
+                {
+                  "tokenId": "t1",
+                  "text": "How"
+                }
+              ],
+              "correctOrder": [
+                "t1",
+                "t2",
+                "t3",
+                "t4",
+                "t5"
+              ]
+            },
+            "feedback": {
+              "correct": "Correct. The form fits this introduction.",
+              "incorrect": "Try again and use the lesson pattern.",
+              "explanation": "English statements and questions follow the modeled order."
+            }
+          },
+          {
+            "exerciseId": "match-meaning",
+            "exerciseType": "matching",
+            "prompt": "Match each lesson word to its meaning.",
+            "instructions": null,
+            "hint": null,
+            "payload": {
+              "leftItems": [
+                {
+                  "itemId": "l1",
+                  "text": "age"
+                },
+                {
+                  "itemId": "l2",
+                  "text": "city"
+                },
+                {
+                  "itemId": "l3",
+                  "text": "address"
+                }
+              ],
+              "rightItems": [
+                {
+                  "itemId": "r1",
+                  "text": "the number of years a person has lived"
+                },
+                {
+                  "itemId": "r2",
+                  "text": "a large town"
+                },
+                {
+                  "itemId": "r3",
+                  "text": "information that identifies a home or place"
+                }
+              ],
+              "correctPairs": [
+                {
+                  "leftId": "l1",
+                  "rightId": "r1"
+                },
+                {
+                  "leftId": "l2",
+                  "rightId": "r2"
+                },
+                {
+                  "leftId": "l3",
+                  "rightId": "r3"
+                }
+              ]
+            },
+            "feedback": {
+              "correct": "Correct. The form fits this introduction.",
+              "incorrect": "Try again and use the lesson pattern.",
+              "explanation": "Review the term, meaning, and example together."
+            }
+          },
+          {
+            "exerciseId": "exact-response",
+            "exerciseType": "short_answer_exact",
+            "prompt": "Type the exact model response shown in the hint.",
+            "instructions": null,
+            "hint": "Where do you live?",
+            "payload": {
+              "acceptedAnswers": [
+                "Where do you live?"
+              ],
+              "normalizationProfile": "english_basic_v1"
+            },
+            "feedback": {
+              "correct": "Correct. The form fits this introduction.",
+              "incorrect": "Try again and use the lesson pattern.",
+              "explanation": "This item checks one finite model response, not an open opinion."
+            }
+          },
+          {
+            "exerciseId": "choose-pattern",
+            "exerciseType": "single_choice",
+            "prompt": "Which line follows the lesson pattern?",
+            "instructions": null,
+            "hint": "basic WH questions with what, where, and how old",
+            "payload": {
+              "options": [
+                {
+                  "optionId": "a",
+                  "text": "I live in Denver."
+                },
+                {
+                  "optionId": "b",
+                  "text": "Is are my."
+                },
+                {
+                  "optionId": "c",
+                  "text": "You am from?"
+                }
+              ],
+              "correctOptionId": "a"
+            },
+            "feedback": {
+              "correct": "Correct. The form fits this introduction.",
+              "incorrect": "Try again and use the lesson pattern.",
+              "explanation": "basic WH questions with what, where, and how old"
+            }
+          },
+          {
+            "exerciseId": "complete-vocabulary",
+            "exerciseType": "fill_blank",
+            "prompt": "Type the vocabulary item that means: the numbers used to call a phone",
+            "instructions": null,
+            "hint": "The item appears in Visual Vocabulary.",
+            "payload": {
+              "prefix": "",
+              "suffix": "",
+              "acceptedAnswers": [
+                "phone number"
+              ],
+              "normalizationProfile": "english_basic_v1"
+            },
+            "feedback": {
+              "correct": "Correct. The form fits this introduction.",
+              "incorrect": "Try again and use the lesson pattern.",
+              "explanation": "the numbers used to call a phone"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "stageId": "guided-conversation",
+      "stageType": "guided_conversation",
+      "stageSchemaVersion": 1,
+      "title": "First-meeting conversation",
+      "instructions": "Use the lesson language in a practical first meeting.",
+      "required": true,
+      "payload": {
+        "scenario": "You meet a new person in a community English class. Practice personal information in a friendly, appropriate exchange.",
+        "studentRole": "English learner meeting someone new",
+        "teacherRole": "Friendly new classmate",
+        "goal": "Exchange basic age, city, phone, and email information in a safe everyday context.",
+        "targetVocabulary": [
+          "age",
+          "city",
+          "address",
+          "phone number",
+          "email",
+          "form",
+          "live",
+          "contact"
+        ],
+        "targetExpressions": [
+          "How old are you?",
+          "I'm twenty-four years old.",
+          "Where do you live?",
+          "I live in Denver.",
+          "What's your email address?"
+        ],
+        "minimumStudentTurns": 4,
+        "recommendedStudentTurns": 6,
+        "maximumStudentTurns": 8
+      }
+    },
+    {
+      "stageId": "analysis",
+      "stageType": "analysis",
+      "stageSchemaVersion": 1,
+      "title": "Lesson Review",
+      "instructions": "Review the evidence from your completed practice.",
+      "required": true,
+      "payload": {}
+    }
+  ]
+}

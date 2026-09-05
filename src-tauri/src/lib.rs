@@ -49,13 +49,14 @@ mod toeic_full_lr;
 mod toeic_full_reading;
 mod toeic_item_bank;
 mod toeic_listening_score;
-mod toeic_reading_score;
 mod toeic_part2;
 mod toeic_part3;
 mod toeic_part4;
 mod toeic_part5;
 mod toeic_part6;
 mod toeic_part7;
+mod toeic_personalization;
+mod toeic_reading_score;
 mod ux_preferences;
 mod voice_engine;
 mod voice_performance_repository;
@@ -151,8 +152,11 @@ use toeic::{
     ToeicSubmitAnswerRequest,
 };
 use toeic_full_listening::{FullHistory, FullListeningRepository, FullSession};
-use toeic_full_lr::{FullLrRepository,FullLrSession};
-use toeic_full_reading::{FullHistory as FullReadingHistory,FullReadingRepository,FullSession as FullReadingSession};
+use toeic_full_lr::{FullLrAggregate, FullLrHistory, FullLrRepository, FullLrSession};
+use toeic_full_reading::{
+    AggregatePart as FullReadingAggregatePart, FullHistory as FullReadingHistory,
+    FullReadingRepository, FullSession as FullReadingSession,
+};
 use toeic_item_bank::ToeicItemBank;
 use toeic_part2::{
     Part2Bank, Part2Overview, Part2Repository, Part2Result, Part2Session, ReviewItem, Submit,
@@ -176,6 +180,11 @@ use toeic_part6::{
 use toeic_part7::{
     Overview as Part7Overview, Part7Bank, Part7Repository, ResultDto as Part7Result,
     ReviewSet as Part7ReviewSet, Session as Part7Session, Submit as Part7Submit,
+};
+use toeic_personalization::{
+    DashboardDto as ToeicPersonalizedDashboardDto,
+    PracticeSessionDto as ToeicPersonalizedSessionDto,
+    StartPracticeRequest as StartToeicPersonalizedPracticeRequest, ToeicPersonalizationRepository,
 };
 use ux_preferences::WelcomeStateDto;
 use voice_engine::{GuidedVoiceSession, VoiceEngineManager, VoiceEngineState, VoiceEngineStatus};
@@ -220,6 +229,7 @@ struct AppState {
     toeic_part7: Part7Repository,
     toeic_full_reading: FullReadingRepository,
     toeic_full_lr: FullLrRepository,
+    toeic_personalization: ToeicPersonalizationRepository,
 }
 
 #[derive(Clone, Debug, Serialize)]
@@ -850,8 +860,11 @@ fn cancel_toeic_part4_audio(
 fn start_toeic_full_listening(
     state: State<'_, AppState>,
     mode: String,
+    family: Option<String>,
 ) -> Result<FullSession, String> {
-    state.toeic_full_listening.start(&mode)
+    state
+        .toeic_full_listening
+        .start_with_family(&mode, family.as_deref().unwrap_or("A"))
 }
 #[tauri::command]
 fn get_toeic_full_listening(
@@ -866,11 +879,67 @@ fn list_toeic_full_listening_history(
 ) -> Result<Vec<FullHistory>, String> {
     state.toeic_full_listening.history()
 }
-#[tauri::command]fn start_toeic_full_reading(state:State<'_,AppState>,mode:String)->Result<FullReadingSession,String>{state.toeic_full_reading.start(&mode)}
-#[tauri::command]fn get_toeic_full_reading(state:State<'_,AppState>,session_id:String)->Result<FullReadingSession,String>{state.toeic_full_reading.session(&session_id)}
-#[tauri::command]fn list_toeic_full_reading_history(state:State<'_,AppState>)->Result<Vec<FullReadingHistory>,String>{state.toeic_full_reading.history()}
-#[tauri::command]fn start_toeic_full_lr(state:State<'_,AppState>)->Result<FullLrSession,String>{state.toeic_full_lr.start()}
-#[tauri::command]fn get_toeic_full_lr(state:State<'_,AppState>,session_id:String)->Result<FullLrSession,String>{state.toeic_full_lr.session(&session_id)}
+#[tauri::command]
+fn start_toeic_full_reading(
+    state: State<'_, AppState>,
+    mode: String,
+    family: Option<String>,
+) -> Result<FullReadingSession, String> {
+    state
+        .toeic_full_reading
+        .start_with_family(&mode, family.as_deref().unwrap_or("A"))
+}
+#[tauri::command]
+fn get_toeic_full_reading(
+    state: State<'_, AppState>,
+    session_id: String,
+) -> Result<FullReadingSession, String> {
+    state.toeic_full_reading.session(&session_id)
+}
+#[tauri::command]
+fn list_toeic_full_reading_history(
+    state: State<'_, AppState>,
+) -> Result<Vec<FullReadingHistory>, String> {
+    state.toeic_full_reading.history()
+}
+#[tauri::command]
+fn get_toeic_full_reading_aggregate(
+    state: State<'_, AppState>,
+    session_id: String,
+    mistakes_only: bool,
+) -> Result<Vec<FullReadingAggregatePart>, String> {
+    state
+        .toeic_full_reading
+        .aggregate(&session_id, mistakes_only)
+}
+#[tauri::command]
+fn start_toeic_full_lr(
+    state: State<'_, AppState>,
+    family: Option<String>,
+) -> Result<FullLrSession, String> {
+    state
+        .toeic_full_lr
+        .start_with_family(family.as_deref().unwrap_or("A"))
+}
+#[tauri::command]
+fn get_toeic_full_lr(
+    state: State<'_, AppState>,
+    session_id: String,
+) -> Result<FullLrSession, String> {
+    state.toeic_full_lr.session(&session_id)
+}
+#[tauri::command]
+fn list_toeic_full_lr_history(state: State<'_, AppState>) -> Result<Vec<FullLrHistory>, String> {
+    state.toeic_full_lr.history()
+}
+#[tauri::command]
+fn get_toeic_full_lr_aggregate(
+    state: State<'_, AppState>,
+    session_id: String,
+    mistakes_only: bool,
+) -> Result<FullLrAggregate, String> {
+    state.toeic_full_lr.aggregate(&session_id, mistakes_only)
+}
 #[tauri::command]
 fn get_toeic_part5_overview(state: State<'_, AppState>) -> Result<Part5Overview, String> {
     state.toeic_part5.overview()
@@ -1018,6 +1087,44 @@ fn get_toeic_part7_review(
     mistakes_only: bool,
 ) -> Result<Vec<Part7ReviewSet>, String> {
     state.toeic_part7.review(&session_id, mistakes_only)
+}
+
+#[tauri::command]
+fn get_toeic_personalized_dashboard(
+    state: State<'_, AppState>,
+) -> Result<ToeicPersonalizedDashboardDto, String> {
+    state.toeic_personalization.dashboard()
+}
+
+#[tauri::command]
+fn set_toeic_target_score(
+    state: State<'_, AppState>,
+    target: u32,
+) -> Result<ToeicPersonalizedDashboardDto, String> {
+    state.toeic_personalization.set_target(target)
+}
+
+#[tauri::command]
+fn start_toeic_personalized_practice(
+    state: State<'_, AppState>,
+    request: StartToeicPersonalizedPracticeRequest,
+) -> Result<ToeicPersonalizedSessionDto, String> {
+    state.toeic_personalization.start_practice(request)
+}
+
+#[tauri::command]
+fn get_toeic_personalized_practice(
+    state: State<'_, AppState>,
+    session_id: String,
+) -> Result<ToeicPersonalizedSessionDto, String> {
+    state.toeic_personalization.practice(&session_id)
+}
+
+#[tauri::command]
+fn list_toeic_personalized_practice_history(
+    state: State<'_, AppState>,
+) -> Result<Vec<ToeicPersonalizedSessionDto>, String> {
+    state.toeic_personalization.practice_history()
 }
 
 fn integrate_completed_guided(
@@ -2524,6 +2631,10 @@ pub fn run() {
             let toeic_part7=Part7Repository::new(paths.db_file(),toeic_part7_bank);
             let toeic_full_reading=FullReadingRepository::new(paths.db_file(),toeic_part5.clone(),toeic_part6.clone(),toeic_part7.clone());
             let toeic_full_lr=FullLrRepository::new(paths.db_file(),toeic_full_listening.clone(),toeic_full_reading.clone());
+            let toeic_personalization = ToeicPersonalizationRepository::new(
+                paths.db_file(), toeic.clone(), toeic_part2.clone(), toeic_part3.clone(),
+                toeic_part4.clone(), toeic_part5.clone(), toeic_part6.clone(), toeic_part7.clone(),
+            );
             let guided_lessons = InteractiveLessonEngine::new(
                 guided_registry,
                 InteractiveLessonRepository::new(paths.db_file()),
@@ -2590,6 +2701,7 @@ pub fn run() {
                 toeic_part7,
                 toeic_full_reading,
                 toeic_full_lr,
+                toeic_personalization,
             });
             if let Some(result) = restore_result { let _ = app.emit("english-ai-coach:data-restored", result); }
             Ok(())
@@ -2655,8 +2767,11 @@ pub fn run() {
             start_toeic_full_reading,
             get_toeic_full_reading,
             list_toeic_full_reading_history,
+            get_toeic_full_reading_aggregate,
             start_toeic_full_lr,
             get_toeic_full_lr,
+            list_toeic_full_lr_history,
+            get_toeic_full_lr_aggregate,
             get_toeic_part5_overview,
             start_toeic_part5_session,
             get_toeic_part5_session,
@@ -2678,6 +2793,11 @@ pub fn run() {
             advance_toeic_part7_session,
             get_toeic_part7_result,
             get_toeic_part7_review,
+            get_toeic_personalized_dashboard,
+            set_toeic_target_score,
+            start_toeic_personalized_practice,
+            get_toeic_personalized_practice,
+            list_toeic_personalized_practice_history,
             diagnostics,
             probe_local_voice_engine,
             get_system_diagnostics,

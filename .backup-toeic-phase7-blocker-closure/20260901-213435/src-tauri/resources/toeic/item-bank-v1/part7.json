@@ -1,0 +1,2209 @@
+{
+  "schemaVersion": 1,
+  "bankId": "toeic-part7-production-v1",
+  "forms": [
+    {
+      "formId": "toeic-part7-form-a",
+      "formVersion": 1,
+      "title": "Part 7 · Form A",
+      "publicationState": "published",
+      "textSetIds": [
+        "toeic-r-p7-set-s01",
+        "toeic-r-p7-set-s02",
+        "toeic-r-p7-set-s03",
+        "toeic-r-p7-set-s04",
+        "toeic-r-p7-set-s05",
+        "toeic-r-p7-set-s06",
+        "toeic-r-p7-set-s07",
+        "toeic-r-p7-set-s08",
+        "toeic-r-p7-set-s09",
+        "toeic-r-p7-set-s10",
+        "toeic-r-p7-set-m01",
+        "toeic-r-p7-set-m02",
+        "toeic-r-p7-set-m03",
+        "toeic-r-p7-set-m04",
+        "toeic-r-p7-set-m05"
+      ]
+    }
+  ],
+  "textSets": [
+    {
+      "textSetId": "toeic-r-p7-set-s01",
+      "version": 1,
+      "publicationState": "published",
+      "documentType": "email",
+      "title": "Harborview Training",
+      "passage": "Harborview Training\nFrom: Nina Cole\nTo: Workshop participants\nSubject: Room change\n\nFriday’s customer-service workshop will take place in Room 410 instead of Room 205 because new projectors are being installed on the second floor. The session still begins at 9:30 A.M. Please bring the workbook sent with your confirmation email. Coffee will be available outside Room 410 from 9:10. Anyone requiring visitor parking should reply before Thursday noon so that a temporary pass can be prepared.",
+      "difficulty": "easy",
+      "domain": "workplace_and_daily_life",
+      "questions": [
+        {
+          "itemId": "toeic-r-p7-147",
+          "itemVersion": 1,
+          "publicationState": "published",
+          "questionType": "detail",
+          "blankId": "What is stated or indicated in the document?",
+          "choices": [
+            {
+              "choice": "A",
+              "text": "The workshop has moved to Room 410."
+            },
+            {
+              "choice": "B",
+              "text": "The event was canceled without notice."
+            },
+            {
+              "choice": "C",
+              "text": "Payment is required only in cash."
+            },
+            {
+              "choice": "D",
+              "text": "The location will close permanently."
+            }
+          ],
+          "correctAnswer": "A",
+          "correctExplanation": "The documents support “The workshop has moved to Room 410.”; this choice accurately paraphrases the relevant information.",
+          "distractorExplanations": {
+            "B": "Choice B is not supported by the stated dates, actions, quantities, or purpose in this reading set.",
+            "C": "Choice C is not supported by the stated dates, actions, quantities, or purpose in this reading set.",
+            "D": "Choice D is not supported by the stated dates, actions, quantities, or purpose in this reading set."
+          },
+          "completedContext": "The workshop has moved to Room 410.",
+          "skillCategory": "detail",
+          "difficulty": "medium",
+          "usefulPattern": "Match the choice to the exact relationship, detail, or paraphrase supported by the document.",
+          "extraExample": null
+        },
+        {
+          "itemId": "toeic-r-p7-148",
+          "itemVersion": 1,
+          "publicationState": "published",
+          "questionType": "purpose",
+          "blankId": "What is stated or indicated in the document?",
+          "choices": [
+            {
+              "choice": "A",
+              "text": "Payment is required only in cash."
+            },
+            {
+              "choice": "B",
+              "text": "Projector installation caused the change."
+            },
+            {
+              "choice": "C",
+              "text": "The location will close permanently."
+            },
+            {
+              "choice": "D",
+              "text": "No action is expected from readers."
+            }
+          ],
+          "correctAnswer": "B",
+          "correctExplanation": "The documents support “Projector installation caused the change.”; this choice accurately paraphrases the relevant information.",
+          "distractorExplanations": {
+            "A": "Choice A is not supported by the stated dates, actions, quantities, or purpose in this reading set.",
+            "C": "Choice C is not supported by the stated dates, actions, quantities, or purpose in this reading set.",
+            "D": "Choice D is not supported by the stated dates, actions, quantities, or purpose in this reading set."
+          },
+          "completedContext": "Projector installation caused the change.",
+          "skillCategory": "purpose",
+          "difficulty": "medium",
+          "usefulPattern": "Match the choice to the exact relationship, detail, or paraphrase supported by the document.",
+          "extraExample": null
+        },
+        {
+          "itemId": "toeic-r-p7-149",
+          "itemVersion": 1,
+          "publicationState": "published",
+          "questionType": "inference",
+          "blankId": "What is the purpose of the document?",
+          "choices": [
+            {
+              "choice": "A",
+              "text": "The location will close permanently."
+            },
+            {
+              "choice": "B",
+              "text": "No action is expected from readers."
+            },
+            {
+              "choice": "C",
+              "text": "Parking requests are due before Thursday noon."
+            },
+            {
+              "choice": "D",
+              "text": "The schedule was moved to next year."
+            }
+          ],
+          "correctAnswer": "C",
+          "correctExplanation": "The documents support “Parking requests are due before Thursday noon.”; this choice accurately paraphrases the relevant information.",
+          "distractorExplanations": {
+            "A": "Choice A is not supported by the stated dates, actions, quantities, or purpose in this reading set.",
+            "B": "Choice B is not supported by the stated dates, actions, quantities, or purpose in this reading set.",
+            "D": "Choice D is not supported by the stated dates, actions, quantities, or purpose in this reading set."
+          },
+          "completedContext": "Parking requests are due before Thursday noon.",
+          "skillCategory": "inference",
+          "difficulty": "easy",
+          "usefulPattern": "Match the choice to the exact relationship, detail, or paraphrase supported by the document.",
+          "extraExample": null
+        }
+      ]
+    },
+    {
+      "textSetId": "toeic-r-p7-set-s02",
+      "version": 1,
+      "publicationState": "published",
+      "documentType": "notice",
+      "title": "Linden Library Notice",
+      "passage": "Linden Library Notice\nLINDEN LIBRARY\nWeekend Return Service\n\nThe outdoor book-return slot will be closed this Saturday while its protective cover is replaced. Items due Saturday may be returned inside the library between 10:00 A.M. and 4:00 P.M. or through the outdoor slot on Sunday without a late fee. The reading room remains open as usual, but the east entrance beside the return slot will be blocked. Visitors should use the garden entrance.",
+      "difficulty": "easy",
+      "domain": "workplace_and_daily_life",
+      "questions": [
+        {
+          "itemId": "toeic-r-p7-150",
+          "itemVersion": 1,
+          "publicationState": "published",
+          "questionType": "paraphrase",
+          "blankId": "What is stated or indicated in the document?",
+          "choices": [
+            {
+              "choice": "A",
+              "text": "No action is expected from readers."
+            },
+            {
+              "choice": "B",
+              "text": "The schedule was moved to next year."
+            },
+            {
+              "choice": "C",
+              "text": "All services are available at no cost."
+            },
+            {
+              "choice": "D",
+              "text": "The outdoor return slot is closed Saturday."
+            }
+          ],
+          "correctAnswer": "D",
+          "correctExplanation": "The documents support “The outdoor return slot is closed Saturday.”; this choice accurately paraphrases the relevant information.",
+          "distractorExplanations": {
+            "A": "Choice A is not supported by the stated dates, actions, quantities, or purpose in this reading set.",
+            "B": "Choice B is not supported by the stated dates, actions, quantities, or purpose in this reading set.",
+            "C": "Choice C is not supported by the stated dates, actions, quantities, or purpose in this reading set."
+          },
+          "completedContext": "The outdoor return slot is closed Saturday.",
+          "skillCategory": "paraphrase",
+          "difficulty": "hard",
+          "usefulPattern": "Match the choice to the exact relationship, detail, or paraphrase supported by the document.",
+          "extraExample": null
+        },
+        {
+          "itemId": "toeic-r-p7-151",
+          "itemVersion": 1,
+          "publicationState": "published",
+          "questionType": "vocabulary_in_context",
+          "blankId": "What is stated or indicated in the document?",
+          "choices": [
+            {
+              "choice": "A",
+              "text": "The garden entrance remains available."
+            },
+            {
+              "choice": "B",
+              "text": "The schedule was moved to next year."
+            },
+            {
+              "choice": "C",
+              "text": "All services are available at no cost."
+            },
+            {
+              "choice": "D",
+              "text": "The event was canceled without notice."
+            }
+          ],
+          "correctAnswer": "A",
+          "correctExplanation": "The documents support “The garden entrance remains available.”; this choice accurately paraphrases the relevant information.",
+          "distractorExplanations": {
+            "B": "Choice B is not supported by the stated dates, actions, quantities, or purpose in this reading set.",
+            "C": "Choice C is not supported by the stated dates, actions, quantities, or purpose in this reading set.",
+            "D": "Choice D is not supported by the stated dates, actions, quantities, or purpose in this reading set."
+          },
+          "completedContext": "The garden entrance remains available.",
+          "skillCategory": "vocabulary_in_context",
+          "difficulty": "medium",
+          "usefulPattern": "Match the choice to the exact relationship, detail, or paraphrase supported by the document.",
+          "extraExample": null
+        },
+        {
+          "itemId": "toeic-r-p7-152",
+          "itemVersion": 1,
+          "publicationState": "published",
+          "questionType": "reference",
+          "blankId": "What is the purpose of the document?",
+          "choices": [
+            {
+              "choice": "A",
+              "text": "All services are available at no cost."
+            },
+            {
+              "choice": "B",
+              "text": "Sunday returns for Saturday items avoid a late fee."
+            },
+            {
+              "choice": "C",
+              "text": "The event was canceled without notice."
+            },
+            {
+              "choice": "D",
+              "text": "Payment is required only in cash."
+            }
+          ],
+          "correctAnswer": "B",
+          "correctExplanation": "The documents support “Sunday returns for Saturday items avoid a late fee.”; this choice accurately paraphrases the relevant information.",
+          "distractorExplanations": {
+            "A": "Choice A is not supported by the stated dates, actions, quantities, or purpose in this reading set.",
+            "C": "Choice C is not supported by the stated dates, actions, quantities, or purpose in this reading set.",
+            "D": "Choice D is not supported by the stated dates, actions, quantities, or purpose in this reading set."
+          },
+          "completedContext": "Sunday returns for Saturday items avoid a late fee.",
+          "skillCategory": "reference",
+          "difficulty": "easy",
+          "usefulPattern": "Match the choice to the exact relationship, detail, or paraphrase supported by the document.",
+          "extraExample": null
+        }
+      ]
+    },
+    {
+      "textSetId": "toeic-r-p7-set-s03",
+      "version": 1,
+      "publicationState": "published",
+      "documentType": "advertisement",
+      "title": "North Trail Lunch Box",
+      "passage": "North Trail Lunch Box\nNORTH TRAIL LUNCH BOX\nFresh weekday lunches delivered to participating offices. Choose one main dish and two sides online by 8:30 A.M.; delivery occurs between 11:30 and noon. A five-meal pass costs $48 and may be shared by coworkers. This month, every pass includes one reusable container. Orders canceled before 9:00 A.M. receive full credit. Visit the local ordering page to see vegetarian choices.",
+      "difficulty": "easy",
+      "domain": "workplace_and_daily_life",
+      "questions": [
+        {
+          "itemId": "toeic-r-p7-153",
+          "itemVersion": 1,
+          "publicationState": "published",
+          "questionType": "next_action",
+          "blankId": "What is stated or indicated in the document?",
+          "choices": [
+            {
+              "choice": "A",
+              "text": "The event was canceled without notice."
+            },
+            {
+              "choice": "B",
+              "text": "Payment is required only in cash."
+            },
+            {
+              "choice": "C",
+              "text": "Orders must be placed by 8:30 A.M."
+            },
+            {
+              "choice": "D",
+              "text": "The location will close permanently."
+            }
+          ],
+          "correctAnswer": "C",
+          "correctExplanation": "The documents support “Orders must be placed by 8:30 A.M.”; this choice accurately paraphrases the relevant information.",
+          "distractorExplanations": {
+            "A": "Choice A is not supported by the stated dates, actions, quantities, or purpose in this reading set.",
+            "B": "Choice B is not supported by the stated dates, actions, quantities, or purpose in this reading set.",
+            "D": "Choice D is not supported by the stated dates, actions, quantities, or purpose in this reading set."
+          },
+          "completedContext": "Orders must be placed by 8:30 A.M.",
+          "skillCategory": "next_action",
+          "difficulty": "medium",
+          "usefulPattern": "Match the choice to the exact relationship, detail, or paraphrase supported by the document.",
+          "extraExample": null
+        },
+        {
+          "itemId": "toeic-r-p7-154",
+          "itemVersion": 1,
+          "publicationState": "published",
+          "questionType": "reason",
+          "blankId": "What is stated or indicated in the document?",
+          "choices": [
+            {
+              "choice": "A",
+              "text": "Payment is required only in cash."
+            },
+            {
+              "choice": "B",
+              "text": "The location will close permanently."
+            },
+            {
+              "choice": "C",
+              "text": "No action is expected from readers."
+            },
+            {
+              "choice": "D",
+              "text": "A five-meal pass costs $48."
+            }
+          ],
+          "correctAnswer": "D",
+          "correctExplanation": "The documents support “A five-meal pass costs $48.”; this choice accurately paraphrases the relevant information.",
+          "distractorExplanations": {
+            "A": "Choice A is not supported by the stated dates, actions, quantities, or purpose in this reading set.",
+            "B": "Choice B is not supported by the stated dates, actions, quantities, or purpose in this reading set.",
+            "C": "Choice C is not supported by the stated dates, actions, quantities, or purpose in this reading set."
+          },
+          "completedContext": "A five-meal pass costs $48.",
+          "skillCategory": "reason",
+          "difficulty": "hard",
+          "usefulPattern": "Match the choice to the exact relationship, detail, or paraphrase supported by the document.",
+          "extraExample": null
+        },
+        {
+          "itemId": "toeic-r-p7-155",
+          "itemVersion": 1,
+          "publicationState": "published",
+          "questionType": "intended_audience",
+          "blankId": "What is the purpose of the document?",
+          "choices": [
+            {
+              "choice": "A",
+              "text": "Cancellations before 9:00 receive full credit."
+            },
+            {
+              "choice": "B",
+              "text": "The location will close permanently."
+            },
+            {
+              "choice": "C",
+              "text": "No action is expected from readers."
+            },
+            {
+              "choice": "D",
+              "text": "The schedule was moved to next year."
+            }
+          ],
+          "correctAnswer": "A",
+          "correctExplanation": "The documents support “Cancellations before 9:00 receive full credit.”; this choice accurately paraphrases the relevant information.",
+          "distractorExplanations": {
+            "B": "Choice B is not supported by the stated dates, actions, quantities, or purpose in this reading set.",
+            "C": "Choice C is not supported by the stated dates, actions, quantities, or purpose in this reading set.",
+            "D": "Choice D is not supported by the stated dates, actions, quantities, or purpose in this reading set."
+          },
+          "completedContext": "Cancellations before 9:00 receive full credit.",
+          "skillCategory": "intended_audience",
+          "difficulty": "easy",
+          "usefulPattern": "Match the choice to the exact relationship, detail, or paraphrase supported by the document.",
+          "extraExample": null
+        }
+      ]
+    },
+    {
+      "textSetId": "toeic-r-p7-set-s04",
+      "version": 1,
+      "publicationState": "published",
+      "documentType": "article",
+      "title": "A Small Factory Cuts Waste",
+      "passage": "A Small Factory Cuts Waste\nMerrin Tools began collecting metal scraps separately from general waste in January. A local recycler now picks them up every Wednesday and returns a monthly weight report. In the first three months, disposal costs fell by 18 percent. Production manager Imani Ross says the reports also revealed which cutting process creates the most scrap. The company will use that information when it replaces two machines next year.",
+      "difficulty": "medium",
+      "domain": "workplace_and_daily_life",
+      "questions": [
+        {
+          "itemId": "toeic-r-p7-156",
+          "itemVersion": 1,
+          "publicationState": "published",
+          "questionType": "information_matching",
+          "blankId": "What is stated or indicated in the document?",
+          "choices": [
+            {
+              "choice": "A",
+              "text": "No action is expected from readers."
+            },
+            {
+              "choice": "B",
+              "text": "Metal scraps are collected every Wednesday."
+            },
+            {
+              "choice": "C",
+              "text": "The schedule was moved to next year."
+            },
+            {
+              "choice": "D",
+              "text": "All services are available at no cost."
+            }
+          ],
+          "correctAnswer": "B",
+          "correctExplanation": "The documents support “Metal scraps are collected every Wednesday.”; this choice accurately paraphrases the relevant information.",
+          "distractorExplanations": {
+            "A": "Choice A is not supported by the stated dates, actions, quantities, or purpose in this reading set.",
+            "C": "Choice C is not supported by the stated dates, actions, quantities, or purpose in this reading set.",
+            "D": "Choice D is not supported by the stated dates, actions, quantities, or purpose in this reading set."
+          },
+          "completedContext": "Metal scraps are collected every Wednesday.",
+          "skillCategory": "information_matching",
+          "difficulty": "medium",
+          "usefulPattern": "Match the choice to the exact relationship, detail, or paraphrase supported by the document.",
+          "extraExample": null
+        },
+        {
+          "itemId": "toeic-r-p7-157",
+          "itemVersion": 1,
+          "publicationState": "published",
+          "questionType": "cross_document",
+          "blankId": "What is stated or indicated in the document?",
+          "choices": [
+            {
+              "choice": "A",
+              "text": "The schedule was moved to next year."
+            },
+            {
+              "choice": "B",
+              "text": "All services are available at no cost."
+            },
+            {
+              "choice": "C",
+              "text": "Disposal costs fell by 18 percent."
+            },
+            {
+              "choice": "D",
+              "text": "The event was canceled without notice."
+            }
+          ],
+          "correctAnswer": "C",
+          "correctExplanation": "The documents support “Disposal costs fell by 18 percent.”; this choice accurately paraphrases the relevant information.",
+          "distractorExplanations": {
+            "A": "Choice A is not supported by the stated dates, actions, quantities, or purpose in this reading set.",
+            "B": "Choice B is not supported by the stated dates, actions, quantities, or purpose in this reading set.",
+            "D": "Choice D is not supported by the stated dates, actions, quantities, or purpose in this reading set."
+          },
+          "completedContext": "Disposal costs fell by 18 percent.",
+          "skillCategory": "cross_document",
+          "difficulty": "medium",
+          "usefulPattern": "Match the choice to the exact relationship, detail, or paraphrase supported by the document.",
+          "extraExample": null
+        },
+        {
+          "itemId": "toeic-r-p7-158",
+          "itemVersion": 1,
+          "publicationState": "published",
+          "questionType": "relationship",
+          "blankId": "What is the purpose of the document?",
+          "choices": [
+            {
+              "choice": "A",
+              "text": "All services are available at no cost."
+            },
+            {
+              "choice": "B",
+              "text": "The event was canceled without notice."
+            },
+            {
+              "choice": "C",
+              "text": "Payment is required only in cash."
+            },
+            {
+              "choice": "D",
+              "text": "Reports will inform a future equipment decision."
+            }
+          ],
+          "correctAnswer": "D",
+          "correctExplanation": "The documents support “Reports will inform a future equipment decision.”; this choice accurately paraphrases the relevant information.",
+          "distractorExplanations": {
+            "A": "Choice A is not supported by the stated dates, actions, quantities, or purpose in this reading set.",
+            "B": "Choice B is not supported by the stated dates, actions, quantities, or purpose in this reading set.",
+            "C": "Choice C is not supported by the stated dates, actions, quantities, or purpose in this reading set."
+          },
+          "completedContext": "Reports will inform a future equipment decision.",
+          "skillCategory": "relationship",
+          "difficulty": "hard",
+          "usefulPattern": "Match the choice to the exact relationship, detail, or paraphrase supported by the document.",
+          "extraExample": null
+        }
+      ]
+    },
+    {
+      "textSetId": "toeic-r-p7-set-s05",
+      "version": 1,
+      "publicationState": "published",
+      "documentType": "webpage",
+      "title": "Westbay Museum Membership",
+      "passage": "Westbay Museum Membership\nWESTBAY MUSEUM MEMBERSHIP\nIndividual membership includes unlimited admission and a 10 percent shop discount for twelve months. Members may reserve exhibition tickets seven days before general visitors. Membership does not include paid evening lectures, although members receive a reduced lecture price. Digital cards appear in the museum app immediately; printed cards arrive within ten business days.",
+      "difficulty": "medium",
+      "domain": "workplace_and_daily_life",
+      "questions": [
+        {
+          "itemId": "toeic-r-p7-159",
+          "itemVersion": 1,
+          "publicationState": "published",
+          "questionType": "specific_information",
+          "blankId": "What is stated or indicated in the document?",
+          "choices": [
+            {
+              "choice": "A",
+              "text": "Members receive unlimited admission for twelve months."
+            },
+            {
+              "choice": "B",
+              "text": "The event was canceled without notice."
+            },
+            {
+              "choice": "C",
+              "text": "Payment is required only in cash."
+            },
+            {
+              "choice": "D",
+              "text": "The location will close permanently."
+            }
+          ],
+          "correctAnswer": "A",
+          "correctExplanation": "The documents support “Members receive unlimited admission for twelve months.”; this choice accurately paraphrases the relevant information.",
+          "distractorExplanations": {
+            "B": "Choice B is not supported by the stated dates, actions, quantities, or purpose in this reading set.",
+            "C": "Choice C is not supported by the stated dates, actions, quantities, or purpose in this reading set.",
+            "D": "Choice D is not supported by the stated dates, actions, quantities, or purpose in this reading set."
+          },
+          "completedContext": "Members receive unlimited admission for twelve months.",
+          "skillCategory": "specific_information",
+          "difficulty": "medium",
+          "usefulPattern": "Match the choice to the exact relationship, detail, or paraphrase supported by the document.",
+          "extraExample": null
+        },
+        {
+          "itemId": "toeic-r-p7-160",
+          "itemVersion": 1,
+          "publicationState": "published",
+          "questionType": "author_purpose",
+          "blankId": "What is stated or indicated in the document?",
+          "choices": [
+            {
+              "choice": "A",
+              "text": "Payment is required only in cash."
+            },
+            {
+              "choice": "B",
+              "text": "Early exhibition reservations open seven days sooner."
+            },
+            {
+              "choice": "C",
+              "text": "The location will close permanently."
+            },
+            {
+              "choice": "D",
+              "text": "No action is expected from readers."
+            }
+          ],
+          "correctAnswer": "B",
+          "correctExplanation": "The documents support “Early exhibition reservations open seven days sooner.”; this choice accurately paraphrases the relevant information.",
+          "distractorExplanations": {
+            "A": "Choice A is not supported by the stated dates, actions, quantities, or purpose in this reading set.",
+            "C": "Choice C is not supported by the stated dates, actions, quantities, or purpose in this reading set.",
+            "D": "Choice D is not supported by the stated dates, actions, quantities, or purpose in this reading set."
+          },
+          "completedContext": "Early exhibition reservations open seven days sooner.",
+          "skillCategory": "author_purpose",
+          "difficulty": "medium",
+          "usefulPattern": "Match the choice to the exact relationship, detail, or paraphrase supported by the document.",
+          "extraExample": null
+        },
+        {
+          "itemId": "toeic-r-p7-161",
+          "itemVersion": 1,
+          "publicationState": "published",
+          "questionType": "implied_information",
+          "blankId": "What is the purpose of the document?",
+          "choices": [
+            {
+              "choice": "A",
+              "text": "The location will close permanently."
+            },
+            {
+              "choice": "B",
+              "text": "No action is expected from readers."
+            },
+            {
+              "choice": "C",
+              "text": "Printed cards may take ten business days."
+            },
+            {
+              "choice": "D",
+              "text": "The schedule was moved to next year."
+            }
+          ],
+          "correctAnswer": "C",
+          "correctExplanation": "The documents support “Printed cards may take ten business days.”; this choice accurately paraphrases the relevant information.",
+          "distractorExplanations": {
+            "A": "Choice A is not supported by the stated dates, actions, quantities, or purpose in this reading set.",
+            "B": "Choice B is not supported by the stated dates, actions, quantities, or purpose in this reading set.",
+            "D": "Choice D is not supported by the stated dates, actions, quantities, or purpose in this reading set."
+          },
+          "completedContext": "Printed cards may take ten business days.",
+          "skillCategory": "implied_information",
+          "difficulty": "easy",
+          "usefulPattern": "Match the choice to the exact relationship, detail, or paraphrase supported by the document.",
+          "extraExample": null
+        }
+      ]
+    },
+    {
+      "textSetId": "toeic-r-p7-set-s06",
+      "version": 1,
+      "publicationState": "published",
+      "documentType": "memo",
+      "title": "Inventory Count Memo",
+      "passage": "Inventory Count Memo\nTo: Store supervisors\nFrom: Operations\n\nThe quarterly inventory count will begin after closing on March 28. Each store should assign four employees and confirm their names in the staff portal by March 22. Barcode scanners will arrive with Friday’s regular supply shipment. Do not unpack them until the count team is present. Stores that finish before midnight should upload the signed summary before employees leave.",
+      "difficulty": "medium",
+      "domain": "workplace_and_daily_life",
+      "questions": [
+        {
+          "itemId": "toeic-r-p7-162",
+          "itemVersion": 1,
+          "publicationState": "published",
+          "questionType": "text_organization",
+          "blankId": "What is stated or indicated in the document?",
+          "choices": [
+            {
+              "choice": "A",
+              "text": "No action is expected from readers."
+            },
+            {
+              "choice": "B",
+              "text": "The schedule was moved to next year."
+            },
+            {
+              "choice": "C",
+              "text": "All services are available at no cost."
+            },
+            {
+              "choice": "D",
+              "text": "Four employees should be assigned per store."
+            }
+          ],
+          "correctAnswer": "D",
+          "correctExplanation": "The documents support “Four employees should be assigned per store.”; this choice accurately paraphrases the relevant information.",
+          "distractorExplanations": {
+            "A": "Choice A is not supported by the stated dates, actions, quantities, or purpose in this reading set.",
+            "B": "Choice B is not supported by the stated dates, actions, quantities, or purpose in this reading set.",
+            "C": "Choice C is not supported by the stated dates, actions, quantities, or purpose in this reading set."
+          },
+          "completedContext": "Four employees should be assigned per store.",
+          "skillCategory": "text_organization",
+          "difficulty": "hard",
+          "usefulPattern": "Match the choice to the exact relationship, detail, or paraphrase supported by the document.",
+          "extraExample": null
+        },
+        {
+          "itemId": "toeic-r-p7-163",
+          "itemVersion": 1,
+          "publicationState": "published",
+          "questionType": "main_idea",
+          "blankId": "What is stated or indicated in the document?",
+          "choices": [
+            {
+              "choice": "A",
+              "text": "Names are due in the portal by March 22."
+            },
+            {
+              "choice": "B",
+              "text": "The schedule was moved to next year."
+            },
+            {
+              "choice": "C",
+              "text": "All services are available at no cost."
+            },
+            {
+              "choice": "D",
+              "text": "The event was canceled without notice."
+            }
+          ],
+          "correctAnswer": "A",
+          "correctExplanation": "The documents support “Names are due in the portal by March 22.”; this choice accurately paraphrases the relevant information.",
+          "distractorExplanations": {
+            "B": "Choice B is not supported by the stated dates, actions, quantities, or purpose in this reading set.",
+            "C": "Choice C is not supported by the stated dates, actions, quantities, or purpose in this reading set.",
+            "D": "Choice D is not supported by the stated dates, actions, quantities, or purpose in this reading set."
+          },
+          "completedContext": "Names are due in the portal by March 22.",
+          "skillCategory": "main_idea",
+          "difficulty": "medium",
+          "usefulPattern": "Match the choice to the exact relationship, detail, or paraphrase supported by the document.",
+          "extraExample": null
+        },
+        {
+          "itemId": "toeic-r-p7-164",
+          "itemVersion": 1,
+          "publicationState": "published",
+          "questionType": "detail",
+          "blankId": "What is the purpose of the document?",
+          "choices": [
+            {
+              "choice": "A",
+              "text": "All services are available at no cost."
+            },
+            {
+              "choice": "B",
+              "text": "Scanners arrive with Friday’s supply shipment."
+            },
+            {
+              "choice": "C",
+              "text": "The event was canceled without notice."
+            },
+            {
+              "choice": "D",
+              "text": "Payment is required only in cash."
+            }
+          ],
+          "correctAnswer": "B",
+          "correctExplanation": "The documents support “Scanners arrive with Friday’s supply shipment.”; this choice accurately paraphrases the relevant information.",
+          "distractorExplanations": {
+            "A": "Choice A is not supported by the stated dates, actions, quantities, or purpose in this reading set.",
+            "C": "Choice C is not supported by the stated dates, actions, quantities, or purpose in this reading set.",
+            "D": "Choice D is not supported by the stated dates, actions, quantities, or purpose in this reading set."
+          },
+          "completedContext": "Scanners arrive with Friday’s supply shipment.",
+          "skillCategory": "detail",
+          "difficulty": "easy",
+          "usefulPattern": "Match the choice to the exact relationship, detail, or paraphrase supported by the document.",
+          "extraExample": null
+        }
+      ]
+    },
+    {
+      "textSetId": "toeic-r-p7-set-s07",
+      "version": 1,
+      "publicationState": "published",
+      "documentType": "schedule",
+      "title": "Riverton Ferry Schedule",
+      "passage": "Riverton Ferry Schedule\nRIVERTON FERRY — SATURDAY\nRiverton 08:00 → Pine Island 08:35\nRiverton 10:30 → Pine Island 11:05\nRiverton 14:00 → Pine Island 14:35\nPine Island 09:00 → Riverton 09:35\nPine Island 12:15 → Riverton 12:50\nPine Island 16:20 → Riverton 16:55\nBicycles are accepted at no charge. Passengers should board ten minutes before departure.",
+      "difficulty": "medium",
+      "domain": "workplace_and_daily_life",
+      "questions": [
+        {
+          "itemId": "toeic-r-p7-165",
+          "itemVersion": 1,
+          "publicationState": "published",
+          "questionType": "purpose",
+          "blankId": "What is stated or indicated in the document?",
+          "choices": [
+            {
+              "choice": "A",
+              "text": "The event was canceled without notice."
+            },
+            {
+              "choice": "B",
+              "text": "Payment is required only in cash."
+            },
+            {
+              "choice": "C",
+              "text": "The 10:30 ferry reaches Pine Island at 11:05."
+            },
+            {
+              "choice": "D",
+              "text": "The location will close permanently."
+            }
+          ],
+          "correctAnswer": "C",
+          "correctExplanation": "The documents support “The 10:30 ferry reaches Pine Island at 11:05.”; this choice accurately paraphrases the relevant information.",
+          "distractorExplanations": {
+            "A": "Choice A is not supported by the stated dates, actions, quantities, or purpose in this reading set.",
+            "B": "Choice B is not supported by the stated dates, actions, quantities, or purpose in this reading set.",
+            "D": "Choice D is not supported by the stated dates, actions, quantities, or purpose in this reading set."
+          },
+          "completedContext": "The 10:30 ferry reaches Pine Island at 11:05.",
+          "skillCategory": "purpose",
+          "difficulty": "medium",
+          "usefulPattern": "Match the choice to the exact relationship, detail, or paraphrase supported by the document.",
+          "extraExample": null
+        },
+        {
+          "itemId": "toeic-r-p7-166",
+          "itemVersion": 1,
+          "publicationState": "published",
+          "questionType": "inference",
+          "blankId": "What is stated or indicated in the document?",
+          "choices": [
+            {
+              "choice": "A",
+              "text": "Payment is required only in cash."
+            },
+            {
+              "choice": "B",
+              "text": "The location will close permanently."
+            },
+            {
+              "choice": "C",
+              "text": "No action is expected from readers."
+            },
+            {
+              "choice": "D",
+              "text": "Bicycles travel at no additional charge."
+            }
+          ],
+          "correctAnswer": "D",
+          "correctExplanation": "The documents support “Bicycles travel at no additional charge.”; this choice accurately paraphrases the relevant information.",
+          "distractorExplanations": {
+            "A": "Choice A is not supported by the stated dates, actions, quantities, or purpose in this reading set.",
+            "B": "Choice B is not supported by the stated dates, actions, quantities, or purpose in this reading set.",
+            "C": "Choice C is not supported by the stated dates, actions, quantities, or purpose in this reading set."
+          },
+          "completedContext": "Bicycles travel at no additional charge.",
+          "skillCategory": "inference",
+          "difficulty": "hard",
+          "usefulPattern": "Match the choice to the exact relationship, detail, or paraphrase supported by the document.",
+          "extraExample": null
+        },
+        {
+          "itemId": "toeic-r-p7-167",
+          "itemVersion": 1,
+          "publicationState": "published",
+          "questionType": "paraphrase",
+          "blankId": "What is the purpose of the document?",
+          "choices": [
+            {
+              "choice": "A",
+              "text": "Passengers should board ten minutes early."
+            },
+            {
+              "choice": "B",
+              "text": "The location will close permanently."
+            },
+            {
+              "choice": "C",
+              "text": "No action is expected from readers."
+            },
+            {
+              "choice": "D",
+              "text": "The schedule was moved to next year."
+            }
+          ],
+          "correctAnswer": "A",
+          "correctExplanation": "The documents support “Passengers should board ten minutes early.”; this choice accurately paraphrases the relevant information.",
+          "distractorExplanations": {
+            "B": "Choice B is not supported by the stated dates, actions, quantities, or purpose in this reading set.",
+            "C": "Choice C is not supported by the stated dates, actions, quantities, or purpose in this reading set.",
+            "D": "Choice D is not supported by the stated dates, actions, quantities, or purpose in this reading set."
+          },
+          "completedContext": "Passengers should board ten minutes early.",
+          "skillCategory": "paraphrase",
+          "difficulty": "easy",
+          "usefulPattern": "Match the choice to the exact relationship, detail, or paraphrase supported by the document.",
+          "extraExample": null
+        }
+      ]
+    },
+    {
+      "textSetId": "toeic-r-p7-set-s08",
+      "version": 1,
+      "publicationState": "published",
+      "documentType": "chat",
+      "title": "Design Team Messages",
+      "passage": "Design Team Messages\nMara 2:10 P.M.: The client approved the blue cover, but wants the title moved higher.\nJon 2:12 P.M.: I can revise it after I finish the chart. Do they still need a PDF today?\nMara 2:14 P.M.: Yes, by 4:30. The printed sample can wait until tomorrow morning.\nJon 2:15 P.M.: Understood. I’ll send you the PDF for a final check at four.",
+      "difficulty": "medium",
+      "domain": "workplace_and_daily_life",
+      "questions": [
+        {
+          "itemId": "toeic-r-p7-168",
+          "itemVersion": 1,
+          "publicationState": "published",
+          "questionType": "vocabulary_in_context",
+          "blankId": "What is stated or indicated in the document?",
+          "choices": [
+            {
+              "choice": "A",
+              "text": "No action is expected from readers."
+            },
+            {
+              "choice": "B",
+              "text": "The client approved the blue cover."
+            },
+            {
+              "choice": "C",
+              "text": "The schedule was moved to next year."
+            },
+            {
+              "choice": "D",
+              "text": "All services are available at no cost."
+            }
+          ],
+          "correctAnswer": "B",
+          "correctExplanation": "The documents support “The client approved the blue cover.”; this choice accurately paraphrases the relevant information.",
+          "distractorExplanations": {
+            "A": "Choice A is not supported by the stated dates, actions, quantities, or purpose in this reading set.",
+            "C": "Choice C is not supported by the stated dates, actions, quantities, or purpose in this reading set.",
+            "D": "Choice D is not supported by the stated dates, actions, quantities, or purpose in this reading set."
+          },
+          "completedContext": "The client approved the blue cover.",
+          "skillCategory": "vocabulary_in_context",
+          "difficulty": "medium",
+          "usefulPattern": "Match the choice to the exact relationship, detail, or paraphrase supported by the document.",
+          "extraExample": null
+        },
+        {
+          "itemId": "toeic-r-p7-169",
+          "itemVersion": 1,
+          "publicationState": "published",
+          "questionType": "reference",
+          "blankId": "What is stated or indicated in the document?",
+          "choices": [
+            {
+              "choice": "A",
+              "text": "The schedule was moved to next year."
+            },
+            {
+              "choice": "B",
+              "text": "All services are available at no cost."
+            },
+            {
+              "choice": "C",
+              "text": "The PDF is needed by 4:30."
+            },
+            {
+              "choice": "D",
+              "text": "The event was canceled without notice."
+            }
+          ],
+          "correctAnswer": "C",
+          "correctExplanation": "The documents support “The PDF is needed by 4:30.”; this choice accurately paraphrases the relevant information.",
+          "distractorExplanations": {
+            "A": "Choice A is not supported by the stated dates, actions, quantities, or purpose in this reading set.",
+            "B": "Choice B is not supported by the stated dates, actions, quantities, or purpose in this reading set.",
+            "D": "Choice D is not supported by the stated dates, actions, quantities, or purpose in this reading set."
+          },
+          "completedContext": "The PDF is needed by 4:30.",
+          "skillCategory": "reference",
+          "difficulty": "medium",
+          "usefulPattern": "Match the choice to the exact relationship, detail, or paraphrase supported by the document.",
+          "extraExample": null
+        },
+        {
+          "itemId": "toeic-r-p7-170",
+          "itemVersion": 1,
+          "publicationState": "published",
+          "questionType": "next_action",
+          "blankId": "What is the purpose of the document?",
+          "choices": [
+            {
+              "choice": "A",
+              "text": "All services are available at no cost."
+            },
+            {
+              "choice": "B",
+              "text": "The event was canceled without notice."
+            },
+            {
+              "choice": "C",
+              "text": "Payment is required only in cash."
+            },
+            {
+              "choice": "D",
+              "text": "Jon will send the PDF to Mara at four."
+            }
+          ],
+          "correctAnswer": "D",
+          "correctExplanation": "The documents support “Jon will send the PDF to Mara at four.”; this choice accurately paraphrases the relevant information.",
+          "distractorExplanations": {
+            "A": "Choice A is not supported by the stated dates, actions, quantities, or purpose in this reading set.",
+            "B": "Choice B is not supported by the stated dates, actions, quantities, or purpose in this reading set.",
+            "C": "Choice C is not supported by the stated dates, actions, quantities, or purpose in this reading set."
+          },
+          "completedContext": "Jon will send the PDF to Mara at four.",
+          "skillCategory": "next_action",
+          "difficulty": "hard",
+          "usefulPattern": "Match the choice to the exact relationship, detail, or paraphrase supported by the document.",
+          "extraExample": null
+        }
+      ]
+    },
+    {
+      "textSetId": "toeic-r-p7-set-s09",
+      "version": 1,
+      "publicationState": "published",
+      "documentType": "job_posting",
+      "title": "Elm & Stone Events",
+      "passage": "Elm & Stone Events\nEVENT ASSISTANT — WEEKENDS\nElm & Stone Events seeks an assistant for Saturday conferences from April through June. Duties include greeting speakers, checking room signs, and updating the event schedule. Applicants need strong written communication and must be able to arrive by 7:00 A.M. Previous event experience is preferred but not required. Submit a résumé and a short message describing your availability by February 18.",
+      "difficulty": "hard",
+      "domain": "workplace_and_daily_life",
+      "questions": [
+        {
+          "itemId": "toeic-r-p7-171",
+          "itemVersion": 1,
+          "publicationState": "published",
+          "questionType": "reason",
+          "blankId": "What is stated or indicated in the document?",
+          "choices": [
+            {
+              "choice": "A",
+              "text": "The position covers Saturday conferences."
+            },
+            {
+              "choice": "B",
+              "text": "The event was canceled without notice."
+            },
+            {
+              "choice": "C",
+              "text": "Payment is required only in cash."
+            },
+            {
+              "choice": "D",
+              "text": "The location will close permanently."
+            }
+          ],
+          "correctAnswer": "A",
+          "correctExplanation": "The documents support “The position covers Saturday conferences.”; this choice accurately paraphrases the relevant information.",
+          "distractorExplanations": {
+            "B": "Choice B is not supported by the stated dates, actions, quantities, or purpose in this reading set.",
+            "C": "Choice C is not supported by the stated dates, actions, quantities, or purpose in this reading set.",
+            "D": "Choice D is not supported by the stated dates, actions, quantities, or purpose in this reading set."
+          },
+          "completedContext": "The position covers Saturday conferences.",
+          "skillCategory": "reason",
+          "difficulty": "medium",
+          "usefulPattern": "Match the choice to the exact relationship, detail, or paraphrase supported by the document.",
+          "extraExample": null
+        },
+        {
+          "itemId": "toeic-r-p7-172",
+          "itemVersion": 1,
+          "publicationState": "published",
+          "questionType": "intended_audience",
+          "blankId": "What is stated or indicated in the document?",
+          "choices": [
+            {
+              "choice": "A",
+              "text": "Payment is required only in cash."
+            },
+            {
+              "choice": "B",
+              "text": "Applicants must arrive by 7:00 A.M."
+            },
+            {
+              "choice": "C",
+              "text": "The location will close permanently."
+            },
+            {
+              "choice": "D",
+              "text": "No action is expected from readers."
+            }
+          ],
+          "correctAnswer": "B",
+          "correctExplanation": "The documents support “Applicants must arrive by 7:00 A.M.”; this choice accurately paraphrases the relevant information.",
+          "distractorExplanations": {
+            "A": "Choice A is not supported by the stated dates, actions, quantities, or purpose in this reading set.",
+            "C": "Choice C is not supported by the stated dates, actions, quantities, or purpose in this reading set.",
+            "D": "Choice D is not supported by the stated dates, actions, quantities, or purpose in this reading set."
+          },
+          "completedContext": "Applicants must arrive by 7:00 A.M.",
+          "skillCategory": "intended_audience",
+          "difficulty": "medium",
+          "usefulPattern": "Match the choice to the exact relationship, detail, or paraphrase supported by the document.",
+          "extraExample": null
+        },
+        {
+          "itemId": "toeic-r-p7-173",
+          "itemVersion": 1,
+          "publicationState": "published",
+          "questionType": "information_matching",
+          "blankId": "What is the purpose of the document?",
+          "choices": [
+            {
+              "choice": "A",
+              "text": "The location will close permanently."
+            },
+            {
+              "choice": "B",
+              "text": "No action is expected from readers."
+            },
+            {
+              "choice": "C",
+              "text": "Prior event experience is preferred, not required."
+            },
+            {
+              "choice": "D",
+              "text": "The schedule was moved to next year."
+            }
+          ],
+          "correctAnswer": "C",
+          "correctExplanation": "The documents support “Prior event experience is preferred, not required.”; this choice accurately paraphrases the relevant information.",
+          "distractorExplanations": {
+            "A": "Choice A is not supported by the stated dates, actions, quantities, or purpose in this reading set.",
+            "B": "Choice B is not supported by the stated dates, actions, quantities, or purpose in this reading set.",
+            "D": "Choice D is not supported by the stated dates, actions, quantities, or purpose in this reading set."
+          },
+          "completedContext": "Prior event experience is preferred, not required.",
+          "skillCategory": "information_matching",
+          "difficulty": "easy",
+          "usefulPattern": "Match the choice to the exact relationship, detail, or paraphrase supported by the document.",
+          "extraExample": null
+        }
+      ]
+    },
+    {
+      "textSetId": "toeic-r-p7-set-s10",
+      "version": 1,
+      "publicationState": "published",
+      "documentType": "instructions",
+      "title": "Community Garden Pickup",
+      "passage": "Community Garden Pickup\nSEEDLING PICKUP INSTRUCTIONS\nBring your confirmation number to the south greenhouse on May 6 between 1:00 and 5:00 P.M. Volunteers will place labeled plants on the collection tables alphabetically by last name. If another person is collecting your order, forward the confirmation message to that person. Unclaimed plants will be moved to the visitor center and held until May 8.",
+      "difficulty": "hard",
+      "domain": "workplace_and_daily_life",
+      "questions": [
+        {
+          "itemId": "toeic-r-p7-174",
+          "itemVersion": 1,
+          "publicationState": "published",
+          "questionType": "cross_document",
+          "blankId": "What is stated or indicated in the document?",
+          "choices": [
+            {
+              "choice": "A",
+              "text": "No action is expected from readers."
+            },
+            {
+              "choice": "B",
+              "text": "The schedule was moved to next year."
+            },
+            {
+              "choice": "C",
+              "text": "All services are available at no cost."
+            },
+            {
+              "choice": "D",
+              "text": "Pickup occurs at the south greenhouse."
+            }
+          ],
+          "correctAnswer": "D",
+          "correctExplanation": "The documents support “Pickup occurs at the south greenhouse.”; this choice accurately paraphrases the relevant information.",
+          "distractorExplanations": {
+            "A": "Choice A is not supported by the stated dates, actions, quantities, or purpose in this reading set.",
+            "B": "Choice B is not supported by the stated dates, actions, quantities, or purpose in this reading set.",
+            "C": "Choice C is not supported by the stated dates, actions, quantities, or purpose in this reading set."
+          },
+          "completedContext": "Pickup occurs at the south greenhouse.",
+          "skillCategory": "cross_document",
+          "difficulty": "hard",
+          "usefulPattern": "Match the choice to the exact relationship, detail, or paraphrase supported by the document.",
+          "extraExample": null
+        },
+        {
+          "itemId": "toeic-r-p7-175",
+          "itemVersion": 1,
+          "publicationState": "published",
+          "questionType": "relationship",
+          "blankId": "What is stated or indicated in the document?",
+          "choices": [
+            {
+              "choice": "A",
+              "text": "Plants are arranged by last name."
+            },
+            {
+              "choice": "B",
+              "text": "The schedule was moved to next year."
+            },
+            {
+              "choice": "C",
+              "text": "All services are available at no cost."
+            },
+            {
+              "choice": "D",
+              "text": "The event was canceled without notice."
+            }
+          ],
+          "correctAnswer": "A",
+          "correctExplanation": "The documents support “Plants are arranged by last name.”; this choice accurately paraphrases the relevant information.",
+          "distractorExplanations": {
+            "B": "Choice B is not supported by the stated dates, actions, quantities, or purpose in this reading set.",
+            "C": "Choice C is not supported by the stated dates, actions, quantities, or purpose in this reading set.",
+            "D": "Choice D is not supported by the stated dates, actions, quantities, or purpose in this reading set."
+          },
+          "completedContext": "Plants are arranged by last name.",
+          "skillCategory": "relationship",
+          "difficulty": "medium",
+          "usefulPattern": "Match the choice to the exact relationship, detail, or paraphrase supported by the document.",
+          "extraExample": null
+        }
+      ]
+    },
+    {
+      "textSetId": "toeic-r-p7-set-m01",
+      "version": 1,
+      "publicationState": "published",
+      "documentType": "multiple_documents",
+      "title": "Related documents 1",
+      "passage": "Document 1\nOrder Confirmation #BR-1842\nBlue Ridge Office Supply confirms 12 desk lamps at $24 each. Requested delivery: June 11. Shipping address: 80 Willow Lane.\n\n──────────\n\nDocument 2\nEmail from Tessa: Please change order BR-1842 to 10 lamps. The training room needs only eight, and two will be kept as replacements. Keep the June 11 delivery date and address.",
+      "difficulty": "medium",
+      "domain": "workplace_and_daily_life",
+      "questions": [
+        {
+          "itemId": "toeic-r-p7-176",
+          "itemVersion": 1,
+          "publicationState": "published",
+          "questionType": "specific_information",
+          "blankId": "What is the purpose of the document?",
+          "choices": [
+            {
+              "choice": "A",
+              "text": "All services are available at no cost."
+            },
+            {
+              "choice": "B",
+              "text": "The original order listed 12 lamps."
+            },
+            {
+              "choice": "C",
+              "text": "The event was canceled without notice."
+            },
+            {
+              "choice": "D",
+              "text": "Payment is required only in cash."
+            }
+          ],
+          "correctAnswer": "B",
+          "correctExplanation": "The documents support “The original order listed 12 lamps.”; this choice accurately paraphrases the relevant information.",
+          "distractorExplanations": {
+            "A": "Choice A is not supported by the stated dates, actions, quantities, or purpose in this reading set.",
+            "C": "Choice C is not supported by the stated dates, actions, quantities, or purpose in this reading set.",
+            "D": "Choice D is not supported by the stated dates, actions, quantities, or purpose in this reading set."
+          },
+          "completedContext": "The original order listed 12 lamps.",
+          "skillCategory": "specific_information",
+          "difficulty": "easy",
+          "usefulPattern": "Match the choice to the exact relationship, detail, or paraphrase supported by the document.",
+          "extraExample": null
+        },
+        {
+          "itemId": "toeic-r-p7-177",
+          "itemVersion": 1,
+          "publicationState": "published",
+          "questionType": "author_purpose",
+          "blankId": "What is stated or indicated in the document?",
+          "choices": [
+            {
+              "choice": "A",
+              "text": "The event was canceled without notice."
+            },
+            {
+              "choice": "B",
+              "text": "Payment is required only in cash."
+            },
+            {
+              "choice": "C",
+              "text": "The revised quantity is 10 lamps."
+            },
+            {
+              "choice": "D",
+              "text": "The location will close permanently."
+            }
+          ],
+          "correctAnswer": "C",
+          "correctExplanation": "The documents support “The revised quantity is 10 lamps.”; this choice accurately paraphrases the relevant information.",
+          "distractorExplanations": {
+            "A": "Choice A is not supported by the stated dates, actions, quantities, or purpose in this reading set.",
+            "B": "Choice B is not supported by the stated dates, actions, quantities, or purpose in this reading set.",
+            "D": "Choice D is not supported by the stated dates, actions, quantities, or purpose in this reading set."
+          },
+          "completedContext": "The revised quantity is 10 lamps.",
+          "skillCategory": "author_purpose",
+          "difficulty": "medium",
+          "usefulPattern": "Match the choice to the exact relationship, detail, or paraphrase supported by the document.",
+          "extraExample": null
+        },
+        {
+          "itemId": "toeic-r-p7-178",
+          "itemVersion": 1,
+          "publicationState": "published",
+          "questionType": "cross_document",
+          "blankId": "What is indicated when the documents are considered together?",
+          "choices": [
+            {
+              "choice": "A",
+              "text": "Payment is required only in cash."
+            },
+            {
+              "choice": "B",
+              "text": "The location will close permanently."
+            },
+            {
+              "choice": "C",
+              "text": "No action is expected from readers."
+            },
+            {
+              "choice": "D",
+              "text": "Delivery remains June 11."
+            }
+          ],
+          "correctAnswer": "D",
+          "correctExplanation": "The documents support “Delivery remains June 11.”; this choice accurately paraphrases the relevant information.",
+          "distractorExplanations": {
+            "A": "Choice A is not supported by the stated dates, actions, quantities, or purpose in this reading set.",
+            "B": "Choice B is not supported by the stated dates, actions, quantities, or purpose in this reading set.",
+            "C": "Choice C is not supported by the stated dates, actions, quantities, or purpose in this reading set."
+          },
+          "completedContext": "Delivery remains June 11.",
+          "skillCategory": "cross_document",
+          "difficulty": "hard",
+          "usefulPattern": "Match the choice to the exact relationship, detail, or paraphrase supported by the document.",
+          "extraExample": null
+        },
+        {
+          "itemId": "toeic-r-p7-179",
+          "itemVersion": 1,
+          "publicationState": "published",
+          "questionType": "cross_document",
+          "blankId": "What is indicated when the documents are considered together?",
+          "choices": [
+            {
+              "choice": "A",
+              "text": "Two lamps will be replacements."
+            },
+            {
+              "choice": "B",
+              "text": "The location will close permanently."
+            },
+            {
+              "choice": "C",
+              "text": "No action is expected from readers."
+            },
+            {
+              "choice": "D",
+              "text": "The schedule was moved to next year."
+            }
+          ],
+          "correctAnswer": "A",
+          "correctExplanation": "The documents support “Two lamps will be replacements.”; this choice accurately paraphrases the relevant information.",
+          "distractorExplanations": {
+            "B": "Choice B is not supported by the stated dates, actions, quantities, or purpose in this reading set.",
+            "C": "Choice C is not supported by the stated dates, actions, quantities, or purpose in this reading set.",
+            "D": "Choice D is not supported by the stated dates, actions, quantities, or purpose in this reading set."
+          },
+          "completedContext": "Two lamps will be replacements.",
+          "skillCategory": "cross_document",
+          "difficulty": "hard",
+          "usefulPattern": "Match the choice to the exact relationship, detail, or paraphrase supported by the document.",
+          "extraExample": null
+        },
+        {
+          "itemId": "toeic-r-p7-180",
+          "itemVersion": 1,
+          "publicationState": "published",
+          "questionType": "cross_document",
+          "blankId": "What is indicated when the documents are considered together?",
+          "choices": [
+            {
+              "choice": "A",
+              "text": "No action is expected from readers."
+            },
+            {
+              "choice": "B",
+              "text": "The address remains 80 Willow Lane."
+            },
+            {
+              "choice": "C",
+              "text": "The schedule was moved to next year."
+            },
+            {
+              "choice": "D",
+              "text": "All services are available at no cost."
+            }
+          ],
+          "correctAnswer": "B",
+          "correctExplanation": "The documents support “The address remains 80 Willow Lane.”; this choice accurately paraphrases the relevant information.",
+          "distractorExplanations": {
+            "A": "Choice A is not supported by the stated dates, actions, quantities, or purpose in this reading set.",
+            "C": "Choice C is not supported by the stated dates, actions, quantities, or purpose in this reading set.",
+            "D": "Choice D is not supported by the stated dates, actions, quantities, or purpose in this reading set."
+          },
+          "completedContext": "The address remains 80 Willow Lane.",
+          "skillCategory": "cross_document",
+          "difficulty": "hard",
+          "usefulPattern": "Match the choice to the exact relationship, detail, or paraphrase supported by the document.",
+          "extraExample": null
+        }
+      ]
+    },
+    {
+      "textSetId": "toeic-r-p7-set-m02",
+      "version": 1,
+      "publicationState": "published",
+      "documentType": "multiple_documents",
+      "title": "Related documents 2",
+      "passage": "Document 1\nCITY ARTS DAY — PROGRAM\n10:00 Opening remarks — Hall A\n10:30 Poster workshop — Studio 2\n12:00 Lunch — Courtyard\n1:30 Photography walk — Main entrance\n3:00 Closing exhibit — Hall A\n\n──────────\n\nDocument 2\nMessage from Leo: I will arrive at 11:45, so I will miss the poster workshop. Please meet me in the courtyard for lunch. I brought my camera and plan to join the afternoon walk.",
+      "difficulty": "medium",
+      "domain": "workplace_and_daily_life",
+      "questions": [
+        {
+          "itemId": "toeic-r-p7-181",
+          "itemVersion": 1,
+          "publicationState": "published",
+          "questionType": "detail",
+          "blankId": "What is stated or indicated in the document?",
+          "choices": [
+            {
+              "choice": "A",
+              "text": "The schedule was moved to next year."
+            },
+            {
+              "choice": "B",
+              "text": "All services are available at no cost."
+            },
+            {
+              "choice": "C",
+              "text": "Leo will miss the poster workshop."
+            },
+            {
+              "choice": "D",
+              "text": "The event was canceled without notice."
+            }
+          ],
+          "correctAnswer": "C",
+          "correctExplanation": "The documents support “Leo will miss the poster workshop.”; this choice accurately paraphrases the relevant information.",
+          "distractorExplanations": {
+            "A": "Choice A is not supported by the stated dates, actions, quantities, or purpose in this reading set.",
+            "B": "Choice B is not supported by the stated dates, actions, quantities, or purpose in this reading set.",
+            "D": "Choice D is not supported by the stated dates, actions, quantities, or purpose in this reading set."
+          },
+          "completedContext": "Leo will miss the poster workshop.",
+          "skillCategory": "detail",
+          "difficulty": "medium",
+          "usefulPattern": "Match the choice to the exact relationship, detail, or paraphrase supported by the document.",
+          "extraExample": null
+        },
+        {
+          "itemId": "toeic-r-p7-182",
+          "itemVersion": 1,
+          "publicationState": "published",
+          "questionType": "purpose",
+          "blankId": "What is the purpose of the document?",
+          "choices": [
+            {
+              "choice": "A",
+              "text": "All services are available at no cost."
+            },
+            {
+              "choice": "B",
+              "text": "The event was canceled without notice."
+            },
+            {
+              "choice": "C",
+              "text": "Payment is required only in cash."
+            },
+            {
+              "choice": "D",
+              "text": "Leo plans to attend lunch in the courtyard."
+            }
+          ],
+          "correctAnswer": "D",
+          "correctExplanation": "The documents support “Leo plans to attend lunch in the courtyard.”; this choice accurately paraphrases the relevant information.",
+          "distractorExplanations": {
+            "A": "Choice A is not supported by the stated dates, actions, quantities, or purpose in this reading set.",
+            "B": "Choice B is not supported by the stated dates, actions, quantities, or purpose in this reading set.",
+            "C": "Choice C is not supported by the stated dates, actions, quantities, or purpose in this reading set."
+          },
+          "completedContext": "Leo plans to attend lunch in the courtyard.",
+          "skillCategory": "purpose",
+          "difficulty": "hard",
+          "usefulPattern": "Match the choice to the exact relationship, detail, or paraphrase supported by the document.",
+          "extraExample": null
+        },
+        {
+          "itemId": "toeic-r-p7-183",
+          "itemVersion": 1,
+          "publicationState": "published",
+          "questionType": "cross_document",
+          "blankId": "What is indicated when the documents are considered together?",
+          "choices": [
+            {
+              "choice": "A",
+              "text": "The photography walk begins at 1:30."
+            },
+            {
+              "choice": "B",
+              "text": "The event was canceled without notice."
+            },
+            {
+              "choice": "C",
+              "text": "Payment is required only in cash."
+            },
+            {
+              "choice": "D",
+              "text": "The location will close permanently."
+            }
+          ],
+          "correctAnswer": "A",
+          "correctExplanation": "The documents support “The photography walk begins at 1:30.”; this choice accurately paraphrases the relevant information.",
+          "distractorExplanations": {
+            "B": "Choice B is not supported by the stated dates, actions, quantities, or purpose in this reading set.",
+            "C": "Choice C is not supported by the stated dates, actions, quantities, or purpose in this reading set.",
+            "D": "Choice D is not supported by the stated dates, actions, quantities, or purpose in this reading set."
+          },
+          "completedContext": "The photography walk begins at 1:30.",
+          "skillCategory": "cross_document",
+          "difficulty": "hard",
+          "usefulPattern": "Match the choice to the exact relationship, detail, or paraphrase supported by the document.",
+          "extraExample": null
+        },
+        {
+          "itemId": "toeic-r-p7-184",
+          "itemVersion": 1,
+          "publicationState": "published",
+          "questionType": "cross_document",
+          "blankId": "What is indicated when the documents are considered together?",
+          "choices": [
+            {
+              "choice": "A",
+              "text": "Payment is required only in cash."
+            },
+            {
+              "choice": "B",
+              "text": "Participants meet for the walk at the main entrance."
+            },
+            {
+              "choice": "C",
+              "text": "The location will close permanently."
+            },
+            {
+              "choice": "D",
+              "text": "No action is expected from readers."
+            }
+          ],
+          "correctAnswer": "B",
+          "correctExplanation": "The documents support “Participants meet for the walk at the main entrance.”; this choice accurately paraphrases the relevant information.",
+          "distractorExplanations": {
+            "A": "Choice A is not supported by the stated dates, actions, quantities, or purpose in this reading set.",
+            "C": "Choice C is not supported by the stated dates, actions, quantities, or purpose in this reading set.",
+            "D": "Choice D is not supported by the stated dates, actions, quantities, or purpose in this reading set."
+          },
+          "completedContext": "Participants meet for the walk at the main entrance.",
+          "skillCategory": "cross_document",
+          "difficulty": "hard",
+          "usefulPattern": "Match the choice to the exact relationship, detail, or paraphrase supported by the document.",
+          "extraExample": null
+        },
+        {
+          "itemId": "toeic-r-p7-185",
+          "itemVersion": 1,
+          "publicationState": "published",
+          "questionType": "cross_document",
+          "blankId": "What is indicated when the documents are considered together?",
+          "choices": [
+            {
+              "choice": "A",
+              "text": "The location will close permanently."
+            },
+            {
+              "choice": "B",
+              "text": "No action is expected from readers."
+            },
+            {
+              "choice": "C",
+              "text": "The closing exhibit is in Hall A."
+            },
+            {
+              "choice": "D",
+              "text": "The schedule was moved to next year."
+            }
+          ],
+          "correctAnswer": "C",
+          "correctExplanation": "The documents support “The closing exhibit is in Hall A.”; this choice accurately paraphrases the relevant information.",
+          "distractorExplanations": {
+            "A": "Choice A is not supported by the stated dates, actions, quantities, or purpose in this reading set.",
+            "B": "Choice B is not supported by the stated dates, actions, quantities, or purpose in this reading set.",
+            "D": "Choice D is not supported by the stated dates, actions, quantities, or purpose in this reading set."
+          },
+          "completedContext": "The closing exhibit is in Hall A.",
+          "skillCategory": "cross_document",
+          "difficulty": "hard",
+          "usefulPattern": "Match the choice to the exact relationship, detail, or paraphrase supported by the document.",
+          "extraExample": null
+        }
+      ]
+    },
+    {
+      "textSetId": "toeic-r-p7-set-m03",
+      "version": 1,
+      "publicationState": "published",
+      "documentType": "multiple_documents",
+      "title": "Related documents 3",
+      "passage": "Document 1\nHotel reservation: Cedar House, guest Priya Shah, check-in August 8, two nights, breakfast included.\n\n──────────\n\nDocument 2\nHotel message: The rooftop will close August 9 for maintenance. Breakfast will move from the rooftop café to the ground-floor dining room.\n\n──────────\n\nDocument 3\nTravel note: Priya’s airport shuttle departs Cedar House at 7:15 A.M. on August 10.",
+      "difficulty": "hard",
+      "domain": "workplace_and_daily_life",
+      "questions": [
+        {
+          "itemId": "toeic-r-p7-186",
+          "itemVersion": 1,
+          "publicationState": "published",
+          "questionType": "reference",
+          "blankId": "What is stated or indicated in the document?",
+          "choices": [
+            {
+              "choice": "A",
+              "text": "No action is expected from readers."
+            },
+            {
+              "choice": "B",
+              "text": "The schedule was moved to next year."
+            },
+            {
+              "choice": "C",
+              "text": "All services are available at no cost."
+            },
+            {
+              "choice": "D",
+              "text": "Priya checks in on August 8."
+            }
+          ],
+          "correctAnswer": "D",
+          "correctExplanation": "The documents support “Priya checks in on August 8.”; this choice accurately paraphrases the relevant information.",
+          "distractorExplanations": {
+            "A": "Choice A is not supported by the stated dates, actions, quantities, or purpose in this reading set.",
+            "B": "Choice B is not supported by the stated dates, actions, quantities, or purpose in this reading set.",
+            "C": "Choice C is not supported by the stated dates, actions, quantities, or purpose in this reading set."
+          },
+          "completedContext": "Priya checks in on August 8.",
+          "skillCategory": "reference",
+          "difficulty": "hard",
+          "usefulPattern": "Match the choice to the exact relationship, detail, or paraphrase supported by the document.",
+          "extraExample": null
+        },
+        {
+          "itemId": "toeic-r-p7-187",
+          "itemVersion": 1,
+          "publicationState": "published",
+          "questionType": "next_action",
+          "blankId": "What is stated or indicated in the document?",
+          "choices": [
+            {
+              "choice": "A",
+              "text": "The stay lasts two nights."
+            },
+            {
+              "choice": "B",
+              "text": "The schedule was moved to next year."
+            },
+            {
+              "choice": "C",
+              "text": "All services are available at no cost."
+            },
+            {
+              "choice": "D",
+              "text": "The event was canceled without notice."
+            }
+          ],
+          "correctAnswer": "A",
+          "correctExplanation": "The documents support “The stay lasts two nights.”; this choice accurately paraphrases the relevant information.",
+          "distractorExplanations": {
+            "B": "Choice B is not supported by the stated dates, actions, quantities, or purpose in this reading set.",
+            "C": "Choice C is not supported by the stated dates, actions, quantities, or purpose in this reading set.",
+            "D": "Choice D is not supported by the stated dates, actions, quantities, or purpose in this reading set."
+          },
+          "completedContext": "The stay lasts two nights.",
+          "skillCategory": "next_action",
+          "difficulty": "medium",
+          "usefulPattern": "Match the choice to the exact relationship, detail, or paraphrase supported by the document.",
+          "extraExample": null
+        },
+        {
+          "itemId": "toeic-r-p7-188",
+          "itemVersion": 1,
+          "publicationState": "published",
+          "questionType": "cross_document",
+          "blankId": "What is indicated when the documents are considered together?",
+          "choices": [
+            {
+              "choice": "A",
+              "text": "All services are available at no cost."
+            },
+            {
+              "choice": "B",
+              "text": "Breakfast moves because of rooftop maintenance."
+            },
+            {
+              "choice": "C",
+              "text": "The event was canceled without notice."
+            },
+            {
+              "choice": "D",
+              "text": "Payment is required only in cash."
+            }
+          ],
+          "correctAnswer": "B",
+          "correctExplanation": "The documents support “Breakfast moves because of rooftop maintenance.”; this choice accurately paraphrases the relevant information.",
+          "distractorExplanations": {
+            "A": "Choice A is not supported by the stated dates, actions, quantities, or purpose in this reading set.",
+            "C": "Choice C is not supported by the stated dates, actions, quantities, or purpose in this reading set.",
+            "D": "Choice D is not supported by the stated dates, actions, quantities, or purpose in this reading set."
+          },
+          "completedContext": "Breakfast moves because of rooftop maintenance.",
+          "skillCategory": "cross_document",
+          "difficulty": "hard",
+          "usefulPattern": "Match the choice to the exact relationship, detail, or paraphrase supported by the document.",
+          "extraExample": null
+        },
+        {
+          "itemId": "toeic-r-p7-189",
+          "itemVersion": 1,
+          "publicationState": "published",
+          "questionType": "cross_document",
+          "blankId": "What is indicated when the documents are considered together?",
+          "choices": [
+            {
+              "choice": "A",
+              "text": "The event was canceled without notice."
+            },
+            {
+              "choice": "B",
+              "text": "Payment is required only in cash."
+            },
+            {
+              "choice": "C",
+              "text": "Breakfast will be served on the ground floor."
+            },
+            {
+              "choice": "D",
+              "text": "The location will close permanently."
+            }
+          ],
+          "correctAnswer": "C",
+          "correctExplanation": "The documents support “Breakfast will be served on the ground floor.”; this choice accurately paraphrases the relevant information.",
+          "distractorExplanations": {
+            "A": "Choice A is not supported by the stated dates, actions, quantities, or purpose in this reading set.",
+            "B": "Choice B is not supported by the stated dates, actions, quantities, or purpose in this reading set.",
+            "D": "Choice D is not supported by the stated dates, actions, quantities, or purpose in this reading set."
+          },
+          "completedContext": "Breakfast will be served on the ground floor.",
+          "skillCategory": "cross_document",
+          "difficulty": "hard",
+          "usefulPattern": "Match the choice to the exact relationship, detail, or paraphrase supported by the document.",
+          "extraExample": null
+        },
+        {
+          "itemId": "toeic-r-p7-190",
+          "itemVersion": 1,
+          "publicationState": "published",
+          "questionType": "cross_document",
+          "blankId": "What is indicated when the documents are considered together?",
+          "choices": [
+            {
+              "choice": "A",
+              "text": "Payment is required only in cash."
+            },
+            {
+              "choice": "B",
+              "text": "The location will close permanently."
+            },
+            {
+              "choice": "C",
+              "text": "No action is expected from readers."
+            },
+            {
+              "choice": "D",
+              "text": "The shuttle leaves at 7:15 on August 10."
+            }
+          ],
+          "correctAnswer": "D",
+          "correctExplanation": "The documents support “The shuttle leaves at 7:15 on August 10.”; this choice accurately paraphrases the relevant information.",
+          "distractorExplanations": {
+            "A": "Choice A is not supported by the stated dates, actions, quantities, or purpose in this reading set.",
+            "B": "Choice B is not supported by the stated dates, actions, quantities, or purpose in this reading set.",
+            "C": "Choice C is not supported by the stated dates, actions, quantities, or purpose in this reading set."
+          },
+          "completedContext": "The shuttle leaves at 7:15 on August 10.",
+          "skillCategory": "cross_document",
+          "difficulty": "hard",
+          "usefulPattern": "Match the choice to the exact relationship, detail, or paraphrase supported by the document.",
+          "extraExample": null
+        }
+      ]
+    },
+    {
+      "textSetId": "toeic-r-p7-set-m04",
+      "version": 1,
+      "publicationState": "published",
+      "documentType": "multiple_documents",
+      "title": "Related documents 4",
+      "passage": "Document 1\nJob posting: Calder Media needs a research assistant. Applications close September 3. Interviews are remote.\n\n──────────\n\nDocument 2\nApplicant email: Omar Lee is available Monday and Wednesday afternoons and has attached writing samples.\n\n──────────\n\nDocument 3\nInterview schedule: Omar Lee — Wednesday, September 9, 2:30 P.M., video meeting; interviewer Dana Wu.",
+      "difficulty": "hard",
+      "domain": "workplace_and_daily_life",
+      "questions": [
+        {
+          "itemId": "toeic-r-p7-191",
+          "itemVersion": 1,
+          "publicationState": "published",
+          "questionType": "cross_document",
+          "blankId": "What is the purpose of the document?",
+          "choices": [
+            {
+              "choice": "A",
+              "text": "Applications close September 3."
+            },
+            {
+              "choice": "B",
+              "text": "The location will close permanently."
+            },
+            {
+              "choice": "C",
+              "text": "No action is expected from readers."
+            },
+            {
+              "choice": "D",
+              "text": "The schedule was moved to next year."
+            }
+          ],
+          "correctAnswer": "A",
+          "correctExplanation": "The documents support “Applications close September 3.”; this choice accurately paraphrases the relevant information.",
+          "distractorExplanations": {
+            "B": "Choice B is not supported by the stated dates, actions, quantities, or purpose in this reading set.",
+            "C": "Choice C is not supported by the stated dates, actions, quantities, or purpose in this reading set.",
+            "D": "Choice D is not supported by the stated dates, actions, quantities, or purpose in this reading set."
+          },
+          "completedContext": "Applications close September 3.",
+          "skillCategory": "cross_document",
+          "difficulty": "easy",
+          "usefulPattern": "Match the choice to the exact relationship, detail, or paraphrase supported by the document.",
+          "extraExample": null
+        },
+        {
+          "itemId": "toeic-r-p7-192",
+          "itemVersion": 1,
+          "publicationState": "published",
+          "questionType": "relationship",
+          "blankId": "What is stated or indicated in the document?",
+          "choices": [
+            {
+              "choice": "A",
+              "text": "No action is expected from readers."
+            },
+            {
+              "choice": "B",
+              "text": "Omar supplied writing samples."
+            },
+            {
+              "choice": "C",
+              "text": "The schedule was moved to next year."
+            },
+            {
+              "choice": "D",
+              "text": "All services are available at no cost."
+            }
+          ],
+          "correctAnswer": "B",
+          "correctExplanation": "The documents support “Omar supplied writing samples.”; this choice accurately paraphrases the relevant information.",
+          "distractorExplanations": {
+            "A": "Choice A is not supported by the stated dates, actions, quantities, or purpose in this reading set.",
+            "C": "Choice C is not supported by the stated dates, actions, quantities, or purpose in this reading set.",
+            "D": "Choice D is not supported by the stated dates, actions, quantities, or purpose in this reading set."
+          },
+          "completedContext": "Omar supplied writing samples.",
+          "skillCategory": "relationship",
+          "difficulty": "medium",
+          "usefulPattern": "Match the choice to the exact relationship, detail, or paraphrase supported by the document.",
+          "extraExample": null
+        },
+        {
+          "itemId": "toeic-r-p7-193",
+          "itemVersion": 1,
+          "publicationState": "published",
+          "questionType": "cross_document",
+          "blankId": "What is indicated when the documents are considered together?",
+          "choices": [
+            {
+              "choice": "A",
+              "text": "The schedule was moved to next year."
+            },
+            {
+              "choice": "B",
+              "text": "All services are available at no cost."
+            },
+            {
+              "choice": "C",
+              "text": "Omar is available Wednesday afternoon."
+            },
+            {
+              "choice": "D",
+              "text": "The event was canceled without notice."
+            }
+          ],
+          "correctAnswer": "C",
+          "correctExplanation": "The documents support “Omar is available Wednesday afternoon.”; this choice accurately paraphrases the relevant information.",
+          "distractorExplanations": {
+            "A": "Choice A is not supported by the stated dates, actions, quantities, or purpose in this reading set.",
+            "B": "Choice B is not supported by the stated dates, actions, quantities, or purpose in this reading set.",
+            "D": "Choice D is not supported by the stated dates, actions, quantities, or purpose in this reading set."
+          },
+          "completedContext": "Omar is available Wednesday afternoon.",
+          "skillCategory": "cross_document",
+          "difficulty": "hard",
+          "usefulPattern": "Match the choice to the exact relationship, detail, or paraphrase supported by the document.",
+          "extraExample": null
+        },
+        {
+          "itemId": "toeic-r-p7-194",
+          "itemVersion": 1,
+          "publicationState": "published",
+          "questionType": "cross_document",
+          "blankId": "What is indicated when the documents are considered together?",
+          "choices": [
+            {
+              "choice": "A",
+              "text": "All services are available at no cost."
+            },
+            {
+              "choice": "B",
+              "text": "The event was canceled without notice."
+            },
+            {
+              "choice": "C",
+              "text": "Payment is required only in cash."
+            },
+            {
+              "choice": "D",
+              "text": "The interview is remote."
+            }
+          ],
+          "correctAnswer": "D",
+          "correctExplanation": "The documents support “The interview is remote.”; this choice accurately paraphrases the relevant information.",
+          "distractorExplanations": {
+            "A": "Choice A is not supported by the stated dates, actions, quantities, or purpose in this reading set.",
+            "B": "Choice B is not supported by the stated dates, actions, quantities, or purpose in this reading set.",
+            "C": "Choice C is not supported by the stated dates, actions, quantities, or purpose in this reading set."
+          },
+          "completedContext": "The interview is remote.",
+          "skillCategory": "cross_document",
+          "difficulty": "hard",
+          "usefulPattern": "Match the choice to the exact relationship, detail, or paraphrase supported by the document.",
+          "extraExample": null
+        },
+        {
+          "itemId": "toeic-r-p7-195",
+          "itemVersion": 1,
+          "publicationState": "published",
+          "questionType": "cross_document",
+          "blankId": "What is indicated when the documents are considered together?",
+          "choices": [
+            {
+              "choice": "A",
+              "text": "Dana Wu will interview Omar."
+            },
+            {
+              "choice": "B",
+              "text": "The event was canceled without notice."
+            },
+            {
+              "choice": "C",
+              "text": "Payment is required only in cash."
+            },
+            {
+              "choice": "D",
+              "text": "The location will close permanently."
+            }
+          ],
+          "correctAnswer": "A",
+          "correctExplanation": "The documents support “Dana Wu will interview Omar.”; this choice accurately paraphrases the relevant information.",
+          "distractorExplanations": {
+            "B": "Choice B is not supported by the stated dates, actions, quantities, or purpose in this reading set.",
+            "C": "Choice C is not supported by the stated dates, actions, quantities, or purpose in this reading set.",
+            "D": "Choice D is not supported by the stated dates, actions, quantities, or purpose in this reading set."
+          },
+          "completedContext": "Dana Wu will interview Omar.",
+          "skillCategory": "cross_document",
+          "difficulty": "hard",
+          "usefulPattern": "Match the choice to the exact relationship, detail, or paraphrase supported by the document.",
+          "extraExample": null
+        }
+      ]
+    },
+    {
+      "textSetId": "toeic-r-p7-set-m05",
+      "version": 1,
+      "publicationState": "published",
+      "documentType": "multiple_documents",
+      "title": "Related documents 5",
+      "passage": "Document 1\nPurchase order PO-771: 40 ceramic mugs, delivery November 4, Northgate Café.\n\n──────────\n\nDocument 2\nDelivery notice: PO-771 will arrive November 5 because the carrier’s vehicle required repair.\n\n──────────\n\nDocument 3\nCustomer email: Northgate Café can accept the new date but asks the driver to use the rear entrance before 10:00 A.M.",
+      "difficulty": "hard",
+      "domain": "workplace_and_daily_life",
+      "questions": [
+        {
+          "itemId": "toeic-r-p7-196",
+          "itemVersion": 1,
+          "publicationState": "published",
+          "questionType": "text_organization",
+          "blankId": "What is stated or indicated in the document?",
+          "choices": [
+            {
+              "choice": "A",
+              "text": "Payment is required only in cash."
+            },
+            {
+              "choice": "B",
+              "text": "The order contains 40 mugs."
+            },
+            {
+              "choice": "C",
+              "text": "The location will close permanently."
+            },
+            {
+              "choice": "D",
+              "text": "No action is expected from readers."
+            }
+          ],
+          "correctAnswer": "B",
+          "correctExplanation": "The documents support “The order contains 40 mugs.”; this choice accurately paraphrases the relevant information.",
+          "distractorExplanations": {
+            "A": "Choice A is not supported by the stated dates, actions, quantities, or purpose in this reading set.",
+            "C": "Choice C is not supported by the stated dates, actions, quantities, or purpose in this reading set.",
+            "D": "Choice D is not supported by the stated dates, actions, quantities, or purpose in this reading set."
+          },
+          "completedContext": "The order contains 40 mugs.",
+          "skillCategory": "text_organization",
+          "difficulty": "medium",
+          "usefulPattern": "Match the choice to the exact relationship, detail, or paraphrase supported by the document.",
+          "extraExample": null
+        },
+        {
+          "itemId": "toeic-r-p7-197",
+          "itemVersion": 1,
+          "publicationState": "published",
+          "questionType": "main_idea",
+          "blankId": "What is the purpose of the document?",
+          "choices": [
+            {
+              "choice": "A",
+              "text": "The location will close permanently."
+            },
+            {
+              "choice": "B",
+              "text": "No action is expected from readers."
+            },
+            {
+              "choice": "C",
+              "text": "The original delivery date was November 4."
+            },
+            {
+              "choice": "D",
+              "text": "The schedule was moved to next year."
+            }
+          ],
+          "correctAnswer": "C",
+          "correctExplanation": "The documents support “The original delivery date was November 4.”; this choice accurately paraphrases the relevant information.",
+          "distractorExplanations": {
+            "A": "Choice A is not supported by the stated dates, actions, quantities, or purpose in this reading set.",
+            "B": "Choice B is not supported by the stated dates, actions, quantities, or purpose in this reading set.",
+            "D": "Choice D is not supported by the stated dates, actions, quantities, or purpose in this reading set."
+          },
+          "completedContext": "The original delivery date was November 4.",
+          "skillCategory": "main_idea",
+          "difficulty": "easy",
+          "usefulPattern": "Match the choice to the exact relationship, detail, or paraphrase supported by the document.",
+          "extraExample": null
+        },
+        {
+          "itemId": "toeic-r-p7-198",
+          "itemVersion": 1,
+          "publicationState": "published",
+          "questionType": "cross_document",
+          "blankId": "What is indicated when the documents are considered together?",
+          "choices": [
+            {
+              "choice": "A",
+              "text": "No action is expected from readers."
+            },
+            {
+              "choice": "B",
+              "text": "The schedule was moved to next year."
+            },
+            {
+              "choice": "C",
+              "text": "All services are available at no cost."
+            },
+            {
+              "choice": "D",
+              "text": "A vehicle repair caused the delay."
+            }
+          ],
+          "correctAnswer": "D",
+          "correctExplanation": "The documents support “A vehicle repair caused the delay.”; this choice accurately paraphrases the relevant information.",
+          "distractorExplanations": {
+            "A": "Choice A is not supported by the stated dates, actions, quantities, or purpose in this reading set.",
+            "B": "Choice B is not supported by the stated dates, actions, quantities, or purpose in this reading set.",
+            "C": "Choice C is not supported by the stated dates, actions, quantities, or purpose in this reading set."
+          },
+          "completedContext": "A vehicle repair caused the delay.",
+          "skillCategory": "cross_document",
+          "difficulty": "hard",
+          "usefulPattern": "Match the choice to the exact relationship, detail, or paraphrase supported by the document.",
+          "extraExample": null
+        },
+        {
+          "itemId": "toeic-r-p7-199",
+          "itemVersion": 1,
+          "publicationState": "published",
+          "questionType": "cross_document",
+          "blankId": "What is indicated when the documents are considered together?",
+          "choices": [
+            {
+              "choice": "A",
+              "text": "The café accepts delivery on November 5."
+            },
+            {
+              "choice": "B",
+              "text": "The schedule was moved to next year."
+            },
+            {
+              "choice": "C",
+              "text": "All services are available at no cost."
+            },
+            {
+              "choice": "D",
+              "text": "The event was canceled without notice."
+            }
+          ],
+          "correctAnswer": "A",
+          "correctExplanation": "The documents support “The café accepts delivery on November 5.”; this choice accurately paraphrases the relevant information.",
+          "distractorExplanations": {
+            "B": "Choice B is not supported by the stated dates, actions, quantities, or purpose in this reading set.",
+            "C": "Choice C is not supported by the stated dates, actions, quantities, or purpose in this reading set.",
+            "D": "Choice D is not supported by the stated dates, actions, quantities, or purpose in this reading set."
+          },
+          "completedContext": "The café accepts delivery on November 5.",
+          "skillCategory": "cross_document",
+          "difficulty": "hard",
+          "usefulPattern": "Match the choice to the exact relationship, detail, or paraphrase supported by the document.",
+          "extraExample": null
+        },
+        {
+          "itemId": "toeic-r-p7-200",
+          "itemVersion": 1,
+          "publicationState": "published",
+          "questionType": "cross_document",
+          "blankId": "What is indicated when the documents are considered together?",
+          "choices": [
+            {
+              "choice": "A",
+              "text": "All services are available at no cost."
+            },
+            {
+              "choice": "B",
+              "text": "The driver should use the rear entrance before 10:00."
+            },
+            {
+              "choice": "C",
+              "text": "The event was canceled without notice."
+            },
+            {
+              "choice": "D",
+              "text": "Payment is required only in cash."
+            }
+          ],
+          "correctAnswer": "B",
+          "correctExplanation": "The documents support “The driver should use the rear entrance before 10:00.”; this choice accurately paraphrases the relevant information.",
+          "distractorExplanations": {
+            "A": "Choice A is not supported by the stated dates, actions, quantities, or purpose in this reading set.",
+            "C": "Choice C is not supported by the stated dates, actions, quantities, or purpose in this reading set.",
+            "D": "Choice D is not supported by the stated dates, actions, quantities, or purpose in this reading set."
+          },
+          "completedContext": "The driver should use the rear entrance before 10:00.",
+          "skillCategory": "cross_document",
+          "difficulty": "hard",
+          "usefulPattern": "Match the choice to the exact relationship, detail, or paraphrase supported by the document.",
+          "extraExample": null
+        }
+      ]
+    }
+  ]
+}

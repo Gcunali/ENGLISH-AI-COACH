@@ -1,0 +1,573 @@
+{
+  "packageSchemaVersion": 1,
+  "lessonFlowVersion": 1,
+  "lessonId": "a1-u06-l05-id-like",
+  "contentVersion": 1,
+  "publicationState": "published",
+  "title": "I'd Like...",
+  "description": "Make a polite simple request for food or a drink.",
+  "language": "en",
+  "referenceLocale": "en-US",
+  "cefrBand": "A1",
+  "estimatedMinutes": 24,
+  "objectives": [
+    "Make a polite simple request for food or a drink."
+  ],
+  "tags": [
+    "english-core",
+    "a1",
+    "unit-06",
+    "production"
+  ],
+  "assets": [],
+  "stages": [
+    {
+      "stageId": "theory",
+      "stageType": "theory",
+      "stageSchemaVersion": 1,
+      "title": "Understand the language",
+      "instructions": "Read the explanation, examples, common error, and recap.",
+      "required": true,
+      "payload": {
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "This lesson prepares you to make a polite simple request for food or a drink. The central language is would like as a fixed polite request. It belongs to the practical context of food & café english. Focus first on meaning: decide what information the listener needs. Then choose the subject, verb form, and useful detail. At A1, keep the message short and concrete. One clear sentence is enough before the other person responds. The same language returns in the listening, repeat, speaking, exercises, and guided conversation stages."
+          },
+          {
+            "type": "callout",
+            "title": "Pattern",
+            "text": "would like as a fixed polite request"
+          },
+          {
+            "type": "example",
+            "english": "I'd like a cup of tea, please.",
+            "explanation": "Use this model to begin the i'd like... exchange."
+          },
+          {
+            "type": "example",
+            "english": "Could I have some water?",
+            "explanation": "This i'd like... model adds a different detail or response."
+          },
+          {
+            "type": "example",
+            "english": "What would you like?",
+            "explanation": "Use this question or response to keep the i'd like... exchange moving."
+          },
+          {
+            "type": "paragraph",
+            "text": "Notice the two models: “I'd like a cup of tea, please.” and “Could I have some water?” They show the pattern in complete communication, not as isolated grammar. Say the model aloud, replace one detail, and check that the new sentence keeps the intended meaning. When the other person asks a follow-up question, answer directly and add a relevant detail. This makes the exchange natural while keeping the language controlled."
+          },
+          {
+            "type": "callout",
+            "title": "Common error",
+            "text": "Do not mix the word order or verb form with another pattern. Keep the controlled form for this lesson: would like as a fixed polite request."
+          },
+          {
+            "type": "bullet_list",
+            "items": [
+              "Communicative goal: Make a polite simple request for food or a drink.",
+              "Core pattern: would like as a fixed polite request.",
+              "Use one clear model, add a relevant detail, and respond to the other speaker."
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "stageId": "visual-vocabulary",
+      "stageType": "visual_vocabulary",
+      "stageSchemaVersion": 1,
+      "title": "Build your vocabulary",
+      "instructions": "Study each term, meaning, and contextual example.",
+      "required": true,
+      "payload": {
+        "items": [
+          {
+            "itemId": "some",
+            "term": "some",
+            "meaning": "an unspecified amount or number",
+            "example": "Use “some” while you practice i'd like... in context.",
+            "imageAssetId": null
+          },
+          {
+            "itemId": "any",
+            "term": "any",
+            "meaning": "an unspecified amount used often in questions and negatives",
+            "example": "Use “any” while you practice i'd like... in context.",
+            "imageAssetId": null
+          },
+          {
+            "itemId": "hungry",
+            "term": "hungry",
+            "meaning": "wanting food",
+            "example": "Use “hungry” while you practice i'd like... in context.",
+            "imageAssetId": null
+          },
+          {
+            "itemId": "thirsty",
+            "term": "thirsty",
+            "meaning": "wanting a drink",
+            "example": "Use “thirsty” while you practice i'd like... in context.",
+            "imageAssetId": null
+          },
+          {
+            "itemId": "order",
+            "term": "order",
+            "meaning": "ask a business to provide food or drink",
+            "example": "Use “order” while you practice i'd like... in context.",
+            "imageAssetId": null
+          },
+          {
+            "itemId": "check",
+            "term": "check",
+            "meaning": "a bill showing what to pay",
+            "example": "Use “check” while you practice i'd like... in context.",
+            "imageAssetId": null
+          },
+          {
+            "itemId": "water",
+            "term": "water",
+            "meaning": "a clear drink with no color",
+            "example": "Use “water” while you practice i'd like... in context.",
+            "imageAssetId": null
+          },
+          {
+            "itemId": "coffee",
+            "term": "coffee",
+            "meaning": "a dark drink made from roasted beans",
+            "example": "Use “coffee” while you practice i'd like... in context.",
+            "imageAssetId": null
+          }
+        ]
+      }
+    },
+    {
+      "stageId": "listening",
+      "stageType": "listening",
+      "stageSchemaVersion": 1,
+      "title": "Listen in context",
+      "instructions": "Listen before revealing the text, then notice the target pattern.",
+      "required": true,
+      "payload": {
+        "segments": [
+          {
+            "segmentId": "segment-1",
+            "text": "I'd like a cup of tea, please. Could I have some water?",
+            "audioAssetId": null
+          },
+          {
+            "segmentId": "segment-2",
+            "text": "What would you like? I'd like that, please.",
+            "audioAssetId": null
+          },
+          {
+            "segmentId": "segment-3",
+            "text": "Could I have some water? What would you like?",
+            "audioAssetId": null
+          }
+        ],
+        "revealTextAfterFirstPlay": true
+      }
+    },
+    {
+      "stageId": "repeat",
+      "stageType": "repeat",
+      "stageSchemaVersion": 1,
+      "title": "Repeat useful chunks",
+      "instructions": "Repeat each complete expression with clear rhythm.",
+      "required": true,
+      "payload": {
+        "targets": [
+          {
+            "targetId": "repeat-1",
+            "text": "I'd like a cup of tea, please.",
+            "referenceAudioAssetId": null,
+            "hint": "Keep the words together as one communicative chunk."
+          },
+          {
+            "targetId": "repeat-2",
+            "text": "Could I have some water?",
+            "referenceAudioAssetId": null,
+            "hint": "Keep the words together as one communicative chunk."
+          },
+          {
+            "targetId": "repeat-3",
+            "text": "What would you like?",
+            "referenceAudioAssetId": null,
+            "hint": "Keep the words together as one communicative chunk."
+          },
+          {
+            "targetId": "repeat-4",
+            "text": "I'd like that, please.",
+            "referenceAudioAssetId": null,
+            "hint": "Keep the words together as one communicative chunk."
+          },
+          {
+            "targetId": "repeat-5",
+            "text": "Thanks for talking about food & café english with me.",
+            "referenceAudioAssetId": null,
+            "hint": "Keep the words together as one communicative chunk."
+          }
+        ]
+      }
+    },
+    {
+      "stageId": "speaking-check",
+      "stageType": "speaking_check",
+      "stageSchemaVersion": 1,
+      "title": "Speaking Check",
+      "instructions": "Say expressions already presented in this Lesson.",
+      "required": true,
+      "payload": {
+        "targets": [
+          {
+            "targetId": "speaking-1",
+            "instruction": "Say the complete model naturally.",
+            "targetText": "I'd like a cup of tea, please.",
+            "hint": "Use the same words and clear sentence stress."
+          },
+          {
+            "targetId": "speaking-2",
+            "instruction": "Say the complete model naturally.",
+            "targetText": "Could I have some water?",
+            "hint": "Use the same words and clear sentence stress."
+          },
+          {
+            "targetId": "speaking-3",
+            "instruction": "Say the complete model naturally.",
+            "targetText": "What would you like?",
+            "hint": "Use the same words and clear sentence stress."
+          },
+          {
+            "targetId": "speaking-4",
+            "instruction": "Say the complete model naturally.",
+            "targetText": "I'd like that, please.",
+            "hint": "Use the same words and clear sentence stress."
+          }
+        ]
+      }
+    },
+    {
+      "stageId": "exercise",
+      "stageType": "exercise",
+      "stageSchemaVersion": 1,
+      "title": "Check your understanding",
+      "instructions": "Complete each deterministic practice item.",
+      "required": true,
+      "payload": {
+        "items": [
+          {
+            "exerciseId": "choose-model",
+            "exerciseType": "single_choice",
+            "prompt": "Choose the model that fits the communicative goal.",
+            "instructions": null,
+            "hint": "Make a polite simple request for food or a drink.",
+            "payload": {
+              "options": [
+                {
+                  "optionId": "a",
+                  "text": "I'd like a cup of tea, please."
+                },
+                {
+                  "optionId": "b",
+                  "text": "The purple engine sleeps quickly."
+                },
+                {
+                  "optionId": "c",
+                  "text": "No information is possible."
+                }
+              ],
+              "correctOptionId": "a"
+            },
+            "feedback": {
+              "correct": "Correct. The answer fits the lesson context.",
+              "incorrect": "Try again and use the model from this lesson.",
+              "explanation": "would like as a fixed polite request"
+            }
+          },
+          {
+            "exerciseId": "select-core-vocabulary",
+            "exerciseType": "multiple_select",
+            "prompt": "Select both words that belong to this lesson context.",
+            "instructions": null,
+            "hint": "Food & Café English",
+            "payload": {
+              "options": [
+                {
+                  "optionId": "a",
+                  "text": "some"
+                },
+                {
+                  "optionId": "b",
+                  "text": "any"
+                },
+                {
+                  "optionId": "c",
+                  "text": "industrial turbine"
+                },
+                {
+                  "optionId": "d",
+                  "text": "quantum geology"
+                }
+              ],
+              "correctOptionIds": [
+                "a",
+                "b"
+              ]
+            },
+            "feedback": {
+              "correct": "Correct. The answer fits the lesson context.",
+              "incorrect": "Try again and use the model from this lesson.",
+              "explanation": "Both correct words appear in Visual Vocabulary."
+            }
+          },
+          {
+            "exerciseId": "complete-response",
+            "exerciseType": "fill_blank",
+            "prompt": "Type the exact practiced response shown in the hint.",
+            "instructions": null,
+            "hint": "Could I have some water?",
+            "payload": {
+              "prefix": "",
+              "suffix": "",
+              "acceptedAnswers": [
+                "Could I have some water?"
+              ],
+              "normalizationProfile": "english_basic_v1"
+            },
+            "feedback": {
+              "correct": "Correct. The answer fits the lesson context.",
+              "incorrect": "Try again and use the model from this lesson.",
+              "explanation": "Use the complete model response."
+            }
+          },
+          {
+            "exerciseId": "order-model",
+            "exerciseType": "word_order",
+            "prompt": "Put the model in its natural order.",
+            "instructions": null,
+            "hint": null,
+            "payload": {
+              "tokens": [
+                {
+                  "tokenId": "t8",
+                  "text": "."
+                },
+                {
+                  "tokenId": "t7",
+                  "text": "please"
+                },
+                {
+                  "tokenId": "t6",
+                  "text": "tea,"
+                },
+                {
+                  "tokenId": "t5",
+                  "text": "of"
+                },
+                {
+                  "tokenId": "t4",
+                  "text": "cup"
+                },
+                {
+                  "tokenId": "t3",
+                  "text": "a"
+                },
+                {
+                  "tokenId": "t2",
+                  "text": "like"
+                },
+                {
+                  "tokenId": "t1",
+                  "text": "I'd"
+                }
+              ],
+              "correctOrder": [
+                "t1",
+                "t2",
+                "t3",
+                "t4",
+                "t5",
+                "t6",
+                "t7",
+                "t8"
+              ]
+            },
+            "feedback": {
+              "correct": "Correct. The answer fits the lesson context.",
+              "incorrect": "Try again and use the model from this lesson.",
+              "explanation": "Keep the modeled English word order."
+            }
+          },
+          {
+            "exerciseId": "match-vocabulary",
+            "exerciseType": "matching",
+            "prompt": "Match each term to its meaning.",
+            "instructions": null,
+            "hint": null,
+            "payload": {
+              "leftItems": [
+                {
+                  "itemId": "l1",
+                  "text": "some"
+                },
+                {
+                  "itemId": "l2",
+                  "text": "any"
+                },
+                {
+                  "itemId": "l3",
+                  "text": "hungry"
+                }
+              ],
+              "rightItems": [
+                {
+                  "itemId": "r1",
+                  "text": "an unspecified amount or number"
+                },
+                {
+                  "itemId": "r2",
+                  "text": "an unspecified amount used often in questions and negatives"
+                },
+                {
+                  "itemId": "r3",
+                  "text": "wanting food"
+                }
+              ],
+              "correctPairs": [
+                {
+                  "leftId": "l1",
+                  "rightId": "r1"
+                },
+                {
+                  "leftId": "l2",
+                  "rightId": "r2"
+                },
+                {
+                  "leftId": "l3",
+                  "rightId": "r3"
+                }
+              ]
+            },
+            "feedback": {
+              "correct": "Correct. The answer fits the lesson context.",
+              "incorrect": "Try again and use the model from this lesson.",
+              "explanation": "Review each term with its meaning and example."
+            }
+          },
+          {
+            "exerciseId": "exact-useful-chunk",
+            "exerciseType": "short_answer_exact",
+            "prompt": "Type the finite model chunk shown in the hint.",
+            "instructions": null,
+            "hint": "What would you like?",
+            "payload": {
+              "acceptedAnswers": [
+                "What would you like?"
+              ],
+              "normalizationProfile": "english_basic_v1"
+            },
+            "feedback": {
+              "correct": "Correct. The answer fits the lesson context.",
+              "incorrect": "Try again and use the model from this lesson.",
+              "explanation": "This checks one exact practiced chunk, not an open response."
+            }
+          },
+          {
+            "exerciseId": "choose-correct-form",
+            "exerciseType": "single_choice",
+            "prompt": "Which sentence follows the lesson pattern?",
+            "instructions": null,
+            "hint": "would like as a fixed polite request",
+            "payload": {
+              "options": [
+                {
+                  "optionId": "a",
+                  "text": "Could I have some water?"
+                },
+                {
+                  "optionId": "b",
+                  "text": "She are did going."
+                },
+                {
+                  "optionId": "c",
+                  "text": "I is to yesterday."
+                }
+              ],
+              "correctOptionId": "a"
+            },
+            "feedback": {
+              "correct": "Correct. The answer fits the lesson context.",
+              "incorrect": "Try again and use the model from this lesson.",
+              "explanation": "would like as a fixed polite request"
+            }
+          },
+          {
+            "exerciseId": "recall-vocabulary",
+            "exerciseType": "fill_blank",
+            "prompt": "Type the term that means: wanting a drink",
+            "instructions": null,
+            "hint": "It appears in Visual Vocabulary.",
+            "payload": {
+              "prefix": "",
+              "suffix": "",
+              "acceptedAnswers": [
+                "thirsty"
+              ],
+              "normalizationProfile": "english_basic_v1"
+            },
+            "feedback": {
+              "correct": "Correct. The answer fits the lesson context.",
+              "incorrect": "Try again and use the model from this lesson.",
+              "explanation": "wanting a drink"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "stageId": "guided-conversation",
+      "stageType": "guided_conversation",
+      "stageSchemaVersion": 1,
+      "title": "Food & Café English conversation",
+      "instructions": "Use the prepared language in a practical exchange.",
+      "required": true,
+      "payload": {
+        "scenario": "You are in a realistic everyday situation related to food & café english. Practice i'd like... and respond to relevant follow-up questions.",
+        "studentRole": "English learner handling the situation",
+        "teacherRole": "Helpful conversation partner",
+        "goal": "Make a polite simple request for food or a drink.",
+        "targetVocabulary": [
+          "some",
+          "any",
+          "hungry",
+          "thirsty",
+          "order",
+          "check",
+          "water",
+          "coffee"
+        ],
+        "targetExpressions": [
+          "I'd like a cup of tea, please.",
+          "Could I have some water?",
+          "What would you like?",
+          "I'd like that, please.",
+          "Thanks for talking about food & café english with me."
+        ],
+        "minimumStudentTurns": 4,
+        "recommendedStudentTurns": 6,
+        "maximumStudentTurns": 8
+      }
+    },
+    {
+      "stageId": "analysis",
+      "stageType": "analysis",
+      "stageSchemaVersion": 1,
+      "title": "Lesson Review",
+      "instructions": "Review the evidence from your completed practice.",
+      "required": true,
+      "payload": {}
+    }
+  ]
+}

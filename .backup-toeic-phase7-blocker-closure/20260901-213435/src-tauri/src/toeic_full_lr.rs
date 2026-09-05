@@ -1,0 +1,79 @@
+use crate::{
+    database, toeic_full_listening::FullListeningRepository,
+    toeic_full_reading::FullReadingRepository,
+};
+use rusqlite::{params, OptionalExtension};
+use serde::Serialize;
+use std::path::PathBuf;
+#[derive(Clone)]
+pub struct FullLrRepository {
+    database: PathBuf,
+    listening: FullListeningRepository,
+    reading: FullReadingRepository,
+}
+#[derive(Serialize)]
+#[serde(rename_all = "camelCase")]
+pub struct FullLrSession {
+    pub session_id: String,
+    pub status: String,
+    pub current_section: String,
+    pub listening_session_id: String,
+    pub reading_session_id: String,
+    pub listening_raw: Option<u32>,
+    pub reading_raw: Option<u32>,
+    pub total_raw: Option<u32>,
+    pub listening_estimate: Option<u32>,
+    pub reading_estimate: Option<u32>,
+    pub total_estimate: Option<u32>,
+    pub range_low: Option<u32>,
+    pub range_high: Option<u32>,
+    pub listening_route: String,
+    pub reading_route: String,
+    pub disclaimer: String,
+}
+impl FullLrRepository {
+    pub fn new(
+        database: PathBuf,
+        listening: FullListeningRepository,
+        reading: FullReadingRepository,
+    ) -> Self {
+        Self {
+            database,
+            listening,
+            reading,
+        }
+    }
+    pub fn start(&self) -> Result<FullLrSession, String> {
+        let c = database::open(&self.database)?;
+        if let Some(id)=c.query_row("SELECT id FROM toeic_full_lr_session WHERE status='in_progress' ORDER BY created_at DESC LIMIT 1",[],|r|r.get::<_,String>(0)).optional().map_err(err)?{return self.session(&id)}
+        let l = self.listening.start("simulation")?;
+        let r = self.reading.start("simulation")?;
+        let id = uuid::Uuid::new_v4().to_string();
+        c.execute("INSERT INTO toeic_full_lr_session(id,family,status,listening_session_id,reading_session_id,created_at,updated_at) VALUES(?1,'A','in_progress',?2,?3,strftime('%Y-%m-%dT%H:%M:%fZ','now'),strftime('%Y-%m-%dT%H:%M:%fZ','now'))",params![id,l.session_id,r.session_id]).map_err(err)?;
+        self.session(&id)
+    }
+    pub fn session(&self, id: &str) -> Result<FullLrSession, String> {
+        let c = database::open(&self.database)?;
+        let(lid,rid)=c.query_row("SELECT listening_session_id,reading_session_id FROM toeic_full_lr_session WHERE id=?1",[id],|r|Ok((r.get::<_,String>(0)?,r.get::<_,String>(1)?))).optional().map_err(err)?.ok_or("Full TOEIC L&R simulation not found.")?;
+        let l = self.listening.session(&lid)?;
+        let r = self.reading.session(&rid)?;
+        let done = l.status == "completed" && r.status == "completed";
+        let (le, re, lr, rr) = (
+            l.estimate.as_ref().map(|x| x.estimated_score),
+            r.estimate.as_ref().map(|x| x.estimated_score),
+            l.estimate.as_ref().map(|x| (x.range_low, x.range_high)),
+            r.estimate.as_ref().map(|x| (x.range_low, x.range_high)),
+        );
+        let (raw_l, raw_r) = (
+            l.estimate.as_ref().map(|x| x.raw_correct),
+            r.estimate.as_ref().map(|x| x.raw_correct),
+        );
+        if done {
+            c.execute("UPDATE toeic_full_lr_session SET status='completed',listening_raw=?2,reading_raw=?3,total_raw=?4,listening_estimate=?5,reading_estimate=?6,total_estimate=?7,range_low=?8,range_high=?9,listening_profile_version=1,reading_profile_version=1,completed_at=COALESCE(completed_at,strftime('%Y-%m-%dT%H:%M:%fZ','now')),updated_at=strftime('%Y-%m-%dT%H:%M:%fZ','now') WHERE id=?1",params![id,raw_l,raw_r,raw_l.zip(raw_r).map(|x|x.0+x.1),le,re,le.zip(re).map(|x|x.0+x.1),lr.zip(rr).map(|x|x.0.0+x.1.0),lr.zip(rr).map(|x|x.0.1+x.1.1)]).map_err(err)?;
+        }
+        Ok(FullLrSession{session_id:id.into(),status:if done{"completed".into()}else{"in_progress".into()},current_section:if l.status!="completed"{"listening".into()}else if r.status!="completed"{"reading".into()}else{"complete".into()},listening_session_id:lid.clone(),reading_session_id:rid.clone(),listening_raw:raw_l,reading_raw:raw_r,total_raw:raw_l.zip(raw_r).map(|x|x.0+x.1),listening_estimate:le,reading_estimate:re,total_estimate:le.zip(re).map(|x|x.0+x.1),range_low:lr.zip(rr).map(|x|x.0.0+x.1.0),range_high:lr.zip(rr).map(|x|x.0.1+x.1.1),listening_route:format!("/toeic/listening/{lid}"),reading_route:format!("/toeic/reading/{rid}"),disclaimer:"Unofficial untimed practice estimate. The total is the Listening and Reading central estimates added together; official ETS scores may differ.".into()})
+    }
+}
+fn err(e: rusqlite::Error) -> String {
+    format!("Full TOEIC L&R database error: {e}")
+}

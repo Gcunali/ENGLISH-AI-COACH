@@ -1,0 +1,564 @@
+{
+  "packageSchemaVersion": 1,
+  "lessonFlowVersion": 1,
+  "lessonId": "a1-u01-l06-introductions-mission",
+  "contentVersion": 1,
+  "publicationState": "published",
+  "title": "Introductions Mission",
+  "description": "Complete a first meeting by greeting, exchanging names and origins, and closing politely.",
+  "language": "en",
+  "referenceLocale": "en-US",
+  "cefrBand": "A1",
+  "estimatedMinutes": 24,
+  "objectives": [
+    "Complete a first meeting by greeting, exchanging names and origins, and closing politely."
+  ],
+  "tags": [
+    "english-core",
+    "a1",
+    "unit-01",
+    "production"
+  ],
+  "assets": [],
+  "stages": [
+    {
+      "stageId": "theory",
+      "stageType": "theory",
+      "stageSchemaVersion": 1,
+      "title": "Understand the language",
+      "instructions": "Read the explanation, examples, common error, and recap.",
+      "required": true,
+      "payload": {
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "A complete introduction has a clear sequence. Start with a greeting. Give your name and ask for the other person's name. Add one or two useful details, such as country, city, language, or role. Listen to the answers and respond politely. If another person joins, use This is my classmate or This is my coworker. Close with Nice to meet you, See you, or Goodbye. This mission reviews the Unit; it adds no new major grammar."
+          },
+          {
+            "type": "callout",
+            "title": "Pattern",
+            "text": "greeting → name → question → personal detail → polite response → goodbye"
+          },
+          {
+            "type": "example",
+            "english": "Hello, my name is Taylor.",
+            "explanation": "This complete model prepares the learner to say: Hello, my name is Taylor."
+          },
+          {
+            "type": "example",
+            "english": "Nice to meet you, Taylor.",
+            "explanation": "This complete model prepares the learner to say: Nice to meet you, Taylor."
+          },
+          {
+            "type": "example",
+            "english": "Where are you from?",
+            "explanation": "This complete model prepares the learner to say: Where are you from?"
+          },
+          {
+            "type": "paragraph",
+            "text": "The practical goal is to complete a first meeting by greeting, exchanging names and origins, and closing politely. Use the pattern in a short exchange, notice the other speaker's words, and answer with one clear idea. The examples below prepare the same language used in listening, pronunciation practice, exercises, and the final conversation."
+          },
+          {
+            "type": "callout",
+            "title": "Common error",
+            "text": "Do not ask every personal question immediately. Choose details that fit the situation and keep private contact information optional."
+          },
+          {
+            "type": "bullet_list",
+            "items": [
+              "Choose the expression that fits the person and situation.",
+              "Remember the core pattern: greeting → name → question → personal detail → polite response → goodbye.",
+              "Answer clearly, then invite the other person to continue."
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "stageId": "visual-vocabulary",
+      "stageType": "visual_vocabulary",
+      "stageSchemaVersion": 1,
+      "title": "Build your vocabulary",
+      "instructions": "Study each term, meaning, and example.",
+      "required": true,
+      "payload": {
+        "items": [
+          {
+            "itemId": "introduce",
+            "term": "introduce",
+            "meaning": "tell people who someone is",
+            "example": "Let me introduce my friend.",
+            "imageAssetId": null
+          },
+          {
+            "itemId": "meet",
+            "term": "meet",
+            "meaning": "see and speak to someone for the first time",
+            "example": "It's good to meet you.",
+            "imageAssetId": null
+          },
+          {
+            "itemId": "classmate",
+            "term": "classmate",
+            "meaning": "a person in the same class",
+            "example": "Rita is my classmate.",
+            "imageAssetId": null
+          },
+          {
+            "itemId": "coworker",
+            "term": "coworker",
+            "meaning": "a person who works with you",
+            "example": "This is my coworker, Luis.",
+            "imageAssetId": null
+          },
+          {
+            "itemId": "welcome",
+            "term": "welcome",
+            "meaning": "a friendly word for a new arrival",
+            "example": "Welcome to the group!",
+            "imageAssetId": null
+          },
+          {
+            "itemId": "from",
+            "term": "from",
+            "meaning": "showing a place of origin",
+            "example": "We're from Chicago.",
+            "imageAssetId": null
+          },
+          {
+            "itemId": "speak",
+            "term": "speak",
+            "meaning": "use a language",
+            "example": "They speak Spanish.",
+            "imageAssetId": null
+          },
+          {
+            "itemId": "contact",
+            "term": "contact",
+            "meaning": "information or action used to communicate",
+            "example": "Let's exchange contact information.",
+            "imageAssetId": null
+          }
+        ]
+      }
+    },
+    {
+      "stageId": "listening",
+      "stageType": "listening",
+      "stageSchemaVersion": 1,
+      "title": "Listen in context",
+      "instructions": "Listen to the short exchange before revealing the text.",
+      "required": true,
+      "payload": {
+        "segments": [
+          {
+            "segmentId": "segment-1",
+            "text": "Hello, my name is Taylor. Nice to meet you, Taylor.",
+            "audioAssetId": null
+          },
+          {
+            "segmentId": "segment-2",
+            "text": "Where are you from? I'm from the United States.",
+            "audioAssetId": null
+          },
+          {
+            "segmentId": "segment-3",
+            "text": "See you in class tomorrow! Thanks for the conversation.",
+            "audioAssetId": null
+          }
+        ],
+        "revealTextAfterFirstPlay": true
+      }
+    },
+    {
+      "stageId": "repeat",
+      "stageType": "repeat",
+      "stageSchemaVersion": 1,
+      "title": "Repeat useful chunks",
+      "instructions": "Repeat each complete expression with clear rhythm.",
+      "required": true,
+      "payload": {
+        "targets": [
+          {
+            "targetId": "repeat-1",
+            "text": "Hello, my name is Taylor.",
+            "referenceAudioAssetId": null,
+            "hint": "Keep the expression together as one useful chunk."
+          },
+          {
+            "targetId": "repeat-2",
+            "text": "Nice to meet you, Taylor.",
+            "referenceAudioAssetId": null,
+            "hint": "Keep the expression together as one useful chunk."
+          },
+          {
+            "targetId": "repeat-3",
+            "text": "Where are you from?",
+            "referenceAudioAssetId": null,
+            "hint": "Keep the expression together as one useful chunk."
+          },
+          {
+            "targetId": "repeat-4",
+            "text": "I'm from the United States.",
+            "referenceAudioAssetId": null,
+            "hint": "Keep the expression together as one useful chunk."
+          },
+          {
+            "targetId": "repeat-5",
+            "text": "This is my classmate, Noor.",
+            "referenceAudioAssetId": null,
+            "hint": "Keep the expression together as one useful chunk."
+          }
+        ]
+      }
+    },
+    {
+      "stageId": "speaking-check",
+      "stageType": "speaking_check",
+      "stageSchemaVersion": 1,
+      "title": "Speaking Check",
+      "instructions": "Say the expressions you have already studied.",
+      "required": true,
+      "payload": {
+        "targets": [
+          {
+            "targetId": "speaking-1",
+            "instruction": "Say the complete model naturally.",
+            "targetText": "Hello, my name is Taylor.",
+            "hint": "Use the same words and clear sentence stress."
+          },
+          {
+            "targetId": "speaking-2",
+            "instruction": "Say the complete model naturally.",
+            "targetText": "Nice to meet you, Taylor.",
+            "hint": "Use the same words and clear sentence stress."
+          },
+          {
+            "targetId": "speaking-3",
+            "instruction": "Say the complete model naturally.",
+            "targetText": "Where are you from?",
+            "hint": "Use the same words and clear sentence stress."
+          },
+          {
+            "targetId": "speaking-4",
+            "instruction": "Say the complete model naturally.",
+            "targetText": "I'm from the United States.",
+            "hint": "Use the same words and clear sentence stress."
+          }
+        ]
+      }
+    },
+    {
+      "stageId": "exercise",
+      "stageType": "exercise",
+      "stageSchemaVersion": 1,
+      "title": "Check your understanding",
+      "instructions": "Complete each deterministic practice item.",
+      "required": true,
+      "payload": {
+        "items": [
+          {
+            "exerciseId": "choose-expression",
+            "exerciseType": "single_choice",
+            "prompt": "Choose the expression that best fits the lesson goal.",
+            "instructions": null,
+            "hint": "Use the practiced communicative chunk.",
+            "payload": {
+              "options": [
+                {
+                  "optionId": "a",
+                  "text": "Hello, my name is Taylor."
+                },
+                {
+                  "optionId": "b",
+                  "text": "I don't know this word."
+                },
+                {
+                  "optionId": "c",
+                  "text": "The window is blue."
+                }
+              ],
+              "correctOptionId": "a"
+            },
+            "feedback": {
+              "correct": "Correct. The form fits this introduction.",
+              "incorrect": "Try again and use the lesson pattern.",
+              "explanation": "greeting → name → question → personal detail → polite response → goodbye"
+            }
+          },
+          {
+            "exerciseId": "select-useful-words",
+            "exerciseType": "multiple_select",
+            "prompt": "Select the two words that belong to this lesson's core situation.",
+            "instructions": null,
+            "hint": null,
+            "payload": {
+              "options": [
+                {
+                  "optionId": "a",
+                  "text": "introduce"
+                },
+                {
+                  "optionId": "b",
+                  "text": "meet"
+                },
+                {
+                  "optionId": "c",
+                  "text": "refrigerator"
+                },
+                {
+                  "optionId": "d",
+                  "text": "mountain engine"
+                }
+              ],
+              "correctOptionIds": [
+                "a",
+                "b"
+              ]
+            },
+            "feedback": {
+              "correct": "Correct. The form fits this introduction.",
+              "incorrect": "Try again and use the lesson pattern.",
+              "explanation": "Both words were introduced in Visual Vocabulary."
+            }
+          },
+          {
+            "exerciseId": "complete-chunk",
+            "exerciseType": "fill_blank",
+            "prompt": "Complete the practiced expression.",
+            "instructions": null,
+            "hint": "Nice to meet you, Taylor.",
+            "payload": {
+              "prefix": "",
+              "suffix": "",
+              "acceptedAnswers": [
+                "Nice to meet you, Taylor."
+              ],
+              "normalizationProfile": "english_basic_v1"
+            },
+            "feedback": {
+              "correct": "Correct. The form fits this introduction.",
+              "incorrect": "Try again and use the lesson pattern.",
+              "explanation": "Use the full practiced expression."
+            }
+          },
+          {
+            "exerciseId": "order-first-expression",
+            "exerciseType": "word_order",
+            "prompt": "Put the words in the natural order.",
+            "instructions": null,
+            "hint": null,
+            "payload": {
+              "tokens": [
+                {
+                  "tokenId": "t6",
+                  "text": "."
+                },
+                {
+                  "tokenId": "t5",
+                  "text": "Taylor"
+                },
+                {
+                  "tokenId": "t4",
+                  "text": "is"
+                },
+                {
+                  "tokenId": "t3",
+                  "text": "name"
+                },
+                {
+                  "tokenId": "t2",
+                  "text": "my"
+                },
+                {
+                  "tokenId": "t1",
+                  "text": "Hello,"
+                }
+              ],
+              "correctOrder": [
+                "t1",
+                "t2",
+                "t3",
+                "t4",
+                "t5",
+                "t6"
+              ]
+            },
+            "feedback": {
+              "correct": "Correct. The form fits this introduction.",
+              "incorrect": "Try again and use the lesson pattern.",
+              "explanation": "English statements and questions follow the modeled order."
+            }
+          },
+          {
+            "exerciseId": "match-meaning",
+            "exerciseType": "matching",
+            "prompt": "Match each lesson word to its meaning.",
+            "instructions": null,
+            "hint": null,
+            "payload": {
+              "leftItems": [
+                {
+                  "itemId": "l1",
+                  "text": "introduce"
+                },
+                {
+                  "itemId": "l2",
+                  "text": "meet"
+                },
+                {
+                  "itemId": "l3",
+                  "text": "classmate"
+                }
+              ],
+              "rightItems": [
+                {
+                  "itemId": "r1",
+                  "text": "tell people who someone is"
+                },
+                {
+                  "itemId": "r2",
+                  "text": "see and speak to someone for the first time"
+                },
+                {
+                  "itemId": "r3",
+                  "text": "a person in the same class"
+                }
+              ],
+              "correctPairs": [
+                {
+                  "leftId": "l1",
+                  "rightId": "r1"
+                },
+                {
+                  "leftId": "l2",
+                  "rightId": "r2"
+                },
+                {
+                  "leftId": "l3",
+                  "rightId": "r3"
+                }
+              ]
+            },
+            "feedback": {
+              "correct": "Correct. The form fits this introduction.",
+              "incorrect": "Try again and use the lesson pattern.",
+              "explanation": "Review the term, meaning, and example together."
+            }
+          },
+          {
+            "exerciseId": "exact-response",
+            "exerciseType": "short_answer_exact",
+            "prompt": "Type the exact model response shown in the hint.",
+            "instructions": null,
+            "hint": "Where are you from?",
+            "payload": {
+              "acceptedAnswers": [
+                "Where are you from?"
+              ],
+              "normalizationProfile": "english_basic_v1"
+            },
+            "feedback": {
+              "correct": "Correct. The form fits this introduction.",
+              "incorrect": "Try again and use the lesson pattern.",
+              "explanation": "This item checks one finite model response, not an open opinion."
+            }
+          },
+          {
+            "exerciseId": "choose-pattern",
+            "exerciseType": "single_choice",
+            "prompt": "Which line follows the lesson pattern?",
+            "instructions": null,
+            "hint": "integrated review of be, subject pronouns, WH questions, my, and your",
+            "payload": {
+              "options": [
+                {
+                  "optionId": "a",
+                  "text": "I'm from the United States."
+                },
+                {
+                  "optionId": "b",
+                  "text": "Is are my."
+                },
+                {
+                  "optionId": "c",
+                  "text": "You am from?"
+                }
+              ],
+              "correctOptionId": "a"
+            },
+            "feedback": {
+              "correct": "Correct. The form fits this introduction.",
+              "incorrect": "Try again and use the lesson pattern.",
+              "explanation": "integrated review of be, subject pronouns, WH questions, my, and your"
+            }
+          },
+          {
+            "exerciseId": "complete-vocabulary",
+            "exerciseType": "fill_blank",
+            "prompt": "Type the vocabulary item that means: a person who works with you",
+            "instructions": null,
+            "hint": "The item appears in Visual Vocabulary.",
+            "payload": {
+              "prefix": "",
+              "suffix": "",
+              "acceptedAnswers": [
+                "coworker"
+              ],
+              "normalizationProfile": "english_basic_v1"
+            },
+            "feedback": {
+              "correct": "Correct. The form fits this introduction.",
+              "incorrect": "Try again and use the lesson pattern.",
+              "explanation": "a person who works with you"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "stageId": "guided-conversation",
+      "stageType": "guided_conversation",
+      "stageSchemaVersion": 1,
+      "title": "First-meeting conversation",
+      "instructions": "Use the lesson language in a practical first meeting.",
+      "required": true,
+      "payload": {
+        "scenario": "You meet a new person in a community English class. Practice introductions mission in a friendly, appropriate exchange.",
+        "studentRole": "English learner meeting someone new",
+        "teacherRole": "Friendly new classmate",
+        "goal": "Complete a first meeting by greeting, exchanging names and origins, and closing politely.",
+        "targetVocabulary": [
+          "introduce",
+          "meet",
+          "classmate",
+          "coworker",
+          "welcome",
+          "from",
+          "speak",
+          "contact"
+        ],
+        "targetExpressions": [
+          "Hello, my name is Taylor.",
+          "Nice to meet you, Taylor.",
+          "Where are you from?",
+          "I'm from the United States.",
+          "This is my classmate, Noor.",
+          "See you in class tomorrow!"
+        ],
+        "minimumStudentTurns": 4,
+        "recommendedStudentTurns": 6,
+        "maximumStudentTurns": 8
+      }
+    },
+    {
+      "stageId": "analysis",
+      "stageType": "analysis",
+      "stageSchemaVersion": 1,
+      "title": "Lesson Review",
+      "instructions": "Review the evidence from your completed practice.",
+      "required": true,
+      "payload": {}
+    }
+  ]
+}

@@ -1,0 +1,809 @@
+{
+  "packageSchemaVersion": 1,
+  "lessonFlowVersion": 1,
+  "lessonId": "c2-u01-l01-fine-shades-of-meaning",
+  "contentVersion": 1,
+  "publicationState": "published",
+  "title": "Fine Shades of Meaning",
+  "description": "Use fine-grained lexical distinctions to synthesize and reformulate ideas related to fine shades of meaning with appropriate C2 complexity.",
+  "language": "en",
+  "referenceLocale": "en-US",
+  "cefrBand": "C2",
+  "estimatedMinutes": 52,
+  "objectives": [
+    "Use fine-grained lexical distinctions to synthesize and reformulate ideas related to fine shades of meaning with appropriate C2 complexity."
+  ],
+  "tags": [
+    "english-core",
+    "c2",
+    "unit-01",
+    "production"
+  ],
+  "assets": [],
+  "stages": [
+    {
+      "stageId": "theory",
+      "stageType": "theory",
+      "stageSchemaVersion": 1,
+      "title": "Understand meaning and form",
+      "instructions": "Read the concept, pattern, examples, contrast, common issue, and recap.",
+      "required": true,
+      "payload": {
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "The communicative aim of this lesson is to use fine-grained lexical distinctions to synthesize and reformulate ideas related to fine shades of meaning with appropriate C2 complexity. The central language focus is fine-grained lexical distinctions. In the context of meaning, ambiguity & precision, form and meaning work together: first identify the relationship between the ideas, then choose wording that makes that relationship clear to another person. At C2 content level, control comes from flexible choices rather than rare vocabulary. Preserve subtle meaning while reframing, compressing, expanding, or shifting register, and make rhetorical effects deliberate rather than decorative."
+          },
+          {
+            "type": "callout",
+            "title": "Pattern",
+            "text": "fine-grained lexical distinctions"
+          },
+          {
+            "type": "example",
+            "english": "We should consider fine distinction carefully.",
+            "explanation": "This model establishes the main communicative move."
+          },
+          {
+            "type": "example",
+            "english": "The discussion highlighted semantic range.",
+            "explanation": "This model develops or qualifies the message."
+          },
+          {
+            "type": "paragraph",
+            "text": "Start with the model “We should consider fine distinction carefully.” It establishes a useful direction for the exchange. The second model, “The discussion highlighted semantic range.” adds another layer: a reason, implication, contrast, or response. Notice how each complete chunk does a communicative job. Practice replacing one detail while preserving the original grammar, stance, and register. Then connect the revised sentence to a relevant consequence or example instead of changing topic abruptly."
+          },
+          {
+            "type": "paragraph",
+            "text": "A useful pattern for this lesson is: fine-grained lexical distinctions. Use it when the situation genuinely calls for that meaning. Contrast matters: a direct factual statement presents information, while a qualified or hypothetical form changes the speaker's commitment to it. The choice should be driven by evidence, time reference, relationship, and purpose. In listening, pay attention not only to individual words but also to linkers, stress, and the speaker's degree of certainty."
+          },
+          {
+            "type": "callout",
+            "title": "Contrast",
+            "text": "Compare a direct statement with language shaped by fine-grained lexical distinctions; the intended meaning determines the form."
+          },
+          {
+            "type": "paragraph",
+            "text": "A common issue is to select an advanced-looking form without maintaining its meaning across the sentence. That can create a mismatch in time, stance, or register. Check three things: what happened or is being proposed, how certain the speaker is, and what response is expected. For fine shades of meaning, clarity comes from a coherent message rather than maximum complexity. The later stages recycle the same vocabulary and expressions so that recognition becomes controlled production and then flexible interaction."
+          },
+          {
+            "type": "callout",
+            "title": "Common issue",
+            "text": "Do not add complexity that changes the time reference, degree of certainty, or relationship with the listener."
+          },
+          {
+            "type": "bullet_list",
+            "items": [
+              "Goal: Use fine-grained lexical distinctions to synthesize and reformulate ideas related to fine shades of meaning with appropriate C2 complexity.",
+              "Core focus: fine-grained lexical distinctions.",
+              "Use complete chunks, connect ideas, and keep the intended stance.",
+              "In the conversation, listen, respond, clarify, and develop the same topic."
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "stageId": "visual-vocabulary",
+      "stageType": "visual_vocabulary",
+      "stageSchemaVersion": 1,
+      "title": "Build precise vocabulary",
+      "instructions": "Study each useful word or chunk in a meaningful context.",
+      "required": true,
+      "payload": {
+        "items": [
+          {
+            "itemId": "item-1",
+            "term": "fine distinction",
+            "meaning": "A useful word or chunk for communicating about meaning, ambiguity & precision with the intended level of precision.",
+            "example": "We should consider fine distinction carefully.",
+            "imageAssetId": null
+          },
+          {
+            "itemId": "item-2",
+            "term": "semantic range",
+            "meaning": "A useful word or chunk for communicating about meaning, ambiguity & precision with the intended level of precision.",
+            "example": "The discussion highlighted semantic range.",
+            "imageAssetId": null
+          },
+          {
+            "itemId": "item-3",
+            "term": "pragmatic force",
+            "meaning": "A useful word or chunk for communicating about meaning, ambiguity & precision with the intended level of precision.",
+            "example": "A clear explanation addresses pragmatic force directly.",
+            "imageAssetId": null
+          },
+          {
+            "itemId": "item-4",
+            "term": "deliberately ambiguous",
+            "meaning": "A useful word or chunk for communicating about meaning, ambiguity & precision with the intended level of precision.",
+            "example": "The speaker emphasized deliberately ambiguous.",
+            "imageAssetId": null
+          },
+          {
+            "itemId": "item-5",
+            "term": "open to interpretation",
+            "meaning": "A useful word or chunk for communicating about meaning, ambiguity & precision with the intended level of precision.",
+            "example": "Our response should account for open to interpretation.",
+            "imageAssetId": null
+          },
+          {
+            "itemId": "item-6",
+            "term": "resolve the ambiguity",
+            "meaning": "A useful word or chunk for communicating about meaning, ambiguity & precision with the intended level of precision.",
+            "example": "This example illustrates resolve the ambiguity clearly.",
+            "imageAssetId": null
+          },
+          {
+            "itemId": "item-7",
+            "term": "unstated implication",
+            "meaning": "A useful word or chunk for communicating about meaning, ambiguity & precision with the intended level of precision.",
+            "example": "We should consider unstated implication carefully.",
+            "imageAssetId": null
+          },
+          {
+            "itemId": "item-8",
+            "term": "reasonable inference",
+            "meaning": "A useful word or chunk for communicating about meaning, ambiguity & precision with the intended level of precision.",
+            "example": "The discussion highlighted reasonable inference.",
+            "imageAssetId": null
+          },
+          {
+            "itemId": "item-9",
+            "term": "read into",
+            "meaning": "A useful word or chunk for communicating about meaning, ambiguity & precision with the intended level of precision.",
+            "example": "A clear explanation addresses read into directly.",
+            "imageAssetId": null
+          },
+          {
+            "itemId": "item-10",
+            "term": "meaning-preserving",
+            "meaning": "A useful word or chunk for communicating about meaning, ambiguity & precision with the intended level of precision.",
+            "example": "The speaker emphasized meaning-preserving.",
+            "imageAssetId": null
+          },
+          {
+            "itemId": "item-11",
+            "term": "recast the point",
+            "meaning": "A useful word or chunk for communicating about meaning, ambiguity & precision with the intended level of precision.",
+            "example": "Our response should account for recast the point.",
+            "imageAssetId": null
+          },
+          {
+            "itemId": "item-12",
+            "term": "economy of expression",
+            "meaning": "A useful word or chunk for communicating about meaning, ambiguity & precision with the intended level of precision.",
+            "example": "This example illustrates economy of expression clearly.",
+            "imageAssetId": null
+          }
+        ]
+      }
+    },
+    {
+      "stageId": "listening",
+      "stageType": "listening",
+      "stageSchemaVersion": 1,
+      "title": "Listen for meaning and stance",
+      "instructions": "Listen first, then reveal the text and notice connections, register, and emphasis.",
+      "required": true,
+      "payload": {
+        "segments": [
+          {
+            "segmentId": "segment-1",
+            "text": "To begin with, We should consider fine distinction carefully. The discussion highlighted semantic range.",
+            "audioAssetId": null
+          },
+          {
+            "segmentId": "segment-2",
+            "text": "In this situation, The discussion highlighted semantic range. A clear explanation addresses pragmatic force directly.",
+            "audioAssetId": null
+          },
+          {
+            "segmentId": "segment-3",
+            "text": "From another perspective, A clear explanation addresses pragmatic force directly. The speaker emphasized deliberately ambiguous.",
+            "audioAssetId": null
+          },
+          {
+            "segmentId": "segment-4",
+            "text": "More specifically, The speaker emphasized deliberately ambiguous. Our response should account for open to interpretation.",
+            "audioAssetId": null
+          },
+          {
+            "segmentId": "segment-5",
+            "text": "Even so, Our response should account for open to interpretation. This example illustrates resolve the ambiguity clearly.",
+            "audioAssetId": null
+          },
+          {
+            "segmentId": "segment-6",
+            "text": "As a result, This example illustrates resolve the ambiguity clearly. We should consider unstated implication carefully.",
+            "audioAssetId": null
+          },
+          {
+            "segmentId": "segment-7",
+            "text": "On reflection, We should consider unstated implication carefully. The discussion highlighted reasonable inference.",
+            "audioAssetId": null
+          },
+          {
+            "segmentId": "segment-8",
+            "text": "Ultimately, The discussion highlighted reasonable inference. We should consider fine distinction carefully.",
+            "audioAssetId": null
+          }
+        ],
+        "revealTextAfterFirstPlay": true
+      }
+    },
+    {
+      "stageId": "repeat",
+      "stageType": "repeat",
+      "stageSchemaVersion": 1,
+      "title": "Repeat connected chunks",
+      "instructions": "Repeat complete, useful expressions with natural phrasing and sentence stress.",
+      "required": true,
+      "payload": {
+        "targets": [
+          {
+            "targetId": "repeat-1",
+            "text": "We should consider fine distinction carefully.",
+            "referenceAudioAssetId": null,
+            "hint": "Keep the chunk connected and preserve its intended stance."
+          },
+          {
+            "targetId": "repeat-2",
+            "text": "The discussion highlighted semantic range.",
+            "referenceAudioAssetId": null,
+            "hint": "Keep the chunk connected and preserve its intended stance."
+          },
+          {
+            "targetId": "repeat-3",
+            "text": "A clear explanation addresses pragmatic force directly.",
+            "referenceAudioAssetId": null,
+            "hint": "Keep the chunk connected and preserve its intended stance."
+          },
+          {
+            "targetId": "repeat-4",
+            "text": "The speaker emphasized deliberately ambiguous.",
+            "referenceAudioAssetId": null,
+            "hint": "Keep the chunk connected and preserve its intended stance."
+          },
+          {
+            "targetId": "repeat-5",
+            "text": "Our response should account for open to interpretation.",
+            "referenceAudioAssetId": null,
+            "hint": "Keep the chunk connected and preserve its intended stance."
+          },
+          {
+            "targetId": "repeat-6",
+            "text": "This example illustrates resolve the ambiguity clearly.",
+            "referenceAudioAssetId": null,
+            "hint": "Keep the chunk connected and preserve its intended stance."
+          },
+          {
+            "targetId": "repeat-7",
+            "text": "We should consider unstated implication carefully.",
+            "referenceAudioAssetId": null,
+            "hint": "Keep the chunk connected and preserve its intended stance."
+          },
+          {
+            "targetId": "repeat-8",
+            "text": "The discussion highlighted reasonable inference.",
+            "referenceAudioAssetId": null,
+            "hint": "Keep the chunk connected and preserve its intended stance."
+          }
+        ]
+      }
+    },
+    {
+      "stageId": "speaking-check",
+      "stageType": "speaking_check",
+      "stageSchemaVersion": 1,
+      "title": "Speaking Check",
+      "instructions": "Say only expressions already prepared in this Lesson.",
+      "required": true,
+      "payload": {
+        "targets": [
+          {
+            "targetId": "speaking-1",
+            "instruction": "Say the complete prepared model naturally.",
+            "targetText": "We should consider fine distinction carefully.",
+            "hint": "Use clear phrasing and preserve every meaning-bearing word."
+          },
+          {
+            "targetId": "speaking-2",
+            "instruction": "Say the complete prepared model naturally.",
+            "targetText": "The discussion highlighted semantic range.",
+            "hint": "Use clear phrasing and preserve every meaning-bearing word."
+          },
+          {
+            "targetId": "speaking-3",
+            "instruction": "Say the complete prepared model naturally.",
+            "targetText": "A clear explanation addresses pragmatic force directly.",
+            "hint": "Use clear phrasing and preserve every meaning-bearing word."
+          },
+          {
+            "targetId": "speaking-4",
+            "instruction": "Say the complete prepared model naturally.",
+            "targetText": "The speaker emphasized deliberately ambiguous.",
+            "hint": "Use clear phrasing and preserve every meaning-bearing word."
+          },
+          {
+            "targetId": "speaking-5",
+            "instruction": "Say the complete prepared model naturally.",
+            "targetText": "Our response should account for open to interpretation.",
+            "hint": "Use clear phrasing and preserve every meaning-bearing word."
+          },
+          {
+            "targetId": "speaking-6",
+            "instruction": "Say the complete prepared model naturally.",
+            "targetText": "This example illustrates resolve the ambiguity clearly.",
+            "hint": "Use clear phrasing and preserve every meaning-bearing word."
+          },
+          {
+            "targetId": "speaking-7",
+            "instruction": "Say the complete prepared model naturally.",
+            "targetText": "We should consider unstated implication carefully.",
+            "hint": "Use clear phrasing and preserve every meaning-bearing word."
+          },
+          {
+            "targetId": "speaking-8",
+            "instruction": "Say the complete prepared model naturally.",
+            "targetText": "The discussion highlighted reasonable inference.",
+            "hint": "Use clear phrasing and preserve every meaning-bearing word."
+          }
+        ]
+      }
+    },
+    {
+      "stageId": "exercise",
+      "stageType": "exercise",
+      "stageSchemaVersion": 1,
+      "title": "Apply the language",
+      "instructions": "Complete each deterministic meaning, form, vocabulary, and discourse task.",
+      "required": true,
+      "payload": {
+        "items": [
+          {
+            "exerciseId": "meaning-in-context",
+            "exerciseType": "single_choice",
+            "prompt": "Choose the line that best fits the stated communicative purpose.",
+            "instructions": null,
+            "hint": "fine-grained lexical distinctions",
+            "payload": {
+              "options": [
+                {
+                  "optionId": "a",
+                  "text": "We should consider fine distinction carefully."
+                },
+                {
+                  "optionId": "b",
+                  "text": "Our response should account for open to interpretation."
+                },
+                {
+                  "optionId": "c",
+                  "text": "The issue has no connection to this context."
+                }
+              ],
+              "correctOptionId": "a"
+            },
+            "feedback": {
+              "correct": "Correct. The choice fits the meaning and context.",
+              "incorrect": "Try again. Compare the context with the lesson models.",
+              "explanation": "fine-grained lexical distinctions"
+            }
+          },
+          {
+            "exerciseId": "select-unit-language",
+            "exerciseType": "multiple_select",
+            "prompt": "Select the two chunks that support this lesson's context.",
+            "instructions": null,
+            "hint": null,
+            "payload": {
+              "options": [
+                {
+                  "optionId": "a",
+                  "text": "fine distinction"
+                },
+                {
+                  "optionId": "b",
+                  "text": "semantic range"
+                },
+                {
+                  "optionId": "c",
+                  "text": "unrelated mechanical component"
+                },
+                {
+                  "optionId": "d",
+                  "text": "random geological sample"
+                }
+              ],
+              "correctOptionIds": [
+                "a",
+                "b"
+              ]
+            },
+            "feedback": {
+              "correct": "Correct. The choice fits the meaning and context.",
+              "incorrect": "Try again. Compare the context with the lesson models.",
+              "explanation": "Both correct chunks were prepared in Visual Vocabulary."
+            }
+          },
+          {
+            "exerciseId": "complete-model",
+            "exerciseType": "fill_blank",
+            "prompt": "Type the complete model shown in the hint.",
+            "instructions": null,
+            "hint": "The discussion highlighted semantic range.",
+            "payload": {
+              "prefix": "",
+              "suffix": "",
+              "acceptedAnswers": [
+                "The discussion highlighted semantic range."
+              ],
+              "normalizationProfile": "english_basic_v1"
+            },
+            "feedback": {
+              "correct": "Correct. The choice fits the meaning and context.",
+              "incorrect": "Try again. Compare the context with the lesson models.",
+              "explanation": "This is a finite model-recall task."
+            }
+          },
+          {
+            "exerciseId": "order-message",
+            "exerciseType": "word_order",
+            "prompt": "Put the model in its natural order.",
+            "instructions": null,
+            "hint": null,
+            "payload": {
+              "tokens": [
+                {
+                  "tokenId": "t7",
+                  "text": "."
+                },
+                {
+                  "tokenId": "t6",
+                  "text": "carefully"
+                },
+                {
+                  "tokenId": "t5",
+                  "text": "distinction"
+                },
+                {
+                  "tokenId": "t4",
+                  "text": "fine"
+                },
+                {
+                  "tokenId": "t3",
+                  "text": "consider"
+                },
+                {
+                  "tokenId": "t2",
+                  "text": "should"
+                },
+                {
+                  "tokenId": "t1",
+                  "text": "We"
+                }
+              ],
+              "correctOrder": [
+                "t1",
+                "t2",
+                "t3",
+                "t4",
+                "t5",
+                "t6",
+                "t7"
+              ]
+            },
+            "feedback": {
+              "correct": "Correct. The choice fits the meaning and context.",
+              "incorrect": "Try again. Compare the context with the lesson models.",
+              "explanation": "Use the modeled English information order."
+            }
+          },
+          {
+            "exerciseId": "match-chunks",
+            "exerciseType": "matching",
+            "prompt": "Match each chunk to its communicative use.",
+            "instructions": null,
+            "hint": null,
+            "payload": {
+              "leftItems": [
+                {
+                  "itemId": "l1",
+                  "text": "fine distinction"
+                },
+                {
+                  "itemId": "l2",
+                  "text": "semantic range"
+                },
+                {
+                  "itemId": "l3",
+                  "text": "pragmatic force"
+                }
+              ],
+              "rightItems": [
+                {
+                  "itemId": "r1",
+                  "text": "Language used to develop point 1 in this lesson context."
+                },
+                {
+                  "itemId": "r2",
+                  "text": "Language used to develop point 2 in this lesson context."
+                },
+                {
+                  "itemId": "r3",
+                  "text": "Language used to develop point 3 in this lesson context."
+                }
+              ],
+              "correctPairs": [
+                {
+                  "leftId": "l1",
+                  "rightId": "r1"
+                },
+                {
+                  "leftId": "l2",
+                  "rightId": "r2"
+                },
+                {
+                  "leftId": "l3",
+                  "rightId": "r3"
+                }
+              ]
+            },
+            "feedback": {
+              "correct": "Correct. The choice fits the meaning and context.",
+              "incorrect": "Try again. Compare the context with the lesson models.",
+              "explanation": "Review the chunks in their contextual examples."
+            }
+          },
+          {
+            "exerciseId": "exact-finite-response",
+            "exerciseType": "short_answer_exact",
+            "prompt": "Type the exact finite model shown in the hint.",
+            "instructions": null,
+            "hint": "A clear explanation addresses pragmatic force directly.",
+            "payload": {
+              "acceptedAnswers": [
+                "A clear explanation addresses pragmatic force directly."
+              ],
+              "normalizationProfile": "english_basic_v1"
+            },
+            "feedback": {
+              "correct": "Correct. The choice fits the meaning and context.",
+              "incorrect": "Try again. Compare the context with the lesson models.",
+              "explanation": "This checks recall of one displayed model, not a subjective response."
+            }
+          },
+          {
+            "exerciseId": "distinguish-purpose-6",
+            "exerciseType": "single_choice",
+            "prompt": "Which line has the appropriate focus and register?",
+            "instructions": null,
+            "hint": "fine-grained lexical distinctions",
+            "payload": {
+              "options": [
+                {
+                  "optionId": "a",
+                  "text": "The discussion highlighted reasonable inference."
+                },
+                {
+                  "optionId": "b",
+                  "text": "Whatever, none of that matters at all."
+                },
+                {
+                  "optionId": "c",
+                  "text": "Words are being placed without a communicative purpose."
+                }
+              ],
+              "correctOptionId": "a"
+            },
+            "feedback": {
+              "correct": "Correct. The choice fits the meaning and context.",
+              "incorrect": "Try again. Compare the context with the lesson models.",
+              "explanation": "The lesson model preserves purpose, stance, and register."
+            }
+          },
+          {
+            "exerciseId": "select-coherent-pair-7",
+            "exerciseType": "multiple_select",
+            "prompt": "Select both expressions prepared for this interaction.",
+            "instructions": null,
+            "hint": null,
+            "payload": {
+              "options": [
+                {
+                  "optionId": "a",
+                  "text": "We should consider fine distinction carefully."
+                },
+                {
+                  "optionId": "b",
+                  "text": "The discussion highlighted semantic range."
+                },
+                {
+                  "optionId": "c",
+                  "text": "A sentence about an unrelated appliance."
+                },
+                {
+                  "optionId": "d",
+                  "text": "An answer with no semantic connection."
+                }
+              ],
+              "correctOptionIds": [
+                "a",
+                "b"
+              ]
+            },
+            "feedback": {
+              "correct": "Correct. The choice fits the meaning and context.",
+              "incorrect": "Try again. Compare the context with the lesson models.",
+              "explanation": "Both choices belong to the same prepared exchange."
+            }
+          },
+          {
+            "exerciseId": "context-choice-8",
+            "exerciseType": "single_choice",
+            "prompt": "Choose the response that develops the same topic coherently.",
+            "instructions": null,
+            "hint": null,
+            "payload": {
+              "options": [
+                {
+                  "optionId": "a",
+                  "text": "We should consider fine distinction carefully."
+                },
+                {
+                  "optionId": "b",
+                  "text": "That conclusion ignores every detail just mentioned."
+                },
+                {
+                  "optionId": "c",
+                  "text": "A disconnected answer would change the subject."
+                }
+              ],
+              "correctOptionId": "a"
+            },
+            "feedback": {
+              "correct": "Correct. The choice fits the meaning and context.",
+              "incorrect": "Try again. Compare the context with the lesson models.",
+              "explanation": "The correct response remains relevant and coherent."
+            }
+          },
+          {
+            "exerciseId": "vocabulary-recall-9",
+            "exerciseType": "fill_blank",
+            "prompt": "Type the exact chunk displayed in the hint.",
+            "instructions": null,
+            "hint": "meaning-preserving",
+            "payload": {
+              "prefix": "",
+              "suffix": "",
+              "acceptedAnswers": [
+                "meaning-preserving"
+              ],
+              "normalizationProfile": "english_basic_v1"
+            },
+            "feedback": {
+              "correct": "Correct. The choice fits the meaning and context.",
+              "incorrect": "Try again. Compare the context with the lesson models.",
+              "explanation": "The answer is one finite prepared chunk."
+            }
+          },
+          {
+            "exerciseId": "distinguish-purpose-10",
+            "exerciseType": "single_choice",
+            "prompt": "Which line has the appropriate focus and register?",
+            "instructions": null,
+            "hint": "fine-grained lexical distinctions",
+            "payload": {
+              "options": [
+                {
+                  "optionId": "a",
+                  "text": "The speaker emphasized deliberately ambiguous."
+                },
+                {
+                  "optionId": "b",
+                  "text": "Whatever, none of that matters at all."
+                },
+                {
+                  "optionId": "c",
+                  "text": "Words are being placed without a communicative purpose."
+                }
+              ],
+              "correctOptionId": "a"
+            },
+            "feedback": {
+              "correct": "Correct. The choice fits the meaning and context.",
+              "incorrect": "Try again. Compare the context with the lesson models.",
+              "explanation": "The lesson model preserves purpose, stance, and register."
+            }
+          },
+          {
+            "exerciseId": "select-coherent-pair-11",
+            "exerciseType": "multiple_select",
+            "prompt": "Select both expressions prepared for this interaction.",
+            "instructions": null,
+            "hint": null,
+            "payload": {
+              "options": [
+                {
+                  "optionId": "a",
+                  "text": "We should consider fine distinction carefully."
+                },
+                {
+                  "optionId": "b",
+                  "text": "The discussion highlighted semantic range."
+                },
+                {
+                  "optionId": "c",
+                  "text": "A sentence about an unrelated appliance."
+                },
+                {
+                  "optionId": "d",
+                  "text": "An answer with no semantic connection."
+                }
+              ],
+              "correctOptionIds": [
+                "a",
+                "b"
+              ]
+            },
+            "feedback": {
+              "correct": "Correct. The choice fits the meaning and context.",
+              "incorrect": "Try again. Compare the context with the lesson models.",
+              "explanation": "Both choices belong to the same prepared exchange."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "stageId": "guided-conversation",
+      "stageType": "guided_conversation",
+      "stageSchemaVersion": 1,
+      "title": "Fine Shades of Meaning conversation",
+      "instructions": "Sustain the interaction, respond to follow-ups, and use the prepared language flexibly.",
+      "required": true,
+      "payload": {
+        "scenario": "You are taking part in a realistic C2 discussion about meaning, ambiguity & precision. The immediate task is fine shades of meaning; develop the issue, respond to new information, and reach an appropriate communicative outcome.",
+        "studentRole": "Independent English user contributing and responding",
+        "teacherRole": "Responsive conversation partner who probes, clarifies, and challenges appropriately",
+        "goal": "Use fine-grained lexical distinctions to synthesize and reformulate ideas related to fine shades of meaning with appropriate C2 complexity.",
+        "targetVocabulary": [
+          "fine distinction",
+          "semantic range",
+          "pragmatic force",
+          "deliberately ambiguous",
+          "open to interpretation",
+          "resolve the ambiguity",
+          "unstated implication",
+          "reasonable inference",
+          "read into",
+          "meaning-preserving",
+          "recast the point",
+          "economy of expression"
+        ],
+        "targetExpressions": [
+          "We should consider fine distinction carefully.",
+          "The discussion highlighted semantic range.",
+          "A clear explanation addresses pragmatic force directly.",
+          "The speaker emphasized deliberately ambiguous.",
+          "Our response should account for open to interpretation.",
+          "This example illustrates resolve the ambiguity clearly.",
+          "We should consider unstated implication carefully.",
+          "The discussion highlighted reasonable inference."
+        ],
+        "minimumStudentTurns": 8,
+        "recommendedStudentTurns": 12,
+        "maximumStudentTurns": 18
+      }
+    },
+    {
+      "stageId": "analysis",
+      "stageType": "analysis",
+      "stageSchemaVersion": 1,
+      "title": "Lesson Review",
+      "instructions": "Review evidence from the completed Lesson with Interactive Lesson Analysis v1.",
+      "required": true,
+      "payload": {}
+    }
+  ]
+}

@@ -1,0 +1,610 @@
+{
+  "packageSchemaVersion": 1,
+  "lessonFlowVersion": 1,
+  "lessonId": "a2-u07-l01-parts-body",
+  "contentVersion": 1,
+  "publicationState": "published",
+  "title": "Parts of the Body",
+  "description": "Name major body parts and locate simple pain or discomfort.",
+  "language": "en",
+  "referenceLocale": "en-US",
+  "cefrBand": "A2",
+  "estimatedMinutes": 30,
+  "objectives": [
+    "Name major body parts and locate simple pain or discomfort."
+  ],
+  "tags": [
+    "english-core",
+    "a2",
+    "unit-07",
+    "production"
+  ],
+  "assets": [],
+  "stages": [
+    {
+      "stageId": "theory",
+      "stageType": "theory",
+      "stageSchemaVersion": 1,
+      "title": "Understand the language",
+      "instructions": "Read the explanation, examples, common error, and recap.",
+      "required": true,
+      "payload": {
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "This lesson prepares you to name major body parts and locate simple pain or discomfort. The central language is body nouns and possessive forms. It belongs to the practical context of health & everyday problems. Focus first on meaning: decide what information the listener needs. Then choose the subject, verb form, and useful detail. At A2, connect the main message to a time, reason, contrast, or result. Listen for context before choosing the tense or functional phrase. The same language returns in the listening, repeat, speaking, exercises, and guided conversation stages."
+          },
+          {
+            "type": "callout",
+            "title": "Pattern",
+            "text": "body nouns and possessive forms"
+          },
+          {
+            "type": "example",
+            "english": "My back hurts after long trips.",
+            "explanation": "Use this model to begin the parts of the body exchange."
+          },
+          {
+            "type": "example",
+            "english": "I have pain in my left shoulder.",
+            "explanation": "This parts of the body model adds a different detail or response."
+          },
+          {
+            "type": "example",
+            "english": "What's wrong?",
+            "explanation": "Use this question or response to keep the parts of the body exchange moving."
+          },
+          {
+            "type": "paragraph",
+            "text": "Notice the two models: “My back hurts after long trips.” and “I have pain in my left shoulder.” They show the pattern in complete communication, not as isolated grammar. Say the model aloud, replace one detail, and check that the new sentence keeps the intended meaning. When the other person asks a follow-up question, answer directly and add a relevant detail. This makes the exchange natural while keeping the language controlled. Compare the time and viewpoint in each model, and use a linker when two ideas need a clear relationship. Avoid adding advanced forms when the lesson pattern already communicates the message accurately."
+          },
+          {
+            "type": "callout",
+            "title": "Common error",
+            "text": "Do not mix the word order or verb form with another pattern. Keep the controlled form for this lesson: body nouns and possessive forms."
+          },
+          {
+            "type": "bullet_list",
+            "items": [
+              "Communicative goal: Name major body parts and locate simple pain or discomfort.",
+              "Core pattern: body nouns and possessive forms.",
+              "Use one clear model, add a relevant detail, and respond to the other speaker."
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "stageId": "visual-vocabulary",
+      "stageType": "visual_vocabulary",
+      "stageSchemaVersion": 1,
+      "title": "Build your vocabulary",
+      "instructions": "Study each term, meaning, and contextual example.",
+      "required": true,
+      "payload": {
+        "items": [
+          {
+            "itemId": "head",
+            "term": "head",
+            "meaning": "the upper part of the body containing the face and brain",
+            "example": "Use “head” while you practice parts of the body in context.",
+            "imageAssetId": null
+          },
+          {
+            "itemId": "throat",
+            "term": "throat",
+            "meaning": "the passage inside the neck",
+            "example": "Use “throat” while you practice parts of the body in context.",
+            "imageAssetId": null
+          },
+          {
+            "itemId": "stomach",
+            "term": "stomach",
+            "meaning": "the organ that receives food",
+            "example": "Use “stomach” while you practice parts of the body in context.",
+            "imageAssetId": null
+          },
+          {
+            "itemId": "back",
+            "term": "back",
+            "meaning": "the rear part of the body from shoulders to hips",
+            "example": "Use “back” while you practice parts of the body in context.",
+            "imageAssetId": null
+          },
+          {
+            "itemId": "fever",
+            "term": "fever",
+            "meaning": "a body temperature higher than normal",
+            "example": "Use “fever” while you practice parts of the body in context.",
+            "imageAssetId": null
+          },
+          {
+            "itemId": "cough",
+            "term": "cough",
+            "meaning": "force air noisily from the lungs",
+            "example": "Use “cough” while you practice parts of the body in context.",
+            "imageAssetId": null
+          },
+          {
+            "itemId": "sore",
+            "term": "sore",
+            "meaning": "painful or uncomfortable",
+            "example": "Use “sore” while you practice parts of the body in context.",
+            "imageAssetId": null
+          },
+          {
+            "itemId": "medicine",
+            "term": "medicine",
+            "meaning": "a substance used to treat illness",
+            "example": "Use “medicine” while you practice parts of the body in context.",
+            "imageAssetId": null
+          },
+          {
+            "itemId": "pharmacy",
+            "term": "pharmacy",
+            "meaning": "a store that prepares and sells medicine",
+            "example": "Use “pharmacy” while you practice parts of the body in context.",
+            "imageAssetId": null
+          }
+        ]
+      }
+    },
+    {
+      "stageId": "listening",
+      "stageType": "listening",
+      "stageSchemaVersion": 1,
+      "title": "Listen in context",
+      "instructions": "Listen before revealing the text, then notice the target pattern.",
+      "required": true,
+      "payload": {
+        "segments": [
+          {
+            "segmentId": "segment-1",
+            "text": "My back hurts after long trips. I have pain in my left shoulder.",
+            "audioAssetId": null
+          },
+          {
+            "segmentId": "segment-2",
+            "text": "What's wrong? I can explain how I feel.",
+            "audioAssetId": null
+          },
+          {
+            "segmentId": "segment-3",
+            "text": "I have pain in my left shoulder. What's wrong?",
+            "audioAssetId": null
+          },
+          {
+            "segmentId": "segment-4",
+            "text": "I can explain how I feel. Thanks for talking about health & everyday problems with me.",
+            "audioAssetId": null
+          }
+        ],
+        "revealTextAfterFirstPlay": true
+      }
+    },
+    {
+      "stageId": "repeat",
+      "stageType": "repeat",
+      "stageSchemaVersion": 1,
+      "title": "Repeat useful chunks",
+      "instructions": "Repeat each complete expression with clear rhythm.",
+      "required": true,
+      "payload": {
+        "targets": [
+          {
+            "targetId": "repeat-1",
+            "text": "My back hurts after long trips.",
+            "referenceAudioAssetId": null,
+            "hint": "Keep the words together as one communicative chunk."
+          },
+          {
+            "targetId": "repeat-2",
+            "text": "I have pain in my left shoulder.",
+            "referenceAudioAssetId": null,
+            "hint": "Keep the words together as one communicative chunk."
+          },
+          {
+            "targetId": "repeat-3",
+            "text": "What's wrong?",
+            "referenceAudioAssetId": null,
+            "hint": "Keep the words together as one communicative chunk."
+          },
+          {
+            "targetId": "repeat-4",
+            "text": "I can explain how I feel.",
+            "referenceAudioAssetId": null,
+            "hint": "Keep the words together as one communicative chunk."
+          },
+          {
+            "targetId": "repeat-5",
+            "text": "Thanks for talking about health & everyday problems with me.",
+            "referenceAudioAssetId": null,
+            "hint": "Keep the words together as one communicative chunk."
+          }
+        ]
+      }
+    },
+    {
+      "stageId": "speaking-check",
+      "stageType": "speaking_check",
+      "stageSchemaVersion": 1,
+      "title": "Speaking Check",
+      "instructions": "Say expressions already presented in this Lesson.",
+      "required": true,
+      "payload": {
+        "targets": [
+          {
+            "targetId": "speaking-1",
+            "instruction": "Say the complete model naturally.",
+            "targetText": "My back hurts after long trips.",
+            "hint": "Use the same words and clear sentence stress."
+          },
+          {
+            "targetId": "speaking-2",
+            "instruction": "Say the complete model naturally.",
+            "targetText": "I have pain in my left shoulder.",
+            "hint": "Use the same words and clear sentence stress."
+          },
+          {
+            "targetId": "speaking-3",
+            "instruction": "Say the complete model naturally.",
+            "targetText": "What's wrong?",
+            "hint": "Use the same words and clear sentence stress."
+          },
+          {
+            "targetId": "speaking-4",
+            "instruction": "Say the complete model naturally.",
+            "targetText": "I can explain how I feel.",
+            "hint": "Use the same words and clear sentence stress."
+          }
+        ]
+      }
+    },
+    {
+      "stageId": "exercise",
+      "stageType": "exercise",
+      "stageSchemaVersion": 1,
+      "title": "Check your understanding",
+      "instructions": "Complete each deterministic practice item.",
+      "required": true,
+      "payload": {
+        "items": [
+          {
+            "exerciseId": "choose-model",
+            "exerciseType": "single_choice",
+            "prompt": "Choose the model that fits the communicative goal.",
+            "instructions": null,
+            "hint": "Name major body parts and locate simple pain or discomfort.",
+            "payload": {
+              "options": [
+                {
+                  "optionId": "a",
+                  "text": "My back hurts after long trips."
+                },
+                {
+                  "optionId": "b",
+                  "text": "The purple engine sleeps quickly."
+                },
+                {
+                  "optionId": "c",
+                  "text": "No information is possible."
+                }
+              ],
+              "correctOptionId": "a"
+            },
+            "feedback": {
+              "correct": "Correct. The answer fits the lesson context.",
+              "incorrect": "Try again and use the model from this lesson.",
+              "explanation": "body nouns and possessive forms"
+            }
+          },
+          {
+            "exerciseId": "select-core-vocabulary",
+            "exerciseType": "multiple_select",
+            "prompt": "Select both words that belong to this lesson context.",
+            "instructions": null,
+            "hint": "Health & Everyday Problems",
+            "payload": {
+              "options": [
+                {
+                  "optionId": "a",
+                  "text": "head"
+                },
+                {
+                  "optionId": "b",
+                  "text": "throat"
+                },
+                {
+                  "optionId": "c",
+                  "text": "industrial turbine"
+                },
+                {
+                  "optionId": "d",
+                  "text": "quantum geology"
+                }
+              ],
+              "correctOptionIds": [
+                "a",
+                "b"
+              ]
+            },
+            "feedback": {
+              "correct": "Correct. The answer fits the lesson context.",
+              "incorrect": "Try again and use the model from this lesson.",
+              "explanation": "Both correct words appear in Visual Vocabulary."
+            }
+          },
+          {
+            "exerciseId": "complete-response",
+            "exerciseType": "fill_blank",
+            "prompt": "Type the exact practiced response shown in the hint.",
+            "instructions": null,
+            "hint": "I have pain in my left shoulder.",
+            "payload": {
+              "prefix": "",
+              "suffix": "",
+              "acceptedAnswers": [
+                "I have pain in my left shoulder."
+              ],
+              "normalizationProfile": "english_basic_v1"
+            },
+            "feedback": {
+              "correct": "Correct. The answer fits the lesson context.",
+              "incorrect": "Try again and use the model from this lesson.",
+              "explanation": "Use the complete model response."
+            }
+          },
+          {
+            "exerciseId": "order-model",
+            "exerciseType": "word_order",
+            "prompt": "Put the model in its natural order.",
+            "instructions": null,
+            "hint": null,
+            "payload": {
+              "tokens": [
+                {
+                  "tokenId": "t7",
+                  "text": "."
+                },
+                {
+                  "tokenId": "t6",
+                  "text": "trips"
+                },
+                {
+                  "tokenId": "t5",
+                  "text": "long"
+                },
+                {
+                  "tokenId": "t4",
+                  "text": "after"
+                },
+                {
+                  "tokenId": "t3",
+                  "text": "hurts"
+                },
+                {
+                  "tokenId": "t2",
+                  "text": "back"
+                },
+                {
+                  "tokenId": "t1",
+                  "text": "My"
+                }
+              ],
+              "correctOrder": [
+                "t1",
+                "t2",
+                "t3",
+                "t4",
+                "t5",
+                "t6",
+                "t7"
+              ]
+            },
+            "feedback": {
+              "correct": "Correct. The answer fits the lesson context.",
+              "incorrect": "Try again and use the model from this lesson.",
+              "explanation": "Keep the modeled English word order."
+            }
+          },
+          {
+            "exerciseId": "match-vocabulary",
+            "exerciseType": "matching",
+            "prompt": "Match each term to its meaning.",
+            "instructions": null,
+            "hint": null,
+            "payload": {
+              "leftItems": [
+                {
+                  "itemId": "l1",
+                  "text": "head"
+                },
+                {
+                  "itemId": "l2",
+                  "text": "throat"
+                },
+                {
+                  "itemId": "l3",
+                  "text": "stomach"
+                }
+              ],
+              "rightItems": [
+                {
+                  "itemId": "r1",
+                  "text": "the upper part of the body containing the face and brain"
+                },
+                {
+                  "itemId": "r2",
+                  "text": "the passage inside the neck"
+                },
+                {
+                  "itemId": "r3",
+                  "text": "the organ that receives food"
+                }
+              ],
+              "correctPairs": [
+                {
+                  "leftId": "l1",
+                  "rightId": "r1"
+                },
+                {
+                  "leftId": "l2",
+                  "rightId": "r2"
+                },
+                {
+                  "leftId": "l3",
+                  "rightId": "r3"
+                }
+              ]
+            },
+            "feedback": {
+              "correct": "Correct. The answer fits the lesson context.",
+              "incorrect": "Try again and use the model from this lesson.",
+              "explanation": "Review each term with its meaning and example."
+            }
+          },
+          {
+            "exerciseId": "exact-useful-chunk",
+            "exerciseType": "short_answer_exact",
+            "prompt": "Type the finite model chunk shown in the hint.",
+            "instructions": null,
+            "hint": "What's wrong?",
+            "payload": {
+              "acceptedAnswers": [
+                "What's wrong?"
+              ],
+              "normalizationProfile": "english_basic_v1"
+            },
+            "feedback": {
+              "correct": "Correct. The answer fits the lesson context.",
+              "incorrect": "Try again and use the model from this lesson.",
+              "explanation": "This checks one exact practiced chunk, not an open response."
+            }
+          },
+          {
+            "exerciseId": "choose-correct-form",
+            "exerciseType": "single_choice",
+            "prompt": "Which sentence follows the lesson pattern?",
+            "instructions": null,
+            "hint": "body nouns and possessive forms",
+            "payload": {
+              "options": [
+                {
+                  "optionId": "a",
+                  "text": "I have pain in my left shoulder."
+                },
+                {
+                  "optionId": "b",
+                  "text": "She are did going."
+                },
+                {
+                  "optionId": "c",
+                  "text": "I is to yesterday."
+                }
+              ],
+              "correctOptionId": "a"
+            },
+            "feedback": {
+              "correct": "Correct. The answer fits the lesson context.",
+              "incorrect": "Try again and use the model from this lesson.",
+              "explanation": "body nouns and possessive forms"
+            }
+          },
+          {
+            "exerciseId": "recall-vocabulary",
+            "exerciseType": "fill_blank",
+            "prompt": "Type the term that means: the rear part of the body from shoulders to hips",
+            "instructions": null,
+            "hint": "It appears in Visual Vocabulary.",
+            "payload": {
+              "prefix": "",
+              "suffix": "",
+              "acceptedAnswers": [
+                "back"
+              ],
+              "normalizationProfile": "english_basic_v1"
+            },
+            "feedback": {
+              "correct": "Correct. The answer fits the lesson context.",
+              "incorrect": "Try again and use the model from this lesson.",
+              "explanation": "the rear part of the body from shoulders to hips"
+            }
+          },
+          {
+            "exerciseId": "context-choice",
+            "exerciseType": "single_choice",
+            "prompt": "Choose the response that adds a relevant detail.",
+            "instructions": null,
+            "hint": "A2 responses connect ideas and context.",
+            "payload": {
+              "options": [
+                {
+                  "optionId": "a",
+                  "text": "I can explain how I feel."
+                },
+                {
+                  "optionId": "b",
+                  "text": "Banana seven because blue."
+                },
+                {
+                  "optionId": "c",
+                  "text": "I have no sentence."
+                }
+              ],
+              "correctOptionId": "a"
+            },
+            "feedback": {
+              "correct": "Correct. The answer fits the lesson context.",
+              "incorrect": "Try again and use the model from this lesson.",
+              "explanation": "Use a relevant follow-up in the same situation."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "stageId": "guided-conversation",
+      "stageType": "guided_conversation",
+      "stageSchemaVersion": 1,
+      "title": "Health & Everyday Problems conversation",
+      "instructions": "Use the prepared language in a practical exchange.",
+      "required": true,
+      "payload": {
+        "scenario": "You are in a realistic everyday situation related to health & everyday problems. Practice parts of the body and respond to relevant follow-up questions.",
+        "studentRole": "English learner handling the situation",
+        "teacherRole": "Helpful conversation partner",
+        "goal": "Name major body parts and locate simple pain or discomfort.",
+        "targetVocabulary": [
+          "head",
+          "throat",
+          "stomach",
+          "back",
+          "fever",
+          "cough",
+          "sore",
+          "medicine",
+          "pharmacy"
+        ],
+        "targetExpressions": [
+          "My back hurts after long trips.",
+          "I have pain in my left shoulder.",
+          "What's wrong?",
+          "I can explain how I feel.",
+          "Thanks for talking about health & everyday problems with me."
+        ],
+        "minimumStudentTurns": 5,
+        "recommendedStudentTurns": 7,
+        "maximumStudentTurns": 10
+      }
+    },
+    {
+      "stageId": "analysis",
+      "stageType": "analysis",
+      "stageSchemaVersion": 1,
+      "title": "Lesson Review",
+      "instructions": "Review the evidence from your completed practice.",
+      "required": true,
+      "payload": {}
+    }
+  ]
+}

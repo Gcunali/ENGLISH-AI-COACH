@@ -117,6 +117,11 @@ pub fn migrate(path: &Path) -> Result<(), String> {
         .execute_batch(include_str!("../migrations/023_toeic_full_reading.sql"))
         .map_err(|error| format!("TOEIC full reading migration failed: {error}"))?;
     transaction
+        .execute_batch(include_str!(
+            "../migrations/024_toeic_personalized_preparation.sql"
+        ))
+        .map_err(|error| format!("TOEIC personalized preparation migration failed: {error}"))?;
+    transaction
         .commit()
         .map_err(|error| format!("Could not commit database migration: {error}"))?;
     Ok(())
@@ -172,7 +177,10 @@ mod tests {
             .unwrap();
         assert_eq!(
             versions,
-            vec![1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22]
+            vec![
+                1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23,
+                24
+            ]
         );
         for table in [
             "lesson",
@@ -255,7 +263,7 @@ mod tests {
             })
             .unwrap();
         assert_eq!(legacy_count, 1);
-        assert_eq!(migration_count, 22);
+        assert_eq!(migration_count, 24);
         drop(connection);
         std::fs::remove_dir_all(directory).unwrap();
     }
@@ -283,7 +291,7 @@ mod tests {
             })
             .unwrap();
         assert_eq!(preserved, 1);
-        assert_eq!(version, 22);
+        assert_eq!(version, 24);
         drop(connection);
         std::fs::remove_dir_all(directory).unwrap();
     }
@@ -314,7 +322,7 @@ mod tests {
             .unwrap();
         assert_eq!(preserved, 1);
         assert!(sql.contains("interactive_lesson"));
-        assert_eq!(version, 22);
+        assert_eq!(version, 24);
         assert_eq!(
             connection
                 .query_row("PRAGMA integrity_check", [], |row| row.get::<_, String>(0))
@@ -457,7 +465,7 @@ mod tests {
                 |row| row.get(0),
             )
             .unwrap();
-        assert_eq!(version, 22);
+        assert_eq!(version, 24);
         assert_eq!(attempts, 0);
         assert_eq!(
             connection
@@ -625,7 +633,10 @@ mod tests {
         assert_eq!(lesson_count, 1);
         assert_eq!(
             versions,
-            vec![1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22]
+            vec![
+                1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23,
+                24
+            ]
         );
         assert_eq!(integrity, "ok");
         assert_eq!(foreign_key_errors, 0);
@@ -697,7 +708,10 @@ mod tests {
             .unwrap();
         assert_eq!(
             versions,
-            vec![1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22]
+            vec![
+                1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23,
+                24
+            ]
         );
         assert_eq!(analysis_count, 1);
         assert_eq!(integrity, "ok");
@@ -764,7 +778,10 @@ mod tests {
             .unwrap();
         assert_eq!(
             versions,
-            vec![1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22]
+            vec![
+                1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23,
+                24
+            ]
         );
         assert_eq!(vocabulary_status, "learning");
         assert_eq!(memory_default, "true");
@@ -816,7 +833,10 @@ mod tests {
             .unwrap();
         assert_eq!(
             versions,
-            vec![1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22]
+            vec![
+                1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23,
+                24
+            ]
         );
         assert_eq!(snapshots, 0);
         assert_eq!(integrity, "ok");
@@ -868,7 +888,10 @@ mod tests {
             .unwrap();
         assert_eq!(
             versions,
-            vec![1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22]
+            vec![
+                1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23,
+                24
+            ]
         );
         assert_eq!(lessons, 1);
         assert_eq!(integrity, "ok");
@@ -916,7 +939,10 @@ mod tests {
             .unwrap();
         assert_eq!(
             versions,
-            vec![1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22]
+            vec![
+                1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23,
+                24
+            ]
         );
         assert_eq!(goal, 90);
         assert_eq!(integrity, "ok");
@@ -966,7 +992,10 @@ mod tests {
         assert_eq!(reviews, 0);
         assert_eq!(
             versions,
-            vec![1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22]
+            vec![
+                1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23,
+                24
+            ]
         );
         assert_eq!(integrity, "ok");
         assert_eq!(foreign_keys, 0);
@@ -1042,7 +1071,10 @@ mod tests {
             .unwrap();
         assert_eq!(
             versions,
-            vec![1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22]
+            vec![
+                1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23,
+                24
+            ]
         );
         assert_eq!((lessons, reviews, metrics), (1, 1, 0));
         assert_eq!(setting, "true");
@@ -1101,7 +1133,7 @@ mod tests {
                 row.get(0)
             })
             .unwrap();
-        assert_eq!((version, lessons, attempts), (22, 1, 0));
+        assert_eq!((version, lessons, attempts), (24, 1, 0));
         assert_eq!(integrity, "ok");
         assert_eq!(foreign_keys, 0);
         drop(connection);

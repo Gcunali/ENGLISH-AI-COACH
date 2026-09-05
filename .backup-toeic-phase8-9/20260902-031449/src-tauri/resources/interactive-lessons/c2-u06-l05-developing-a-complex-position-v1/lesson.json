@@ -1,0 +1,814 @@
+{
+  "packageSchemaVersion": 1,
+  "lessonFlowVersion": 1,
+  "lessonId": "c2-u06-l05-developing-a-complex-position",
+  "contentVersion": 1,
+  "publicationState": "published",
+  "title": "Developing a Complex Position",
+  "description": "Use evolving multi-part position to synthesize and reformulate ideas related to developing a complex position with appropriate C2 complexity.",
+  "language": "en",
+  "referenceLocale": "en-US",
+  "cefrBand": "C2",
+  "estimatedMinutes": 52,
+  "objectives": [
+    "Use evolving multi-part position to synthesize and reformulate ideas related to developing a complex position with appropriate C2 complexity."
+  ],
+  "tags": [
+    "english-core",
+    "c2",
+    "unit-06",
+    "production"
+  ],
+  "assets": [],
+  "stages": [
+    {
+      "stageId": "theory",
+      "stageType": "theory",
+      "stageSchemaVersion": 1,
+      "title": "Understand meaning and form",
+      "instructions": "Read the concept, pattern, examples, contrast, common issue, and recap.",
+      "required": true,
+      "payload": {
+        "blocks": [
+          {
+            "type": "paragraph",
+            "text": "The communicative aim of this lesson is to use evolving multi-part position to synthesize and reformulate ideas related to developing a complex position with appropriate C2 complexity. The central language focus is evolving multi-part position. In the context of advanced academic & intellectual discussion, form and meaning work together: first identify the relationship between the ideas, then choose wording that makes that relationship clear to another person. At C2 content level, control comes from flexible choices rather than rare vocabulary. Preserve subtle meaning while reframing, compressing, expanding, or shifting register, and make rhetorical effects deliberate rather than decorative."
+          },
+          {
+            "type": "callout",
+            "title": "Pattern",
+            "text": "evolving multi-part position"
+          },
+          {
+            "type": "example",
+            "english": "Our response should account for epistemic limit.",
+            "explanation": "This model establishes the main communicative move."
+          },
+          {
+            "type": "example",
+            "english": "This example illustrates withhold judgment clearly.",
+            "explanation": "This model develops or qualifies the message."
+          },
+          {
+            "type": "paragraph",
+            "text": "Start with the model “Our response should account for epistemic limit.” It establishes a useful direction for the exchange. The second model, “This example illustrates withhold judgment clearly.” adds another layer: a reason, implication, contrast, or response. Notice how each complete chunk does a communicative job. Practice replacing one detail while preserving the original grammar, stance, and register. Then connect the revised sentence to a relevant consequence or example instead of changing topic abruptly."
+          },
+          {
+            "type": "paragraph",
+            "text": "A useful pattern for this lesson is: evolving multi-part position. Use it when the situation genuinely calls for that meaning. Contrast matters: a direct factual statement presents information, while a qualified or hypothetical form changes the speaker's commitment to it. The choice should be driven by evidence, time reference, relationship, and purpose. In listening, pay attention not only to individual words but also to linkers, stress, and the speaker's degree of certainty."
+          },
+          {
+            "type": "callout",
+            "title": "Contrast",
+            "text": "Compare a direct statement with language shaped by evolving multi-part position; the intended meaning determines the form."
+          },
+          {
+            "type": "paragraph",
+            "text": "A common issue is to select an advanced-looking form without maintaining its meaning across the sentence. That can create a mismatch in time, stance, or register. Check three things: what happened or is being proposed, how certain the speaker is, and what response is expected. For developing a complex position, clarity comes from a coherent message rather than maximum complexity. The later stages recycle the same vocabulary and expressions so that recognition becomes controlled production and then flexible interaction."
+          },
+          {
+            "type": "callout",
+            "title": "Common issue",
+            "text": "Do not add complexity that changes the time reference, degree of certainty, or relationship with the listener."
+          },
+          {
+            "type": "bullet_list",
+            "items": [
+              "Goal: Use evolving multi-part position to synthesize and reformulate ideas related to developing a complex position with appropriate C2 complexity.",
+              "Core focus: evolving multi-part position.",
+              "Use complete chunks, connect ideas, and keep the intended stance.",
+              "In the conversation, listen, respond, clarify, and develop the same topic."
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "stageId": "visual-vocabulary",
+      "stageType": "visual_vocabulary",
+      "stageSchemaVersion": 1,
+      "title": "Build precise vocabulary",
+      "instructions": "Study each useful word or chunk in a meaningful context.",
+      "required": true,
+      "payload": {
+        "items": [
+          {
+            "itemId": "item-1",
+            "term": "epistemic limit",
+            "meaning": "A useful word or chunk for communicating about advanced academic & intellectual discussion with the intended level of precision.",
+            "example": "Our response should account for epistemic limit.",
+            "imageAssetId": null
+          },
+          {
+            "itemId": "item-2",
+            "term": "withhold judgment",
+            "meaning": "A useful word or chunk for communicating about advanced academic & intellectual discussion with the intended level of precision.",
+            "example": "This example illustrates withhold judgment clearly.",
+            "imageAssetId": null
+          },
+          {
+            "itemId": "item-3",
+            "term": "tentative proposition",
+            "meaning": "A useful word or chunk for communicating about advanced academic & intellectual discussion with the intended level of precision.",
+            "example": "We should consider tentative proposition carefully.",
+            "imageAssetId": null
+          },
+          {
+            "itemId": "item-4",
+            "term": "evolving position",
+            "meaning": "A useful word or chunk for communicating about advanced academic & intellectual discussion with the intended level of precision.",
+            "example": "The discussion highlighted evolving position.",
+            "imageAssetId": null
+          },
+          {
+            "itemId": "item-5",
+            "term": "integrate the objection",
+            "meaning": "A useful word or chunk for communicating about advanced academic & intellectual discussion with the intended level of precision.",
+            "example": "A clear explanation addresses integrate the objection directly.",
+            "imageAssetId": null
+          },
+          {
+            "itemId": "item-6",
+            "term": "intellectual honesty",
+            "meaning": "A useful word or chunk for communicating about advanced academic & intellectual discussion with the intended level of precision.",
+            "example": "The speaker emphasized intellectual honesty.",
+            "imageAssetId": null
+          },
+          {
+            "itemId": "item-7",
+            "term": "defensible synthesis",
+            "meaning": "A useful word or chunk for communicating about advanced academic & intellectual discussion with the intended level of precision.",
+            "example": "Our response should account for defensible synthesis.",
+            "imageAssetId": null
+          },
+          {
+            "itemId": "item-8",
+            "term": "conceptual synthesis",
+            "meaning": "A useful word or chunk for communicating about advanced academic & intellectual discussion with the intended level of precision.",
+            "example": "This example illustrates conceptual synthesis clearly.",
+            "imageAssetId": null
+          },
+          {
+            "itemId": "item-9",
+            "term": "interdisciplinary link",
+            "meaning": "A useful word or chunk for communicating about advanced academic & intellectual discussion with the intended level of precision.",
+            "example": "We should consider interdisciplinary link carefully.",
+            "imageAssetId": null
+          },
+          {
+            "itemId": "item-10",
+            "term": "apparent contradiction",
+            "meaning": "A useful word or chunk for communicating about advanced academic & intellectual discussion with the intended level of precision.",
+            "example": "The discussion highlighted apparent contradiction.",
+            "imageAssetId": null
+          },
+          {
+            "itemId": "item-11",
+            "term": "internal coherence",
+            "meaning": "A useful word or chunk for communicating about advanced academic & intellectual discussion with the intended level of precision.",
+            "example": "A clear explanation addresses internal coherence directly.",
+            "imageAssetId": null
+          },
+          {
+            "itemId": "item-12",
+            "term": "explanatory power",
+            "meaning": "A useful word or chunk for communicating about advanced academic & intellectual discussion with the intended level of precision.",
+            "example": "The speaker emphasized explanatory power.",
+            "imageAssetId": null
+          }
+        ]
+      }
+    },
+    {
+      "stageId": "listening",
+      "stageType": "listening",
+      "stageSchemaVersion": 1,
+      "title": "Listen for meaning and stance",
+      "instructions": "Listen first, then reveal the text and notice connections, register, and emphasis.",
+      "required": true,
+      "payload": {
+        "segments": [
+          {
+            "segmentId": "segment-1",
+            "text": "To begin with, Our response should account for epistemic limit. This example illustrates withhold judgment clearly.",
+            "audioAssetId": null
+          },
+          {
+            "segmentId": "segment-2",
+            "text": "In this situation, This example illustrates withhold judgment clearly. We should consider tentative proposition carefully.",
+            "audioAssetId": null
+          },
+          {
+            "segmentId": "segment-3",
+            "text": "From another perspective, We should consider tentative proposition carefully. The discussion highlighted evolving position.",
+            "audioAssetId": null
+          },
+          {
+            "segmentId": "segment-4",
+            "text": "More specifically, The discussion highlighted evolving position. A clear explanation addresses integrate the objection directly.",
+            "audioAssetId": null
+          },
+          {
+            "segmentId": "segment-5",
+            "text": "Even so, A clear explanation addresses integrate the objection directly. The speaker emphasized intellectual honesty.",
+            "audioAssetId": null
+          },
+          {
+            "segmentId": "segment-6",
+            "text": "As a result, The speaker emphasized intellectual honesty. Our response should account for defensible synthesis.",
+            "audioAssetId": null
+          },
+          {
+            "segmentId": "segment-7",
+            "text": "On reflection, Our response should account for defensible synthesis. This example illustrates conceptual synthesis clearly.",
+            "audioAssetId": null
+          },
+          {
+            "segmentId": "segment-8",
+            "text": "Ultimately, This example illustrates conceptual synthesis clearly. Our response should account for epistemic limit.",
+            "audioAssetId": null
+          }
+        ],
+        "revealTextAfterFirstPlay": true
+      }
+    },
+    {
+      "stageId": "repeat",
+      "stageType": "repeat",
+      "stageSchemaVersion": 1,
+      "title": "Repeat connected chunks",
+      "instructions": "Repeat complete, useful expressions with natural phrasing and sentence stress.",
+      "required": true,
+      "payload": {
+        "targets": [
+          {
+            "targetId": "repeat-1",
+            "text": "Our response should account for epistemic limit.",
+            "referenceAudioAssetId": null,
+            "hint": "Keep the chunk connected and preserve its intended stance."
+          },
+          {
+            "targetId": "repeat-2",
+            "text": "This example illustrates withhold judgment clearly.",
+            "referenceAudioAssetId": null,
+            "hint": "Keep the chunk connected and preserve its intended stance."
+          },
+          {
+            "targetId": "repeat-3",
+            "text": "We should consider tentative proposition carefully.",
+            "referenceAudioAssetId": null,
+            "hint": "Keep the chunk connected and preserve its intended stance."
+          },
+          {
+            "targetId": "repeat-4",
+            "text": "The discussion highlighted evolving position.",
+            "referenceAudioAssetId": null,
+            "hint": "Keep the chunk connected and preserve its intended stance."
+          },
+          {
+            "targetId": "repeat-5",
+            "text": "A clear explanation addresses integrate the objection directly.",
+            "referenceAudioAssetId": null,
+            "hint": "Keep the chunk connected and preserve its intended stance."
+          },
+          {
+            "targetId": "repeat-6",
+            "text": "The speaker emphasized intellectual honesty.",
+            "referenceAudioAssetId": null,
+            "hint": "Keep the chunk connected and preserve its intended stance."
+          },
+          {
+            "targetId": "repeat-7",
+            "text": "Our response should account for defensible synthesis.",
+            "referenceAudioAssetId": null,
+            "hint": "Keep the chunk connected and preserve its intended stance."
+          },
+          {
+            "targetId": "repeat-8",
+            "text": "This example illustrates conceptual synthesis clearly.",
+            "referenceAudioAssetId": null,
+            "hint": "Keep the chunk connected and preserve its intended stance."
+          }
+        ]
+      }
+    },
+    {
+      "stageId": "speaking-check",
+      "stageType": "speaking_check",
+      "stageSchemaVersion": 1,
+      "title": "Speaking Check",
+      "instructions": "Say only expressions already prepared in this Lesson.",
+      "required": true,
+      "payload": {
+        "targets": [
+          {
+            "targetId": "speaking-1",
+            "instruction": "Say the complete prepared model naturally.",
+            "targetText": "Our response should account for epistemic limit.",
+            "hint": "Use clear phrasing and preserve every meaning-bearing word."
+          },
+          {
+            "targetId": "speaking-2",
+            "instruction": "Say the complete prepared model naturally.",
+            "targetText": "This example illustrates withhold judgment clearly.",
+            "hint": "Use clear phrasing and preserve every meaning-bearing word."
+          },
+          {
+            "targetId": "speaking-3",
+            "instruction": "Say the complete prepared model naturally.",
+            "targetText": "We should consider tentative proposition carefully.",
+            "hint": "Use clear phrasing and preserve every meaning-bearing word."
+          },
+          {
+            "targetId": "speaking-4",
+            "instruction": "Say the complete prepared model naturally.",
+            "targetText": "The discussion highlighted evolving position.",
+            "hint": "Use clear phrasing and preserve every meaning-bearing word."
+          },
+          {
+            "targetId": "speaking-5",
+            "instruction": "Say the complete prepared model naturally.",
+            "targetText": "A clear explanation addresses integrate the objection directly.",
+            "hint": "Use clear phrasing and preserve every meaning-bearing word."
+          },
+          {
+            "targetId": "speaking-6",
+            "instruction": "Say the complete prepared model naturally.",
+            "targetText": "The speaker emphasized intellectual honesty.",
+            "hint": "Use clear phrasing and preserve every meaning-bearing word."
+          },
+          {
+            "targetId": "speaking-7",
+            "instruction": "Say the complete prepared model naturally.",
+            "targetText": "Our response should account for defensible synthesis.",
+            "hint": "Use clear phrasing and preserve every meaning-bearing word."
+          },
+          {
+            "targetId": "speaking-8",
+            "instruction": "Say the complete prepared model naturally.",
+            "targetText": "This example illustrates conceptual synthesis clearly.",
+            "hint": "Use clear phrasing and preserve every meaning-bearing word."
+          }
+        ]
+      }
+    },
+    {
+      "stageId": "exercise",
+      "stageType": "exercise",
+      "stageSchemaVersion": 1,
+      "title": "Apply the language",
+      "instructions": "Complete each deterministic meaning, form, vocabulary, and discourse task.",
+      "required": true,
+      "payload": {
+        "items": [
+          {
+            "exerciseId": "meaning-in-context",
+            "exerciseType": "single_choice",
+            "prompt": "Choose the line that best fits the stated communicative purpose.",
+            "instructions": null,
+            "hint": "evolving multi-part position",
+            "payload": {
+              "options": [
+                {
+                  "optionId": "a",
+                  "text": "Our response should account for epistemic limit."
+                },
+                {
+                  "optionId": "b",
+                  "text": "A clear explanation addresses integrate the objection directly."
+                },
+                {
+                  "optionId": "c",
+                  "text": "The issue has no connection to this context."
+                }
+              ],
+              "correctOptionId": "a"
+            },
+            "feedback": {
+              "correct": "Correct. The choice fits the meaning and context.",
+              "incorrect": "Try again. Compare the context with the lesson models.",
+              "explanation": "evolving multi-part position"
+            }
+          },
+          {
+            "exerciseId": "select-unit-language",
+            "exerciseType": "multiple_select",
+            "prompt": "Select the two chunks that support this lesson's context.",
+            "instructions": null,
+            "hint": null,
+            "payload": {
+              "options": [
+                {
+                  "optionId": "a",
+                  "text": "epistemic limit"
+                },
+                {
+                  "optionId": "b",
+                  "text": "withhold judgment"
+                },
+                {
+                  "optionId": "c",
+                  "text": "unrelated mechanical component"
+                },
+                {
+                  "optionId": "d",
+                  "text": "random geological sample"
+                }
+              ],
+              "correctOptionIds": [
+                "a",
+                "b"
+              ]
+            },
+            "feedback": {
+              "correct": "Correct. The choice fits the meaning and context.",
+              "incorrect": "Try again. Compare the context with the lesson models.",
+              "explanation": "Both correct chunks were prepared in Visual Vocabulary."
+            }
+          },
+          {
+            "exerciseId": "complete-model",
+            "exerciseType": "fill_blank",
+            "prompt": "Type the complete model shown in the hint.",
+            "instructions": null,
+            "hint": "This example illustrates withhold judgment clearly.",
+            "payload": {
+              "prefix": "",
+              "suffix": "",
+              "acceptedAnswers": [
+                "This example illustrates withhold judgment clearly."
+              ],
+              "normalizationProfile": "english_basic_v1"
+            },
+            "feedback": {
+              "correct": "Correct. The choice fits the meaning and context.",
+              "incorrect": "Try again. Compare the context with the lesson models.",
+              "explanation": "This is a finite model-recall task."
+            }
+          },
+          {
+            "exerciseId": "order-message",
+            "exerciseType": "word_order",
+            "prompt": "Put the model in its natural order.",
+            "instructions": null,
+            "hint": null,
+            "payload": {
+              "tokens": [
+                {
+                  "tokenId": "t8",
+                  "text": "."
+                },
+                {
+                  "tokenId": "t7",
+                  "text": "limit"
+                },
+                {
+                  "tokenId": "t6",
+                  "text": "epistemic"
+                },
+                {
+                  "tokenId": "t5",
+                  "text": "for"
+                },
+                {
+                  "tokenId": "t4",
+                  "text": "account"
+                },
+                {
+                  "tokenId": "t3",
+                  "text": "should"
+                },
+                {
+                  "tokenId": "t2",
+                  "text": "response"
+                },
+                {
+                  "tokenId": "t1",
+                  "text": "Our"
+                }
+              ],
+              "correctOrder": [
+                "t1",
+                "t2",
+                "t3",
+                "t4",
+                "t5",
+                "t6",
+                "t7",
+                "t8"
+              ]
+            },
+            "feedback": {
+              "correct": "Correct. The choice fits the meaning and context.",
+              "incorrect": "Try again. Compare the context with the lesson models.",
+              "explanation": "Use the modeled English information order."
+            }
+          },
+          {
+            "exerciseId": "match-chunks",
+            "exerciseType": "matching",
+            "prompt": "Match each chunk to its communicative use.",
+            "instructions": null,
+            "hint": null,
+            "payload": {
+              "leftItems": [
+                {
+                  "itemId": "l1",
+                  "text": "epistemic limit"
+                },
+                {
+                  "itemId": "l2",
+                  "text": "withhold judgment"
+                },
+                {
+                  "itemId": "l3",
+                  "text": "tentative proposition"
+                }
+              ],
+              "rightItems": [
+                {
+                  "itemId": "r1",
+                  "text": "Language used to develop point 1 in this lesson context."
+                },
+                {
+                  "itemId": "r2",
+                  "text": "Language used to develop point 2 in this lesson context."
+                },
+                {
+                  "itemId": "r3",
+                  "text": "Language used to develop point 3 in this lesson context."
+                }
+              ],
+              "correctPairs": [
+                {
+                  "leftId": "l1",
+                  "rightId": "r1"
+                },
+                {
+                  "leftId": "l2",
+                  "rightId": "r2"
+                },
+                {
+                  "leftId": "l3",
+                  "rightId": "r3"
+                }
+              ]
+            },
+            "feedback": {
+              "correct": "Correct. The choice fits the meaning and context.",
+              "incorrect": "Try again. Compare the context with the lesson models.",
+              "explanation": "Review the chunks in their contextual examples."
+            }
+          },
+          {
+            "exerciseId": "exact-finite-response",
+            "exerciseType": "short_answer_exact",
+            "prompt": "Type the exact finite model shown in the hint.",
+            "instructions": null,
+            "hint": "We should consider tentative proposition carefully.",
+            "payload": {
+              "acceptedAnswers": [
+                "We should consider tentative proposition carefully."
+              ],
+              "normalizationProfile": "english_basic_v1"
+            },
+            "feedback": {
+              "correct": "Correct. The choice fits the meaning and context.",
+              "incorrect": "Try again. Compare the context with the lesson models.",
+              "explanation": "This checks recall of one displayed model, not a subjective response."
+            }
+          },
+          {
+            "exerciseId": "distinguish-purpose-6",
+            "exerciseType": "single_choice",
+            "prompt": "Which line has the appropriate focus and register?",
+            "instructions": null,
+            "hint": "evolving multi-part position",
+            "payload": {
+              "options": [
+                {
+                  "optionId": "a",
+                  "text": "This example illustrates conceptual synthesis clearly."
+                },
+                {
+                  "optionId": "b",
+                  "text": "Whatever, none of that matters at all."
+                },
+                {
+                  "optionId": "c",
+                  "text": "Words are being placed without a communicative purpose."
+                }
+              ],
+              "correctOptionId": "a"
+            },
+            "feedback": {
+              "correct": "Correct. The choice fits the meaning and context.",
+              "incorrect": "Try again. Compare the context with the lesson models.",
+              "explanation": "The lesson model preserves purpose, stance, and register."
+            }
+          },
+          {
+            "exerciseId": "select-coherent-pair-7",
+            "exerciseType": "multiple_select",
+            "prompt": "Select both expressions prepared for this interaction.",
+            "instructions": null,
+            "hint": null,
+            "payload": {
+              "options": [
+                {
+                  "optionId": "a",
+                  "text": "Our response should account for epistemic limit."
+                },
+                {
+                  "optionId": "b",
+                  "text": "This example illustrates withhold judgment clearly."
+                },
+                {
+                  "optionId": "c",
+                  "text": "A sentence about an unrelated appliance."
+                },
+                {
+                  "optionId": "d",
+                  "text": "An answer with no semantic connection."
+                }
+              ],
+              "correctOptionIds": [
+                "a",
+                "b"
+              ]
+            },
+            "feedback": {
+              "correct": "Correct. The choice fits the meaning and context.",
+              "incorrect": "Try again. Compare the context with the lesson models.",
+              "explanation": "Both choices belong to the same prepared exchange."
+            }
+          },
+          {
+            "exerciseId": "context-choice-8",
+            "exerciseType": "single_choice",
+            "prompt": "Choose the response that develops the same topic coherently.",
+            "instructions": null,
+            "hint": null,
+            "payload": {
+              "options": [
+                {
+                  "optionId": "a",
+                  "text": "Our response should account for epistemic limit."
+                },
+                {
+                  "optionId": "b",
+                  "text": "That conclusion ignores every detail just mentioned."
+                },
+                {
+                  "optionId": "c",
+                  "text": "A disconnected answer would change the subject."
+                }
+              ],
+              "correctOptionId": "a"
+            },
+            "feedback": {
+              "correct": "Correct. The choice fits the meaning and context.",
+              "incorrect": "Try again. Compare the context with the lesson models.",
+              "explanation": "The correct response remains relevant and coherent."
+            }
+          },
+          {
+            "exerciseId": "vocabulary-recall-9",
+            "exerciseType": "fill_blank",
+            "prompt": "Type the exact chunk displayed in the hint.",
+            "instructions": null,
+            "hint": "apparent contradiction",
+            "payload": {
+              "prefix": "",
+              "suffix": "",
+              "acceptedAnswers": [
+                "apparent contradiction"
+              ],
+              "normalizationProfile": "english_basic_v1"
+            },
+            "feedback": {
+              "correct": "Correct. The choice fits the meaning and context.",
+              "incorrect": "Try again. Compare the context with the lesson models.",
+              "explanation": "The answer is one finite prepared chunk."
+            }
+          },
+          {
+            "exerciseId": "distinguish-purpose-10",
+            "exerciseType": "single_choice",
+            "prompt": "Which line has the appropriate focus and register?",
+            "instructions": null,
+            "hint": "evolving multi-part position",
+            "payload": {
+              "options": [
+                {
+                  "optionId": "a",
+                  "text": "The discussion highlighted evolving position."
+                },
+                {
+                  "optionId": "b",
+                  "text": "Whatever, none of that matters at all."
+                },
+                {
+                  "optionId": "c",
+                  "text": "Words are being placed without a communicative purpose."
+                }
+              ],
+              "correctOptionId": "a"
+            },
+            "feedback": {
+              "correct": "Correct. The choice fits the meaning and context.",
+              "incorrect": "Try again. Compare the context with the lesson models.",
+              "explanation": "The lesson model preserves purpose, stance, and register."
+            }
+          },
+          {
+            "exerciseId": "select-coherent-pair-11",
+            "exerciseType": "multiple_select",
+            "prompt": "Select both expressions prepared for this interaction.",
+            "instructions": null,
+            "hint": null,
+            "payload": {
+              "options": [
+                {
+                  "optionId": "a",
+                  "text": "Our response should account for epistemic limit."
+                },
+                {
+                  "optionId": "b",
+                  "text": "This example illustrates withhold judgment clearly."
+                },
+                {
+                  "optionId": "c",
+                  "text": "A sentence about an unrelated appliance."
+                },
+                {
+                  "optionId": "d",
+                  "text": "An answer with no semantic connection."
+                }
+              ],
+              "correctOptionIds": [
+                "a",
+                "b"
+              ]
+            },
+            "feedback": {
+              "correct": "Correct. The choice fits the meaning and context.",
+              "incorrect": "Try again. Compare the context with the lesson models.",
+              "explanation": "Both choices belong to the same prepared exchange."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "stageId": "guided-conversation",
+      "stageType": "guided_conversation",
+      "stageSchemaVersion": 1,
+      "title": "Developing a Complex Position conversation",
+      "instructions": "Sustain the interaction, respond to follow-ups, and use the prepared language flexibly.",
+      "required": true,
+      "payload": {
+        "scenario": "You are taking part in a realistic C2 discussion about advanced academic & intellectual discussion. The immediate task is developing a complex position; develop the issue, respond to new information, and reach an appropriate communicative outcome.",
+        "studentRole": "Independent English user contributing and responding",
+        "teacherRole": "Responsive conversation partner who probes, clarifies, and challenges appropriately",
+        "goal": "Use evolving multi-part position to synthesize and reformulate ideas related to developing a complex position with appropriate C2 complexity.",
+        "targetVocabulary": [
+          "epistemic limit",
+          "withhold judgment",
+          "tentative proposition",
+          "evolving position",
+          "integrate the objection",
+          "intellectual honesty",
+          "defensible synthesis",
+          "conceptual synthesis",
+          "interdisciplinary link",
+          "apparent contradiction",
+          "internal coherence",
+          "explanatory power"
+        ],
+        "targetExpressions": [
+          "Our response should account for epistemic limit.",
+          "This example illustrates withhold judgment clearly.",
+          "We should consider tentative proposition carefully.",
+          "The discussion highlighted evolving position.",
+          "A clear explanation addresses integrate the objection directly.",
+          "The speaker emphasized intellectual honesty.",
+          "Our response should account for defensible synthesis.",
+          "This example illustrates conceptual synthesis clearly."
+        ],
+        "minimumStudentTurns": 8,
+        "recommendedStudentTurns": 12,
+        "maximumStudentTurns": 18
+      }
+    },
+    {
+      "stageId": "analysis",
+      "stageType": "analysis",
+      "stageSchemaVersion": 1,
+      "title": "Lesson Review",
+      "instructions": "Review evidence from the completed Lesson with Interactive Lesson Analysis v1.",
+      "required": true,
+      "payload": {}
+    }
+  ]
+}

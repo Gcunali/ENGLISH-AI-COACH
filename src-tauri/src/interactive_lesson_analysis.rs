@@ -1598,6 +1598,11 @@ mod tests {
             let connection = Connection::open(&database).unwrap();
             connection
                 .execute_batch(
+                    "DROP TABLE toeic_personalized_practice_step; DROP TABLE toeic_personalized_practice_session; DELETE FROM schema_migration WHERE version=24; DROP TABLE toeic_full_lr_session; DROP TABLE toeic_full_reading_part; DROP TABLE toeic_full_reading_session; DROP TABLE toeic_reading_score_profile; DELETE FROM schema_migration WHERE version=23;",
+                )
+                .unwrap();
+            connection
+                .execute_batch(
                     "DROP TABLE toeic_listening_score_profile; DROP TABLE toeic_full_listening_part; DROP TABLE toeic_full_listening_session; DELETE FROM schema_migration WHERE version=22; DROP TABLE toeic_active_time_event; DROP TABLE toeic_presentation_attempt; DROP TABLE toeic_answer; DROP TABLE toeic_session; DELETE FROM schema_migration WHERE version=21; DROP TABLE learning_practice_xp_event; DROP TABLE learning_practice_active_time_event; DROP TABLE learning_practice_item_result; DROP TABLE learning_practice_session; DELETE FROM schema_migration WHERE version=20; DROP TABLE guided_gamification_xp_event; DROP TABLE interactive_lesson_active_practice_event; DROP TABLE guided_recurring_mistake_occurrence; DROP TABLE interactive_lesson_guided_correction; DROP TABLE guided_session_vocabulary; DROP TABLE guided_learning_integration; DELETE FROM schema_migration WHERE version=19; DROP TABLE interactive_lesson_analysis; DELETE FROM schema_migration WHERE version=18;",
                 )
                 .unwrap();
@@ -1625,7 +1630,7 @@ mod tests {
                 row.get(0)
             })
             .unwrap();
-        assert_eq!(version, 22);
+        assert_eq!(version, 24);
         assert!(table);
         assert_eq!(integrity, "ok");
         assert_eq!(foreign_keys, 0);
